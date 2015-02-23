@@ -18,20 +18,25 @@
 
 */
 
+#include "kdeapplicationdebugsettingpage.h"
+#include <KLocalizedString>
+#include <QListWidget>
+#include <QVBoxLayout>
 
-#ifndef KDEBUGSETTINGSDIALOG_H
-#define KDEBUGSETTINGSDIALOG_H
-
-#include <QDialog>
-class QTabWidget;
-class KDebugSettingsDialog : public QDialog
+KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
+    : QWidget(parent)
 {
-    Q_OBJECT
-public:
-    explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
-    ~KDebugSettingsDialog();
-private:
-    QTabWidget *mTabWidget;
-};
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
 
-#endif // KDEBUGSETTINGSDIALOG_H
+    mListWidget = new QListWidget;
+    mListWidget->setObjectName(QStringLiteral("listwidget"));
+    mainLayout->addWidget(mListWidget);
+
+}
+
+KDeApplicationDebugSettingPage::~KDeApplicationDebugSettingPage()
+{
+
+}
+

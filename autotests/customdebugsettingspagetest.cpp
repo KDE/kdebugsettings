@@ -18,20 +18,18 @@
 
 */
 
+#include "customdebugsettingspagetest.h"
+#include <qtest.h>
 
-#ifndef KDEBUGSETTINGSDIALOG_H
-#define KDEBUGSETTINGSDIALOG_H
-
-#include <QDialog>
-class QTabWidget;
-class KDebugSettingsDialog : public QDialog
+CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
-    ~KDebugSettingsDialog();
-private:
-    QTabWidget *mTabWidget;
-};
 
-#endif // KDEBUGSETTINGSDIALOG_H
+}
+
+CustomDebugSettingsPageTest::~CustomDebugSettingsPageTest()
+{
+
+}
+
+QTEST_MAIN(CustomDebugSettingsPageTest)

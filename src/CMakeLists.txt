@@ -1,6 +1,8 @@
 set(kdebugsettings_SRCS 
    main.cpp 
    kdebugsettingsdialog.cpp
+   customdebugsettingspage.cpp
+   kdeapplicationdebugsettingpage.cpp
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})

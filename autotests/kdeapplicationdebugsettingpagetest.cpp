@@ -18,20 +18,27 @@
 
 */
 
+#include "kdeapplicationdebugsettingpagetest.h"
+#include "../src/kdeapplicationdebugsettingpage.h"
+#include <qlistwidget.h>
+#include <qtest.h>
 
-#ifndef KDEBUGSETTINGSDIALOG_H
-#define KDEBUGSETTINGSDIALOG_H
-
-#include <QDialog>
-class QTabWidget;
-class KDebugSettingsDialog : public QDialog
+KDeApplicationDebugSettingPageTest::KDeApplicationDebugSettingPageTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
-    ~KDebugSettingsDialog();
-private:
-    QTabWidget *mTabWidget;
-};
 
-#endif // KDEBUGSETTINGSDIALOG_H
+}
+
+KDeApplicationDebugSettingPageTest::~KDeApplicationDebugSettingPageTest()
+{
+
+}
+
+void KDeApplicationDebugSettingPageTest::shouldHaveDefaultValue()
+{
+    KDeApplicationDebugSettingPage page;
+    QListWidget *listWidget = page.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    QVERIFY(listWidget);
+}
+
+QTEST_MAIN(KDeApplicationDebugSettingPageTest)

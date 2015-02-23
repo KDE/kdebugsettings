@@ -18,20 +18,17 @@
 
 */
 
+#ifndef KDEAPPLICATIONLISTWIDGETTEST_H
+#define KDEAPPLICATIONLISTWIDGETTEST_H
 
-#ifndef KDEBUGSETTINGSDIALOG_H
-#define KDEBUGSETTINGSDIALOG_H
+#include <QObject>
 
-#include <QDialog>
-class QTabWidget;
-class KDebugSettingsDialog : public QDialog
+class KDeApplicationListWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
-    ~KDebugSettingsDialog();
-private:
-    QTabWidget *mTabWidget;
+    explicit KDeApplicationListWidgetTest(QObject *parent = 0);
+    ~KDeApplicationListWidgetTest();
 };
 
-#endif // KDEBUGSETTINGSDIALOG_H
+#endif // KDEAPPLICATIONLISTWIDGETTEST_H

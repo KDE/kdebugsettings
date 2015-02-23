@@ -18,20 +18,19 @@
 
 */
 
+#ifndef KDEAPPLICATIONDEBUGSETTINGPAGETEST_H
+#define KDEAPPLICATIONDEBUGSETTINGPAGETEST_H
 
-#ifndef KDEBUGSETTINGSDIALOG_H
-#define KDEBUGSETTINGSDIALOG_H
+#include <QObject>
 
-#include <QDialog>
-class QTabWidget;
-class KDebugSettingsDialog : public QDialog
+class KDeApplicationDebugSettingPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
-    ~KDebugSettingsDialog();
-private:
-    QTabWidget *mTabWidget;
+    explicit KDeApplicationDebugSettingPageTest(QObject *parent = 0);
+    ~KDeApplicationDebugSettingPageTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
-#endif // KDEBUGSETTINGSDIALOG_H
+#endif // KDEAPPLICATIONDEBUGSETTINGPAGETEST_H

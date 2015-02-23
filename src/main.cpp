@@ -45,8 +45,16 @@ int main( int argc, char **argv )
     aboutData.processCommandLine(&parser);
      
     KDBusService service(KDBusService::Unique);
-    KDebugSettingsDialog *dlg = new KDebugSettingsDialog;
-    dlg->show();
+    KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
+    const int nRet = dialog->exec();
+    if( nRet == QDialog::Accepted )
+    {
+        //dialog->save();
+        //dialog->config()->sync();
+    }
+    else {
+        //dialog->config()->markAsClean();
+    }
 
     return app.exec();
 }

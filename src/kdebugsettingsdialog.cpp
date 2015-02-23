@@ -23,12 +23,24 @@
 #include <KLocalizedString>
 
 #include <QDialogButtonBox>
+#include <QTabWidget>
 #include <QVBoxLayout>
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
 
+    mTabWidget = new QTabWidget;
+    mTabWidget->setObjectName(QStringLiteral("tabwidget"));
+    mainLayout->addWidget(mTabWidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    mainLayout->addWidget(buttonBox);
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()

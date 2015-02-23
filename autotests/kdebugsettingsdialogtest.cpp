@@ -19,6 +19,9 @@
 */
 
 #include "kdebugsettingsdialogtest.h"
+#include "../src/kdebugsettingsdialog.h"
+#include <QDialogButtonBox>
+#include <QTabWidget>
 #include <qtest.h>
 
 KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
@@ -30,6 +33,15 @@ KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
 KDebugSettingsDialogTest::~KDebugSettingsDialogTest()
 {
 
+}
+
+void KDebugSettingsDialogTest::shouldHaveDefaultValue()
+{
+    KDebugSettingsDialog dlg;
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QLatin1String("buttonbox"));
+    QVERIFY(buttonBox);
+    QTabWidget *tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    QVERIFY(tab);
 }
 
 QTEST_MAIN(KDebugSettingsDialogTest)
