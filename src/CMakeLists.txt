@@ -12,5 +12,5 @@ install(TARGETS kdebugsettings  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-#install( PROGRAMS org.kde.klines.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS org.kde.kdebugsettings.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 
