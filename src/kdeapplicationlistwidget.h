@@ -29,6 +29,9 @@ class KDeApplicationListWidget : public QListWidget
 public:
     explicit KDeApplicationListWidget(QWidget *parent=Q_NULLPTR);
     ~KDeApplicationListWidget();
+
+    void deSelectAllDebugCategories();
+    void selectAllDebugCategories();
 };
 
 #endif // KDEAPPLICATIONLISTWIDGET_H

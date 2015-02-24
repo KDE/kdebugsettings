@@ -31,3 +31,13 @@ KDeApplicationListWidget::~KDeApplicationListWidget()
 
 }
 
+void KDeApplicationListWidget::selectAllDebugCategories()
+{
+    //TODO
+}
+
+void KDeApplicationListWidget::deSelectAllDebugCategories()
+{
+    //TODO
+}
+

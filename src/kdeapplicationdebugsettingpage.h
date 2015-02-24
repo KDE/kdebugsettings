@@ -22,8 +22,8 @@
 #define KDEAPPLICATIONDEBUGSETTINGPAGE_H
 
 #include <QWidget>
-class QListWidget;
 class QPushButton;
+class KDeApplicationListWidget;
 class KDeApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
@@ -34,7 +34,7 @@ private slots:
     void slotSelectAll();
     void slotDeselectAll();
 private:
-    QListWidget *mListWidget;
+    KDeApplicationListWidget *mListWidget;
     QPushButton *mSelectAll;
     QPushButton *mDeselectAll;
 };

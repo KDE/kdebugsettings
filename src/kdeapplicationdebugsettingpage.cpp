@@ -19,6 +19,7 @@
 */
 
 #include "kdeapplicationdebugsettingpage.h"
+#include "kdeapplicationlistwidget.h"
 #include <KLocalizedString>
 #include <QListWidget>
 #include <QPushButton>
@@ -30,7 +31,7 @@ KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-    mListWidget = new QListWidget;
+    mListWidget = new KDeApplicationListWidget;
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mainLayout->addWidget(mListWidget);
 
