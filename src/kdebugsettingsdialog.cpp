@@ -18,6 +18,8 @@
 
 */
 
+#include "customdebugsettingspage.h"
+#include "kdeapplicationdebugsettingpage.h"
 #include "kdebugsettingsdialog.h"
 #include "kdebugsettingsutil.h"
 
@@ -39,13 +41,20 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
+    mKdeApplicationSettingsPage = new KDeApplicationDebugSettingPage(this);
+    mKdeApplicationSettingsPage->setObjectName(QStringLiteral("kdeapplicationsettingspage"));
+    mCustomSettingsPage = new CustomDebugSettingsPage(this);
+    mCustomSettingsPage->setObjectName(QStringLiteral("customsettingspage"));
+    mTabWidget->addTab(mKdeApplicationSettingsPage, i18n("KDE Application"));
+    mTabWidget->addTab(mCustomSettingsPage, i18n("Custom"));
+
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
-    readCategoriesFile();
+    readCategoriesFiles();
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()
@@ -70,9 +79,15 @@ void KDebugSettingsDialog::saveConfig()
     group.sync();
 }
 
-void KDebugSettingsDialog::readCategoriesFile()
+void KDebugSettingsDialog::readCategoriesFiles()
 {
+    // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("qdebug.areas"));
-    KDebugSettingsUtil::readLoggingCategories(confAreasFile);
+    const CategoriesMap categories = KDebugSettingsUtil::readLoggingCategories(confAreasFile);
+
+    // qt logging.ini
+    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
+    const QStringList customCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+
     //TODO
 }

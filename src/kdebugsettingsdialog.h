@@ -25,6 +25,8 @@
 #include <QDialog>
 #include <QMap>
 class QTabWidget;
+class KDeApplicationDebugSettingPage;
+class CustomDebugSettingsPage;
 class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
@@ -34,10 +36,12 @@ public:
     typedef QMap<QString /*category*/, QString /*description*/> CategoriesMap;
 
 private:
-    void readCategoriesFile();
+    void readCategoriesFiles();
     void saveConfig();
     void readConfig();
     QTabWidget *mTabWidget;
+    KDeApplicationDebugSettingPage *mKdeApplicationSettingsPage;
+    CustomDebugSettingsPage *mCustomSettingsPage;
 };
 
 #endif // KDEBUGSETTINGSDIALOG_H

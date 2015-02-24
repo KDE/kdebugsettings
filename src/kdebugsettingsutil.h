@@ -22,9 +22,10 @@
 #define KDEBUGSETTINGSUTIL_H
 
 #include <QString>
-
+#include "kdebugsettingsdialog.h"
 namespace KDebugSettingsUtil {
-void readLoggingCategories(const QString &filename);
+KDebugSettingsDialog::CategoriesMap readLoggingCategories(const QString &filename);
+QStringList readLoggingQtCategories(const QString &filename);
 }
 
 #endif // KDEBUGSETTINGSUTIL_H

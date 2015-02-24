@@ -1,4 +1,12 @@
 
+set(full_source_file
+   ../src/kdebugsettingsdialog.cpp
+   ../src/kdeapplicationlistwidget.cpp
+   ../src/customdebugsettingspage.cpp
+   ../src/kdeapplicationdebugsettingpage.cpp
+   ../src/kdebugsettingsutil.cpp
+)
+
 # convenience macro to add qtest unit tests
 macro(add_unittest _source _additionalsource)
   set(_test ${_source} ${_additionalsource})
@@ -14,7 +22,7 @@ macro(add_unittest _source _additionalsource)
   )
 endmacro ()
 
-add_unittest( kdebugsettingsdialogtest.cpp "../src/kdebugsettingsdialog.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( kdebugsettingsdialogtest.cpp "${full_source_file}")
 add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationlistwidget.cpp")
 add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp")
 add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.cpp")

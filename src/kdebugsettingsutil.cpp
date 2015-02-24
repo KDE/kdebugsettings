@@ -23,13 +23,44 @@
 #include <QFile>
 
 
-void KDebugSettingsUtil::readLoggingCategories(const QString &filename)
+KDebugSettingsDialog::CategoriesMap KDebugSettingsUtil::readLoggingCategories(const QString &filename)
 {
+    KDebugSettingsDialog::CategoriesMap categories;
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         qWarning() << "Couldn't open" << filename;
     } else {
-        //TODO
+        QString data;
+        QTextStream ts(&file);
+        ts.setCodec( "ISO-8859-1" );
+        while (!ts.atEnd()) {
+            data = ts.readLine().simplified();
+
+            int pos = data.indexOf(QLatin1Literal("#"));
+            if ( pos != -1 ) {
+                data.truncate( pos );
+                data = data.simplified();
+            }
+
+            if (data.isEmpty())
+                continue;
+
+            const int space = data.indexOf(QLatin1Char(' '));
+            if (space == -1)
+                qCritical() << "No space:" << data << endl;
+
+            const QString logName = data.left(space);
+
+            const QString description = data.mid(space).simplified();
+            categories.insert( logName, description );
+        }
     }
+
+    return categories;
+}
+
+QStringList KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
+{
     //TODO
+    return QStringList();
 }

@@ -42,6 +42,12 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     QVERIFY(buttonBox);
     QTabWidget *tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tab);
+    for(int i = 0; i < tab->count(); ++i) {
+        const QString objName = tab->widget(i)->objectName();
+        const bool hasCorrectName = (objName == QStringLiteral("kdeapplicationsettingspage")) ||
+                                    (objName == QStringLiteral("customsettingspage"));
+        QVERIFY(hasCorrectName);
+    }
 }
 
 QTEST_MAIN(KDebugSettingsDialogTest)
