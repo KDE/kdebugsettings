@@ -23,6 +23,20 @@
 
 #include <QListWidget>
 
+class KDeApplicationListWidgetItem : public QListWidgetItem
+{
+public:
+    explicit KDeApplicationListWidgetItem(QListWidget *parent=0);
+    ~KDeApplicationListWidgetItem();
+
+    QString category() const;
+    void setCategory(const QString &category);
+
+private:
+    QString mCategory;
+};
+
+
 class KDeApplicationListWidget : public QListWidget
 {
     Q_OBJECT
@@ -32,6 +46,7 @@ public:
 
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();
+    void fillList();
 };
 
 #endif // KDEAPPLICATIONLISTWIDGET_H

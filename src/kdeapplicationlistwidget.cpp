@@ -20,6 +20,8 @@
 
 #include "kdeapplicationlistwidget.h"
 
+
+
 KDeApplicationListWidget::KDeApplicationListWidget(QWidget *parent)
     : QListWidget(parent)
 {
@@ -41,3 +43,28 @@ void KDeApplicationListWidget::deSelectAllDebugCategories()
     //TODO
 }
 
+void KDeApplicationListWidget::fillList()
+{
+    //TODO
+}
+
+KDeApplicationListWidgetItem::KDeApplicationListWidgetItem(QListWidget *parent)
+    : QListWidgetItem(parent)
+{
+    setFlags( flags() | Qt::ItemIsUserCheckable );
+}
+
+KDeApplicationListWidgetItem::~KDeApplicationListWidgetItem()
+{
+
+}
+
+QString KDeApplicationListWidgetItem::category() const
+{
+    return mCategory;
+}
+
+void KDeApplicationListWidgetItem::setCategory(const QString &category)
+{
+    mCategory = category;
+}
