@@ -19,6 +19,7 @@
 */
 
 #include "kdebugsettingsdialog.h"
+#include "kdebugsettingsutil.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -44,6 +45,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
+    readCategoriesFile();
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()
@@ -66,4 +68,11 @@ void KDebugSettingsDialog::saveConfig()
     KConfigGroup group(KSharedConfig::openConfig(), "KDebugSettingsDialog");
     group.writeEntry("Size", size());
     group.sync();
+}
+
+void KDebugSettingsDialog::readCategoriesFile()
+{
+    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("qdebug.areas"));
+    KDebugSettingsUtil::readLoggingCategories(confAreasFile);
+    //TODO
 }

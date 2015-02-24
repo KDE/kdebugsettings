@@ -14,7 +14,7 @@ macro(add_unittest _source _additionalsource)
   )
 endmacro ()
 
-add_unittest( kdebugsettingsdialogtest.cpp "../src/kdebugsettingsdialog.cpp")
+add_unittest( kdebugsettingsdialogtest.cpp "../src/kdebugsettingsdialog.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationlistwidget.cpp")
 add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp")
 add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.cpp")

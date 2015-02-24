@@ -23,6 +23,7 @@
 #define KDEBUGSETTINGSDIALOG_H
 
 #include <QDialog>
+#include <QMap>
 class QTabWidget;
 class KDebugSettingsDialog : public QDialog
 {
@@ -30,7 +31,10 @@ class KDebugSettingsDialog : public QDialog
 public:
     explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
     ~KDebugSettingsDialog();
+    typedef QMap<QString /*category*/, QString /*description*/> CategoriesMap;
+
 private:
+    void readCategoriesFile();
     void saveConfig();
     void readConfig();
     QTabWidget *mTabWidget;

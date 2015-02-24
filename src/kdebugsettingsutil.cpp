@@ -19,10 +19,17 @@
 */
 
 #include "kdebugsettingsutil.h"
-
+#include <QDebug>
+#include <QFile>
 
 
 void KDebugSettingsUtil::readLoggingCategories(const QString &filename)
 {
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << "Couldn't open" << filename;
+    } else {
+        //TODO
+    }
     //TODO
 }

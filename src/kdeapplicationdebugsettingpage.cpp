@@ -56,10 +56,10 @@ KDeApplicationDebugSettingPage::~KDeApplicationDebugSettingPage()
 
 void KDeApplicationDebugSettingPage::slotSelectAll()
 {
-
+    mListWidget->selectAllDebugCategories();
 }
 
 void KDeApplicationDebugSettingPage::slotDeselectAll()
 {
-
+    mListWidget->deSelectAllDebugCategories();
 }
