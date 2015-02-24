@@ -31,6 +31,8 @@ public:
     explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
     ~KDebugSettingsDialog();
 private:
+    void saveConfig();
+    void readConfig();
     QTabWidget *mTabWidget;
 };
 

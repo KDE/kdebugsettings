@@ -21,6 +21,7 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include <KLocalizedString>
 #include <QListWidget>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
@@ -33,6 +34,18 @@ KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mainLayout->addWidget(mListWidget);
 
+    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    mainLayout->addLayout(buttonLayout);
+
+    mSelectAll = new QPushButton(i18n("Select All"));
+    mSelectAll->setObjectName(QStringLiteral("selectall"));
+    buttonLayout->addWidget(mSelectAll);
+    connect(mSelectAll, &QAbstractButton::clicked, this, &KDeApplicationDebugSettingPage::slotSelectAll);
+
+    mDeselectAll = new QPushButton(i18n("Deselect All"));
+    mDeselectAll->setObjectName(QStringLiteral("deselectall"));
+    buttonLayout->addWidget(mDeselectAll);
+    connect(mSelectAll, &QAbstractButton::clicked, this, &KDeApplicationDebugSettingPage::slotDeselectAll);
 }
 
 KDeApplicationDebugSettingPage::~KDeApplicationDebugSettingPage()
@@ -40,3 +53,12 @@ KDeApplicationDebugSettingPage::~KDeApplicationDebugSettingPage()
 
 }
 
+void KDeApplicationDebugSettingPage::slotSelectAll()
+{
+
+}
+
+void KDeApplicationDebugSettingPage::slotDeselectAll()
+{
+
+}

@@ -21,6 +21,8 @@
 #include "kdebugsettingsdialog.h"
 
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <QDialogButtonBox>
 #include <QTabWidget>
@@ -41,10 +43,27 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
+    readConfig();
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()
 {
-
+    saveConfig();
 }
 
+
+void KDebugSettingsDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "KDebugSettingsDialog");
+    const QSize size = group.readEntry("Size", QSize(600, 400));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void KDebugSettingsDialog::saveConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "KDebugSettingsDialog");
+    group.writeEntry("Size", size());
+    group.sync();
+}

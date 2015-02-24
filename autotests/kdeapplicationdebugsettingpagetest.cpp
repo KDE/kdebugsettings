@@ -21,6 +21,7 @@
 #include "kdeapplicationdebugsettingpagetest.h"
 #include "../src/kdeapplicationdebugsettingpage.h"
 #include <qlistwidget.h>
+#include <qpushbutton.h>
 #include <qtest.h>
 
 KDeApplicationDebugSettingPageTest::KDeApplicationDebugSettingPageTest(QObject *parent)
@@ -39,6 +40,12 @@ void KDeApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     KDeApplicationDebugSettingPage page;
     QListWidget *listWidget = page.findChild<QListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(listWidget);
+
+    QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
+    QVERIFY(selectAll);
+
+    QPushButton *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));
+    QVERIFY(deselectAll);
 }
 
 QTEST_MAIN(KDeApplicationDebugSettingPageTest)

@@ -19,6 +19,7 @@
 */
 
 #include "kdeapplicationlistwidgettest.h"
+#include "../src/kdeapplicationlistwidget.h"
 #include <qtest.h>
 
 KDeApplicationListWidgetTest::KDeApplicationListWidgetTest(QObject *parent)
@@ -30,6 +31,12 @@ KDeApplicationListWidgetTest::KDeApplicationListWidgetTest(QObject *parent)
 KDeApplicationListWidgetTest::~KDeApplicationListWidgetTest()
 {
 
+}
+
+void KDeApplicationListWidgetTest::shouldHaveDefaultValue()
+{
+    KDeApplicationListWidget widgetList;
+    QCOMPARE(widgetList.count(), 0);
 }
 
 QTEST_MAIN(KDeApplicationListWidgetTest)

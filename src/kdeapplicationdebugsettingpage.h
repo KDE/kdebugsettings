@@ -23,14 +23,20 @@
 
 #include <QWidget>
 class QListWidget;
+class QPushButton;
 class KDeApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
 public:
     explicit KDeApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
     ~KDeApplicationDebugSettingPage();
+private slots:
+    void slotSelectAll();
+    void slotDeselectAll();
 private:
     QListWidget *mListWidget;
+    QPushButton *mSelectAll;
+    QPushButton *mDeselectAll;
 };
 
 #endif // KDEAPPLICATIONDEBUGSETTINGPAGE_H

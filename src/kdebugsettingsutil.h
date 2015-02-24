@@ -18,19 +18,13 @@
 
 */
 
-#ifndef KDEAPPLICATIONLISTWIDGETTEST_H
-#define KDEAPPLICATIONLISTWIDGETTEST_H
+#ifndef KDEBUGSETTINGSUTIL_H
+#define KDEBUGSETTINGSUTIL_H
 
-#include <QObject>
+#include <QString>
 
-class KDeApplicationListWidgetTest : public QObject
-{
-    Q_OBJECT
-public:
-    explicit KDeApplicationListWidgetTest(QObject *parent = 0);
-    ~KDeApplicationListWidgetTest();
-private Q_SLOTS:
-    void shouldHaveDefaultValue();
-};
+namespace KDebugSettingsUtil {
+void readLoggingCategories(const QString &filename);
+}
 
-#endif // KDEAPPLICATIONLISTWIDGETTEST_H
+#endif // KDEBUGSETTINGSUTIL_H

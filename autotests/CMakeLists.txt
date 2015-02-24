@@ -10,6 +10,7 @@ macro(add_unittest _source _additionalsource)
     Qt5::Test
     KF5::I18n
     Qt5::Widgets
+    KF5::ConfigCore
   )
 endmacro ()
 
@@ -17,4 +18,3 @@ add_unittest( kdebugsettingsdialogtest.cpp "../src/kdebugsettingsdialog.cpp")
 add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp")
 add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp")
 add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.cpp")
-
