@@ -90,5 +90,6 @@ void KDebugSettingsDialog::readCategoriesFiles()
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     const QStringList customCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
 
+    mKdeApplicationSettingsPage->fillList(categories);
     //TODO
 }
