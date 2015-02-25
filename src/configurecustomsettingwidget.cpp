@@ -20,9 +20,27 @@
 
 #include "configurecustomsettingwidget.h"
 
+#include <KLocalizedString>
+#include <QLabel>
+#include <QLineEdit>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *vbox = new QVBoxLayout;
+    setLayout(vbox);
+
+    QLabel *lab = new QLabel(i18n("Category:"));
+    lab->setObjectName(QStringLiteral("category_label"));
+    mCategoryLineEdit = new QLineEdit;
+    mCategoryLineEdit->setObjectName(QStringLiteral("category_lineedit"));
+    QHBoxLayout *categoryLayout = new QHBoxLayout;
+    vbox->addLayout(categoryLayout);
+    categoryLayout->addWidget(lab);
+    categoryLayout->addWidget(mCategoryLineEdit);
+
 
 }
 
