@@ -63,3 +63,8 @@ void KDeApplicationDebugSettingPage::slotDeselectAll()
 {
     mListWidget->deSelectAllDebugCategories();
 }
+
+void KDeApplicationDebugSettingPage::fillList(const KDebugSettingsDialog::CategoriesMap &map)
+{
+    mListWidget->fillList(map);
+}

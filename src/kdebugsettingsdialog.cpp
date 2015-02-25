@@ -85,6 +85,7 @@ void KDebugSettingsDialog::readCategoriesFiles()
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("qdebug.areas"));
     const CategoriesMap categories = KDebugSettingsUtil::readLoggingCategories(confAreasFile);
 
+
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     const QStringList customCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);

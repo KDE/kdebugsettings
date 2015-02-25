@@ -43,7 +43,7 @@ void KDeApplicationListWidget::deSelectAllDebugCategories()
     //TODO
 }
 
-void KDeApplicationListWidget::fillList()
+void KDeApplicationListWidget::fillList(const KDebugSettingsDialog::CategoriesMap &map)
 {
     //TODO
 }

@@ -22,14 +22,17 @@
 #define KDEAPPLICATIONDEBUGSETTINGPAGE_H
 
 #include <QWidget>
+#include "kdebugsettingsdialog.h"
 class QPushButton;
 class KDeApplicationListWidget;
+
 class KDeApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
 public:
     explicit KDeApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
     ~KDeApplicationDebugSettingPage();
+    void fillList(const KDebugSettingsDialog::CategoriesMap &map);
 private slots:
     void slotSelectAll();
     void slotDeselectAll();

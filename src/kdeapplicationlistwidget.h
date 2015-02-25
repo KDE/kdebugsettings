@@ -22,6 +22,7 @@
 #define KDEAPPLICATIONLISTWIDGET_H
 
 #include <QListWidget>
+#include "kdebugsettingsdialog.h"
 
 class KDeApplicationListWidgetItem : public QListWidgetItem
 {
@@ -46,7 +47,7 @@ public:
 
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();
-    void fillList();
+    void fillList(const KDebugSettingsDialog::CategoriesMap &map);
 };
 
 #endif // KDEAPPLICATIONLISTWIDGET_H
