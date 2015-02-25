@@ -27,7 +27,7 @@
 class KDeApplicationListWidgetItem : public QListWidgetItem
 {
 public:
-    explicit KDeApplicationListWidgetItem(QListWidget *parent=0);
+    explicit KDeApplicationListWidgetItem(QListWidget *parent = 0);
     ~KDeApplicationListWidgetItem();
 
     QString category() const;
@@ -37,12 +37,11 @@ private:
     QString mCategory;
 };
 
-
 class KDeApplicationListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit KDeApplicationListWidget(QWidget *parent=Q_NULLPTR);
+    explicit KDeApplicationListWidget(QWidget *parent = Q_NULLPTR);
     ~KDeApplicationListWidget();
 
     void deSelectAllDebugCategories();

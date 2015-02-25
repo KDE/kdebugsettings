@@ -27,23 +27,23 @@
 #include <QCommandLineParser>
 #include <KDBusService>
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    
+
     KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral("0.1"),
                          i18n("Configure debug settings"), KAboutLicense::GPL_V2,
                          i18n("(c) 2015 kdebugsettings authors"));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     KAboutData::setApplicationData(aboutData);
-   
+
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
-     
+
     KDBusService service(KDBusService::Unique);
     KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
     return dialog->exec();

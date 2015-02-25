@@ -22,7 +22,6 @@
 #include <QDebug>
 #include <QFile>
 
-
 KDebugSettingsDialog::CategoriesMap KDebugSettingsUtil::readLoggingCategories(const QString &filename)
 {
     KDebugSettingsDialog::CategoriesMap categories;
@@ -32,27 +31,29 @@ KDebugSettingsDialog::CategoriesMap KDebugSettingsUtil::readLoggingCategories(co
     } else {
         QString data;
         QTextStream ts(&file);
-        ts.setCodec( "ISO-8859-1" );
+        ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
 
             int pos = data.indexOf(QLatin1Literal("#"));
-            if ( pos != -1 ) {
-                data.truncate( pos );
+            if (pos != -1) {
+                data.truncate(pos);
                 data = data.simplified();
             }
 
-            if (data.isEmpty())
+            if (data.isEmpty()) {
                 continue;
+            }
 
             const int space = data.indexOf(QLatin1Char(' '));
-            if (space == -1)
+            if (space == -1) {
                 qCritical() << "No space:" << data << endl;
+            }
 
             const QString logName = data.left(space);
 
             const QString description = data.mid(space).simplified();
-            categories.insert( logName, description );
+            categories.insert(logName, description);
         }
     }
 

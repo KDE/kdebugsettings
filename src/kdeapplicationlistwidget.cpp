@@ -20,8 +20,6 @@
 
 #include "kdeapplicationlistwidget.h"
 
-
-
 KDeApplicationListWidget::KDeApplicationListWidget(QWidget *parent)
     : QListWidget(parent)
 {
@@ -51,7 +49,7 @@ void KDeApplicationListWidget::fillList(const KDebugSettingsDialog::CategoriesMa
 KDeApplicationListWidgetItem::KDeApplicationListWidgetItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
-    setFlags( flags() | Qt::ItemIsUserCheckable );
+    setFlags(flags() | Qt::ItemIsUserCheckable);
 }
 
 KDeApplicationListWidgetItem::~KDeApplicationListWidgetItem()

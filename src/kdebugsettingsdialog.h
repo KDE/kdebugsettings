@@ -18,7 +18,6 @@
 
 */
 
-
 #ifndef KDEBUGSETTINGSDIALOG_H
 #define KDEBUGSETTINGSDIALOG_H
 
@@ -31,7 +30,7 @@ class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit KDebugSettingsDialog(QWidget *parent=Q_NULLPTR);
+    explicit KDebugSettingsDialog(QWidget *parent = Q_NULLPTR);
     ~KDebugSettingsDialog();
     typedef QMap<QString /*category*/, QString /*description*/> CategoriesMap;
 

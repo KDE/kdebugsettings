@@ -23,7 +23,8 @@
 
 #include <QString>
 #include "kdebugsettingsdialog.h"
-namespace KDebugSettingsUtil {
+namespace KDebugSettingsUtil
+{
 KDebugSettingsDialog::CategoriesMap readLoggingCategories(const QString &filename);
 QStringList readLoggingQtCategories(const QString &filename);
 }
