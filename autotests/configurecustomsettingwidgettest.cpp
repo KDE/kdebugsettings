@@ -18,26 +18,24 @@
 
 */
 
-#include "configurecustomsettingdialog.h"
+#include "configurecustomsettingwidgettest.h"
+#include "../src/configurecustomsettingwidget.h"
+#include <qtest.h>
 
-#include <qboxlayout.h>
-#include <KLocalizedString>
-#include <qdialogbuttonbox.h>
-
-ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
-    : QDialog(parent)
-{
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    mainLayout->addWidget(buttonBox);
-}
-
-ConfigureCustomSettingDialog::~ConfigureCustomSettingDialog()
+ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *parent)
+    : QObject(parent)
 {
 
 }
+
+ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest()
+{
+
+}
+
+void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
+{
+   ConfigureCustomSettingWidget w;
+}
+
+QTEST_MAIN(ConfigureCustomSettingWidgetTest)

@@ -27,3 +27,4 @@ add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebug
 add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp")
 add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.cpp")
 add_unittest( configurecustomsettingdialogtest.cpp "../src/configurecustomsettingdialog.cpp")
+add_unittest( configurecustomsettingwidgettest.cpp "../src/configurecustomsettingwidget.cpp")

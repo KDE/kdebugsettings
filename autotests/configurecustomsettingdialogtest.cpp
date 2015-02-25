@@ -20,6 +20,8 @@
 
 
 #include "configurecustomsettingdialogtest.h"
+#include "../src/configurecustomsettingdialog.h"
+#include <QDialogButtonBox>
 #include <qtest.h>
 ConfigureCustomSettingDialogTest::ConfigureCustomSettingDialogTest(QObject *parent)
     : QObject(parent)
@@ -30,6 +32,13 @@ ConfigureCustomSettingDialogTest::ConfigureCustomSettingDialogTest(QObject *pare
 ConfigureCustomSettingDialogTest::~ConfigureCustomSettingDialogTest()
 {
 
+}
+
+void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
+{
+    ConfigureCustomSettingDialog dlg;
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
 }
 
 QTEST_MAIN(ConfigureCustomSettingDialogTest)

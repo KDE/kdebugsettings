@@ -30,6 +30,8 @@ class ConfigureCustomSettingDialogTest : public QObject
 public:
     explicit ConfigureCustomSettingDialogTest(QObject *parent = 0);
     ~ConfigureCustomSettingDialogTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CONFIGURECUSTOMSETTINGDIALOGTEST_H
