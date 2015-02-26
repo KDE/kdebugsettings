@@ -58,6 +58,8 @@ public:
     explicit KDebugSettingsDialog(QWidget *parent = Q_NULLPTR);
     ~KDebugSettingsDialog();
 
+private slots:
+    void slotAccepted();
 private:
     void readCategoriesFiles();
     void saveConfig();

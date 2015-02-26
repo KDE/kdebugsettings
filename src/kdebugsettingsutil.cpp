@@ -62,7 +62,8 @@ Category::List KDebugSettingsUtil::readLoggingCategories(const QString &filename
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
             const Category category = parseLineKdeLoggingCategory(data);
-            categoriesList.append(category);
+            if (category.isValid())
+                categoriesList.append(category);
         }
     }
 

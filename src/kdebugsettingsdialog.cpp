@@ -50,7 +50,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
@@ -86,8 +86,19 @@ void KDebugSettingsDialog::readCategoriesFiles()
 
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
-    const Category::List customCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+    if (!envPath.isEmpty()) {
+        const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+    }
 
     mKdeApplicationSettingsPage->fillList(categories);
     //TODO
+}
+
+void KDebugSettingsDialog::slotAccepted()
+{
+    //Save Rules
+    QStringList lstKde = mKdeApplicationSettingsPage->rules();
+    QStringList lstCustom = mCustomSettingsPage->rules();
+    //Save in files.
+    accept();
 }

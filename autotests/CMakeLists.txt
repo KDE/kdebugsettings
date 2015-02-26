@@ -5,6 +5,8 @@ set(full_source_file
    ../src/customdebugsettingspage.cpp
    ../src/kdeapplicationdebugsettingpage.cpp
    ../src/kdebugsettingsutil.cpp
+   ../src/configurecustomsettingdialog.cpp
+   ../src/configurecustomsettingwidget.cpp
 )
 
 # convenience macro to add qtest unit tests
@@ -19,12 +21,13 @@ macro(add_unittest _source _additionalsource)
     KF5::I18n
     Qt5::Widgets
     KF5::ConfigCore
+    KF5::WidgetsAddons
   )
 endmacro ()
 
 add_unittest( kdebugsettingsdialogtest.cpp "${full_source_file}")
 add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationlistwidget.cpp")
-add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp")
+add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.cpp")
 add_unittest( configurecustomsettingdialogtest.cpp "../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( configurecustomsettingwidgettest.cpp "../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")

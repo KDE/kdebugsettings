@@ -19,11 +19,15 @@
 */
 
 #include "customdebugsettingspage.h"
+#include "configurecustomsettingdialog.h"
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QListWidget>
 #include <QLabel>
+#include <QPushButton>
+#include <QPointer>
 
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
@@ -40,7 +44,29 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 
     mListWidget = new QListWidget;
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
+    connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
     vbox->addWidget(mListWidget);
+
+    QVBoxLayout *buttonLayout = new QVBoxLayout;
+    mainLayout->addLayout(buttonLayout);
+
+
+    mAddRule = new QPushButton(i18n("Add..."));
+    mAddRule->setObjectName(QStringLiteral("add_rule"));
+    buttonLayout->addWidget(mAddRule);
+    connect(mAddRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotAddRule);
+
+    mEditRule = new QPushButton(i18n("Edit..."));;
+    mEditRule->setObjectName(QStringLiteral("edit_rule"));
+    buttonLayout->addWidget(mEditRule);
+    connect(mEditRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotEditRule);
+
+    mRemoveRule = new QPushButton(i18n("Remove..."));;
+    mRemoveRule->setObjectName(QStringLiteral("remove_rule"));
+    buttonLayout->addWidget(mRemoveRule);
+    buttonLayout->addStretch();
+    connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRule);
+    updateButtons();
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage()
@@ -48,8 +74,57 @@ CustomDebugSettingsPage::~CustomDebugSettingsPage()
 
 }
 
-void CustomDebugSettingsPage::fillList()
+void CustomDebugSettingsPage::updateButtons()
+{
+    mEditRule->setEnabled(mListWidget->currentItem());
+    mRemoveRule->setEnabled(mListWidget->currentItem());
+}
+
+void CustomDebugSettingsPage::fillList(const Category::List &list)
 {
     //TODO
 }
 
+QStringList CustomDebugSettingsPage::rules()
+{
+    QStringList lst;
+    for(int i = 0; i < mListWidget->count(); ++i) {
+        lst.append(mListWidget->item(i)->text());
+    }
+    return lst;
+}
+
+void CustomDebugSettingsPage::slotRemoveRule()
+{
+    //TODO add MessageBox to avoid to remove it.
+    QListWidgetItem *item = mListWidget->currentItem();
+    delete item;
+}
+
+void CustomDebugSettingsPage::slotEditRule()
+{
+    QListWidgetItem *item = mListWidget->currentItem();
+    if (item) {
+        QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
+        dlg->setRule(item->text());
+        if (dlg->exec()) {
+            const QString ruleStr = dlg->rule();
+            if (!ruleStr.isEmpty()) {
+                item->setText(dlg->rule());
+            }
+        }
+        delete dlg;
+    }
+}
+
+void CustomDebugSettingsPage::slotAddRule()
+{
+    QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
+    if (dlg->exec()) {
+        const QString ruleStr = dlg->rule();
+        if (!ruleStr.isEmpty()) {
+            mListWidget->addItem(ruleStr);
+        }
+    }
+    delete dlg;
+}

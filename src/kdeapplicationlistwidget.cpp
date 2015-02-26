@@ -32,19 +32,35 @@ KDeApplicationListWidget::~KDeApplicationListWidget()
 
 }
 
+QStringList KDeApplicationListWidget::rules()
+{
+    return QStringList();
+}
+
 void KDeApplicationListWidget::selectAllDebugCategories()
 {
-    //TODO
+    for (int i = 0; i < count(); ++i) {
+        QListWidgetItem *itemWidget = item(i);
+        itemWidget->setCheckState(Qt::Checked);
+    }
 }
 
 void KDeApplicationListWidget::deSelectAllDebugCategories()
 {
-    //TODO
+    for (int i = 0; i < count(); ++i) {
+        QListWidgetItem *itemWidget = item(i);
+        itemWidget->setCheckState(Qt::Unchecked);
+    }
 }
 
 void KDeApplicationListWidget::fillList(const Category::List &list)
 {
-    //TODO
+    Q_FOREACH( const Category &cat, list) {
+        KDeApplicationListWidgetItem *item = new KDeApplicationListWidgetItem(this);
+        item->setText(cat.description);
+        item->setCategory(cat.logName);
+        item->setCheckState(cat.enabled ? Qt::Checked : Qt::Unchecked);
+    }
 }
 
 KDeApplicationListWidgetItem::KDeApplicationListWidgetItem(QListWidget *parent)

@@ -46,5 +46,7 @@ int main(int argc, char **argv)
 
     KDBusService service(KDBusService::Unique);
     KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
-    return dialog->exec();
+    int ret = dialog->exec();
+    delete dialog;
+    return ret;
 }

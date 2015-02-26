@@ -22,6 +22,7 @@
 #include "../src/customdebugsettingspage.h"
 #include <QLabel>
 #include <QListWidget>
+#include <QPushButton>
 #include <qtest.h>
 
 CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
@@ -45,6 +46,19 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
     QListWidget *listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
     QVERIFY(listWidget);
     QCOMPARE(listWidget->count(), 0);
+
+
+    QPushButton *addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
+    QVERIFY(addButton);
+    QVERIFY(addButton->isEnabled());
+
+    QPushButton *editButton = page.findChild<QPushButton *>(QStringLiteral("edit_rule"));
+    QVERIFY(editButton);
+    QVERIFY(!editButton->isEnabled());
+
+    QPushButton *removeButton = page.findChild<QPushButton *>(QStringLiteral("remove_rule"));
+    QVERIFY(removeButton);
+    QVERIFY(!removeButton->isEnabled());
 }
 
 QTEST_MAIN(CustomDebugSettingsPageTest)

@@ -22,6 +22,7 @@
 #define CUSTOMDEBUGSETTINGSPAGE_H
 
 #include <QWidget>
+#include "kdebugsettingsdialog.h"
 class QListWidget;
 class QPushButton;
 class CustomDebugSettingsPage : public QWidget
@@ -31,9 +32,13 @@ public:
     explicit CustomDebugSettingsPage(QWidget *parent = Q_NULLPTR);
     ~CustomDebugSettingsPage();
 
-    //TODO
-    void fillList();
-
+    void fillList(const Category::List &list);
+    QStringList rules();
+private slots:
+    void slotRemoveRule();
+    void slotAddRule();
+    void slotEditRule();
+    void updateButtons();
 private:
     QListWidget *mListWidget;
     QPushButton *mAddRule;

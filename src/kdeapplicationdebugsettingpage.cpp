@@ -68,3 +68,8 @@ void KDeApplicationDebugSettingPage::fillList(const Category::List &list)
 {
     mListWidget->fillList(list);
 }
+
+QStringList KDeApplicationDebugSettingPage::rules()
+{
+    return mListWidget->rules();
+}
