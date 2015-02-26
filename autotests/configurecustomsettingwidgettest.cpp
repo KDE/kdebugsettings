@@ -20,6 +20,10 @@
 
 #include "configurecustomsettingwidgettest.h"
 #include "../src/configurecustomsettingwidget.h"
+#include <QComboBox>
+#include <QLabel>
+#include <QLineEdit>
+#include <qcheckbox.h>
 #include <qtest.h>
 
 ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *parent)
@@ -36,6 +40,19 @@ ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest()
 void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
 {
    ConfigureCustomSettingWidget w;
+   QLabel *lab = w.findChild<QLabel *>(QStringLiteral("category_label"));
+   QVERIFY(lab);
+
+   QLineEdit *categoryLineEdit = w.findChild<QLineEdit *>(QStringLiteral("category_lineedit"));
+   QVERIFY(categoryLineEdit);
+
+   QCheckBox *enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
+   QVERIFY(enableCategory);
+
+   lab = w.findChild<QLabel *>(QStringLiteral("categorytype_label"));
+   QVERIFY(lab);
+   QComboBox *categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
+   QVERIFY(categoryType);
 }
 
 QTEST_MAIN(ConfigureCustomSettingWidgetTest)

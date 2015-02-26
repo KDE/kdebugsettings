@@ -25,6 +25,8 @@
 #include <QLineEdit>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QCheckBox>
+#include <QComboBox>
 
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)
@@ -41,7 +43,20 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     categoryLayout->addWidget(lab);
     categoryLayout->addWidget(mCategoryLineEdit);
 
+    mEnableCategory = new QCheckBox(i18n("Enable"));
+    mEnableCategory->setObjectName(QStringLiteral("enable_category"));
+    vbox->addWidget(mEnableCategory);
 
+    lab = new QLabel(i18n("Type:"));
+    lab->setObjectName(QStringLiteral("categorytype_label"));
+    QHBoxLayout *categoryTypeLayout = new QHBoxLayout;
+    vbox->addLayout(categoryTypeLayout);
+
+    mCategoryType = new QComboBox;
+    mCategoryType->setObjectName(QStringLiteral("categorytype_combobox"));
+
+    categoryTypeLayout->addWidget(lab);
+    categoryTypeLayout->addWidget(mCategoryType);
 }
 
 ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()

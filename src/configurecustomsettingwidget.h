@@ -23,6 +23,8 @@
 
 #include <QWidget>
 class QLineEdit;
+class QCheckBox;
+class QComboBox;
 class ConfigureCustomSettingWidget : public QWidget
 {
     Q_OBJECT
@@ -31,7 +33,8 @@ public:
     ~ConfigureCustomSettingWidget();
 private:
     QLineEdit *mCategoryLineEdit;
-
+    QCheckBox *mEnableCategory;
+    QComboBox *mCategoryType;
 };
 
 #endif // CONFIGURECUSTOMSETTINGWIDGET_H
