@@ -66,12 +66,12 @@ ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
 
 void ConfigureCustomSettingWidget::setRule(const QString &rule)
 {
-   //TODO
+   //TODO parse
 }
 
 QString ConfigureCustomSettingWidget::rule()
 {
-    //TODO
+    //TODO generate.
     return QString();
 }
 
