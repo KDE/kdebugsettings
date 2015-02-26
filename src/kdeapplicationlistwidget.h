@@ -46,7 +46,7 @@ public:
 
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();
-    void fillList(const KDebugSettingsDialog::CategoriesMap &map);
+    void fillList(const Category::List &list);
 };
 
 #endif // KDEAPPLICATIONLISTWIDGET_H

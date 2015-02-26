@@ -22,13 +22,23 @@
 #define CUSTOMDEBUGSETTINGSPAGE_H
 
 #include <QWidget>
-
+class QListWidget;
+class QPushButton;
 class CustomDebugSettingsPage : public QWidget
 {
     Q_OBJECT
 public:
     explicit CustomDebugSettingsPage(QWidget *parent = Q_NULLPTR);
     ~CustomDebugSettingsPage();
+
+    //TODO
+    void fillList();
+
+private:
+    QListWidget *mListWidget;
+    QPushButton *mAddRule;
+    QPushButton *mEditRule;
+    QPushButton *mRemoveRule;
 };
 
 #endif // CUSTOMDEBUGSETTINGSPAGE_H

@@ -22,9 +22,36 @@
 #include <QDebug>
 #include <QFile>
 
-KDebugSettingsDialog::CategoriesMap KDebugSettingsUtil::readLoggingCategories(const QString &filename)
+Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
-    KDebugSettingsDialog::CategoriesMap categories;
+    Category category;
+    int pos = line.indexOf(QLatin1Literal("#"));
+    if (pos != -1) {
+        line.truncate(pos);
+        line = line.simplified();
+    }
+
+    if (line.isEmpty()) {
+        return category;
+    }
+    line = line.simplified();
+    const int space = line.indexOf(QLatin1Char(' '));
+    if (space == -1) {
+        qWarning() << "No space:" << line << endl;
+        return category;
+    }
+
+    const QString logName = line.left(space);
+
+    const QString description = line.mid(space).simplified();
+    category.logName = logName;
+    category.description = description;
+    return category;
+}
+
+Category::List KDebugSettingsUtil::readLoggingCategories(const QString &filename)
+{
+    Category::List categoriesList;
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         qWarning() << "Couldn't open" << filename;
@@ -34,34 +61,85 @@ KDebugSettingsDialog::CategoriesMap KDebugSettingsUtil::readLoggingCategories(co
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-
-            int pos = data.indexOf(QLatin1Literal("#"));
-            if (pos != -1) {
-                data.truncate(pos);
-                data = data.simplified();
-            }
-
-            if (data.isEmpty()) {
-                continue;
-            }
-
-            const int space = data.indexOf(QLatin1Char(' '));
-            if (space == -1) {
-                qCritical() << "No space:" << data << endl;
-            }
-
-            const QString logName = data.left(space);
-
-            const QString description = data.mid(space).simplified();
-            categories.insert(logName, description);
+            const Category category = parseLineKdeLoggingCategory(data);
+            categoriesList.append(category);
         }
     }
 
-    return categories;
+    return categoriesList;
 }
 
-QStringList KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
+Category KDebugSettingsUtil::parseLineLoggingQtCategory(QString line)
 {
-    //TODO
-    return QStringList();
+    Category cat;
+    int equalPos = line.indexOf(QLatin1Char('='));
+    if ((equalPos != -1)
+            && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
+
+        const QString pattern = line.left(equalPos);
+        const QString valueStr = line.mid(equalPos + 1);
+        if (valueStr == QLatin1String("true"))
+            cat.enabled = true;
+        else if (valueStr == QLatin1String("false"))
+            cat.enabled = false;
+        else
+            return cat;
+
+        QString p;
+        if (pattern.endsWith(QLatin1String(".debug"))) {
+            p = pattern.left(pattern.length() - 6); // strlen(".debug")
+            cat.type = QStringLiteral("debug");
+            cat.logName = p;
+        } else if (pattern.endsWith(QLatin1String(".warning"))) {
+            p = pattern.left(pattern.length() - 8); // strlen(".warning")
+            cat.type = QStringLiteral("warning");
+            cat.logName = p;
+        } else if (pattern.endsWith(QLatin1String(".critical"))) {
+            p = pattern.left(pattern.length() - 9); // strlen(".critical")
+            cat.type = QStringLiteral("critical");
+            cat.logName = p;
+        } else {
+            p = pattern;
+            cat.logName = p;
+        }
+    }
+    return cat;
+}
+
+Category::List KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
+{
+    //Code based on src/corelib/io/qloggingregistry.cpp
+    Category::List categories;
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << "Couldn't open" << filename;
+    } else {
+        QTextStream ts(&file);
+        QString _section;
+        while (!ts.atEnd()) {
+            QString line = ts.readLine();
+
+            // Remove all whitespace from line
+            line = line.simplified();
+            line.remove(QLatin1Char(' '));
+
+            // comment
+            if (line.startsWith(QLatin1Char(';')))
+                continue;
+
+            if (line.startsWith(QLatin1Char('[')) && line.endsWith(QLatin1Char(']'))) {
+                // new section
+                _section = line.mid(1, line.size() - 2);
+                continue;
+            }
+
+            if (_section == QLatin1String("Rules")) {
+                Category cat = parseLineLoggingQtCategory(line);
+                if (cat.isValid()) {
+                    categories.append(cat);
+                }
+            }
+        }
+    }
+    return categories;
 }

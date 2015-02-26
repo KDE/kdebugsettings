@@ -20,6 +20,7 @@
 
 #include "kdeapplicationlistwidget.h"
 
+
 KDeApplicationListWidget::KDeApplicationListWidget(QWidget *parent)
     : QListWidget(parent)
 {
@@ -41,7 +42,7 @@ void KDeApplicationListWidget::deSelectAllDebugCategories()
     //TODO
 }
 
-void KDeApplicationListWidget::fillList(const KDebugSettingsDialog::CategoriesMap &map)
+void KDeApplicationListWidget::fillList(const Category::List &list)
 {
     //TODO
 }

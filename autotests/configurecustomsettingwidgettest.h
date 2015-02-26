@@ -31,6 +31,8 @@ public:
     ~ConfigureCustomSettingWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldRestoreRules_data();
+    void shouldRestoreRules();
 };
 
 #endif // CONFIGURECUSTOMSETTINGWIDGETTEST_H

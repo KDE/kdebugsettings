@@ -32,7 +32,7 @@ class KDeApplicationDebugSettingPage : public QWidget
 public:
     explicit KDeApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
     ~KDeApplicationDebugSettingPage();
-    void fillList(const KDebugSettingsDialog::CategoriesMap &map);
+    void fillList(const Category::List &list);
 private slots:
     void slotSelectAll();
     void slotDeselectAll();

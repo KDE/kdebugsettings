@@ -53,6 +53,27 @@ void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
    QVERIFY(lab);
    QComboBox *categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
    QVERIFY(categoryType);
+   QCOMPARE(categoryType->count(), 4);
+}
+
+
+void ConfigureCustomSettingWidgetTest::shouldRestoreRules_data()
+{
+    QTest::addColumn<QString>("input");
+
+    QTest::newRow("empty") <<  QString();
+    QTest::newRow("validrule") <<  QStringLiteral("foo.warning=true");
+    QTest::newRow("validrule2") <<  QStringLiteral("foo=true");
+    QTest::newRow("validrule3") <<  QStringLiteral("foo=false");
+    QTest::newRow("validrule3*") <<  QStringLiteral("*.debug=false");
+}
+
+void ConfigureCustomSettingWidgetTest::shouldRestoreRules()
+{
+    QFETCH( QString, input );
+    ConfigureCustomSettingWidget w;
+    w.setRule(input);
+    QCOMPARE(input, w.rule());
 }
 
 QTEST_MAIN(ConfigureCustomSettingWidgetTest)

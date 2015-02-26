@@ -23,16 +23,40 @@
 
 #include <QDialog>
 #include <QMap>
+#include <QVector>
 class QTabWidget;
 class KDeApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
+struct Category
+{
+    Category()
+        : enabled(false)
+    {
+
+    }
+    typedef QVector<Category> List;
+    bool operator ==(const Category &other) const {
+        return (description == other.description) &&
+                (logName == other.logName) &&
+                (type == other.type) &&
+                (enabled == other.enabled);
+    }
+    bool isValid() const {
+        return !logName.isEmpty();
+    }
+
+    QString description;
+    QString logName;
+    QString type;
+    bool enabled;
+};
+
 class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit KDebugSettingsDialog(QWidget *parent = Q_NULLPTR);
     ~KDebugSettingsDialog();
-    typedef QMap<QString /*category*/, QString /*description*/> CategoriesMap;
 
 private:
     void readCategoriesFiles();

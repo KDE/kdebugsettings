@@ -19,6 +19,9 @@
 */
 
 #include "customdebugsettingspagetest.h"
+#include "../src/customdebugsettingspage.h"
+#include <QLabel>
+#include <QListWidget>
 #include <qtest.h>
 
 CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
@@ -30,6 +33,18 @@ CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
 CustomDebugSettingsPageTest::~CustomDebugSettingsPageTest()
 {
 
+}
+
+void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
+{
+    CustomDebugSettingsPage page;
+
+    QLabel *lab = page.findChild<QLabel *>(QStringLiteral("custom_label"));
+    QVERIFY(lab);
+
+    QListWidget *listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
+    QVERIFY(listWidget);
+    QCOMPARE(listWidget->count(), 0);
 }
 
 QTEST_MAIN(CustomDebugSettingsPageTest)

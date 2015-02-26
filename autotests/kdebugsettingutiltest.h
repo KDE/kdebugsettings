@@ -28,6 +28,13 @@ class KDebugSettingUtilTest : public QObject
     Q_OBJECT
 public:
     explicit KDebugSettingUtilTest(QObject *parent = 0);
+    ~KDebugSettingUtilTest();
+private Q_SLOTS:
+    void shouldParseKdeLogginLine_data();
+    void shouldParseKdeLogginLine();
+
+    void shouldParseQtLogginLine_data();
+    void shouldParseQtLogginLine();
 };
 
 #endif // KDEBUGSETTINGUTILTEST_H

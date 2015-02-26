@@ -29,10 +29,8 @@ class CustomDebugSettingsPageTest : public QObject
 public:
     explicit CustomDebugSettingsPageTest(QObject *parent = 0);
     ~CustomDebugSettingsPageTest();
-
-signals:
-
-public slots:
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CUSTOMDEBUGSETTINGSPAGETEST_H

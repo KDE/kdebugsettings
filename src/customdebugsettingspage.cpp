@@ -19,15 +19,37 @@
 */
 
 #include "customdebugsettingspage.h"
+#include <KLocalizedString>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QListWidget>
+#include <QLabel>
 
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
 {
+    QHBoxLayout *mainLayout = new QHBoxLayout;
+    setLayout(mainLayout);
 
+    QVBoxLayout *vbox = new QVBoxLayout;
+    mainLayout->addLayout(vbox);
+
+    QLabel *lab = new QLabel(i18n("Custom:"));
+    lab->setObjectName(QStringLiteral("custom_label"));
+    vbox->addWidget(lab);
+
+    mListWidget = new QListWidget;
+    mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
+    vbox->addWidget(mListWidget);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage()
 {
 
+}
+
+void CustomDebugSettingsPage::fillList()
+{
+    //TODO
 }
 
