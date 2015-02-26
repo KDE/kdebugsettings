@@ -64,3 +64,14 @@ ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
 
 }
 
+void ConfigureCustomSettingWidget::setRule(const QString &rule)
+{
+   //TODO
+}
+
+QString ConfigureCustomSettingWidget::rule()
+{
+    //TODO
+    return QString();
+}
+

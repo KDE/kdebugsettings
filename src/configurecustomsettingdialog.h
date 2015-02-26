@@ -22,13 +22,17 @@
 #define CONFIGURECUSTOMSETTINGDIALOG_H
 
 #include <QDialog>
-
+class ConfigureCustomSettingWidget;
 class ConfigureCustomSettingDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit ConfigureCustomSettingDialog(QWidget *parent = Q_NULLPTR);
     ~ConfigureCustomSettingDialog();
+    void setRule(const QString &rule);
+    QString rule();
+private:
+    ConfigureCustomSettingWidget *mCustomSettingWidget;
 };
 
 #endif // CONFIGURECUSTOMSETTINGDIALOG_H

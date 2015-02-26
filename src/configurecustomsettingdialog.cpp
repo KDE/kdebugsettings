@@ -19,6 +19,7 @@
 */
 
 #include "configurecustomsettingdialog.h"
+#include "configurecustomsettingwidget.h"
 
 #include <qboxlayout.h>
 #include <KLocalizedString>
@@ -30,6 +31,10 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
+    mCustomSettingWidget = new ConfigureCustomSettingWidget;
+    mCustomSettingWidget->setObjectName(QStringLiteral("customsettingwidget"));
+    mainLayout->addWidget(mCustomSettingWidget);
+
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
@@ -40,4 +45,14 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
 ConfigureCustomSettingDialog::~ConfigureCustomSettingDialog()
 {
 
+}
+
+void ConfigureCustomSettingDialog::setRule(const QString &rule)
+{
+    mCustomSettingWidget->setRule(rule);
+}
+
+QString ConfigureCustomSettingDialog::rule()
+{
+    return mCustomSettingWidget->rule();
 }

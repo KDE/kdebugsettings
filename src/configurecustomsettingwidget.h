@@ -31,6 +31,8 @@ class ConfigureCustomSettingWidget : public QWidget
 public:
     explicit ConfigureCustomSettingWidget(QWidget *parent = Q_NULLPTR);
     ~ConfigureCustomSettingWidget();
+    QString rule();
+    void setRule(const QString &rule);
 private:
     QLineEdit *mCategoryLineEdit;
     QCheckBox *mEnableCategory;
