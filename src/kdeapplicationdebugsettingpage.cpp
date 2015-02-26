@@ -46,7 +46,7 @@ KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
     mDeselectAll = new QPushButton(i18n("Deselect All"));
     mDeselectAll->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mDeselectAll);
-    connect(mSelectAll, &QAbstractButton::clicked, this, &KDeApplicationDebugSettingPage::slotDeselectAll);
+    connect(mDeselectAll, &QAbstractButton::clicked, this, &KDeApplicationDebugSettingPage::slotDeselectAll);
 }
 
 KDeApplicationDebugSettingPage::~KDeApplicationDebugSettingPage()
