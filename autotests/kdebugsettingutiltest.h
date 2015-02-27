@@ -30,11 +30,11 @@ public:
     explicit KDebugSettingUtilTest(QObject *parent = 0);
     ~KDebugSettingUtilTest();
 private Q_SLOTS:
-    void shouldParseKdeLogginLine_data();
-    void shouldParseKdeLogginLine();
+    void shouldParseKdeLoggingLine_data();
+    void shouldParseKdeLoggingLine();
 
-    void shouldParseQtLogginLine_data();
-    void shouldParseQtLogginLine();
+    void shouldParseQtLoggingLine_data();
+    void shouldParseQtLoggingLine();
 };
 
 #endif // KDEBUGSETTINGUTILTEST_H

@@ -1,4 +1,4 @@
-# Format : logname<tab>description
+# Format : logname<space>description
 
 # kdepim
 log_sieveeditor	kdepim (sieveeditor)

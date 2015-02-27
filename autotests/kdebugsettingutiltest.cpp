@@ -33,7 +33,7 @@ KDebugSettingUtilTest::~KDebugSettingUtilTest()
 
 }
 
-void KDebugSettingUtilTest::shouldParseKdeLogginLine_data()
+void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
 {
     QTest::addColumn<QString>("input");
     QTest::addColumn<QString>("description");
@@ -48,7 +48,7 @@ void KDebugSettingUtilTest::shouldParseKdeLogginLine_data()
     QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << QString() << false;
 }
 
-void KDebugSettingUtilTest::shouldParseKdeLogginLine()
+void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
 {
     QFETCH( QString, input );
     QFETCH( QString, description );
@@ -64,7 +64,7 @@ void KDebugSettingUtilTest::shouldParseKdeLogginLine()
     QCOMPARE(cat, result);
 }
 
-void KDebugSettingUtilTest::shouldParseQtLogginLine_data()
+void KDebugSettingUtilTest::shouldParseQtLoggingLine_data()
 {
     QTest::addColumn<QString>("input");
     QTest::addColumn<QString>("description");
@@ -88,7 +88,7 @@ void KDebugSettingUtilTest::shouldParseQtLogginLine_data()
     QTest::newRow("invalidWithoutEnabledDisabled") <<  QStringLiteral("dd=") << QString() << QString() << QString() << false;
 }
 
-void KDebugSettingUtilTest::shouldParseQtLogginLine()
+void KDebugSettingUtilTest::shouldParseQtLoggingLine()
 {
     QFETCH( QString, input );
     QFETCH( QString, description );

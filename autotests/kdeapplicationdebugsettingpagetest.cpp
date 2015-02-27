@@ -51,6 +51,7 @@ void KDeApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 
     KListWidgetSearchLine *searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);
+    QVERIFY(searchLine->text().isEmpty());
 }
 
 QTEST_MAIN(KDeApplicationDebugSettingPageTest)

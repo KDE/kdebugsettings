@@ -48,7 +48,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mCustomSettingsPage = new CustomDebugSettingsPage(this);
     mCustomSettingsPage->setObjectName(QStringLiteral("customsettingspage"));
     mTabWidget->addTab(mKdeApplicationSettingsPage, i18n("KDE Application"));
-    mTabWidget->addTab(mCustomSettingsPage, i18n("Custom"));
+    mTabWidget->addTab(mCustomSettingsPage, i18n("Custom Rules"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
@@ -83,7 +83,7 @@ void KDebugSettingsDialog::saveConfig()
 void KDebugSettingsDialog::readCategoriesFiles()
 {
     // KDE debug categories area
-    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("qdebug.areas"));
+    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("kde.categories"));
     Category::List categories = KDebugSettingsUtil::readLoggingCategories(confAreasFile);
 
     // qt logging.ini
