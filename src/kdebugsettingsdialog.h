@@ -29,7 +29,7 @@ class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
 struct Category {
     Category()
-        : enabled(false)
+        : enabled(true)
     {
 
     }

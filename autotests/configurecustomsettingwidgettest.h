@@ -33,6 +33,7 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldRestoreRules_data();
     void shouldRestoreRules();
+    void shouldEmitSignalWhenWeChangeLogName();
 };
 
 #endif // CONFIGURECUSTOMSETTINGWIDGETTEST_H

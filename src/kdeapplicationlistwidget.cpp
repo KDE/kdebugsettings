@@ -77,6 +77,7 @@ KDeApplicationListWidgetItem::KDeApplicationListWidgetItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
     setFlags(flags() | Qt::ItemIsUserCheckable);
+    setCheckState(Qt::Checked);
 }
 
 KDeApplicationListWidgetItem::~KDeApplicationListWidgetItem()

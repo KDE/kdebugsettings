@@ -22,6 +22,7 @@
 #include "../src/configurecustomsettingdialog.h"
 #include "../src/configurecustomsettingwidget.h"
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <qtest.h>
 ConfigureCustomSettingDialogTest::ConfigureCustomSettingDialogTest(QObject *parent)
     : QObject(parent)
@@ -39,8 +40,10 @@ void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
     ConfigureCustomSettingDialog dlg;
     QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+    QVERIFY(!buttonBox->button(QDialogButtonBox::Ok)->isEnabled());
     ConfigureCustomSettingWidget *widget = dlg.findChild<ConfigureCustomSettingWidget *>(QStringLiteral("customsettingwidget"));
     QVERIFY(widget);
+
 }
 
 QTEST_MAIN(ConfigureCustomSettingDialogTest)

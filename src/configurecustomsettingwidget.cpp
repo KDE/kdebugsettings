@@ -39,6 +39,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("category_label"));
     mCategoryLineEdit = new QLineEdit;
     mCategoryLineEdit->setObjectName(QStringLiteral("category_lineedit"));
+    connect(mCategoryLineEdit, SIGNAL(textChanged(QString)), SLOT(slotTextChanged(QString)));
     QHBoxLayout *categoryLayout = new QHBoxLayout;
     vbox->addLayout(categoryLayout);
     categoryLayout->addWidget(lab);
@@ -69,6 +70,12 @@ ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
 
 }
 
+void ConfigureCustomSettingWidget::slotTextChanged(const QString &text)
+{
+    const bool state = !text.trimmed().isEmpty();
+    Q_EMIT enableButton(state);
+}
+
 void ConfigureCustomSettingWidget::setRule(const QString &rule)
 {
     const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
@@ -90,7 +97,7 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
 
 QString ConfigureCustomSettingWidget::rule()
 {
-    QString ruleStr = mCategoryLineEdit->text();
+    QString ruleStr = mCategoryLineEdit->text().trimmed();
     if (!ruleStr.isEmpty()) {
         const QString type = mCategoryType->currentData().toString();
         if (!type.isEmpty()) {

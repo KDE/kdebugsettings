@@ -23,6 +23,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QLineEdit>
+#include <QSignalSpy>
 #include <qcheckbox.h>
 #include <qtest.h>
 
@@ -73,6 +74,24 @@ void ConfigureCustomSettingWidgetTest::shouldRestoreRules()
     ConfigureCustomSettingWidget w;
     w.setRule(input);
     QCOMPARE(input, w.rule());
+}
+
+void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
+{
+    ConfigureCustomSettingWidget w;
+    QLineEdit *categoryLineEdit = w.findChild<QLineEdit *>(QStringLiteral("category_lineedit"));
+    QVERIFY(categoryLineEdit);
+    QSignalSpy spy(&w, SIGNAL(enableButton(bool)));
+    categoryLineEdit->setText(QStringLiteral("bla"));
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(spy.at(0).at(0).value<bool>(), true);
+    categoryLineEdit->clear();
+    QCOMPARE(spy.count(), 2);
+    QCOMPARE(spy.at(1).at(0).value<bool>(), false);
+
+    categoryLineEdit->setText(QStringLiteral(" "));
+    QCOMPARE(spy.count(), 3);
+    QCOMPARE(spy.at(2).at(0).value<bool>(), false);
 }
 
 QTEST_MAIN(ConfigureCustomSettingWidgetTest)

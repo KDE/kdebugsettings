@@ -24,6 +24,7 @@
 #include <qboxlayout.h>
 #include <KLocalizedString>
 #include <qdialogbuttonbox.h>
+#include <QPushButton>
 
 ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     : QDialog(parent)
@@ -39,7 +40,11 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    QPushButton *buttonOk = buttonBox->button(QDialogButtonBox::Ok);
+    buttonOk->setEnabled(false);
+    connect(mCustomSettingWidget, SIGNAL(enableButton(bool)), buttonOk, SLOT(setEnabled(bool)));
     mainLayout->addWidget(buttonBox);
+
 }
 
 ConfigureCustomSettingDialog::~ConfigureCustomSettingDialog()

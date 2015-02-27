@@ -31,8 +31,16 @@ class ConfigureCustomSettingWidget : public QWidget
 public:
     explicit ConfigureCustomSettingWidget(QWidget *parent = Q_NULLPTR);
     ~ConfigureCustomSettingWidget();
+
     QString rule();
     void setRule(const QString &rule);
+
+Q_SIGNALS:
+    void enableButton(bool state);
+
+private Q_SLOTS:
+    void slotTextChanged(const QString &);
+
 private:
     QLineEdit *mCategoryLineEdit;
     QCheckBox *mEnableCategory;
