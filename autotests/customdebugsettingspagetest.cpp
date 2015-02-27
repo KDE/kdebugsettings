@@ -47,7 +47,6 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
     QVERIFY(listWidget);
     QCOMPARE(listWidget->count(), 0);
 
-
     QPushButton *addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
     QVERIFY(addButton);
     QVERIFY(addButton->isEnabled());

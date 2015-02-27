@@ -72,5 +72,4 @@ void KDeApplicationListWidgetTest::shouldReturnRules()
     //Add more test
 }
 
-
 QTEST_MAIN(KDeApplicationListWidgetTest)

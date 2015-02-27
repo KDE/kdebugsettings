@@ -62,8 +62,9 @@ Category::List KDebugSettingsUtil::readLoggingCategories(const QString &filename
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
             const Category category = parseLineKdeLoggingCategory(data);
-            if (category.isValid())
+            if (category.isValid()) {
                 categoriesList.append(category);
+            }
         }
     }
 
@@ -79,12 +80,13 @@ Category KDebugSettingsUtil::parseLineLoggingQtCategory(QString line)
 
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
-        if (valueStr == QLatin1String("true"))
+        if (valueStr == QLatin1String("true")) {
             cat.enabled = true;
-        else if (valueStr == QLatin1String("false"))
+        } else if (valueStr == QLatin1String("false")) {
             cat.enabled = false;
-        else
+        } else {
             return cat;
+        }
 
         QString p;
         if (pattern.endsWith(QLatin1String(".debug"))) {
@@ -125,8 +127,9 @@ Category::List KDebugSettingsUtil::readLoggingQtCategories(const QString &filena
             line.remove(QLatin1Char(' '));
 
             // comment
-            if (line.startsWith(QLatin1Char(';')))
+            if (line.startsWith(QLatin1Char(';'))) {
                 continue;
+            }
 
             if (line.startsWith(QLatin1Char('[')) && line.endsWith(QLatin1Char(']'))) {
                 // new section

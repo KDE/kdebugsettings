@@ -50,11 +50,11 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
 {
-    QFETCH( QString, input );
-    QFETCH( QString, description );
-    QFETCH( QString, logname );
-    QFETCH( QString, type );
-    QFETCH( bool, enabled );
+    QFETCH(QString, input);
+    QFETCH(QString, description);
+    QFETCH(QString, logname);
+    QFETCH(QString, type);
+    QFETCH(bool, enabled);
     Category result;
     result.description = description;
     result.logName = logname;
@@ -90,11 +90,11 @@ void KDebugSettingUtilTest::shouldParseQtLoggingLine_data()
 
 void KDebugSettingUtilTest::shouldParseQtLoggingLine()
 {
-    QFETCH( QString, input );
-    QFETCH( QString, description );
-    QFETCH( QString, logname );
-    QFETCH( QString, type );
-    QFETCH( bool, enabled );
+    QFETCH(QString, input);
+    QFETCH(QString, description);
+    QFETCH(QString, logname);
+    QFETCH(QString, type);
+    QFETCH(bool, enabled);
     Category result;
     result.description = description;
     result.logName = logname;

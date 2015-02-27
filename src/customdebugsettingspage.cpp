@@ -52,7 +52,6 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     QVBoxLayout *buttonLayout = new QVBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
-
     mAddRule = new QPushButton(i18n("Add..."));
     mAddRule->setObjectName(QStringLiteral("add_rule"));
     buttonLayout->addWidget(mAddRule);
@@ -84,7 +83,7 @@ void CustomDebugSettingsPage::updateButtons()
 
 void CustomDebugSettingsPage::fillList(const Category::List &list)
 {
-    Q_FOREACH(const Category &cat, list) {
+    Q_FOREACH (const Category &cat, list) {
         QString rule;
         rule = cat.logName;
         if (!cat.type.isEmpty()) {
@@ -102,7 +101,7 @@ void CustomDebugSettingsPage::fillList(const Category::List &list)
 Category::List CustomDebugSettingsPage::rules()
 {
     Category::List lst;
-    for(int i = 0; i < mListWidget->count(); ++i) {
+    for (int i = 0; i < mListWidget->count(); ++i) {
         const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             lst.append(cat);

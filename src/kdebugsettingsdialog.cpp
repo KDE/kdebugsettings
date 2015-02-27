@@ -91,9 +91,9 @@ void KDebugSettingsDialog::readCategoriesFiles()
     Category::List customCategories;
     if (!envPath.isEmpty()) {
         const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
-        Q_FOREACH(const Category &cat, qtCategories) {
+        Q_FOREACH (const Category &cat, qtCategories) {
             bool foundkde = false;
-            for(int i = 0; i < categories.count(); ++i) {
+            for (int i = 0; i < categories.count(); ++i) {
                 Category kdeCat = categories.at(i);
                 if (cat.logName == kdeCat.logName) {
                     kdeCat.enabled = cat.enabled;
@@ -121,10 +121,10 @@ void KDebugSettingsDialog::slotAccepted()
     //Clean Rules
     settings.beginGroup(QStringLiteral("Rules"));
     settings.remove(QStringLiteral(""));
-    Q_FOREACH(const Category &cat, lstKde) {
+    Q_FOREACH (const Category &cat, lstKde) {
         settings.setValue(cat.logName, cat.enabled);
     }
-    Q_FOREACH(const Category &cat, lstCustom) {
+    Q_FOREACH (const Category &cat, lstCustom) {
         QString str = cat.logName;
         if (!cat.type.isEmpty()) {
             str += QLatin1Char('.') + cat.type;

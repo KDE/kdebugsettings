@@ -27,21 +27,22 @@
 class QTabWidget;
 class KDeApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
-struct Category
-{
+struct Category {
     Category()
         : enabled(false)
     {
 
     }
     typedef QVector<Category> List;
-    bool operator ==(const Category &other) const {
+    bool operator ==(const Category &other) const
+    {
         return (description == other.description) &&
-                (logName == other.logName) &&
-                (type == other.type) &&
-                (enabled == other.enabled);
+               (logName == other.logName) &&
+               (type == other.type) &&
+               (enabled == other.enabled);
     }
-    bool isValid() const {
+    bool isValid() const
+    {
         return !logName.isEmpty();
     }
 

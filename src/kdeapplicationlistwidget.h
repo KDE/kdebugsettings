@@ -44,7 +44,6 @@ public:
     explicit KDeApplicationListWidget(QWidget *parent = Q_NULLPTR);
     ~KDeApplicationListWidget();
 
-
     Category::List rules();
 
     void deSelectAllDebugCategories();

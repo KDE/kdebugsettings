@@ -18,7 +18,6 @@
 
 */
 
-
 #include "configurecustomsettingdialogtest.h"
 #include "../src/configurecustomsettingdialog.h"
 #include "../src/configurecustomsettingwidget.h"

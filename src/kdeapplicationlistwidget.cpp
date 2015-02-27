@@ -65,7 +65,7 @@ void KDeApplicationListWidget::deSelectAllDebugCategories()
 
 void KDeApplicationListWidget::fillList(const Category::List &list)
 {
-    Q_FOREACH( const Category &cat, list) {
+    Q_FOREACH (const Category &cat, list) {
         KDeApplicationListWidgetItem *item = new KDeApplicationListWidgetItem(this);
         item->setText(cat.description);
         item->setCategory(cat.logName);

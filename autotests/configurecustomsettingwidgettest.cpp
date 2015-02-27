@@ -39,23 +39,22 @@ ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest()
 
 void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
 {
-   ConfigureCustomSettingWidget w;
-   QLabel *lab = w.findChild<QLabel *>(QStringLiteral("category_label"));
-   QVERIFY(lab);
+    ConfigureCustomSettingWidget w;
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("category_label"));
+    QVERIFY(lab);
 
-   QLineEdit *categoryLineEdit = w.findChild<QLineEdit *>(QStringLiteral("category_lineedit"));
-   QVERIFY(categoryLineEdit);
+    QLineEdit *categoryLineEdit = w.findChild<QLineEdit *>(QStringLiteral("category_lineedit"));
+    QVERIFY(categoryLineEdit);
 
-   QCheckBox *enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
-   QVERIFY(enableCategory);
+    QCheckBox *enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
+    QVERIFY(enableCategory);
 
-   lab = w.findChild<QLabel *>(QStringLiteral("categorytype_label"));
-   QVERIFY(lab);
-   QComboBox *categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
-   QVERIFY(categoryType);
-   QCOMPARE(categoryType->count(), 4);
+    lab = w.findChild<QLabel *>(QStringLiteral("categorytype_label"));
+    QVERIFY(lab);
+    QComboBox *categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
+    QVERIFY(categoryType);
+    QCOMPARE(categoryType->count(), 4);
 }
-
 
 void ConfigureCustomSettingWidgetTest::shouldRestoreRules_data()
 {
@@ -70,7 +69,7 @@ void ConfigureCustomSettingWidgetTest::shouldRestoreRules_data()
 
 void ConfigureCustomSettingWidgetTest::shouldRestoreRules()
 {
-    QFETCH( QString, input );
+    QFETCH(QString, input);
     ConfigureCustomSettingWidget w;
     w.setRule(input);
     QCOMPARE(input, w.rule());
