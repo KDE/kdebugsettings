@@ -45,6 +45,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     mListWidget = new QListWidget;
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
+    connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
     vbox->addWidget(mListWidget);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
@@ -96,9 +97,12 @@ QStringList CustomDebugSettingsPage::rules()
 
 void CustomDebugSettingsPage::slotRemoveRule()
 {
-    //TODO add MessageBox to avoid to remove it.
     QListWidgetItem *item = mListWidget->currentItem();
-    delete item;
+    if (item) {
+        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this rule \"%1\"?", item->text()))) {
+            delete item;
+        }
+    }
 }
 
 void CustomDebugSettingsPage::slotEditRule()
