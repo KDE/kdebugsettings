@@ -28,8 +28,10 @@
 #include <KSharedConfig>
 
 #include <QDialogButtonBox>
+#include <QSettings>
 #include <QTabWidget>
 #include <QVBoxLayout>
+#include <QDebug>
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
@@ -82,23 +84,42 @@ void KDebugSettingsDialog::readCategoriesFiles()
 {
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("qdebug.areas"));
-    const Category::List categories = KDebugSettingsUtil::readLoggingCategories(confAreasFile);
+    Category::List categories = KDebugSettingsUtil::readLoggingCategories(confAreasFile);
 
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
+    Category::List customCategories;
     if (!envPath.isEmpty()) {
         const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+        Q_FOREACH(const Category &cat, qtCategories) {
+            bool foundkde = false;
+            Q_FOREACH(Category kdeCat, categories) {
+                if (cat.logName == kdeCat.logName) {
+                    kdeCat.enabled = cat.enabled;
+                    foundkde = true;
+                    break;
+                }
+            }
+            if (!foundkde) {
+                customCategories.append(cat);
+            }
+        }
     }
-
     mKdeApplicationSettingsPage->fillList(categories);
-    //TODO
+    mCustomSettingsPage->fillList(customCategories);
 }
 
 void KDebugSettingsDialog::slotAccepted()
 {
     //Save Rules
-    QStringList lstKde = mKdeApplicationSettingsPage->rules();
-    QStringList lstCustom = mCustomSettingsPage->rules();
+    const QStringList lstKde = mKdeApplicationSettingsPage->rules();
+    const QStringList lstCustom = mCustomSettingsPage->rules();
     //Save in files.
+#if 0
+    QSettings settings("QtProject", "qtlogging");
+    settings.beginGroup("Rules");
+    settings.setValue();
+    settings.endGroup();
+#endif
     accept();
 }

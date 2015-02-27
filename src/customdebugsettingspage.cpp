@@ -83,7 +83,19 @@ void CustomDebugSettingsPage::updateButtons()
 
 void CustomDebugSettingsPage::fillList(const Category::List &list)
 {
-    //TODO
+    Q_FOREACH(const Category &cat, list) {
+        QString rule;
+        rule = cat.logName;
+        if (!cat.type.isEmpty()) {
+            rule += QLatin1Char('.') + cat.type;
+        }
+        if (cat.enabled) {
+            rule += QStringLiteral("=true");
+        } else {
+            rule += QStringLiteral("=false");
+        }
+        new QListWidgetItem(rule, mListWidget);
+    }
 }
 
 QStringList CustomDebugSettingsPage::rules()
