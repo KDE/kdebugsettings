@@ -21,6 +21,7 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdeapplicationlistwidget.h"
 #include <KLocalizedString>
+#include <KListWidgetSearchLine>
 #include <QListWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -33,6 +34,11 @@ KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
 
     mListWidget = new KDeApplicationListWidget;
     mListWidget->setObjectName(QStringLiteral("listwidget"));
+
+    mListWidgetSearchLine = new KListWidgetSearchLine(this, mListWidget);
+    mListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
+    mainLayout->addWidget(mListWidgetSearchLine);
+
     mainLayout->addWidget(mListWidget);
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;

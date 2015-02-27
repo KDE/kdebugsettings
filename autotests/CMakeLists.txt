@@ -22,6 +22,7 @@ macro(add_unittest _source _additionalsource)
     Qt5::Widgets
     KF5::ConfigCore
     KF5::WidgetsAddons
+    KF5::ItemViews
   )
 endmacro ()
 

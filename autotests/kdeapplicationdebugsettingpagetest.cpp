@@ -24,6 +24,7 @@
 #include <qlistwidget.h>
 #include <qpushbutton.h>
 #include <qtest.h>
+#include <KListWidgetSearchLine>
 
 KDeApplicationDebugSettingPageTest::KDeApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)
@@ -47,6 +48,9 @@ void KDeApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 
     QPushButton *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));
     QVERIFY(deselectAll);
+
+    KListWidgetSearchLine *searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
+    QVERIFY(searchLine);
 }
 
 QTEST_MAIN(KDeApplicationDebugSettingPageTest)

@@ -25,7 +25,7 @@
 #include "kdebugsettingsdialog.h"
 class QPushButton;
 class KDeApplicationListWidget;
-
+class KListWidgetSearchLine;
 class KDeApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
@@ -39,6 +39,7 @@ private slots:
     void slotDeselectAll();
 private:
     KDeApplicationListWidget *mListWidget;
+    KListWidgetSearchLine *mListWidgetSearchLine;
     QPushButton *mSelectAll;
     QPushButton *mDeselectAll;
 };
