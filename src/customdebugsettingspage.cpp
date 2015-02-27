@@ -20,6 +20,7 @@
 
 #include "customdebugsettingspage.h"
 #include "configurecustomsettingdialog.h"
+#include "kdebugsettingsutil.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QVBoxLayout>
@@ -98,11 +99,14 @@ void CustomDebugSettingsPage::fillList(const Category::List &list)
     }
 }
 
-QStringList CustomDebugSettingsPage::rules()
+Category::List CustomDebugSettingsPage::rules()
 {
-    QStringList lst;
+    Category::List lst;
     for(int i = 0; i < mListWidget->count(); ++i) {
-        lst.append(mListWidget->item(i)->text());
+        const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
+        if (cat.isValid()) {
+            lst.append(cat);
+        }
     }
     return lst;
 }

@@ -33,7 +33,7 @@ public:
     ~CustomDebugSettingsPage();
 
     void fillList(const Category::List &list);
-    QStringList rules();
+    Category::List rules();
 private slots:
     void slotRemoveRule();
     void slotAddRule();

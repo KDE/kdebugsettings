@@ -22,6 +22,7 @@
 #define CONFIGURECUSTOMSETTINGDIALOG_H
 
 #include <QDialog>
+#include "kdebugsettingsdialog.h"
 class ConfigureCustomSettingWidget;
 class ConfigureCustomSettingDialog : public QDialog
 {

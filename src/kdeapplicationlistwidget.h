@@ -45,7 +45,7 @@ public:
     ~KDeApplicationListWidget();
 
 
-    QStringList rules();
+    Category::List rules();
 
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();

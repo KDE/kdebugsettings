@@ -114,8 +114,8 @@ void KDebugSettingsDialog::readCategoriesFiles()
 void KDebugSettingsDialog::slotAccepted()
 {
     //Save Rules
-    const QStringList lstKde = mKdeApplicationSettingsPage->rules();
-    const QStringList lstCustom = mCustomSettingsPage->rules();
+    const Category::List lstKde = mKdeApplicationSettingsPage->rules();
+    const Category::List lstCustom = mCustomSettingsPage->rules();
     //Save in files.
 #if 0
     QSettings settings("QtProject", "qtlogging");

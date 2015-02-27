@@ -32,14 +32,17 @@ KDeApplicationListWidget::~KDeApplicationListWidget()
 
 }
 
-QStringList KDeApplicationListWidget::rules()
+Category::List KDeApplicationListWidget::rules()
 {
-    QStringList lst;
+    Category::List lst;
     for (int i = 0; i < count(); ++i) {
-        QString rule;
         KDeApplicationListWidgetItem *listWidgetItem = static_cast<KDeApplicationListWidgetItem *>(item(i));
-        rule = listWidgetItem->category() + QStringLiteral("=%1").arg((listWidgetItem->checkState() == Qt::Checked) ? QStringLiteral("true") : QStringLiteral("false"));
-        lst.append(rule);
+        Category cat;
+        cat.enabled = listWidgetItem->checkState() == Qt::Checked;
+        cat.logName = listWidgetItem->category();
+        if (cat.isValid()) {
+            lst.append(cat);
+        }
     }
     return lst;
 }

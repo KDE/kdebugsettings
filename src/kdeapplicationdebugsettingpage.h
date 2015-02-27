@@ -33,7 +33,7 @@ public:
     explicit KDeApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
     ~KDeApplicationDebugSettingPage();
     void fillList(const Category::List &list);
-    QStringList rules();
+    Category::List rules();
 private slots:
     void slotSelectAll();
     void slotDeselectAll();

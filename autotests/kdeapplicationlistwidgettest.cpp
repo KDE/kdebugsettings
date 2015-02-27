@@ -65,10 +65,10 @@ void KDeApplicationListWidgetTest::shouldReturnRules()
     cat.logName = cat.description;
     lst.append(cat);
     widgetList.fillList(lst);
-    QStringList rules = widgetList.rules();
+    Category::List rules = widgetList.rules();
     QCOMPARE(rules.count(), 1);
-    QString result = cat.description + QLatin1Literal("=true");
-    QCOMPARE(rules.at(0), result);
+    QCOMPARE(rules.at(0).enabled, true);
+    QCOMPARE(rules.at(0).logName, cat.description);
     //Add more test
 }
 
