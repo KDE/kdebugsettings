@@ -24,7 +24,7 @@
 KDeApplicationListWidget::KDeApplicationListWidget(QWidget *parent)
     : QListWidget(parent)
 {
-
+    setSortingEnabled(true);
 }
 
 KDeApplicationListWidget::~KDeApplicationListWidget()
