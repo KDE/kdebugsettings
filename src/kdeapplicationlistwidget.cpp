@@ -34,7 +34,14 @@ KDeApplicationListWidget::~KDeApplicationListWidget()
 
 QStringList KDeApplicationListWidget::rules()
 {
-    return QStringList();
+    QStringList lst;
+    for (int i = 0; i < count(); ++i) {
+        QString rule;
+        KDeApplicationListWidgetItem *listWidgetItem = static_cast<KDeApplicationListWidgetItem *>(item(i));
+        rule = listWidgetItem->category() + QStringLiteral("=%1").arg((listWidgetItem->checkState() == Qt::Checked) ? QStringLiteral("true") : QStringLiteral("false"));
+        lst.append(rule);
+    }
+    return lst;
 }
 
 void KDeApplicationListWidget::selectAllDebugCategories()

@@ -39,4 +39,38 @@ void KDeApplicationListWidgetTest::shouldHaveDefaultValue()
     QCOMPARE(widgetList.count(), 0);
 }
 
+void KDeApplicationListWidgetTest::shouldHaveAddRules()
+{
+    KDeApplicationListWidget widgetList;
+    Category::List lst;
+    int count = 10;
+    for (int i = 0; i < count; ++i) {
+        Category cat;
+        cat.description = QStringLiteral("desc%1").arg(i);
+        cat.enabled = true;
+        cat.logName = cat.description;
+        lst.append(cat);
+    }
+    widgetList.fillList(lst);
+    QCOMPARE(widgetList.count(), count);
+}
+
+void KDeApplicationListWidgetTest::shouldReturnRules()
+{
+    KDeApplicationListWidget widgetList;
+    Category::List lst;
+    Category cat;
+    cat.description = QStringLiteral("desc");
+    cat.enabled = true;
+    cat.logName = cat.description;
+    lst.append(cat);
+    widgetList.fillList(lst);
+    QStringList rules = widgetList.rules();
+    QCOMPARE(rules.count(), 1);
+    QString result = cat.description + QLatin1Literal("=true");
+    QCOMPARE(rules.at(0), result);
+    //Add more test
+}
+
+
 QTEST_MAIN(KDeApplicationListWidgetTest)

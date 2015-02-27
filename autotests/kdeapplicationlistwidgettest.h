@@ -31,6 +31,8 @@ public:
     ~KDeApplicationListWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldHaveAddRules();
+    void shouldReturnRules();
 };
 
 #endif // KDEAPPLICATIONLISTWIDGETTEST_H
