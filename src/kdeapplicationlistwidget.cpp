@@ -19,7 +19,7 @@
 */
 
 #include "kdeapplicationlistwidget.h"
-
+#include <QDebug>
 
 KDeApplicationListWidget::KDeApplicationListWidget(QWidget *parent)
     : QListWidget(parent)

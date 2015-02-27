@@ -93,9 +93,11 @@ void KDebugSettingsDialog::readCategoriesFiles()
         const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
         Q_FOREACH(const Category &cat, qtCategories) {
             bool foundkde = false;
-            Q_FOREACH(Category kdeCat, categories) {
+            for(int i = 0; i < categories.count(); ++i) {
+                Category kdeCat = categories.at(i);
                 if (cat.logName == kdeCat.logName) {
                     kdeCat.enabled = cat.enabled;
+                    categories.replace(i, kdeCat);
                     foundkde = true;
                     break;
                 }
