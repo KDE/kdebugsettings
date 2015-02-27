@@ -37,12 +37,12 @@ private:
     QString mCategory;
 };
 
-class KDeApplicationListWidget : public QListWidget
+class KDEApplicationListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit KDeApplicationListWidget(QWidget *parent = Q_NULLPTR);
-    ~KDeApplicationListWidget();
+    explicit KDEApplicationListWidget(QWidget *parent = Q_NULLPTR);
+    ~KDEApplicationListWidget();
 
     Category::List rules();
 

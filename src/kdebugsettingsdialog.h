@@ -25,7 +25,7 @@
 #include <QMap>
 #include <QVector>
 class QTabWidget;
-class KDeApplicationDebugSettingPage;
+class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
 struct Category {
     Category()
@@ -66,7 +66,7 @@ private:
     void saveConfig();
     void readConfig();
     QTabWidget *mTabWidget;
-    KDeApplicationDebugSettingPage *mKdeApplicationSettingsPage;
+    KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *mCustomSettingsPage;
 };
 

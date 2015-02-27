@@ -26,21 +26,21 @@
 #include <qtest.h>
 #include <KListWidgetSearchLine>
 
-KDeApplicationDebugSettingPageTest::KDeApplicationDebugSettingPageTest(QObject *parent)
+KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-KDeApplicationDebugSettingPageTest::~KDeApplicationDebugSettingPageTest()
+KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest()
 {
 
 }
 
-void KDeApplicationDebugSettingPageTest::shouldHaveDefaultValue()
+void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 {
-    KDeApplicationDebugSettingPage page;
-    KDeApplicationListWidget *listWidget = page.findChild<KDeApplicationListWidget *>(QStringLiteral("listwidget"));
+    KDEApplicationDebugSettingPage page;
+    KDEApplicationListWidget *listWidget = page.findChild<KDEApplicationListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(listWidget);
 
     QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
@@ -54,4 +54,4 @@ void KDeApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QVERIFY(searchLine->text().isEmpty());
 }
 
-QTEST_MAIN(KDeApplicationDebugSettingPageTest)
+QTEST_MAIN(KDEApplicationDebugSettingPageTest)

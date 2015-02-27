@@ -43,7 +43,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
-    mKdeApplicationSettingsPage = new KDeApplicationDebugSettingPage(this);
+    mKdeApplicationSettingsPage = new KDEApplicationDebugSettingPage(this);
     mKdeApplicationSettingsPage->setObjectName(QStringLiteral("kdeapplicationsettingspage"));
     mCustomSettingsPage = new CustomDebugSettingsPage(this);
     mCustomSettingsPage->setObjectName(QStringLiteral("customsettingspage"));

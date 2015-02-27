@@ -23,12 +23,12 @@
 
 #include <QObject>
 
-class KDeApplicationDebugSettingPageTest : public QObject
+class KDEApplicationDebugSettingPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDeApplicationDebugSettingPageTest(QObject *parent = 0);
-    ~KDeApplicationDebugSettingPageTest();
+    explicit KDEApplicationDebugSettingPageTest(QObject *parent = 0);
+    ~KDEApplicationDebugSettingPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

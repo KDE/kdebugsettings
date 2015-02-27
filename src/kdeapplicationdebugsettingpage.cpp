@@ -26,13 +26,13 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
+KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-    mListWidget = new KDeApplicationListWidget;
+    mListWidget = new KDEApplicationListWidget;
     mListWidget->setObjectName(QStringLiteral("listwidget"));
 
     mListWidgetSearchLine = new KListWidgetSearchLine(this, mListWidget);
@@ -47,35 +47,35 @@ KDeApplicationDebugSettingPage::KDeApplicationDebugSettingPage(QWidget *parent)
     mSelectAll = new QPushButton(i18n("Select All"));
     mSelectAll->setObjectName(QStringLiteral("selectall"));
     buttonLayout->addWidget(mSelectAll);
-    connect(mSelectAll, &QAbstractButton::clicked, this, &KDeApplicationDebugSettingPage::slotSelectAll);
+    connect(mSelectAll, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAll);
 
     mDeselectAll = new QPushButton(i18n("Deselect All"));
     mDeselectAll->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mDeselectAll);
-    connect(mDeselectAll, &QAbstractButton::clicked, this, &KDeApplicationDebugSettingPage::slotDeselectAll);
+    connect(mDeselectAll, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
 }
 
-KDeApplicationDebugSettingPage::~KDeApplicationDebugSettingPage()
+KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
 {
 
 }
 
-void KDeApplicationDebugSettingPage::slotSelectAll()
+void KDEApplicationDebugSettingPage::slotSelectAll()
 {
     mListWidget->selectAllDebugCategories();
 }
 
-void KDeApplicationDebugSettingPage::slotDeselectAll()
+void KDEApplicationDebugSettingPage::slotDeselectAll()
 {
     mListWidget->deSelectAllDebugCategories();
 }
 
-void KDeApplicationDebugSettingPage::fillList(const Category::List &list)
+void KDEApplicationDebugSettingPage::fillList(const Category::List &list)
 {
     mListWidget->fillList(list);
 }
 
-Category::List KDeApplicationDebugSettingPage::rules()
+Category::List KDEApplicationDebugSettingPage::rules()
 {
     return mListWidget->rules();
 }

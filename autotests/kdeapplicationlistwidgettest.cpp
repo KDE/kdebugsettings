@@ -22,26 +22,26 @@
 #include "../src/kdeapplicationlistwidget.h"
 #include <qtest.h>
 
-KDeApplicationListWidgetTest::KDeApplicationListWidgetTest(QObject *parent)
+KDEApplicationListWidgetTest::KDEApplicationListWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-KDeApplicationListWidgetTest::~KDeApplicationListWidgetTest()
+KDEApplicationListWidgetTest::~KDEApplicationListWidgetTest()
 {
 
 }
 
-void KDeApplicationListWidgetTest::shouldHaveDefaultValue()
+void KDEApplicationListWidgetTest::shouldHaveDefaultValue()
 {
-    KDeApplicationListWidget widgetList;
+    KDEApplicationListWidget widgetList;
     QCOMPARE(widgetList.count(), 0);
 }
 
-void KDeApplicationListWidgetTest::shouldHaveAddRules()
+void KDEApplicationListWidgetTest::shouldHaveAddRules()
 {
-    KDeApplicationListWidget widgetList;
+    KDEApplicationListWidget widgetList;
     Category::List lst;
     int count = 10;
     for (int i = 0; i < count; ++i) {
@@ -55,9 +55,9 @@ void KDeApplicationListWidgetTest::shouldHaveAddRules()
     QCOMPARE(widgetList.count(), count);
 }
 
-void KDeApplicationListWidgetTest::shouldReturnRules()
+void KDEApplicationListWidgetTest::shouldReturnRules()
 {
-    KDeApplicationListWidget widgetList;
+    KDEApplicationListWidget widgetList;
     Category::List lst;
     Category cat;
     cat.description = QStringLiteral("desc");
@@ -72,4 +72,4 @@ void KDeApplicationListWidgetTest::shouldReturnRules()
     //Add more test
 }
 
-QTEST_MAIN(KDeApplicationListWidgetTest)
+QTEST_MAIN(KDEApplicationListWidgetTest)

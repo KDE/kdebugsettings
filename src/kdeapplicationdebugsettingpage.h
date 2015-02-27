@@ -24,21 +24,21 @@
 #include <QWidget>
 #include "kdebugsettingsdialog.h"
 class QPushButton;
-class KDeApplicationListWidget;
+class KDEApplicationListWidget;
 class KListWidgetSearchLine;
-class KDeApplicationDebugSettingPage : public QWidget
+class KDEApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit KDeApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
-    ~KDeApplicationDebugSettingPage();
+    explicit KDEApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
+    ~KDEApplicationDebugSettingPage();
     void fillList(const Category::List &list);
     Category::List rules();
 private slots:
     void slotSelectAll();
     void slotDeselectAll();
 private:
-    KDeApplicationListWidget *mListWidget;
+    KDEApplicationListWidget *mListWidget;
     KListWidgetSearchLine *mListWidgetSearchLine;
     QPushButton *mSelectAll;
     QPushButton *mDeselectAll;

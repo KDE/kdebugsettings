@@ -21,18 +21,18 @@
 #include "kdeapplicationlistwidget.h"
 #include <QDebug>
 
-KDeApplicationListWidget::KDeApplicationListWidget(QWidget *parent)
+KDEApplicationListWidget::KDEApplicationListWidget(QWidget *parent)
     : QListWidget(parent)
 {
     setSortingEnabled(true);
 }
 
-KDeApplicationListWidget::~KDeApplicationListWidget()
+KDEApplicationListWidget::~KDEApplicationListWidget()
 {
 
 }
 
-Category::List KDeApplicationListWidget::rules()
+Category::List KDEApplicationListWidget::rules()
 {
     Category::List lst;
     for (int i = 0; i < count(); ++i) {
@@ -47,7 +47,7 @@ Category::List KDeApplicationListWidget::rules()
     return lst;
 }
 
-void KDeApplicationListWidget::selectAllDebugCategories()
+void KDEApplicationListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < count(); ++i) {
         QListWidgetItem *itemWidget = item(i);
@@ -55,7 +55,7 @@ void KDeApplicationListWidget::selectAllDebugCategories()
     }
 }
 
-void KDeApplicationListWidget::deSelectAllDebugCategories()
+void KDEApplicationListWidget::deSelectAllDebugCategories()
 {
     for (int i = 0; i < count(); ++i) {
         QListWidgetItem *itemWidget = item(i);
@@ -63,7 +63,7 @@ void KDeApplicationListWidget::deSelectAllDebugCategories()
     }
 }
 
-void KDeApplicationListWidget::fillList(const Category::List &list)
+void KDEApplicationListWidget::fillList(const Category::List &list)
 {
     Q_FOREACH (const Category &cat, list) {
         KDeApplicationListWidgetItem *item = new KDeApplicationListWidgetItem(this);

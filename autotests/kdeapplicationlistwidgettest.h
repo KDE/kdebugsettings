@@ -23,12 +23,12 @@
 
 #include <QObject>
 
-class KDeApplicationListWidgetTest : public QObject
+class KDEApplicationListWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDeApplicationListWidgetTest(QObject *parent = 0);
-    ~KDeApplicationListWidgetTest();
+    explicit KDEApplicationListWidgetTest(QObject *parent = 0);
+    ~KDEApplicationListWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldHaveAddRules();
