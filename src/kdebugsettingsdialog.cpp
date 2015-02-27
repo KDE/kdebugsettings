@@ -117,11 +117,17 @@ void KDebugSettingsDialog::slotAccepted()
     const Category::List lstKde = mKdeApplicationSettingsPage->rules();
     const Category::List lstCustom = mCustomSettingsPage->rules();
     //Save in files.
-#if 0
-    QSettings settings("QtProject", "qtlogging");
-    settings.beginGroup("Rules");
-    settings.setValue();
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, QStringLiteral("QtProject"), QStringLiteral("qtlogging"));
+    //Clean Rules
+    settings.beginGroup(QStringLiteral("Rules"));
+    settings.remove(QStringLiteral(""));
+    Q_FOREACH(const Category &cat, lstKde) {
+        settings.setValue(cat.logName, cat.enabled);
+    }
+    Q_FOREACH(const Category &cat, lstCustom) {
+        //TODO !
+    }
+
     settings.endGroup();
-#endif
     accept();
 }
