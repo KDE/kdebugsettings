@@ -40,12 +40,12 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     QTest::addColumn<QString>("logname");
     QTest::addColumn<QString>("type");
     QTest::addColumn<bool>("enabled");
-    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << false;
-    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << false;
-    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << false;
-    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << QString() << false;
-    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << QString() << false;
-    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << QString() << false;
+    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << true;
+    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
+    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
+    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << QString() << true;
+    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << QString() << true;
+    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << QString() << true;
 }
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
@@ -71,7 +71,7 @@ void KDebugSettingUtilTest::shouldParseQtLoggingLine_data()
     QTest::addColumn<QString>("logname");
     QTest::addColumn<QString>("type");
     QTest::addColumn<bool>("enabled");
-    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << false;
+    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << true;
     QTest::newRow("valid") <<  QStringLiteral("toto=true") << QString() << QStringLiteral("toto") << QString() << true;
     QTest::newRow("validdisabled") <<  QStringLiteral("toto=false") << QString() << QStringLiteral("toto") << QString() << false;
 
@@ -84,8 +84,8 @@ void KDebugSettingUtilTest::shouldParseQtLoggingLine_data()
     QTest::newRow("validdisabledwithtypedebug") <<  QStringLiteral("toto.debug=false") << QString() << QStringLiteral("toto") << QStringLiteral("debug") << false;
     QTest::newRow("validenabledwithtypedebug") <<  QStringLiteral("toto.debug=true") << QString() << QStringLiteral("toto") << QStringLiteral("debug") << true;
 
-    QTest::newRow("invalid") <<  QStringLiteral("dd") << QString() << QString() << QString() << false;
-    QTest::newRow("invalidWithoutEnabledDisabled") <<  QStringLiteral("dd=") << QString() << QString() << QString() << false;
+    QTest::newRow("invalid") <<  QStringLiteral("dd") << QString() << QString() << QString() << true;
+    QTest::newRow("invalidWithoutEnabledDisabled") <<  QStringLiteral("dd=") << QString() << QString() << QString() << true;
 }
 
 void KDebugSettingUtilTest::shouldParseQtLoggingLine()
