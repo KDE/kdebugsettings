@@ -32,6 +32,7 @@
 #include <QTabWidget>
 #include <QVBoxLayout>
 #include <QDebug>
+#include <QDir>
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
@@ -86,6 +87,16 @@ void KDebugSettingsDialog::readCategoriesFiles()
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("kde.categories"));
     Category::List categories = KDebugSettingsUtil::readLoggingCategories(confAreasFile);
 
+    // TODO Load *.categories files.
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
+    Q_FOREACH (const QString &dir, dirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
+        Q_FOREACH (const QString &file, fileNames) {
+            Category::List categoriesLocal = KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file);
+            categories << categoriesLocal;
+        }
+
+    }
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     Category::List customCategories;
@@ -107,6 +118,8 @@ void KDebugSettingsDialog::readCategoriesFiles()
             }
         }
     }
+
+
     mKdeApplicationSettingsPage->fillList(categories);
     mCustomSettingsPage->fillList(customCategories);
 }
