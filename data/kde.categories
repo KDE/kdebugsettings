@@ -78,3 +78,14 @@ log_fourinline kdegames (kfourinline)
 #kdeedu
 log_klettres kdeedu (kletters)
 
+
+#workspace
+powerdevil powerdevil
+log_user_manager user manager
+log_kioremote kioslave (kioremove)
+ksmserver ksmserver
+libksysguard libksysguard
+log_kio_man kioslave (kio_man)
+log_kio_archive kioslave (kio_archive)
+log_kio_sftp kioslave (kio_sftp)
+
