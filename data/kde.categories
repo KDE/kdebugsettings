@@ -64,6 +64,9 @@ log_pimsettingexporter kdepim (pimsettingexporter)
 log_kaddressbook kdepim (kaddressbook)
 log_importwizard kdepim (importwizard)
 
+#kdeedu
+log_klettres kdeedu (kletters)
+
 #kdegames
 log_granatier kdegames (granatier)
 log_ksirkskineditor kdegames (ksirk)
@@ -74,10 +77,6 @@ log_libkmahjongg lib kdegames (libkmahjongg)
 LOG_KUBRICK kdegames (kubrick)
 log_lskat kdegames (lskat)
 log_fourinline kdegames (kfourinline)
-
-#kdeedu
-log_klettres kdeedu (kletters)
-
 
 #workspace
 powerdevil powerdevil
