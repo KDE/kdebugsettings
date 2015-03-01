@@ -119,7 +119,6 @@ void KDebugSettingsDialog::readCategoriesFiles()
         }
     }
 
-
     mKdeApplicationSettingsPage->fillList(categories);
     mCustomSettingsPage->fillList(customCategories);
 }
