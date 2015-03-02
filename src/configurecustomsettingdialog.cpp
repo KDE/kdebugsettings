@@ -43,7 +43,7 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     QPushButton *buttonOk = buttonBox->button(QDialogButtonBox::Ok);
     buttonOk->setEnabled(false);
-    connect(mCustomSettingWidget, SIGNAL(enableButton(bool)), buttonOk, SLOT(setEnabled(bool)));
+    connect(mCustomSettingWidget, &ConfigureCustomSettingWidget::enableButton, buttonOk, &QWidget::setEnabled);
     mainLayout->addWidget(buttonBox);
 
 }

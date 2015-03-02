@@ -39,7 +39,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("category_label"));
     mCategoryLineEdit = new QLineEdit;
     mCategoryLineEdit->setObjectName(QStringLiteral("category_lineedit"));
-    connect(mCategoryLineEdit, SIGNAL(textChanged(QString)), SLOT(slotTextChanged(QString)));
+    connect(mCategoryLineEdit, &QLineEdit::textChanged, this, &ConfigureCustomSettingWidget::slotTextChanged);
     QHBoxLayout *categoryLayout = new QHBoxLayout;
     vbox->addLayout(categoryLayout);
     categoryLayout->addWidget(lab);
