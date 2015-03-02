@@ -97,6 +97,12 @@ void KDebugSettingsDialog::readCategoriesFiles()
         }
 
     }
+    const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
+    if (!rulesFilePath.isEmpty()) {
+        const Category::List envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
+        //TODO
+    }
+
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     Category::List customCategories;
