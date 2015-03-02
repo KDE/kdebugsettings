@@ -45,14 +45,10 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     categoryLayout->addWidget(lab);
     categoryLayout->addWidget(mCategoryLineEdit);
 
-    mEnableCategory = new QCheckBox(i18n("Enable"));
-    mEnableCategory->setObjectName(QStringLiteral("enable_category"));
-    vbox->addWidget(mEnableCategory);
 
     lab = new QLabel(i18n("Type:"));
     lab->setObjectName(QStringLiteral("categorytype_label"));
-    QHBoxLayout *categoryTypeLayout = new QHBoxLayout;
-    vbox->addLayout(categoryTypeLayout);
+    categoryLayout->addWidget(lab);
 
     mCategoryType = new QComboBox;
     mCategoryType->setObjectName(QStringLiteral("categorytype_combobox"));
@@ -60,9 +56,11 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     mCategoryType->addItem(i18n("Debug"), QStringLiteral("debug"));
     mCategoryType->addItem(i18n("Warning"), QStringLiteral("warning"));
     mCategoryType->addItem(i18n("Critical"), QStringLiteral("critical"));
+    categoryLayout->addWidget(mCategoryType);
 
-    categoryTypeLayout->addWidget(lab);
-    categoryTypeLayout->addWidget(mCategoryType);
+    mEnableCategory = new QCheckBox(i18n("Enable"));
+    mEnableCategory->setObjectName(QStringLiteral("enable_category"));
+    categoryLayout->addWidget(mEnableCategory);
 }
 
 ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
