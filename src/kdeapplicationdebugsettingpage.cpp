@@ -38,7 +38,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mListWidget->setObjectName(QStringLiteral("listwidget"));
 
     mListWidgetSearchLine = new KListWidgetSearchLine(this, mListWidget);
-    mListWidgetSearchLine->setClickMessage(i18n("Search..."));
+    mListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
     mListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
     mainLayout->addWidget(mListWidgetSearchLine);
 
