@@ -20,6 +20,7 @@ find_package(KF5 REQUIRED COMPONENTS
     KIO)
     
 include(FeatureSummary)
+include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(KDEInstallDirs)
 include(KDECompilerSettings)
