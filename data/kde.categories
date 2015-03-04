@@ -88,3 +88,5 @@ log_kio_man kioslave (kio_man)
 log_kio_archive kioslave (kio_archive)
 log_kio_sftp kioslave (kio_sftp)
 
+#kdebase
+log_kdepassword kdepassword
