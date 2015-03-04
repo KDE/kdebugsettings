@@ -33,7 +33,9 @@ add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
 
 add_subdirectory( src )
-add_subdirectory( autotests )
+if (BUILD_TESTING)
+   add_subdirectory( autotests )
+endif()
 install( FILES data/kde.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
