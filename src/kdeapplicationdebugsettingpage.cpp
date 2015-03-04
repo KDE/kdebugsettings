@@ -25,6 +25,8 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QEvent>
+#include <QKeyEvent>
 
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
@@ -54,11 +56,25 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mDeselectAll->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mDeselectAll);
     connect(mDeselectAll, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
+    mListWidgetSearchLine->installEventFilter(this);
 }
 
 KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
 {
 
+}
+
+bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
+{
+    if(event->type() == QEvent::KeyPress && obj == mListWidgetSearchLine) {
+        QKeyEvent *key = static_cast<QKeyEvent *>(event);
+        if((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return))
+        {
+            event->accept();
+            return true;
+        }
+    }
+    return QWidget::eventFilter(obj, event);
 }
 
 void KDEApplicationDebugSettingPage::slotSelectAll()

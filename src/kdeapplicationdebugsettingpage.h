@@ -34,6 +34,10 @@ public:
     ~KDEApplicationDebugSettingPage();
     void fillList(const Category::List &list);
     Category::List rules();
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
+
 private slots:
     void slotSelectAll();
     void slotDeselectAll();
