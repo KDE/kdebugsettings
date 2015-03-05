@@ -22,7 +22,7 @@
 #include "../src/configurecustomsettingwidget.h"
 #include <QComboBox>
 #include <QLabel>
-#include <QLineEdit>
+#include <KLineEdit>
 #include <QSignalSpy>
 #include <qcheckbox.h>
 #include <qtest.h>
@@ -44,8 +44,9 @@ void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
     QLabel *lab = w.findChild<QLabel *>(QStringLiteral("category_label"));
     QVERIFY(lab);
 
-    QLineEdit *categoryLineEdit = w.findChild<QLineEdit *>(QStringLiteral("category_lineedit"));
+    KLineEdit *categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
     QVERIFY(categoryLineEdit);
+    QVERIFY(categoryLineEdit->trapReturnKey());
 
     QCheckBox *enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
     QVERIFY(enableCategory);
@@ -79,7 +80,7 @@ void ConfigureCustomSettingWidgetTest::shouldRestoreRules()
 void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
 {
     ConfigureCustomSettingWidget w;
-    QLineEdit *categoryLineEdit = w.findChild<QLineEdit *>(QStringLiteral("category_lineedit"));
+    KLineEdit *categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
     QVERIFY(categoryLineEdit);
     QSignalSpy spy(&w, SIGNAL(enableButton(bool)));
     categoryLineEdit->setText(QStringLiteral("bla"));

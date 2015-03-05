@@ -22,7 +22,7 @@
 #define CONFIGURECUSTOMSETTINGWIDGET_H
 
 #include <QWidget>
-class QLineEdit;
+class KLineEdit;
 class QCheckBox;
 class QComboBox;
 class ConfigureCustomSettingWidget : public QWidget
@@ -42,7 +42,7 @@ private Q_SLOTS:
     void slotTextChanged(const QString &);
 
 private:
-    QLineEdit *mCategoryLineEdit;
+    KLineEdit *mCategoryLineEdit;
     QCheckBox *mEnableCategory;
     QComboBox *mCategoryType;
 };

@@ -17,6 +17,7 @@ find_package(KF5 REQUIRED COMPONENTS
     IconThemes 
     WidgetsAddons
     ItemViews
+    Completion
     KIO)
     
 include(FeatureSummary)

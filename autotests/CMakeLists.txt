@@ -23,6 +23,7 @@ macro(add_unittest _source _additionalsource)
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::ItemViews
+    KF5::Completion
   )
 endmacro ()
 
