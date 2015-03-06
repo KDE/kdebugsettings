@@ -32,6 +32,7 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldSetRules();
 };
 
 #endif // ENVIRONMENTSETTINGSRULESPAGETEST_H

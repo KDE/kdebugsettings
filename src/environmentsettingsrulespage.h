@@ -22,13 +22,17 @@
 #define ENVIRONMENTSETTINGSRULESPAGE_H
 
 #include <QWidget>
-
+class QPlainTextEdit;
 class EnvironmentSettingsRulesPage : public QWidget
 {
     Q_OBJECT
 public:
     explicit EnvironmentSettingsRulesPage(QWidget *parent = Q_NULLPTR);
     ~EnvironmentSettingsRulesPage();
+    void setRules(const QString &rules);
+private:
+    QPlainTextEdit *mPlainTextEdit;
 };
+
 
 #endif // ENVIRONMENTSETTINGSRULESPAGE_H

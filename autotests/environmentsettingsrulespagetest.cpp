@@ -19,6 +19,9 @@
 */
 
 #include "environmentsettingsrulespagetest.h"
+#include "../src/environmentsettingsrulespage.h"
+#include <QLabel>
+#include <QPlainTextEdit>
 #include <qtest.h>
 EnvironmentSettingsRulesPageTest::EnvironmentSettingsRulesPageTest(QObject *parent)
     : QObject(parent)
@@ -33,7 +36,22 @@ EnvironmentSettingsRulesPageTest::~EnvironmentSettingsRulesPageTest()
 
 void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 {
-    //TODO
+    EnvironmentSettingsRulesPage w;
+
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(lab);
+    QPlainTextEdit *plainText = w.findChild<QPlainTextEdit *>(QStringLiteral("plaintext"));
+    QVERIFY(plainText);
+    QVERIFY(plainText->toPlainText().isEmpty());
+}
+
+void EnvironmentSettingsRulesPageTest::shouldSetRules()
+{
+    EnvironmentSettingsRulesPage w;
+    QPlainTextEdit *plainText = w.findChild<QPlainTextEdit *>(QStringLiteral("plaintext"));
+    QString rules = QStringLiteral("Rules for qt\ntest");
+    w.setRules(rules);
+    QCOMPARE(plainText->toPlainText(), rules);
 }
 
 QTEST_MAIN(EnvironmentSettingsRulesPageTest)

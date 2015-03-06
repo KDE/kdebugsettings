@@ -20,14 +20,30 @@
 
 #include "environmentsettingsrulespage.h"
 
+#include <QVBoxLayout>
+#include <QLabel>
+#include <KLocalizedString>
+#include <QPlainTextEdit>
 
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     : QWidget(parent)
 {
-
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    QLabel *lab = new QLabel(i18n("Rules:"));
+    lab->setObjectName(QStringLiteral("label"));
+    mPlainTextEdit = new QPlainTextEdit;
+    mPlainTextEdit->setObjectName(QStringLiteral("plaintext"));
+    mainLayout->addWidget(mPlainTextEdit);
+    mainLayout->addWidget(lab);
 }
 
 EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
 {
 
+}
+
+void EnvironmentSettingsRulesPage::setRules(const QString &rules)
+{
+    mPlainTextEdit->setPlainText(rules);
 }
