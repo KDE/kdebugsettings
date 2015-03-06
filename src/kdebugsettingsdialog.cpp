@@ -20,6 +20,7 @@
 
 #include "customdebugsettingspage.h"
 #include "kdeapplicationdebugsettingpage.h"
+#include "environmentsettingsrulespage.h"
 #include "kdebugsettingsdialog.h"
 #include "kdebugsettingsutil.h"
 
@@ -48,8 +49,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mKdeApplicationSettingsPage->setObjectName(QStringLiteral("kdeapplicationsettingspage"));
     mCustomSettingsPage = new CustomDebugSettingsPage(this);
     mCustomSettingsPage->setObjectName(QStringLiteral("customsettingspage"));
+    mEnvironmentSettingsRulesPage = new EnvironmentSettingsRulesPage(this);
+    mEnvironmentSettingsRulesPage->setObjectName(QStringLiteral("environmentsettingsrulespage"));
     mTabWidget->addTab(mKdeApplicationSettingsPage, i18n("KDE Application"));
     mTabWidget->addTab(mCustomSettingsPage, i18n("Custom Rules"));
+    mTabWidget->addTab(mEnvironmentSettingsRulesPage, i18n("Rules Settings With Environment Variable"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
@@ -103,6 +107,10 @@ void KDebugSettingsDialog::readCategoriesFiles()
         //TODO
     }
 
+    const QString environmentrules = QString::fromLatin1(qgetenv("QT_LOGGING_RULES"));
+    if (!environmentrules.isEmpty()) {
+        mEnvironmentSettingsRulesPage->setRules(environmentrules);
+    }
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     Category::List customCategories;

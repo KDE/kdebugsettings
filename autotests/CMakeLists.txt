@@ -7,6 +7,7 @@ set(full_source_file
    ../src/kdebugsettingsutil.cpp
    ../src/configurecustomsettingdialog.cpp
    ../src/configurecustomsettingwidget.cpp
+   ../src/environmentsettingsrulespage.cpp
 )
 
 # convenience macro to add qtest unit tests

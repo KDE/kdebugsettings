@@ -33,9 +33,10 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Rules:"));
     lab->setObjectName(QStringLiteral("label"));
     mPlainTextEdit = new QPlainTextEdit;
+    mPlainTextEdit->setReadOnly(true);
     mPlainTextEdit->setObjectName(QStringLiteral("plaintext"));
-    mainLayout->addWidget(mPlainTextEdit);
     mainLayout->addWidget(lab);
+    mainLayout->addWidget(mPlainTextEdit);
 }
 
 EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()

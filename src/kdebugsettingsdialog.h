@@ -27,6 +27,7 @@
 class QTabWidget;
 class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
+class EnvironmentSettingsRulesPage;
 struct Category {
     Category()
         : enabled(true)
@@ -68,6 +69,7 @@ private:
     QTabWidget *mTabWidget;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *mCustomSettingsPage;
+    EnvironmentSettingsRulesPage *mEnvironmentSettingsRulesPage;
 };
 
 #endif // KDEBUGSETTINGSDIALOG_H

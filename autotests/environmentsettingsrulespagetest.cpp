@@ -43,6 +43,7 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
     QPlainTextEdit *plainText = w.findChild<QPlainTextEdit *>(QStringLiteral("plaintext"));
     QVERIFY(plainText);
     QVERIFY(plainText->toPlainText().isEmpty());
+    QVERIFY(plainText->isReadOnly());
 }
 
 void EnvironmentSettingsRulesPageTest::shouldSetRules()
