@@ -18,21 +18,27 @@
 
 */
 
-#ifndef ENVIRONMENTSETTINGSRULESPAGE_H
-#define ENVIRONMENTSETTINGSRULESPAGE_H
 
-#include <QWidget>
-class EnvironmentPlainTextEdit;
-class EnvironmentSettingsRulesPage : public QWidget
+#ifndef ENVIRONMENTPLAINTEXTEDIT_H
+#define ENVIRONMENTPLAINTEXTEDIT_H
+
+#include <QPlainTextEdit>
+class QPaintEvent;
+class EnvironmentPlainTextEdit : public QPlainTextEdit
 {
     Q_OBJECT
 public:
-    explicit EnvironmentSettingsRulesPage(QWidget *parent = Q_NULLPTR);
-    ~EnvironmentSettingsRulesPage();
-    void setRules(const QString &rules);
+    explicit EnvironmentPlainTextEdit(QWidget *parent = Q_NULLPTR);
+    ~EnvironmentPlainTextEdit();
+
+protected:
+    void paintEvent( QPaintEvent *event ) Q_DECL_OVERRIDE;
+
+private slots:
+    void slotGeneralPaletteChanged();
+
 private:
-    EnvironmentPlainTextEdit *mPlainTextEdit;
+    QColor mTextColor;
 };
 
-
-#endif // ENVIRONMENTSETTINGSRULESPAGE_H
+#endif // ENVIRONMENTPLAINTEXTEDIT_H

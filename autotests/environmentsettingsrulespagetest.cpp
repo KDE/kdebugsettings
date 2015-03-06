@@ -20,6 +20,7 @@
 
 #include "environmentsettingsrulespagetest.h"
 #include "../src/environmentsettingsrulespage.h"
+#include "../src/environmentplaintextedit.h"
 #include <QLabel>
 #include <QPlainTextEdit>
 #include <qtest.h>
@@ -40,7 +41,7 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 
     QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
-    QPlainTextEdit *plainText = w.findChild<QPlainTextEdit *>(QStringLiteral("plaintext"));
+    EnvironmentPlainTextEdit *plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("plaintext"));
     QVERIFY(plainText);
     QVERIFY(plainText->toPlainText().isEmpty());
     QVERIFY(plainText->isReadOnly());
@@ -49,10 +50,10 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 void EnvironmentSettingsRulesPageTest::shouldSetRules()
 {
     EnvironmentSettingsRulesPage w;
-    QPlainTextEdit *plainText = w.findChild<QPlainTextEdit *>(QStringLiteral("plaintext"));
+    EnvironmentPlainTextEdit *plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("plaintext"));
     QString rules = QStringLiteral("Rules for qt\ntest");
     w.setRules(rules);
-    QCOMPARE(plainText->toPlainText(), rules);
+    QVERIFY(plainText->toPlainText().endsWith(rules));
 }
 
 QTEST_MAIN(EnvironmentSettingsRulesPageTest)

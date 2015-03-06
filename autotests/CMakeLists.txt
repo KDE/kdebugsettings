@@ -8,6 +8,7 @@ set(full_source_file
    ../src/configurecustomsettingdialog.cpp
    ../src/configurecustomsettingwidget.cpp
    ../src/environmentsettingsrulespage.cpp
+   ../src/environmentplaintextedit.cpp
 )
 
 # convenience macro to add qtest unit tests
@@ -35,4 +36,4 @@ add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.
 add_unittest( configurecustomsettingdialogtest.cpp "../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( configurecustomsettingwidgettest.cpp "../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( kdebugsettingutiltest.cpp "../src/kdebugsettingsutil.cpp")
-add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp")
+add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")

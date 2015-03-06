@@ -19,11 +19,10 @@
 */
 
 #include "environmentsettingsrulespage.h"
-
+#include "environmentplaintextedit.h"
 #include <QVBoxLayout>
 #include <QLabel>
 #include <KLocalizedString>
-#include <QPlainTextEdit>
 
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     : QWidget(parent)
@@ -32,7 +31,7 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     setLayout(mainLayout);
     QLabel *lab = new QLabel(i18n("Rules:"));
     lab->setObjectName(QStringLiteral("label"));
-    mPlainTextEdit = new QPlainTextEdit;
+    mPlainTextEdit = new EnvironmentPlainTextEdit;
     mPlainTextEdit->setReadOnly(true);
     mPlainTextEdit->setObjectName(QStringLiteral("plaintext"));
     mainLayout->addWidget(lab);
@@ -46,5 +45,6 @@ EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
 
 void EnvironmentSettingsRulesPage::setRules(const QString &rules)
 {
-    mPlainTextEdit->setPlainText(rules);
+    QString information = i18n("Theses rules can't be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.");
+    mPlainTextEdit->setPlainText(information + QLatin1Char('\n') + QLatin1Char('\n') + rules);
 }
