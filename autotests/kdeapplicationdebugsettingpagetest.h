@@ -27,7 +27,7 @@ class KDEApplicationDebugSettingPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationDebugSettingPageTest(QObject *parent = 0);
+    explicit KDEApplicationDebugSettingPageTest(QObject *parent = Q_NULLPTR);
     ~KDEApplicationDebugSettingPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

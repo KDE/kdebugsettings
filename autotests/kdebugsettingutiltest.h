@@ -27,7 +27,7 @@ class KDebugSettingUtilTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDebugSettingUtilTest(QObject *parent = 0);
+    explicit KDebugSettingUtilTest(QObject *parent = Q_NULLPTR);
     ~KDebugSettingUtilTest();
 private Q_SLOTS:
     void shouldParseKdeLoggingLine_data();

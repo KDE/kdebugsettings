@@ -27,7 +27,7 @@
 class KDeApplicationListWidgetItem : public QListWidgetItem
 {
 public:
-    explicit KDeApplicationListWidgetItem(QListWidget *parent = 0);
+    explicit KDeApplicationListWidgetItem(QListWidget *parent = Q_NULLPTR);
     ~KDeApplicationListWidgetItem();
 
     QString category() const;

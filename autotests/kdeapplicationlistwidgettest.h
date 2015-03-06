@@ -27,7 +27,7 @@ class KDEApplicationListWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationListWidgetTest(QObject *parent = 0);
+    explicit KDEApplicationListWidgetTest(QObject *parent = Q_NULLPTR);
     ~KDEApplicationListWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
