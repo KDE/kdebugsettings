@@ -18,33 +18,20 @@
 
 */
 
-#ifndef CONFIGURECUSTOMSETTINGWIDGET_H
-#define CONFIGURECUSTOMSETTINGWIDGET_H
+#ifndef CATEGORYTYPECOMBOBOXTEST_H
+#define CATEGORYTYPECOMBOBOXTEST_H
 
-#include <QWidget>
-class KLineEdit;
-class QCheckBox;
-class CategoryTypeComboBox;
-class ConfigureCustomSettingWidget : public QWidget
+#include <QObject>
+
+class CategoryTypeComboBoxTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfigureCustomSettingWidget(QWidget *parent = Q_NULLPTR);
-    ~ConfigureCustomSettingWidget();
-
-    QString rule();
-    void setRule(const QString &rule);
-
-Q_SIGNALS:
-    void enableButton(bool state);
-
+    explicit CategoryTypeComboBoxTest(QObject *parent = Q_NULLPTR);
+    ~CategoryTypeComboBoxTest();
 private Q_SLOTS:
-    void slotTextChanged(const QString &);
+    void shouldHaveDefaultValue();
 
-private:
-    KLineEdit *mCategoryLineEdit;
-    QCheckBox *mEnableCategory;
-    CategoryTypeComboBox *mCategoryType;
 };
 
-#endif // CONFIGURECUSTOMSETTINGWIDGET_H
+#endif // CATEGORYTYPECOMBOBOXTEST_H

@@ -9,6 +9,7 @@ set(kdebugsettings_SRCS
    configurecustomsettingwidget.cpp
    environmentsettingsrulespage.cpp
    environmentplaintextedit.cpp
+   categorytypecombobox.cpp
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})

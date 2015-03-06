@@ -19,6 +19,7 @@
 */
 
 #include "configurecustomsettingwidget.h"
+#include "categorytypecombobox.h"
 #include "kdebugsettingsdialog.h"
 #include "kdebugsettingsutil.h"
 #include <KLocalizedString>
@@ -51,12 +52,8 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("categorytype_label"));
     categoryLayout->addWidget(lab);
 
-    mCategoryType = new QComboBox;
+    mCategoryType = new CategoryTypeComboBox;
     mCategoryType->setObjectName(QStringLiteral("categorytype_combobox"));
-    mCategoryType->addItem(i18n("All"), QString());
-    mCategoryType->addItem(i18n("Debug"), QStringLiteral("debug"));
-    mCategoryType->addItem(i18n("Warning"), QStringLiteral("warning"));
-    mCategoryType->addItem(i18n("Critical"), QStringLiteral("critical"));
     categoryLayout->addWidget(mCategoryType);
 
     mEnableCategory = new QCheckBox(i18n("Enable"));
@@ -80,25 +77,14 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
     const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
     mEnableCategory->setChecked(cat.enabled);
-    if (cat.type.isEmpty()) {
-        //All
-        mCategoryType->setCurrentIndex(0);
-    } else {
-        const int pos = mCategoryType->findData(cat.type);
-        if (pos != -1) {
-            mCategoryType->setCurrentIndex(pos);
-        } else {
-            //Default;
-            mCategoryType->setCurrentIndex(0);
-        }
-    }
+    mCategoryType->setType(cat.type);
 }
 
 QString ConfigureCustomSettingWidget::rule()
 {
     QString ruleStr = mCategoryLineEdit->text().trimmed();
     if (!ruleStr.isEmpty()) {
-        const QString type = mCategoryType->currentData().toString();
+        const QString type = mCategoryType->type();
         if (!type.isEmpty()) {
             ruleStr += QLatin1Char('.') + type;
         }

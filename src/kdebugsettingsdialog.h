@@ -52,7 +52,7 @@ struct Category {
     QString type;
     bool enabled;
 };
-
+Q_DECLARE_TYPEINFO(Category, Q_MOVABLE_TYPE);
 class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT

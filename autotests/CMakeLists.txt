@@ -9,6 +9,7 @@ set(full_source_file
    ../src/configurecustomsettingwidget.cpp
    ../src/environmentsettingsrulespage.cpp
    ../src/environmentplaintextedit.cpp
+   ../src/categorytypecombobox.cpp
 )
 
 # convenience macro to add qtest unit tests
@@ -31,9 +32,10 @@ endmacro ()
 
 add_unittest( kdebugsettingsdialogtest.cpp "${full_source_file}")
 add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationlistwidget.cpp")
-add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( customdebugsettingspagetest.cpp "../src/categorytypecombobox.cpp;../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( kdeapplicationlistwidgettest.cpp "../src/kdeapplicationlistwidget.cpp")
-add_unittest( configurecustomsettingdialogtest.cpp "../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( configurecustomsettingwidgettest.cpp "../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( configurecustomsettingdialogtest.cpp "../src/categorytypecombobox.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( configurecustomsettingwidgettest.cpp "../src/categorytypecombobox.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( kdebugsettingutiltest.cpp "../src/kdebugsettingsutil.cpp")
 add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")
+add_unittest( categorytypecomboboxtest.cpp "../src/categorytypecombobox.cpp")
