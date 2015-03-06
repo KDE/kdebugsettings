@@ -7,6 +7,7 @@ set(kdebugsettings_SRCS
    kdebugsettingsutil.cpp
    configurecustomsettingdialog.cpp
    configurecustomsettingwidget.cpp
+   environmentsettingsrulespage.cpp
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})
