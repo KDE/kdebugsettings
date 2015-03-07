@@ -64,6 +64,7 @@ KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
     : QTreeWidget(parent)
 {
     setColumnCount(2);
+    setRootIsDecorated(false);
     header()->hide();
     header()->resizeSection(KDEApplicationTreeListWidgetItem::CategoryType, 50);
     header()->resizeSection(KDEApplicationTreeListWidgetItem::Description, 500);
