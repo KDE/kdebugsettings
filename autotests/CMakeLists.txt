@@ -39,3 +39,4 @@ add_unittest( configurecustomsettingwidgettest.cpp "../src/categorytypecombobox.
 add_unittest( kdebugsettingutiltest.cpp "../src/kdebugsettingsutil.cpp")
 add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")
 add_unittest( categorytypecomboboxtest.cpp "../src/categorytypecombobox.cpp")
+add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
