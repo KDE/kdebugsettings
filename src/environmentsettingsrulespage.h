@@ -34,5 +34,4 @@ private:
     EnvironmentPlainTextEdit *mPlainTextEdit;
 };
 
-
 #endif // ENVIRONMENTSETTINGSRULESPAGE_H

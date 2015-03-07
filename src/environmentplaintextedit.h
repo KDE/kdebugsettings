@@ -18,7 +18,6 @@
 
 */
 
-
 #ifndef ENVIRONMENTPLAINTEXTEDIT_H
 #define ENVIRONMENTPLAINTEXTEDIT_H
 
@@ -32,7 +31,7 @@ public:
     ~EnvironmentPlainTextEdit();
 
 protected:
-    void paintEvent( QPaintEvent *event ) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 private slots:
     void slotGeneralPaletteChanged();

@@ -18,7 +18,6 @@
 
 */
 
-
 #include "environmentplaintextedit.h"
 #include <KLocalizedString>
 #include <QPaintEvent>
@@ -37,19 +36,19 @@ EnvironmentPlainTextEdit::~EnvironmentPlainTextEdit()
 
 void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
 {
-    if ( toPlainText().isEmpty() ) {
-        QPainter p( viewport() );
+    if (toPlainText().isEmpty()) {
+        QPainter p(viewport());
 
         QFont font = p.font();
-        font.setItalic( true );
-        p.setFont( font );
+        font.setItalic(true);
+        p.setFont(font);
 
         if (!mTextColor.isValid()) {
             slotGeneralPaletteChanged();
         }
-        p.setPen( mTextColor );
+        p.setPen(mTextColor);
 
-        p.drawText( QRect( 0, 0, width(), height() ), Qt::AlignCenter, i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".") );
+        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."));
     } else {
         QPlainTextEdit::paintEvent(event);
     }
@@ -59,6 +58,6 @@ void EnvironmentPlainTextEdit::slotGeneralPaletteChanged()
 {
     const QPalette palette = viewport()->palette();
     QColor color = palette.text().color();
-    color.setAlpha( 128 );
+    color.setAlpha(128);
     mTextColor = color;
 }

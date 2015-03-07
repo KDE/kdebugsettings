@@ -22,14 +22,13 @@
 #include "categorytypecombobox.h"
 #include <QHeaderView>
 
-
 KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString &category, QTreeWidget *parent)
     : QTreeWidgetItem(parent),
       mCategory(category)
 {
     setCheckState(Description, Qt::Checked);
     mCategoryTypeCombobox = new CategoryTypeComboBox;
-    treeWidget()->setItemWidget ( this, CategoryType, mCategoryTypeCombobox );
+    treeWidget()->setItemWidget(this, CategoryType, mCategoryTypeCombobox);
 }
 
 KDEApplicationTreeListWidgetItem::~KDEApplicationTreeListWidgetItem()
@@ -69,8 +68,6 @@ KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
     header()->resizeSection(KDEApplicationTreeListWidgetItem::CategoryType, 50);
     header()->resizeSection(KDEApplicationTreeListWidgetItem::Description, 500);
 }
-
-
 
 KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget()
 {

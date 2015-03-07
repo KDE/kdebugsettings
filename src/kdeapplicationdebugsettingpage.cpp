@@ -66,10 +66,9 @@ KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
 
 bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
 {
-    if(event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
+    if (event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
         QKeyEvent *key = static_cast<QKeyEvent *>(event);
-        if((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return))
-        {
+        if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
             event->accept();
             return true;
         }

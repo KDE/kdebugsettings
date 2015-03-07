@@ -47,7 +47,6 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     categoryLayout->addWidget(lab);
     categoryLayout->addWidget(mCategoryLineEdit);
 
-
     lab = new QLabel(i18n("Type:"));
     lab->setObjectName(QStringLiteral("categorytype_label"));
     categoryLayout->addWidget(lab);
