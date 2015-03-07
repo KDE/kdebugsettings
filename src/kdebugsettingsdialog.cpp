@@ -122,6 +122,7 @@ void KDebugSettingsDialog::readCategoriesFiles()
                 Category kdeCat = categories.at(i);
                 if (cat.logName == kdeCat.logName) {
                     kdeCat.enabled = cat.enabled;
+                    kdeCat.type = cat.type;
                     categories.replace(i, kdeCat);
                     foundkde = true;
                     break;
