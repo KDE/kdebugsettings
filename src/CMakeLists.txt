@@ -1,7 +1,6 @@
 set(kdebugsettings_SRCS 
    main.cpp 
    kdebugsettingsdialog.cpp
-   kdeapplicationlistwidget.cpp
    customdebugsettingspage.cpp
    kdeapplicationdebugsettingpage.cpp
    kdebugsettingsutil.cpp
