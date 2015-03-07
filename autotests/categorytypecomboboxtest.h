@@ -31,7 +31,8 @@ public:
     ~CategoryTypeComboBoxTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-
+    void shouldSetType_data();
+    void shouldSetType();
 };
 
 #endif // CATEGORYTYPECOMBOBOXTEST_H

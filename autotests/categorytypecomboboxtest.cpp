@@ -39,4 +39,34 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
     QCOMPARE(w.count(), 4);
 }
 
+void CategoryTypeComboBoxTest::shouldSetType_data()
+{
+    QTest::addColumn<QString>("input");
+
+    QTest::newRow("empty") <<  QString();
+    QTest::newRow("warning") <<  QStringLiteral("warning");
+    QTest::newRow("invalid") <<  QStringLiteral("allss");
+    QTest::newRow("debug") <<  QStringLiteral("debug");
+    QTest::newRow("critical") <<  QStringLiteral("critical");
+}
+
+void CategoryTypeComboBoxTest::shouldSetType()
+{
+    QFETCH(QString, input);
+    CategoryTypeComboBox w;
+    w.setType(input);
+    QString result;
+    if (input.isEmpty()) {
+        result = QStringLiteral("all");
+    }
+    const int pos = w.findData(input);
+    if (pos < 0) {
+        result = QString();
+        QCOMPARE(w.type(), result);
+    } else {
+        result = w.type();
+        QCOMPARE(w.type(), result);
+    }
+}
+
 QTEST_MAIN(CategoryTypeComboBoxTest)
