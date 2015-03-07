@@ -148,7 +148,11 @@ void KDebugSettingsDialog::slotAccepted()
     settings.beginGroup(QStringLiteral("Rules"));
     settings.remove(QStringLiteral(""));
     Q_FOREACH (const Category &cat, lstKde) {
-        settings.setValue(cat.logName, cat.enabled);
+        QString str = cat.logName;
+        if (!cat.type.isEmpty()) {
+            str += QLatin1Char('.') + cat.type;
+        }
+        settings.setValue(str, cat.enabled);
     }
     Q_FOREACH (const Category &cat, lstCustom) {
         QString str = cat.logName;

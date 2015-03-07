@@ -20,11 +20,11 @@
 
 #include "kdeapplicationdebugsettingpagetest.h"
 #include "../src/kdeapplicationdebugsettingpage.h"
-#include "../src/kdeapplicationlistwidget.h"
+#include "../src/kdeapplicationtreelistwidget.h"
 #include <qlistwidget.h>
 #include <qpushbutton.h>
 #include <qtest.h>
-#include <KListWidgetSearchLine>
+#include <KTreeWidgetSearchLine>
 
 KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)
@@ -40,7 +40,7 @@ KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest()
 void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 {
     KDEApplicationDebugSettingPage page;
-    KDEApplicationListWidget *listWidget = page.findChild<KDEApplicationListWidget *>(QStringLiteral("listwidget"));
+    KDEApplicationTreeListWidget *listWidget = page.findChild<KDEApplicationTreeListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(listWidget);
 
     QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
@@ -49,7 +49,7 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QPushButton *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));
     QVERIFY(deselectAll);
 
-    KListWidgetSearchLine *searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
+    KTreeWidgetSearchLine *searchLine = page.findChild<KTreeWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);
     QVERIFY(searchLine->text().isEmpty());
 }

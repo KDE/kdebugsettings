@@ -19,14 +19,14 @@
 */
 
 #include "kdeapplicationdebugsettingpage.h"
-#include "kdeapplicationlistwidget.h"
+#include "kdeapplicationtreelistwidget.h"
 #include <KLocalizedString>
-#include <KListWidgetSearchLine>
 #include <QListWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QEvent>
 #include <QKeyEvent>
+#include <ktreewidgetsearchline.h>
 
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
@@ -34,15 +34,15 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-    mListWidget = new KDEApplicationListWidget;
-    mListWidget->setObjectName(QStringLiteral("listwidget"));
+    mTreeListWidget = new KDEApplicationTreeListWidget;
+    mTreeListWidget->setObjectName(QStringLiteral("listwidget"));
 
-    mListWidgetSearchLine = new KListWidgetSearchLine(this, mListWidget);
-    mListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
-    mListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
-    mainLayout->addWidget(mListWidgetSearchLine);
+    mTreeListWidgetSearchLine = new KTreeWidgetSearchLine(this, mTreeListWidget);
+    mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
+    mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
+    mainLayout->addWidget(mTreeListWidgetSearchLine);
 
-    mainLayout->addWidget(mListWidget);
+    mainLayout->addWidget(mTreeListWidget);
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
@@ -56,7 +56,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mDeselectAll->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mDeselectAll);
     connect(mDeselectAll, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
-    mListWidgetSearchLine->installEventFilter(this);
+    mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
 KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
@@ -66,7 +66,7 @@ KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
 
 bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
 {
-    if(event->type() == QEvent::KeyPress && obj == mListWidgetSearchLine) {
+    if(event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
         QKeyEvent *key = static_cast<QKeyEvent *>(event);
         if((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return))
         {
@@ -79,20 +79,20 @@ bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
 
 void KDEApplicationDebugSettingPage::slotSelectAll()
 {
-    mListWidget->selectAllDebugCategories();
+    mTreeListWidget->selectAllDebugCategories();
 }
 
 void KDEApplicationDebugSettingPage::slotDeselectAll()
 {
-    mListWidget->deSelectAllDebugCategories();
+    mTreeListWidget->deSelectAllDebugCategories();
 }
 
 void KDEApplicationDebugSettingPage::fillList(const Category::List &list)
 {
-    mListWidget->fillList(list);
+    mTreeListWidget->fillList(list);
 }
 
 Category::List KDEApplicationDebugSettingPage::rules()
 {
-    return mListWidget->rules();
+    return mTreeListWidget->rules();
 }
