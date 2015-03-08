@@ -45,6 +45,6 @@ EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
 
 void EnvironmentSettingsRulesPage::setRules(const QString &rules)
 {
-    QString information = i18n("Theses rules can't be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.");
+    QString information = i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.");
     mPlainTextEdit->setPlainText(information + QLatin1Char('\n') + QLatin1Char('\n') + rules);
 }

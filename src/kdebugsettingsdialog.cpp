@@ -18,10 +18,10 @@
 
 */
 
+#include "kdebugsettingsdialog.h"
 #include "customdebugsettingspage.h"
 #include "kdeapplicationdebugsettingpage.h"
 #include "environmentsettingsrulespage.h"
-#include "kdebugsettingsdialog.h"
 #include "kdebugsettingsutil.h"
 
 #include <KLocalizedString>
