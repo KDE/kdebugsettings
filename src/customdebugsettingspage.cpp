@@ -142,7 +142,15 @@ void CustomDebugSettingsPage::slotAddRule()
     if (dlg->exec()) {
         const QString ruleStr = dlg->rule();
         if (!ruleStr.isEmpty()) {
-            mListWidget->addItem(ruleStr);
+            bool alreadyAdded = false;
+            for (int i = 0; i < mListWidget->count(); ++i) {
+                if (ruleStr == mListWidget->item(i)->text()) {
+                    alreadyAdded = true;
+                    break;
+                }
+            }
+            if (!alreadyAdded)
+                mListWidget->addItem(ruleStr);
         }
     }
     delete dlg;
