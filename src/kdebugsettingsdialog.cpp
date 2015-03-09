@@ -34,6 +34,8 @@
 #include <QVBoxLayout>
 #include <QDebug>
 #include <QDir>
+#include <QDesktopServices>
+#include <QUrl>
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
@@ -55,10 +57,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->addTab(mCustomSettingsPage, i18n("Custom Rules"));
     mTabWidget->addTab(mEnvironmentSettingsRulesPage, i18n("Rules Settings With Environment Variable"));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
     mainLayout->addWidget(buttonBox);
     readConfig();
     readCategoriesFiles();
@@ -165,4 +168,9 @@ void KDebugSettingsDialog::slotAccepted()
 
     settings.endGroup();
     accept();
+}
+
+void KDebugSettingsDialog::slotHelpRequested()
+{
+    QDesktopServices::openUrl(QUrl(QStringLiteral("http://doc.qt.io/qt-5/qloggingcategory.html#details")));
 }

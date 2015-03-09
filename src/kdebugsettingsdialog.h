@@ -62,6 +62,7 @@ public:
 
 private slots:
     void slotAccepted();
+    void slotHelpRequested();
 private:
     void readCategoriesFiles();
     void saveConfig();
