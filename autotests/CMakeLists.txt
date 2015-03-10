@@ -10,6 +10,7 @@ set(full_source_file
    ../src/environmentplaintextedit.cpp
    ../src/categorytypecombobox.cpp
    ../src/kdeapplicationtreelistwidget.cpp
+   ../src/categorywarning.cpp
 )
 
 # convenience macro to add qtest unit tests
@@ -39,3 +40,4 @@ add_unittest( kdebugsettingutiltest.cpp "../src/kdebugsettingsutil.cpp")
 add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")
 add_unittest( categorytypecomboboxtest.cpp "../src/categorytypecombobox.cpp")
 add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
+add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")

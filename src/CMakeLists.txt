@@ -10,6 +10,7 @@ set(kdebugsettings_SRCS
    environmentplaintextedit.cpp
    categorytypecombobox.cpp
    kdeapplicationtreelistwidget.cpp
+   categorywarning.cpp
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})
