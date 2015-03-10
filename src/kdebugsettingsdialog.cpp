@@ -28,6 +28,7 @@
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KMessageBox>
 
 #include <QDialogButtonBox>
 #include <QSettings>
@@ -160,30 +161,35 @@ void KDebugSettingsDialog::slotAccepted()
     const Category::List lstKde = mKdeApplicationSettingsPage->rules();
     const Category::List lstCustom = mCustomSettingsPage->rules();
     //Save in files.
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, QStringLiteral("QtProject"), QStringLiteral("qtlogging"));
-    //Clean Rules
-    settings.beginGroup(QStringLiteral("Rules"));
-    settings.remove(QStringLiteral(""));
-    Q_FOREACH (const Category &cat, lstKde) {
-        QString str = cat.logName;
-        if (!cat.type.isEmpty()) {
-            str += QLatin1Char('.') + cat.type;
-        }
-        settings.setValue(str, cat.enabled);
+    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
+    QFile qtlogging(envPath);
+    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate )) {
+        KMessageBox::error(this, i18n("qtlogging can not open. Please verify it."));
+        return;
     }
-    Q_FOREACH (const Category &cat, lstCustom) {
-        QString str = cat.logName;
-        if (!cat.type.isEmpty()) {
-            str += QLatin1Char('.') + cat.type;
-        }
-        settings.setValue(str, cat.enabled);
+    QTextStream out(&qtlogging);
+    out << QLatin1String("[Rules]\n");
+    Q_FOREACH (Category cat, lstKde) {
+        out << cat.createRule() + QLatin1Char('\n');
     }
-
-    settings.endGroup();
+    Q_FOREACH (Category cat, lstCustom) {
+        out << cat.createRule() + QLatin1Char('\n');
+    }
     accept();
 }
 
 void KDebugSettingsDialog::slotHelpRequested()
 {
     QDesktopServices::openUrl(QUrl(QStringLiteral("http://doc.qt.io/qt-5/qloggingcategory.html#details")));
+}
+
+
+QString Category::createRule()
+{
+    QString str = logName;
+    if (!type.isEmpty()) {
+        str += QLatin1Char('.') + type;
+    }
+    str += QLatin1String("=") + (enabled ? QLatin1Literal("true") : QLatin1Literal("false"));
+    return str;
 }

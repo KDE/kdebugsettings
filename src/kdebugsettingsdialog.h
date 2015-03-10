@@ -48,6 +48,7 @@ struct Category {
         return !logName.isEmpty();
     }
 
+    QString createRule();
     QString description;
     QString logName;
     QString type;
