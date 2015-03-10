@@ -65,7 +65,9 @@ public:
 private slots:
     void slotAccepted();
     void slotHelpRequested();
+    void slotApply();
 private:
+    void save();
     void readCategoriesFiles();
     void saveConfig();
     void readConfig();

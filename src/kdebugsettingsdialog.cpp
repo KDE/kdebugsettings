@@ -35,6 +35,7 @@
 #include <QTabWidget>
 #include <QVBoxLayout>
 #include <QDebug>
+#include <QPushButton>
 #include <QDir>
 #include <QDesktopServices>
 #include <QUrl>
@@ -63,11 +64,12 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->addTab(mCustomSettingsPage, i18n("Custom Rules"));
     mTabWidget->addTab(mEnvironmentSettingsRulesPage, i18n("Rules Settings With Environment Variable"));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
+    connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &KDebugSettingsDialog::slotApply);
     mainLayout->addWidget(buttonBox);
     readConfig();
     readCategoriesFiles();
@@ -154,7 +156,7 @@ void KDebugSettingsDialog::readCategoriesFiles()
     }
 }
 
-void KDebugSettingsDialog::slotAccepted()
+void KDebugSettingsDialog::save()
 {
     //Save Rules
     const Category::List lstKde = mKdeApplicationSettingsPage->rules();
@@ -174,6 +176,11 @@ void KDebugSettingsDialog::slotAccepted()
     Q_FOREACH (Category cat, lstCustom) {
         out << cat.createRule() + QLatin1Char('\n');
     }
+}
+
+void KDebugSettingsDialog::slotAccepted()
+{
+    save();
     accept();
 }
 
@@ -190,4 +197,9 @@ QString Category::createRule()
     }
     str += QLatin1String("=") + (enabled ? QLatin1Literal("true") : QLatin1Literal("false"));
     return str;
+}
+
+void KDebugSettingsDialog::slotApply()
+{
+    save();
 }
