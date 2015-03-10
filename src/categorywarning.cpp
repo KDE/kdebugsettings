@@ -25,7 +25,7 @@ CategoryWarning::CategoryWarning(QWidget *parent)
     : KMessageWidget(parent)
 {
     setVisible(false);
-    setMessageType(Information);
+    setMessageType(KMessageWidget::Warning);
     setText(i18n("You have a rule as \'*=true\' or \'*=false\' which will override all your specific rule. Better to remove it."));
     setWordWrap(true);
 }
