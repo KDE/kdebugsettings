@@ -20,6 +20,7 @@
 
 #include "kdebugsettingsdialogtest.h"
 #include "../src/kdebugsettingsdialog.h"
+#include "../src/categorywarning.h"
 #include <QDialogButtonBox>
 #include <QTabWidget>
 #include <qtest.h>
@@ -38,7 +39,7 @@ KDebugSettingsDialogTest::~KDebugSettingsDialogTest()
 void KDebugSettingsDialogTest::shouldHaveDefaultValue()
 {
     KDebugSettingsDialog dlg;
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QLatin1String("buttonbox"));
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::Help);
     QTabWidget *tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
@@ -50,6 +51,10 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
                                     (objName == QStringLiteral("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
+
+    CategoryWarning *categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));
+    QVERIFY(categoryWarning);
+    QVERIFY(!categoryWarning->isVisible());
 }
 
 QTEST_MAIN(KDebugSettingsDialogTest)

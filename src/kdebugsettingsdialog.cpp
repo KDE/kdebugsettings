@@ -23,6 +23,7 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include "environmentsettingsrulespage.h"
 #include "kdebugsettingsutil.h"
+#include "categorywarning.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -42,6 +43,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
+
+
+    mCategoryWarning = new CategoryWarning(this);
+    mCategoryWarning->setObjectName(QStringLiteral("categorywarning"));
+    mainLayout->addWidget(mCategoryWarning);
 
     mTabWidget = new QTabWidget;
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
@@ -117,6 +123,7 @@ void KDebugSettingsDialog::readCategoriesFiles()
     // qt logging.ini
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     Category::List customCategories;
+    bool foundOverrideRule = false;
     if (!envPath.isEmpty()) {
         const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
         Q_FOREACH (const Category &cat, qtCategories) {
@@ -134,11 +141,17 @@ void KDebugSettingsDialog::readCategoriesFiles()
             if (!foundkde) {
                 customCategories.append(cat);
             }
+            if (cat.logName==QLatin1String("*")) {
+                foundOverrideRule = true;
+            }
         }
     }
 
     mKdeApplicationSettingsPage->fillList(categories);
     mCustomSettingsPage->fillList(customCategories);
+    if (foundOverrideRule) {
+        mCategoryWarning->animatedShow();
+    }
 }
 
 void KDebugSettingsDialog::slotAccepted()
