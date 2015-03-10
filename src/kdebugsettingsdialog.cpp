@@ -45,7 +45,6 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-
     mCategoryWarning = new CategoryWarning(this);
     mCategoryWarning->setObjectName(QStringLiteral("categorywarning"));
     mainLayout->addWidget(mCategoryWarning);
@@ -142,7 +141,7 @@ void KDebugSettingsDialog::readCategoriesFiles()
             if (!foundkde) {
                 customCategories.append(cat);
             }
-            if (cat.logName==QLatin1String("*")) {
+            if (cat.logName == QLatin1String("*")) {
                 foundOverrideRule = true;
             }
         }
@@ -163,7 +162,7 @@ void KDebugSettingsDialog::slotAccepted()
     //Save in files.
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
     QFile qtlogging(envPath);
-    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate )) {
+    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
         KMessageBox::error(this, i18n("qtlogging can not open. Please verify it."));
         return;
     }
@@ -182,7 +181,6 @@ void KDebugSettingsDialog::slotHelpRequested()
 {
     QDesktopServices::openUrl(QUrl(QStringLiteral("http://doc.qt.io/qt-5/qloggingcategory.html#details")));
 }
-
 
 QString Category::createRule()
 {

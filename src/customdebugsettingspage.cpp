@@ -149,8 +149,9 @@ void CustomDebugSettingsPage::slotAddRule()
                     break;
                 }
             }
-            if (!alreadyAdded)
+            if (!alreadyAdded) {
                 mListWidget->addItem(ruleStr);
+            }
         }
     }
     delete dlg;

@@ -18,7 +18,6 @@
 
 */
 
-
 #ifndef CATEGORYWARNINGTEST_H
 #define CATEGORYWARNINGTEST_H
 
