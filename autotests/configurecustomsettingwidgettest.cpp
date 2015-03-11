@@ -47,6 +47,7 @@ void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
     KLineEdit *categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
     QVERIFY(categoryLineEdit);
     QVERIFY(categoryLineEdit->trapReturnKey());
+    QVERIFY(categoryLineEdit->isClearButtonShown());
 
     QCheckBox *enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
     QVERIFY(enableCategory);

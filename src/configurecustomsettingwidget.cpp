@@ -40,6 +40,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("category_label"));
     mCategoryLineEdit = new KLineEdit;
     mCategoryLineEdit->setTrapReturnKey(true);
+    mCategoryLineEdit->setClearButtonShown(true);
     mCategoryLineEdit->setObjectName(QStringLiteral("category_lineedit"));
     connect(mCategoryLineEdit, &KLineEdit::textChanged, this, &ConfigureCustomSettingWidget::slotTextChanged);
     QHBoxLayout *categoryLayout = new QHBoxLayout;
