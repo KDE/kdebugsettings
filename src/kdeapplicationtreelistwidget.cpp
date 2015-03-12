@@ -66,8 +66,6 @@ KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
     setColumnCount(2);
     setRootIsDecorated(false);
     header()->hide();
-    header()->resizeSection(KDEApplicationTreeListWidgetItem::CategoryType, 50);
-    header()->resizeSection(KDEApplicationTreeListWidgetItem::Description, 500);
 }
 
 KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget()
@@ -100,6 +98,7 @@ void KDEApplicationTreeListWidget::fillList(const Category::List &list)
         item->setCheckState(KDEApplicationTreeListWidgetItem::Description, cat.enabled ? Qt::Checked : Qt::Unchecked);
         item->setType(cat.type);
     }
+    resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }
 
 Category::List KDEApplicationTreeListWidget::rules()
