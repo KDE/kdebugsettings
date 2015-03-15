@@ -67,7 +67,8 @@ private Q_SLOTS:
     void slotHelpRequested();
     void slotApply();
 private:
-    void save();
+    bool saveRules(const QString &path);
+    bool saveInQtLogging();
     void readCategoriesFiles();
     void saveConfig();
     void readConfig();

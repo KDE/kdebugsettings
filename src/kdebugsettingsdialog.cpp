@@ -156,18 +156,16 @@ void KDebugSettingsDialog::readCategoriesFiles()
     }
 }
 
-void KDebugSettingsDialog::save()
+bool KDebugSettingsDialog::saveRules(const QString &path)
 {
+    QFile qtlogging(path);
+    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        KMessageBox::error(this, i18n("\'%1\'' can not open. Please verify it.", path));
+        return false;
+    }
     //Save Rules
     const Category::List lstKde = mKdeApplicationSettingsPage->rules();
     const Category::List lstCustom = mCustomSettingsPage->rules();
-    //Save in files.
-    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
-    QFile qtlogging(envPath);
-    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
-        KMessageBox::error(this, i18n("qtlogging can not open. Please verify it."));
-        return;
-    }
     QTextStream out(&qtlogging);
     out << QLatin1String("[Rules]\n");
     Q_FOREACH (Category cat, lstKde) {
@@ -176,12 +174,20 @@ void KDebugSettingsDialog::save()
     Q_FOREACH (Category cat, lstCustom) {
         out << cat.createRule() + QLatin1Char('\n');
     }
+    return true;
+}
+
+bool KDebugSettingsDialog::saveInQtLogging()
+{
+    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
+    return saveRules(envPath);
 }
 
 void KDebugSettingsDialog::slotAccepted()
 {
-    save();
-    accept();
+    if (saveInQtLogging()) {
+        accept();
+    }
 }
 
 void KDebugSettingsDialog::slotHelpRequested()
@@ -201,5 +207,5 @@ QString Category::createRule()
 
 void KDebugSettingsDialog::slotApply()
 {
-    save();
+    saveInQtLogging();
 }
