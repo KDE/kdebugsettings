@@ -62,7 +62,7 @@ public:
     explicit KDebugSettingsDialog(QWidget *parent = Q_NULLPTR);
     ~KDebugSettingsDialog();
 
-private slots:
+private Q_SLOTS:
     void slotAccepted();
     void slotHelpRequested();
     void slotApply();

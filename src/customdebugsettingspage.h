@@ -34,7 +34,7 @@ public:
 
     void fillList(const Category::List &list);
     Category::List rules();
-private slots:
+private Q_SLOTS:
     void slotRemoveRule();
     void slotAddRule();
     void slotEditRule();

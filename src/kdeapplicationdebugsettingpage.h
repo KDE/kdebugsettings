@@ -38,7 +38,7 @@ public:
 protected:
     bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
 
-private slots:
+private Q_SLOTS:
     void slotSelectAll();
     void slotDeselectAll();
 private:
