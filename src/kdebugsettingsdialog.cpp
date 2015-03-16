@@ -165,7 +165,7 @@ bool KDebugSettingsDialog::saveRules(const QString &path)
 {
     QFile qtlogging(path);
     if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
-        KMessageBox::error(this, i18n("\'%1\'' can not open. Please verify it.", path));
+        KMessageBox::error(this, i18n("\'%1\' cannot be opened. Please verify it.", path));
         return false;
     }
     //Save Rules
