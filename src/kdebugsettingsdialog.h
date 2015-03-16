@@ -66,6 +66,7 @@ private Q_SLOTS:
     void slotAccepted();
     void slotHelpRequested();
     void slotApply();
+    void slotSaveAs();
 private:
     bool saveRules(const QString &path);
     bool saveInQtLogging();

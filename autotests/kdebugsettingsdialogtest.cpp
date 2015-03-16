@@ -22,6 +22,7 @@
 #include "../src/kdebugsettingsdialog.h"
 #include "../src/categorywarning.h"
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QTabWidget>
 #include <qtest.h>
 
@@ -51,7 +52,8 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
                                     (objName == QStringLiteral("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
-
+    QPushButton *saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
+    QVERIFY(saveAs);
     CategoryWarning *categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());

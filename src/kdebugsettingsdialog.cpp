@@ -30,6 +30,7 @@
 #include <KSharedConfig>
 #include <KMessageBox>
 
+#include <QFileDialog>
 #include <QDialogButtonBox>
 #include <QSettings>
 #include <QTabWidget>
@@ -66,6 +67,10 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    QPushButton *saveAs = new QPushButton(i18n("Save As..."), this);
+    saveAs->setObjectName(QStringLiteral("saveas_button"));
+    buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
+    connect(saveAs, &QPushButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
@@ -208,4 +213,12 @@ QString Category::createRule()
 void KDebugSettingsDialog::slotApply()
 {
     saveInQtLogging();
+}
+
+void KDebugSettingsDialog::slotSaveAs()
+{
+    const QString path = QFileDialog::getSaveFileName(this, i18n("Save As"));
+    if (!path.isEmpty()) {
+        saveRules(path);
+    }
 }
