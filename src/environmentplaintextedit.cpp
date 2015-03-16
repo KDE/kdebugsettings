@@ -34,6 +34,14 @@ EnvironmentPlainTextEdit::~EnvironmentPlainTextEdit()
 
 }
 
+void EnvironmentPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
+{
+    if (toPlainText().isEmpty()) {
+        return;
+    }
+    QPlainTextEdit::contextMenuEvent(event);
+}
+
 void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
 {
     if (toPlainText().isEmpty()) {

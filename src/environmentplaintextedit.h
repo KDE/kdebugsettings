@@ -33,6 +33,7 @@ public:
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
+    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
 private Q_SLOTS:
     void slotGeneralPaletteChanged();
 
