@@ -67,17 +67,25 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
+
     QPushButton *saveAs = new QPushButton(i18n("Save As..."), this);
     saveAs->setObjectName(QStringLiteral("saveas_button"));
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
     connect(saveAs, &QPushButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
+
+    QPushButton *load = new QPushButton(i18n("Load..."), this);
+    load->setObjectName(QStringLiteral("load_button"));
+    buttonBox->addButton(load, QDialogButtonBox::ActionRole);
+    connect(load, &QPushButton::clicked, this, &KDebugSettingsDialog::slotLoad);
+
+
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &KDebugSettingsDialog::slotApply);
     mainLayout->addWidget(buttonBox);
     readConfig();
-    readCategoriesFiles();
+    readQtLoggingFile();
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()
@@ -101,7 +109,13 @@ void KDebugSettingsDialog::saveConfig()
     group.sync();
 }
 
-void KDebugSettingsDialog::readCategoriesFiles()
+void KDebugSettingsDialog::readQtLoggingFile()
+{
+    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
+    readCategoriesFiles(envPath);
+}
+
+void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("kde.categories"));
@@ -128,7 +142,7 @@ void KDebugSettingsDialog::readCategoriesFiles()
         mEnvironmentSettingsRulesPage->setRules(environmentrules);
     }
     // qt logging.ini
-    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
+    const QString envPath = path;
     Category::List customCategories;
     bool foundOverrideRule = false;
     if (!envPath.isEmpty()) {
@@ -220,5 +234,13 @@ void KDebugSettingsDialog::slotSaveAs()
     const QString path = QFileDialog::getSaveFileName(this, i18n("Save As"));
     if (!path.isEmpty()) {
         saveRules(path);
+    }
+}
+
+void KDebugSettingsDialog::slotLoad()
+{
+    const QString path = QFileDialog::getOpenFileName(this, i18n("Load Rules File"));
+    if (!path.isEmpty()) {
+        readCategoriesFiles(path);
     }
 }

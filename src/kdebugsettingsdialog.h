@@ -67,10 +67,12 @@ private Q_SLOTS:
     void slotHelpRequested();
     void slotApply();
     void slotSaveAs();
+    void slotLoad();
 private:
+    void readQtLoggingFile();
     bool saveRules(const QString &path);
     bool saveInQtLogging();
-    void readCategoriesFiles();
+    void readCategoriesFiles(const QString &path);
     void saveConfig();
     void readConfig();
     QTabWidget *mTabWidget;

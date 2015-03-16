@@ -54,6 +54,8 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     }
     QPushButton *saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
     QVERIFY(saveAs);
+    QPushButton *load = buttonBox->findChild<QPushButton *>(QStringLiteral("load_button"));
+    QVERIFY(load);
     CategoryWarning *categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());
