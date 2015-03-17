@@ -78,7 +78,6 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
     connect(load, &QPushButton::clicked, this, &KDebugSettingsDialog::slotLoad);
 
-
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
