@@ -63,6 +63,9 @@ log_messageviewer kdepim (messageviewer)
 log_pimsettingexporter kdepim (pimsettingexporter)
 log_kaddressbook kdepim (kaddressbook)
 log_importwizard kdepim (importwizard)
+log_knoteskontactplugin kdepim (knotes kontact plugin)
+log_kontact kdepim (kontact application)
+log_contactprintthemeeditor kdepim (contactprintthemeeditor)
 
 #kdeedu
 log_klettres kdeedu (kletters)
