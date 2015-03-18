@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral("0.4"),
+    KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral("0.9"),
                          i18n("Configure debug settings"), KAboutLicense::GPL_V2,
                          i18n("(c) 2015 kdebugsettings authors"));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 
     KDBusService service(KDBusService::Unique);
     KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
-    int ret = dialog->exec();
+    const int ret = dialog->exec();
     delete dialog;
     return ret;
 }
