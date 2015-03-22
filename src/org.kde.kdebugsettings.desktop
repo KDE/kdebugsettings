@@ -3,8 +3,10 @@
 Type=Application
 Exec=kdebugsettings
 GenericName=Debug settings
+GenericName[pt]=Configuração da depuração
 Terminal=false
 Name=KDebug Settings
+Name[pt]=Configuração do KDebug
 X-DBUS-StartupType=Unique
 Categories=Qt;KDE;
 X-DBUS-ServiceName=org.kde.kdebugsettings
