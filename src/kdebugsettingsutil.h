@@ -25,7 +25,7 @@
 #include "kdebugsettingsdialog.h"
 namespace KDebugSettingsUtil
 {
-void readLoggingCategories(const QString &filename, Category::List &categoriesList);
+void readLoggingCategories(const QString &filename, Category::List &categoriesList, bool checkCategoryList = false);
 Category::List readLoggingQtCategories(const QString &filename);
 Category parseLineKdeLoggingCategory(QString line);
 Category parseLineLoggingQtCategory(QString line);

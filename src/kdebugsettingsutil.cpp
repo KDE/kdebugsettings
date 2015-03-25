@@ -49,7 +49,7 @@ Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     return category;
 }
 
-void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category::List &categoriesList)
+void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category::List &categoriesList, bool checkCategoryList)
 {
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -62,15 +62,19 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category
             data = ts.readLine().simplified();
             const Category category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
-                bool needToAppend = true;
-                Q_FOREACH(const Category &cat, categoriesList) {
-                    if (cat == category) {
-                        needToAppend = false;
-                        break;
+                if (checkCategoryList) {
+                    bool needToAppend = true;
+                    Q_FOREACH(const Category &cat, categoriesList) {
+                        if (cat == category) {
+                            needToAppend = false;
+                            break;
+                        }
                     }
-                }
-                if (needToAppend)
+                    if (needToAppend)
+                        categoriesList.append(category);
+                } else {
                     categoriesList.append(category);
+                }
             }
         }
     }

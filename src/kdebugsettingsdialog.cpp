@@ -119,7 +119,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("kde.categories"));
     Category::List categories;
-    KDebugSettingsUtil::readLoggingCategories(confAreasFile, categories);
+    KDebugSettingsUtil::readLoggingCategories(confAreasFile, categories, false);
 
     // TODO Load *.categories files.
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
