@@ -22,7 +22,6 @@
 #define KDEBUGSETTINGSDIALOG_H
 
 #include <QDialog>
-#include <QMap>
 #include <QVector>
 class QTabWidget;
 class KDEApplicationDebugSettingPage;

@@ -21,7 +21,6 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdeapplicationtreelistwidget.h"
 #include <KLocalizedString>
-#include <QListWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QEvent>

@@ -28,7 +28,6 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QCheckBox>
-#include <QComboBox>
 
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)

@@ -32,14 +32,13 @@
 
 #include <QFileDialog>
 #include <QDialogButtonBox>
-#include <QSettings>
 #include <QTabWidget>
 #include <QVBoxLayout>
-#include <QDebug>
 #include <QPushButton>
 #include <QDir>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QTextStream>
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
