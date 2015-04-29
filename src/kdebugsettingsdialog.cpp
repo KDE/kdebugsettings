@@ -120,7 +120,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     Category::List categories;
     KDebugSettingsUtil::readLoggingCategories(confAreasFile, categories, false);
 
-    // TODO Load *.categories files.
+    // Load *.categories files.
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
