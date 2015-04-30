@@ -39,6 +39,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QTextStream>
+#include <QDebug>
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
@@ -116,18 +117,28 @@ void KDebugSettingsDialog::readQtLoggingFile()
 void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
-    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QLatin1Literal("kde.categories"));
+    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("kde.categories"));
     Category::List categories;
     KDebugSettingsUtil::readLoggingCategories(confAreasFile, categories, false);
 
-    // Load *.categories files.
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
+    // Load *.categories file in QStandardPaths::ConfigLocation for kde apps.
+    QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
+    Q_FOREACH (const QString &dir, dirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
+        Q_FOREACH (const QString &file, fileNames) {
+            if (file != QStringLiteral("kde.categories")) {
+                KDebugSettingsUtil::readLoggingCategories(dir + file, categories);
+            }
+        }
+    }
+
+    // Load *.categories files. in qdebug.categories for external kde apps.
+    dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         Q_FOREACH (const QString &file, fileNames) {
             KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, categories);
         }
-
     }
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
     if (!rulesFilePath.isEmpty()) {
