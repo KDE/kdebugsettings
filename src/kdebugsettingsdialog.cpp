@@ -78,6 +78,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
     connect(load, &QPushButton::clicked, this, &KDebugSettingsDialog::slotLoad);
 
+    QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
+    insertCategories->setObjectName(QStringLiteral("insert_button"));
+    buttonBox->addButton(insertCategories, QDialogButtonBox::ActionRole);
+    connect(insertCategories, &QPushButton::clicked, this, &KDebugSettingsDialog::slotInsertCategories);
+
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
@@ -236,6 +241,15 @@ QString Category::createRule()
 void KDebugSettingsDialog::slotApply()
 {
     saveInQtLogging();
+}
+
+void KDebugSettingsDialog::slotInsertCategories()
+{
+    //TODO
+    const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
+    if (!path.isEmpty()) {
+
+    }
 }
 
 void KDebugSettingsDialog::slotSaveAs()

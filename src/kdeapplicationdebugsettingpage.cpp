@@ -94,3 +94,8 @@ Category::List KDEApplicationDebugSettingPage::rules()
 {
     return mTreeListWidget->rules();
 }
+
+void KDEApplicationDebugSettingPage::insertCategories(const Category::List &list)
+{
+    mTreeListWidget->insertCategories(list);
+}

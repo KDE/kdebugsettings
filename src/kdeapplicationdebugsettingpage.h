@@ -34,7 +34,7 @@ public:
     ~KDEApplicationDebugSettingPage();
     void fillList(const Category::List &list);
     Category::List rules();
-
+    void insertCategories(const Category::List &list);
 protected:
     bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
 

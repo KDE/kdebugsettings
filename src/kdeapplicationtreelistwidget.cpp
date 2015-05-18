@@ -101,6 +101,11 @@ void KDEApplicationTreeListWidget::fillList(const Category::List &list)
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }
 
+void KDEApplicationTreeListWidget::insertCategories(const Category::List &list)
+{
+    //TODO
+}
+
 Category::List KDEApplicationTreeListWidget::rules()
 {
     Category::List lst;

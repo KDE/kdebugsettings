@@ -67,6 +67,7 @@ private Q_SLOTS:
     void slotApply();
     void slotSaveAs();
     void slotLoad();
+    void slotInsertCategories();
 private:
     void readQtLoggingFile();
     bool saveRules(const QString &path);

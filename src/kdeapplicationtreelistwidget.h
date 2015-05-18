@@ -56,6 +56,7 @@ public:
     void selectAllDebugCategories();
 
     void fillList(const Category::List &list);
+    void insertCategories(const Category::List &list);
     Category::List rules();
 };
 
