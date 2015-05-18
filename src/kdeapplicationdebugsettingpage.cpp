@@ -90,7 +90,7 @@ void KDEApplicationDebugSettingPage::fillList(const Category::List &list)
     mTreeListWidget->fillList(list);
 }
 
-Category::List KDEApplicationDebugSettingPage::rules()
+Category::List KDEApplicationDebugSettingPage::rules() const
 {
     return mTreeListWidget->rules();
 }
