@@ -58,6 +58,8 @@ public:
     void fillList(const Category::List &list);
     void insertCategories(const Category::List &list);
     Category::List rules();
+private:
+    void addListItems(const Category::List &list, bool clearList);
 };
 
 #endif // KDEAPPLICATIONTREELISTWIDGET_H

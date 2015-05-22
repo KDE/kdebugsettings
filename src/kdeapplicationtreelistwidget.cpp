@@ -91,7 +91,14 @@ void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
 
 void KDEApplicationTreeListWidget::fillList(const Category::List &list)
 {
-    clear();
+    addListItems(list, true);
+}
+
+void KDEApplicationTreeListWidget::addListItems(const Category::List &list, bool clearList)
+{
+    if (clearList) {
+        clear();
+    }
     Q_FOREACH (const Category &cat, list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
@@ -103,7 +110,7 @@ void KDEApplicationTreeListWidget::fillList(const Category::List &list)
 
 void KDEApplicationTreeListWidget::insertCategories(const Category::List &list)
 {
-    //TODO
+    addListItems(list, false);
 }
 
 Category::List KDEApplicationTreeListWidget::rules()
