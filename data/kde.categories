@@ -1,10 +1,6 @@
 # Format : logname<space>description
 
 #kdepimlibs
-log_kldap kioslave (kldap)
-log_sieve kioslave (sieve)
-log_smtp kioslave (smtp)
-log_pop3 kioslave (pop3)
 log_kcalutils kcalutils (pim lib)
 log_kimap kimap (pim lib)
 log_kidentitymanagement kidentitymanagement (pim lib)
