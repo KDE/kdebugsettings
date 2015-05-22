@@ -19,7 +19,7 @@
 */
 
 #include "kdebugsettingsutil.h"
-#include <QDebug>
+#include "kdebugsettings_debug.h"
 #include <QFile>
 
 Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
@@ -37,7 +37,7 @@ Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qWarning() << "No space:" << line << endl;
+        qCWarning(KDEBUGSETTINGS_LOG) << "No space:" << line << endl;
         return category;
     }
 
@@ -56,7 +56,7 @@ Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QStri
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qWarning() << "Couldn't open" << filename;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
     } else {
         QString data;
         QTextStream ts(&file);
@@ -86,7 +86,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category
 {
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qWarning() << "Couldn't open" << filename;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
     } else {
         QString data;
         QTextStream ts(&file);
@@ -157,7 +157,7 @@ Category::List KDebugSettingsUtil::readLoggingQtCategories(const QString &filena
     Category::List categories;
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qWarning() << "Couldn't open" << filename;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
     } else {
         QTextStream ts(&file);
         QString _section;

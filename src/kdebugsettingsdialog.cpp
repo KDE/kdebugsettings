@@ -39,7 +39,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QTextStream>
-#include <QDebug>
+#include "kdebugsettings_debug.h"
 
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)

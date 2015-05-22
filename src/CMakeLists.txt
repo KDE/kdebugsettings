@@ -11,6 +11,7 @@ set(kdebugsettings_SRCS
    categorytypecombobox.cpp
    kdeapplicationtreelistwidget.cpp
    categorywarning.cpp
+   kdebugsettings_debug.cpp 
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})
