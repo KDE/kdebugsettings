@@ -46,3 +46,6 @@ log_kio_sftp kioslave (kio_sftp)
 
 #kdebase
 log_kdepassword kdepassword
+
+#kdebugsettings
+log_kdebugsettings kdebugsettings
