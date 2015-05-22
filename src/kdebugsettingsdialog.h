@@ -75,6 +75,7 @@ private:
     void readCategoriesFiles(const QString &path);
     void saveConfig();
     void readConfig();
+    Category::List mCategories;
     QTabWidget *mTabWidget;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *mCustomSettingsPage;

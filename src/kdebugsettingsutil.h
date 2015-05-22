@@ -29,6 +29,7 @@ void readLoggingCategories(const QString &filename, Category::List &categoriesLi
 Category::List readLoggingQtCategories(const QString &filename);
 Category parseLineKdeLoggingCategory(QString line);
 Category parseLineLoggingQtCategory(QString line);
+Category::List readLoggingCategoriesForInserting(const QString &filename, Category::List &categoriesList);
 }
 
 #endif // KDEBUGSETTINGSUTIL_H

@@ -49,6 +49,39 @@ Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     return category;
 }
 
+
+Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QString &filename, Category::List &categoriesList)
+{
+    Category::List insertCategories;
+
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << "Couldn't open" << filename;
+    } else {
+        QString data;
+        QTextStream ts(&file);
+        ts.setCodec("ISO-8859-1");
+        while (!ts.atEnd()) {
+            data = ts.readLine().simplified();
+            const Category category = parseLineKdeLoggingCategory(data);
+            if (category.isValid()) {
+                bool needToAppend = true;
+                Q_FOREACH(const Category &cat, categoriesList) {
+                    if (cat == category) {
+                        needToAppend = false;
+                        break;
+                    }
+                }
+                if (needToAppend) {
+                    categoriesList.append(category);
+                    insertCategories.append(category);
+                }
+            }
+        }
+    }
+    return insertCategories;
+}
+
 void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category::List &categoriesList, bool checkCategoryList)
 {
     QFile file(filename);

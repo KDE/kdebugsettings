@@ -123,8 +123,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("kde.categories"));
-    Category::List categories;
-    KDebugSettingsUtil::readLoggingCategories(confAreasFile, categories, false);
+    KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategories, false);
 
     // Load *.categories file in QStandardPaths::ConfigLocation for kde apps.
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
@@ -132,7 +131,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         Q_FOREACH (const QString &file, fileNames) {
             if (file != QStringLiteral("kde.categories")) {
-                KDebugSettingsUtil::readLoggingCategories(dir + file, categories);
+                KDebugSettingsUtil::readLoggingCategories(dir + file, mCategories);
             }
         }
     }
@@ -142,7 +141,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     Q_FOREACH (const QString &dir, dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         Q_FOREACH (const QString &file, fileNames) {
-            KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, categories);
+            KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, mCategories);
         }
     }
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
@@ -163,12 +162,12 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
         const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
         Q_FOREACH (const Category &cat, qtCategories) {
             bool foundkde = false;
-            for (int i = 0; i < categories.count(); ++i) {
-                Category kdeCat = categories.at(i);
+            for (int i = 0; i < mCategories.count(); ++i) {
+                Category kdeCat = mCategories.at(i);
                 if (cat.logName == kdeCat.logName) {
                     kdeCat.enabled = cat.enabled;
                     kdeCat.type = cat.type;
-                    categories.replace(i, kdeCat);
+                    mCategories.replace(i, kdeCat);
                     foundkde = true;
                     break;
                 }
@@ -182,7 +181,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
         }
     }
 
-    mKdeApplicationSettingsPage->fillList(categories);
+    mKdeApplicationSettingsPage->fillList(mCategories);
     mCustomSettingsPage->fillList(customCategories);
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
@@ -245,10 +244,10 @@ void KDebugSettingsDialog::slotApply()
 
 void KDebugSettingsDialog::slotInsertCategories()
 {
-    //TODO
     const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
     if (!path.isEmpty()) {
-
+        const Category::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
+        mKdeApplicationSettingsPage->insertCategories(insertCategoriesList);
     }
 }
 
