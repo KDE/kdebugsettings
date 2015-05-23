@@ -49,7 +49,6 @@ Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     return category;
 }
 
-
 Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QString &filename, Category::List &categoriesList)
 {
     Category::List insertCategories;
@@ -66,7 +65,7 @@ Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QStri
             const Category category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
                 bool needToAppend = true;
-                Q_FOREACH(const Category &cat, categoriesList) {
+                Q_FOREACH (const Category &cat, categoriesList) {
                     if (cat == category) {
                         needToAppend = false;
                         break;
@@ -97,14 +96,15 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category
             if (category.isValid()) {
                 if (checkCategoryList) {
                     bool needToAppend = true;
-                    Q_FOREACH(const Category &cat, categoriesList) {
+                    Q_FOREACH (const Category &cat, categoriesList) {
                         if (cat == category) {
                             needToAppend = false;
                             break;
                         }
                     }
-                    if (needToAppend)
+                    if (needToAppend) {
                         categoriesList.append(category);
+                    }
                 } else {
                     categoriesList.append(category);
                 }

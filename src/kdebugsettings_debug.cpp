@@ -20,4 +20,3 @@
 #include "kdebugsettings_debug.h"
 Q_LOGGING_CATEGORY(KDEBUGSETTINGS_LOG, "log_kdebugsettings")
 
-
