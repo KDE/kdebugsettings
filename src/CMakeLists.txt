@@ -1,3 +1,5 @@
+include_directories(${CMAKE_BINARY_DIR})
+
 set(kdebugsettings_SRCS 
    main.cpp 
    kdebugsettingsdialog.cpp
