@@ -52,5 +52,5 @@ Name[x-test]=xxKDebug Settingsxx
 Name[zh_CN]=K 调试设置
 Name[zh_TW]=KDebug 設定
 X-DBUS-StartupType=Unique
-Categories=Qt;KDE;
+Categories=Qt;KDE;Utility;
 X-DBUS-ServiceName=org.kde.kdebugsettings
