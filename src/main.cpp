@@ -32,6 +32,11 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
+    /**
+     * enable high dpi support
+     */
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"), KAboutLicense::GPL_V2,
                          i18n("(c) 2015 kdebugsettings authors"));
