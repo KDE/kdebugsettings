@@ -4,7 +4,7 @@ cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
 set(QT_MIN_VERSION "5.4.0")
 set(KF5_VERSION "5.12.0")
 
-find_package(ECM 5.12.0 REQUIRED CONFIG)
+find_package(ECM 5.14.0 REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 
@@ -29,7 +29,7 @@ include(KDEInstallDirs)
 include(KDECompilerSettings)
 include(KDECMakeSettings)
 include(ECMAddTests)
-
+include(ECMQtDeclareLoggingCategory)
 
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
