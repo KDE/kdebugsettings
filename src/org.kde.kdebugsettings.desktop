@@ -33,6 +33,7 @@ GenericName[zh_TW]=除錯設定
 Terminal=false
 Name=KDebugSettings
 Name[ca]=KDebugSettings
+Name[cs]=Nastavení KDebug
 Name[de]=KDebugSettings
 Name[en_GB]=KDebugSettings
 Name[es]=KDebugSettings
