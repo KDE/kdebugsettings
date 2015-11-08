@@ -68,6 +68,14 @@ log_fourinline kdegames (kfourinline)
 powerdevil powerdevil
 log_user_manager user manager
 log_kioremote kioslave (kioremove)
+kscreen.kded kscreen (kded)
+kscreen libkscreen
+kscreen.edid libkscreen (edid)
+kscreen.fake libkscreen (fake backend)
+kscreen.qscreen libkscreen (qscreen backend)
+kscreen.xcb_helper libkscreen (xcb helper)
+kscreen.xrandr libkscreen (xrandr backend)
+kscreen.xrandr11 libkscreen (xrandr1.1 backend)
 ksmserver ksmserver
 libksysguard libksysguard
 log_kio_man kioslave (kio_man)
