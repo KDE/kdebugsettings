@@ -86,14 +86,14 @@ void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
     QSignalSpy spy(&w, SIGNAL(enableButton(bool)));
     categoryLineEdit->setText(QStringLiteral("bla"));
     QCOMPARE(spy.count(), 1);
-    QCOMPARE(spy.at(0).at(0).value<bool>(), true);
+    QCOMPARE(spy.at(0).at(0).toBool(), true);
     categoryLineEdit->clear();
     QCOMPARE(spy.count(), 2);
-    QCOMPARE(spy.at(1).at(0).value<bool>(), false);
+    QCOMPARE(spy.at(1).at(0).toBool(), false);
 
     categoryLineEdit->setText(QStringLiteral(" "));
     QCOMPARE(spy.count(), 3);
-    QCOMPARE(spy.at(2).at(0).value<bool>(), false);
+    QCOMPARE(spy.at(2).at(0).toBool(), false);
 }
 
 QTEST_MAIN(ConfigureCustomSettingWidgetTest)

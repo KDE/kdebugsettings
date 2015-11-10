@@ -113,7 +113,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category
     }
 }
 
-Category KDebugSettingsUtil::parseLineLoggingQtCategory(QString line)
+Category KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
 {
     Category cat;
     int equalPos = line.indexOf(QLatin1Char('='));
