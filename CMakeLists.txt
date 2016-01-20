@@ -12,15 +12,11 @@ find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets Test)
 find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS 
     CoreAddons 
     Config
-    ConfigWidgets
     DBusAddons 
     I18n 
-    GuiAddons 
-    IconThemes 
     WidgetsAddons
     ItemViews
-    Completion
-    KIO)
+    Completion)
     
 include(FeatureSummary)
 include(ECMAddAppIcon)
