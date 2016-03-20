@@ -11,6 +11,7 @@ kf5.kded KDED
 kf5.kiconthemes KIconThemes
 kf5.kinit.klauncher KLauncher
 kf5.kio.core KIOCore (KIO)
+kf5.kio.widgets KIOWidgets (KIO)
 kf5.kiod KIO Daemon (KIO)
 kf5.kio.kio_http KIO HTTP slave (KIO)
 kf5.kjobwidgets KJobWidgets
