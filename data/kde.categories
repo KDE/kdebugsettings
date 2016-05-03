@@ -72,6 +72,7 @@ powerdevil powerdevil
 log_user_manager user manager
 log_kioremote kioslave (kioremove)
 kscreen libkscreen
+kscreen.backendLauncher libkscreen backend launcher
 kscreen.console kscreen (kscreen-console utility)
 kscreen.doctor libkscreen (kscreen-doctor utility)
 kscreen.dpms kscreen DPMS
