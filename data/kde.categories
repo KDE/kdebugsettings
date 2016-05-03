@@ -71,10 +71,15 @@ log_fourinline kdegames (kfourinline)
 powerdevil powerdevil
 log_user_manager user manager
 log_kioremote kioslave (kioremove)
-kscreen.kded kscreen (kded)
 kscreen libkscreen
+kscreen.console kscreen (kscreen-console utility)
+kscreen.doctor libkscreen (kscreen-doctor utility)
+kscreen.dpms kscreen DPMS
 kscreen.edid libkscreen (edid)
 kscreen.fake libkscreen (fake backend)
+kscreen.kded kscreen (kded)
+kscreen.kwayland libkscreen (kwayland backend)
+kscreen.kwayland.testserver libkscreen (kwayland test server)
 kscreen.qscreen libkscreen (qscreen backend)
 kscreen.xcb.helper libkscreen (xcb helper)
 kscreen.xrandr libkscreen (xrandr backend)
