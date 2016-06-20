@@ -30,17 +30,28 @@ class EnvironmentSettingsRulesPage;
 class CategoryWarning;
 struct Category {
     Category()
-        : enabled(true)
+        : loggingType(Info),
+          enabled(true)
     {
 
     }
+
+    enum LoggingType {
+        All = 0,
+        Info,
+        Warning,
+        Critical,
+        Off
+    };
+
     typedef QVector<Category> List;
     bool operator ==(const Category &other) const
     {
         return (description == other.description) &&
                (logName == other.logName) &&
                (type == other.type) &&
-               (enabled == other.enabled);
+               (enabled == other.enabled) &&
+               (loggingType == other.loggingType);
     }
     bool isValid() const
     {
@@ -51,6 +62,7 @@ struct Category {
     QString description;
     QString logName;
     QString type;
+    LoggingType loggingType;
     bool enabled;
 };
 Q_DECLARE_TYPEINFO(Category, Q_MOVABLE_TYPE);
