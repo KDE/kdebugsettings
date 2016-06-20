@@ -22,6 +22,7 @@
 #define CATEGORYTYPECOMBOBOX_H
 
 #include <QComboBox>
+#include "kdebugsettingsdialog.h"
 
 class CategoryTypeComboBox : public QComboBox
 {
@@ -30,8 +31,8 @@ public:
     explicit CategoryTypeComboBox(QWidget *parent = Q_NULLPTR);
     ~CategoryTypeComboBox();
 
-    QString type() const;
-    void setType(const QString &type);
+    LoggingCategory::LoggingType type() const;
+    void setType(LoggingCategory::LoggingType type);
 };
 
 #endif // CATEGORYTYPECOMBOBOX_H

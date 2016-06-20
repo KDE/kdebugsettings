@@ -76,12 +76,13 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
     const LoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
     mEnableCategory->setChecked(cat.enabled);
-    mCategoryType->setType(cat.type);
+    mCategoryType->setType(cat.loggingType);
 }
 
 QString ConfigureCustomSettingWidget::rule()
 {
     QString ruleStr = mCategoryLineEdit->text().trimmed();
+#if 0 //FIXME
     if (!ruleStr.isEmpty()) {
         const QString type = mCategoryType->type();
         if (!type.isEmpty()) {
@@ -93,6 +94,7 @@ QString ConfigureCustomSettingWidget::rule()
             ruleStr += QStringLiteral("=false");
         }
     }
+#endif
     return ruleStr;
 }
 

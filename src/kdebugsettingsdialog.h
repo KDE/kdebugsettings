@@ -62,6 +62,7 @@ struct LoggingCategory {
         All = 0,
         Info,
         Warning,
+        Debug,
         Critical,
         Off
     };

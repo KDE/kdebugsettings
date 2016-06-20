@@ -36,7 +36,7 @@ KDEApplicationTreeListWidgetItem::~KDEApplicationTreeListWidgetItem()
 
 }
 
-void KDEApplicationTreeListWidgetItem::setType(const QString &type)
+void KDEApplicationTreeListWidgetItem::setType(LoggingCategory::LoggingType type)
 {
     mCategoryTypeCombobox->setType(type);
 }
@@ -103,7 +103,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setCheckState(KDEApplicationTreeListWidgetItem::Description, cat.enabled ? Qt::Checked : Qt::Unchecked);
-        item->setType(cat.type);
+        item->setType(cat.loggingType);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }

@@ -37,7 +37,7 @@ public:
 
     QString logName() const;
     void setLogName(const QString &category);
-    void setType(const QString &type);
+    void setType(LoggingCategory::LoggingType type);
 
     LoggingCategory rule();
 private:

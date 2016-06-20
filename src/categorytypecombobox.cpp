@@ -19,18 +19,19 @@
 */
 
 #include "categorytypecombobox.h"
+
 #include <KLocalizedString>
 
 CategoryTypeComboBox::CategoryTypeComboBox(QWidget *parent)
     : QComboBox(parent)
 {
-    addItem(i18n("All"), QString());
-    addItem(i18n("Info"), QStringLiteral("info"));
-    addItem(i18n("Debug"), QStringLiteral("debug"));
-    addItem(i18n("Warning"), QStringLiteral("warning"));
-    addItem(i18n("Critical"), QStringLiteral("critical"));
+    addItem(i18n("All"), QVariant::fromValue(LoggingCategory::All));
+    addItem(i18n("Info"), QVariant::fromValue(LoggingCategory::Info));
+    addItem(i18n("Debug"), QVariant::fromValue(LoggingCategory::Debug));
+    addItem(i18n("Warning"), QVariant::fromValue(LoggingCategory::Warning));
+    addItem(i18n("Critical"), QVariant::fromValue(LoggingCategory::Critical));
     //TODO
-    //addItem(i18n("Off"), QStringLiteral("off"));
+    //addItem(i18n("Off"), QVariant::fromValue(LoggingCategory::Off));
 }
 
 CategoryTypeComboBox::~CategoryTypeComboBox()
@@ -38,23 +39,18 @@ CategoryTypeComboBox::~CategoryTypeComboBox()
 
 }
 
-void CategoryTypeComboBox::setType(const QString &type)
+void CategoryTypeComboBox::setType(LoggingCategory::LoggingType type)
 {
-    if (type.isEmpty()) {
-        //All
-        setCurrentIndex(0);
+    const int pos = findData(QVariant::fromValue(type));
+    if (pos != -1) {
+        setCurrentIndex(pos);
     } else {
-        const int pos = findData(type);
-        if (pos != -1) {
-            setCurrentIndex(pos);
-        } else {
-            //Default;
-            setCurrentIndex(0);
-        }
+        //Default;
+        setCurrentIndex(0);
     }
 }
 
-QString CategoryTypeComboBox::type() const
+LoggingCategory::LoggingType CategoryTypeComboBox::type() const
 {
-    return currentData().toString();
+    return currentData().value<LoggingCategory::LoggingType>();
 }
