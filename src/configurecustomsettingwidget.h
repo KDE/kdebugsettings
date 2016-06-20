@@ -23,6 +23,7 @@
 
 #include <QWidget>
 class KLineEdit;
+class QCheckBox;
 class CategoryTypeComboBox;
 class ConfigureCustomSettingWidget : public QWidget
 {
@@ -42,6 +43,7 @@ private Q_SLOTS:
 
 private:
     KLineEdit *mCategoryLineEdit;
+    QCheckBox *mEnableCategory;
     CategoryTypeComboBox *mCategoryType;
 };
 

@@ -54,6 +54,10 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     mCategoryType = new CategoryTypeComboBox;
     mCategoryType->setObjectName(QStringLiteral("categorytype_combobox"));
     categoryLayout->addWidget(mCategoryType);
+
+    mEnableCategory = new QCheckBox(i18n("Enable"));
+    mEnableCategory->setObjectName(QStringLiteral("enable_category"));
+    categoryLayout->addWidget(mEnableCategory);
 }
 
 ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
@@ -71,7 +75,8 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
 {
     const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
-    mCategoryType->setType(cat.enabled ? cat.type : QStringLiteral("off"));
+    mEnableCategory->setChecked(cat.enabled);
+    mCategoryType->setType(cat.type);
 }
 
 QString ConfigureCustomSettingWidget::rule()
@@ -79,13 +84,13 @@ QString ConfigureCustomSettingWidget::rule()
     QString ruleStr = mCategoryLineEdit->text().trimmed();
     if (!ruleStr.isEmpty()) {
         const QString type = mCategoryType->type();
-        if (type == QLatin1String("off")) {
-            ruleStr += QStringLiteral("=false");
-        } else {
-            if (!type.isEmpty()) {
-                ruleStr += QLatin1Char('.') + type;
-            }
+        if (!type.isEmpty()) {
+            ruleStr += QLatin1Char('.') + type;
+        }
+        if (mEnableCategory->isChecked()) {
             ruleStr += QStringLiteral("=true");
+        } else {
+            ruleStr += QStringLiteral("=false");
         }
     }
     return ruleStr;

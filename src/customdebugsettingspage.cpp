@@ -101,8 +101,7 @@ void CustomDebugSettingsPage::fillList(const Category::List &list)
 Category::List CustomDebugSettingsPage::rules()
 {
     Category::List lst;
-    const int number = mListWidget->count();
-    for (int i = 0; i < number; ++i) {
+    for (int i = 0; i < mListWidget->count(); ++i) {
         const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             lst.append(cat);
@@ -144,8 +143,7 @@ void CustomDebugSettingsPage::slotAddRule()
         const QString ruleStr = dlg->rule();
         if (!ruleStr.isEmpty()) {
             bool alreadyAdded = false;
-            const int number = mListWidget->count();
-            for (int i = 0; i < number; ++i) {
+            for (int i = 0; i < mListWidget->count(); ++i) {
                 if (ruleStr == mListWidget->item(i)->text()) {
                     alreadyAdded = true;
                     break;
