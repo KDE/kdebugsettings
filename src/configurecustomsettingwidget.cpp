@@ -51,7 +51,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("categorytype_label"));
     categoryLayout->addWidget(lab);
 
-    mCategoryType = new CategoryTypeComboBox;
+    mCategoryType = new CategoryTypeComboBox(true, this);
     mCategoryType->setObjectName(QStringLiteral("categorytype_combobox"));
     categoryLayout->addWidget(mCategoryType);
 

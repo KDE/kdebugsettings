@@ -22,15 +22,19 @@
 
 #include <KLocalizedString>
 
-CategoryTypeComboBox::CategoryTypeComboBox(QWidget *parent)
+CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
     : QComboBox(parent)
 {
-    addItem(i18n("All"), QVariant::fromValue(LoggingCategory::All));
+    if (!customType) {
+        addItem(i18n("All"), QVariant::fromValue(LoggingCategory::All));
+    }
     addItem(i18n("Info"), QVariant::fromValue(LoggingCategory::Info));
     addItem(i18n("Debug"), QVariant::fromValue(LoggingCategory::Debug));
     addItem(i18n("Warning"), QVariant::fromValue(LoggingCategory::Warning));
     addItem(i18n("Critical"), QVariant::fromValue(LoggingCategory::Critical));
-    addItem(i18n("Off"), QVariant::fromValue(LoggingCategory::Off));
+    if (!customType) {
+        addItem(i18n("Off"), QVariant::fromValue(LoggingCategory::Off));
+    }
 }
 
 CategoryTypeComboBox::~CategoryTypeComboBox()

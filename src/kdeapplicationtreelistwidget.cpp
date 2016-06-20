@@ -26,7 +26,7 @@ KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString
     : QTreeWidgetItem(parent),
       mCategory(category)
 {
-    mCategoryTypeCombobox = new CategoryTypeComboBox;
+    mCategoryTypeCombobox = new CategoryTypeComboBox(false);
     treeWidget()->setItemWidget(this, CategoryType, mCategoryTypeCombobox);
 }
 

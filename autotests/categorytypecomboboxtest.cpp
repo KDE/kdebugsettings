@@ -35,7 +35,8 @@ CategoryTypeComboBoxTest::~CategoryTypeComboBoxTest()
 
 void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 {
-    CategoryTypeComboBox w;
+    //FIXME test custom or not type
+    CategoryTypeComboBox w(true);
     QCOMPARE(w.count(), 5);
 }
 
