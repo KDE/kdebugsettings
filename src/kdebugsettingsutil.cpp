@@ -161,6 +161,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
     } else {
         QTextStream ts(&file);
         QString _section;
+        bool rulesSections = false;
         while (!ts.atEnd()) {
             QString line = ts.readLine();
 
@@ -176,10 +177,11 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
             if (line.startsWith(QLatin1Char('[')) && line.endsWith(QLatin1Char(']'))) {
                 // new section
                 _section = line.mid(1, line.size() - 2);
+                rulesSections = (_section == QLatin1String("Rules"));
                 continue;
             }
 
-            if (_section == QLatin1String("Rules")) {
+            if (rulesSections) {
                 LoggingCategory cat = parseLineLoggingQtCategory(line);
                 if (cat.isValid()) {
                     categories.append(cat);
