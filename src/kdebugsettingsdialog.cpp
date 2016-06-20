@@ -157,18 +157,20 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     // qt logging.ini
     const QString envPath = path;
     LoggingCategory::List customCategories;
+    LoggingCategory::List qtKdeCategories;
     bool foundOverrideRule = false;
     if (!envPath.isEmpty()) {
         const LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
-#if 0 //FIXME
         Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             bool foundkde = false;
-            for (int i = 0; i < mCategories.count(); ++i) {
-                LoggingCategory kdeCat = mCategories.at(i);
+            const int number(mCategories.count());
+            for (int i = 0; i < number; ++i) {
+                KdeLoggingCategory kdeCat = mCategories.at(i);
                 if (cat.logName == kdeCat.logName) {
-                    kdeCat.enabled = cat.enabled;
-                    kdeCat.type = cat.type;
-                    mCategories.replace(i, kdeCat);
+                    //TODO optimization ?
+                    LoggingCategory tmp(cat);
+                    tmp.description = kdeCat.description;
+                    qtKdeCategories.append(tmp);
                     foundkde = true;
                     break;
                 }
@@ -180,10 +182,9 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
                 foundOverrideRule = true;
             }
         }
-#endif
     }
 
-    //FIXME mKdeApplicationSettingsPage->fillList(mCategories);
+    mKdeApplicationSettingsPage->fillList(qtKdeCategories);
     mCustomSettingsPage->fillList(customCategories);
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
@@ -250,6 +251,7 @@ void KDebugSettingsDialog::slotInsertCategories()
     const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
     if (!path.isEmpty()) {
         const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
+        //TODO insert value
         //FIXME mKdeApplicationSettingsPage->insertCategories(insertCategoriesList);
     }
 }
