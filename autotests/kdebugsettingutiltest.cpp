@@ -21,7 +21,6 @@
 #include "kdebugsettingutiltest.h"
 #include "../src/kdebugsettingsutil.h"
 #include <qtest.h>
-Q_DECLARE_METATYPE(LoggingCategory::LoggingType)
 
 KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)
     : QObject(parent)
