@@ -25,11 +25,11 @@
 #include "kdebugsettingsdialog.h"
 namespace KDebugSettingsUtil
 {
-void readLoggingCategories(const QString &filename, Category::List &categoriesList, bool checkCategoryList = false);
-Category::List readLoggingQtCategories(const QString &filename);
-Category parseLineKdeLoggingCategory(QString line);
-Category parseLineLoggingQtCategory(const QString &line);
-Category::List readLoggingCategoriesForInserting(const QString &filename, Category::List &categoriesList);
+void readLoggingCategories(const QString &filename, LoggingCategory::List &categoriesList, bool checkCategoryList = false);
+LoggingCategory::List readLoggingQtCategories(const QString &filename);
+LoggingCategory parseLineKdeLoggingCategory(QString line);
+LoggingCategory parseLineLoggingQtCategory(const QString &line);
+LoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, LoggingCategory::List &categoriesList);
 }
 
 #endif // KDEBUGSETTINGSUTIL_H

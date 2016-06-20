@@ -85,17 +85,17 @@ void KDEApplicationDebugSettingPage::slotDeselectAll()
     mTreeListWidget->deSelectAllDebugCategories();
 }
 
-void KDEApplicationDebugSettingPage::fillList(const Category::List &list)
+void KDEApplicationDebugSettingPage::fillList(const LoggingCategory::List &list)
 {
     mTreeListWidget->fillList(list);
 }
 
-Category::List KDEApplicationDebugSettingPage::rules() const
+LoggingCategory::List KDEApplicationDebugSettingPage::rules() const
 {
     return mTreeListWidget->rules();
 }
 
-void KDEApplicationDebugSettingPage::insertCategories(const Category::List &list)
+void KDEApplicationDebugSettingPage::insertCategories(const LoggingCategory::List &list)
 {
     mTreeListWidget->insertCategories(list);
 }

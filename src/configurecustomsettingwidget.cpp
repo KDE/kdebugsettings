@@ -73,7 +73,7 @@ void ConfigureCustomSettingWidget::slotTextChanged(const QString &text)
 
 void ConfigureCustomSettingWidget::setRule(const QString &rule)
 {
-    const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
+    const LoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
     mEnableCategory->setChecked(cat.enabled);
     mCategoryType->setType(cat.type);

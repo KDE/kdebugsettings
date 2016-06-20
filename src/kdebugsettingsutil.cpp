@@ -22,10 +22,10 @@
 #include "kdebugsettings_debug.h"
 #include <QFile>
 
-Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
+LoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
-    Category category;
-    int pos = line.indexOf(QLatin1Literal("#"));
+    LoggingCategory category;
+    int pos = line.indexOf(QStringLiteral("#"));
     if (pos != -1) {
         line.truncate(pos);
         line = line.simplified();
@@ -49,9 +49,9 @@ Category KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     return category;
 }
 
-Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QString &filename, Category::List &categoriesList)
+LoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QString &filename, LoggingCategory::List &categoriesList)
 {
-    Category::List insertCategories;
+    LoggingCategory::List insertCategories;
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -62,10 +62,10 @@ Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QStri
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const Category category = parseLineKdeLoggingCategory(data);
+            const LoggingCategory category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
                 bool needToAppend = true;
-                Q_FOREACH (const Category &cat, categoriesList) {
+                Q_FOREACH (const LoggingCategory &cat, categoriesList) {
                     if (cat == category) {
                         needToAppend = false;
                         break;
@@ -81,7 +81,7 @@ Category::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QStri
     return insertCategories;
 }
 
-void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category::List &categoriesList, bool checkCategoryList)
+void KDebugSettingsUtil::readLoggingCategories(const QString &filename, LoggingCategory::List &categoriesList, bool checkCategoryList)
 {
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -92,11 +92,11 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const Category category = parseLineKdeLoggingCategory(data);
+            const LoggingCategory category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
                 if (checkCategoryList) {
                     bool needToAppend = true;
-                    Q_FOREACH (const Category &cat, categoriesList) {
+                    Q_FOREACH (const LoggingCategory &cat, categoriesList) {
                         if (cat == category) {
                             needToAppend = false;
                             break;
@@ -113,9 +113,9 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, Category
     }
 }
 
-Category KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
+LoggingCategory KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
 {
-    Category cat;
+    LoggingCategory cat;
     int equalPos = line.indexOf(QLatin1Char('='));
     if ((equalPos != -1)
             && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
@@ -151,10 +151,10 @@ Category KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
     return cat;
 }
 
-Category::List KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
+LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
 {
     //Code based on src/corelib/io/qloggingregistry.cpp
-    Category::List categories;
+    LoggingCategory::List categories;
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
@@ -180,7 +180,7 @@ Category::List KDebugSettingsUtil::readLoggingQtCategories(const QString &filena
             }
 
             if (_section == QLatin1String("Rules")) {
-                Category cat = parseLineLoggingQtCategory(line);
+                LoggingCategory cat = parseLineLoggingQtCategory(line);
                 if (cat.isValid()) {
                     categories.append(cat);
                 }

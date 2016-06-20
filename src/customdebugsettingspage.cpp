@@ -62,7 +62,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     buttonLayout->addWidget(mEditRule);
     connect(mEditRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotEditRule);
 
-    mRemoveRule = new QPushButton(i18n("Remove..."));;
+    mRemoveRule = new QPushButton(i18n("Remove..."));
     mRemoveRule->setObjectName(QStringLiteral("remove_rule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch();
@@ -81,9 +81,9 @@ void CustomDebugSettingsPage::updateButtons()
     mRemoveRule->setEnabled(mListWidget->currentItem());
 }
 
-void CustomDebugSettingsPage::fillList(const Category::List &list)
+void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 {
-    Q_FOREACH (const Category &cat, list) {
+    Q_FOREACH (const LoggingCategory &cat, list) {
         QString rule;
         rule = cat.logName;
         if (!cat.type.isEmpty()) {
@@ -98,11 +98,12 @@ void CustomDebugSettingsPage::fillList(const Category::List &list)
     }
 }
 
-Category::List CustomDebugSettingsPage::rules()
+LoggingCategory::List CustomDebugSettingsPage::rules()
 {
-    Category::List lst;
-    for (int i = 0; i < mListWidget->count(); ++i) {
-        const Category cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
+    LoggingCategory::List lst;
+    const int number(mListWidget->count());
+    for (int i = 0; i < number; ++i) {
+        const LoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             lst.append(cat);
         }
@@ -143,7 +144,8 @@ void CustomDebugSettingsPage::slotAddRule()
         const QString ruleStr = dlg->rule();
         if (!ruleStr.isEmpty()) {
             bool alreadyAdded = false;
-            for (int i = 0; i < mListWidget->count(); ++i) {
+            const int number(mListWidget->count());
+            for (int i = 0; i < number; ++i) {
                 if (ruleStr == mListWidget->item(i)->text()) {
                     alreadyAdded = true;
                     break;

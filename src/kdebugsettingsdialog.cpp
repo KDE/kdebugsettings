@@ -146,7 +146,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     }
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
     if (!rulesFilePath.isEmpty()) {
-        const Category::List envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
+        const LoggingCategory::List envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
         //TODO
     }
 
@@ -156,14 +156,14 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     }
     // qt logging.ini
     const QString envPath = path;
-    Category::List customCategories;
+    LoggingCategory::List customCategories;
     bool foundOverrideRule = false;
     if (!envPath.isEmpty()) {
-        const Category::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
-        Q_FOREACH (const Category &cat, qtCategories) {
+        const LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+        Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             bool foundkde = false;
             for (int i = 0; i < mCategories.count(); ++i) {
-                Category kdeCat = mCategories.at(i);
+                LoggingCategory kdeCat = mCategories.at(i);
                 if (cat.logName == kdeCat.logName) {
                     kdeCat.enabled = cat.enabled;
                     kdeCat.type = cat.type;
@@ -196,14 +196,14 @@ bool KDebugSettingsDialog::saveRules(const QString &path)
         return false;
     }
     //Save Rules
-    const Category::List lstKde = mKdeApplicationSettingsPage->rules();
-    const Category::List lstCustom = mCustomSettingsPage->rules();
+    const LoggingCategory::List lstKde = mKdeApplicationSettingsPage->rules();
+    const LoggingCategory::List lstCustom = mCustomSettingsPage->rules();
     QTextStream out(&qtlogging);
     out << QLatin1String("[Rules]\n");
-    Q_FOREACH (Category cat, lstKde) {
+    Q_FOREACH (LoggingCategory cat, lstKde) {
         out << cat.createRule() + QLatin1Char('\n');
     }
-    Q_FOREACH (Category cat, lstCustom) {
+    Q_FOREACH (LoggingCategory cat, lstCustom) {
         out << cat.createRule() + QLatin1Char('\n');
     }
     return true;
@@ -228,7 +228,7 @@ void KDebugSettingsDialog::slotHelpRequested()
     QDesktopServices::openUrl(QUrl(QStringLiteral("http://doc.qt.io/qt-5/qloggingcategory.html#details")));
 }
 
-QString Category::createRule()
+QString LoggingCategory::createRule()
 {
     QString str = logName;
     if (!type.isEmpty()) {
@@ -247,7 +247,7 @@ void KDebugSettingsDialog::slotInsertCategories()
 {
     const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
     if (!path.isEmpty()) {
-        const Category::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
+        const LoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
         mKdeApplicationSettingsPage->insertCategories(insertCategoriesList);
     }
 }

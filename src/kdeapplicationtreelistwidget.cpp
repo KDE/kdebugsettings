@@ -51,9 +51,9 @@ void KDEApplicationTreeListWidgetItem::setLogName(const QString &category)
     mCategory = category;
 }
 
-Category KDEApplicationTreeListWidgetItem::rule()
+LoggingCategory KDEApplicationTreeListWidgetItem::rule()
 {
-    Category cat;
+    LoggingCategory cat;
     cat.enabled = checkState(Description) == Qt::Checked;
     cat.logName = mCategory;
     cat.type = mCategoryTypeCombobox->type();
@@ -89,17 +89,17 @@ void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
     }
 }
 
-void KDEApplicationTreeListWidget::fillList(const Category::List &list)
+void KDEApplicationTreeListWidget::fillList(const LoggingCategory::List &list)
 {
     addListItems(list, true);
 }
 
-void KDEApplicationTreeListWidget::addListItems(const Category::List &list, bool clearList)
+void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &list, bool clearList)
 {
     if (clearList) {
         clear();
     }
-    Q_FOREACH (const Category &cat, list) {
+    Q_FOREACH (const LoggingCategory &cat, list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setCheckState(KDEApplicationTreeListWidgetItem::Description, cat.enabled ? Qt::Checked : Qt::Unchecked);
@@ -108,17 +108,17 @@ void KDEApplicationTreeListWidget::addListItems(const Category::List &list, bool
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }
 
-void KDEApplicationTreeListWidget::insertCategories(const Category::List &list)
+void KDEApplicationTreeListWidget::insertCategories(const LoggingCategory::List &list)
 {
     addListItems(list, false);
 }
 
-Category::List KDEApplicationTreeListWidget::rules()
+LoggingCategory::List KDEApplicationTreeListWidget::rules()
 {
-    Category::List lst;
+    LoggingCategory::List lst;
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *listWidgetItem = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        Category cat = listWidgetItem->rule();
+        LoggingCategory cat = listWidgetItem->rule();
         if (cat.isValid()) {
             lst.append(cat);
         }

@@ -32,8 +32,8 @@ public:
     explicit CustomDebugSettingsPage(QWidget *parent = Q_NULLPTR);
     ~CustomDebugSettingsPage();
 
-    void fillList(const Category::List &list);
-    Category::List rules();
+    void fillList(const LoggingCategory::List &list);
+    LoggingCategory::List rules();
 private Q_SLOTS:
     void slotRemoveRule();
     void slotAddRule();

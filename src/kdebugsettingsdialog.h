@@ -28,8 +28,30 @@ class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
 class EnvironmentSettingsRulesPage;
 class CategoryWarning;
-struct Category {
-    Category()
+
+struct KdeLoggingCategory {
+    KdeLoggingCategory()
+    {
+
+    }
+    typedef QVector<KdeLoggingCategory> List;
+    bool operator ==(const KdeLoggingCategory &other) const
+    {
+        return (description == other.description) &&
+               (logName == other.logName);
+    }
+    bool isValid() const
+    {
+        return !logName.isEmpty();
+    }
+
+    QString description;
+    QString logName;
+};
+Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
+
+struct LoggingCategory {
+    LoggingCategory()
         : loggingType(Info),
           enabled(true)
     {
@@ -44,8 +66,8 @@ struct Category {
         Off
     };
 
-    typedef QVector<Category> List;
-    bool operator ==(const Category &other) const
+    typedef QVector<LoggingCategory> List;
+    bool operator ==(const LoggingCategory &other) const
     {
         return (description == other.description) &&
                (logName == other.logName) &&
@@ -65,7 +87,7 @@ struct Category {
     LoggingType loggingType;
     bool enabled;
 };
-Q_DECLARE_TYPEINFO(Category, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
 class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
@@ -87,7 +109,7 @@ private:
     void readCategoriesFiles(const QString &path);
     void saveConfig();
     void readConfig();
-    Category::List mCategories;
+    LoggingCategory::List mCategories;
     QTabWidget *mTabWidget;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *mCustomSettingsPage;

@@ -39,7 +39,7 @@ public:
     void setLogName(const QString &category);
     void setType(const QString &type);
 
-    Category rule();
+    LoggingCategory rule();
 private:
     QString mCategory;
     CategoryTypeComboBox *mCategoryTypeCombobox;
@@ -55,11 +55,11 @@ public:
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();
 
-    void fillList(const Category::List &list);
-    void insertCategories(const Category::List &list);
-    Category::List rules();
+    void fillList(const LoggingCategory::List &list);
+    void insertCategories(const LoggingCategory::List &list);
+    LoggingCategory::List rules();
 private:
-    void addListItems(const Category::List &list, bool clearList);
+    void addListItems(const LoggingCategory::List &list, bool clearList);
 };
 
 #endif // KDEAPPLICATIONTREELISTWIDGET_H
