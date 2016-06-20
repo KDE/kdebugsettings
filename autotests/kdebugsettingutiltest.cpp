@@ -38,15 +38,13 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     QTest::addColumn<QString>("input");
     QTest::addColumn<QString>("description");
     QTest::addColumn<QString>("logname");
-    QTest::addColumn<QString>("type");
-    QTest::addColumn<bool>("enabled");
     QTest::addColumn<bool>("valid");
-    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << true << false;
-    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true << true;
-    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true << true;
-    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << QString() << true << false;
-    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << QString() << true << false;
-    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << QString() << true << false;
+    QTest::newRow("empty") <<  QString() << QString() << QString() << false;
+    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << true;
+    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << true;
+    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << false;
+    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << false;
+    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << false;
 }
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
@@ -54,15 +52,11 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     QFETCH(QString, input);
     QFETCH(QString, description);
     QFETCH(QString, logname);
-    QFETCH(QString, type);
-    QFETCH(bool, enabled);
     QFETCH(bool, valid);
-    LoggingCategory result;
+    KdeLoggingCategory result;
     result.description = description;
     result.logName = logname;
-    result.type = type;
-    result.enabled = enabled;
-    const LoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
+    const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
     QCOMPARE(cat, result);
     QCOMPARE(cat.isValid(), valid);
 }

@@ -111,7 +111,7 @@ private:
     void readCategoriesFiles(const QString &path);
     void saveConfig();
     void readConfig();
-    LoggingCategory::List mCategories;
+    KdeLoggingCategory::List mCategories;
     QTabWidget *mTabWidget;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *mCustomSettingsPage;

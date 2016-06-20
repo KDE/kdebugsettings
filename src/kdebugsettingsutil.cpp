@@ -22,9 +22,9 @@
 #include "kdebugsettings_debug.h"
 #include <QFile>
 
-LoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
+KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
-    LoggingCategory category;
+    KdeLoggingCategory category;
     int pos = line.indexOf(QStringLiteral("#"));
     if (pos != -1) {
         line.truncate(pos);
@@ -49,9 +49,9 @@ LoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     return category;
 }
 
-LoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QString &filename, LoggingCategory::List &categoriesList)
+KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList)
 {
-    LoggingCategory::List insertCategories;
+    KdeLoggingCategory::List insertCategories;
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -62,10 +62,10 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(cons
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const LoggingCategory category = parseLineKdeLoggingCategory(data);
+            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
                 bool needToAppend = true;
-                Q_FOREACH (const LoggingCategory &cat, categoriesList) {
+                Q_FOREACH (const KdeLoggingCategory &cat, categoriesList) {
                     if (cat == category) {
                         needToAppend = false;
                         break;
@@ -81,7 +81,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(cons
     return insertCategories;
 }
 
-void KDebugSettingsUtil::readLoggingCategories(const QString &filename, LoggingCategory::List &categoriesList, bool checkCategoryList)
+void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList)
 {
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -92,11 +92,11 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, LoggingC
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const LoggingCategory category = parseLineKdeLoggingCategory(data);
+            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
                 if (checkCategoryList) {
                     bool needToAppend = true;
-                    Q_FOREACH (const LoggingCategory &cat, categoriesList) {
+                    Q_FOREACH (const KdeLoggingCategory &cat, categoriesList) {
                         if (cat == category) {
                             needToAppend = false;
                             break;

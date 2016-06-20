@@ -160,6 +160,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     bool foundOverrideRule = false;
     if (!envPath.isEmpty()) {
         const LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+#if 0 //FIXME
         Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             bool foundkde = false;
             for (int i = 0; i < mCategories.count(); ++i) {
@@ -179,9 +180,10 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
                 foundOverrideRule = true;
             }
         }
+#endif
     }
 
-    mKdeApplicationSettingsPage->fillList(mCategories);
+    //FIXME mKdeApplicationSettingsPage->fillList(mCategories);
     mCustomSettingsPage->fillList(customCategories);
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
@@ -247,8 +249,8 @@ void KDebugSettingsDialog::slotInsertCategories()
 {
     const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
     if (!path.isEmpty()) {
-        const LoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
-        mKdeApplicationSettingsPage->insertCategories(insertCategoriesList);
+        const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
+        //FIXME mKdeApplicationSettingsPage->insertCategories(insertCategoriesList);
     }
 }
 
