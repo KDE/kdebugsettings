@@ -160,27 +160,36 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     LoggingCategory::List qtKdeCategories;
     bool foundOverrideRule = false;
     if (!envPath.isEmpty()) {
-        const LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
-        Q_FOREACH (const LoggingCategory &cat, qtCategories) {
+        const int number(mCategories.count());
+        LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+        for (int i = 0; i < number; ++i) {
+            KdeLoggingCategory kdeCat = mCategories.at(i);
             bool foundkde = false;
-            const int number(mCategories.count());
-            for (int i = 0; i < number; ++i) {
-                KdeLoggingCategory kdeCat = mCategories.at(i);
+            Q_FOREACH (const LoggingCategory &cat, qtCategories) {
                 if (cat.logName == kdeCat.logName) {
                     //TODO optimization ?
                     LoggingCategory tmp(cat);
                     tmp.description = kdeCat.description;
                     qtKdeCategories.append(tmp);
                     foundkde = true;
+                    qtCategories.removeAll(cat);
                     break;
                 }
             }
             if (!foundkde) {
-                customCategories.append(cat);
+                LoggingCategory tmp;
+                tmp.description = kdeCat.description;
+                tmp.logName = kdeCat.logName;
+                qtKdeCategories.append(tmp);
             }
+            if (!qtCategories.isEmpty()) {
+                //FIXME
+            }
+            /* FIXME
             if (cat.logName == QLatin1String("*")) {
                 foundOverrideRule = true;
             }
+            */
         }
     }
 
@@ -233,11 +242,45 @@ void KDebugSettingsDialog::slotHelpRequested()
 
 QString LoggingCategory::createRule()
 {
-    QString str = logName;
-    if (!type.isEmpty()) {
-        str += QLatin1Char('.') + type;
+    QString str;
+    switch(loggingType) {
+    case All: {
+        str = logName + QLatin1String("=true");
+        break;
     }
-    str += QLatin1String("=") + (enabled ? QLatin1Literal("true") : QLatin1Literal("false"));
+    case Info: {
+        str = logName + QLatin1String(".info=true\n");
+        str += logName + QLatin1String(".warning=true\n");
+        str += logName + QLatin1String(".critical=true\n");
+        str += logName + QLatin1String(".debug=false\n");
+        break;
+    }
+    case Warning: {
+        str = logName + QLatin1String(".info=false\n");
+        str += logName + QLatin1String(".debug=false\n");
+        str += logName + QLatin1String(".warning=true\n");
+        str += logName + QLatin1String(".critical=true\n");
+        break;
+    }
+    case Debug: {
+        //FIXME
+        break;
+    }
+    case Critical:  {
+        str = logName + QLatin1String(".info=false\n");
+        str += logName + QLatin1String(".debug=false\n");
+        str += logName + QLatin1String(".warning=false\n");
+        str += logName + QLatin1String(".critical=true\n");
+        break;
+    }
+    case Off: {
+        str = logName + QLatin1String(".info=false\n");
+        str += logName + QLatin1String(".debug=false\n");
+        str += logName + QLatin1String(".warning=false\n");
+        str += logName + QLatin1String(".critical=false\n");
+        break;
+    }
+    }
     return str;
 }
 

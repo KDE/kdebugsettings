@@ -25,13 +25,41 @@
 #include "kdebugsettingsdialog.h"
 namespace KDebugSettingsUtil
 {
+
+struct LoadLoggingCategory
+{
+    LoadLoggingCategory()
+        : type(Unknown)
+    {
+
+    }
+
+    enum LogType {
+        Unknown = 0,
+        Info = 1,
+        Warning = 2,
+        Debug = 4,
+        Critical = 8,
+        All = 16
+    };
+    Q_FLAGS(LogTypes)
+    Q_DECLARE_FLAGS(LogTypes, LogType)
+
+    bool isValid() const {
+        return (type != Unknown);
+    }
+
+    LogTypes type;
+    QString logName;
+};
+
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
 KdeLoggingCategory parseLineKdeLoggingCategory(QString line);
 KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
 
 LoggingCategory::List readLoggingQtCategories(const QString &filename);
-LoggingCategory parseLineLoggingQtCategory(const QString &line);
+KDebugSettingsUtil::LoadLoggingCategory parseLineLoggingQtCategory(const QString &line);
 }
 
 #endif // KDEBUGSETTINGSUTIL_H

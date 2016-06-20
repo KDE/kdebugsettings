@@ -113,9 +113,9 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
     }
 }
 
-LoggingCategory KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
+KDebugSettingsUtil::LoadLoggingCategory KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
 {
-    LoggingCategory cat;
+    LoadLoggingCategory cat;
     int equalPos = line.indexOf(QLatin1Char('='));
     if ((equalPos != -1)
             && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
@@ -123,29 +123,29 @@ LoggingCategory KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &li
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
         if (valueStr == QLatin1String("true")) {
-            cat.enabled = true;
-        } else if (valueStr == QLatin1String("false")) {
-            cat.enabled = false;
-        } else {
-            return cat;
-        }
-
-        QString p;
-        if (pattern.endsWith(QLatin1String(".debug"))) {
-            p = pattern.left(pattern.length() - 6); // strlen(".debug")
-            cat.type = QStringLiteral("debug");
-            cat.logName = p;
-        } else if (pattern.endsWith(QLatin1String(".warning"))) {
-            p = pattern.left(pattern.length() - 8); // strlen(".warning")
-            cat.type = QStringLiteral("warning");
-            cat.logName = p;
-        } else if (pattern.endsWith(QLatin1String(".critical"))) {
-            p = pattern.left(pattern.length() - 9); // strlen(".critical")
-            cat.type = QStringLiteral("critical");
-            cat.logName = p;
-        } else {
-            p = pattern;
-            cat.logName = p;
+            QString p;
+            if (pattern.endsWith(QLatin1String(".debug"))) {
+                p = pattern.left(pattern.length() - 6); // strlen(".debug")
+                cat.type = LoadLoggingCategory::Debug;
+                cat.logName = p;
+            } else if (pattern.endsWith(QLatin1String(".warning"))) {
+                p = pattern.left(pattern.length() - 8); // strlen(".warning")
+                cat.type = LoadLoggingCategory::Warning;
+                cat.logName = p;
+            } else if (pattern.endsWith(QLatin1String(".critical"))) {
+                p = pattern.left(pattern.length() - 9); // strlen(".critical")
+                cat.type = LoadLoggingCategory::Critical;
+                cat.logName = p;
+            } else if (pattern.endsWith(QLatin1String(".info"))) {
+                p = pattern.left(pattern.length() - 5); // strlen(".info")
+                cat.type = LoadLoggingCategory::Info;
+                cat.logName = p;
+            } else {
+                p = pattern;
+                cat.logName = p;
+                cat.type = LoadLoggingCategory::All;
+            }
+            qDebug() << " As line " << line;
         }
     }
     return cat;
@@ -162,6 +162,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
         QTextStream ts(&file);
         QString _section;
         bool rulesSections = false;
+        QHash<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
         while (!ts.atEnd()) {
             QString line = ts.readLine();
 
@@ -182,12 +183,49 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
             }
 
             if (rulesSections) {
-                LoggingCategory cat = parseLineLoggingQtCategory(line);
+                const KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
                 if (cat.isValid()) {
-                    categories.append(cat);
+                    KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
+                    if (nextCat.isValid()) {
+                        nextCat.type |= cat.type;
+                        hashLoadLoggingCategories[cat.logName] = nextCat;
+                    } else {
+                        hashLoadLoggingCategories.insert(cat.logName, cat);
+                    }
                 }
             }
         }
+
+        QHashIterator<QString, KDebugSettingsUtil::LoadLoggingCategory> i(hashLoadLoggingCategories);
+        while (i.hasNext()) {
+            i.next();
+            LoggingCategory cat;
+            cat.logName = i.key();
+            KDebugSettingsUtil::LoadLoggingCategory value = i.value();
+            //qDebug() << " cat."<<i.value().type << " name "<<cat.logName;
+            if (value.type & LoadLoggingCategory::All) {
+                cat.loggingType = LoggingCategory::All;
+            } else if ((value.type & LoadLoggingCategory::Debug) &&
+                       (value.type & LoadLoggingCategory::Info) &&
+                       (value.type & LoadLoggingCategory::Warning) &&
+                       (value.type & LoadLoggingCategory::Critical)) {
+                cat.loggingType = LoggingCategory::All;
+            } else if ((value.type & LoadLoggingCategory::Info) &&
+                       (value.type & LoadLoggingCategory::Warning) &&
+                       (value.type & LoadLoggingCategory::Critical)) {
+                cat.loggingType = LoggingCategory::Info;
+            } else if ((value.type & LoadLoggingCategory::Warning) &&
+                       (value.type & LoadLoggingCategory::Critical)) {
+                cat.loggingType = LoggingCategory::Warning;
+            } else if (value.type & LoadLoggingCategory::Critical) {
+                cat.loggingType = LoggingCategory::Critical;
+                qDebug()<<" CRITICAL" << cat.logName;
+            } else if (value.type == LoadLoggingCategory::Unknown) {
+                cat.loggingType = LoggingCategory::Off;
+            }
+            categories.append(cat);
+        }
+
     }
     return categories;
 }

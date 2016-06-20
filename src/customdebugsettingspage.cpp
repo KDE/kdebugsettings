@@ -103,10 +103,12 @@ LoggingCategory::List CustomDebugSettingsPage::rules()
     LoggingCategory::List lst;
     const int number(mListWidget->count());
     for (int i = 0; i < number; ++i) {
+#if 0 //FIXME
         const LoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             lst.append(cat);
         }
+#endif
     }
     return lst;
 }

@@ -56,7 +56,7 @@ LoggingCategory KDEApplicationTreeListWidgetItem::rule()
     LoggingCategory cat;
     cat.enabled = checkState(Description) == Qt::Checked;
     cat.logName = mCategory;
-    cat.type = mCategoryTypeCombobox->type();
+    cat.loggingType = mCategoryTypeCombobox->type();
     return cat;
 }
 
