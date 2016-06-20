@@ -75,18 +75,16 @@ KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget()
 void KDEApplicationTreeListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        QTreeWidgetItem *itemWidget = topLevelItem(i);
-        //itemWidget->setCheckState(KDEApplicationTreeListWidgetItem::Description, Qt::Checked);
-        //FIXME
+        KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        itemWidget->setType(LoggingCategory::Info);
     }
 }
 
 void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        QTreeWidgetItem *itemWidget = topLevelItem(i);
-        //itemWidget->setCheckState(KDEApplicationTreeListWidgetItem::Description, Qt::Unchecked);
-        //FIXME
+        KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        itemWidget->setType(LoggingCategory::Off);
     }
 }
 
@@ -103,7 +101,6 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
     Q_FOREACH (const LoggingCategory &cat, list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
-        //item->setCheckState(KDEApplicationTreeListWidgetItem::Description, cat.enabled ? Qt::Checked : Qt::Unchecked);
         item->setType(cat.loggingType);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
