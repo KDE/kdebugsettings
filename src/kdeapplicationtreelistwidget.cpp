@@ -26,7 +26,6 @@ KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString
     : QTreeWidgetItem(parent),
       mCategory(category)
 {
-    setCheckState(Description, Qt::Checked);
     mCategoryTypeCombobox = new CategoryTypeComboBox;
     treeWidget()->setItemWidget(this, CategoryType, mCategoryTypeCombobox);
 }
@@ -54,7 +53,7 @@ void KDEApplicationTreeListWidgetItem::setLogName(const QString &category)
 LoggingCategory KDEApplicationTreeListWidgetItem::rule()
 {
     LoggingCategory cat;
-    cat.enabled = checkState(Description) == Qt::Checked;
+    cat.enabled = false;
     cat.logName = mCategory;
     cat.loggingType = mCategoryTypeCombobox->type();
     return cat;
@@ -77,7 +76,8 @@ void KDEApplicationTreeListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         QTreeWidgetItem *itemWidget = topLevelItem(i);
-        itemWidget->setCheckState(KDEApplicationTreeListWidgetItem::Description, Qt::Checked);
+        //itemWidget->setCheckState(KDEApplicationTreeListWidgetItem::Description, Qt::Checked);
+        //FIXME
     }
 }
 
@@ -85,7 +85,8 @@ void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         QTreeWidgetItem *itemWidget = topLevelItem(i);
-        itemWidget->setCheckState(KDEApplicationTreeListWidgetItem::Description, Qt::Unchecked);
+        //itemWidget->setCheckState(KDEApplicationTreeListWidgetItem::Description, Qt::Unchecked);
+        //FIXME
     }
 }
 
@@ -102,7 +103,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
     Q_FOREACH (const LoggingCategory &cat, list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
-        item->setCheckState(KDEApplicationTreeListWidgetItem::Description, cat.enabled ? Qt::Checked : Qt::Unchecked);
+        //item->setCheckState(KDEApplicationTreeListWidgetItem::Description, cat.enabled ? Qt::Checked : Qt::Unchecked);
         item->setType(cat.loggingType);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
