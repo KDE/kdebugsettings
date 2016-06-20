@@ -30,8 +30,7 @@ CategoryTypeComboBox::CategoryTypeComboBox(QWidget *parent)
     addItem(i18n("Debug"), QVariant::fromValue(LoggingCategory::Debug));
     addItem(i18n("Warning"), QVariant::fromValue(LoggingCategory::Warning));
     addItem(i18n("Critical"), QVariant::fromValue(LoggingCategory::Critical));
-    //TODO
-    //addItem(i18n("Off"), QVariant::fromValue(LoggingCategory::Off));
+    addItem(i18n("Off"), QVariant::fromValue(LoggingCategory::Off));
 }
 
 CategoryTypeComboBox::~CategoryTypeComboBox()
