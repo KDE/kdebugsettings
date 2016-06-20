@@ -25,6 +25,7 @@ CategoryTypeComboBox::CategoryTypeComboBox(QWidget *parent)
     : QComboBox(parent)
 {
     addItem(i18n("All"), QString());
+    addItem(i18n("Info"), QStringLiteral("info"));
     addItem(i18n("Debug"), QStringLiteral("debug"));
     addItem(i18n("Warning"), QStringLiteral("warning"));
     addItem(i18n("Critical"), QStringLiteral("critical"));
