@@ -56,7 +56,12 @@ Category KDEApplicationTreeListWidgetItem::rule()
     Category cat;
     cat.enabled = checkState(Description) == Qt::Checked;
     cat.logName = mCategory;
-    cat.type = mCategoryTypeCombobox->type();
+    const QString type = mCategoryTypeCombobox->type();
+    if (type == QLatin1String("off")) {
+        cat.enabled = false;
+    } else {
+        cat.type = type;
+    }
     return cat;
 }
 

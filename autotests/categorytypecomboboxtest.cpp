@@ -36,7 +36,7 @@ CategoryTypeComboBoxTest::~CategoryTypeComboBoxTest()
 void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 {
     CategoryTypeComboBox w;
-    QCOMPARE(w.count(), 5);
+    QCOMPARE(w.count(), 6);
 }
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
@@ -50,6 +50,7 @@ void CategoryTypeComboBoxTest::shouldSetType_data()
     QTest::newRow("invalid") <<  QStringLiteral("allss");
     QTest::newRow("debug") <<  QStringLiteral("debug");
     QTest::newRow("critical") <<  QStringLiteral("critical");
+    QTest::newRow("off") <<  QStringLiteral("off");
 }
 
 void CategoryTypeComboBoxTest::shouldSetType()
