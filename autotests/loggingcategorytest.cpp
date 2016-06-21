@@ -54,4 +54,29 @@ void LoggingCategoryTest::shouldBeEqual()
     QVERIFY(log2 == log);
 }
 
+void LoggingCategoryTest::shouldCreateRules_data()
+{
+    QTest::addColumn<QString>("logname");
+    QTest::addColumn<LoggingCategory::LoggingType>("loggingType");
+    QTest::addColumn<QString>("result");
+
+    QTest::newRow("all") << QStringLiteral("foo") << LoggingCategory::All << QStringLiteral("foo=true");
+    QTest::newRow("debug") << QStringLiteral("foo") << LoggingCategory::Debug << QStringLiteral("foo.info=false\nfoo.debug=true\nfoo.warning=true\nfoo.critical=true\n");
+    QTest::newRow("info") << QStringLiteral("foo") << LoggingCategory::Info << QStringLiteral("foo.info=true\nfoo.warning=true\nfoo.critical=true\nfoo.debug=false\n");
+    QTest::newRow("critical") << QStringLiteral("foo") << LoggingCategory::Critical << QStringLiteral("foo.info=false\nfoo.debug=false\nfoo.warning=false\nfoo.critical=true\n");
+    QTest::newRow("warning") << QStringLiteral("foo") << LoggingCategory::Warning << QStringLiteral("foo.info=false\nfoo.debug=false\nfoo.warning=true\nfoo.critical=true\n");
+    QTest::newRow("off") << QStringLiteral("foo") << LoggingCategory::Off << QStringLiteral("foo.info=false\nfoo.debug=false\nfoo.warning=false\nfoo.critical=false\n");
+}
+
+void LoggingCategoryTest::shouldCreateRules()
+{
+    QFETCH(QString, logname);
+    QFETCH(LoggingCategory::LoggingType, loggingType);
+    QFETCH(QString, result);
+    LoggingCategory log;
+    log.logName = logname;
+    log.loggingType = loggingType;
+    QCOMPARE(log.createRule(), result);
+}
+
 QTEST_MAIN(LoggingCategoryTest)

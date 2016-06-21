@@ -32,6 +32,8 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeEqual();
+    void shouldCreateRules();
+    void shouldCreateRules_data();
 };
 
 #endif // LOGGINGCATEGORYTEST_H
