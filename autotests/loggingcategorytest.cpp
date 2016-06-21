@@ -19,6 +19,7 @@
 */
 
 #include "loggingcategorytest.h"
+#include "../src/loggingcategory.h"
 #include <QTest>
 
 LoggingCategoryTest::LoggingCategoryTest(QObject *parent)
@@ -30,6 +31,15 @@ LoggingCategoryTest::LoggingCategoryTest(QObject *parent)
 LoggingCategoryTest::~LoggingCategoryTest()
 {
 
+}
+
+void LoggingCategoryTest::shouldHaveDefaultValue()
+{
+    LoggingCategory log;
+    QVERIFY(log.enabled);
+    QVERIFY(log.description.isEmpty());
+    QVERIFY(log.logName.isEmpty());
+    QCOMPARE(log.loggingType, LoggingCategory::Info);
 }
 
 QTEST_MAIN(LoggingCategoryTest)

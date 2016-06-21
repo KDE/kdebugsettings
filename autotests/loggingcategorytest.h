@@ -29,6 +29,8 @@ class LoggingCategoryTest : public QObject
 public:
     explicit LoggingCategoryTest(QObject *parent = Q_NULLPTR);
     ~LoggingCategoryTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // LOGGINGCATEGORYTEST_H
