@@ -123,29 +123,33 @@ KDebugSettingsUtil::LoadLoggingCategory KDebugSettingsUtil::parseLineLoggingQtCa
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
         if (valueStr == QLatin1String("true")) {
-            QString p;
-            if (pattern.endsWith(QLatin1String(".debug"))) {
-                p = pattern.left(pattern.length() - 6); // strlen(".debug")
-                cat.type = LoadLoggingCategory::Debug;
-                cat.logName = p;
-            } else if (pattern.endsWith(QLatin1String(".warning"))) {
-                p = pattern.left(pattern.length() - 8); // strlen(".warning")
-                cat.type = LoadLoggingCategory::Warning;
-                cat.logName = p;
-            } else if (pattern.endsWith(QLatin1String(".critical"))) {
-                p = pattern.left(pattern.length() - 9); // strlen(".critical")
-                cat.type = LoadLoggingCategory::Critical;
-                cat.logName = p;
-            } else if (pattern.endsWith(QLatin1String(".info"))) {
-                p = pattern.left(pattern.length() - 5); // strlen(".info")
-                cat.type = LoadLoggingCategory::Info;
-                cat.logName = p;
-            } else {
-                p = pattern;
-                cat.logName = p;
-                cat.type = LoadLoggingCategory::All;
-            }
+            cat.enabled = true;
+        } else {
+            cat.enabled = false;
         }
+        QString p;
+        if (pattern.endsWith(QLatin1String(".debug"))) {
+            p = pattern.left(pattern.length() - 6); // strlen(".debug")
+            cat.type = LoadLoggingCategory::Debug;
+            cat.logName = p;
+        } else if (pattern.endsWith(QLatin1String(".warning"))) {
+            p = pattern.left(pattern.length() - 8); // strlen(".warning")
+            cat.type = LoadLoggingCategory::Warning;
+            cat.logName = p;
+        } else if (pattern.endsWith(QLatin1String(".critical"))) {
+            p = pattern.left(pattern.length() - 9); // strlen(".critical")
+            cat.type = LoadLoggingCategory::Critical;
+            cat.logName = p;
+        } else if (pattern.endsWith(QLatin1String(".info"))) {
+            p = pattern.left(pattern.length() - 5); // strlen(".info")
+            cat.type = LoadLoggingCategory::Info;
+            cat.logName = p;
+        } else {
+            p = pattern;
+            cat.logName = p;
+            cat.type = LoadLoggingCategory::All;
+        }
+
     }
     return cat;
 }
@@ -183,7 +187,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
 
             if (rulesSections) {
                 const KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
-                if (cat.isValid()) {
+                if (cat.isValid() && cat.enabled) {
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
                         nextCat.type |= cat.type;

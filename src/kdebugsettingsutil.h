@@ -30,7 +30,8 @@ namespace KDebugSettingsUtil
 struct LoadLoggingCategory
 {
     LoadLoggingCategory()
-        : type(Unknown)
+        : enabled(true),
+          type(Unknown)
     {
 
     }
@@ -50,6 +51,7 @@ struct LoadLoggingCategory
         return (type != Unknown);
     }
 
+    bool enabled;
     LogTypes type;
     QString logName;
 };
