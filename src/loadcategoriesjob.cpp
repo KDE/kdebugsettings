@@ -74,12 +74,13 @@ void LoadCategoriesJob::start()
                 tmp.logName = kdeCat.logName;
                 mCustomCategories.append(tmp);
             }
-            if (!qtCategories.isEmpty()) {
-                LoggingCategory tmp;
-                tmp.description = kdeCat.description;
-                tmp.logName = kdeCat.logName;
-                mQtKdeCategories.append(tmp);
-            }
+        }
+        //FIXME
+        Q_FOREACH (const LoggingCategory &cat, qtCategories) {
+            LoggingCategory tmp;
+            tmp.description = cat.description;
+            tmp.logName = cat.logName;
+            mCustomCategories.append(tmp);
         }
     }
 }
