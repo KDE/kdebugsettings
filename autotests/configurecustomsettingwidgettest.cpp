@@ -56,7 +56,7 @@ void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
     QVERIFY(lab);
     QComboBox *categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
     QVERIFY(categoryType);
-    QCOMPARE(categoryType->count(), 4);
+    QCOMPARE(categoryType->count(), 5);
 }
 
 void ConfigureCustomSettingWidgetTest::shouldRestoreRules_data()

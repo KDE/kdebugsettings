@@ -25,9 +25,7 @@
 CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
     : QComboBox(parent)
 {
-    if (!customType) {
-        addItem(i18n("All"), QVariant::fromValue(LoggingCategory::All));
-    }
+    addItem(i18n("All"), QVariant::fromValue(LoggingCategory::All));
     addItem(i18n("Info"), QVariant::fromValue(LoggingCategory::Info));
     addItem(i18n("Debug"), QVariant::fromValue(LoggingCategory::Debug));
     addItem(i18n("Warning"), QVariant::fromValue(LoggingCategory::Warning));

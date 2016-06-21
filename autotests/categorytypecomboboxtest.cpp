@@ -36,7 +36,7 @@ CategoryTypeComboBoxTest::~CategoryTypeComboBoxTest()
 void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 {
     CategoryTypeComboBox w(true);
-    QCOMPARE(w.count(), 4);
+    QCOMPARE(w.count(), 5);
 
     CategoryTypeComboBox w2(false);
     QCOMPARE(w2.count(), 6);
