@@ -84,19 +84,32 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
 QString ConfigureCustomSettingWidget::rule() const
 {
     QString ruleStr = mCategoryLineEdit->text().trimmed();
-#if 0 //FIXME
     if (!ruleStr.isEmpty()) {
-        const QString type = mCategoryType->type();
-        if (!type.isEmpty()) {
-            ruleStr += QLatin1Char('.') + type;
+        switch(mCategoryType->type()) {
+        case LoggingCategory::All:
+            break;
+        case LoggingCategory::Info:
+            ruleStr += QStringLiteral(".info");
+            break;
+        case LoggingCategory::Warning:
+            ruleStr += QStringLiteral(".warning");
+            break;
+        case LoggingCategory::Debug:
+            ruleStr += QStringLiteral(".debug");
+            break;
+        case LoggingCategory::Critical:
+            ruleStr += QStringLiteral(".critical");
+            break;
+        case LoggingCategory::Off:
+            break;
         }
+
         if (mEnableCategory->isChecked()) {
             ruleStr += QStringLiteral("=true");
         } else {
             ruleStr += QStringLiteral("=false");
         }
     }
-#endif
     return ruleStr;
 }
 
