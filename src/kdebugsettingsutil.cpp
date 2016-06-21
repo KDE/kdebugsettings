@@ -205,7 +205,6 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
             LoggingCategory cat;
             cat.logName = i.key();
             KDebugSettingsUtil::LoadLoggingCategory value = i.value();
-            //qDebug() << " cat."<<i.value().type << " name "<<cat.logName;
             if (value.type & LoadLoggingCategory::All) {
                 cat.loggingType = LoggingCategory::All;
             } else if ((value.type & LoadLoggingCategory::Debug) &&
@@ -222,7 +221,6 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                 cat.loggingType = LoggingCategory::Warning;
             } else if (value.type & LoadLoggingCategory::Critical) {
                 cat.loggingType = LoggingCategory::Critical;
-                qDebug() << " CRITICAL" << cat.logName;
             } else if (value.type == LoadLoggingCategory::Unknown) {
                 cat.loggingType = LoggingCategory::Off;
             }
