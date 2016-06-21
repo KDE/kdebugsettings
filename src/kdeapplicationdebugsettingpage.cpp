@@ -46,15 +46,15 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
-    mSelectAll = new QPushButton(i18n("Select All"));
-    mSelectAll->setObjectName(QStringLiteral("selectall"));
-    buttonLayout->addWidget(mSelectAll);
-    connect(mSelectAll, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAll);
+    mEnableDebug = new QPushButton(i18n("Enable All Debug"));
+    mEnableDebug->setObjectName(QStringLiteral("selectall"));
+    buttonLayout->addWidget(mEnableDebug);
+    connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAll);
 
-    mDeselectAll = new QPushButton(i18n("Deselect All"));
-    mDeselectAll->setObjectName(QStringLiteral("deselectall"));
-    buttonLayout->addWidget(mDeselectAll);
-    connect(mDeselectAll, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
+    mTurnOffDebug = new QPushButton(i18n("Turn Off Debug"));
+    mTurnOffDebug->setObjectName(QStringLiteral("deselectall"));
+    buttonLayout->addWidget(mTurnOffDebug);
+    connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
     mTreeListWidgetSearchLine->installEventFilter(this);
 }
 

@@ -44,8 +44,8 @@ private Q_SLOTS:
 private:
     KDEApplicationTreeListWidget *mTreeListWidget;
     KTreeWidgetSearchLine *mTreeListWidgetSearchLine;
-    QPushButton *mSelectAll;
-    QPushButton *mDeselectAll;
+    QPushButton *mEnableDebug;
+    QPushButton *mTurnOffDebug;
 };
 
 #endif // KDEAPPLICATIONDEBUGSETTINGPAGE_H
