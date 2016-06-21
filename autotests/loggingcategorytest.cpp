@@ -42,4 +42,16 @@ void LoggingCategoryTest::shouldHaveDefaultValue()
     QCOMPARE(log.loggingType, LoggingCategory::Info);
 }
 
+void LoggingCategoryTest::shouldBeEqual()
+{
+    LoggingCategory log;
+    log.enabled = false;
+    log.description = QStringLiteral("foo");
+    log.logName = QStringLiteral("bla");
+    log.loggingType = LoggingCategory::All;
+    LoggingCategory log2;
+    log2 = log;
+    QVERIFY(log2 == log);
+}
+
 QTEST_MAIN(LoggingCategoryTest)

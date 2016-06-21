@@ -31,6 +31,7 @@ public:
     ~LoggingCategoryTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldBeEqual();
 };
 
 #endif // LOGGINGCATEGORYTEST_H
