@@ -24,6 +24,7 @@
 #include "environmentsettingsrulespage.h"
 #include "kdebugsettingsutil.h"
 #include "categorywarning.h"
+#include "loadcategoriesjob.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -155,44 +156,14 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
         mEnvironmentSettingsRulesPage->setRules(environmentrules);
     }
     // qt logging.ini
-    const QString envPath = path;
-    LoggingCategory::List customCategories;
-    LoggingCategory::List qtKdeCategories;
-    bool foundOverrideRule = false;
-    if (!envPath.isEmpty()) {
-        const int number(mCategories.count());
-        LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
-        for (int i = 0; i < number; ++i) {
-            KdeLoggingCategory kdeCat = mCategories.at(i);
-            bool foundkde = false;
-            Q_FOREACH (const LoggingCategory &cat, qtCategories) {
-                if (cat.logName == kdeCat.logName) {
-                    //TODO optimization ?
-                    LoggingCategory tmp(cat);
-                    tmp.description = kdeCat.description;
-                    qtKdeCategories.append(tmp);
-                    foundkde = true;
-                    qtCategories.removeAll(cat);
-                    break;
-                }
-                if (cat.logName == QLatin1String("*")) {
-                    foundOverrideRule = true;
-                }
-            }
-            if (!foundkde) {
-                LoggingCategory tmp;
-                tmp.description = kdeCat.description;
-                tmp.logName = kdeCat.logName;
-                qtKdeCategories.append(tmp);
-            }
-            if (!qtCategories.isEmpty()) {
-                LoggingCategory tmp;
-                tmp.description = kdeCat.description;
-                tmp.logName = kdeCat.logName;
-                qtKdeCategories.append(tmp);
-            }
-        }
-    }
+    LoadCategoriesJob job;
+    job.setFileName(path);
+    job.setCategories(mCategories);
+    job.start();
+
+    const LoggingCategory::List customCategories = job.customCategories();
+    const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
+    const bool foundOverrideRule = job.foundOverrideRule();
 
     mKdeApplicationSettingsPage->fillList(qtKdeCategories);
     mCustomSettingsPage->fillList(customCategories);
