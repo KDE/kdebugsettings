@@ -40,6 +40,7 @@ void LoggingCategoryTest::shouldHaveDefaultValue()
     QVERIFY(log.description.isEmpty());
     QVERIFY(log.logName.isEmpty());
     QCOMPARE(log.loggingType, LoggingCategory::Info);
+    QVERIFY(!log.isValid());
 }
 
 void LoggingCategoryTest::shouldBeEqual()
@@ -77,6 +78,7 @@ void LoggingCategoryTest::shouldCreateRules()
     log.logName = logname;
     log.loggingType = loggingType;
     QCOMPARE(log.createRule(), result);
+    QVERIFY(log.isValid());
 }
 
 QTEST_MAIN(LoggingCategoryTest)
