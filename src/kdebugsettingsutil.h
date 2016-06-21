@@ -22,7 +22,7 @@
 #define KDEBUGSETTINGSUTIL_H
 
 #include <QString>
-#include "kdebugsettingsdialog.h"
+#include "kdeloggingcategory.h"
 #include "loggingcategory.h"
 namespace KDebugSettingsUtil
 {

@@ -23,32 +23,12 @@
 
 #include <QDialog>
 #include <QVector>
+#include "kdeloggingcategory.h"
 class QTabWidget;
 class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
 class EnvironmentSettingsRulesPage;
 class CategoryWarning;
-
-struct KdeLoggingCategory {
-    KdeLoggingCategory()
-    {
-
-    }
-    typedef QVector<KdeLoggingCategory> List;
-    bool operator ==(const KdeLoggingCategory &other) const
-    {
-        return (description == other.description) &&
-               (logName == other.logName);
-    }
-    bool isValid() const
-    {
-        return !logName.isEmpty();
-    }
-
-    QString description;
-    QString logName;
-};
-Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
 
 class KDebugSettingsDialog : public QDialog
 {

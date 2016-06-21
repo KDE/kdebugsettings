@@ -14,6 +14,7 @@ set(full_source_file
    ../src/kdeapplicationtreelistwidget.cpp
    ../src/categorywarning.cpp
    ../src/loggingcategory.cpp
+   ../src/kdeloggingcategory.cpp
    ${CMAKE_BINARY_DIR}/src/kdebugsettings_debug.cpp
 )
 
@@ -36,12 +37,12 @@ macro(add_unittest _source _additionalsource)
 endmacro ()
 
 add_unittest( kdebugsettingsdialogtest.cpp "${full_source_file}")
-add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
-add_unittest( customdebugsettingspagetest.cpp "../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( configurecustomsettingdialogtest.cpp "../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( configurecustomsettingwidgettest.cpp "../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( environmentsettingsrulespagetest.cpp "../src/loggingcategory.cpp;../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")
-add_unittest( kdebugsettingutiltest.cpp "../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
+add_unittest( customdebugsettingspagetest.cpp "../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( configurecustomsettingdialogtest.cpp "../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( configurecustomsettingwidgettest.cpp "../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( environmentsettingsrulespagetest.cpp "../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")
+add_unittest( kdebugsettingutiltest.cpp "../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( categorytypecomboboxtest.cpp "../src/loggingcategory.cpp;../src/categorytypecombobox.cpp")
 add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/loggingcategory.cpp;../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
 add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")

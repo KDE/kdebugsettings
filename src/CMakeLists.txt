@@ -14,6 +14,7 @@ set(kdebugsettings_SRCS
    kdeapplicationtreelistwidget.cpp
    categorywarning.cpp
    loggingcategory.cpp
+   kdeloggingcategory.cpp
    )
 
 ecm_qt_declare_logging_category(kdebugsettings_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings)
