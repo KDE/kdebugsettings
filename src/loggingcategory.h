@@ -49,5 +49,4 @@ struct LoggingCategory {
 Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(LoggingCategory::LoggingType)
 
-
 #endif // LOGGINGCATEGORY_H

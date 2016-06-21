@@ -85,7 +85,7 @@ QString ConfigureCustomSettingWidget::rule() const
 {
     QString ruleStr = mCategoryLineEdit->text().trimmed();
     if (!ruleStr.isEmpty()) {
-        switch(mCategoryType->type()) {
+        switch (mCategoryType->type()) {
         case LoggingCategory::All:
             break;
         case LoggingCategory::Info:

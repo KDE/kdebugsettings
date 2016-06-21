@@ -27,8 +27,7 @@
 namespace KDebugSettingsUtil
 {
 
-struct LoadLoggingCategory
-{
+struct LoadLoggingCategory {
     LoadLoggingCategory()
         : enabled(true),
           type(Unknown)
@@ -47,7 +46,8 @@ struct LoadLoggingCategory
     Q_FLAGS(LogTypes)
     Q_DECLARE_FLAGS(LogTypes, LogType)
 
-    bool isValid() const {
+    bool isValid() const
+    {
         return (type != Unknown);
     }
 
@@ -55,7 +55,6 @@ struct LoadLoggingCategory
     LogTypes type;
     QString logName;
 };
-
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 

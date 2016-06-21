@@ -30,9 +30,9 @@ LoggingCategory::LoggingCategory()
 bool LoggingCategory::operator ==(const LoggingCategory &other) const
 {
     return (description == other.description) &&
-            (logName == other.logName) &&
-            (enabled == other.enabled) &&
-            (loggingType == other.loggingType);
+           (logName == other.logName) &&
+           (enabled == other.enabled) &&
+           (loggingType == other.loggingType);
 }
 
 bool LoggingCategory::isValid() const
@@ -43,7 +43,7 @@ bool LoggingCategory::isValid() const
 QString LoggingCategory::createRule()
 {
     QString str;
-    switch(loggingType) {
+    switch (loggingType) {
     case All: {
         str = logName + QLatin1String("=true");
         break;

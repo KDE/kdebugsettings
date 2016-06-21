@@ -222,7 +222,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                 cat.loggingType = LoggingCategory::Warning;
             } else if (value.type & LoadLoggingCategory::Critical) {
                 cat.loggingType = LoggingCategory::Critical;
-                qDebug()<<" CRITICAL" << cat.logName;
+                qDebug() << " CRITICAL" << cat.logName;
             } else if (value.type == LoadLoggingCategory::Unknown) {
                 cat.loggingType = LoggingCategory::Off;
             }
