@@ -46,3 +46,4 @@ add_unittest( kdebugsettingutiltest.cpp "../src/kdeloggingcategory.cpp;../src/lo
 add_unittest( categorytypecomboboxtest.cpp "../src/loggingcategory.cpp;../src/categorytypecombobox.cpp")
 add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/loggingcategory.cpp;../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
 add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")
+add_unittest( loggingcategorytest.cpp "../src/loggingcategory.cpp")
