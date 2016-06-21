@@ -83,21 +83,34 @@ void CustomDebugSettingsPage::updateButtons()
 
 void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 {
-#if 0 //FIXME
     Q_FOREACH (const LoggingCategory &cat, list) {
-        QString rule;
-        rule = cat.logName;
-        if (!cat.type.isEmpty()) {
-            rule += QLatin1Char('.') + cat.type;
+        QString ruleStr;
+        ruleStr = cat.logName;
+        switch(cat.loggingType) {
+        case LoggingCategory::All:
+            break;
+        case LoggingCategory::Info:
+            ruleStr += QStringLiteral(".info");
+            break;
+        case LoggingCategory::Warning:
+            ruleStr += QStringLiteral(".warning");
+            break;
+        case LoggingCategory::Debug:
+            ruleStr += QStringLiteral(".debug");
+            break;
+        case LoggingCategory::Critical:
+            ruleStr += QStringLiteral(".critical");
+            break;
+        case LoggingCategory::Off:
+            break;
         }
         if (cat.enabled) {
-            rule += QStringLiteral("=true");
+            ruleStr += QStringLiteral("=true");
         } else {
-            rule += QStringLiteral("=false");
+            ruleStr += QStringLiteral("=false");
         }
-        new QListWidgetItem(rule, mListWidget);
+        new QListWidgetItem(ruleStr, mListWidget);
     }
-#endif
 }
 
 LoggingCategory::List CustomDebugSettingsPage::rules()
