@@ -145,7 +145,6 @@ KDebugSettingsUtil::LoadLoggingCategory KDebugSettingsUtil::parseLineLoggingQtCa
                 cat.logName = p;
                 cat.type = LoadLoggingCategory::All;
             }
-            qDebug() << " As line " << line;
         }
     }
     return cat;
