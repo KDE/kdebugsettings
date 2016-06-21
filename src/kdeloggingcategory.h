@@ -23,7 +23,7 @@
 
 #include <QVector>
 #include <QString>
-
+#include <QObject>
 struct KdeLoggingCategory {
     KdeLoggingCategory();
     typedef QVector<KdeLoggingCategory> List;
@@ -34,5 +34,6 @@ struct KdeLoggingCategory {
     QString logName;
 };
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
+Q_DECLARE_METATYPE(KdeLoggingCategory)
 
 #endif // KDELOGGINGCATEGORY_H
