@@ -23,6 +23,7 @@
 
 #include <QString>
 #include "kdebugsettingsdialog.h"
+#include "loggingcategory.h"
 namespace KDebugSettingsUtil
 {
 

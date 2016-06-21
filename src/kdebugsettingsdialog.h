@@ -50,45 +50,6 @@ struct KdeLoggingCategory {
 };
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
 
-struct LoggingCategory {
-    LoggingCategory()
-        : loggingType(Info),
-          enabled(true)
-    {
-
-    }
-
-    enum LoggingType {
-        All = 0,
-        Info,
-        Warning,
-        Debug,
-        Critical,
-        Off
-    };
-
-    typedef QVector<LoggingCategory> List;
-    bool operator ==(const LoggingCategory &other) const
-    {
-        return (description == other.description) &&
-               (logName == other.logName) &&
-               (enabled == other.enabled) &&
-               (loggingType == other.loggingType);
-    }
-    bool isValid() const
-    {
-        return !logName.isEmpty();
-    }
-
-    QString createRule();
-    QString description;
-    QString logName;
-    LoggingType loggingType;
-    bool enabled;
-};
-Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
-Q_DECLARE_METATYPE(LoggingCategory::LoggingType)
-
 class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT

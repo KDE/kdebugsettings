@@ -22,7 +22,7 @@
 #define KDEAPPLICATIONTREELISTWIDGET_H
 
 #include <QTreeWidget>
-#include "kdebugsettingsdialog.h"
+#include "loggingcategory.h"
 class CategoryTypeComboBox;
 class KDEApplicationTreeListWidgetItem : public QTreeWidgetItem
 {

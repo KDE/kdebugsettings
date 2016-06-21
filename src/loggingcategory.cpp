@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2015-2016 Montel Laurent <montel@kde.org>
+  Copyright (c) 2016 Montel Laurent <montel@kde.org>
 
   This library is free software; you can redistribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
@@ -18,32 +18,24 @@
 
 */
 
-#ifndef CUSTOMDEBUGSETTINGSPAGE_H
-#define CUSTOMDEBUGSETTINGSPAGE_H
-
-#include <QWidget>
 #include "loggingcategory.h"
-class QListWidget;
-class QPushButton;
-class CustomDebugSettingsPage : public QWidget
+
+LoggingCategory::LoggingCategory()
+    : loggingType(Info),
+      enabled(true)
 {
-    Q_OBJECT
-public:
-    explicit CustomDebugSettingsPage(QWidget *parent = Q_NULLPTR);
-    ~CustomDebugSettingsPage();
 
-    void fillList(const LoggingCategory::List &list);
-    LoggingCategory::List rules();
-private Q_SLOTS:
-    void slotRemoveRule();
-    void slotAddRule();
-    void slotEditRule();
-    void updateButtons();
-private:
-    QListWidget *mListWidget;
-    QPushButton *mAddRule;
-    QPushButton *mEditRule;
-    QPushButton *mRemoveRule;
-};
+}
 
-#endif // CUSTOMDEBUGSETTINGSPAGE_H
+bool LoggingCategory::operator ==(const LoggingCategory &other) const
+{
+    return (description == other.description) &&
+            (logName == other.logName) &&
+            (enabled == other.enabled) &&
+            (loggingType == other.loggingType);
+}
+
+bool LoggingCategory::isValid() const
+{
+    return !logName.isEmpty();
+}

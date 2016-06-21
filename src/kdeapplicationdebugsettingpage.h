@@ -22,7 +22,7 @@
 #define KDEAPPLICATIONDEBUGSETTINGPAGE_H
 
 #include <QWidget>
-#include "kdebugsettingsdialog.h"
+#include "loggingcategory.h"
 class QPushButton;
 class KDEApplicationTreeListWidget;
 class KTreeWidgetSearchLine;

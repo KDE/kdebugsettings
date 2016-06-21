@@ -22,7 +22,7 @@
 #define CATEGORYTYPECOMBOBOX_H
 
 #include <QComboBox>
-#include "kdebugsettingsdialog.h"
+#include "loggingcategory.h"
 
 class CategoryTypeComboBox : public QComboBox
 {

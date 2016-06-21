@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2015-2016 Montel Laurent <montel@kde.org>
+  Copyright (c) 2016 Montel Laurent <montel@kde.org>
 
   This library is free software; you can redistribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
@@ -17,33 +17,37 @@
   02110-1301, USA.
 
 */
+#ifndef LOGGINGCATEGORY_H
+#define LOGGINGCATEGORY_H
 
-#ifndef CUSTOMDEBUGSETTINGSPAGE_H
-#define CUSTOMDEBUGSETTINGSPAGE_H
+#include <QVector>
+#include <QObject>
+#include <QString>
 
-#include <QWidget>
-#include "loggingcategory.h"
-class QListWidget;
-class QPushButton;
-class CustomDebugSettingsPage : public QWidget
-{
-    Q_OBJECT
-public:
-    explicit CustomDebugSettingsPage(QWidget *parent = Q_NULLPTR);
-    ~CustomDebugSettingsPage();
+struct LoggingCategory {
+    LoggingCategory();
 
-    void fillList(const LoggingCategory::List &list);
-    LoggingCategory::List rules();
-private Q_SLOTS:
-    void slotRemoveRule();
-    void slotAddRule();
-    void slotEditRule();
-    void updateButtons();
-private:
-    QListWidget *mListWidget;
-    QPushButton *mAddRule;
-    QPushButton *mEditRule;
-    QPushButton *mRemoveRule;
+    enum LoggingType {
+        All = 0,
+        Info,
+        Warning,
+        Debug,
+        Critical,
+        Off
+    };
+
+    typedef QVector<LoggingCategory> List;
+    bool operator ==(const LoggingCategory &other) const;
+    bool isValid() const;
+
+    QString createRule();
+    QString description;
+    QString logName;
+    LoggingType loggingType;
+    bool enabled;
 };
+Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
+Q_DECLARE_METATYPE(LoggingCategory::LoggingType)
 
-#endif // CUSTOMDEBUGSETTINGSPAGE_H
+
+#endif // LOGGINGCATEGORY_H
