@@ -72,7 +72,6 @@ struct LoggingCategory {
     {
         return (description == other.description) &&
                (logName == other.logName) &&
-               (type == other.type) &&
                (enabled == other.enabled) &&
                (loggingType == other.loggingType);
     }
@@ -84,7 +83,6 @@ struct LoggingCategory {
     QString createRule();
     QString description;
     QString logName;
-    QString type;
     LoggingType loggingType;
     bool enabled;
 };

@@ -83,6 +83,7 @@ void CustomDebugSettingsPage::updateButtons()
 
 void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 {
+#if 0 //FIXME
     Q_FOREACH (const LoggingCategory &cat, list) {
         QString rule;
         rule = cat.logName;
@@ -96,6 +97,7 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
         }
         new QListWidgetItem(rule, mListWidget);
     }
+#endif
 }
 
 LoggingCategory::List CustomDebugSettingsPage::rules()

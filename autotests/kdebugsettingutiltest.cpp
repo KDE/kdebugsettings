@@ -99,7 +99,6 @@ void KDebugSettingUtilTest::shouldParseQtLoggingLine()
     LoggingCategory result;
     result.description = description;
     result.logName = logname;
-    result.type = type;
     result.enabled = enabled;
     result.loggingType = loggingtype;
 #if 0 //FIXME
