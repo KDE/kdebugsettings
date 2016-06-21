@@ -120,14 +120,30 @@ LoggingCategory::List CustomDebugSettingsPage::rules()
     for (int i = 0; i < number; ++i) {
         const KDebugSettingsUtil::LoadLoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
-            //TODO
+            LoggingCategory tmp;
+            tmp.enabled = cat.enabled;
+            tmp.logName = cat.logName;
+            switch(cat.type) {
+            case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
+                 break;
+            case KDebugSettingsUtil::LoadLoggingCategory::Info:
+                tmp.loggingType = LoggingCategory::Info;
+                break;
+            case KDebugSettingsUtil::LoadLoggingCategory::Warning:
+                tmp.loggingType = LoggingCategory::Warning;
+                break;
+            case KDebugSettingsUtil::LoadLoggingCategory::Debug:
+                tmp.loggingType = LoggingCategory::Debug;
+                break;
+            case KDebugSettingsUtil::LoadLoggingCategory::Critical:
+                tmp.loggingType = LoggingCategory::Critical;
+                break;
+            case KDebugSettingsUtil::LoadLoggingCategory::All:
+                tmp.loggingType = LoggingCategory::All;
+                break;
+            }
+            lst.append(tmp);
         }
-
-#if 0 //FIXME
-        if (cat.isValid()) {
-            lst.append(cat);
-        }
-#endif
     }
     return lst;
 }
