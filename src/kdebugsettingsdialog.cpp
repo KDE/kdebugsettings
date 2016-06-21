@@ -175,6 +175,9 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
                     qtCategories.removeAll(cat);
                     break;
                 }
+                if (cat.logName == QLatin1String("*")) {
+                    foundOverrideRule = true;
+                }
             }
             if (!foundkde) {
                 LoggingCategory tmp;
@@ -183,13 +186,11 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
                 qtKdeCategories.append(tmp);
             }
             if (!qtCategories.isEmpty()) {
-                //FIXME
+                LoggingCategory tmp;
+                tmp.description = kdeCat.description;
+                tmp.logName = kdeCat.logName;
+                qtKdeCategories.append(tmp);
             }
-            /* FIXME
-            if (cat.logName == QLatin1String("*")) {
-                foundOverrideRule = true;
-            }
-            */
         }
     }
 
