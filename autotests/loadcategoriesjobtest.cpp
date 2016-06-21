@@ -49,7 +49,11 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     QTest::addColumn<QString>("filename");
     QTest::addColumn<KdeLoggingCategory::List>("listKdeLoggingCategories");
     QTest::addColumn<bool>("foundoverriderules");
-    QTest::newRow("empty") << QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + QStringLiteral("emptyrulefiles.ini")) << KdeLoggingCategory::List() << false;
+    QTest::addColumn<LoggingCategory::List>("customcategories");
+    QTest::addColumn<LoggingCategory::List>("qtkdecategories");
+    QTest::newRow("empty") << QStringLiteral("emptyrulefiles.ini") << KdeLoggingCategory::List() << false << LoggingCategory::List() << LoggingCategory::List();
+    QTest::newRow("commentedlines") << QStringLiteral("commentedrulefiles.ini") << KdeLoggingCategory::List() << false << LoggingCategory::List() << LoggingCategory::List();
+    QTest::newRow("rulesbeforesection") << QStringLiteral("rulebeforerulessectionfiles.ini") << KdeLoggingCategory::List() << false << LoggingCategory::List() << LoggingCategory::List();
 }
 
 void LoadCategoriesJobTest::shouldReadRules()
@@ -57,13 +61,20 @@ void LoadCategoriesJobTest::shouldReadRules()
     QFETCH(QString, filename);
     QFETCH(KdeLoggingCategory::List, listKdeLoggingCategories);
     QFETCH(bool, foundoverriderules);
-    QFile file(filename);
-    QVERIFY(file.exists());
+    QFETCH(LoggingCategory::List, customcategories);
+    QFETCH(LoggingCategory::List, qtkdecategories);
     LoadCategoriesJob job;
-    job.setFileName(filename);
-    QVERIFY(job.customCategories().isEmpty());
+    const QString path = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
+    QFile file(path);
+    QVERIFY(file.exists());
+    job.setFileName(path);
+    job.setCategories(listKdeLoggingCategories);
+    job.start();
+
+    qDebug() << "job.customCategories()"<<job.customCategories().count();
+    QCOMPARE(job.customCategories(), customcategories);
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
-    QVERIFY(job.qtKdeCategories().isEmpty());
+    QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
 
 

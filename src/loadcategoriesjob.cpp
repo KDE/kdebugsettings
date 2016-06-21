@@ -51,10 +51,12 @@ void LoadCategoriesJob::start()
     if (!envPath.isEmpty()) {
         const int number(mCategories.count());
         LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+        qDebug()<<" qtCategories"<<qtCategories.count();
         for (int i = 0; i < number; ++i) {
             KdeLoggingCategory kdeCat = mCategories.at(i);
             bool foundkde = false;
             Q_FOREACH (const LoggingCategory &cat, qtCategories) {
+                qDebug()<<" cat.logName"<<cat.logName << "kdeCat.logName"<<kdeCat.logName;
                 if (cat.logName == kdeCat.logName) {
                     //TODO optimization ?
                     LoggingCategory tmp(cat);
@@ -76,6 +78,7 @@ void LoadCategoriesJob::start()
             }
         }
         //FIXME
+        qDebug()<<" KEEP "<< qtCategories.count();
         Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             LoggingCategory tmp;
             tmp.description = cat.description;

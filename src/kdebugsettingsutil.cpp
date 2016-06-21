@@ -149,7 +149,8 @@ KDebugSettingsUtil::LoadLoggingCategory KDebugSettingsUtil::parseLineLoggingQtCa
             cat.logName = p;
             cat.type = LoadLoggingCategory::All;
         }
-
+    } else {
+        cat.enabled = false;
     }
     return cat;
 }
@@ -212,6 +213,10 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                        (value.type & LoadLoggingCategory::Warning) &&
                        (value.type & LoadLoggingCategory::Critical)) {
                 cat.loggingType = LoggingCategory::All;
+            } else if ((value.type & LoadLoggingCategory::Debug) &&
+                       (value.type & LoadLoggingCategory::Warning) &&
+                       (value.type & LoadLoggingCategory::Critical)) {
+                cat.loggingType = LoggingCategory::Debug;
             } else if ((value.type & LoadLoggingCategory::Info) &&
                        (value.type & LoadLoggingCategory::Warning) &&
                        (value.type & LoadLoggingCategory::Critical)) {
@@ -221,9 +226,11 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                 cat.loggingType = LoggingCategory::Warning;
             } else if (value.type & LoadLoggingCategory::Critical) {
                 cat.loggingType = LoggingCategory::Critical;
-            } else if (value.type == LoadLoggingCategory::Unknown) {
+            } else if (value.type & LoadLoggingCategory::Unknown) {
+                qDebug()<<" OFF "<< cat.logName;
                 cat.loggingType = LoggingCategory::Off;
             }
+            //qDebug()<<"cat.loggingType"<<cat.loggingType;
             categories.append(cat);
         }
 

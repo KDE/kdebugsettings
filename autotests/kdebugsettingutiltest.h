@@ -35,6 +35,10 @@ private Q_SLOTS:
 
     void shouldParseQtLoggingLine_data();
     void shouldParseQtLoggingLine();
+
+    void shouldReadLoadKdeCategories_data();
+    void shouldReadLoadKdeCategories();
+
 };
 
 #endif // KDEBUGSETTINGUTILTEST_H

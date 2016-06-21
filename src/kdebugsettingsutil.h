@@ -22,6 +22,8 @@
 #define KDEBUGSETTINGSUTIL_H
 
 #include <QString>
+#include <QObject>
+#include <QDebug>
 #include "kdeloggingcategory.h"
 #include "loggingcategory.h"
 namespace KDebugSettingsUtil
@@ -36,21 +38,30 @@ struct LoadLoggingCategory {
     }
 
     enum LogType {
-        Unknown = 0,
-        Info = 1,
-        Warning = 2,
-        Debug = 4,
-        Critical = 8,
-        All = 16
+        Unknown = 1,
+        Info = 2,
+        Warning = 4,
+        Debug = 8,
+        Critical = 16,
+        All = 32
     };
     Q_FLAGS(LogTypes)
     Q_DECLARE_FLAGS(LogTypes, LogType)
 
     bool isValid() const
     {
-        return (type != Unknown);
+        return !logName.isEmpty();
     }
 
+    bool operator ==(const LoadLoggingCategory &other) const
+    {
+        qDebug()<< " enabled "<< enabled << " other.enabled :"<<other.enabled;
+        qDebug()<< " logname "<< logName << " other.logName :"<<other.logName;
+        qDebug()<<" type"<<type << " other.type "<< other.type;
+        return (enabled == other.enabled) &&
+               (type == other.type) &&
+               (logName == other.logName);
+    }
     bool enabled;
     LogTypes type;
     QString logName;
@@ -64,5 +75,6 @@ KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filena
 LoggingCategory::List readLoggingQtCategories(const QString &filename);
 KDebugSettingsUtil::LoadLoggingCategory parseLineLoggingQtCategory(const QString &line);
 }
+Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
 
 #endif // KDEBUGSETTINGSUTIL_H

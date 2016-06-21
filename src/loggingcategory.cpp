@@ -45,7 +45,7 @@ QString LoggingCategory::createRule()
     QString str;
     switch (loggingType) {
     case All: {
-        str = logName + QLatin1String("=true");
+        str = logName + QLatin1String("=true\n");
         break;
     }
     case Info: {
