@@ -76,9 +76,25 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
     const KDebugSettingsUtil::LoadLoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
     mEnableCategory->setChecked(cat.enabled);
-#if 0 //FIXME
-    mCategoryType->setType(cat.loggingType);
-#endif
+    switch(cat.type) {
+    case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
+        break;
+    case KDebugSettingsUtil::LoadLoggingCategory::Info:
+        mCategoryType->setType(LoggingCategory::Info);
+        break;
+    case KDebugSettingsUtil::LoadLoggingCategory::Warning:
+        mCategoryType->setType(LoggingCategory::Warning);
+        break;
+    case KDebugSettingsUtil::LoadLoggingCategory::Debug:
+        mCategoryType->setType(LoggingCategory::Debug);
+        break;
+    case KDebugSettingsUtil::LoadLoggingCategory::Critical:
+        mCategoryType->setType(LoggingCategory::Critical);
+        break;
+    case KDebugSettingsUtil::LoadLoggingCategory::All:
+        mCategoryType->setType(LoggingCategory::All);
+        break;
+    }
 }
 
 QString ConfigureCustomSettingWidget::rule() const
