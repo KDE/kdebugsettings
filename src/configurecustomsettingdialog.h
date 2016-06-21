@@ -31,7 +31,7 @@ public:
     explicit ConfigureCustomSettingDialog(QWidget *parent = Q_NULLPTR);
     ~ConfigureCustomSettingDialog();
     void setRule(const QString &rule);
-    QString rule();
+    QString rule() const;
 private:
     ConfigureCustomSettingWidget *mCustomSettingWidget;
 };

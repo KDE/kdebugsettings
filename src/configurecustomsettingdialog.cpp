@@ -59,7 +59,7 @@ void ConfigureCustomSettingDialog::setRule(const QString &rule)
     mCustomSettingWidget->setRule(rule);
 }
 
-QString ConfigureCustomSettingDialog::rule()
+QString ConfigureCustomSettingDialog::rule() const
 {
     return mCustomSettingWidget->rule();
 }

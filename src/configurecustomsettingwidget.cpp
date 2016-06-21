@@ -81,7 +81,7 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
 #endif
 }
 
-QString ConfigureCustomSettingWidget::rule()
+QString ConfigureCustomSettingWidget::rule() const
 {
     QString ruleStr = mCategoryLineEdit->text().trimmed();
 #if 0 //FIXME

@@ -32,7 +32,7 @@ public:
     explicit ConfigureCustomSettingWidget(QWidget *parent = Q_NULLPTR);
     ~ConfigureCustomSettingWidget();
 
-    QString rule();
+    QString rule() const;
     void setRule(const QString &rule);
 
 Q_SIGNALS:
