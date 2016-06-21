@@ -263,7 +263,10 @@ QString LoggingCategory::createRule()
         break;
     }
     case Debug: {
-        //FIXME
+        str = logName + QLatin1String(".info=false\n");
+        str += logName + QLatin1String(".debug=true\n");
+        str += logName + QLatin1String(".warning=true\n");
+        str += logName + QLatin1String(".critical=true\n");
         break;
     }
     case Critical:  {
