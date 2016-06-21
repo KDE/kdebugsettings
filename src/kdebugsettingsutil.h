@@ -56,6 +56,7 @@ struct LoadLoggingCategory
     QString logName;
 };
 
+
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
 KdeLoggingCategory parseLineKdeLoggingCategory(QString line);
