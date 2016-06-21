@@ -240,53 +240,6 @@ void KDebugSettingsDialog::slotHelpRequested()
     QDesktopServices::openUrl(QUrl(QStringLiteral("http://doc.qt.io/qt-5/qloggingcategory.html#details")));
 }
 
-QString LoggingCategory::createRule()
-{
-    QString str;
-    switch(loggingType) {
-    case All: {
-        str = logName + QLatin1String("=true");
-        break;
-    }
-    case Info: {
-        str = logName + QLatin1String(".info=true\n");
-        str += logName + QLatin1String(".warning=true\n");
-        str += logName + QLatin1String(".critical=true\n");
-        str += logName + QLatin1String(".debug=false\n");
-        break;
-    }
-    case Warning: {
-        str = logName + QLatin1String(".info=false\n");
-        str += logName + QLatin1String(".debug=false\n");
-        str += logName + QLatin1String(".warning=true\n");
-        str += logName + QLatin1String(".critical=true\n");
-        break;
-    }
-    case Debug: {
-        str = logName + QLatin1String(".info=false\n");
-        str += logName + QLatin1String(".debug=true\n");
-        str += logName + QLatin1String(".warning=true\n");
-        str += logName + QLatin1String(".critical=true\n");
-        break;
-    }
-    case Critical:  {
-        str = logName + QLatin1String(".info=false\n");
-        str += logName + QLatin1String(".debug=false\n");
-        str += logName + QLatin1String(".warning=false\n");
-        str += logName + QLatin1String(".critical=true\n");
-        break;
-    }
-    case Off: {
-        str = logName + QLatin1String(".info=false\n");
-        str += logName + QLatin1String(".debug=false\n");
-        str += logName + QLatin1String(".warning=false\n");
-        str += logName + QLatin1String(".critical=false\n");
-        break;
-    }
-    }
-    return str;
-}
-
 void KDebugSettingsDialog::slotApply()
 {
     saveInQtLogging();
