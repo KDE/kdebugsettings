@@ -336,7 +336,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.logName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = true;
-    customCategories.append(tmp);
+    customCategories.append(customTmp);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
                                                        << customCategories
@@ -374,7 +374,7 @@ void LoadCategoriesJobTest::shouldReadRules()
 
     qDebug() << "AFTER";
     Q_FOREACH(const LoggingCategory &cat, customcategories) {
-        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+        qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
 
     QCOMPARE(job.customCategories(), customcategories);

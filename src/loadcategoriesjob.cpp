@@ -80,8 +80,10 @@ void LoadCategoriesJob::start()
         qDebug()<<" KEEP "<< qtCategories.count();
         Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             LoggingCategory tmp;
+            qDebug() << "KEEP" << "cat.description "<< cat.description << " cat.logName" << cat.logName;
             tmp.description = cat.description;
             tmp.logName = cat.logName;
+            tmp.loggingType = cat.loggingType;
             mCustomCategories.append(tmp);
         }
     }
