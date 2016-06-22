@@ -189,11 +189,10 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
 
             if (rulesSections) {
                 const KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
-                if (cat.isValid()) {
+                if (cat.isValid() && cat.enabled) {
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
                         nextCat.type |= cat.type;
-                        nextCat.enabled = cat.enabled;
                         hashLoadLoggingCategories[cat.logName] = nextCat;
                     } else {
                         hashLoadLoggingCategories.insert(cat.logName, cat);
