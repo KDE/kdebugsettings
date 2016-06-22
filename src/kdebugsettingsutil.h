@@ -39,11 +39,12 @@ struct LoadLoggingCategory {
 
     enum LogType {
         Unknown = 1,
-        Info = 2,
-        Warning = 4,
-        Debug = 8,
-        Critical = 16,
-        All = 32
+        Off = 2,
+        Info = 4,
+        Warning = 8,
+        Debug = 16,
+        Critical = 32,
+        All = 64
     };
     Q_FLAGS(LogTypes)
     Q_DECLARE_FLAGS(LogTypes, LogType)

@@ -125,6 +125,7 @@ KDebugSettingsUtil::LoadLoggingCategory KDebugSettingsUtil::parseLineLoggingQtCa
         if (valueStr == QLatin1String("true")) {
             cat.enabled = true;
         } else {
+            //cat.type = LoadLoggingCategory::Off;
             cat.enabled = false;
         }
         QString p;
@@ -146,8 +147,8 @@ KDebugSettingsUtil::LoadLoggingCategory KDebugSettingsUtil::parseLineLoggingQtCa
             cat.logName = p;
         } else {
             p = pattern;
-            cat.logName = p;
             cat.type = LoadLoggingCategory::All;
+            cat.logName = p;
         }
     } else {
         cat.enabled = false;
@@ -188,10 +189,11 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
 
             if (rulesSections) {
                 const KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
-                if (cat.isValid() && cat.enabled) {
+                if (cat.isValid()) {
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
                         nextCat.type |= cat.type;
+                        nextCat.enabled = cat.enabled;
                         hashLoadLoggingCategories[cat.logName] = nextCat;
                     } else {
                         hashLoadLoggingCategories.insert(cat.logName, cat);
@@ -212,7 +214,12 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                        (value.type & LoadLoggingCategory::Info) &&
                        (value.type & LoadLoggingCategory::Warning) &&
                        (value.type & LoadLoggingCategory::Critical)) {
-                cat.loggingType = LoggingCategory::All;
+                qDebug()<<" cat.enabled "<< cat.enabled;
+                if (cat.enabled) {
+                    cat.loggingType = LoggingCategory::All;
+                } else {
+                    cat.loggingType = LoggingCategory::Off;
+                }
             } else if ((value.type & LoadLoggingCategory::Debug) &&
                        (value.type & LoadLoggingCategory::Warning) &&
                        (value.type & LoadLoggingCategory::Critical)) {
