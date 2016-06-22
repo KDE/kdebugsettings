@@ -360,15 +360,13 @@ void LoadCategoriesJobTest::shouldReadRules()
 
     QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
     Q_FOREACH(const LoggingCategory &cat, job.qtKdeCategories()) {
-        qDebug() << " cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
 
     qDebug() << "AFTER";
     Q_FOREACH(const LoggingCategory &cat, qtkdecategories) {
-        qDebug() << " cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
-
-    qDebug()<<" job.qtKdeCategories()"<<job.qtKdeCategories().count();
     QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
 
