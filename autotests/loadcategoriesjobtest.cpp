@@ -210,6 +210,10 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                                        << LoggingCategory::List()
                                                        << qtKdeCategories;
 
+    QTest::newRow("oneelementinfo") << QStringLiteral("oneelementinfobis.ini") << QStringLiteral("correct.categories") << false
+                                                       << LoggingCategory::List()
+                                                       << qtKdeCategories;
+
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
     tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
@@ -283,6 +287,9 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                                        << qtKdeCategories;
 
     QTest::newRow("oneelementonelinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
+                                                       << LoggingCategory::List()
+                                                       << qtKdeCategories;
+    QTest::newRow("oneelementtwolinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
                                                        << LoggingCategory::List()
                                                        << qtKdeCategories;
 
