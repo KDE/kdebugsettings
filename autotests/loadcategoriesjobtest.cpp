@@ -342,7 +342,29 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.enabled = false;
     customCategories.append(customTmp);
 
-    QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextractfalse.ini") << QStringLiteral("correct.categories") << false
+    QTest::newRow("oneelementdebugandanextractfalse") << QStringLiteral("oneelementdebugandanextractfalse.ini") << QStringLiteral("correct.categories") << false
+            << customCategories
+            << qtKdeCategories;
+
+    //Test without categories
+    qtKdeCategories.clear();
+    customCategories.clear();
+    customTmp.logName = QStringLiteral("toto");
+    customTmp.loggingType = LoggingCategory::All;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+    QTest::newRow("testwithoutcategories") << QStringLiteral("testwithoutcategories.ini") << QString() << false
+            << customCategories
+            << qtKdeCategories;
+
+
+    qtKdeCategories.clear();
+    customCategories.clear();
+    customTmp.logName = QStringLiteral("toto");
+    customTmp.loggingType = LoggingCategory::Warning;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+    QTest::newRow("testwithoutcategorieswarning") << QStringLiteral("testwithoutcategorieswarning.ini") << QString() << false
             << customCategories
             << qtKdeCategories;
 
@@ -369,7 +391,6 @@ void LoadCategoriesJobTest::shouldReadRules()
     job.setCategories(listKdeLoggingCategories);
     job.start();
 
-    QCOMPARE(job.customCategories().count(), customcategories.count());
 
 #ifdef DEBUG_RESULT
     Q_FOREACH (const LoggingCategory &cat, job.customCategories()) {
@@ -381,12 +402,12 @@ void LoadCategoriesJobTest::shouldReadRules()
         qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
     }
 #endif
+    QCOMPARE(job.customCategories().count(), customcategories.count());
 
     QCOMPARE(job.customCategories(), customcategories);
 
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
 
-    QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
 
 #ifdef DEBUG_RESULT
     Q_FOREACH (const LoggingCategory &cat, job.qtKdeCategories()) {
@@ -398,6 +419,7 @@ void LoadCategoriesJobTest::shouldReadRules()
         qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
     }
 #endif
+    QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
     QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
 

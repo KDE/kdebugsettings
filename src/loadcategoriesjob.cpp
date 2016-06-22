@@ -37,6 +37,14 @@ bool LoadCategoriesJob::foundOverrideRule() const
     return mFoundOverrideRule;
 }
 
+LoggingCategory::LoggingType updateLoggingType(const LoggingCategory &cat)
+{
+    if (!cat.enabled) {
+        return LoggingCategory::Off;
+    }
+    return cat.loggingType;
+}
+
 void LoadCategoriesJob::start()
 {
     if (mFileName.isEmpty()) {
@@ -58,6 +66,7 @@ void LoadCategoriesJob::start()
                 if (cat.logName == kdeCat.logName) {
                     //TODO optimization ?
                     LoggingCategory tmp(cat);
+                    tmp.loggingType = updateLoggingType(tmp);
                     tmp.description = kdeCat.description;
                     mQtKdeCategories.append(tmp);
                     foundInConfigFile = true;
@@ -72,13 +81,14 @@ void LoadCategoriesJob::start()
                 LoggingCategory tmp;
                 tmp.description = kdeCat.description;
                 tmp.logName = kdeCat.logName;
+                tmp.loggingType = updateLoggingType(tmp);
                 mQtKdeCategories.append(tmp);
             }
         }
-        //qDebug()<<" KEEP "<< qtCategories.count();
+        qDebug()<<" KEEP "<< qtCategories.count();
         Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             LoggingCategory tmp;
-            //qDebug() << "KEEP" << "cat.description "<< cat.description << " cat.logName" << cat.logName << " cat.logging" << cat.loggingType << " enbable "<< cat.enabled;
+            qDebug() << "KEEP" << "cat.description "<< cat.description << " cat.logName" << cat.logName << " cat.logging" << cat.loggingType << " enbable "<< cat.enabled;
             tmp.description = cat.description;
             tmp.logName = cat.logName;
             tmp.loggingType = cat.loggingType;

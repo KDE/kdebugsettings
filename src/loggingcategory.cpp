@@ -22,7 +22,8 @@
 
 LoggingCategory::LoggingCategory()
     : loggingType(Info),
-      enabled(true)
+      enabled(true),
+      undefinedType(false)
 {
 
 }
@@ -32,7 +33,8 @@ bool LoggingCategory::operator ==(const LoggingCategory &other) const
     return (description == other.description) &&
            (logName == other.logName) &&
            (enabled == other.enabled) &&
-           (loggingType == other.loggingType);
+           (loggingType == other.loggingType) &&
+           (undefinedType == other.undefinedType);
 }
 
 bool LoggingCategory::isValid() const

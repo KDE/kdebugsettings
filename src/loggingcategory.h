@@ -46,6 +46,7 @@ struct LoggingCategory {
     QString logName;
     LoggingType loggingType;
     bool enabled;
+    bool undefinedType;
 
 };
 Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
