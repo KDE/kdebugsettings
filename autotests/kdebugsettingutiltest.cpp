@@ -108,6 +108,7 @@ void KDebugSettingUtilTest::shouldReadLoadKdeCategories_data()
     QTest::newRow("empty") << QStringLiteral("empty.categories") << 0;
     QTest::newRow("correctlist") << QStringLiteral("correct.categories") << 5;
     QTest::newRow("withduplicate") << QStringLiteral("duplicates.categories") << 5;
+    QTest::newRow("withcomment") << QStringLiteral("comments.categories") << 6;
 }
 
 void KDebugSettingUtilTest::shouldReadLoadKdeCategories()

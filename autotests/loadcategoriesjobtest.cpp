@@ -20,6 +20,7 @@
 
 #include "loadcategoriesjobtest.h"
 #include "../src/loadcategoriesjob.h"
+#include "../src/kdebugsettingsutil.h"
 
 #include <QTest>
 #include <QFile>
@@ -47,23 +48,29 @@ void LoadCategoriesJobTest::shouldHaveDefaultValue()
 void LoadCategoriesJobTest::shouldReadRules_data()
 {
     QTest::addColumn<QString>("filename");
-    QTest::addColumn<KdeLoggingCategory::List>("listKdeLoggingCategories");
+    QTest::addColumn<QString>("filenamelistKdeLoggingCategories");
     QTest::addColumn<bool>("foundoverriderules");
     QTest::addColumn<LoggingCategory::List>("customcategories");
     QTest::addColumn<LoggingCategory::List>("qtkdecategories");
-    QTest::newRow("empty") << QStringLiteral("emptyrulefiles.ini") << KdeLoggingCategory::List() << false << LoggingCategory::List() << LoggingCategory::List();
-    QTest::newRow("commentedlines") << QStringLiteral("commentedrulefiles.ini") << KdeLoggingCategory::List() << false << LoggingCategory::List() << LoggingCategory::List();
-    QTest::newRow("rulesbeforesection") << QStringLiteral("rulebeforerulessectionfiles.ini") << KdeLoggingCategory::List() << false << LoggingCategory::List() << LoggingCategory::List();
+    QTest::newRow("empty") << QStringLiteral("emptyrulefiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
+    QTest::newRow("commentedlines") << QStringLiteral("commentedrulefiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
+    QTest::newRow("rulesbeforesection") << QStringLiteral("rulebeforerulessectionfiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
 }
 
 void LoadCategoriesJobTest::shouldReadRules()
 {
     QFETCH(QString, filename);
-    QFETCH(KdeLoggingCategory::List, listKdeLoggingCategories);
+    QFETCH(QString, filenamelistKdeLoggingCategories);
     QFETCH(bool, foundoverriderules);
     QFETCH(LoggingCategory::List, customcategories);
     QFETCH(LoggingCategory::List, qtkdecategories);
     LoadCategoriesJob job;
+    KdeLoggingCategory::List listKdeLoggingCategories;
+    if (!filenamelistKdeLoggingCategories.isEmpty()) {
+        const QString kdeLoggingCategoriesPath = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filenamelistKdeLoggingCategories);
+        KDebugSettingsUtil::readLoggingCategories(kdeLoggingCategoriesPath, listKdeLoggingCategories, true);
+    }
+
     const QString path = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
     QFile file(path);
     QVERIFY(file.exists());
