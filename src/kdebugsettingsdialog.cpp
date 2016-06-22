@@ -222,8 +222,16 @@ void KDebugSettingsDialog::slotInsertCategories()
     const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
     if (!path.isEmpty()) {
         const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
-        //TODO insert value
-        //FIXME mKdeApplicationSettingsPage->insertCategories(insertCategoriesList);
+        LoggingCategory::List newCategories;
+        Q_FOREACH(const KdeLoggingCategory &cat, insertCategoriesList) {
+            LoggingCategory loggingCat;
+            loggingCat.description = cat.description;
+            loggingCat.logName = cat.logName;
+            if (loggingCat.isValid()) {
+                newCategories.append(loggingCat);
+            }
+        }
+        mKdeApplicationSettingsPage->insertCategories(newCategories);
     }
 }
 
