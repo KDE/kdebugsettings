@@ -54,15 +54,14 @@ void LoadCategoriesJob::start()
         qDebug()<<" qtCategories"<<qtCategories.count();
         for (int i = 0; i < number; ++i) {
             KdeLoggingCategory kdeCat = mCategories.at(i);
-            bool foundkde = false;
+            bool foundInConfigFile = false;
             Q_FOREACH (const LoggingCategory &cat, qtCategories) {
-                qDebug()<<" cat.logName"<<cat.logName << "kdeCat.logName"<<kdeCat.logName;
                 if (cat.logName == kdeCat.logName) {
                     //TODO optimization ?
                     LoggingCategory tmp(cat);
                     tmp.description = kdeCat.description;
                     mQtKdeCategories.append(tmp);
-                    foundkde = true;
+                    foundInConfigFile = true;
                     qtCategories.removeAll(cat);
                     break;
                 }
@@ -70,11 +69,11 @@ void LoadCategoriesJob::start()
                     mFoundOverrideRule = true;
                 }
             }
-            if (!foundkde) {
+            if (!foundInConfigFile) {
                 LoggingCategory tmp;
                 tmp.description = kdeCat.description;
                 tmp.logName = kdeCat.logName;
-                mCustomCategories.append(tmp);
+                mQtKdeCategories.append(tmp);
             }
         }
         //FIXME
