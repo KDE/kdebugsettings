@@ -40,6 +40,39 @@ bool LoggingCategory::isValid() const
     return !logName.isEmpty();
 }
 
+QString LoggingCategory::createCustomRule()
+{
+    QString str;
+    switch (loggingType) {
+    case All: {
+        str = logName + QLatin1String("=true\n");
+        break;
+    }
+    case Info: {
+        str = logName + QStringLiteral(".info=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        break;
+    }
+    case Warning: {
+        str = logName + QStringLiteral(".warning=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        break;
+    }
+    case Debug: {
+        str = logName + QStringLiteral(".debug=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        break;
+    }
+    case Critical:  {
+        str = logName + QStringLiteral(".critical=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        break;
+    }
+    case Off: {
+        str = QString();
+        break;
+    }
+    }
+    return str;
+
+}
+
 QString LoggingCategory::createRule()
 {
     QString str;

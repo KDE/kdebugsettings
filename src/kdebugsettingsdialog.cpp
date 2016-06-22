@@ -188,7 +188,7 @@ bool KDebugSettingsDialog::saveRules(const QString &path)
         out << cat.createRule() + QLatin1Char('\n');
     }
     Q_FOREACH (LoggingCategory cat, lstCustom) {
-        out << cat.createRule() + QLatin1Char('\n');
+        out << cat.createCustomRule() + QLatin1Char('\n');
     }
     return true;
 }
