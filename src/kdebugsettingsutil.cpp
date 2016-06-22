@@ -188,14 +188,22 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
             }
 
             if (rulesSections) {
-                const KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
-                if (cat.isValid() && cat.enabled) {
-                    KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
-                    if (nextCat.isValid()) {
-                        nextCat.type |= cat.type;
-                        hashLoadLoggingCategories[cat.logName] = nextCat;
+                KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
+                if (cat.isValid()) {
+                    if (cat.enabled) {
+                        KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
+                        if (nextCat.isValid()) {
+                            nextCat.type |= cat.type;
+                            hashLoadLoggingCategories[cat.logName] = nextCat;
+                        } else {
+                            hashLoadLoggingCategories.insert(cat.logName, cat);
+                        }
                     } else {
-                        hashLoadLoggingCategories.insert(cat.logName, cat);
+                        KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
+                        if (!nextCat.isValid()) {
+                            cat.type = LoadLoggingCategory::Off;
+                            hashLoadLoggingCategories.insert(cat.logName, cat);
+                        }
                     }
                 }
             }
@@ -232,6 +240,8 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                 cat.loggingType = LoggingCategory::Warning;
             } else if (value.type & LoadLoggingCategory::Critical) {
                 cat.loggingType = LoggingCategory::Critical;
+            } else if (value.type & LoadLoggingCategory::Off) {
+                cat.loggingType = LoggingCategory::Off;
             } else if (value.type & LoadLoggingCategory::Unknown) {
                 qDebug()<<" OFF "<< cat.logName;
                 cat.loggingType = LoggingCategory::Off;
