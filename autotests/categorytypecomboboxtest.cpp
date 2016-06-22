@@ -44,36 +44,22 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
 {
-    QTest::addColumn<QString>("input");
+    QTest::addColumn<LoggingCategory::LoggingType>("input");
 
-    QTest::newRow("empty") <<  QString();
-    QTest::newRow("info") <<  QStringLiteral("info");
-    QTest::newRow("infossss") <<  QStringLiteral("infodsfsdf");
-    QTest::newRow("warning") <<  QStringLiteral("warning");
-    QTest::newRow("invalid") <<  QStringLiteral("allss");
-    QTest::newRow("debug") <<  QStringLiteral("debug");
-    QTest::newRow("critical") <<  QStringLiteral("critical");
+    QTest::newRow("all") <<  LoggingCategory::All;
+    QTest::newRow("info") <<  LoggingCategory::Info;
+    QTest::newRow("warning") << LoggingCategory::Warning;
+    QTest::newRow("debug") << LoggingCategory::Debug;
+    QTest::newRow("critical") << LoggingCategory::Critical;
+    QTest::newRow("off") << LoggingCategory::Off;
 }
 
 void CategoryTypeComboBoxTest::shouldSetType()
 {
-#if 0 //FIXME
-    QFETCH(QString, input);
-    CategoryTypeComboBox w;
+    QFETCH(LoggingCategory::LoggingType, input);
+    CategoryTypeComboBox w(false);
     w.setType(input);
-    QString result;
-    if (input.isEmpty()) {
-        result = QStringLiteral("all");
-    }
-    const int pos = w.findData(input);
-    if (pos < 0) {
-        result = QString();
-        QCOMPARE(w.type(), result);
-    } else {
-        result = w.type();
-        QCOMPARE(w.type(), result);
-    }
-#endif
+    QCOMPARE(w.type(), input);
 }
 
 QTEST_MAIN(CategoryTypeComboBoxTest)
