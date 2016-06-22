@@ -26,6 +26,8 @@
 #include <QFile>
 #include <QDebug>
 
+//#define DEBUG_RESULT 1
+
 LoadCategoriesJobTest::LoadCategoriesJobTest(QObject *parent)
     : QObject(parent)
 {
@@ -367,7 +369,7 @@ void LoadCategoriesJobTest::shouldReadRules()
 
     QCOMPARE(job.customCategories().count(), customcategories.count());
 
-
+#ifdef DEBUG_RESULT
     Q_FOREACH(const LoggingCategory &cat, job.customCategories()) {
         qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
@@ -376,12 +378,15 @@ void LoadCategoriesJobTest::shouldReadRules()
     Q_FOREACH(const LoggingCategory &cat, customcategories) {
         qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
+#endif
 
     QCOMPARE(job.customCategories(), customcategories);
 
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
 
     QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
+
+#ifdef DEBUG_RESULT
     Q_FOREACH(const LoggingCategory &cat, job.qtKdeCategories()) {
         qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
@@ -390,6 +395,7 @@ void LoadCategoriesJobTest::shouldReadRules()
     Q_FOREACH(const LoggingCategory &cat, qtkdecategories) {
         qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
     }
+#endif
     QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
 
