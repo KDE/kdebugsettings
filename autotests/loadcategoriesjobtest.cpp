@@ -55,7 +55,42 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     QTest::newRow("empty") << QStringLiteral("emptyrulefiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
     QTest::newRow("commentedlines") << QStringLiteral("commentedrulefiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
     QTest::newRow("rulesbeforesection") << QStringLiteral("rulebeforerulessectionfiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
-    QTest::newRow("emptywithlistkdeloggingcategories") << QStringLiteral("rulebeforerulessectionfiles.ini") << QStringLiteral("correct.categories") << false << LoggingCategory::List() << LoggingCategory::List();
+
+    LoggingCategory::List qtKdeCategories;
+    LoggingCategory tmp;
+    tmp.description = QStringLiteral("KPasswdServer (KIO)");
+    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
+    tmp.loggingType = LoggingCategory::Info;
+    tmp.enabled = true;
+    qtKdeCategories.append(tmp);
+
+    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
+    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
+    tmp.loggingType = LoggingCategory::Info;
+    tmp.enabled = true;
+    qtKdeCategories.append(tmp);
+
+    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
+    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
+    tmp.loggingType = LoggingCategory::Info;
+    tmp.enabled = true;
+    qtKdeCategories.append(tmp);
+
+    tmp.description = QStringLiteral("BluezQt");
+    tmp.logName = QStringLiteral("BluezQt");
+    tmp.loggingType = LoggingCategory::Info;
+    tmp.enabled = true;
+    qtKdeCategories.append(tmp);
+
+    tmp.description = QStringLiteral("KAuth");
+    tmp.logName = QStringLiteral("kf5.kauth");
+    tmp.loggingType = LoggingCategory::Info;
+    tmp.enabled = true;
+    qtKdeCategories.append(tmp);
+
+    QTest::newRow("emptywithlistkdeloggingcategories") << QStringLiteral("rulebeforerulessectionfiles.ini") << QStringLiteral("correct.categories") << false
+                                                       << LoggingCategory::List()
+                                                       << qtKdeCategories;
 }
 
 void LoadCategoriesJobTest::shouldReadRules()
@@ -80,8 +115,12 @@ void LoadCategoriesJobTest::shouldReadRules()
     job.start();
 
     qDebug() << "job.customCategories()"<<job.customCategories().count();
+    QCOMPARE(job.customCategories().count(), customcategories.count());
     QCOMPARE(job.customCategories(), customcategories);
+
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
+
+    QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
     QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
 
