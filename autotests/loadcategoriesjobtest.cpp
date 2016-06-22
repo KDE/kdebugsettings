@@ -330,6 +330,18 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                                        << LoggingCategory::List()
                                                        << qtKdeCategories;
 
+    // Test with extract elements
+    LoggingCategory::List customCategories;
+    LoggingCategory customTmp;
+    customTmp.logName = QStringLiteral("toto");
+    customTmp.loggingType = LoggingCategory::Critical;
+    customTmp.enabled = true;
+    customCategories.append(tmp);
+
+    QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
+                                                       << customCategories
+                                                       << qtKdeCategories;
+
 }
 
 void LoadCategoriesJobTest::shouldReadRules()
@@ -354,6 +366,17 @@ void LoadCategoriesJobTest::shouldReadRules()
     job.start();
 
     QCOMPARE(job.customCategories().count(), customcategories.count());
+
+
+    Q_FOREACH(const LoggingCategory &cat, job.customCategories()) {
+        qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+    }
+
+    qDebug() << "AFTER";
+    Q_FOREACH(const LoggingCategory &cat, customcategories) {
+        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+    }
+
     QCOMPARE(job.customCategories(), customcategories);
 
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
