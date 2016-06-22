@@ -86,7 +86,7 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
     Q_FOREACH (const LoggingCategory &cat, list) {
         QString ruleStr;
         ruleStr = cat.logName;
-        switch(cat.loggingType) {
+        switch (cat.loggingType) {
         case LoggingCategory::All:
             break;
         case LoggingCategory::Info:
@@ -123,9 +123,9 @@ LoggingCategory::List CustomDebugSettingsPage::rules()
             LoggingCategory tmp;
             tmp.enabled = cat.enabled;
             tmp.logName = cat.logName;
-            switch(cat.type) {
+            switch (cat.type) {
             case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
-                 break;
+                break;
             case KDebugSettingsUtil::LoadLoggingCategory::Info:
                 tmp.loggingType = LoggingCategory::Info;
                 break;

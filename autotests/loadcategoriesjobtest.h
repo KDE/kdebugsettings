@@ -36,5 +36,4 @@ private Q_SLOTS:
     void shouldReadRules();
 };
 
-
 #endif // LOADCATEGORIESJOBTEST_H

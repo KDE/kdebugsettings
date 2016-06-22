@@ -82,7 +82,7 @@ void KDebugSettingUtilTest::shouldParseQtLoggingLine_data()
     QTest::newRow("validenabledwithtypedebug") <<  QStringLiteral("toto.debug=true") << QStringLiteral("toto") << KDebugSettingsUtil::LoadLoggingCategory::Debug << true << true;
 
     QTest::newRow("invalid") <<  QStringLiteral("dd") << QString() << KDebugSettingsUtil::LoadLoggingCategory::Unknown << false << false;
-    QTest::newRow("invalidWithoutEnabledDisabled") <<  QStringLiteral("dd=")<< QStringLiteral("dd") << KDebugSettingsUtil::LoadLoggingCategory::All << false  << true;
+    QTest::newRow("invalidWithoutEnabledDisabled") <<  QStringLiteral("dd=") << QStringLiteral("dd") << KDebugSettingsUtil::LoadLoggingCategory::All << false  << true;
 }
 
 void KDebugSettingUtilTest::shouldParseQtLoggingLine()

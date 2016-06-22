@@ -188,8 +188,8 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
 
             if (rulesSections) {
                 KDebugSettingsUtil::LoadLoggingCategory cat = parseLineLoggingQtCategory(line);
-                qDebug()<<" line "<< line;
-                qDebug()<<"enable "<<cat.enabled << " valid : "<< cat.isValid();
+                qDebug() << " line " << line;
+                qDebug() << "enable " << cat.enabled << " valid : " << cat.isValid();
                 if (cat.isValid()) {
                     if (cat.enabled) {
                         KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
@@ -208,12 +208,12 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                     } else {
                         KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                         if (!nextCat.isValid()) {
-                            cat.enabled =false;
+                            cat.enabled = false;
                             hashLoadLoggingCategories.insert(cat.logName, cat);
                         } else {
                             if (!nextCat.enabled) {
                                 nextCat.type |= cat.type;
-                                nextCat.enabled =false;
+                                nextCat.enabled = false;
                                 hashLoadLoggingCategories[cat.logName] = nextCat;
                             }
                         }
@@ -235,7 +235,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
                 } else {
                     cat.loggingType = LoggingCategory::Off;
                 }
-                qDebug() << "SSSSSSSSSSSSSSSSSS cat.enable"<<cat.enabled;
+                qDebug() << "SSSSSSSSSSSSSSSSSS cat.enable" << cat.enabled;
             } else if ((value.type & LoadLoggingCategory::Debug) &&
                        (value.type & LoadLoggingCategory::Info) &&
                        (value.type & LoadLoggingCategory::Warning) &&
@@ -261,7 +261,7 @@ LoggingCategory::List KDebugSettingsUtil::readLoggingQtCategories(const QString 
             } else if (value.type & LoadLoggingCategory::Off) {
                 cat.loggingType = LoggingCategory::Off;
             } else if (value.type & LoadLoggingCategory::Unknown) {
-                qDebug()<<" OFF "<< cat.logName;
+                qDebug() << " OFF " << cat.logName;
                 cat.loggingType = LoggingCategory::Off;
             }
             //qDebug()<<"cat.loggingType"<<cat.loggingType;

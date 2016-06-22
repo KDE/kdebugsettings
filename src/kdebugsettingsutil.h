@@ -56,9 +56,9 @@ struct LoadLoggingCategory {
 
     bool operator ==(const LoadLoggingCategory &other) const
     {
-        qDebug()<< " enabled "<< enabled << " other.enabled :"<<other.enabled;
-        qDebug()<< " logname "<< logName << " other.logName :"<<other.logName;
-        qDebug()<<" type"<<type << " other.type "<< other.type;
+        qDebug() << " enabled " << enabled << " other.enabled :" << other.enabled;
+        qDebug() << " logname " << logName << " other.logName :" << other.logName;
+        qDebug() << " type" << type << " other.type " << other.type;
         return (enabled == other.enabled) &&
                (type == other.type) &&
                (logName == other.logName);

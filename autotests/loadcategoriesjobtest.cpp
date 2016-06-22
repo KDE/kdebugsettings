@@ -91,9 +91,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     qtKdeCategories.append(tmp);
 
     QTest::newRow("emptywithlistkdeloggingcategories") << QStringLiteral("rulebeforerulessectionfiles.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
-
+            << LoggingCategory::List()
+            << qtKdeCategories;
 
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
@@ -126,15 +125,13 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.enabled = true;
     qtKdeCategories.append(tmp);
 
-
     QTest::newRow("oneelementoff") << QStringLiteral("oneelementoff.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                   << LoggingCategory::List()
+                                   << qtKdeCategories;
 
     QTest::newRow("oneelementonelineoff") << QStringLiteral("oneelementonelineoff.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
-
+                                          << LoggingCategory::List()
+                                          << qtKdeCategories;
 
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
@@ -167,14 +164,13 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.enabled = true;
     qtKdeCategories.append(tmp);
 
-
     QTest::newRow("oneelementall") << QStringLiteral("oneelementall.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                   << LoggingCategory::List()
+                                   << qtKdeCategories;
 
     QTest::newRow("oneelementonelineall") << QStringLiteral("oneelementonelineall.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                          << LoggingCategory::List()
+                                          << qtKdeCategories;
 
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
@@ -207,14 +203,13 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.enabled = true;
     qtKdeCategories.append(tmp);
 
-
     QTest::newRow("oneelementinfo") << QStringLiteral("oneelementinfo.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                    << LoggingCategory::List()
+                                    << qtKdeCategories;
 
     QTest::newRow("oneelementinfo") << QStringLiteral("oneelementinfobis.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                    << LoggingCategory::List()
+                                    << qtKdeCategories;
 
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
@@ -247,10 +242,9 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.enabled = true;
     qtKdeCategories.append(tmp);
 
-
     QTest::newRow("oneelementwarning") << QStringLiteral("oneelementwarning.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                       << LoggingCategory::List()
+                                       << qtKdeCategories;
 
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
@@ -283,18 +277,16 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.enabled = true;
     qtKdeCategories.append(tmp);
 
-
     QTest::newRow("oneelementcritical") << QStringLiteral("oneelementcritical.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                        << LoggingCategory::List()
+                                        << qtKdeCategories;
 
     QTest::newRow("oneelementonelinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+            << LoggingCategory::List()
+            << qtKdeCategories;
     QTest::newRow("oneelementtwolinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
-
+            << LoggingCategory::List()
+            << qtKdeCategories;
 
     qtKdeCategories.clear();
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
@@ -327,10 +319,9 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.enabled = true;
     qtKdeCategories.append(tmp);
 
-
     QTest::newRow("oneelementdebug") << QStringLiteral("oneelementdebug.ini") << QStringLiteral("correct.categories") << false
-                                                       << LoggingCategory::List()
-                                                       << qtKdeCategories;
+                                     << LoggingCategory::List()
+                                     << qtKdeCategories;
 
     // Test with extract elements
     LoggingCategory::List customCategories;
@@ -341,8 +332,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customCategories.append(customTmp);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
-                                                       << customCategories
-                                                       << qtKdeCategories;
+            << customCategories
+            << qtKdeCategories;
 
     // Test with extract elements
     customCategories.clear();
@@ -352,8 +343,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customCategories.append(customTmp);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextractfalse.ini") << QStringLiteral("correct.categories") << false
-                                                       << customCategories
-                                                       << qtKdeCategories;
+            << customCategories
+            << qtKdeCategories;
 
 }
 
@@ -381,13 +372,13 @@ void LoadCategoriesJobTest::shouldReadRules()
     QCOMPARE(job.customCategories().count(), customcategories.count());
 
 #ifdef DEBUG_RESULT
-    Q_FOREACH(const LoggingCategory &cat, job.customCategories()) {
-        qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+    Q_FOREACH (const LoggingCategory &cat, job.customCategories()) {
+        qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
     }
 
     qDebug() << "AFTER";
-    Q_FOREACH(const LoggingCategory &cat, customcategories) {
-        qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+    Q_FOREACH (const LoggingCategory &cat, customcategories) {
+        qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
     }
 #endif
 
@@ -398,17 +389,16 @@ void LoadCategoriesJobTest::shouldReadRules()
     QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
 
 #ifdef DEBUG_RESULT
-    Q_FOREACH(const LoggingCategory &cat, job.qtKdeCategories()) {
-        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+    Q_FOREACH (const LoggingCategory &cat, job.qtKdeCategories()) {
+        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
     }
 
     qDebug() << "AFTER";
-    Q_FOREACH(const LoggingCategory &cat, qtkdecategories) {
-        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type "<<cat.loggingType;
+    Q_FOREACH (const LoggingCategory &cat, qtkdecategories) {
+        qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
     }
 #endif
     QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
-
 
 QTEST_MAIN(LoadCategoriesJobTest)

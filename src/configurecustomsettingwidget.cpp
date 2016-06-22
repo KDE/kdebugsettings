@@ -76,7 +76,7 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
     const KDebugSettingsUtil::LoadLoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
     mEnableCategory->setChecked(cat.enabled);
-    switch(cat.type) {
+    switch (cat.type) {
     case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
         break;
     case KDebugSettingsUtil::LoadLoggingCategory::Info:

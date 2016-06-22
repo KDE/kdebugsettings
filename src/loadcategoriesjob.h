@@ -24,7 +24,6 @@
 #include "kdeloggingcategory.h"
 #include "loggingcategory.h"
 
-
 class LoadCategoriesJob
 {
 public:
