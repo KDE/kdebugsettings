@@ -75,11 +75,10 @@ void LoadCategoriesJob::start()
                 mQtKdeCategories.append(tmp);
             }
         }
-        //FIXME
-        qDebug()<<" KEEP "<< qtCategories.count();
+        //qDebug()<<" KEEP "<< qtCategories.count();
         Q_FOREACH (const LoggingCategory &cat, qtCategories) {
             LoggingCategory tmp;
-            qDebug() << "KEEP" << "cat.description "<< cat.description << " cat.logName" << cat.logName << " cat.logging" << cat.loggingType << " enbable "<< cat.enabled;
+            //qDebug() << "KEEP" << "cat.description "<< cat.description << " cat.logName" << cat.logName << " cat.logging" << cat.loggingType << " enbable "<< cat.enabled;
             tmp.description = cat.description;
             tmp.logName = cat.logName;
             tmp.loggingType = cat.loggingType;
