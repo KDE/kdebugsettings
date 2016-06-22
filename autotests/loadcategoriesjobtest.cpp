@@ -26,7 +26,7 @@
 #include <QFile>
 #include <QDebug>
 
-//#define DEBUG_RESULT 1
+#define DEBUG_RESULT 1
 
 LoadCategoriesJobTest::LoadCategoriesJobTest(QObject *parent)
     : QObject(parent)
@@ -99,7 +99,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     tmp.description = QStringLiteral("KPasswdServer (KIO)");
     tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
     tmp.loggingType = LoggingCategory::Off;
-    tmp.enabled = true;
+    tmp.enabled = false;
     qtKdeCategories.append(tmp);
 
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
@@ -341,6 +341,17 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customCategories.append(customTmp);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
+                                                       << customCategories
+                                                       << qtKdeCategories;
+
+    // Test with extract elements
+    customCategories.clear();
+    customTmp.logName = QStringLiteral("toto");
+    customTmp.loggingType = LoggingCategory::Critical;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+
+    QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextractfalse.ini") << QStringLiteral("correct.categories") << false
                                                        << customCategories
                                                        << qtKdeCategories;
 
