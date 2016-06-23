@@ -61,11 +61,29 @@ struct LoadLoggingCategory {
         qDebug() << " type" << type << " other.type " << other.type;
         return (enabled == other.enabled) &&
                (type == other.type) &&
-               (logName == other.logName);
+               (logName == other.logName) &&
+               (loggingTypes == other.loggingTypes);
     }
     bool enabled;
     LogTypes type;
     QString logName;
+    struct LoggingInfoType
+    {
+        LoggingInfoType()
+            : enabled(false),
+              type(Unknown)
+        {
+
+        }
+        bool operator ==(const LoggingInfoType &other) const
+        {
+            return (enabled == other.enabled) && (type == other.type);
+        }
+        bool enabled;
+        LoadLoggingCategory::LogType type;
+    };
+
+    QList<LoggingInfoType> loggingTypes;
 };
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
