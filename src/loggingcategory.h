@@ -33,7 +33,8 @@ struct LoggingCategory {
         Warning,
         Debug,
         Critical,
-        Off
+        Off,
+        Undefined
     };
 
     typedef QVector<LoggingCategory> List;

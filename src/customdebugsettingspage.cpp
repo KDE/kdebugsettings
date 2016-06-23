@@ -116,37 +116,35 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 LoggingCategory::List CustomDebugSettingsPage::rules()
 {
     LoggingCategory::List lst;
-#if 0 //FIXME
     const int number(mListWidget->count());
     for (int i = 0; i < number; ++i) {
         const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             LoggingCategory tmp;
-            tmp.enabled = cat.enabled;
             tmp.logName = cat.logName;
+            tmp.enabled = cat.enabled;
             switch (cat.type) {
-            case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
+            case KDebugSettingsUtil::LineLoggingQtCategory::Unknown:
                 break;
-            case KDebugSettingsUtil::LoadLoggingCategory::Info:
+            case KDebugSettingsUtil::LineLoggingQtCategory::Info:
                 tmp.loggingType = LoggingCategory::Info;
                 break;
-            case KDebugSettingsUtil::LoadLoggingCategory::Warning:
+            case KDebugSettingsUtil::LineLoggingQtCategory::Warning:
                 tmp.loggingType = LoggingCategory::Warning;
                 break;
-            case KDebugSettingsUtil::LoadLoggingCategory::Debug:
+            case KDebugSettingsUtil::LineLoggingQtCategory::Debug:
                 tmp.loggingType = LoggingCategory::Debug;
                 break;
-            case KDebugSettingsUtil::LoadLoggingCategory::Critical:
+            case KDebugSettingsUtil::LineLoggingQtCategory::Critical:
                 tmp.loggingType = LoggingCategory::Critical;
                 break;
-            case KDebugSettingsUtil::LoadLoggingCategory::All:
+            case KDebugSettingsUtil::LineLoggingQtCategory::All:
                 tmp.loggingType = LoggingCategory::All;
                 break;
             }
             lst.append(tmp);
         }
     }
-#endif
     return lst;
 }
 

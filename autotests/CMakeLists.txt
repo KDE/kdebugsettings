@@ -27,6 +27,7 @@ macro(add_unittest _source _additionalsource)
     add_executable( ${_name} ${_test} )
     add_test( ${_name} ${_name} )
     ecm_mark_as_test(kdebugsettings-${_name})
+    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "QT_HASH_SEED=1")
     target_link_libraries( ${_name}
         Qt5::Test
         KF5::I18n

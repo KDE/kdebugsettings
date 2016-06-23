@@ -60,11 +60,12 @@ struct LineLoggingQtCategory {
 };
 
 struct LoadLoggingCategory {
-    LoadLoggingCategory()
-    {
+    enum Status {
+        Enabled = 0,
+        Disabled = 1,
+        UnknownStatus = 2
+    };
 
-    }
-    typedef QVector<LoadLoggingCategory> List;
     enum LogType {
         Unknown = 0,
         Off,
@@ -74,6 +75,14 @@ struct LoadLoggingCategory {
         Critical,
         All
     };
+
+    LoadLoggingCategory()
+    {
+        for (int i = LoadLoggingCategory::Unknown; i <= LoadLoggingCategory::All; ++i) {
+            loggingTypes.insert(static_cast<LoadLoggingCategory::LogType>(i), UnknownStatus);
+        }
+    }
+    typedef QVector<LoadLoggingCategory> List;
 
     bool isValid() const
     {
@@ -87,7 +96,7 @@ struct LoadLoggingCategory {
                (loggingTypes == other.loggingTypes);
     }
     QString logName;
-    QHash<LoadLoggingCategory::LogType, bool> loggingTypes;
+    QHash<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;
 };
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
