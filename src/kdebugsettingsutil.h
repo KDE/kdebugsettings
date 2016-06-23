@@ -67,23 +67,7 @@ struct LoadLoggingCategory {
     bool enabled;
     LogTypes type;
     QString logName;
-    struct LoggingInfoType
-    {
-        LoggingInfoType()
-            : enabled(false),
-              type(Unknown)
-        {
-
-        }
-        bool operator ==(const LoggingInfoType &other) const
-        {
-            return (enabled == other.enabled) && (type == other.type);
-        }
-        bool enabled;
-        LoadLoggingCategory::LogType type;
-    };
-
-    QList<LoggingInfoType> loggingTypes;
+    QHash<LoadLoggingCategory::LogType, bool> loggingTypes;
 };
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
