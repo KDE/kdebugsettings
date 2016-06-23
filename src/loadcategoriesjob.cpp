@@ -121,6 +121,9 @@ void LoadCategoriesJob::start()
                     LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
                     if (newType != LoggingCategory::Undefined) {
                         tmp.loggingType = canDisplayType(cat.loggingTypes);
+                        if (tmp.loggingType == LoggingCategory::Off) {
+                            tmp.enabled = false;
+                        }
                         tmp.description = kdeCat.description;
                         tmp.logName = kdeCat.logName;
 
@@ -158,6 +161,7 @@ void LoadCategoriesJob::start()
                         break;
                     case KDebugSettingsUtil::LoadLoggingCategory::Off:
                         tmp.loggingType =LoggingCategory::Off;
+                        tmp.enabled = false;
                         break;
                     case KDebugSettingsUtil::LoadLoggingCategory::Info:
                         tmp.loggingType =LoggingCategory::Info;
