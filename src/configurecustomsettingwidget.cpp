@@ -73,25 +73,25 @@ void ConfigureCustomSettingWidget::slotTextChanged(const QString &text)
 
 void ConfigureCustomSettingWidget::setRule(const QString &rule)
 {
-    const KDebugSettingsUtil::LoadLoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
+    const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(rule);
     mCategoryLineEdit->setText(cat.logName);
     mEnableCategory->setChecked(cat.enabled);
     switch (cat.type) {
-    case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
+    case KDebugSettingsUtil::LineLoggingQtCategory::Unknown:
         break;
-    case KDebugSettingsUtil::LoadLoggingCategory::Info:
+    case KDebugSettingsUtil::LineLoggingQtCategory::Info:
         mCategoryType->setType(LoggingCategory::Info);
         break;
-    case KDebugSettingsUtil::LoadLoggingCategory::Warning:
+    case KDebugSettingsUtil::LineLoggingQtCategory::Warning:
         mCategoryType->setType(LoggingCategory::Warning);
         break;
-    case KDebugSettingsUtil::LoadLoggingCategory::Debug:
+    case KDebugSettingsUtil::LineLoggingQtCategory::Debug:
         mCategoryType->setType(LoggingCategory::Debug);
         break;
-    case KDebugSettingsUtil::LoadLoggingCategory::Critical:
+    case KDebugSettingsUtil::LineLoggingQtCategory::Critical:
         mCategoryType->setType(LoggingCategory::Critical);
         break;
-    case KDebugSettingsUtil::LoadLoggingCategory::All:
+    case KDebugSettingsUtil::LineLoggingQtCategory::All:
         mCategoryType->setType(LoggingCategory::All);
         break;
     }

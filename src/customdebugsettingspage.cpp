@@ -116,9 +116,10 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 LoggingCategory::List CustomDebugSettingsPage::rules()
 {
     LoggingCategory::List lst;
+#if 0 //FIXME
     const int number(mListWidget->count());
     for (int i = 0; i < number; ++i) {
-        const KDebugSettingsUtil::LoadLoggingCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
+        const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             LoggingCategory tmp;
             tmp.enabled = cat.enabled;
@@ -145,6 +146,7 @@ LoggingCategory::List CustomDebugSettingsPage::rules()
             lst.append(tmp);
         }
     }
+#endif
     return lst;
 }
 

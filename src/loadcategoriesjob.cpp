@@ -58,7 +58,8 @@ void LoadCategoriesJob::start()
 
     if (!envPath.isEmpty()) {
         const int number(mCategories.count());
-        LoggingCategory::List qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+        QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
+#if 0 //FIXME
         for (int i = 0; i < number; ++i) {
             KdeLoggingCategory kdeCat = mCategories.at(i);
             bool foundInConfigFile = false;
@@ -95,6 +96,7 @@ void LoadCategoriesJob::start()
             tmp.enabled = cat.enabled;
             mCustomCategories.append(tmp);
         }
+#endif
     }
 }
 

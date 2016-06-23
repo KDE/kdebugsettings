@@ -29,25 +29,51 @@
 namespace KDebugSettingsUtil
 {
 
-struct LoadLoggingCategory {
-    LoadLoggingCategory()
+struct LineLoggingQtCategory {
+    LineLoggingQtCategory()
         : enabled(true),
           type(Unknown)
     {
 
     }
-
-    enum LogType {
-        Unknown = 1,
-        Off = 2,
-        Info = 4,
-        Warning = 8,
-        Debug = 16,
-        Critical = 32,
-        All = 64
+    enum LoggingType {
+        Unknown = 0,
+        Info,
+        Warning,
+        Debug,
+        Critical,
+        All
     };
-    Q_FLAGS(LogTypes)
-    Q_DECLARE_FLAGS(LogTypes, LogType)
+
+    bool isValid() const {
+        return !logName.isEmpty();
+    }
+    bool operator ==(const LineLoggingQtCategory &other) const
+    {
+        return (enabled == other.enabled) &&
+               (type == other.type) &&
+               (logName == other.logName);
+    }
+    bool enabled;
+    LoggingType type;
+    QString logName;
+};
+
+struct LoadLoggingCategory {
+    LoadLoggingCategory()
+    {
+
+    }
+    typedef QVector<LoadLoggingCategory> List;
+    enum LogType {
+        Unknown = 0,
+        Off,
+        Info,
+        Warning,
+        Debug,
+        Critical,
+        All
+    };
 
     bool isValid() const
     {
@@ -56,16 +82,10 @@ struct LoadLoggingCategory {
 
     bool operator ==(const LoadLoggingCategory &other) const
     {
-        qDebug() << " enabled " << enabled << " other.enabled :" << other.enabled;
         qDebug() << " logname " << logName << " other.logName :" << other.logName;
-        qDebug() << " type" << type << " other.type " << other.type;
-        return (enabled == other.enabled) &&
-               (type == other.type) &&
-               (logName == other.logName) &&
+        return (logName == other.logName) &&
                (loggingTypes == other.loggingTypes);
     }
-    bool enabled;
-    LogTypes type;
     QString logName;
     QHash<LoadLoggingCategory::LogType, bool> loggingTypes;
 };
@@ -75,9 +95,12 @@ void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &ca
 KdeLoggingCategory parseLineKdeLoggingCategory(QString line);
 KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
 
-LoggingCategory::List readLoggingQtCategories(const QString &filename);
-KDebugSettingsUtil::LoadLoggingCategory parseLineLoggingQtCategory(const QString &line);
+QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
+KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
 }
+
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
+
+Q_DECLARE_METATYPE(KDebugSettingsUtil::LineLoggingQtCategory::LoggingType)
 
 #endif // KDEBUGSETTINGSUTIL_H
