@@ -96,7 +96,7 @@ struct LoadLoggingCategory {
                (loggingTypes == other.loggingTypes);
     }
     QString logName;
-    QHash<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;
+    QMap<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;
 };
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);

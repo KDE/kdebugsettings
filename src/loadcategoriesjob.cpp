@@ -47,7 +47,7 @@ LoggingCategory::LoggingType updateLoggingType(const LoggingCategory &cat)
 
 
 
-LoggingCategory::LoggingType canDisplayType(const QHash<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> &types)
+LoggingCategory::LoggingType canDisplayType(const QMap<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> &types)
 {
     KDebugSettingsUtil::LoadLoggingCategory::Status warning = types.value(KDebugSettingsUtil::LoadLoggingCategory::Warning);
     KDebugSettingsUtil::LoadLoggingCategory::Status debug = types.value(KDebugSettingsUtil::LoadLoggingCategory::Debug);
@@ -149,7 +149,7 @@ void LoadCategoriesJob::start()
         qDebug()<<" KEEP "<< qtCategories.count();
         Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
 
-            QHashIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
+            QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
             while (i.hasNext()) {
                 i.next();
                 if (i.value() != KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {

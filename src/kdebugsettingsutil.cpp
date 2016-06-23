@@ -159,7 +159,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
 {
     //Code based on src/corelib/io/qloggingregistry.cpp
     QFile file(filename);
-    QHash<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
+    QMap<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
     if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
     } else {

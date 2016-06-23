@@ -350,6 +350,10 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     qtKdeCategories.clear();
     customCategories.clear();
     customTmp.logName = QStringLiteral("toto");
+    customTmp.loggingType = LoggingCategory::Info;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+    customTmp.logName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Warning;
     customTmp.enabled = false;
     customCategories.append(customTmp);
@@ -358,10 +362,6 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.enabled = false;
     customCategories.append(customTmp);
 
-    customTmp.logName = QStringLiteral("toto");
-    customTmp.loggingType = LoggingCategory::Info;
-    customTmp.enabled = false;
-    customCategories.append(customTmp);
 
     customTmp.logName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Critical;
