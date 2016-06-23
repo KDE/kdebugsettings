@@ -117,6 +117,7 @@ QString ConfigureCustomSettingWidget::rule() const
             ruleStr += QStringLiteral(".critical");
             break;
         case LoggingCategory::Off:
+        case LoggingCategory::Undefined:
             break;
         }
 
