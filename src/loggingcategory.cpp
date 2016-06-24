@@ -66,6 +66,7 @@ QString LoggingCategory::createCustomRule()
         str = logName + QStringLiteral(".critical=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
         break;
     }
+    case Undefined:
     case Off: {
         str = QString();
         break;
@@ -79,6 +80,9 @@ QString LoggingCategory::createRule()
 {
     QString str;
     switch (loggingType) {
+    case Undefined: {
+        break;
+    }
     case All: {
         str = logName + QLatin1String("=true\n");
         break;

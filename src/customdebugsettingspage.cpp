@@ -87,6 +87,7 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
         QString ruleStr;
         ruleStr = cat.logName;
         switch (cat.loggingType) {
+        case LoggingCategory::Undefined:
         case LoggingCategory::All:
             break;
         case LoggingCategory::Info:
