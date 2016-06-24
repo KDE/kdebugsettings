@@ -141,7 +141,7 @@ void LoadCategoriesJob::start()
                 LoggingCategory tmp;
                 tmp.description = kdeCat.description;
                 tmp.logName = kdeCat.logName;
-                //FIXME tmp.loggingType = canDisplayType(tmp);
+                tmp.loggingType = LoggingCategory::Info;
                 mQtKdeCategories.append(tmp);
             }
         }
