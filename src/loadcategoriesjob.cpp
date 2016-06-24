@@ -146,7 +146,7 @@ void LoadCategoriesJob::start()
             }
         }
 
-        qDebug()<<" KEEP "<< qtCategories.count();
+        //qDebug()<<" KEEP "<< qtCategories.count();
         Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
 
             QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);

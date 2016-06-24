@@ -26,7 +26,7 @@
 #include <QFile>
 #include <QDebug>
 
-#define DEBUG_RESULT 1
+//#define DEBUG_RESULT 1
 
 LoadCategoriesJobTest::LoadCategoriesJobTest(QObject *parent)
     : QObject(parent)

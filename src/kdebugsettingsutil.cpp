@@ -186,8 +186,8 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
             }
             if (rulesSections) {
                 KDebugSettingsUtil::LineLoggingQtCategory cat = parseLineLoggingQtCategory(line);
-                qDebug() << " line " << line;
-                qDebug() << "enable " << cat.enabled << " valid : " << cat.isValid();
+                //qDebug() << " line " << line;
+                //qDebug() << "enable " << cat.enabled << " valid : " << cat.isValid();
                 if (cat.isValid()) {
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
