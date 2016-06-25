@@ -45,7 +45,8 @@ struct LineLoggingQtCategory {
         All
     };
 
-    bool isValid() const {
+    bool isValid() const
+    {
         return !logName.isEmpty();
     }
     bool operator ==(const LineLoggingQtCategory &other) const

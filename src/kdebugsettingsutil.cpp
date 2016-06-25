@@ -192,7 +192,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
                         LoadLoggingCategory::LogType type;
-                        switch(cat.type) {
+                        switch (cat.type) {
                         case LineLoggingQtCategory::Unknown:
                             type = LoadLoggingCategory::Unknown;
                             break;
@@ -221,7 +221,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                         hashLoadLoggingCategories[cat.logName] = nextCat;
                     } else {
                         nextCat.logName = cat.logName;
-                        switch(cat.type) {
+                        switch (cat.type) {
                         case LineLoggingQtCategory::Unknown:
                             nextCat.loggingTypes.insert(LoadLoggingCategory::Unknown, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;

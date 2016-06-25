@@ -362,16 +362,14 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.enabled = false;
     customCategories.append(customTmp);
 
-
     customTmp.logName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = false;
     customCategories.append(customTmp);
 
     QTest::newRow("testwithoutcategories") << QStringLiteral("testwithoutcategories.ini") << QString() << false
-            << customCategories
-            << qtKdeCategories;
-
+                                           << customCategories
+                                           << qtKdeCategories;
 
     qtKdeCategories.clear();
     customCategories.clear();
@@ -406,7 +404,6 @@ void LoadCategoriesJobTest::shouldReadRules()
     job.setCategories(listKdeLoggingCategories);
     job.start();
 
-
 #ifdef DEBUG_RESULT
     Q_FOREACH (const LoggingCategory &cat, job.customCategories()) {
         qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
@@ -422,7 +419,6 @@ void LoadCategoriesJobTest::shouldReadRules()
     QCOMPARE(job.customCategories(), customcategories);
 
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
-
 
 #ifdef DEBUG_RESULT
     Q_FOREACH (const LoggingCategory &cat, job.qtKdeCategories()) {
