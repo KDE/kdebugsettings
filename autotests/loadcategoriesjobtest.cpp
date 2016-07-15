@@ -132,6 +132,12 @@ void LoadCategoriesJobTest::shouldReadRules_data()
             << LoggingCategory::List()
             << qtKdeCategories;
 
+    // Duplicate entries with duplicate categories
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true);
+    QTest::newRow("duplicates") << QStringLiteral("duplicates.ini") << QStringLiteral("duplicates.categories") << false
+            << LoggingCategory::List()
+            << qtKdeCategories;
+
     // Test with extract elements
     LoggingCategory::List customCategories;
     LoggingCategory customTmp;
