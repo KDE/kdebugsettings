@@ -264,7 +264,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     QTest::newRow("oneelementonelinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
             << LoggingCategory::List()
             << qtKdeCategories;
-    QTest::newRow("oneelementtwolinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
+    QTest::newRow("oneelementtwolinecritical") << QStringLiteral("oneelementtwolinecritical.ini") << QStringLiteral("correct.categories") << false
             << LoggingCategory::List()
             << qtKdeCategories;
 
