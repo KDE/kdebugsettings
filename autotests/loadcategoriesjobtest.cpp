@@ -56,68 +56,23 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     QTest::newRow("commentedlines") << QStringLiteral("commentedrulefiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
     QTest::newRow("rulesbeforesection") << QStringLiteral("rulebeforerulessectionfiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
 
+    const LoggingCategory ikwsInfo(QStringLiteral("KUriFilter IKWS (KIO)"), QStringLiteral("org.kde.kurifilter-ikws"), LoggingCategory::Info, true);
+    const LoggingCategory shorturiInfo(QStringLiteral("KUriFilter Shorturi (KIO)"), QStringLiteral("org.kde.kurifilter-shorturi"), LoggingCategory::Info, true);
+    const LoggingCategory bluezQtInfo(QStringLiteral("BluezQt"), QStringLiteral("BluezQt"), LoggingCategory::Info, true);
+    const LoggingCategory kauthInfo(QStringLiteral("KAuth"), QStringLiteral("kf5.kauth"), LoggingCategory::Info, true);
+
     LoggingCategory::List qtKdeCategories;
     qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Info, true));
-
-    LoggingCategory tmp;
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(ikwsInfo);
+    qtKdeCategories.append(shorturiInfo);
+    qtKdeCategories.append(bluezQtInfo);
+    qtKdeCategories.append(kauthInfo);
 
     QTest::newRow("emptywithlistkdeloggingcategories") << QStringLiteral("rulebeforerulessectionfiles.ini") << QStringLiteral("correct.categories") << false
             << LoggingCategory::List()
             << qtKdeCategories;
 
-    qtKdeCategories.clear();
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::Off;
-    tmp.enabled = false;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Off, false);
 
     QTest::newRow("oneelementoff") << QStringLiteral("oneelementoff.ini") << QStringLiteral("correct.categories") << false
                                    << LoggingCategory::List()
@@ -127,32 +82,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                           << LoggingCategory::List()
                                           << qtKdeCategories;
 
-    qtKdeCategories.clear();
-    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true));
-
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true);
 
     QTest::newRow("oneelementall") << QStringLiteral("oneelementall.ini") << QStringLiteral("correct.categories") << false
                                    << LoggingCategory::List()
@@ -162,32 +92,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                           << LoggingCategory::List()
                                           << qtKdeCategories;
 
-    qtKdeCategories.clear();
-    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Info, true));
-
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Info, true);
 
     QTest::newRow("oneelementinfo") << QStringLiteral("oneelementinfo.ini") << QStringLiteral("correct.categories") << false
                                     << LoggingCategory::List()
@@ -197,63 +102,13 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                     << LoggingCategory::List()
                                     << qtKdeCategories;
 
-    qtKdeCategories.clear();
-    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Warning, true));
-
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Warning, true);
 
     QTest::newRow("oneelementwarning") << QStringLiteral("oneelementwarning.ini") << QStringLiteral("correct.categories") << false
                                        << LoggingCategory::List()
                                        << qtKdeCategories;
 
-    qtKdeCategories.clear();
-    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Critical, true));
-
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Critical, true);
 
     QTest::newRow("oneelementcritical") << QStringLiteral("oneelementcritical.ini") << QStringLiteral("correct.categories") << false
                                         << LoggingCategory::List()
@@ -266,36 +121,16 @@ void LoadCategoriesJobTest::shouldReadRules_data()
             << LoggingCategory::List()
             << qtKdeCategories;
 
-    qtKdeCategories.clear();
-    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, true));
-
-    tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KUriFilter Shorturi (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kurifilter-shorturi");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("BluezQt");
-    tmp.logName = QStringLiteral("BluezQt");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
-
-    tmp.description = QStringLiteral("KAuth");
-    tmp.logName = QStringLiteral("kf5.kauth");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, true);
 
     QTest::newRow("oneelementdebug") << QStringLiteral("oneelementdebug.ini") << QStringLiteral("correct.categories") << false
                                      << LoggingCategory::List()
                                      << qtKdeCategories;
+    // Duplicate entries
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true);
+    QTest::newRow("duplicates") << QStringLiteral("duplicates.ini") << QStringLiteral("correct.categories") << false
+            << LoggingCategory::List()
+            << qtKdeCategories;
 
     // Test with extract elements
     LoggingCategory::List customCategories;
@@ -304,6 +139,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = true;
     customCategories.append(customTmp);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, true);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
             << customCategories
@@ -354,7 +190,6 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     QTest::newRow("testwithoutcategorieswarning") << QStringLiteral("testwithoutcategorieswarning.ini") << QString() << false
             << customCategories
             << qtKdeCategories;
-
 }
 
 void LoadCategoriesJobTest::shouldReadRules()
