@@ -25,8 +25,6 @@
 #include <QString>
 
 struct LoggingCategory {
-    LoggingCategory();
-
     enum LoggingType {
         All = 0,
         Info,
@@ -37,12 +35,19 @@ struct LoggingCategory {
         Undefined
     };
 
+    LoggingCategory();
+
+    explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, bool enabled)
+        : description(description), logName(logName), loggingType(loggingType), enabled(enabled) {}
+
+
     typedef QVector<LoggingCategory> List;
     bool operator ==(const LoggingCategory &other) const;
     bool isValid() const;
 
-    QString createRule();
-    QString createCustomRule();
+    QString createRule() const;
+    QString createCustomRule() const;
+
     QString description;
     QString logName;
     LoggingType loggingType;

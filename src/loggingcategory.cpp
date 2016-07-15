@@ -40,7 +40,7 @@ bool LoggingCategory::isValid() const
     return !logName.isEmpty();
 }
 
-QString LoggingCategory::createCustomRule()
+QString LoggingCategory::createCustomRule() const
 {
     QString str;
     switch (loggingType) {
@@ -74,7 +74,7 @@ QString LoggingCategory::createCustomRule()
 
 }
 
-QString LoggingCategory::createRule()
+QString LoggingCategory::createRule() const
 {
     QString str;
     switch (loggingType) {

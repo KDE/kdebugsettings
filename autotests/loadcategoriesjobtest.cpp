@@ -59,13 +59,9 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     QTest::newRow("rulesbeforesection") << QStringLiteral("rulebeforerulessectionfiles.ini") << QString() << false << LoggingCategory::List() << LoggingCategory::List();
 
     LoggingCategory::List qtKdeCategories;
-    LoggingCategory tmp;
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Info, true));
 
+    LoggingCategory tmp;
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
     tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
     tmp.loggingType = LoggingCategory::Info;
@@ -134,11 +130,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                           << qtKdeCategories;
 
     qtKdeCategories.clear();
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::All;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true));
 
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
     tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
@@ -173,11 +165,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                           << qtKdeCategories;
 
     qtKdeCategories.clear();
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::Info;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Info, true));
 
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
     tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
@@ -212,11 +200,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                     << qtKdeCategories;
 
     qtKdeCategories.clear();
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::Warning;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Warning, true));
 
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
     tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
@@ -247,11 +231,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                        << qtKdeCategories;
 
     qtKdeCategories.clear();
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::Critical;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Critical, true));
 
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
     tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
@@ -289,11 +269,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
             << qtKdeCategories;
 
     qtKdeCategories.clear();
-    tmp.description = QStringLiteral("KPasswdServer (KIO)");
-    tmp.logName = QStringLiteral("org.kde.kio.kpasswdserver");
-    tmp.loggingType = LoggingCategory::Debug;
-    tmp.enabled = true;
-    qtKdeCategories.append(tmp);
+    qtKdeCategories.append(LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, true));
 
     tmp.description = QStringLiteral("KUriFilter IKWS (KIO)");
     tmp.logName = QStringLiteral("org.kde.kurifilter-ikws");
