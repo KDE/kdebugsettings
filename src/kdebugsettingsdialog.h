@@ -52,7 +52,7 @@ private:
     void readCategoriesFiles(const QString &path);
     void saveConfig();
     void readConfig();
-    KdeLoggingCategory::List mCategories;
+    KdeLoggingCategory::List mCategoriesList;
     RenameCategory::List mRenameCategoriesList;
     QTabWidget *mTabWidget;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;

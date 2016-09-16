@@ -124,7 +124,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("kde.categories"));
-    KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategories, false);
+    KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategoriesList, false);
 
     // Load *.categories file in QStandardPaths::ConfigLocation for kde apps.
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
@@ -132,7 +132,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         Q_FOREACH (const QString &file, fileNames) {
             if (file != QStringLiteral("kde.categories")) {
-                KDebugSettingsUtil::readLoggingCategories(dir + file, mCategories, true);
+                KDebugSettingsUtil::readLoggingCategories(dir + file, mCategoriesList, true);
             }
         }
     }
@@ -142,7 +142,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     Q_FOREACH (const QString &dir, dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         Q_FOREACH (const QString &file, fileNames) {
-            KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, mCategories, true);
+            KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, mCategoriesList, true);
         }
     }
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
@@ -158,7 +158,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     // qt logging.ini
     LoadCategoriesJob job;
     job.setFileName(path);
-    job.setCategories(mCategories);
+    job.setCategories(mCategoriesList);
     job.start();
 
     const LoggingCategory::List customCategories = job.customCategories();
@@ -221,7 +221,7 @@ void KDebugSettingsDialog::slotInsertCategories()
 {
     const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"));
     if (!path.isEmpty()) {
-        const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategories);
+        const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategoriesList);
         LoggingCategory::List newCategories;
         Q_FOREACH (const KdeLoggingCategory &cat, insertCategoriesList) {
             LoggingCategory loggingCat;
