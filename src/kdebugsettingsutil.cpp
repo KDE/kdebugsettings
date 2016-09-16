@@ -31,7 +31,7 @@ RenameCategory KDebugSettingsUtil::parseRenameCategories(QString line)
 KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
     KdeLoggingCategory category;
-    int pos = line.indexOf(QStringLiteral("#"));
+    int pos = line.indexOf(QLatin1Char('#'));
     if (pos != -1) {
         line.truncate(pos);
         line = line.simplified();
