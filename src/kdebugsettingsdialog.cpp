@@ -245,7 +245,7 @@ void KDebugSettingsDialog::slotSaveAs()
 
 void KDebugSettingsDialog::slotLoad()
 {
-    const QString path = QFileDialog::getOpenFileName(this, i18n("Load"));
+    const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"));
     if (!path.isEmpty()) {
         readCategoriesFiles(path);
     }
