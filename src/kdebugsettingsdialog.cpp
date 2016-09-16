@@ -156,6 +156,9 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
             KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, mCategoriesList, true);
         }
     }
+
+    //TODO add load rename file from external kde apps.
+
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
     if (!rulesFilePath.isEmpty()) {
         const QList<KDebugSettingsUtil::LoadLoggingCategory> envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
