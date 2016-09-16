@@ -22,7 +22,7 @@
 #include "kdebugsettings_debug.h"
 #include <QFile>
 
-RenameCategory KDebugSettingsUtil::parseRenameCategories(QString line)
+RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line)
 {
     RenameCategory category;
     int pos = line.indexOf(QLatin1Char('#'));
@@ -62,7 +62,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const RenameCategory category = parseRenameCategories(data);
+            const RenameCategory category = parseRenameCategory(data);
             if (category.isValid()) {
                 insertCategories.append(category);
             }
