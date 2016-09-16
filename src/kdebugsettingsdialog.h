@@ -24,6 +24,7 @@
 #include <QDialog>
 #include <QVector>
 #include "kdeloggingcategory.h"
+#include "renamecategory.h"
 class QTabWidget;
 class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
@@ -52,6 +53,7 @@ private:
     void saveConfig();
     void readConfig();
     KdeLoggingCategory::List mCategories;
+    RenameCategory::List mRenameCategoriesList;
     QTabWidget *mTabWidget;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *mCustomSettingsPage;
