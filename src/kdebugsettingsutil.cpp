@@ -25,6 +25,27 @@
 RenameCategory KDebugSettingsUtil::parseRenameCategories(QString line)
 {
     RenameCategory category;
+    int pos = line.indexOf(QLatin1Char('#'));
+    if (pos != -1) {
+        line.truncate(pos);
+        line = line.simplified();
+    }
+
+    if (line.isEmpty()) {
+        return category;
+    }
+    line = line.simplified();
+    const int space = line.indexOf(QLatin1Char(' '));
+    if (space == -1) {
+        qCWarning(KDEBUGSETTINGS_LOG) << "No space:" << line << endl;
+        return category;
+    }
+
+    const QString originalName = line.left(space);
+
+    const QString newName = line.mid(space).simplified();
+    category.originalName = originalName;
+    category.newName = newName;
     return category;
 }
 
