@@ -49,6 +49,28 @@ RenameCategory KDebugSettingsUtil::parseRenameCategories(QString line)
     return category;
 }
 
+RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &filename)
+{
+    RenameCategory::List insertCategories;
+
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
+    } else {
+        QString data;
+        QTextStream ts(&file);
+        ts.setCodec("ISO-8859-1");
+        while (!ts.atEnd()) {
+            data = ts.readLine().simplified();
+            const RenameCategory category = parseRenameCategories(data);
+            if (category.isValid()) {
+                insertCategories.append(category);
+            }
+        }
+    }
+    return insertCategories;
+}
+
 KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
     KdeLoggingCategory category;

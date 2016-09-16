@@ -110,7 +110,7 @@ KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filena
 QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
 KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
 RenameCategory parseRenameCategories(QString line);
-
+RenameCategory::List readRenameCategories(const QString &filename);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
