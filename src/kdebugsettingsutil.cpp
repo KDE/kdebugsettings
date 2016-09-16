@@ -22,6 +22,11 @@
 #include "kdebugsettings_debug.h"
 #include <QFile>
 
+RenameCategory KDebugSettingsUtil::parseRenameCategories(QString line)
+{
+    return {};
+}
+
 KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
     KdeLoggingCategory category;

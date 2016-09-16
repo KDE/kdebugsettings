@@ -17,6 +17,7 @@ set(full_source_file
     ../src/loggingcategory.cpp
     ../src/kdeloggingcategory.cpp
     ../src/loadcategoriesjob.cpp
+    ../src/renamecategory.cpp
     ${CMAKE_BINARY_DIR}/src/kdebugsettings_debug.cpp
     )
 
@@ -51,3 +52,4 @@ add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/loggingcategory.cpp;.
 add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")
 add_unittest( loggingcategorytest.cpp "../src/loggingcategory.cpp")
 add_unittest( loadcategoriesjobtest.cpp "../src/loadcategoriesjob.cpp;../src/loggingcategory.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( renamecategorytest.cpp "../src/renamecategory.cpp")
