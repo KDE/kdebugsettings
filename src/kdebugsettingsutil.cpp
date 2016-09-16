@@ -24,7 +24,8 @@
 
 RenameCategory KDebugSettingsUtil::parseRenameCategories(QString line)
 {
-    return {};
+    RenameCategory category;
+    return category;
 }
 
 KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
