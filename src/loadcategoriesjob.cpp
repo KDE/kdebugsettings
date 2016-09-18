@@ -103,84 +103,79 @@ void LoadCategoriesJob::start()
     mCustomCategories.clear();
     mQtKdeCategories.clear();
     mFoundOverrideRule = false;
+    const int number(mCategories.count());
+    QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
+    for (int i = 0; i < number; ++i) {
+        KdeLoggingCategory kdeCat = mCategories.at(i);
+        bool foundInConfigFile = false;
+        Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
+            if (cat.logName == kdeCat.logName) {
 
-    const QString envPath = mFileName;
-
-    if (!envPath.isEmpty()) {
-        const int number(mCategories.count());
-        QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories = KDebugSettingsUtil::readLoggingQtCategories(envPath);
-        for (int i = 0; i < number; ++i) {
-            KdeLoggingCategory kdeCat = mCategories.at(i);
-            bool foundInConfigFile = false;
-            Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
-                if (cat.logName == kdeCat.logName) {
-
-                    LoggingCategory tmp;
-                    LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
-                    if (newType != LoggingCategory::Undefined) {
-                        tmp.loggingType = canDisplayType(cat.loggingTypes);
-                        if (tmp.loggingType == LoggingCategory::Off) {
-                            tmp.enabled = false;
-                        }
-                        tmp.description = kdeCat.description;
-                        tmp.logName = kdeCat.logName;
-
-                        mQtKdeCategories.append(tmp);
-                        foundInConfigFile = true;
-                        qtCategories.removeAll(cat);
-                        break;
+                LoggingCategory tmp;
+                LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
+                if (newType != LoggingCategory::Undefined) {
+                    tmp.loggingType = canDisplayType(cat.loggingTypes);
+                    if (tmp.loggingType == LoggingCategory::Off) {
+                        tmp.enabled = false;
                     }
-                }
-                if (cat.logName == QLatin1String("*")) {
-                    mFoundOverrideRule = true;
+                    tmp.description = kdeCat.description;
+                    tmp.logName = kdeCat.logName;
+
+                    mQtKdeCategories.append(tmp);
+                    foundInConfigFile = true;
+                    qtCategories.removeAll(cat);
+                    break;
                 }
             }
-            if (!foundInConfigFile) {
-                LoggingCategory tmp;
-                tmp.description = kdeCat.description;
-                tmp.logName = kdeCat.logName;
-                tmp.loggingType = LoggingCategory::Info;
-                mQtKdeCategories.append(tmp);
+            if (cat.logName == QLatin1String("*")) {
+                mFoundOverrideRule = true;
             }
         }
+        if (!foundInConfigFile) {
+            LoggingCategory tmp;
+            tmp.description = kdeCat.description;
+            tmp.logName = kdeCat.logName;
+            tmp.loggingType = LoggingCategory::Info;
+            mQtKdeCategories.append(tmp);
+        }
+    }
 
-        //qDebug()<<" KEEP "<< qtCategories.count();
-        Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
+    //qDebug()<<" KEEP "<< qtCategories.count();
+    Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
 
-            QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
-            while (i.hasNext()) {
-                i.next();
-                if (i.value() != KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
-                    LoggingCategory tmp;
-                    tmp.logName = cat.logName;
-                    switch (i.key()) {
-                    case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
-                        tmp.loggingType = LoggingCategory::Undefined;
-                        break;
-                    case KDebugSettingsUtil::LoadLoggingCategory::Off:
-                        tmp.loggingType = LoggingCategory::Off;
-                        tmp.enabled = false;
-                        break;
-                    case KDebugSettingsUtil::LoadLoggingCategory::Info:
-                        tmp.loggingType = LoggingCategory::Info;
-                        break;
-                    case KDebugSettingsUtil::LoadLoggingCategory::Warning:
-                        tmp.loggingType = LoggingCategory::Warning;
-                        break;
-                    case KDebugSettingsUtil::LoadLoggingCategory::Debug:
-                        tmp.loggingType = LoggingCategory::Debug;
-                        break;
-                    case KDebugSettingsUtil::LoadLoggingCategory::Critical:
-                        tmp.loggingType = LoggingCategory::Critical;
-                        break;
-                    case KDebugSettingsUtil::LoadLoggingCategory::All:
-                        tmp.loggingType = LoggingCategory::All;
-                        break;
-                    }
-                    tmp.enabled = (i.value() == KDebugSettingsUtil::LoadLoggingCategory::Enabled);
-                    mCustomCategories.append(tmp);
-
+        QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
+        while (i.hasNext()) {
+            i.next();
+            if (i.value() != KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
+                LoggingCategory tmp;
+                tmp.logName = cat.logName;
+                switch (i.key()) {
+                case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
+                    tmp.loggingType = LoggingCategory::Undefined;
+                    break;
+                case KDebugSettingsUtil::LoadLoggingCategory::Off:
+                    tmp.loggingType = LoggingCategory::Off;
+                    tmp.enabled = false;
+                    break;
+                case KDebugSettingsUtil::LoadLoggingCategory::Info:
+                    tmp.loggingType = LoggingCategory::Info;
+                    break;
+                case KDebugSettingsUtil::LoadLoggingCategory::Warning:
+                    tmp.loggingType = LoggingCategory::Warning;
+                    break;
+                case KDebugSettingsUtil::LoadLoggingCategory::Debug:
+                    tmp.loggingType = LoggingCategory::Debug;
+                    break;
+                case KDebugSettingsUtil::LoadLoggingCategory::Critical:
+                    tmp.loggingType = LoggingCategory::Critical;
+                    break;
+                case KDebugSettingsUtil::LoadLoggingCategory::All:
+                    tmp.loggingType = LoggingCategory::All;
+                    break;
                 }
+                tmp.enabled = (i.value() == KDebugSettingsUtil::LoadLoggingCategory::Enabled);
+                mCustomCategories.append(tmp);
+
             }
         }
     }
