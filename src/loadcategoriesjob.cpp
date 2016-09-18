@@ -191,6 +191,11 @@ void LoadCategoriesJob::setCategories(const KdeLoggingCategory::List &categories
     mCategories = categories;
 }
 
+void LoadCategoriesJob::setRenamedCategories(const RenameCategory::List &renameCategories)
+{
+    mRenameCategories = renameCategories;
+}
+
 LoggingCategory::List LoadCategoriesJob::customCategories() const
 {
     return mCustomCategories;

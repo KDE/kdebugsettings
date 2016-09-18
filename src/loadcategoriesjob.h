@@ -23,6 +23,7 @@
 
 #include "kdeloggingcategory.h"
 #include "loggingcategory.h"
+#include "renamecategory.h"
 
 class LoadCategoriesJob
 {
@@ -30,6 +31,7 @@ public:
     LoadCategoriesJob();
     void start();
     void setCategories(const KdeLoggingCategory::List &categories);
+    void setRenamedCategories(const RenameCategory::List &renameCategories);
 
     LoggingCategory::List customCategories() const;
 
@@ -42,6 +44,7 @@ private:
     KdeLoggingCategory::List mCategories;
     LoggingCategory::List mCustomCategories;
     LoggingCategory::List mQtKdeCategories;
+    RenameCategory::List mRenameCategories;
     QString mFileName;
     bool mFoundOverrideRule;
 };
