@@ -126,6 +126,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("kde.categories"));
     KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategoriesList, false);
 
+    mRenameCategoriesList.clear();
     // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, dirs) {
