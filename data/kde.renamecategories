@@ -1,0 +1,15 @@
+# pim module
+log_kmbox org.kde.pim.kmbox
+log_ldap org.kde.pim.ldap
+log_kimap org.kde.pim.kimap
+log_kontactinterface org.kde.pim.kontactinterface
+log_kidentitymanagement org.kde.pim.kidentitymanagement
+log_kcontacts org.kde.pim.kcontacts
+log_mailtransport org.kde.pim.mailtransport
+log_kcalcore org.kde.pim.kcalcore
+log_kcalutils org.kde.pim.kcalutils
+log_ktnef org.kde.pim.ktnef
+log_kblog org.kde.pim.kblog
+log_kalarm org.kde.pim.kalarm
+log_kxmlrpcclient org.kde.pim.kxmlrpcclient
+log_akonadicalendar org.kde.pim.akonadicalendar

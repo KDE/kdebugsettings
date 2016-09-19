@@ -45,5 +45,6 @@ if (BUILD_TESTING)
    add_subdirectory( autotests )
 endif()
 install( FILES data/kde.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES data/kde.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
