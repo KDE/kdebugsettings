@@ -179,6 +179,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     LoadCategoriesJob job;
     job.setFileName(path);
     job.setCategories(mCategoriesList);
+    job.setRenamedCategories(mRenameCategoriesList);
     job.start();
 
     const LoggingCategory::List customCategories = job.customCategories();

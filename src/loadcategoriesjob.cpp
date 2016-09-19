@@ -104,11 +104,23 @@ void LoadCategoriesJob::start()
     mQtKdeCategories.clear();
     mFoundOverrideRule = false;
     const int number(mCategories.count());
-    QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
+    const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
+    QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories;
+    Q_FOREACH (KDebugSettingsUtil::LoadLoggingCategory cat, originalQtCategories) {
+        Q_FOREACH(const RenameCategory &catRenamed, mRenameCategories) {
+            if (cat.logName == catRenamed.originalName) {
+                cat.logName = catRenamed.newName;
+                break;
+            }
+        }
+        qtCategories.append(cat);
+    }
+
     for (int i = 0; i < number; ++i) {
         KdeLoggingCategory kdeCat = mCategories.at(i);
+
         bool foundInConfigFile = false;
-        Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
+        Q_FOREACH (KDebugSettingsUtil::LoadLoggingCategory cat, qtCategories) {
             if (cat.logName == kdeCat.logName) {
 
                 LoggingCategory tmp;
