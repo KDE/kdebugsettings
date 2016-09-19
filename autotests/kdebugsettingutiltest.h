@@ -39,6 +39,9 @@ private Q_SLOTS:
     void shouldReadLoadKdeCategories_data();
     void shouldReadLoadKdeCategories();
 
+    void shouldReadRenameCategories_data();
+    void shouldReadRenameCategories();
+
 };
 
 #endif // KDEBUGSETTINGUTILTEST_H

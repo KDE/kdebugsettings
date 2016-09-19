@@ -126,4 +126,24 @@ void KDebugSettingUtilTest::shouldReadLoadKdeCategories()
     QCOMPARE(lst.count(), numberofcategories);
 }
 
+void KDebugSettingUtilTest::shouldReadRenameCategories_data()
+{
+    QTest::addColumn<QString>("filename");
+    QTest::addColumn<int>("numberofrenamecategories");
+    QTest::newRow("empty") << QStringLiteral("empty.renamecategories") << 0;
+    QTest::newRow("2renamed") << QStringLiteral("tworename.renamecategories") << 2;
+    QTest::newRow("withnewline") << QStringLiteral("newline.renamecategories") << 2;
+}
+
+void KDebugSettingUtilTest::shouldReadRenameCategories()
+{
+    QFETCH(QString, filename);
+    QFETCH(int, numberofrenamecategories);
+    const QString path = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
+    QFile file(path);
+    QVERIFY(file.exists());
+    const RenameCategory::List lst = KDebugSettingsUtil::readRenameCategories(path);
+    QCOMPARE(lst.count(), numberofrenamecategories);
+}
+
 QTEST_GUILESS_MAIN(KDebugSettingUtilTest)
