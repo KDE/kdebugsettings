@@ -53,6 +53,7 @@ org.kde.pim.kontactinterface kontactinterface (pim lib)
 org.kde.pim.kxmlrpcclient kxmlrpcclient (pim lib)
 org.kde.pim.ldap ldap (pim lib)
 org.kde.pim.akonadicalendar akonadicalendar (pim lib)
+org.kde.pim.akonadicontact akonadicontact (pim lib)
 log_akonadicore akonadicore
 
 #kdeedu
