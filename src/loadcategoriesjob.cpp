@@ -97,9 +97,6 @@ LoggingCategory::LoggingType canDisplayType(const QMap<KDebugSettingsUtil::LoadL
 
 void LoadCategoriesJob::start()
 {
-    if (mFileName.isEmpty()) {
-        return;
-    }
     mCustomCategories.clear();
     mQtKdeCategories.clear();
     mFoundOverrideRule = false;

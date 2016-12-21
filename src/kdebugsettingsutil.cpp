@@ -21,6 +21,7 @@
 #include "kdebugsettingsutil.h"
 #include "kdebugsettings_debug.h"
 #include <QFile>
+#include <QFileInfo>
 
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line)
 {
@@ -207,6 +208,10 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
 QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
 {
     //Code based on src/corelib/io/qloggingregistry.cpp
+    QFileInfo fi(filename);
+    if (!fi.exists()) {
+        return {};
+    }
     QFile file(filename);
     QMap<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
     if (!file.open(QIODevice::ReadOnly)) {
