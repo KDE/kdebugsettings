@@ -98,7 +98,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
     if (clearList) {
         clear();
     }
-    Q_FOREACH (const LoggingCategory &cat, list) {
+    for (const LoggingCategory &cat : list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);

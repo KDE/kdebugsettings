@@ -83,7 +83,7 @@ void CustomDebugSettingsPage::updateButtons()
 
 void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 {
-    Q_FOREACH (const LoggingCategory &cat, list) {
+    for (const LoggingCategory &cat : list) {
         QString ruleStr;
         ruleStr = cat.logName;
         switch (cat.loggingType) {

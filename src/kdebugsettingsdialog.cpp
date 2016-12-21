@@ -131,7 +131,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
-        Q_FOREACH (const QString &file, fileNames) {
+        for (const QString &file : fileNames) {
             mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
         }
     }
@@ -139,7 +139,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
-        Q_FOREACH (const QString &file, fileNames) {
+        for (const QString &file : fileNames) {
             mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
         }
     }
