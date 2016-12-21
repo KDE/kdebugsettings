@@ -207,16 +207,13 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
 
 QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
 {
-    //Code based on src/corelib/io/qloggingregistry.cpp
-    QFileInfo fi(filename);
-    if (!fi.exists()) {
+    if (filename.isEmpty()) {
         return {};
     }
+    //Code based on src/corelib/io/qloggingregistry.cpp
     QFile file(filename);
     QMap<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
-    if (!file.open(QIODevice::ReadOnly)) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
-    } else {
+    if (file.open(QIODevice::ReadOnly)) {
         QTextStream ts(&file);
         QString _section;
         bool rulesSections = false;
