@@ -115,7 +115,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
             const KdeLoggingCategory category = parseLineKdeLoggingCategory(data);
             if (category.isValid()) {
                 bool needToAppend = true;
-                Q_FOREACH (const KdeLoggingCategory &cat, categoriesList) {
+                for (const KdeLoggingCategory &cat : qAsConst(categoriesList)) {
                     if (cat == category) {
                         needToAppend = false;
                         break;
@@ -146,7 +146,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
             if (category.isValid()) {
                 if (checkCategoryList) {
                     bool needToAppend = true;
-                    Q_FOREACH (const KdeLoggingCategory &cat, categoriesList) {
+                    for (const KdeLoggingCategory &cat : qAsConst(categoriesList)) {
                         if (cat == category) {
                             needToAppend = false;
                             break;

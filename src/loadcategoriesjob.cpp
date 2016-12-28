@@ -104,7 +104,7 @@ void LoadCategoriesJob::start()
     const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
     QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories;
     for (KDebugSettingsUtil::LoadLoggingCategory cat : originalQtCategories) {
-        Q_FOREACH(const RenameCategory &catRenamed, mRenameCategories) {
+        for(const RenameCategory &catRenamed : qAsConst(mRenameCategories)) {
             if (cat.logName == catRenamed.originalName) {
                 cat.logName = catRenamed.newName;
                 break;
@@ -117,7 +117,7 @@ void LoadCategoriesJob::start()
         KdeLoggingCategory kdeCat = mCategories.at(i);
 
         bool foundInConfigFile = false;
-        Q_FOREACH (KDebugSettingsUtil::LoadLoggingCategory cat, qtCategories) {
+        for (KDebugSettingsUtil::LoadLoggingCategory cat : qAsConst(qtCategories)) {
             if (cat.logName == kdeCat.logName) {
 
                 LoggingCategory tmp;
@@ -150,7 +150,7 @@ void LoadCategoriesJob::start()
     }
 
     //qDebug()<<" KEEP "<< qtCategories.count();
-    Q_FOREACH (const KDebugSettingsUtil::LoadLoggingCategory &cat, qtCategories) {
+    for (const KDebugSettingsUtil::LoadLoggingCategory &cat : qAsConst(qtCategories)) {
 
         QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
         while (i.hasNext()) {
