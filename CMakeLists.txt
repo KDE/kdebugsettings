@@ -1,7 +1,7 @@
 project(kdebugsettings)
 
 cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
-set(QT_MIN_VERSION "5.4.0")
+set(QT_MIN_VERSION "5.6.0")
 set(KF5_VERSION "5.28.0")
 
 find_package(ECM ${KF5_VERSION} REQUIRED CONFIG)
