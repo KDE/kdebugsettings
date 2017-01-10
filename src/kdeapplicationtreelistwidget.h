@@ -49,7 +49,7 @@ class KDEApplicationTreeListWidget : public QTreeWidget
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationTreeListWidget(QWidget *parent = Q_NULLPTR);
+    explicit KDEApplicationTreeListWidget(QWidget *parent = nullptr);
     ~KDEApplicationTreeListWidget();
 
     void deSelectAllDebugCategories();

@@ -27,7 +27,7 @@ class LoadCategoriesJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LoadCategoriesJobTest(QObject *parent = Q_NULLPTR);
+    explicit LoadCategoriesJobTest(QObject *parent = nullptr);
     ~LoadCategoriesJobTest();
 
 private Q_SLOTS:

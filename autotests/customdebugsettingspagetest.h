@@ -27,7 +27,7 @@ class CustomDebugSettingsPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CustomDebugSettingsPageTest(QObject *parent = Q_NULLPTR);
+    explicit CustomDebugSettingsPageTest(QObject *parent = nullptr);
     ~CustomDebugSettingsPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

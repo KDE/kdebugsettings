@@ -27,7 +27,7 @@ class EnvironmentSettingsRulesPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit EnvironmentSettingsRulesPageTest(QObject *parent = Q_NULLPTR);
+    explicit EnvironmentSettingsRulesPageTest(QObject *parent = nullptr);
     ~EnvironmentSettingsRulesPageTest();
 
 private Q_SLOTS:

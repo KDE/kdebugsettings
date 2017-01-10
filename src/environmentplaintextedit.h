@@ -27,7 +27,7 @@ class EnvironmentPlainTextEdit : public QPlainTextEdit
 {
     Q_OBJECT
 public:
-    explicit EnvironmentPlainTextEdit(QWidget *parent = Q_NULLPTR);
+    explicit EnvironmentPlainTextEdit(QWidget *parent = nullptr);
     ~EnvironmentPlainTextEdit();
 
 protected:

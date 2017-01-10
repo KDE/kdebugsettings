@@ -27,7 +27,7 @@ class ConfigureCustomSettingDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfigureCustomSettingDialogTest(QObject *parent = Q_NULLPTR);
+    explicit ConfigureCustomSettingDialogTest(QObject *parent = nullptr);
     ~ConfigureCustomSettingDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

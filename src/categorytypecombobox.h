@@ -28,7 +28,7 @@ class CategoryTypeComboBox : public QComboBox
 {
     Q_OBJECT
 public:
-    explicit CategoryTypeComboBox(bool customType, QWidget *parent = Q_NULLPTR);
+    explicit CategoryTypeComboBox(bool customType, QWidget *parent = nullptr);
     ~CategoryTypeComboBox();
 
     LoggingCategory::LoggingType type() const;

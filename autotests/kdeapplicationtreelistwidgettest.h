@@ -27,7 +27,7 @@ class KDEApplicationTreeListWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationTreeListWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit KDEApplicationTreeListWidgetTest(QObject *parent = nullptr);
     ~KDEApplicationTreeListWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

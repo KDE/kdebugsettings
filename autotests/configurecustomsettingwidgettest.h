@@ -27,7 +27,7 @@ class ConfigureCustomSettingWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfigureCustomSettingWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit ConfigureCustomSettingWidgetTest(QObject *parent = nullptr);
     ~ConfigureCustomSettingWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

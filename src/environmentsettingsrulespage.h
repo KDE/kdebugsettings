@@ -27,7 +27,7 @@ class EnvironmentSettingsRulesPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit EnvironmentSettingsRulesPage(QWidget *parent = Q_NULLPTR);
+    explicit EnvironmentSettingsRulesPage(QWidget *parent = nullptr);
     ~EnvironmentSettingsRulesPage();
     void setRules(const QString &rules);
 private:

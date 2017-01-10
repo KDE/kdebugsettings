@@ -30,7 +30,7 @@ class KDEApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationDebugSettingPage(QWidget *parent = Q_NULLPTR);
+    explicit KDEApplicationDebugSettingPage(QWidget *parent = nullptr);
     ~KDEApplicationDebugSettingPage();
     void fillList(const LoggingCategory::List &list);
     LoggingCategory::List rules() const;

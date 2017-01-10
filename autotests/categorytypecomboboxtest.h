@@ -27,7 +27,7 @@ class CategoryTypeComboBoxTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CategoryTypeComboBoxTest(QObject *parent = Q_NULLPTR);
+    explicit CategoryTypeComboBoxTest(QObject *parent = nullptr);
     ~CategoryTypeComboBoxTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

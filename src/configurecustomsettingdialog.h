@@ -28,7 +28,7 @@ class ConfigureCustomSettingDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ConfigureCustomSettingDialog(QWidget *parent = Q_NULLPTR);
+    explicit ConfigureCustomSettingDialog(QWidget *parent = nullptr);
     ~ConfigureCustomSettingDialog();
     void setRule(const QString &rule);
     QString rule() const;

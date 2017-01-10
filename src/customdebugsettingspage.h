@@ -29,7 +29,7 @@ class CustomDebugSettingsPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomDebugSettingsPage(QWidget *parent = Q_NULLPTR);
+    explicit CustomDebugSettingsPage(QWidget *parent = nullptr);
     ~CustomDebugSettingsPage();
 
     void fillList(const LoggingCategory::List &list);

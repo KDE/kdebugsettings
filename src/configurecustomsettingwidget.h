@@ -29,7 +29,7 @@ class ConfigureCustomSettingWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ConfigureCustomSettingWidget(QWidget *parent = Q_NULLPTR);
+    explicit ConfigureCustomSettingWidget(QWidget *parent = nullptr);
     ~ConfigureCustomSettingWidget();
 
     QString rule() const;

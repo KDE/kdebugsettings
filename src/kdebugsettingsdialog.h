@@ -35,7 +35,7 @@ class KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit KDebugSettingsDialog(QWidget *parent = Q_NULLPTR);
+    explicit KDebugSettingsDialog(QWidget *parent = nullptr);
     ~KDebugSettingsDialog();
 
 private Q_SLOTS:
