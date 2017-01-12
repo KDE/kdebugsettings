@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 
     KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"), KAboutLicense::GPL_V2,
-                         i18n("(c) 2015-2016 kdebugsettings authors"));
+                         i18n("(c) 2015-2017 kdebugsettings authors"));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     KAboutData::setApplicationData(aboutData);
 
