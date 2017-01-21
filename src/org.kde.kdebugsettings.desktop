@@ -3,6 +3,7 @@
 Type=Application
 Exec=kdebugsettings
 GenericName=Debug settings
+GenericName[ast]=Axustes de depuración
 GenericName[ca]=Depuració de l'arranjament
 GenericName[ca@valencia]=Depuració de l'arranjament
 GenericName[cs]=Nastavení ladění
