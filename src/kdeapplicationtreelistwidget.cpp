@@ -76,7 +76,7 @@ void KDEApplicationTreeListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        itemWidget->setType(LoggingCategory::Info);
+        itemWidget->setType(LoggingCategory::Debug);
     }
 }
 
