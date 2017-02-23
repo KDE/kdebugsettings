@@ -36,7 +36,7 @@ EnvironmentPlainTextEdit::~EnvironmentPlainTextEdit()
 
 void EnvironmentPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
 {
-    if (toPlainText().isEmpty()) {
+    if (document()->isEmpty()) {
         return;
     }
     QPlainTextEdit::contextMenuEvent(event);
@@ -44,7 +44,7 @@ void EnvironmentPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
 
 void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
 {
-    if (toPlainText().isEmpty()) {
+    if (document()->isEmpty()) {
         QPainter p(viewport());
 
         QFont font = p.font();
