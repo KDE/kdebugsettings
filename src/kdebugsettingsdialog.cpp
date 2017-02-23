@@ -33,6 +33,7 @@
 
 #include <QFileDialog>
 #include <QDialogButtonBox>
+#include <QLibraryInfo>
 #include <QTabWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -117,7 +118,12 @@ void KDebugSettingsDialog::saveConfig()
 void KDebugSettingsDialog::readQtLoggingFile()
 {
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
-    readCategoriesFiles(envPath);
+    if (!envPath.isEmpty()) {
+        readCategoriesFiles(envPath);
+    } else {
+        const QString dataPath = QDir(QLibraryInfo::location(QLibraryInfo::DataPath)).absoluteFilePath(QStringLiteral("qtlogging.ini"));
+        readCategoriesFiles(dataPath);
+    }
 }
 
 void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
