@@ -225,7 +225,7 @@ void LoadCategoriesJobTest::shouldReadRules()
         }
 
         qDebug() << "AFTER";
-        Q_FOREACH (const LoggingCategory &cat, customcategories) {
+        for (const LoggingCategory &cat : qAsConst(customcategories)) {
             qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
     }
