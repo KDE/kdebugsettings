@@ -31,9 +31,9 @@ public:
     ~EnvironmentPlainTextEdit();
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 
-    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *event) override;
 private Q_SLOTS:
     void slotGeneralPaletteChanged();
 

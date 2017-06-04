@@ -36,7 +36,7 @@ public:
     LoggingCategory::List rules() const;
     void insertCategories(const LoggingCategory::List &list);
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private Q_SLOTS:
     void slotSelectAll();
