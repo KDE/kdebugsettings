@@ -66,6 +66,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->addTab(mKdeApplicationSettingsPage, i18n("KDE Application"));
     mTabWidget->addTab(mCustomSettingsPage, i18n("Custom Rules"));
     mTabWidget->addTab(mEnvironmentSettingsRulesPage, i18n("Rules Settings With Environment Variable"));
+    mTabWidget->setFocusPolicy(Qt::NoFocus);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
