@@ -7,6 +7,9 @@ org.kde.kurifilter-shorturi KUriFilter Shorturi (KIO)
 BluezQt BluezQt
 kf5.kauth KAuth
 kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons)
+kf5.kcoreaddons.kaboutdata KAboutData (KCoreAddons)
+kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons)
+kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons)
 kf5.kded KDED
 kf5.kiconthemes KIconThemes
 kf5.kinit.klauncher KLauncher
