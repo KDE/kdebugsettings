@@ -24,12 +24,13 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTabWidget>
+#include <QStandardPaths>
 #include <qtest.h>
 
 KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 KDebugSettingsDialogTest::~KDebugSettingsDialogTest()
