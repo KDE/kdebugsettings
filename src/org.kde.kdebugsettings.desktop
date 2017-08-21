@@ -79,4 +79,4 @@ Name[zh_TW]=KDebug 設定
 X-DBUS-StartupType=Unique
 Categories=Qt;KDE;Utility;
 X-DBUS-ServiceName=org.kde.kdebugsettings
-Hidden=true
+NoDisplay=true
