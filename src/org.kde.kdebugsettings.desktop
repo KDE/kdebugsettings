@@ -77,6 +77,7 @@ Name[x-test]=xxKDebugSettingsxx
 Name[zh_CN]=KDebugSettings
 Name[zh_TW]=KDebug 設定
 Comment=Configure debug output from Qt applications
+Icon=debug-run
 X-DBUS-StartupType=Unique
 Categories=Qt;KDE;Utility;
 X-DBUS-ServiceName=org.kde.kdebugsettings
