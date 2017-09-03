@@ -1,8 +1,13 @@
-project(kdebugsettings)
-
+# KDE Application Version, managed by release script
+set (KDE_APPLICATIONS_VERSION_MAJOR "17")
+set (KDE_APPLICATIONS_VERSION_MINOR "11")
+set (KDE_APPLICATIONS_VERSION_MICRO "70")
+set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
+project(kdebugsettings VERSION ${KDE_APPLICATIONS_VERSION})
+
 set(QT_MIN_VERSION "5.7.0")
-set(KF5_VERSION "5.32.0")
+set(KF5_VERSION "5.35.0")
 
 option(RUN_UNINSTALL "test run uninstalled apps (experimental)" FALSE)
 
@@ -40,12 +45,8 @@ add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 
-# KDE Application Version, managed by release script
-set (KDE_APPLICATIONS_VERSION_MAJOR "17")
-set (KDE_APPLICATIONS_VERSION_MINOR "11")
-set (KDE_APPLICATIONS_VERSION_MICRO "70")
 
-set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
+
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
