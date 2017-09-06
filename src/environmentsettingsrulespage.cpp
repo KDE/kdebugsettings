@@ -27,11 +27,10 @@
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    QLabel *lab = new QLabel(i18n("Rules:"));
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QLabel *lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("label"));
-    mPlainTextEdit = new EnvironmentPlainTextEdit;
+    mPlainTextEdit = new EnvironmentPlainTextEdit(this);
     mPlainTextEdit->setReadOnly(true);
     mPlainTextEdit->setObjectName(QStringLiteral("plaintext"));
     mainLayout->addWidget(lab);

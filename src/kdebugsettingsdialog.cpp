@@ -46,8 +46,7 @@
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     mCategoryWarning = new CategoryWarning(this);
     mCategoryWarning->setObjectName(QStringLiteral("categorywarning"));

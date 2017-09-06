@@ -32,8 +32,7 @@
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
-    setLayout(vbox);
+    QVBoxLayout *vbox = new QVBoxLayout(this);
 
     QLabel *lab = new QLabel(i18n("Category:"));
     lab->setObjectName(QStringLiteral("category_label"));

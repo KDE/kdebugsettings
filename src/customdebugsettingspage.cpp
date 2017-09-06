@@ -33,8 +33,7 @@
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout;
-    setLayout(mainLayout);
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
 
     QVBoxLayout *vbox = new QVBoxLayout;
     mainLayout->addLayout(vbox);

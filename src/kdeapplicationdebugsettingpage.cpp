@@ -30,10 +30,9 @@
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    mTreeListWidget = new KDEApplicationTreeListWidget;
+    mTreeListWidget = new KDEApplicationTreeListWidget(this);
     mTreeListWidget->setObjectName(QStringLiteral("listwidget"));
 
     mTreeListWidgetSearchLine = new KTreeWidgetSearchLine(this, mTreeListWidget);
@@ -47,12 +46,12 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
-    mEnableDebug = new QPushButton(i18n("Enable All Debug"));
+    mEnableDebug = new QPushButton(i18n("Enable All Debug"), this);
     mEnableDebug->setObjectName(QStringLiteral("selectall"));
     buttonLayout->addWidget(mEnableDebug);
     connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAll);
 
-    mTurnOffDebug = new QPushButton(i18n("Turn Off Debug"));
+    mTurnOffDebug = new QPushButton(i18n("Turn Off Debug"), this);
     mTurnOffDebug->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mTurnOffDebug);
     connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
