@@ -54,11 +54,11 @@ private:
     void readConfig();
     KdeLoggingCategory::List mCategoriesList;
     RenameCategory::List mRenameCategoriesList;
-    QTabWidget *mTabWidget;
-    KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage;
-    CustomDebugSettingsPage *mCustomSettingsPage;
-    EnvironmentSettingsRulesPage *mEnvironmentSettingsRulesPage;
-    CategoryWarning *mCategoryWarning;
+    QTabWidget *mTabWidget = nullptr;
+    KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage = nullptr;
+    CustomDebugSettingsPage *mCustomSettingsPage = nullptr;
+    EnvironmentSettingsRulesPage *mEnvironmentSettingsRulesPage = nullptr;
+    CategoryWarning *mCategoryWarning = nullptr;
 };
 
 #endif // KDEBUGSETTINGSDIALOG_H

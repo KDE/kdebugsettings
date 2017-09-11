@@ -33,7 +33,7 @@ public:
     void setRule(const QString &rule);
     QString rule() const;
 private:
-    ConfigureCustomSettingWidget *mCustomSettingWidget;
+    ConfigureCustomSettingWidget *mCustomSettingWidget = nullptr;
 };
 
 #endif // CONFIGURECUSTOMSETTINGDIALOG_H

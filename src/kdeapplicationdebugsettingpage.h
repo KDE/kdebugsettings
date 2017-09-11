@@ -42,10 +42,10 @@ private Q_SLOTS:
     void slotSelectAll();
     void slotDeselectAll();
 private:
-    KDEApplicationTreeListWidget *mTreeListWidget;
-    KTreeWidgetSearchLine *mTreeListWidgetSearchLine;
-    QPushButton *mEnableDebug;
-    QPushButton *mTurnOffDebug;
+    KDEApplicationTreeListWidget *mTreeListWidget = nullptr;
+    KTreeWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
+    QPushButton *mEnableDebug = nullptr;
+    QPushButton *mTurnOffDebug = nullptr;
 };
 
 #endif // KDEAPPLICATIONDEBUGSETTINGPAGE_H

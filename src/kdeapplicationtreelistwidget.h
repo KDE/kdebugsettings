@@ -42,7 +42,7 @@ public:
     LoggingCategory rule();
 private:
     QString mCategory;
-    CategoryTypeComboBox *mCategoryTypeCombobox;
+    CategoryTypeComboBox *mCategoryTypeCombobox = nullptr;
 };
 
 class KDEApplicationTreeListWidget : public QTreeWidget

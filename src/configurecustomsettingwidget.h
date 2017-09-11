@@ -42,9 +42,9 @@ private Q_SLOTS:
     void slotTextChanged(const QString &);
 
 private:
-    KLineEdit *mCategoryLineEdit;
-    QCheckBox *mEnableCategory;
-    CategoryTypeComboBox *mCategoryType;
+    KLineEdit *mCategoryLineEdit = nullptr;
+    QCheckBox *mEnableCategory = nullptr;
+    CategoryTypeComboBox *mCategoryType = nullptr;
 };
 
 #endif // CONFIGURECUSTOMSETTINGWIDGET_H
