@@ -38,10 +38,9 @@ public:
 Q_SIGNALS:
     void enableButton(bool state);
 
-private Q_SLOTS:
+private:
     void slotTextChanged(const QString &);
 
-private:
     KLineEdit *mCategoryLineEdit = nullptr;
     QCheckBox *mEnableCategory = nullptr;
     CategoryTypeComboBox *mCategoryType = nullptr;

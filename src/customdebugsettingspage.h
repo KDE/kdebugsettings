@@ -34,12 +34,12 @@ public:
 
     void fillList(const LoggingCategory::List &list);
     LoggingCategory::List rules();
-private Q_SLOTS:
+private:
     void slotRemoveRule();
     void slotAddRule();
     void slotEditRule();
     void updateButtons();
-private:
+
     QListWidget *mListWidget = nullptr;
     QPushButton *mAddRule = nullptr;
     QPushButton *mEditRule = nullptr;

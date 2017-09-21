@@ -38,14 +38,14 @@ public:
     explicit KDebugSettingsDialog(QWidget *parent = nullptr);
     ~KDebugSettingsDialog();
 
-private Q_SLOTS:
+private:
     void slotAccepted();
     void slotHelpRequested();
     void slotApply();
     void slotSaveAs();
     void slotLoad();
     void slotInsertCategories();
-private:
+
     void readQtLoggingFile();
     bool saveRules(const QString &path);
     bool saveInQtLogging();

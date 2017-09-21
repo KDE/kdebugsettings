@@ -34,10 +34,9 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
     void contextMenuEvent(QContextMenuEvent *event) override;
-private Q_SLOTS:
+private:
     void slotGeneralPaletteChanged();
 
-private:
     QColor mTextColor;
 };
 

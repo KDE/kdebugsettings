@@ -38,10 +38,10 @@ public:
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
-private Q_SLOTS:
+private:
     void slotSelectAll();
     void slotDeselectAll();
-private:
+
     KDEApplicationTreeListWidget *mTreeListWidget = nullptr;
     KTreeWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
     QPushButton *mEnableDebug = nullptr;
