@@ -36,7 +36,7 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     mCustomSettingWidget->setObjectName(QStringLiteral("customsettingwidget"));
     mainLayout->addWidget(mCustomSettingWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
