@@ -95,6 +95,7 @@ Comment[sr@ijekavian]=Подешавање исправљачког излаза
 Comment[sr@ijekavianlatin]=Podešavanje ispravljačkog izlaza Qt programa
 Comment[sr@latin]=Podešavanje ispravljačkog izlaza Qt programa
 Comment[sv]=Anpassa felsökningsutmatning från Qt-program
+Comment[tr]=Qt uygulamalarının hata ayıklama çıktılarını yapılandır
 Comment[uk]=Налаштовування діагностичних повідомлень програм Qt
 Comment[x-test]=xxConfigure debug output from Qt applicationsxx
 Comment[zh_CN]=配置 Qt 应用程序的调试输出
