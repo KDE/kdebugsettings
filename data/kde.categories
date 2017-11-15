@@ -38,6 +38,7 @@ org.kde.knotifications KNotifications
 org.kde.krunner KRunner
 org.kde.ktexteditor KTextEditor
 org.kde.kwindowsystem KWindowSystem
+org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem)
 sonnet.plugins.hunspell HUnspell (Sonnet)
 sonnet.plugins.voikko Voikko (Sonnet)
 
