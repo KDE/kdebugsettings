@@ -80,6 +80,7 @@ Comment=Configure debug output from Qt applications
 Comment[ca]=Configura la sortida detallada de les aplicacions Qt
 Comment[ca@valencia]=Configura l'eixida detallada de les aplicacions Qt
 Comment[cs]=Nastavte ladicí výstup z aplikací Qt
+Comment[da]=Indstil debug-output fra Qt-programmer
 Comment[de]=Einrichtung der Fehlerausgabe von Qt-Anwendungen
 Comment[el]=Διαμόρφωση της εξόδου διόρθωσης σφαλμάτων από εφαρμογές Qt
 Comment[es]=Configurar la salida de depuración de las aplicaciones Qt
