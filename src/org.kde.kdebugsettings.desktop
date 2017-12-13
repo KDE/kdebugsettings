@@ -85,6 +85,7 @@ Comment[de]=Einrichtung der Fehlerausgabe von Qt-Anwendungen
 Comment[el]=Διαμόρφωση της εξόδου διόρθωσης σφαλμάτων από εφαρμογές Qt
 Comment[en_GB]=Configure debug output from Qt applications
 Comment[es]=Configurar la salida de depuración de las aplicaciones Qt
+Comment[fi]=Aseta Qt-sovellusten vianpaikannustuloste
 Comment[fr]=Configurer la sortie de débogage des applications Qt
 Comment[it]=Configura l'output di debug delle applicazioni Qt
 Comment[ko]=Qt 프로그램의 디버그 출력 설정
