@@ -32,7 +32,7 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18n("Add custom rule"));
 
-    mCustomSettingWidget = new ConfigureCustomSettingWidget;
+    mCustomSettingWidget = new ConfigureCustomSettingWidget(this);
     mCustomSettingWidget->setObjectName(QStringLiteral("customsettingwidget"));
     mainLayout->addWidget(mCustomSettingWidget);
 

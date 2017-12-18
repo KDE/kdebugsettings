@@ -52,7 +52,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mCategoryWarning->setObjectName(QStringLiteral("categorywarning"));
     mainLayout->addWidget(mCategoryWarning);
 
-    mTabWidget = new QTabWidget;
+    mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
