@@ -35,7 +35,7 @@ public:
     void fillList(const LoggingCategory::List &list);
     LoggingCategory::List rules();
 private:
-    void slotRemoveRule();
+    void slotRemoveRules();
     void slotAddRule();
     void slotEditRule();
     void updateButtons();

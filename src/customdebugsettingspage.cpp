@@ -65,7 +65,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     mRemoveRule->setObjectName(QStringLiteral("remove_rule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch();
-    connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRule);
+    connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRules);
     updateButtons();
 }
 
@@ -76,7 +76,7 @@ CustomDebugSettingsPage::~CustomDebugSettingsPage()
 
 void CustomDebugSettingsPage::updateButtons()
 {
-    mEditRule->setEnabled(mListWidget->currentItem());
+    mEditRule->setEnabled(mListWidget->currentItem() && !mListWidget->selectedItems().isEmpty());
     mRemoveRule->setEnabled(mListWidget->currentItem());
 }
 
@@ -148,7 +148,7 @@ LoggingCategory::List CustomDebugSettingsPage::rules()
     return lst;
 }
 
-void CustomDebugSettingsPage::slotRemoveRule()
+void CustomDebugSettingsPage::slotRemoveRules()
 {
     QListWidgetItem *item = mListWidget->currentItem();
     if (item) {
