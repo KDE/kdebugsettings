@@ -45,6 +45,7 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 
     QListWidget *listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
     QVERIFY(listWidget);
+    QCOMPARE(listWidget->selectionMode(), QAbstractItemView::MultiSelection);
     QCOMPARE(listWidget->count(), 0);
 
     QPushButton *addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));

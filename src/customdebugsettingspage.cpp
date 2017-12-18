@@ -44,6 +44,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 
     mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
+    mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
     vbox->addWidget(mListWidget);
@@ -76,8 +77,8 @@ CustomDebugSettingsPage::~CustomDebugSettingsPage()
 
 void CustomDebugSettingsPage::updateButtons()
 {
-    mEditRule->setEnabled(mListWidget->currentItem() && !mListWidget->selectedItems().isEmpty());
-    mRemoveRule->setEnabled(mListWidget->currentItem());
+    mEditRule->setEnabled(mListWidget->selectedItems().count() == 1);
+    mRemoveRule->setEnabled(!mListWidget->selectedItems().isEmpty());
 }
 
 void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
@@ -160,17 +161,19 @@ void CustomDebugSettingsPage::slotRemoveRules()
 
 void CustomDebugSettingsPage::slotEditRule()
 {
-    QListWidgetItem *item = mListWidget->currentItem();
-    if (item) {
-        QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
-        dlg->setRule(item->text());
-        if (dlg->exec()) {
-            const QString ruleStr = dlg->rule();
-            if (!ruleStr.isEmpty()) {
-                item->setText(dlg->rule());
+    if (mListWidget->selectedItems().count() == 1) {
+        QListWidgetItem *item = mListWidget->selectedItems().at(0);
+        if (item) {
+            QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
+            dlg->setRule(item->text());
+            if (dlg->exec()) {
+                const QString ruleStr = dlg->rule();
+                if (!ruleStr.isEmpty()) {
+                    item->setText(dlg->rule());
+                }
             }
+            delete dlg;
         }
-        delete dlg;
     }
 }
 
