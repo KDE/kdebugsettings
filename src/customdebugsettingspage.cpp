@@ -151,11 +151,18 @@ LoggingCategory::List CustomDebugSettingsPage::rules()
 
 void CustomDebugSettingsPage::slotRemoveRules()
 {
-    QListWidgetItem *item = mListWidget->currentItem();
-    if (item) {
-        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this rule \"%1\"?", item->text()))) {
-            delete item;
-        }
+    QList<QListWidgetItem *> lst = mListWidget->selectedItems();
+    if (lst.isEmpty()) {
+        return;
+    }
+    const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", lst.count());
+
+    if (KMessageBox::No == KMessageBox::warningYesNo(this, str)) {
+        return;
+    }
+    for (int i = 0; i < lst.count(); ++i) {
+        QListWidgetItem *item = lst.at(i);
+        delete item;
     }
 }
 
