@@ -7,15 +7,9 @@ cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
 project(kdebugsettings VERSION ${KDE_APPLICATIONS_VERSION})
 
 set(QT_MIN_VERSION "5.7.0")
-set(KF5_VERSION "5.35.0")
-
-option(RUN_UNINSTALL "test run uninstalled apps (experimental)" FALSE)
+set(KF5_VERSION "5.38.0")
 
 set(ECM_VERSION ${KF5_VERSION})
-# ECM setup
-if (RUN_UNINSTALL)
-   set(ECM_VERSION "5.38.0")
-endif()
 
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
