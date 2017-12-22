@@ -45,7 +45,7 @@ QString LoggingCategory::createCustomRule() const
     QString str;
     switch (loggingType) {
     case All: {
-        str = logName + QLatin1String("=true\n");
+        str = logName + (enabled ? QStringLiteral("=true\n") : QStringLiteral("=false\n"));
         break;
     }
     case Info: {
