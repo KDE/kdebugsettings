@@ -30,6 +30,9 @@ class SaveRulesJobTest : public QObject
 public:
     explicit SaveRulesJobTest(QObject *parent = nullptr);
     ~SaveRulesJobTest() = default;
+private Q_SLOTS:
+    void shouldSaveLoadRules_data();
+    void shouldSaveLoadRules();
 };
 
 #endif // SAVERULESJOBTEST_H

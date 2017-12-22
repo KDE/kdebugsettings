@@ -20,13 +20,59 @@
 
 
 #include "saverulesjobtest.h"
+#include "../src/loadcategoriesjob.h"
+#include "../src/saverulesjob.h"
 
+#include <QProcess>
 #include <QTest>
 
 QTEST_GUILESS_MAIN(SaveRulesJobTest)
+
+void compareFile(const QString &name)
+{
+    const QString refFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ini");
+    const QString generatedFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
+
+    // compare to reference file
+    QStringList args = QStringList()
+                       << QStringLiteral("-u")
+                       << refFile
+                       << generatedFile;
+    QProcess proc;
+    proc.setProcessChannelMode(QProcess::ForwardedChannels);
+    proc.start(QStringLiteral("diff"), args);
+    QVERIFY(proc.waitForFinished());
+    QCOMPARE(proc.exitCode(), 0);
+}
+
 
 SaveRulesJobTest::SaveRulesJobTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void SaveRulesJobTest::shouldSaveLoadRules_data()
+{
+    QTest::addColumn<QString>("filename");
+    QTest::newRow("oneelementall.ini") << QStringLiteral("oneelementall");
+}
+
+void SaveRulesJobTest::shouldSaveLoadRules()
+{
+    QFETCH(QString, filename);
+    LoadCategoriesJob job;
+    job.setFileName(filename);
+    job.start();
+
+    LoggingCategory::List customCategories = job.customCategories();
+
+    LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
+
+    SaveRulesJob saveJob;
+    saveJob.setFileName(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.ref"));
+    saveJob.setListCustom(customCategories);
+    saveJob.setListKde(qtKdeCategories);
+    QVERIFY(saveJob.start());
+    compareFile(filename);
 }
