@@ -23,6 +23,7 @@
 #include <QVector>
 #include <QObject>
 #include <QString>
+#include <QDebug>
 
 struct LoggingCategory {
     enum LoggingType {
@@ -54,6 +55,8 @@ struct LoggingCategory {
     bool enabled;
 
 };
+QDebug operator<<(QDebug debug, const LoggingCategory &cat);
+
 Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(LoggingCategory)
 Q_DECLARE_METATYPE(LoggingCategory::LoggingType)

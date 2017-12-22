@@ -123,3 +123,12 @@ QString LoggingCategory::createRule() const
     }
     return str;
 }
+
+QDebug operator<<(QDebug d, const LoggingCategory &cat)
+{
+    d << "customcategories cat." << cat.description;
+    d << " logname" << cat.logName;
+    d << " enabled " << cat.enabled;
+    d << "type " << cat.loggingType;
+    return d;
+}

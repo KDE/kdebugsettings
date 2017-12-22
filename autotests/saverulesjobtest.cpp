@@ -30,7 +30,7 @@ QTEST_GUILESS_MAIN(SaveRulesJobTest)
 
 void compareFile(const QString &name)
 {
-    const QString refFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ini");
+    const QString refFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ref");
     const QString generatedFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
 
     // compare to reference file
@@ -55,19 +55,20 @@ SaveRulesJobTest::SaveRulesJobTest(QObject *parent)
 void SaveRulesJobTest::shouldSaveLoadRules_data()
 {
     QTest::addColumn<QString>("filename");
-    QTest::newRow("oneelementall.ini") << QStringLiteral("oneelementall");
+    QTest::newRow("oneelementwarning.ini") << QStringLiteral("oneelementwarning");
 }
 
 void SaveRulesJobTest::shouldSaveLoadRules()
 {
     QFETCH(QString, filename);
     LoadCategoriesJob job;
-    job.setFileName(filename);
+    job.setFileName(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral(".ini"));
     job.start();
 
-    LoggingCategory::List customCategories = job.customCategories();
+    const LoggingCategory::List customCategories = job.customCategories();
 
-    LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
+    const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
+
 
     SaveRulesJob saveJob;
     saveJob.setFileName(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.ref"));
