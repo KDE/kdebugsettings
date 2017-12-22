@@ -18,6 +18,7 @@ set(full_source_file
     ../src/kdeloggingcategory.cpp
     ../src/loadcategoriesjob.cpp
     ../src/renamecategory.cpp
+    ../src/saverulesjob.cpp
     ${CMAKE_BINARY_DIR}/src/kdebugsettings_debug.cpp
     )
 
@@ -53,3 +54,4 @@ add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")
 add_unittest( loggingcategorytest.cpp "../src/loggingcategory.cpp")
 add_unittest( loadcategoriesjobtest.cpp "../src/renamecategory.cpp;../src/loadcategoriesjob.cpp;../src/loggingcategory.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
 add_unittest( renamecategorytest.cpp "../src/renamecategory.cpp;../src/kdebugsettingsutil.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp")
+add_unittest( saverulesjobtest.cpp "../src/saverulesjob.cpp;../src/renamecategory.cpp;../src/loadcategoriesjob.cpp;../src/loggingcategory.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")

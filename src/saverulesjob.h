@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2015-2017 Montel Laurent <montel@kde.org>
+  Copyright (c) 2017 Montel Laurent <montel@kde.org>
 
   This library is free software; you can redistribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
@@ -18,32 +18,28 @@
 
 */
 
-#ifndef CUSTOMDEBUGSETTINGSPAGE_H
-#define CUSTOMDEBUGSETTINGSPAGE_H
+#ifndef SAVERULESJOB_H
+#define SAVERULESJOB_H
 
-#include <QWidget>
 #include "loggingcategory.h"
-class QListWidget;
-class QPushButton;
-class CustomDebugSettingsPage : public QWidget
+
+class SaveRulesJob
 {
-    Q_OBJECT
 public:
-    explicit CustomDebugSettingsPage(QWidget *parent = nullptr);
-    ~CustomDebugSettingsPage();
+    SaveRulesJob();
+    ~SaveRulesJob() = default;
 
-    void fillList(const LoggingCategory::List &list);
-    LoggingCategory::List rules() const;
+    void setListKde(const LoggingCategory::List &listKde);
+    void setListCustom(const LoggingCategory::List &listCustom);
+
+    void setFileName(const QString &fileName);
+
+    bool start();
+
 private:
-    void slotRemoveRules();
-    void slotAddRule();
-    void slotEditRule();
-    void updateButtons();
-
-    QListWidget *mListWidget = nullptr;
-    QPushButton *mAddRule = nullptr;
-    QPushButton *mEditRule = nullptr;
-    QPushButton *mRemoveRule = nullptr;
+    LoggingCategory::List mListKde;
+    LoggingCategory::List mListCustom;
+    QString mFileName;
 };
 
-#endif // CUSTOMDEBUGSETTINGSPAGE_H
+#endif // SAVERULESJOB_H

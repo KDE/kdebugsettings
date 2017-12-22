@@ -25,6 +25,7 @@
 #include "kdebugsettingsutil.h"
 #include "categorywarning.h"
 #include "loadcategoriesjob.h"
+#include "saverulesjob.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -205,21 +206,13 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 
 bool KDebugSettingsDialog::saveRules(const QString &path)
 {
-    QFile qtlogging(path);
-    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+    SaveRulesJob job;
+    job.setFileName(path);
+    job.setListCustom(mCustomSettingsPage->rules());
+    job.setListKde(mKdeApplicationSettingsPage->rules());
+    if (!job.start()) {
         KMessageBox::error(this, i18n("\'%1\' cannot be opened. Please verify it.", path));
         return false;
-    }
-    //Save Rules
-    const LoggingCategory::List lstKde = mKdeApplicationSettingsPage->rules();
-    const LoggingCategory::List lstCustom = mCustomSettingsPage->rules();
-    QTextStream out(&qtlogging);
-    out << QLatin1String("[Rules]\n");
-    for (LoggingCategory cat : lstKde) {
-        out << cat.createRule() + QLatin1Char('\n');
-    }
-    for (LoggingCategory cat : lstCustom) {
-        out << cat.createCustomRule() + QLatin1Char('\n');
     }
     return true;
 }
