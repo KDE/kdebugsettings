@@ -46,7 +46,7 @@ private:
     LoggingCategory::List mQtKdeCategories;
     RenameCategory::List mRenameCategories;
     QString mFileName;
-    bool mFoundOverrideRule;
+    bool mFoundOverrideRule = false;
 };
 
 #endif // LOADCATEGORIESJOB_H

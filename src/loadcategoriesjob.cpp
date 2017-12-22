@@ -22,7 +22,6 @@
 #include "kdebugsettingsutil.h"
 
 LoadCategoriesJob::LoadCategoriesJob()
-    : mFoundOverrideRule(false)
 {
 
 }
