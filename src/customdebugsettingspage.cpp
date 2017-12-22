@@ -22,6 +22,7 @@
 #include "configurecustomsettingdialog.h"
 #include "kdebugsettingsutil.h"
 #include <KLocalizedString>
+#include <KListWidgetSearchLine>
 #include <KMessageBox>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -42,11 +43,16 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     lab->setObjectName(QStringLiteral("custom_label"));
     vbox->addWidget(lab);
 
+
     mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
     mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
+    KListWidgetSearchLine *searchLine = new KListWidgetSearchLine(this, mListWidget);
+    searchLine->setObjectName(QStringLiteral("searchline"));
+    searchLine->setPlaceholderText(i18n("Search..."));
+    vbox->addWidget(searchLine);
     vbox->addWidget(mListWidget);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
@@ -114,7 +120,7 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
     }
 }
 
-LoggingCategory::List CustomDebugSettingsPage::rules()
+LoggingCategory::List CustomDebugSettingsPage::rules() const
 {
     LoggingCategory::List lst;
     const int number(mListWidget->count());
