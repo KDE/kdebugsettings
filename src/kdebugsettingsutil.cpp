@@ -208,6 +208,7 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
 QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
 {
     if (filename.isEmpty()) {
+        qCWarning(KDEBUGSETTINGS_LOG) << "Empty file name";
         return {};
     }
     //Code based on src/corelib/io/qloggingregistry.cpp
@@ -297,6 +298,9 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                 }
             }
         }
+    } else {
+        qCWarning(KDEBUGSETTINGS_LOG) << "Impossible to open file: " << filename;
     }
+
     return hashLoadLoggingCategories.values();
 }
