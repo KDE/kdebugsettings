@@ -30,11 +30,11 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QLabel *lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("label"));
-    mPlainTextEdit = new EnvironmentPlainTextEdit(this);
-    mPlainTextEdit->setReadOnly(true);
-    mPlainTextEdit->setObjectName(QStringLiteral("plaintext"));
+    mRichTextEdit = new EnvironmentPlainTextEdit(this);
+    mRichTextEdit->setReadOnly(true);
+    mRichTextEdit->setObjectName(QStringLiteral("richtext"));
     mainLayout->addWidget(lab);
-    mainLayout->addWidget(mPlainTextEdit);
+    mainLayout->addWidget(mRichTextEdit);
 }
 
 EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
@@ -44,6 +44,7 @@ EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
 
 void EnvironmentSettingsRulesPage::setRules(const QString &rules)
 {
-    QString information = i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.");
-    mPlainTextEdit->setPlainText(information + QLatin1Char('\n') + QLatin1Char('\n') + rules);
+    const QString information = QStringLiteral("<qt><b>") + i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.") + QStringLiteral("</b><qt>");
+    QString newRules = rules;
+    mRichTextEdit->setHtml(information + QStringLiteral("<br><br>") + newRules.replace(QStringLiteral("\n"), QStringLiteral("<br>")));
 }

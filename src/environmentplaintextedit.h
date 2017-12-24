@@ -21,9 +21,9 @@
 #ifndef ENVIRONMENTPLAINTEXTEDIT_H
 #define ENVIRONMENTPLAINTEXTEDIT_H
 
-#include <QPlainTextEdit>
+#include <QTextEdit>
 class QPaintEvent;
-class EnvironmentPlainTextEdit : public QPlainTextEdit
+class EnvironmentPlainTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:

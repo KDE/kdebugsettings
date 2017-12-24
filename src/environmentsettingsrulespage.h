@@ -31,7 +31,7 @@ public:
     ~EnvironmentSettingsRulesPage();
     void setRules(const QString &rules);
 private:
-    EnvironmentPlainTextEdit *mPlainTextEdit = nullptr;
+    EnvironmentPlainTextEdit *mRichTextEdit = nullptr;
 };
 
 #endif // ENVIRONMENTSETTINGSRULESPAGE_H

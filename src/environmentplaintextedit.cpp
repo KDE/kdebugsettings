@@ -24,9 +24,8 @@
 #include <QPainter>
 
 EnvironmentPlainTextEdit::EnvironmentPlainTextEdit(QWidget *parent)
-    : QPlainTextEdit(parent)
-{
-
+    : QTextEdit(parent)
+{    
 }
 
 EnvironmentPlainTextEdit::~EnvironmentPlainTextEdit()
@@ -39,7 +38,7 @@ void EnvironmentPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
     if (document()->isEmpty()) {
         return;
     }
-    QPlainTextEdit::contextMenuEvent(event);
+    QTextEdit::contextMenuEvent(event);
 }
 
 void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
@@ -58,7 +57,7 @@ void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
 
         p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."));
     } else {
-        QPlainTextEdit::paintEvent(event);
+        QTextEdit::paintEvent(event);
     }
 }
 

@@ -41,7 +41,7 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 
     QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
-    EnvironmentPlainTextEdit *plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("plaintext"));
+    EnvironmentPlainTextEdit *plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("richtext"));
     QVERIFY(plainText);
     QVERIFY(plainText->toPlainText().isEmpty());
     QVERIFY(plainText->isReadOnly());
@@ -50,7 +50,7 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 void EnvironmentSettingsRulesPageTest::shouldSetRules()
 {
     EnvironmentSettingsRulesPage w;
-    EnvironmentPlainTextEdit *plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("plaintext"));
+    EnvironmentPlainTextEdit *plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("richtext"));
     QString rules = QStringLiteral("Rules for qt\ntest");
     w.setRules(rules);
     QVERIFY(plainText->toPlainText().endsWith(rules));
