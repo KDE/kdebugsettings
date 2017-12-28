@@ -56,6 +56,10 @@ void SaveRulesJobTest::shouldSaveLoadRules_data()
 {
     QTest::addColumn<QString>("filename");
     QTest::newRow("oneelementwarning.ini") << QStringLiteral("oneelementwarning");
+    QTest::newRow("oneelementall.ini") << QStringLiteral("oneelementall");
+    QTest::newRow("oneelementinfo.ini") << QStringLiteral("oneelementinfo");
+    QTest::newRow("oneelementonelineoff.ini") << QStringLiteral("oneelementonelineoff");
+    QTest::newRow("oneelementonelinecritical.ini") << QStringLiteral("oneelementonelinecritical");
 }
 
 void SaveRulesJobTest::shouldSaveLoadRules()

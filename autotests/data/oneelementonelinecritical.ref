@@ -1,0 +1,3 @@
+[Rules]
+org.kde.kio.kpasswdserver.critical=true
+
