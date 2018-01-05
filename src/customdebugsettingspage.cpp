@@ -34,15 +34,18 @@
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
-
-    QVBoxLayout *vbox = new QVBoxLayout;
-    mainLayout->addLayout(vbox);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QLabel *lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("custom_label"));
-    vbox->addWidget(lab);
+    mainLayout->addWidget(lab);
 
+    QHBoxLayout *horizontalLayout = new QHBoxLayout;
+    horizontalLayout->setMargin(0);
+    mainLayout->addLayout(horizontalLayout);
+
+    QVBoxLayout *vbox = new QVBoxLayout;
+    horizontalLayout->addLayout(vbox);
 
     mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
@@ -56,7 +59,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     vbox->addWidget(mListWidget);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
-    mainLayout->addLayout(buttonLayout);
+    horizontalLayout->addLayout(buttonLayout);
 
     mAddRule = new QPushButton(i18n("Add..."), this);
     mAddRule->setObjectName(QStringLiteral("add_rule"));
