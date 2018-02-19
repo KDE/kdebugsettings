@@ -43,8 +43,6 @@ sonnet.plugins.hunspell HUnspell (Sonnet)
 sonnet.plugins.voikko Voikko (Sonnet)
 
 # kde/pim
-org.kde.pim.ktnef ktnef (pim lib)
-org.kde.pim.kmbox kmbox (pim lib)
 org.kde.pim.kblog kblog (pim lib)
 org.kde.pim.kalarmcal kalarmcal (pim lib)
 org.kde.pim.kontactinterface kontactinterface (pim lib)
