@@ -1,9 +1,7 @@
 # pim module
 log_kmbox org.kde.pim.kmbox
 log_ldap org.kde.pim.ldap
-log_kimap org.kde.pim.kimap
 log_kontactinterface org.kde.pim.kontactinterface
-log_kcontacts org.kde.pim.kcontacts
 log_mailtransport org.kde.pim.mailtransport
 log_kcalcore org.kde.pim.kcalcore
 log_kcalutils org.kde.pim.kcalutils
