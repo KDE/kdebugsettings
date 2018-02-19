@@ -45,7 +45,6 @@ sonnet.plugins.voikko Voikko (Sonnet)
 # kde/pim
 org.kde.pim.kcalutils kcalutils (pim lib)
 org.kde.pim.kimap kimap (pim lib)
-org.kde.pim.kidentitymanagement kidentitymanagement (pim lib)
 org.kde.pim.kcontacts kcontacts (pim lib)
 org.kde.pim.ktnef ktnef (pim lib)
 org.kde.pim.mailtransport mailtransport (pim lib)
