@@ -53,9 +53,11 @@ void KDEApplicationTreeListWidgetItem::setLogName(const QString &category)
 LoggingCategory KDEApplicationTreeListWidgetItem::rule() const
 {
     LoggingCategory cat;
-    cat.enabled = false;
-    cat.logName = mCategory;
-    cat.loggingType = mCategoryTypeCombobox->type();
+    if (mCategoryTypeCombobox->loggingCategoryIsNotDefault()) {
+        cat.enabled = false;
+        cat.logName = mCategory;
+        cat.loggingType = mCategoryTypeCombobox->type();
+    }
     return cat;
 }
 

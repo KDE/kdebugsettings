@@ -37,7 +37,7 @@ bool LoggingCategory::operator ==(const LoggingCategory &other) const
 
 bool LoggingCategory::isValid() const
 {
-    return !logName.isEmpty();
+    return !logName.isEmpty() && (loggingType != Undefined);
 }
 
 QString LoggingCategory::createCustomRule() const

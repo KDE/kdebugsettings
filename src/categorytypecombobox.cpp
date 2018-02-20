@@ -55,3 +55,8 @@ LoggingCategory::LoggingType CategoryTypeComboBox::type() const
 {
     return currentData().value<LoggingCategory::LoggingType>();
 }
+
+bool CategoryTypeComboBox::loggingCategoryIsNotDefault() const
+{
+    return (type() != LoggingCategory::Info);
+}

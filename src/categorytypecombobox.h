@@ -33,6 +33,7 @@ public:
 
     LoggingCategory::LoggingType type() const;
     void setType(LoggingCategory::LoggingType type);
+    bool loggingCategoryIsNotDefault() const;
 };
 
 #endif // CATEGORYTYPECOMBOBOX_H
