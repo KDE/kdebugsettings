@@ -33,6 +33,8 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldSetType_data();
     void shouldSetType();
+
+    void shouldVerifyItNotDefault();
 };
 
 #endif // CATEGORYTYPECOMBOBOXTEST_H
