@@ -50,7 +50,7 @@ void KDEApplicationTreeListWidgetItem::setLogName(const QString &category)
     mCategory = category;
 }
 
-LoggingCategory KDEApplicationTreeListWidgetItem::rule()
+LoggingCategory KDEApplicationTreeListWidgetItem::rule() const
 {
     LoggingCategory cat;
     cat.enabled = false;
@@ -111,7 +111,7 @@ void KDEApplicationTreeListWidget::insertCategories(const LoggingCategory::List 
     addListItems(list, false);
 }
 
-LoggingCategory::List KDEApplicationTreeListWidget::rules()
+LoggingCategory::List KDEApplicationTreeListWidget::rules() const
 {
     LoggingCategory::List lst;
     for (int i = 0; i < topLevelItemCount(); ++i) {
