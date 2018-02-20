@@ -116,7 +116,7 @@ LoggingCategory::List KDEApplicationTreeListWidget::rules()
     LoggingCategory::List lst;
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *listWidgetItem = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        LoggingCategory cat = listWidgetItem->rule();
+        const LoggingCategory cat = listWidgetItem->rule();
         if (cat.isValid()) {
             lst.append(cat);
         }
