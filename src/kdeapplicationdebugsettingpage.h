@@ -31,10 +31,13 @@ class KDEApplicationDebugSettingPage : public QWidget
     Q_OBJECT
 public:
     explicit KDEApplicationDebugSettingPage(QWidget *parent = nullptr);
-    ~KDEApplicationDebugSettingPage();
+    ~KDEApplicationDebugSettingPage() override;
     void fillList(const LoggingCategory::List &list);
     LoggingCategory::List rules() const;
     void insertCategories(const LoggingCategory::List &list);
+
+    void restoreToDefault();
+
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 

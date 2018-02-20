@@ -99,3 +99,8 @@ void KDEApplicationDebugSettingPage::insertCategories(const LoggingCategory::Lis
 {
     mTreeListWidget->insertCategories(list);
 }
+
+void KDEApplicationDebugSettingPage::restoreToDefault()
+{
+    mTreeListWidget->restoreToDefault();
+}

@@ -68,7 +68,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->addTab(mEnvironmentSettingsRulesPage, i18n("Rules Settings With Environment Variable"));
     mTabWidget->setFocusPolicy(Qt::NoFocus);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
     QPushButton *saveAs = new QPushButton(i18n("Save As..."), this);
@@ -90,6 +90,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &KDebugSettingsDialog::slotApply);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &KDebugSettingsDialog::slotRestoreDefault);
     mainLayout->addWidget(buttonBox);
     readConfig();
     readQtLoggingFile();
@@ -273,4 +274,9 @@ void KDebugSettingsDialog::slotLoad()
     if (!path.isEmpty()) {
         readCategoriesFiles(path);
     }
+}
+
+void KDebugSettingsDialog::slotRestoreDefault()
+{
+    mKdeApplicationSettingsPage->restoreToDefault();
 }

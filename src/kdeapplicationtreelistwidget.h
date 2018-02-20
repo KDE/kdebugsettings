@@ -58,6 +58,9 @@ public:
     void fillList(const LoggingCategory::List &list);
     void insertCategories(const LoggingCategory::List &list);
     LoggingCategory::List rules() const;
+
+    void restoreToDefault();
+
 private:
     void addListItems(const LoggingCategory::List &list, bool clearList);
 };

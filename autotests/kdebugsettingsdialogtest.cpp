@@ -43,7 +43,7 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     KDebugSettingsDialog dlg;
     QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
-    QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
+    QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
     QTabWidget *tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tab);
     for (int i = 0; i < tab->count(); ++i) {
