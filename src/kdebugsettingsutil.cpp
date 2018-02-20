@@ -75,7 +75,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
 KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 {
     KdeLoggingCategory category;
-    int pos = line.indexOf(QLatin1Char('#'));
+    const int pos = line.indexOf(QLatin1Char('#'));
     if (pos != -1) {
         line.truncate(pos);
         line = line.simplified();
@@ -96,6 +96,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     const QString description = line.mid(space).simplified();
     category.logName = logName;
     category.description = description;
+    //TODO add default categories ?
     return category;
 }
 
