@@ -48,7 +48,7 @@ private:
     void slotRestoreDefault();
 
     void readQtLoggingFile();
-    bool saveRules(const QString &path);
+    bool saveRules(const QString &path, bool forceSavingAllRules = false);
     bool saveInQtLogging();
     void readCategoriesFiles(const QString &path);
     void saveConfig();

@@ -204,12 +204,12 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     }
 }
 
-bool KDebugSettingsDialog::saveRules(const QString &path)
+bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRules)
 {
     SaveRulesJob job;
     job.setFileName(path);
     job.setListCustom(mCustomSettingsPage->rules());
-    job.setListKde(mKdeApplicationSettingsPage->rules());
+    job.setListKde(mKdeApplicationSettingsPage->rules(forceSavingAllRules));
     if (!job.start()) {
         KMessageBox::error(this, i18n("\'%1\' cannot be opened. Please verify it.", path));
         return false;
@@ -264,7 +264,7 @@ void KDebugSettingsDialog::slotSaveAs()
 {
     const QString path = QFileDialog::getSaveFileName(this, i18n("Save As"));
     if (!path.isEmpty()) {
-        saveRules(path);
+        saveRules(path, true);
     }
 }
 

@@ -59,10 +59,10 @@ void KDEApplicationTreeListWidgetItem::setLogName(const QString &category)
     mCategory = category;
 }
 
-LoggingCategory KDEApplicationTreeListWidgetItem::rule() const
+LoggingCategory KDEApplicationTreeListWidgetItem::rule(bool forceSavingAllRules) const
 {
     LoggingCategory cat;
-    if (mCategoryTypeCombobox->loggingCategoryIsNotDefault()) {
+    if (mCategoryTypeCombobox->loggingCategoryIsNotDefault() || forceSavingAllRules) {
         cat.enabled = false;
         cat.logName = mCategory;
         cat.loggingType = mCategoryTypeCombobox->type();
@@ -122,12 +122,12 @@ void KDEApplicationTreeListWidget::insertCategories(const LoggingCategory::List 
     addListItems(list, false);
 }
 
-LoggingCategory::List KDEApplicationTreeListWidget::rules() const
+LoggingCategory::List KDEApplicationTreeListWidget::rules(bool forceSavingAllRules) const
 {
     LoggingCategory::List lst;
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *listWidgetItem = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        const LoggingCategory cat = listWidgetItem->rule();
+        const LoggingCategory cat = listWidgetItem->rule(forceSavingAllRules);
         if (cat.isValid()) {
             lst.append(cat);
         }

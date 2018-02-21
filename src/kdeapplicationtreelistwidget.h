@@ -40,7 +40,7 @@ public:
     void setType(LoggingCategory::LoggingType type);
     void setDefaultCategory(LoggingCategory::LoggingType type);
 
-    LoggingCategory rule() const;
+    LoggingCategory rule(bool forceSavingAllRules) const;
     void restoreToDefault();
 private:
     QString mCategory;
@@ -59,7 +59,7 @@ public:
 
     void fillList(const LoggingCategory::List &list);
     void insertCategories(const LoggingCategory::List &list);
-    LoggingCategory::List rules() const;
+    LoggingCategory::List rules(bool forceSavingAllRules) const;
 
     void restoreToDefault();
 

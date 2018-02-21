@@ -89,9 +89,9 @@ void KDEApplicationDebugSettingPage::fillList(const LoggingCategory::List &list)
     mTreeListWidget->fillList(list);
 }
 
-LoggingCategory::List KDEApplicationDebugSettingPage::rules() const
+LoggingCategory::List KDEApplicationDebugSettingPage::rules(bool forceSavingAllRules) const
 {
-    return mTreeListWidget->rules();
+    return mTreeListWidget->rules(forceSavingAllRules);
 }
 
 void KDEApplicationDebugSettingPage::insertCategories(const LoggingCategory::List &list)

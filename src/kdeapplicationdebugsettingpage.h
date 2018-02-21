@@ -33,7 +33,7 @@ public:
     explicit KDEApplicationDebugSettingPage(QWidget *parent = nullptr);
     ~KDEApplicationDebugSettingPage() override;
     void fillList(const LoggingCategory::List &list);
-    LoggingCategory::List rules() const;
+    LoggingCategory::List rules(bool forceSavingAllRules) const;
     void insertCategories(const LoggingCategory::List &list);
 
     void restoreToDefault();
