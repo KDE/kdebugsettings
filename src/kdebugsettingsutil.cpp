@@ -91,19 +91,21 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
         qCWarning(KDEBUGSETTINGS_LOG) << "No space:" << line << endl;
         return category;
     }
-#if 1
+#if 0
+    //log linux (foo)
+
     const QString logName = line.left(space);
 
     const QString description = line.mid(space).simplified();
 #else
     QString logName;
     QString description;
-    static const QRegularExpression regularExpressionUser(QStringLiteral("^(.*)\\s+(.*)$"));
+    static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*(.*)$"));
     QRegularExpressionMatch match = regularExpressionUser.match(line);
     if (match.hasMatch()) {
         logName = match.captured(1);
         description = match.captured(2);
-        qDebug() << " logName"<<logName<<" description " << description << " line " << line;
+        //qDebug() << " logName"<<logName<<" description " << description << " line " << line;
     }
 #endif
 
