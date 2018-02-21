@@ -39,6 +39,11 @@ void KDEApplicationTreeListWidgetItem::setType(LoggingCategory::LoggingType type
     mCategoryTypeCombobox->setType(type);
 }
 
+void KDEApplicationTreeListWidgetItem::setDefaultCategory(LoggingCategory::LoggingType type)
+{
+    mCategoryTypeCombobox->setDefaultCategories(type);
+}
+
 QString KDEApplicationTreeListWidgetItem::logName() const
 {
     return mCategory;
@@ -102,6 +107,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
+        //item->setDefaultCategory(cat.)
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }
