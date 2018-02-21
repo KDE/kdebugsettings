@@ -24,15 +24,18 @@
 #include <QVector>
 #include <QString>
 #include <QObject>
+#include <QDebug>
 struct KdeLoggingCategory {
     KdeLoggingCategory();
     typedef QVector<KdeLoggingCategory> List;
     bool operator ==(const KdeLoggingCategory &other) const;
+    bool operator !=(const KdeLoggingCategory &other) const;
     bool isValid() const;
 
     QString description;
     QString logName;
 };
+QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(KdeLoggingCategory)
 

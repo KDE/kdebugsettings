@@ -28,10 +28,22 @@ KdeLoggingCategory::KdeLoggingCategory()
 bool KdeLoggingCategory::operator ==(const KdeLoggingCategory &other) const
 {
     return (description == other.description) &&
-           (logName == other.logName);
+            (logName == other.logName);
+}
+
+bool KdeLoggingCategory::operator !=(const KdeLoggingCategory &other) const
+{
+    return ! operator==(other);
 }
 
 bool KdeLoggingCategory::isValid() const
 {
     return !logName.isEmpty();
+}
+
+QDebug operator<<(QDebug d, const KdeLoggingCategory &cat)
+{
+    d << "description: " << cat.description;
+    d << "logname: " << cat.logName;
+    return d;
 }
