@@ -1,7 +1,5 @@
 # pim module
 log_ldap org.kde.pim.ldap
-log_kontactinterface org.kde.pim.kontactinterface
 log_kblog org.kde.pim.kblog
 log_kalarm org.kde.pim.kalarm
 log_kxmlrpcclient org.kde.pim.kxmlrpcclient
-log_akonadi_contact org.kde.pim.akonadicontact
