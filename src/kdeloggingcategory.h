@@ -34,6 +34,8 @@ struct KdeLoggingCategory {
 
     QString description;
     QString logName;
+    //Use enum ?
+    QString defaultCategory;
 };
 QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);

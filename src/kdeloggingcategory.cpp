@@ -28,7 +28,7 @@ KdeLoggingCategory::KdeLoggingCategory()
 bool KdeLoggingCategory::operator ==(const KdeLoggingCategory &other) const
 {
     return (description == other.description) &&
-            (logName == other.logName);
+            (logName == other.logName) && (defaultCategory == other.defaultCategory);
 }
 
 bool KdeLoggingCategory::operator !=(const KdeLoggingCategory &other) const
@@ -45,5 +45,6 @@ QDebug operator<<(QDebug d, const KdeLoggingCategory &cat)
 {
     d << "description: " << cat.description;
     d << "logname: " << cat.logName;
+    d << "default category: " << cat.defaultCategory;
     return d;
 }
