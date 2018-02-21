@@ -6,16 +6,16 @@ org.kde.kurifilter-ikws KUriFilter IKWS (KIO)
 org.kde.kurifilter-shorturi KUriFilter Shorturi (KIO)
 BluezQt BluezQt
 kf5.kauth KAuth
-kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons)
+kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons) [WARNING]
 kf5.kcoreaddons.kaboutdata KAboutData (KCoreAddons)
-kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons)
-kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons)
-kf5.kded KDED
+kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) [DEBUG]
+kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) [WARNING]
+kf5.kded KDED [WARNING]
 kf5.kiconthemes KIconThemes
-kf5.kinit.klauncher KLauncher
+kf5.kinit.klauncher KLauncher [WARNING]
 kf5.kio.core KIOCore (KIO)
-kf5.kio.core.dirlister KCoreDirLister (KIO)
-kf5.kio.core.copyjob KIO::CopyJob (KIO)
+kf5.kio.core.dirlister KCoreDirLister (KIO) [WARNING]
+kf5.kio.core.copyjob KIO::CopyJob (KIO) [WARNING]
 kf5.kio.widgets KIOWidgets (KIO)
 kf5.kiod KIO Daemon (KIO)
 kf5.kio.kio_http KIO HTTP slave (KIO) [WARNING]
@@ -23,22 +23,22 @@ kf5.kjobwidgets KJobWidgets
 kf5.kio.favicons FavIcons (KIO)
 kf5.kservice.sycoca KSycoca (KService)
 kf5.kxmlgui KXMLGui
-kglobalaccel-runtime KGlobalAccel
+kglobalaccel-runtime KGlobalAccel [WARNING]
 knewstuff KNewStuff
 log_kxmlrpcclient KXmlRPCClient
-modemmanager-qt ModemManagerQt
-networkmanager-qt NetworkManagerQt
+modemmanager-qt ModemManagerQt [WARNING]
+networkmanager-qt NetworkManagerQt [WARNING]
 org.kde.baloo Baloo
 org.kde.kactivities.activities KActivities Activities
 org.kde.kactivities.application KActivities Application
-org.kde.kactivities.lib.core KActivities Library
+org.kde.kactivities.lib.core KActivities Library [WARNING]
 org.kde.kactivities.resources KActivities Resources
-org.kde.kf5.idletime KIdleTime
+org.kde.kf5.idletime KIdleTime [WARNING]
 org.kde.knotifications KNotifications
 org.kde.krunner KRunner
-org.kde.ktexteditor KTextEditor
-org.kde.kwindowsystem KWindowSystem
-org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem)
+org.kde.ktexteditor KTextEditor [WARNING]
+org.kde.kwindowsystem KWindowSystem [WARNING]
+org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) [WARNING]
 sonnet.plugins.hunspell HUnspell (Sonnet)
 sonnet.plugins.voikko Voikko (Sonnet)
 
