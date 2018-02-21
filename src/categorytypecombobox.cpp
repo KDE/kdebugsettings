@@ -57,7 +57,7 @@ LoggingCategory::LoggingType CategoryTypeComboBox::type() const
 
 bool CategoryTypeComboBox::loggingCategoryIsNotDefault() const
 {
-    return type() != LoggingCategory::Info;
+    return type() != mDefaultCategories;
 }
 
 void CategoryTypeComboBox::setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories)

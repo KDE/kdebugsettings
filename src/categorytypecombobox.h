@@ -37,7 +37,7 @@ public:
     void setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories);
 
 private:
-    LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Undefined;
+    LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
 };
 
 #endif // CATEGORYTYPECOMBOBOX_H
