@@ -69,8 +69,8 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     result.logName = logname;
     const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
     if (cat != result) {
-        qDebug() << " cat " << cat;
-        qDebug() << " result !: "<<result;
+        qDebug() << "Generated category " << cat;
+        qDebug() << "Expected category: "<<result;
     }
     QCOMPARE(cat, result);
     QCOMPARE(cat.isValid(), valid);
