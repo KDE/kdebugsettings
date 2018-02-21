@@ -21,6 +21,7 @@
 #include "kdebugsettingutiltest.h"
 #include "../src/kdebugsettingsutil.h"
 #include <qtest.h>
+#include <QDebug>
 
 KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)
     : QObject(parent)
@@ -40,6 +41,7 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     QTest::addColumn<QString>("logname");
     QTest::addColumn<bool>("valid");
     QTest::newRow("empty") <<  QString() << QString() << QString() << false;
+
     QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << true;
     QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << true;
     QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << false;
@@ -60,6 +62,10 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     result.description = description;
     result.logName = logname;
     const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
+    if (cat != result) {
+        qDebug() << " cat " << cat;
+        qDebug() << " result !: "<<result;
+    }
     QCOMPARE(cat, result);
     QCOMPARE(cat.isValid(), valid);
 }
