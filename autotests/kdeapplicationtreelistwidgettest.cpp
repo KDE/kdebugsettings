@@ -25,12 +25,10 @@
 
 KDEApplicationTreeListWidgetTest::KDEApplicationTreeListWidgetTest(QObject *parent) : QObject(parent)
 {
-
 }
 
 KDEApplicationTreeListWidgetTest::~KDEApplicationTreeListWidgetTest()
 {
-
 }
 
 void KDEApplicationTreeListWidgetTest::shouldHaveDefaultValue()

@@ -29,12 +29,10 @@
 CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CustomDebugSettingsPageTest::~CustomDebugSettingsPageTest()
 {
-
 }
 
 void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
@@ -49,12 +47,10 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
     QCOMPARE(listWidget->selectionMode(), QAbstractItemView::MultiSelection);
     QCOMPARE(listWidget->count(), 0);
 
-
     KListWidgetSearchLine *searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);
     QVERIFY(!searchLine->placeholderText().isEmpty());
     QCOMPARE(searchLine->listWidget(), listWidget);
-
 
     QPushButton *addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
     QVERIFY(addButton);

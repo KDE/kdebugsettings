@@ -23,7 +23,6 @@
 
 LoadCategoriesJob::LoadCategoriesJob()
 {
-
 }
 
 void LoadCategoriesJob::setFileName(const QString &filename)
@@ -56,38 +55,38 @@ LoggingCategory::LoggingType canDisplayType(const QMap<KDebugSettingsUtil::LoadL
         return LoggingCategory::All;
     } else if (all == KDebugSettingsUtil::LoadLoggingCategory::Disabled) {
         return LoggingCategory::Off;
-    } else if (warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               info == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
+    } else if (warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && info == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
         return LoggingCategory::All;
-    } else if (debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
+    } else if (debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
         return LoggingCategory::Debug;
-    } else if (info == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
+    } else if (info == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
         return LoggingCategory::Info;
-    } else if (warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
+    } else if (warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
         return LoggingCategory::Warning;
     } else if (critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
         return LoggingCategory::Critical;
-    } else if (info == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               warning == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus &&
-               debug == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
+    } else if (info == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && warning == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus
+               && debug == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
         return LoggingCategory::Undefined;
-    } else if (warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               info == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus &&
-               debug == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
+    } else if (warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && info == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus
+               && debug == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
         return LoggingCategory::Undefined;
-    } else if (debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled &&
-               info == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus &&
-               warning == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus &&
-               critical == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
+    } else if (debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled
+               && info == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus
+               && warning == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus
+               && critical == KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
         return LoggingCategory::Undefined;
     } else {
         return LoggingCategory::Off;
@@ -103,7 +102,7 @@ void LoadCategoriesJob::start()
     const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
     QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories;
     for (KDebugSettingsUtil::LoadLoggingCategory cat : originalQtCategories) {
-        for(const RenameCategory &catRenamed : qAsConst(mRenameCategories)) {
+        for (const RenameCategory &catRenamed : qAsConst(mRenameCategories)) {
             if (cat.logName == catRenamed.originalName) {
                 cat.logName = catRenamed.newName;
                 break;
@@ -118,7 +117,6 @@ void LoadCategoriesJob::start()
         bool foundInConfigFile = false;
         for (KDebugSettingsUtil::LoadLoggingCategory cat : qAsConst(qtCategories)) {
             if (cat.logName == kdeCat.logName) {
-
                 LoggingCategory tmp;
                 LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
                 if (newType != LoggingCategory::Undefined) {
@@ -150,7 +148,6 @@ void LoadCategoriesJob::start()
 
     //qDebug()<<" KEEP "<< qtCategories.count();
     for (const KDebugSettingsUtil::LoadLoggingCategory &cat : qAsConst(qtCategories)) {
-
         QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
         while (i.hasNext()) {
             i.next();
@@ -183,7 +180,6 @@ void LoadCategoriesJob::start()
                 }
                 tmp.enabled = (i.value() == KDebugSettingsUtil::LoadLoggingCategory::Enabled);
                 mCustomCategories.append(tmp);
-
             }
         }
     }

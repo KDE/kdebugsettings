@@ -25,12 +25,10 @@
 CategoryTypeComboBoxTest::CategoryTypeComboBoxTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CategoryTypeComboBoxTest::~CategoryTypeComboBoxTest()
 {
-
 }
 
 void CategoryTypeComboBoxTest::shouldHaveDefaultValue()

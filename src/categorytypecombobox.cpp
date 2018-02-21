@@ -37,7 +37,6 @@ CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
 
 CategoryTypeComboBox::~CategoryTypeComboBox()
 {
-
 }
 
 void CategoryTypeComboBox::setType(LoggingCategory::LoggingType type)
@@ -58,7 +57,7 @@ LoggingCategory::LoggingType CategoryTypeComboBox::type() const
 
 bool CategoryTypeComboBox::loggingCategoryIsNotDefault() const
 {
-    return (type() != LoggingCategory::Info);
+    return type() != LoggingCategory::Info;
 }
 
 void CategoryTypeComboBox::setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories)

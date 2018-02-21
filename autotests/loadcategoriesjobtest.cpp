@@ -29,12 +29,10 @@
 LoadCategoriesJobTest::LoadCategoriesJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LoadCategoriesJobTest::~LoadCategoriesJobTest()
 {
-
 }
 
 void LoadCategoriesJobTest::shouldHaveDefaultValue()
@@ -69,8 +67,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     qtKdeCategories.append(kauthInfo);
 
     QTest::newRow("emptywithlistkdeloggingcategories") << QStringLiteral("rulebeforerulessectionfiles.ini") << QStringLiteral("correct.categories") << false
-            << LoggingCategory::List()
-            << qtKdeCategories;
+                                                       << LoggingCategory::List()
+                                                       << qtKdeCategories;
 
     qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Off, false);
 
@@ -115,11 +113,11 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                         << qtKdeCategories;
 
     QTest::newRow("oneelementonelinecritical") << QStringLiteral("oneelementonelinecritical.ini") << QStringLiteral("correct.categories") << false
-            << LoggingCategory::List()
-            << qtKdeCategories;
+                                               << LoggingCategory::List()
+                                               << qtKdeCategories;
     QTest::newRow("oneelementtwolinecritical") << QStringLiteral("oneelementtwolinecritical.ini") << QStringLiteral("correct.categories") << false
-            << LoggingCategory::List()
-            << qtKdeCategories;
+                                               << LoggingCategory::List()
+                                               << qtKdeCategories;
 
     qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, true);
 
@@ -129,14 +127,14 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     // Duplicate entries
     qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true);
     QTest::newRow("duplicates") << QStringLiteral("duplicates.ini") << QStringLiteral("correct.categories") << false
-            << LoggingCategory::List()
-            << qtKdeCategories;
+                                << LoggingCategory::List()
+                                << qtKdeCategories;
 
     // Duplicate entries with duplicate categories
     qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::All, true);
     QTest::newRow("duplicates") << QStringLiteral("duplicates.ini") << QStringLiteral("duplicates.categories") << false
-            << LoggingCategory::List()
-            << qtKdeCategories;
+                                << LoggingCategory::List()
+                                << qtKdeCategories;
 
     // Test with extract elements
     LoggingCategory::List customCategories;
@@ -148,8 +146,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, true);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
-            << customCategories
-            << qtKdeCategories;
+                                                 << customCategories
+                                                 << qtKdeCategories;
 
     // Test with extract elements
     customCategories.clear();
@@ -159,8 +157,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customCategories.append(customTmp);
 
     QTest::newRow("oneelementdebugandanextractfalse") << QStringLiteral("oneelementdebugandanextractfalse.ini") << QStringLiteral("correct.categories") << false
-            << customCategories
-            << qtKdeCategories;
+                                                      << customCategories
+                                                      << qtKdeCategories;
 
     //Test without categories
     qtKdeCategories.clear();
@@ -194,8 +192,8 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.enabled = false;
     customCategories.append(customTmp);
     QTest::newRow("testwithoutcategorieswarning") << QStringLiteral("testwithoutcategorieswarning.ini") << QString() << false
-            << customCategories
-            << qtKdeCategories;
+                                                  << customCategories
+                                                  << qtKdeCategories;
 }
 
 void LoadCategoriesJobTest::shouldReadRules()

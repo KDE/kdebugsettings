@@ -23,8 +23,8 @@
 #include <QHeaderView>
 
 KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString &category, QTreeWidget *parent)
-    : QTreeWidgetItem(parent),
-      mCategory(category)
+    : QTreeWidgetItem(parent)
+    , mCategory(category)
 {
     mCategoryTypeCombobox = new CategoryTypeComboBox(false);
     treeWidget()->setItemWidget(this, CategoryType, mCategoryTypeCombobox);
@@ -32,7 +32,6 @@ KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString
 
 KDEApplicationTreeListWidgetItem::~KDEApplicationTreeListWidgetItem()
 {
-
 }
 
 void KDEApplicationTreeListWidgetItem::setType(LoggingCategory::LoggingType type)
@@ -71,7 +70,6 @@ KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
 
 KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget()
 {
-
 }
 
 void KDEApplicationTreeListWidget::selectAllDebugCategories()
@@ -134,4 +132,3 @@ void KDEApplicationTreeListWidget::restoreToDefault()
         itemWidget->setType(LoggingCategory::Info);
     }
 }
-

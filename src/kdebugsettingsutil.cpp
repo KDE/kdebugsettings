@@ -195,8 +195,7 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
     LineLoggingQtCategory lineCategory;
     int equalPos = line.indexOf(QLatin1Char('='));
     if ((equalPos != -1)
-            && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
-
+        && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
         if (valueStr == QLatin1String("true")) {

@@ -81,7 +81,6 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage()
 {
-
 }
 
 void CustomDebugSettingsPage::updateButtons()

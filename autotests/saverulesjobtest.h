@@ -18,7 +18,6 @@
 
 */
 
-
 #ifndef SAVERULESJOBTEST_H
 #define SAVERULESJOBTEST_H
 

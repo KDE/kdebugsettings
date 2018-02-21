@@ -18,16 +18,13 @@
 
 */
 
-
 #include "saverulesjob.h"
-
 
 #include <QFile>
 #include <QTextStream>
 
 SaveRulesJob::SaveRulesJob()
 {
-
 }
 
 void SaveRulesJob::setListKde(const LoggingCategory::List &listKde)

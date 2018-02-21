@@ -29,12 +29,10 @@
 KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest()
 {
-
 }
 
 void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()

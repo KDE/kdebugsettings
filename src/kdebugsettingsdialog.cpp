@@ -176,7 +176,6 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
         }
     }
 
-
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
     if (!rulesFilePath.isEmpty()) {
         const QList<KDebugSettingsUtil::LoadLoggingCategory> envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));

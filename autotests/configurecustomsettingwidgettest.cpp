@@ -30,12 +30,10 @@
 ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest()
 {
-
 }
 
 void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()

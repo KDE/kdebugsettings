@@ -27,12 +27,10 @@
 EnvironmentSettingsRulesPageTest::EnvironmentSettingsRulesPageTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 EnvironmentSettingsRulesPageTest::~EnvironmentSettingsRulesPageTest()
 {
-
 }
 
 void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()

@@ -25,12 +25,10 @@
 RenameCategoryTest::RenameCategoryTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 RenameCategoryTest::~RenameCategoryTest()
 {
-
 }
 
 void RenameCategoryTest::shouldParseRenameLine_data()
@@ -63,6 +61,5 @@ void RenameCategoryTest::shouldParseRenameLine()
     QCOMPARE(cat, result);
     QCOMPARE(cat.isValid(), valid);
 }
-
 
 QTEST_MAIN(RenameCategoryTest)

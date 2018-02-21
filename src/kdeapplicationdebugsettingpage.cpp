@@ -60,7 +60,6 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
 
 KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
 {
-
 }
 
 bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)

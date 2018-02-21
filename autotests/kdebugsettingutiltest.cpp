@@ -26,12 +26,10 @@
 KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 KDebugSettingUtilTest::~KDebugSettingUtilTest()
 {
-
 }
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()

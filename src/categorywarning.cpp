@@ -32,6 +32,4 @@ CategoryWarning::CategoryWarning(QWidget *parent)
 
 CategoryWarning::~CategoryWarning()
 {
-
 }
-

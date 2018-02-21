@@ -22,18 +22,17 @@
 
 KdeLoggingCategory::KdeLoggingCategory()
 {
-
 }
 
 bool KdeLoggingCategory::operator ==(const KdeLoggingCategory &other) const
 {
-    return (description == other.description) &&
-            (logName == other.logName) && (defaultCategory == other.defaultCategory);
+    return (description == other.description)
+           && (logName == other.logName) && (defaultCategory == other.defaultCategory);
 }
 
 bool KdeLoggingCategory::operator !=(const KdeLoggingCategory &other) const
 {
-    return ! operator==(other);
+    return !operator==(other);
 }
 
 bool KdeLoggingCategory::isValid() const

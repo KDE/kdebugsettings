@@ -61,7 +61,6 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
 
 ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
 {
-
 }
 
 void ConfigureCustomSettingWidget::slotTextChanged(const QString &text)
@@ -128,4 +127,3 @@ QString ConfigureCustomSettingWidget::rule() const
     }
     return ruleStr;
 }
-

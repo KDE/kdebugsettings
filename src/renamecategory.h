@@ -27,8 +27,8 @@
 struct RenameCategory
 {
 public:
-    RenameCategory() {
-
+    RenameCategory()
+    {
     }
 
     typedef QVector<RenameCategory> List;

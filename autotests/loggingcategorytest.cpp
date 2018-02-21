@@ -25,12 +25,10 @@
 LoggingCategoryTest::LoggingCategoryTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LoggingCategoryTest::~LoggingCategoryTest()
 {
-
 }
 
 void LoggingCategoryTest::shouldHaveDefaultValue()

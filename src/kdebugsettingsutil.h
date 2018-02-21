@@ -28,16 +28,14 @@
 #include "loggingcategory.h"
 #include "renamecategory.h"
 
-namespace KDebugSettingsUtil
-{
-
+namespace KDebugSettingsUtil {
 struct LineLoggingQtCategory {
     LineLoggingQtCategory()
-        : enabled(true),
-          type(Unknown)
+        : enabled(true)
+        , type(Unknown)
     {
-
     }
+
     enum LoggingType {
         Unknown = 0,
         Info,
@@ -51,12 +49,14 @@ struct LineLoggingQtCategory {
     {
         return !logName.isEmpty();
     }
+
     bool operator ==(const LineLoggingQtCategory &other) const
     {
-        return (enabled == other.enabled) &&
-               (type == other.type) &&
-               (logName == other.logName);
+        return (enabled == other.enabled)
+               && (type == other.type)
+               && (logName == other.logName);
     }
+
     bool enabled;
     LoggingType type;
     QString logName;
@@ -85,6 +85,7 @@ struct LoadLoggingCategory {
             loggingTypes.insert(static_cast<LoadLoggingCategory::LogType>(i), UnknownStatus);
         }
     }
+
     typedef QVector<LoadLoggingCategory> List;
 
     bool isValid() const
@@ -95,9 +96,10 @@ struct LoadLoggingCategory {
     bool operator ==(const LoadLoggingCategory &other) const
     {
         //qDebug() << " logname " << logName << " other.logName :" << other.logName;
-        return (logName == other.logName) &&
-               (loggingTypes == other.loggingTypes);
+        return (logName == other.logName)
+               && (loggingTypes == other.loggingTypes);
     }
+
     QString logName;
     QMap<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;
 };

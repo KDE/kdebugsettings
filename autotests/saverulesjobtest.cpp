@@ -18,7 +18,6 @@
 
 */
 
-
 #include "saverulesjobtest.h"
 #include "../src/loadcategoriesjob.h"
 #include "../src/saverulesjob.h"
@@ -45,11 +44,9 @@ void compareFile(const QString &name)
     QCOMPARE(proc.exitCode(), 0);
 }
 
-
 SaveRulesJobTest::SaveRulesJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void SaveRulesJobTest::shouldSaveLoadRules_data()
@@ -72,7 +69,6 @@ void SaveRulesJobTest::shouldSaveLoadRules()
     const LoggingCategory::List customCategories = job.customCategories();
 
     const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
-
 
     SaveRulesJob saveJob;
     saveJob.setFileName(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.ref"));

@@ -25,12 +25,10 @@
 CategoryWarningTest::CategoryWarningTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CategoryWarningTest::~CategoryWarningTest()
 {
-
 }
 
 void CategoryWarningTest::shouldHaveDefaultValue()

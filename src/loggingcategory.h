@@ -39,8 +39,12 @@ struct LoggingCategory {
     LoggingCategory();
 
     explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, bool enabled)
-        : description(description), logName(logName), loggingType(loggingType), enabled(enabled) {}
-
+        : description(description)
+        , logName(logName)
+        , loggingType(loggingType)
+        , enabled(enabled)
+    {
+    }
 
     typedef QVector<LoggingCategory> List;
     bool operator ==(const LoggingCategory &other) const;
@@ -53,7 +57,6 @@ struct LoggingCategory {
     QString logName;
     LoggingType loggingType;
     bool enabled;
-
 };
 QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 

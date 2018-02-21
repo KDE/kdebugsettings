@@ -21,18 +21,17 @@
 #include "loggingcategory.h"
 
 LoggingCategory::LoggingCategory()
-    : loggingType(Info),
-      enabled(true)
+    : loggingType(Info)
+    , enabled(true)
 {
-
 }
 
 bool LoggingCategory::operator ==(const LoggingCategory &other) const
 {
-    return (description == other.description) &&
-           (logName == other.logName) &&
-           (enabled == other.enabled) &&
-           (loggingType == other.loggingType);
+    return (description == other.description)
+           && (logName == other.logName)
+           && (enabled == other.enabled)
+           && (loggingType == other.loggingType);
 }
 
 bool LoggingCategory::isValid() const
@@ -44,82 +43,68 @@ QString LoggingCategory::createCustomRule() const
 {
     QString str;
     switch (loggingType) {
-    case All: {
+    case All:
         str = logName + (enabled ? QStringLiteral("=true\n") : QStringLiteral("=false\n"));
         break;
-    }
-    case Info: {
+    case Info:
         str = logName + QStringLiteral(".info=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
         break;
-    }
-    case Warning: {
+    case Warning:
         str = logName + QStringLiteral(".warning=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
         break;
-    }
-    case Debug: {
+    case Debug:
         str = logName + QStringLiteral(".debug=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
         break;
-    }
-    case Critical:  {
+    case Critical:
         str = logName + QStringLiteral(".critical=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
         break;
-    }
     case Undefined:
-    case Off: {
+    case Off:
         str = QString();
         break;
     }
-    }
     return str;
-
 }
 
 QString LoggingCategory::createRule() const
 {
     QString str;
     switch (loggingType) {
-    case Undefined: {
+    case Undefined:
         break;
-    }
-    case All: {
+    case All:
         str = logName + QLatin1String("=true\n");
         break;
-    }
-    case Info: {
+    case Info:
         str = logName + QLatin1String(".info=true\n");
         str += logName + QLatin1String(".warning=true\n");
         str += logName + QLatin1String(".critical=true\n");
         str += logName + QLatin1String(".debug=false\n");
         break;
-    }
-    case Warning: {
+    case Warning:
         str = logName + QLatin1String(".info=false\n");
         str += logName + QLatin1String(".debug=false\n");
         str += logName + QLatin1String(".warning=true\n");
         str += logName + QLatin1String(".critical=true\n");
         break;
-    }
-    case Debug: {
+    case Debug:
         str = logName + QLatin1String(".info=false\n");
         str += logName + QLatin1String(".debug=true\n");
         str += logName + QLatin1String(".warning=true\n");
         str += logName + QLatin1String(".critical=true\n");
         break;
-    }
-    case Critical:  {
+    case Critical:
         str = logName + QLatin1String(".info=false\n");
         str += logName + QLatin1String(".debug=false\n");
         str += logName + QLatin1String(".warning=false\n");
         str += logName + QLatin1String(".critical=true\n");
         break;
-    }
-    case Off: {
+    case Off:
         str = logName + QLatin1String(".info=false\n");
         str += logName + QLatin1String(".debug=false\n");
         str += logName + QLatin1String(".warning=false\n");
         str += logName + QLatin1String(".critical=false\n");
         break;
-    }
     }
     return str;
 }

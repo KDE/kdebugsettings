@@ -44,12 +44,10 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     buttonOk->setEnabled(false);
     connect(mCustomSettingWidget, &ConfigureCustomSettingWidget::enableButton, buttonOk, &QWidget::setEnabled);
     mainLayout->addWidget(buttonBox);
-
 }
 
 ConfigureCustomSettingDialog::~ConfigureCustomSettingDialog()
 {
-
 }
 
 void ConfigureCustomSettingDialog::setRule(const QString &rule)
