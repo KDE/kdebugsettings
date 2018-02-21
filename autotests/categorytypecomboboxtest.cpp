@@ -38,6 +38,7 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 
     CategoryTypeComboBox w2(false);
     QCOMPARE(w2.count(), 6);
+
 }
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
@@ -76,6 +77,21 @@ void CategoryTypeComboBoxTest::shouldVerifyItNotDefault()
     QVERIFY(w.loggingCategoryIsNotDefault());
 
     w.setType(LoggingCategory::Critical);
+    QVERIFY(w.loggingCategoryIsNotDefault());
+}
+
+void CategoryTypeComboBoxTest::shouldChangeDefaultCategory()
+{
+    CategoryTypeComboBox w(true);
+    w.setDefaultCategories(LoggingCategory::All);
+    w.setType(LoggingCategory::All);
+    QVERIFY(!w.loggingCategoryIsNotDefault());
+
+    w.setDefaultCategories(LoggingCategory::Critical);
+    w.setType(LoggingCategory::Critical);
+    QVERIFY(!w.loggingCategoryIsNotDefault());
+
+    w.setType(LoggingCategory::Debug);
     QVERIFY(w.loggingCategoryIsNotDefault());
 }
 
