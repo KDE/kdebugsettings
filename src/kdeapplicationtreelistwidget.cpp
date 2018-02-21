@@ -34,6 +34,11 @@ KDEApplicationTreeListWidgetItem::~KDEApplicationTreeListWidgetItem()
 {
 }
 
+void KDEApplicationTreeListWidgetItem::restoreToDefault()
+{
+    mCategoryTypeCombobox->restoreToDefault();
+}
+
 void KDEApplicationTreeListWidgetItem::setType(LoggingCategory::LoggingType type)
 {
     mCategoryTypeCombobox->setType(type);
@@ -107,7 +112,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
-        //item->setDefaultCategory(cat.)
+        item->setDefaultCategory(cat.defaultCategoryType);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }
@@ -135,6 +140,6 @@ void KDEApplicationTreeListWidget::restoreToDefault()
     //TODO use default value
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        itemWidget->setType(LoggingCategory::Info);
+        itemWidget->restoreToDefault();
     }
 }

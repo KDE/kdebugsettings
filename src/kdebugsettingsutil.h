@@ -113,6 +113,7 @@ QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
 KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
 RenameCategory parseRenameCategory(QString line);
 RenameCategory::List readRenameCategories(const QString &filename);
+LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

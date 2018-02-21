@@ -51,10 +51,23 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
 
     QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log") <<  QStringLiteral("WARNING") << true;
 
-    QTest::newRow("validLineCategories") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
-    QTest::newRow("validLineCategories2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
-    QTest::newRow("validLineCategories3") << QStringLiteral("log linux      [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineCategoriesWarning") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineCategoriesWarning2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineCategoriesWarning3") << QStringLiteral("log linux      [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineBadCategories") << QStringLiteral("log linux      [FOO]    ") << QStringLiteral("linux [FOO]") << QStringLiteral("log") << QString() << true;
     QTest::newRow("linewithcomment") << QStringLiteral("log linux#comment about linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
+
+    QTest::newRow("validLineCategoriesInfo") << QStringLiteral("log linux [INFO]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << true;
+    QTest::newRow("validLineCategoriesInfo2") << QStringLiteral("log linux [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << true;
+    QTest::newRow("validLineCategoriesInfo3") << QStringLiteral("log linux      [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << true;
+
+    QTest::newRow("validLineCategoriesDEBUG") << QStringLiteral("log linux [DEBUG]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << true;
+    QTest::newRow("validLineCategoriesDEBUG2") << QStringLiteral("log linux [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << true;
+    QTest::newRow("validLineCategoriesDEBUG3") << QStringLiteral("log linux      [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << true;
+
+    QTest::newRow("validLineCategoriesCRITICAL") << QStringLiteral("log linux [CRITICAL]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << true;
+    QTest::newRow("validLineCategoriesCRITICAL2") << QStringLiteral("log linux [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << true;
+    QTest::newRow("validLineCategoriesCRITICAL3") << QStringLiteral("log linux      [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << true;
 }
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
@@ -157,6 +170,25 @@ void KDebugSettingUtilTest::shouldReadRenameCategories()
     QVERIFY(file.exists());
     const RenameCategory::List lst = KDebugSettingsUtil::readRenameCategories(path);
     QCOMPARE(lst.count(), numberofrenamecategories);
+}
+
+void KDebugSettingUtilTest::shouldConvertCategoryTypeFromString_data()
+{
+    QTest::addColumn<QString>("input");
+    QTest::addColumn<LoggingCategory::LoggingType>("loggingType");
+    QTest::newRow("empty") << QString() << LoggingCategory::LoggingType::Info;
+    QTest::newRow("WARNING") << QStringLiteral("WARNING") << LoggingCategory::LoggingType::Warning;
+    QTest::newRow("Info") << QStringLiteral("INFO") << LoggingCategory::LoggingType::Info;
+    QTest::newRow("Debug") << QStringLiteral("DEBUG") << LoggingCategory::LoggingType::Debug;
+    QTest::newRow("Critical") << QStringLiteral("CRITICAL") << LoggingCategory::LoggingType::Critical;
+    QTest::newRow("unknow") << QStringLiteral("foo") << LoggingCategory::LoggingType::Info;
+}
+
+void KDebugSettingUtilTest::shouldConvertCategoryTypeFromString()
+{
+    QFETCH(QString, input);
+    QFETCH(LoggingCategory::LoggingType, loggingType);
+    QCOMPARE(KDebugSettingsUtil::convertCategoryTypeFromString(input), loggingType);
 }
 
 QTEST_GUILESS_MAIN(KDebugSettingUtilTest)

@@ -41,6 +41,10 @@ private Q_SLOTS:
 
     void shouldReadRenameCategories_data();
     void shouldReadRenameCategories();
+
+    void shouldConvertCategoryTypeFromString_data();
+    void shouldConvertCategoryTypeFromString();
+
 };
 
 #endif // KDEBUGSETTINGUTILTEST_H

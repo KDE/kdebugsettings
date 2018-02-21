@@ -18,7 +18,7 @@ kf5.kio.core.dirlister KCoreDirLister (KIO)
 kf5.kio.core.copyjob KIO::CopyJob (KIO)
 kf5.kio.widgets KIOWidgets (KIO)
 kf5.kiod KIO Daemon (KIO)
-kf5.kio.kio_http KIO HTTP slave (KIO)
+kf5.kio.kio_http KIO HTTP slave (KIO) [WARNING]
 kf5.kjobwidgets KJobWidgets
 kf5.kio.favicons FavIcons (KIO)
 kf5.kservice.sycoca KSycoca (KService)

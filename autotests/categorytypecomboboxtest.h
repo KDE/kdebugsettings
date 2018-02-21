@@ -36,6 +36,8 @@ private Q_SLOTS:
 
     void shouldVerifyItNotDefault();
     void shouldChangeDefaultCategory();
+
+    void shouldVerifyThatDefaultCategoryIsCorrect();
 };
 
 #endif // CATEGORYTYPECOMBOBOXTEST_H

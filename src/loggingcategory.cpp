@@ -21,8 +21,6 @@
 #include "loggingcategory.h"
 
 LoggingCategory::LoggingCategory()
-    : loggingType(Info)
-    , enabled(true)
 {
 }
 
@@ -31,7 +29,8 @@ bool LoggingCategory::operator ==(const LoggingCategory &other) const
     return (description == other.description)
            && (logName == other.logName)
            && (enabled == other.enabled)
-           && (loggingType == other.loggingType);
+           && (loggingType == other.loggingType)
+            && (defaultCategoryType == other.defaultCategoryType);
 }
 
 bool LoggingCategory::isValid() const
@@ -115,5 +114,6 @@ QDebug operator<<(QDebug d, const LoggingCategory &cat)
     d << "logname: " << cat.logName;
     d << "enabled: " << cat.enabled;
     d << "type: " << cat.loggingType;
+    d << "default category: " << cat.defaultCategoryType;
     return d;
 }

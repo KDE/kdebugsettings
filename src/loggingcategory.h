@@ -55,8 +55,9 @@ struct LoggingCategory {
 
     QString description;
     QString logName;
-    LoggingType loggingType;
-    bool enabled;
+    LoggingType loggingType = Info;
+    LoggingType defaultCategoryType = Info;
+    bool enabled = true;
 };
 QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 

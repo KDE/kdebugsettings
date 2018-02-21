@@ -35,7 +35,9 @@ public:
     void setType(LoggingCategory::LoggingType type);
     bool loggingCategoryIsNotDefault() const;
     void setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories);
+    LoggingCategory::LoggingType defaultCategories() const;
 
+    void restoreToDefault();
 private:
     LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
 };

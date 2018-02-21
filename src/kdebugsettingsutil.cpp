@@ -108,7 +108,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
         description = match.captured(2);
         //qDebug() << " logName"<<logName<<" description " << description << " line " << line;
     }
-    static const QRegularExpression regularExpressionDefaultCategory(QStringLiteral("^(.*)\\s+\\[(.*)\\]$"));
+
+    static const QRegularExpression regularExpressionDefaultCategory(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]$"));
     QRegularExpressionMatch match2 = regularExpressionDefaultCategory.match(description);
     QString defaultCategoryCaptured;
     if (match.hasMatch()) {
@@ -332,4 +333,21 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
     }
 
     return hashLoadLoggingCategories.values();
+}
+
+LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(const QString &str)
+{
+    if (str.isEmpty()) {
+        return LoggingCategory::Info; //Default
+    } else if (str == QLatin1String("DEBUG")) {
+         return LoggingCategory::Debug;
+    } else if (str == QLatin1String("INFO")) {
+        return LoggingCategory::Info;
+    } else if (str == QLatin1String("WARNING")) {
+        return LoggingCategory::Warning;
+    } else if (str == QLatin1String("CRITICAL")) {
+        return LoggingCategory::Critical;
+    }
+    qCWarning(KDEBUGSETTINGS_LOG) << "Default category is unknown: " << str;
+    return LoggingCategory::Info;
 }

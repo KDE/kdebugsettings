@@ -39,6 +39,11 @@ CategoryTypeComboBox::~CategoryTypeComboBox()
 {
 }
 
+void CategoryTypeComboBox::restoreToDefault()
+{
+    setType(mDefaultCategories);
+}
+
 void CategoryTypeComboBox::setType(LoggingCategory::LoggingType type)
 {
     const int pos = findData(QVariant::fromValue(type));
@@ -63,4 +68,9 @@ bool CategoryTypeComboBox::loggingCategoryIsNotDefault() const
 void CategoryTypeComboBox::setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories)
 {
     mDefaultCategories = defaultCategories;
+}
+
+LoggingCategory::LoggingType CategoryTypeComboBox::defaultCategories() const
+{
+    return mDefaultCategories;
 }

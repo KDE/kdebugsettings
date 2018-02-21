@@ -41,6 +41,7 @@ public:
     void setDefaultCategory(LoggingCategory::LoggingType type);
 
     LoggingCategory rule() const;
+    void restoreToDefault();
 private:
     QString mCategory;
     CategoryTypeComboBox *mCategoryTypeCombobox = nullptr;

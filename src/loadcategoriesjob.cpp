@@ -97,6 +97,7 @@ void LoadCategoriesJob::start()
 {
     mCustomCategories.clear();
     mQtKdeCategories.clear();
+    qDebug() << " SDDDDDS";
     mFoundOverrideRule = false;
     const int number(mCategories.count());
     const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
@@ -126,6 +127,7 @@ void LoadCategoriesJob::start()
                     }
                     tmp.description = kdeCat.description;
                     tmp.logName = kdeCat.logName;
+                    tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
 
                     mQtKdeCategories.append(tmp);
                     foundInConfigFile = true;
@@ -140,8 +142,9 @@ void LoadCategoriesJob::start()
         if (!foundInConfigFile) {
             LoggingCategory tmp;
             tmp.description = kdeCat.description;
-            tmp.logName = kdeCat.logName;
-            tmp.loggingType = LoggingCategory::Info;
+            tmp.logName = kdeCat.logName;            
+            tmp.loggingType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
+            tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
             mQtKdeCategories.append(tmp);
         }
     }
