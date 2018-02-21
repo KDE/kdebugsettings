@@ -100,6 +100,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
 #else
     QString logName;
     QString description;
+    QString defaultCategory;
     static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*(.*)$"));
     QRegularExpressionMatch match = regularExpressionUser.match(line);
     if (match.hasMatch()) {
@@ -109,20 +110,22 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     }
     static const QRegularExpression regularExpressionDefaultCategory(QStringLiteral("^(.*)\\s+\\[(.*)\\]$"));
     QRegularExpressionMatch match2 = regularExpressionDefaultCategory.match(description);
+    QString defaultCategoryCaptured;
     if (match.hasMatch()) {
         const QString descriptionCaptured = match2.captured(1);
-        const QString defaultCategory = match2.captured(2);
-        if (!descriptionCaptured.isEmpty() && !defaultCategory.isEmpty()) {
+        defaultCategoryCaptured = match2.captured(2);
+        if (!descriptionCaptured.isEmpty() && !defaultCategoryCaptured.isEmpty()) {
             description = descriptionCaptured;
-            qDebug() << " match.captured(1);" << match2.captured(1);
-            qDebug() << " match.captured(2);" << match2.captured(2);
+            defaultCategory = defaultCategoryCaptured;
+            //qDebug() << " match.captured(1);" << descriptionCaptured;
+            //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
         }
     }
 #endif
 
     category.logName = logName;
     category.description = description;
-    //TODO add default categories ?
+    category.defaultCategory = defaultCategoryCaptured;
     return category;
 }
 

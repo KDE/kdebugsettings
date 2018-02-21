@@ -49,11 +49,11 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     QTest::newRow("comment-2") << QStringLiteral("#log linux") << QString() << QString() << QString() << false;
     QTest::newRow("validLineWithParentheses") << QStringLiteral("log linux (foo)") << QStringLiteral("linux (foo)") << QStringLiteral("log") << QString() << true;
 
-    QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log") << QString() << true;
+    QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log") <<  QStringLiteral("WARNING") << true;
 
-    QTest::newRow("validLineCategories") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
-    QTest::newRow("validLineCategories2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
-    QTest::newRow("validLineCategories3") << QStringLiteral("log linux      [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
+    QTest::newRow("validLineCategories") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineCategories2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineCategories3") << QStringLiteral("log linux      [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
     QTest::newRow("linewithcomment") << QStringLiteral("log linux#comment about linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
 }
 
@@ -67,6 +67,7 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     KdeLoggingCategory result;
     result.description = description;
     result.logName = logname;
+    result.defaultCategory = defaultCategory;
     const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
     if (cat != result) {
         qDebug() << "Generated category " << cat;
