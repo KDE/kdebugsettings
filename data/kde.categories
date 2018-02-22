@@ -42,12 +42,6 @@ org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) [WARNING]
 sonnet.plugins.hunspell HUnspell (Sonnet)
 sonnet.plugins.voikko Voikko (Sonnet)
 
-# kde/pim
-org.kde.pim.kblog kblog (pim lib)
-org.kde.pim.kalarmcal kalarmcal (pim lib)
-org.kde.pim.kxmlrpcclient kxmlrpcclient (pim lib)
-org.kde.pim.ldap ldap (pim lib)
-
 #kdeedu
 log_klettres kdeedu (kletters)
 

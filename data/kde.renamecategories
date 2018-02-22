@@ -1,5 +1,1 @@
-# pim module
-log_ldap org.kde.pim.ldap
-log_kblog org.kde.pim.kblog
-log_kalarm org.kde.pim.kalarm
-log_kxmlrpcclient org.kde.pim.kxmlrpcclient
+# old module name<space>new module name
