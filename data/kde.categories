@@ -1,4 +1,4 @@
-# Format : logname<space>description
+# Format : logname<space>description(optional <space>[DEFAULT_CATEGORY] as WARNING/DEBUG/INFO/CRITICAL example: logname<space>description<space>[DEBUG])
 
 #frameworks
 org.kde.kio.kpasswdserver KPasswdServer (KIO)
