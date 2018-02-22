@@ -97,7 +97,6 @@ void LoadCategoriesJob::start()
 {
     mCustomCategories.clear();
     mQtKdeCategories.clear();
-    qDebug() << " SDDDDDS";
     mFoundOverrideRule = false;
     const int number(mCategories.count());
     const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
