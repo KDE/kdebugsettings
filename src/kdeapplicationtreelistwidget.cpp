@@ -110,6 +110,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
     }
     for (const LoggingCategory &cat : list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
+        item->setToolTip(0, cat.logName);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
         item->setDefaultCategory(cat.defaultCategoryType);
