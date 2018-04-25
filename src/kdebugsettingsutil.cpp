@@ -340,7 +340,7 @@ LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(c
     if (str.isEmpty()) {
         return LoggingCategory::Info; //Default
     } else if (str == QLatin1String("DEBUG")) {
-         return LoggingCategory::Debug;
+        return LoggingCategory::Debug;
     } else if (str == QLatin1String("INFO")) {
         return LoggingCategory::Info;
     } else if (str == QLatin1String("WARNING")) {

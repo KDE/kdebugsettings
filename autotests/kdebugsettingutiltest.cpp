@@ -49,7 +49,8 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     QTest::newRow("comment-2") << QStringLiteral("#log linux") << QString() << QString() << QString() << false;
     QTest::newRow("validLineWithParentheses") << QStringLiteral("log linux (foo)") << QStringLiteral("linux (foo)") << QStringLiteral("log") << QString() << true;
 
-    QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log") <<  QStringLiteral("WARNING") << true;
+    QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log") <<  QStringLiteral("WARNING")
+                                                           << true;
 
     QTest::newRow("validLineCategoriesWarning") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
     QTest::newRow("validLineCategoriesWarning2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;

@@ -141,7 +141,7 @@ void LoadCategoriesJob::start()
         if (!foundInConfigFile) {
             LoggingCategory tmp;
             tmp.description = kdeCat.description;
-            tmp.logName = kdeCat.logName;            
+            tmp.logName = kdeCat.logName;
             tmp.loggingType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
             tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
             mQtKdeCategories.append(tmp);

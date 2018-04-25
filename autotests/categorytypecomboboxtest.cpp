@@ -38,7 +38,6 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 
     CategoryTypeComboBox w2(false);
     QCOMPARE(w2.count(), 6);
-
 }
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
@@ -103,7 +102,6 @@ void CategoryTypeComboBoxTest::shouldVerifyThatDefaultCategoryIsCorrect()
 
     w.setDefaultCategories(LoggingCategory::Critical);
     QCOMPARE(w.defaultCategories(), LoggingCategory::Critical);
-
 
     w.setDefaultCategories(LoggingCategory::Debug);
     QCOMPARE(w.defaultCategories(), LoggingCategory::Debug);

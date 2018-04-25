@@ -30,7 +30,7 @@ bool LoggingCategory::operator ==(const LoggingCategory &other) const
            && (logName == other.logName)
            && (enabled == other.enabled)
            && (loggingType == other.loggingType)
-            && (defaultCategoryType == other.defaultCategoryType);
+           && (defaultCategoryType == other.defaultCategoryType);
 }
 
 bool LoggingCategory::isValid() const

@@ -44,7 +44,6 @@ private Q_SLOTS:
 
     void shouldConvertCategoryTypeFromString_data();
     void shouldConvertCategoryTypeFromString();
-
 };
 
 #endif // KDEBUGSETTINGUTILTEST_H
