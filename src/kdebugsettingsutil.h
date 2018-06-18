@@ -45,12 +45,12 @@ struct LineLoggingQtCategory {
         All
     };
 
-    bool isValid() const
+    Q_REQUIRED_RESULT bool isValid() const
     {
         return !logName.isEmpty();
     }
 
-    bool operator ==(const LineLoggingQtCategory &other) const
+    Q_REQUIRED_RESULT bool operator ==(const LineLoggingQtCategory &other) const
     {
         return (enabled == other.enabled)
                && (type == other.type)
@@ -93,7 +93,7 @@ struct LoadLoggingCategory {
         return !logName.isEmpty();
     }
 
-    bool operator ==(const LoadLoggingCategory &other) const
+    Q_REQUIRED_RESULT bool operator ==(const LoadLoggingCategory &other) const
     {
         //qDebug() << " logname " << logName << " other.logName :" << other.logName;
         return (logName == other.logName)
@@ -106,14 +106,14 @@ struct LoadLoggingCategory {
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
-KdeLoggingCategory parseLineKdeLoggingCategory(QString line);
-KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
+Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line);
+Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
 
-QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
-KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
-RenameCategory parseRenameCategory(QString line);
-RenameCategory::List readRenameCategories(const QString &filename);
-LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
+Q_REQUIRED_RESULT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
+Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
+Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line);
+Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
+Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

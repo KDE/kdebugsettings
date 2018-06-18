@@ -47,11 +47,11 @@ struct LoggingCategory {
     }
 
     typedef QVector<LoggingCategory> List;
-    bool operator ==(const LoggingCategory &other) const;
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool operator ==(const LoggingCategory &other) const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
-    QString createRule() const;
-    QString createCustomRule() const;
+    Q_REQUIRED_RESULT QString createRule() const;
+    Q_REQUIRED_RESULT QString createCustomRule() const;
 
     QString description;
     QString logName;

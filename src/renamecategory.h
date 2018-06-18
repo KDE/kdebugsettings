@@ -32,8 +32,8 @@ public:
     }
 
     typedef QVector<RenameCategory> List;
-    bool operator ==(const RenameCategory &other) const;
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool operator ==(const RenameCategory &other) const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
     QString originalName;
     QString newName;

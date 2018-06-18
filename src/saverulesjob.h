@@ -34,7 +34,7 @@ public:
 
     void setFileName(const QString &fileName);
 
-    bool start();
+    Q_REQUIRED_RESULT bool start();
 
 private:
     LoggingCategory::List mListKde;

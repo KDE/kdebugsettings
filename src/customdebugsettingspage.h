@@ -33,7 +33,7 @@ public:
     ~CustomDebugSettingsPage();
 
     void fillList(const LoggingCategory::List &list);
-    LoggingCategory::List rules() const;
+    Q_REQUIRED_RESULT LoggingCategory::List rules() const;
 private:
     void slotRemoveRules();
     void slotAddRule();

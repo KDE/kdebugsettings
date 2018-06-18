@@ -35,12 +35,12 @@ public:
     KDEApplicationTreeListWidgetItem(const QString &logName, QTreeWidget *parent);
     ~KDEApplicationTreeListWidgetItem();
 
-    QString logName() const;
+    Q_REQUIRED_RESULT QString logName() const;
     void setLogName(const QString &category);
     void setType(LoggingCategory::LoggingType type);
     void setDefaultCategory(LoggingCategory::LoggingType type);
 
-    LoggingCategory rule(bool forceSavingAllRules) const;
+    Q_REQUIRED_RESULT LoggingCategory rule(bool forceSavingAllRules) const;
     void restoreToDefault();
 private:
     QString mCategory;
@@ -60,7 +60,7 @@ public:
 
     void fillList(const LoggingCategory::List &list);
     void insertCategories(const LoggingCategory::List &list);
-    LoggingCategory::List rules(bool forceSavingAllRules) const;
+    Q_REQUIRED_RESULT LoggingCategory::List rules(bool forceSavingAllRules) const;
 
     void restoreToDefault();
 

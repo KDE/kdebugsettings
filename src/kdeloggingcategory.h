@@ -28,9 +28,9 @@
 struct KdeLoggingCategory {
     KdeLoggingCategory();
     typedef QVector<KdeLoggingCategory> List;
-    bool operator ==(const KdeLoggingCategory &other) const;
-    bool operator !=(const KdeLoggingCategory &other) const;
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool operator ==(const KdeLoggingCategory &other) const;
+    Q_REQUIRED_RESULT bool operator !=(const KdeLoggingCategory &other) const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
     QString description;
     QString logName;
