@@ -49,12 +49,12 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mEnableDebug = new QPushButton(i18n("Enable All Debug"), this);
     mEnableDebug->setObjectName(QStringLiteral("selectall"));
     buttonLayout->addWidget(mEnableDebug);
-    connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAll);
+    connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAllDebug);
 
     mTurnOffDebug = new QPushButton(i18n("Turn Off Debug"), this);
     mTurnOffDebug->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mTurnOffDebug);
-    connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAll);
+    connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllDebug);
     mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
@@ -74,12 +74,12 @@ bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
     return QWidget::eventFilter(obj, event);
 }
 
-void KDEApplicationDebugSettingPage::slotSelectAll()
+void KDEApplicationDebugSettingPage::slotSelectAllDebug()
 {
     mTreeListWidget->selectAllDebugCategories();
 }
 
-void KDEApplicationDebugSettingPage::slotDeselectAll()
+void KDEApplicationDebugSettingPage::slotDeselectAllDebug()
 {
     mTreeListWidget->deSelectAllDebugCategories();
 }

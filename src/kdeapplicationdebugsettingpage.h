@@ -42,8 +42,8 @@ protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    void slotSelectAll();
-    void slotDeselectAll();
+    void slotSelectAllDebug();
+    void slotDeselectAllDebug();
 
     KDEApplicationTreeListWidget *mTreeListWidget = nullptr;
     KTreeWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
