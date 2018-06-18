@@ -43,9 +43,16 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 
     QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
     QVERIFY(selectAll);
+    QVERIFY(selectAll->isEnabled());
 
-    QPushButton *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));
+    QPushButton *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));   
     QVERIFY(deselectAll);
+    QVERIFY(deselectAll->isEnabled());
+
+    QPushButton *mTurnOffAllMessages = page.findChild<QPushButton *>(QStringLiteral("deselectallmessage"));
+    QVERIFY(mTurnOffAllMessages);
+    QVERIFY(mTurnOffAllMessages->isEnabled());
+
 
     KTreeWidgetSearchLine *searchLine = page.findChild<KTreeWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);

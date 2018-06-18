@@ -55,6 +55,12 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mTurnOffDebug->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mTurnOffDebug);
     connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllDebug);
+
+    mTurnOffAllMessages = new QPushButton(i18n("Turn Off All Messages"), this);
+    mTurnOffAllMessages->setObjectName(QStringLiteral("deselectallmessage"));
+    buttonLayout->addWidget(mTurnOffAllMessages);
+    connect(mTurnOffAllMessages, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllMessages);
+
     mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
@@ -82,6 +88,11 @@ void KDEApplicationDebugSettingPage::slotSelectAllDebug()
 void KDEApplicationDebugSettingPage::slotDeselectAllDebug()
 {
     mTreeListWidget->deSelectAllDebugCategories();
+}
+
+void KDEApplicationDebugSettingPage::slotDeselectAllMessages()
+{
+    mTreeListWidget->deSelectAllMessagesCategories();
 }
 
 void KDEApplicationDebugSettingPage::fillList(const LoggingCategory::List &list)

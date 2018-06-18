@@ -44,11 +44,13 @@ protected:
 private:
     void slotSelectAllDebug();
     void slotDeselectAllDebug();
+    void slotDeselectAllMessages();
 
     KDEApplicationTreeListWidget *mTreeListWidget = nullptr;
     KTreeWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
     QPushButton *mEnableDebug = nullptr;
     QPushButton *mTurnOffDebug = nullptr;
+    QPushButton *mTurnOffAllMessages = nullptr;
 };
 
 #endif // KDEAPPLICATIONDEBUGSETTINGPAGE_H

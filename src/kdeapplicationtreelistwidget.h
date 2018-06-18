@@ -56,6 +56,7 @@ public:
 
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();
+    void deSelectAllMessagesCategories();
 
     void fillList(const LoggingCategory::List &list);
     void insertCategories(const LoggingCategory::List &list);
