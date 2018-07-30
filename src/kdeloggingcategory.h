@@ -34,7 +34,6 @@ struct KdeLoggingCategory {
 
     QString description;
     QString categoryName;
-    //Use enum ?
     QString defaultCategory;
 };
 QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
