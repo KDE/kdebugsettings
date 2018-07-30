@@ -36,7 +36,7 @@ void KDEApplicationTreeListWidgetTest::shouldHaveDefaultValue()
     KDEApplicationTreeListWidget w;
     QCOMPARE(w.topLevelItemCount(), 0);
     QVERIFY(w.header()->isHidden());
-    QCOMPARE(w.columnCount(), 3);
+    QCOMPARE(w.columnCount(), 4);
 }
 
 QTEST_MAIN(KDEApplicationTreeListWidgetTest)

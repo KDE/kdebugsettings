@@ -44,7 +44,7 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QVERIFY(!listWidget->rootIsDecorated());
     QVERIFY(listWidget->header()->isHidden());
     QVERIFY(listWidget->isColumnHidden(2));
-    QCOMPARE(listWidget->columnCount(), 3);
+    QCOMPARE(listWidget->columnCount(), 4);
 
     QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
     QVERIFY(selectAll);
