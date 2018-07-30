@@ -33,7 +33,7 @@ struct KdeLoggingCategory {
     Q_REQUIRED_RESULT bool isValid() const;
 
     QString description;
-    QString logName;
+    QString categoryName;
     //Use enum ?
     QString defaultCategory;
 };

@@ -93,7 +93,7 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
 {
     for (const LoggingCategory &cat : list) {
         QString ruleStr;
-        ruleStr = cat.logName;
+        ruleStr = cat.categoryName;
         switch (cat.loggingType) {
         case LoggingCategory::Undefined:
         case LoggingCategory::All:
@@ -130,7 +130,7 @@ LoggingCategory::List CustomDebugSettingsPage::rules() const
         const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
         if (cat.isValid()) {
             LoggingCategory tmp;
-            tmp.logName = cat.logName;
+            tmp.categoryName = cat.logName;
             tmp.enabled = cat.enabled;
             switch (cat.type) {
             case KDebugSettingsUtil::LineLoggingQtCategory::Unknown:

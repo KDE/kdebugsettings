@@ -250,7 +250,7 @@ void KDebugSettingsDialog::slotInsertCategories()
         for (const KdeLoggingCategory &cat : qAsConst(insertCategoriesList)) {
             LoggingCategory loggingCat;
             loggingCat.description = cat.description;
-            loggingCat.logName = cat.logName;
+            loggingCat.categoryName = cat.categoryName;
             loggingCat.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(cat.defaultCategory);
             if (loggingCat.isValid()) {
                 newCategories.append(loggingCat);

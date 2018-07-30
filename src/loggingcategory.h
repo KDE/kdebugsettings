@@ -40,7 +40,7 @@ struct LoggingCategory {
 
     explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, bool enabled)
         : description(description)
-        , logName(logName)
+        , categoryName(logName)
         , loggingType(loggingType)
         , enabled(enabled)
     {
@@ -54,7 +54,7 @@ struct LoggingCategory {
     Q_REQUIRED_RESULT QString createCustomRule() const;
 
     QString description;
-    QString logName;
+    QString categoryName;
     LoggingType loggingType = Info;
     LoggingType defaultCategoryType = Info;
     bool enabled = true;

@@ -139,7 +139,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     // Test with extract elements
     LoggingCategory::List customCategories;
     LoggingCategory customTmp;
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = true;
     customCategories.append(customTmp);
@@ -151,7 +151,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
 
     // Test with extract elements
     customCategories.clear();
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = false;
     customCategories.append(customTmp);
@@ -163,20 +163,20 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     //Test without categories
     qtKdeCategories.clear();
     customCategories.clear();
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Info;
     customTmp.enabled = false;
     customCategories.append(customTmp);
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Warning;
     customTmp.enabled = false;
     customCategories.append(customTmp);
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Debug;
     customTmp.enabled = false;
     customCategories.append(customTmp);
 
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = false;
     customCategories.append(customTmp);
@@ -187,7 +187,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
 
     qtKdeCategories.clear();
     customCategories.clear();
-    customTmp.logName = QStringLiteral("toto");
+    customTmp.categoryName = QStringLiteral("toto");
     customTmp.loggingType = LoggingCategory::Warning;
     customTmp.enabled = false;
     customCategories.append(customTmp);
@@ -219,12 +219,12 @@ void LoadCategoriesJobTest::shouldReadRules()
 
     if (job.customCategories() != customcategories) {
         Q_FOREACH (const LoggingCategory &cat, job.customCategories()) {
-            qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
+            qDebug() << "customcategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
 
         qDebug() << "AFTER";
         for (const LoggingCategory &cat : qAsConst(customcategories)) {
-            qDebug() << "customcategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
+            qDebug() << "customcategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
     }
     QCOMPARE(job.customCategories().count(), customcategories.count());
@@ -234,12 +234,12 @@ void LoadCategoriesJobTest::shouldReadRules()
 
     if (job.qtKdeCategories() != qtkdecategories) {
         Q_FOREACH (const LoggingCategory &cat, job.qtKdeCategories()) {
-            qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
+            qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
 
         qDebug() << "AFTER";
         Q_FOREACH (const LoggingCategory &cat, qtkdecategories) {
-            qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.logName << " enabled " << cat.enabled << "type " << cat.loggingType;
+            qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
     }
     QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());

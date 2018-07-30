@@ -80,7 +80,7 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     QFETCH(bool, valid);
     KdeLoggingCategory result;
     result.description = description;
-    result.logName = logname;
+    result.categoryName = logname;
     result.defaultCategory = defaultCategory;
     const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
     if (cat != result) {

@@ -124,7 +124,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     }
 #endif
 
-    category.logName = logName;
+    category.categoryName = logName;
     category.description = description;
     category.defaultCategory = defaultCategoryCaptured;
     return category;

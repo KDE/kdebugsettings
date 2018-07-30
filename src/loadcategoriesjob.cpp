@@ -116,7 +116,7 @@ void LoadCategoriesJob::start()
 
         bool foundInConfigFile = false;
         for (KDebugSettingsUtil::LoadLoggingCategory cat : qAsConst(qtCategories)) {
-            if (cat.logName == kdeCat.logName) {
+            if (cat.logName == kdeCat.categoryName) {
                 LoggingCategory tmp;
                 LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
                 if (newType != LoggingCategory::Undefined) {
@@ -125,7 +125,7 @@ void LoadCategoriesJob::start()
                         tmp.enabled = false;
                     }
                     tmp.description = kdeCat.description;
-                    tmp.logName = kdeCat.logName;
+                    tmp.categoryName = kdeCat.categoryName;
                     tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
 
                     mQtKdeCategories.append(tmp);
@@ -141,7 +141,7 @@ void LoadCategoriesJob::start()
         if (!foundInConfigFile) {
             LoggingCategory tmp;
             tmp.description = kdeCat.description;
-            tmp.logName = kdeCat.logName;
+            tmp.categoryName = kdeCat.categoryName;
             tmp.loggingType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
             tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
             mQtKdeCategories.append(tmp);
@@ -155,7 +155,7 @@ void LoadCategoriesJob::start()
             i.next();
             if (i.value() != KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
                 LoggingCategory tmp;
-                tmp.logName = cat.logName;
+                tmp.categoryName = cat.logName;
                 switch (i.key()) {
                 case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
                     tmp.loggingType = LoggingCategory::Undefined;

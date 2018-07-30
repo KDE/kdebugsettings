@@ -64,7 +64,7 @@ LoggingCategory KDEApplicationTreeListWidgetItem::rule(bool forceSavingAllRules)
     LoggingCategory cat;
     if (mCategoryTypeCombobox->loggingCategoryIsNotDefault() || forceSavingAllRules) {
         cat.enabled = false;
-        cat.logName = mCategory;
+        cat.categoryName = mCategory;
         cat.loggingType = mCategoryTypeCombobox->type();
     }
     return cat;
@@ -123,12 +123,12 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
         clear();
     }
     for (const LoggingCategory &cat : list) {
-        KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.logName, this);
-        item->setToolTip(0, cat.logName);
+        KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.categoryName, this);
+        item->setToolTip(0, cat.categoryName);
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
         item->setDefaultCategory(cat.defaultCategoryType);
-        item->setText(KDEApplicationTreeListWidgetItem::LogName, cat.logName);
+        item->setText(KDEApplicationTreeListWidgetItem::LogName, cat.categoryName);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }
