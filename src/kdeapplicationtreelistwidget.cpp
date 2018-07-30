@@ -83,6 +83,11 @@ KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget()
 {
 }
 
+QList<int> KDEApplicationTreeListWidget::searchColumns() const
+{
+    return {KDEApplicationTreeListWidgetItem::Description, KDEApplicationTreeListWidgetItem::LogName};
+}
+
 void KDEApplicationTreeListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {

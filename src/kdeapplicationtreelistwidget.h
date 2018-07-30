@@ -65,6 +65,7 @@ public:
 
     void restoreToDefault();
 
+    QList<int> searchColumns() const;
 private:
     void addListItems(const LoggingCategory::List &list, bool clearList);
 };
