@@ -38,6 +38,7 @@ struct LoggingCategory {
 
     LoggingCategory();
 
+    //TODO add identifiername!!!!!
     explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, bool enabled)
         : description(description)
         , categoryName(logName)
@@ -55,6 +56,7 @@ struct LoggingCategory {
 
     QString description;
     QString categoryName;
+    QString identifierName;
     LoggingType loggingType = Info;
     LoggingType defaultCategoryType = Info;
     bool enabled = true;

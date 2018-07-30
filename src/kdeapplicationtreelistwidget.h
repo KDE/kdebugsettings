@@ -30,7 +30,8 @@ public:
     enum ColumnType {
         Description = 0,
         CategoryType = 1,
-        LogName = 2
+        LogName = 2,
+        IdentifierName = 3
     };
 
     KDEApplicationTreeListWidgetItem(const QString &logName, QTreeWidget *parent);
