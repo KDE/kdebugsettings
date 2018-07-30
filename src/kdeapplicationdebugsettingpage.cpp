@@ -39,6 +39,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
     mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
     mTreeListWidgetSearchLine->setFocus();
+    mTreeListWidgetSearchLine->setSearchColumns({0, 2});
     mainLayout->addWidget(mTreeListWidgetSearchLine);
 
     mainLayout->addWidget(mTreeListWidget);

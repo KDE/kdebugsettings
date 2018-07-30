@@ -73,8 +73,9 @@ LoggingCategory KDEApplicationTreeListWidgetItem::rule(bool forceSavingAllRules)
 KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
     : QTreeWidget(parent)
 {
-    setColumnCount(2);
+    setColumnCount(3);
     setRootIsDecorated(false);
+    setColumnHidden(KDEApplicationTreeListWidgetItem::LogName, true);
     header()->hide();
 }
 
@@ -122,6 +123,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
         item->setDefaultCategory(cat.defaultCategoryType);
+        item->setText(KDEApplicationTreeListWidgetItem::LogName, cat.logName);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }

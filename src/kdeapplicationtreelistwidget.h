@@ -29,7 +29,8 @@ class KDEApplicationTreeListWidgetItem : public QTreeWidgetItem
 public:
     enum ColumnType {
         Description = 0,
-        CategoryType = 1
+        CategoryType = 1,
+        LogName = 2
     };
 
     KDEApplicationTreeListWidgetItem(const QString &logName, QTreeWidget *parent);

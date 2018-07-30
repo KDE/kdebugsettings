@@ -23,6 +23,7 @@
 #include "../src/kdeapplicationtreelistwidget.h"
 #include <qlistwidget.h>
 #include <qpushbutton.h>
+#include <QHeaderView>
 #include <qtest.h>
 #include <KTreeWidgetSearchLine>
 
@@ -40,6 +41,10 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     KDEApplicationDebugSettingPage page;
     KDEApplicationTreeListWidget *listWidget = page.findChild<KDEApplicationTreeListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(listWidget);
+    QVERIFY(!listWidget->rootIsDecorated());
+    QVERIFY(listWidget->header()->isHidden());
+    QVERIFY(listWidget->isColumnHidden(2));
+    QCOMPARE(listWidget->columnCount(), 3);
 
     QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
     QVERIFY(selectAll);
