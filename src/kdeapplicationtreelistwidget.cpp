@@ -146,7 +146,6 @@ LoggingCategory::List KDEApplicationTreeListWidget::rules(bool forceSavingAllRul
 
 void KDEApplicationTreeListWidget::restoreToDefault()
 {
-    //TODO use default value
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
         itemWidget->restoreToDefault();
