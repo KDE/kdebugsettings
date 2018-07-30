@@ -92,7 +92,9 @@ void KDEApplicationTreeListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        itemWidget->setType(LoggingCategory::Debug);
+        if (!itemWidget->isHidden()) {
+            itemWidget->setType(LoggingCategory::Debug);
+        }
     }
 }
 
@@ -100,7 +102,9 @@ void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        itemWidget->setType(LoggingCategory::Info);
+        if (!itemWidget->isHidden()) {
+            itemWidget->setType(LoggingCategory::Info);
+        }
     }
 }
 
@@ -108,7 +112,9 @@ void KDEApplicationTreeListWidget::deSelectAllMessagesCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
         KDEApplicationTreeListWidgetItem *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
-        itemWidget->setType(LoggingCategory::Off);
+        if (!itemWidget->isHidden()) {
+            itemWidget->setType(LoggingCategory::Off);
+        }
     }
 }
 
