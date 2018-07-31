@@ -91,13 +91,6 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
         qCWarning(KDEBUGSETTINGS_LOG) << "No space:" << line << endl;
         return category;
     }
-#if 0
-    //log linux (foo)
-
-    const QString logName = line.left(space);
-
-    const QString description = line.mid(space).simplified();
-#else
     QString logName;
     QString description;
     QString defaultCategory;
@@ -122,7 +115,6 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
             //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
         }
     }
-#endif
 
     category.categoryName = logName;
     category.description = description;
