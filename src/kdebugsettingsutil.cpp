@@ -95,6 +95,9 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     QString logName;
     QString description;
     QString defaultSeverity;
+    QString identifier;
+
+#if 1
 
     //TODO create an unique regularexpression
 
@@ -123,7 +126,6 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
         }
     }
 
-    QString identifier;
     if (potentialIdentifier.isEmpty()) {
         static const QRegularExpression regularExpressionDefaultIdentifierNewFormat(QStringLiteral("^(.*)\\s+IDENTIFIER\\s+\\[(.*)\\]"));
         QRegularExpressionMatch match4 = regularExpressionDefaultIdentifierNewFormat.match(description);
@@ -165,11 +167,21 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
             }
         }
     }
+#else
+    static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*([\\w._-\\(\\)\\s*]+)\\s*(?:\\[(DEBUG|INFO|WARNING|CRITICAL)\\])?$"));
+    QRegularExpressionMatch match = regularExpressionUser.match(line);
+    if (match.hasMatch()) {
+        logName = match.captured(1);
+        description = match.captured(2);
+        defaultSeverity = match.captured(3);
+        identifier = match.captured(4);
+    }
 
+#endif
     category.categoryName = logName;
     category.description = description;
+    category.defaultSeverity = defaultSeverity;
     category.identifierName = identifier;
-    category.defaultSeverity = defaultSeverityCaptured;
     return category;
 }
 
