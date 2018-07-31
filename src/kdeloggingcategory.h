@@ -34,6 +34,7 @@ struct KdeLoggingCategory {
 
     QString description;
     QString categoryName;
+    QString identifierName;
     QString defaultCategory;
 };
 QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);

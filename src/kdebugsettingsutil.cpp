@@ -99,10 +99,9 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     if (match.hasMatch()) {
         logName = match.captured(1);
         description = match.captured(2);
-        //qDebug() << " logName"<<logName<<" description " << description << " line " << line;
     }
 
-    static const QRegularExpression regularExpressionDefaultCategory(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]$"));
+    static const QRegularExpression regularExpressionDefaultCategory(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]"));
     QRegularExpressionMatch match2 = regularExpressionDefaultCategory.match(description);
     QString defaultCategoryCaptured;
     if (match.hasMatch()) {

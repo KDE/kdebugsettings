@@ -37,6 +37,7 @@ void LoggingCategoryTest::shouldHaveDefaultValue()
     QVERIFY(log.enabled);
     QVERIFY(log.description.isEmpty());
     QVERIFY(log.categoryName.isEmpty());
+    QVERIFY(log.identifierName.isEmpty());
     QCOMPARE(log.loggingType, LoggingCategory::Info);
     QVERIFY(!log.isValid());
 }
@@ -47,6 +48,7 @@ void LoggingCategoryTest::shouldBeEqual()
     log.enabled = false;
     log.description = QStringLiteral("foo");
     log.categoryName = QStringLiteral("bla");
+    log.identifierName = QStringLiteral("blu");
     log.loggingType = LoggingCategory::All;
     LoggingCategory log2;
     log2 = log;
