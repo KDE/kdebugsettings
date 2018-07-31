@@ -37,11 +37,10 @@ struct LoggingCategory {
     };
 
     LoggingCategory();
-
-    //TODO add identifiername!!!!!
-    explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, bool enabled)
+    explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, const QString & identifier, bool enabled)
         : description(description)
         , categoryName(logName)
+        , identifierName(identifier)
         , loggingType(loggingType)
         , enabled(enabled)
     {
@@ -58,7 +57,7 @@ struct LoggingCategory {
     QString categoryName;
     QString identifierName;
     LoggingType loggingType = Info;
-    LoggingType defaultCategoryType = Info;
+    LoggingType defaultSeverityType = Info;
     bool enabled = true;
 };
 QDebug operator<<(QDebug debug, const LoggingCategory &cat);

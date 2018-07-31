@@ -126,7 +126,8 @@ void LoadCategoriesJob::start()
                     }
                     tmp.description = kdeCat.description;
                     tmp.categoryName = kdeCat.categoryName;
-                    tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
+                    tmp.defaultSeverityType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultSeverity);
+                    tmp.identifierName = kdeCat.identifierName;
 
                     mQtKdeCategories.append(tmp);
                     foundInConfigFile = true;
@@ -142,8 +143,9 @@ void LoadCategoriesJob::start()
             LoggingCategory tmp;
             tmp.description = kdeCat.description;
             tmp.categoryName = kdeCat.categoryName;
-            tmp.loggingType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
-            tmp.defaultCategoryType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultCategory);
+            tmp.loggingType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultSeverity);
+            tmp.defaultSeverityType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultSeverity);
+            tmp.identifierName = kdeCat.identifierName;
             mQtKdeCategories.append(tmp);
         }
     }

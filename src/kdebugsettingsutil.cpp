@@ -23,6 +23,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QRegularExpression>
+#include <KLocalizedString>
 
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line)
 {
@@ -93,7 +94,10 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     }
     QString logName;
     QString description;
-    QString defaultCategory;
+    QString defaultSeverity;
+
+    //TODO create an unique regularexpression
+
     static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*(.*)$"));
     QRegularExpressionMatch match = regularExpressionUser.match(line);
     if (match.hasMatch()) {
@@ -101,23 +105,71 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
         description = match.captured(2);
     }
 
-    static const QRegularExpression regularExpressionDefaultCategory(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]"));
-    QRegularExpressionMatch match2 = regularExpressionDefaultCategory.match(description);
-    QString defaultCategoryCaptured;
-    if (match.hasMatch()) {
-        const QString descriptionCaptured = match2.captured(1);
-        defaultCategoryCaptured = match2.captured(2);
-        if (!descriptionCaptured.isEmpty() && !defaultCategoryCaptured.isEmpty()) {
+    bool newFormatFound = false;
+    static const QRegularExpression regularExpressionDefaultSeverityNewFormat(QStringLiteral("^(.*)\\s+DEFAULT_SEVERITY\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\](?:\\s+(.*))?"));
+    QRegularExpressionMatch match3 = regularExpressionDefaultSeverityNewFormat.match(description);
+    QString defaultSeverityCaptured;
+    QString potentialIdentifier;
+    if (match3.hasMatch()) {
+        newFormatFound = true;
+        const QString descriptionCaptured = match3.captured(1);
+        defaultSeverityCaptured = match3.captured(2);
+        potentialIdentifier = match3.captured(3);
+        if (!descriptionCaptured.isEmpty() && !defaultSeverityCaptured.isEmpty()) {
             description = descriptionCaptured;
-            defaultCategory = defaultCategoryCaptured;
+            defaultSeverity = defaultSeverityCaptured;
             //qDebug() << " match.captured(1);" << descriptionCaptured;
             //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
         }
     }
 
+    QString identifier;
+    if (potentialIdentifier.isEmpty()) {
+        static const QRegularExpression regularExpressionDefaultIdentifierNewFormat(QStringLiteral("^(.*)\\s+IDENTIFIER\\s+\\[(.*)\\]"));
+        QRegularExpressionMatch match4 = regularExpressionDefaultIdentifierNewFormat.match(description);
+        if (match4.hasMatch()) {
+            newFormatFound = true;
+            const QString descriptionCaptured = match4.captured(1);
+            const QString identifierCaptured = match4.captured(2);
+            if (!descriptionCaptured.isEmpty() && !identifierCaptured.isEmpty()) {
+                description = descriptionCaptured;
+                identifier = identifierCaptured;
+                //qDebug() << " match.captured(1);" << descriptionCaptured;
+                //qDebug() << " match.captured(2);" << identifierCaptured;
+            }
+        }
+    } else {
+        static const QRegularExpression regularExpressionDefaultIdentifierNewFormat2(QStringLiteral("IDENTIFIER\\s+\\[(.*)\\]"));
+        QRegularExpressionMatch match4 = regularExpressionDefaultIdentifierNewFormat2.match(potentialIdentifier);
+        if (match4.hasMatch()) {
+            newFormatFound = true;
+            const QString identifierCaptured = match4.captured(1);
+            if (!identifierCaptured.isEmpty()) {
+                identifier = identifierCaptured;
+            }
+        }
+    }
+
+    if (!newFormatFound) {
+        //Old format.
+        static const QRegularExpression regularExpressionDefaultSeverityOldFormat(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]"));
+        QRegularExpressionMatch match2 = regularExpressionDefaultSeverityOldFormat.match(description);
+        if (match2.hasMatch()) {
+            const QString descriptionCaptured = match2.captured(1);
+            defaultSeverityCaptured = match2.captured(2);
+            if (!descriptionCaptured.isEmpty() && !defaultSeverityCaptured.isEmpty()) {
+                description = descriptionCaptured;
+                defaultSeverity = defaultSeverityCaptured;
+                //qDebug() << " match.captured(1);" << descriptionCaptured;
+                //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
+            }
+        }
+    }
+
     category.categoryName = logName;
     category.description = description;
-    category.defaultCategory = defaultCategoryCaptured;
+    category.identifierName = identifier;
+    category.defaultSeverity = defaultSeverityCaptured;
     return category;
 }
 
@@ -341,4 +393,33 @@ LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(c
     }
     qCWarning(KDEBUGSETTINGS_LOG) << "Default category is unknown: " << str;
     return LoggingCategory::Info;
+}
+
+QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::LoggingType type)
+{
+    QString str;
+    switch (type) {
+    case LoggingCategory::All:
+        str = i18n("All Debug Messages");
+        break;
+    case LoggingCategory::Info:
+        str = i18n("Info Messages");
+        break;
+    case LoggingCategory::Warning:
+        str = i18n("Warning Messages");
+        break;
+    case LoggingCategory::Debug:
+        str = i18n("Debug Messages");
+        break;
+    case LoggingCategory::Critical:
+        str = i18n("Critical Messages");
+        break;
+    case LoggingCategory::Off:
+        str = i18n("No Debug Messages");
+        break;
+    case LoggingCategory::Undefined:
+        str = i18n("Undefined");
+        break;
+    }
+    return str;
 }

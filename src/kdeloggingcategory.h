@@ -35,7 +35,7 @@ struct KdeLoggingCategory {
     QString description;
     QString categoryName;
     QString identifierName;
-    QString defaultCategory;
+    QString defaultSeverity;
 };
 QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);

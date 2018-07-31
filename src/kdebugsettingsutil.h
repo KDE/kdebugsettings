@@ -114,6 +114,7 @@ Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCa
 Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line);
 Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
 Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
+Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

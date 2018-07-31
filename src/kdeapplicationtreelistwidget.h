@@ -69,6 +69,7 @@ public:
     QList<int> searchColumns() const;
 private:
     void addListItems(const LoggingCategory::List &list, bool clearList);
+    QString generateToolTip(const LoggingCategory &cat);
 };
 
 #endif // KDEAPPLICATIONTREELISTWIDGET_H

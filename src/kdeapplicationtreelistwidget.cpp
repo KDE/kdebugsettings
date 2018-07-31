@@ -20,7 +20,9 @@
 
 #include "kdeapplicationtreelistwidget.h"
 #include "categorytypecombobox.h"
+#include "kdebugsettingsutil.h"
 #include <QHeaderView>
+#include <KLocalizedString>
 
 KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString &category, QTreeWidget *parent)
     : QTreeWidgetItem(parent)
@@ -124,6 +126,16 @@ void KDEApplicationTreeListWidget::fillList(const LoggingCategory::List &list)
     addListItems(list, true);
 }
 
+QString KDEApplicationTreeListWidget::generateToolTip(const LoggingCategory &cat)
+{
+    QString toopTip = i18n("Category name: %1", cat.categoryName);
+    if (!cat.identifierName.isEmpty()) {
+        toopTip += QLatin1Char('\n') + i18n("Identifier: %1", cat.identifierName);
+    }
+    toopTip += QLatin1Char('\n') + i18n("Default Severity: %1", KDebugSettingsUtil::convertCategoryTypeToString(cat.defaultSeverityType));
+    return toopTip;
+}
+
 void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &list, bool clearList)
 {
     if (clearList) {
@@ -131,11 +143,12 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
     }
     for (const LoggingCategory &cat : list) {
         KDEApplicationTreeListWidgetItem *item = new KDEApplicationTreeListWidgetItem(cat.categoryName, this);
-        item->setToolTip(0, cat.categoryName);
+        item->setToolTip(0, generateToolTip(cat));
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
-        item->setDefaultCategory(cat.defaultCategoryType);
+        item->setDefaultCategory(cat.defaultSeverityType);
         item->setText(KDEApplicationTreeListWidgetItem::LogName, cat.categoryName);
+        item->setText(KDEApplicationTreeListWidgetItem::IdentifierName, cat.identifierName);
     }
     resizeColumnToContents(KDEApplicationTreeListWidgetItem::Description);
 }

@@ -37,38 +37,77 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     QTest::addColumn<QString>("input");
     QTest::addColumn<QString>("description");
     QTest::addColumn<QString>("logname");
-    QTest::addColumn<QString>("defaultCategory");
+    QTest::addColumn<QString>("defaultSeverity");
+    QTest::addColumn<QString>("identifier");
     QTest::addColumn<bool>("valid");
-    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << false;
+    //Old format
+    QTest::newRow("empty") <<  QString() << QString() << QString() << QString() << QString() << false;
 
-    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
-    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
-    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << QString() << false;
-    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << QString() << false;
-    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << QString() << false;
-    QTest::newRow("comment-2") << QStringLiteral("#log linux") << QString() << QString() << QString() << false;
-    QTest::newRow("validLineWithParentheses") << QStringLiteral("log linux (foo)") << QStringLiteral("linux (foo)") << QStringLiteral("log") << QString() << true;
+    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << QString() << QString() << false;
+    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << QString() << QString() << false;
+    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << QString() << QString() << false;
+    QTest::newRow("comment-2") << QStringLiteral("#log linux") << QString() << QString() << QString() << QString() << false;
+    QTest::newRow("validLineWithParentheses") << QStringLiteral("log linux (foo)") << QStringLiteral("linux (foo)") << QStringLiteral("log") << QString() << QString() << true;
 
-    QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log") <<  QStringLiteral("WARNING")
+    QTest::newRow("validLineWithParenthesesAndCategories") << QStringLiteral("log linux (foo) [WARNING]") << QStringLiteral("linux (foo)") << QStringLiteral("log")
+                                                           <<  QStringLiteral("WARNING")
+                                                           << QString()
                                                            << true;
 
-    QTest::newRow("validLineCategoriesWarning") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
-    QTest::newRow("validLineCategoriesWarning2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
-    QTest::newRow("validLineCategoriesWarning3") << QStringLiteral("log linux      [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << true;
-    QTest::newRow("validLineBadCategories") << QStringLiteral("log linux      [FOO]    ") << QStringLiteral("linux [FOO]") << QStringLiteral("log") << QString() << true;
-    QTest::newRow("linewithcomment") << QStringLiteral("log linux#comment about linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << true;
+    QTest::newRow("validLineCategoriesWarning") << QStringLiteral("log linux [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << QString() << true;
+    QTest::newRow("validLineCategoriesWarning2") << QStringLiteral("log linux [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << QString() << true;
+    QTest::newRow("validLineCategoriesWarning3") << QStringLiteral("log linux      [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << QString() << true;
+    QTest::newRow("validLineBadCategories") << QStringLiteral("log linux      [FOO]    ") << QStringLiteral("linux [FOO]") << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("linewithcomment") << QStringLiteral("log linux#comment about linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << QString() << true;
 
-    QTest::newRow("validLineCategoriesInfo") << QStringLiteral("log linux [INFO]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << true;
-    QTest::newRow("validLineCategoriesInfo2") << QStringLiteral("log linux [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << true;
-    QTest::newRow("validLineCategoriesInfo3") << QStringLiteral("log linux      [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << true;
+    QTest::newRow("validLineCategoriesInfo") << QStringLiteral("log linux [INFO]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
+    QTest::newRow("validLineCategoriesInfo2") << QStringLiteral("log linux [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
+    QTest::newRow("validLineCategoriesInfo3") << QStringLiteral("log linux      [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
 
-    QTest::newRow("validLineCategoriesDEBUG") << QStringLiteral("log linux [DEBUG]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << true;
-    QTest::newRow("validLineCategoriesDEBUG2") << QStringLiteral("log linux [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << true;
-    QTest::newRow("validLineCategoriesDEBUG3") << QStringLiteral("log linux      [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << true;
+    QTest::newRow("validLineCategoriesDEBUG") << QStringLiteral("log linux [DEBUG]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG2") << QStringLiteral("log linux [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG3") << QStringLiteral("log linux      [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << QString() << true;
 
-    QTest::newRow("validLineCategoriesCRITICAL") << QStringLiteral("log linux [CRITICAL]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << true;
-    QTest::newRow("validLineCategoriesCRITICAL2") << QStringLiteral("log linux [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << true;
-    QTest::newRow("validLineCategoriesCRITICAL3") << QStringLiteral("log linux      [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << true;
+    QTest::newRow("validLineCategoriesCRITICAL") << QStringLiteral("log linux [CRITICAL]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QString() << true;
+    QTest::newRow("validLineCategoriesCRITICAL2") << QStringLiteral("log linux [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QString() << true;
+    QTest::newRow("validLineCategoriesCRITICAL3") << QStringLiteral("log linux      [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QString() << true;
+
+    //New Format
+    QTest::newRow("validLineCategoriesWarning-newformat") << QStringLiteral("log linux DEFAULT_SEVERITY [WARNING]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << QString() << true;
+    QTest::newRow("validLineCategoriesWarning-newformat2") << QStringLiteral("log linux DEFAULT_SEVERITY [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << QString() << true;
+    QTest::newRow("validLineCategoriesWarning-newformat3") << QStringLiteral("log linux  DEFAULT_SEVERITY     [WARNING]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("WARNING") << QString() << true;
+    QTest::newRow("validLineBadCategories-newformat") << QStringLiteral("log linux   DEFAULT_SEVERITY    [FOO]    ") << QStringLiteral("linux DEFAULT_SEVERITY [FOO]") << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("linewithcomment-newformat") << QStringLiteral("log linux#comment about linux") << QStringLiteral("linux") << QStringLiteral("log") << QString() << QString() << true;
+
+    QTest::newRow("validLineCategoriesInfo-newformat") << QStringLiteral("log linux DEFAULT_SEVERITY [INFO]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
+    QTest::newRow("validLineCategoriesInfo-newformat2") << QStringLiteral("log linux DEFAULT_SEVERITY [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
+    QTest::newRow("validLineCategoriesInfo-newformat3") << QStringLiteral("log linux   DEFAULT_SEVERITY    [INFO]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
+
+    QTest::newRow("validLineCategoriesDEBUG-newformat") << QStringLiteral("log linux DEFAULT_SEVERITY [DEBUG]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG-newformat2") << QStringLiteral("log linux DEFAULT_SEVERITY [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG-newformat3") << QStringLiteral("log linux   DEFAULT_SEVERITY    [DEBUG]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("DEBUG") << QString() << true;
+
+    QTest::newRow("validLineCategoriesCRITICAL-newformat") << QStringLiteral("log linux DEFAULT_SEVERITY [CRITICAL]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QString() << true;
+    QTest::newRow("validLineCategoriesCRITICAL-newformat2") << QStringLiteral("log linux DEFAULT_SEVERITY [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QString() << true;
+    QTest::newRow("validLineCategoriesCRITICAL-newformat3") << QStringLiteral("log linux  DEFAULT_SEVERITY     [CRITICAL]    ") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QString() << true;
+
+    //Identifier
+    QTest::newRow("validLineIdentifier1") << QStringLiteral("log linux IDENTIFIER [foo]") << QStringLiteral("linux") << QStringLiteral("log") << QString() << QStringLiteral("foo") << true;
+    QTest::newRow("validLineIdentifier2") << QStringLiteral("log linux DEFAULT_SEVERITY     [CRITICAL] IDENTIFIER [foo]") << QStringLiteral("linux") << QStringLiteral("log") << QStringLiteral("CRITICAL") << QStringLiteral("foo") << true;
+    QTest::newRow("validLineIdentifier3") << QStringLiteral("log linux fli DEFAULT_SEVERITY     [INFO] IDENTIFIER [bla;bli;ss]")
+                                          << QStringLiteral("linux fli")
+                                          << QStringLiteral("log")
+                                          << QStringLiteral("INFO")
+                                          << QStringLiteral("bla;bli;ss")
+                                          << true;
+    QTest::newRow("validLineIdentifier4") << QStringLiteral("log linux (fli) DEFAULT_SEVERITY     [INFO] IDENTIFIER [bla;bli;ss]")
+                                          << QStringLiteral("linux (fli)")
+                                          << QStringLiteral("log")
+                                          << QStringLiteral("INFO")
+                                          << QStringLiteral("bla;bli;ss")
+                                          << true;
 }
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
@@ -76,12 +115,14 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     QFETCH(QString, input);
     QFETCH(QString, description);
     QFETCH(QString, logname);
-    QFETCH(QString, defaultCategory);
+    QFETCH(QString, defaultSeverity);
+    QFETCH(QString, identifier);
     QFETCH(bool, valid);
     KdeLoggingCategory result;
     result.description = description;
     result.categoryName = logname;
-    result.defaultCategory = defaultCategory;
+    result.defaultSeverity = defaultSeverity;
+    result.identifierName = identifier;
     const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
     if (cat != result) {
         qDebug() << "Generated category " << cat;

@@ -30,7 +30,7 @@ bool LoggingCategory::operator ==(const LoggingCategory &other) const
            && (categoryName == other.categoryName)
            && (enabled == other.enabled)
            && (loggingType == other.loggingType)
-           && (defaultCategoryType == other.defaultCategoryType)
+           && (defaultSeverityType == other.defaultSeverityType)
            && (identifierName == other.identifierName);
 }
 
@@ -116,6 +116,6 @@ QDebug operator<<(QDebug d, const LoggingCategory &cat)
     d << "enabled: " << cat.enabled;
     d << "type: " << cat.loggingType;
     d << "identifier: " << cat.identifierName;
-    d << "default category: " << cat.defaultCategoryType;
+    d << "default category: " << cat.defaultSeverityType;
     return d;
 }
