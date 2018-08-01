@@ -1,4 +1,4 @@
-# Format : logname<space>description(optional <space>[DEFAULT_CATEGORY] as WARNING/DEBUG/INFO/CRITICAL example: logname<space>description<space>[DEBUG])
+# Format : logname<space>description(optional <space> DEFAULT_SEVERITY [DEFAULT_CATEGORY] as WARNING/DEBUG/INFO/CRITICAL) optional IDENTIFIER [...]) example: logname<space>description<space>DEFAULT_SEVERITY<space>[DEBUG]<space>IDENTIFIER<space>[foo])
 
 #frameworks
 org.kde.kio.kpasswdserver KPasswdServer (KIO)
@@ -6,39 +6,39 @@ org.kde.kurifilter-ikws KUriFilter IKWS (KIO)
 org.kde.kurifilter-shorturi KUriFilter Shorturi (KIO)
 BluezQt BluezQt
 kf5.kauth KAuth
-kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons) [WARNING]
+kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons) DEFAULT_SEVERITY [WARNING]
 kf5.kcoreaddons.kaboutdata KAboutData (KCoreAddons)
-kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) [DEBUG]
-kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) [WARNING]
-kf5.kded KDED [WARNING]
+kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) DEFAULT_SEVERITY [DEBUG]
+kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) DEFAULT_SEVERITY [WARNING]
+kf5.kded KDED DEFAULT_SEVERITY [WARNING]
 kf5.kiconthemes KIconThemes
-kf5.kinit.klauncher KLauncher [WARNING]
+kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
 kf5.kio.core KIOCore (KIO)
-kf5.kio.core.dirlister KCoreDirLister (KIO) [WARNING]
-kf5.kio.core.copyjob KIO::CopyJob (KIO) [WARNING]
+kf5.kio.core.dirlister KCoreDirLister (KIO) DEFAULT_SEVERITY [WARNING]
+kf5.kio.core.copyjob KIO::CopyJob (KIO) DEFAULT_SEVERITY [WARNING]
 kf5.kio.widgets KIOWidgets (KIO)
 kf5.kiod KIO Daemon (KIO)
-kf5.kio.kio_http KIO HTTP slave (KIO) [WARNING]
+kf5.kio.kio_http KIO HTTP slave (KIO) DEFAULT_SEVERITY [WARNING]
 kf5.kjobwidgets KJobWidgets
 kf5.kio.favicons FavIcons (KIO)
 kf5.kservice.sycoca KSycoca (KService)
 kf5.kxmlgui KXMLGui
-kglobalaccel-runtime KGlobalAccel [WARNING]
+kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
 knewstuff KNewStuff
 log_kxmlrpcclient KXmlRPCClient
-modemmanager-qt ModemManagerQt [WARNING]
-networkmanager-qt NetworkManagerQt [WARNING]
+modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
+networkmanager-qt NetworkManagerQt DEFAULT_SEVERITY [WARNING]
 org.kde.baloo Baloo
 org.kde.kactivities.activities KActivities Activities
 org.kde.kactivities.application KActivities Application
-org.kde.kactivities.lib.core KActivities Library [WARNING]
+org.kde.kactivities.lib.core KActivities Library DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.resources KActivities Resources
-org.kde.kf5.idletime KIdleTime [WARNING]
+org.kde.kf5.idletime KIdleTime DEFAULT_SEVERITY [WARNING]
 org.kde.knotifications KNotifications
 org.kde.krunner KRunner
-org.kde.ktexteditor KTextEditor [WARNING]
-org.kde.kwindowsystem KWindowSystem [WARNING]
-org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) [WARNING]
+org.kde.ktexteditor KTextEditor DEFAULT_SEVERITY [WARNING]
+org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
+org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
 sonnet.plugins.hunspell HUnspell (Sonnet)
 sonnet.plugins.voikko Voikko (Sonnet)
 
