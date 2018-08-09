@@ -8,7 +8,7 @@ BluezQt BluezQt
 kf5.kauth KAuth
 kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons) [WARNING]
 kf5.kcoreaddons.kaboutdata KAboutData (KCoreAddons)
-kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) [DEBUG]
+kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) [WARNING]
 kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) [WARNING]
 kf5.kded KDED [WARNING]
 kf5.kiconthemes KIconThemes
