@@ -25,7 +25,7 @@
 #include <QRegularExpression>
 #include <KLocalizedString>
 
-RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line)
+RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QString &filename)
 {
     RenameCategory category;
     int pos = line.indexOf(QLatin1Char('#'));
@@ -40,7 +40,8 @@ RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line)
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "No space:" << line << endl;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: "
+                                      << line << " from file:" << filename << endl;
         return category;
     }
 
@@ -65,7 +66,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const RenameCategory category = parseRenameCategory(data);
+            const RenameCategory category = parseRenameCategory(data, filename);
             if (category.isValid()) {
                 insertCategories.append(category);
             }
@@ -74,7 +75,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
     return insertCategories;
 }
 
-KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
+KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line, const QString &filename)
 {
     KdeLoggingCategory category;
     const int pos = line.indexOf(QLatin1Char('#'));
@@ -89,7 +90,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line)
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "No space:" << line << endl;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: "
+                                      << line << " from file:" << filename << endl;
         return category;
     }
     QString logName;
@@ -198,7 +200,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data);
+            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
             if (category.isValid()) {
                 bool needToAppend = true;
                 for (const KdeLoggingCategory &cat : qAsConst(categoriesList)) {
@@ -228,7 +230,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
         ts.setCodec("ISO-8859-1");
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data);
+            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
             if (category.isValid()) {
                 if (checkCategoryList) {
                     bool needToAppend = true;

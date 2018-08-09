@@ -57,7 +57,7 @@ void RenameCategoryTest::shouldParseRenameLine()
     RenameCategory result;
     result.originalName = original;
     result.newName = newname;
-    const RenameCategory cat = KDebugSettingsUtil::parseRenameCategory(input);
+    const RenameCategory cat = KDebugSettingsUtil::parseRenameCategory(input, QString());
     QCOMPARE(cat, result);
     QCOMPARE(cat.isValid(), valid);
 }

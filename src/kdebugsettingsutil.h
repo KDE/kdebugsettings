@@ -106,12 +106,12 @@ struct LoadLoggingCategory {
 
 void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
-Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line);
+Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
 Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
 
 Q_REQUIRED_RESULT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
 Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
-Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line);
+Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line, const QString &filename);
 Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
 Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
 Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);

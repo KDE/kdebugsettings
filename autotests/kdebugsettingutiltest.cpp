@@ -123,7 +123,7 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
     result.categoryName = logname;
     result.defaultSeverity = defaultSeverity;
     result.identifierName = identifier;
-    const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input);
+    const KdeLoggingCategory cat = KDebugSettingsUtil::parseLineKdeLoggingCategory(input, QString());
     if (cat != result) {
         qDebug() << "Generated category " << cat;
         qDebug() << "Expected category: "<<result;
