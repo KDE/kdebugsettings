@@ -94,6 +94,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
     readConfig();
     readQtLoggingFile();
+    mKdeApplicationSettingsPage->forceFocus();
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()

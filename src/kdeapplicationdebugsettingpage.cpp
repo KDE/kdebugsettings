@@ -38,7 +38,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mTreeListWidgetSearchLine = new KTreeWidgetSearchLine(this, mTreeListWidget);
     mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
     mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
-    mTreeListWidgetSearchLine->setFocus();
+    mTreeListWidgetSearchLine->setSearchColumns(mTreeListWidget->searchColumns());
     mainLayout->addWidget(mTreeListWidgetSearchLine);
 
     mainLayout->addWidget(mTreeListWidget);
@@ -66,6 +66,11 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
 
 KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
 {
+}
+
+void KDEApplicationDebugSettingPage::forceFocus()
+{
+    mTreeListWidgetSearchLine->setFocus();
 }
 
 bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
