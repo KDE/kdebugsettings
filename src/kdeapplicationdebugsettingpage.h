@@ -38,6 +38,7 @@ public:
 
     void restoreToDefault();
 
+    void forceFocus();
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
