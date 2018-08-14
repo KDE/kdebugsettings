@@ -119,7 +119,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
                                                << LoggingCategory::List()
                                                << qtKdeCategories;
 
-    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, QString(), true);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Warning, QString(), true);
 
     QTest::newRow("oneelementdebug") << QStringLiteral("oneelementdebug.ini") << QStringLiteral("correct.categories") << false
                                      << LoggingCategory::List()
@@ -143,7 +143,7 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.loggingType = LoggingCategory::Critical;
     customTmp.enabled = true;
     customCategories.append(customTmp);
-    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Debug, QString(), true);
+    qtKdeCategories[0] = LoggingCategory(QStringLiteral("KPasswdServer (KIO)"), QStringLiteral("org.kde.kio.kpasswdserver"), LoggingCategory::Warning, QString(), true);
 
     QTest::newRow("oneelementdebugandanextract") << QStringLiteral("oneelementdebugandanextract.ini") << QStringLiteral("correct.categories") << false
                                                  << customCategories

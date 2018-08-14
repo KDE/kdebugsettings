@@ -63,7 +63,7 @@ LoggingCategory::LoggingType canDisplayType(const QMap<KDebugSettingsUtil::LoadL
     } else if (debug == KDebugSettingsUtil::LoadLoggingCategory::Enabled
                && warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
                && critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {
-        return LoggingCategory::Debug;
+        return LoggingCategory::Undefined;
     } else if (info == KDebugSettingsUtil::LoadLoggingCategory::Enabled
                && warning == KDebugSettingsUtil::LoadLoggingCategory::Enabled
                && critical == KDebugSettingsUtil::LoadLoggingCategory::Enabled) {

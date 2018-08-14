@@ -34,10 +34,10 @@ CategoryTypeComboBoxTest::~CategoryTypeComboBoxTest()
 void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 {
     CategoryTypeComboBox w(true);
-    QCOMPARE(w.count(), 5);
+    QCOMPARE(w.count(), 4);
 
     CategoryTypeComboBox w2(false);
-    QCOMPARE(w2.count(), 6);
+    QCOMPARE(w2.count(), 5);
 }
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
@@ -47,7 +47,6 @@ void CategoryTypeComboBoxTest::shouldSetType_data()
     QTest::newRow("all") <<  LoggingCategory::All;
     QTest::newRow("info") <<  LoggingCategory::Info;
     QTest::newRow("warning") << LoggingCategory::Warning;
-    QTest::newRow("debug") << LoggingCategory::Debug;
     QTest::newRow("critical") << LoggingCategory::Critical;
     QTest::newRow("off") << LoggingCategory::Off;
 }
