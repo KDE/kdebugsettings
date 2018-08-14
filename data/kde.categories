@@ -10,27 +10,20 @@ kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) DEFA
 kf5.kded KDED DEFAULT_SEVERITY [WARNING]
 kf5.kiconthemes KIconThemes
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
-kf5.kjobwidgets KJobWidgets
-kf5.kservice.sycoca KSycoca (KService)
 kf5.kxmlgui KXMLGui
 kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
 knewstuff KNewStuff
-log_kxmlrpcclient KXmlRPCClient
 modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
 networkmanager-qt NetworkManagerQt DEFAULT_SEVERITY [WARNING]
-org.kde.baloo Baloo
 org.kde.kactivities.activities KActivities Activities
 org.kde.kactivities.application KActivities Application
 org.kde.kactivities.lib.core KActivities Library DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.resources KActivities Resources
-org.kde.kf5.idletime KIdleTime DEFAULT_SEVERITY [WARNING]
 org.kde.knotifications KNotifications
 org.kde.krunner KRunner
 org.kde.ktexteditor KTextEditor DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
-sonnet.plugins.hunspell HUnspell (Sonnet)
-sonnet.plugins.voikko Voikko (Sonnet)
 
 #kdeedu
 log_klettres kdeedu (kletters)
@@ -56,7 +49,6 @@ kscreen.doctor libkscreen (kscreen-doctor utility)
 kscreen.dpms kscreen DPMS
 kscreen.edid libkscreen (edid)
 kscreen.fake libkscreen (fake backend)
-kscreen.kded kscreen (kded)
 kscreen.kwayland libkscreen (kwayland backend)
 kscreen.kwayland.testserver libkscreen (kwayland test server)
 kscreen.qscreen libkscreen (qscreen backend)
