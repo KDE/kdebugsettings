@@ -20,7 +20,7 @@
 
 #include <QApplication>
 
-#include "config-kdebugsettings.h"
+#include <config-kdebugsettings.h>
 #include "kdebugsettingsdialog.h"
 
 #include <KLocalizedString>
