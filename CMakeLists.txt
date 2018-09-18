@@ -29,17 +29,14 @@ include(FeatureSummary)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(KDEInstallDirs)
-include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMQtDeclareLoggingCategory)
 
-add_definitions(-DQT_USE_FAST_OPERATOR_PLUS)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
-add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 
 
