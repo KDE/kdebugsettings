@@ -37,7 +37,7 @@ struct LoggingCategory {
     };
 
     LoggingCategory();
-    explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, const QString & identifier, bool enabled)
+    explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, const QString &identifier, bool enabled)
         : description(description)
         , categoryName(logName)
         , identifierName(identifier)
