@@ -25,9 +25,6 @@ org.kde.ktexteditor KTextEditor DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
 
-#kdeedu
-log_klettres kdeedu (kletters)
-
 #kdegames
 log_granatier kdegames (granatier)
 log_ksirkskineditor kdegames (ksirk)
