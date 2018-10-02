@@ -21,7 +21,6 @@ org.kde.kactivities.lib.core KActivities Library DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.resources KActivities Resources
 org.kde.knotifications KNotifications
 org.kde.krunner KRunner
-org.kde.ktexteditor KTextEditor DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
 
