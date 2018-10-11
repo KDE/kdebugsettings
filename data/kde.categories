@@ -10,7 +10,6 @@ kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) DEFA
 kf5.kded KDED DEFAULT_SEVERITY [WARNING]
 kf5.kiconthemes KIconThemes
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
-kf5.kxmlgui KXMLGui
 kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
 knewstuff KNewStuff
 modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
