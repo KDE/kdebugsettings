@@ -11,7 +11,6 @@ kf5.kded KDED DEFAULT_SEVERITY [WARNING]
 kf5.kiconthemes KIconThemes
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
 kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
-knewstuff KNewStuff
 modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
 networkmanager-qt NetworkManagerQt DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.activities KActivities Activities
