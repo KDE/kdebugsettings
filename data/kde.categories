@@ -17,7 +17,6 @@ modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
 networkmanager-qt NetworkManagerQt DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.activities KActivities Activities
 org.kde.kactivities.application KActivities Application
-org.kde.kactivities.lib.core KActivities Library DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.resources KActivities Resources
 org.kde.knotifications KNotifications
 org.kde.krunner KRunner
