@@ -1,12 +1,6 @@
 # Format : logname<space>description(optional <space> DEFAULT_SEVERITY [DEFAULT_CATEGORY] as WARNING/DEBUG/INFO/CRITICAL) optional IDENTIFIER [...]) example: logname<space>description<space>DEFAULT_SEVERITY<space>[DEBUG]<space>IDENTIFIER<space>[foo])
 
 #frameworks
-BluezQt BluezQt
-kf5.kauth KAuth
-kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons) DEFAULT_SEVERITY [WARNING]
-kf5.kcoreaddons.kaboutdata KAboutData (KCoreAddons)
-kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) DEFAULT_SEVERITY [WARNING]
-kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) DEFAULT_SEVERITY [WARNING]
 kf5.kded KDED DEFAULT_SEVERITY [WARNING]
 kf5.kiconthemes KIconThemes
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
