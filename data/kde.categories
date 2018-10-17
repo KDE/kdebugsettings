@@ -5,7 +5,6 @@ kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
 kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
 modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
 networkmanager-qt NetworkManagerQt DEFAULT_SEVERITY [WARNING]
-org.kde.krunner KRunner
 org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
 
