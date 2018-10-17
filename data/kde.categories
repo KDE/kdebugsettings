@@ -27,18 +27,8 @@ log_fourinline kdegames (kfourinline)
 powerdevil powerdevil
 log_user_manager user manager
 kscreen libkscreen
-kscreen.backendLauncher libkscreen backend launcher
 kscreen.console kscreen (kscreen-console utility)
-kscreen.doctor libkscreen (kscreen-doctor utility)
 kscreen.dpms kscreen DPMS
-kscreen.edid libkscreen (edid)
-kscreen.fake libkscreen (fake backend)
-kscreen.kwayland libkscreen (kwayland backend)
-kscreen.kwayland.testserver libkscreen (kwayland test server)
-kscreen.qscreen libkscreen (qscreen backend)
-kscreen.xcb.helper libkscreen (xcb helper)
-kscreen.xrandr libkscreen (xrandr backend)
-kscreen.xrandr11 libkscreen (xrandr1.1 backend)
 ksmserver ksmserver
 libksysguard libksysguard
 
