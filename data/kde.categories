@@ -1,7 +1,6 @@
 # Format : logname<space>description(optional <space> DEFAULT_SEVERITY [DEFAULT_CATEGORY] as WARNING/DEBUG/INFO/CRITICAL) optional IDENTIFIER [...]) example: logname<space>description<space>DEFAULT_SEVERITY<space>[DEBUG]<space>IDENTIFIER<space>[foo])
 
 #frameworks
-kf5.kded KDED DEFAULT_SEVERITY [WARNING]
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
 kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
 modemmanager-qt ModemManagerQt DEFAULT_SEVERITY [WARNING]
@@ -9,7 +8,6 @@ networkmanager-qt NetworkManagerQt DEFAULT_SEVERITY [WARNING]
 org.kde.kactivities.activities KActivities Activities
 org.kde.kactivities.application KActivities Application
 org.kde.kactivities.resources KActivities Resources
-org.kde.knotifications KNotifications
 org.kde.krunner KRunner
 org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
