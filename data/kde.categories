@@ -2,8 +2,6 @@
 
 #frameworks
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
-org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
-org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
 
 #kdegames
 log_granatier kdegames (granatier)
