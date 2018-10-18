@@ -3,12 +3,10 @@
 #kdegames
 log_ksirkskineditor kdegames (ksirk)
 ksnakeduel_smtp kdegames (ksnakeduel)
-log_kgoldrunner kdegames (kgoldrunner)
 log_kshisen kdegames (kshisen)
 log_libkmahjongg lib kdegames (libkmahjongg)
 LOG_KUBRICK kdegames (kubrick)
 org.kde.lskat kdegames (lskat)
-log_fourinline kdegames (kfourinline)
 
 #workspace
 powerdevil powerdevil
