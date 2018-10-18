@@ -2,7 +2,6 @@
 
 #frameworks
 kf5.kinit.klauncher KLauncher DEFAULT_SEVERITY [WARNING]
-kglobalaccel-runtime KGlobalAccel DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem KWindowSystem DEFAULT_SEVERITY [WARNING]
 org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) DEFAULT_SEVERITY [WARNING]
 
@@ -19,7 +18,6 @@ log_fourinline kdegames (kfourinline)
 
 #workspace
 powerdevil powerdevil
-log_user_manager user manager
 kscreen libkscreen
 
 #kdebase
