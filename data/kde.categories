@@ -3,7 +3,6 @@
 #kdegames
 log_ksirkskineditor kdegames (ksirk)
 ksnakeduel_smtp kdegames (ksnakeduel)
-log_libkmahjongg lib kdegames (libkmahjongg)
 
 #workspace
 powerdevil powerdevil
