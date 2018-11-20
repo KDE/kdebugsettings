@@ -166,7 +166,10 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
                 defaultSeverity = defaultSeverityCaptured;
                 //qDebug() << " match.captured(1);" << descriptionCaptured;
                 //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
+                qCWarning(KDEBUGSETTINGS_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
             }
+        } else {
+            qCWarning(KDEBUGSETTINGS_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
         }
     }
 #else
