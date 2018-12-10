@@ -234,7 +234,7 @@ void KDebugSettingsDialog::slotAccepted()
 
 void KDebugSettingsDialog::slotHelpRequested()
 {
-    QDesktopServices::openUrl(QUrl(QStringLiteral("http://doc.qt.io/qt-5/qloggingcategory.html#details")));
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://doc.qt.io/qt-5/qloggingcategory.html#details")));
 }
 
 void KDebugSettingsDialog::slotApply()
