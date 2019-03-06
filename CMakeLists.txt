@@ -6,8 +6,8 @@ set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATI
 cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
 project(kdebugsettings VERSION ${KDE_APPLICATIONS_VERSION})
 
-set(QT_MIN_VERSION "5.9.0")
-set(KF5_MIN_VERSION "5.46.0")
+set(QT_MIN_VERSION "5.10.0")
+set(KF5_MIN_VERSION "5.50.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 
@@ -37,6 +37,7 @@ include(ECMQtDeclareLoggingCategory)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+add_definitions(-DQT_NO_FOREACH)
 
 
 

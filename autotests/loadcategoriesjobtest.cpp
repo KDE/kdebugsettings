@@ -218,7 +218,8 @@ void LoadCategoriesJobTest::shouldReadRules()
     job.start();
 
     if (job.customCategories() != customcategories) {
-        Q_FOREACH (const LoggingCategory &cat, job.customCategories()) {
+        const auto catList = job.customCategories();
+        for (const LoggingCategory &cat : catList) {
             qDebug() << "customcategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
 
@@ -233,12 +234,13 @@ void LoadCategoriesJobTest::shouldReadRules()
     QCOMPARE(job.foundOverrideRule(), foundoverriderules);
 
     if (job.qtKdeCategories() != qtkdecategories) {
-        Q_FOREACH (const LoggingCategory &cat, job.qtKdeCategories()) {
+        const auto catList = job.qtKdeCategories();
+        for (const LoggingCategory &cat : catList) {
             qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
 
         qDebug() << "AFTER";
-        Q_FOREACH (const LoggingCategory &cat, qtkdecategories) {
+        for (const LoggingCategory &cat : qAsConst(qtkdecategories)) {
             qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
     }
