@@ -24,7 +24,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
     ItemViews
     Completion)
-    
 include(FeatureSummary)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
@@ -37,7 +36,10 @@ include(ECMQtDeclareLoggingCategory)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-add_definitions(-DQT_NO_FOREACH)
+if (${KF5Config_VERSION} STRGREATER "5.55.0") 
+	add_definitions(-DQT_NO_FOREACH)
+	MESSAGE(STATUS "compile without foreach")
+endif()
 
 
 
