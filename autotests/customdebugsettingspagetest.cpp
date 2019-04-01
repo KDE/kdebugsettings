@@ -24,7 +24,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
-#include <qtest.h>
+#include <QTest>
 
 CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
     : QObject(parent)

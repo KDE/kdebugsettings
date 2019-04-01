@@ -20,7 +20,7 @@
 
 #include "categorywarningtest.h"
 #include "../src/categorywarning.h"
-#include <qtest.h>
+#include <QTest>
 
 CategoryWarningTest::CategoryWarningTest(QObject *parent)
     : QObject(parent)

@@ -20,7 +20,7 @@
 
 #include "kdeapplicationtreelistwidgettest.h"
 #include "../src/kdeapplicationtreelistwidget.h"
-#include <qtest.h>
+#include <QTest>
 #include <QHeaderView>
 
 KDEApplicationTreeListWidgetTest::KDEApplicationTreeListWidgetTest(QObject *parent) : QObject(parent)

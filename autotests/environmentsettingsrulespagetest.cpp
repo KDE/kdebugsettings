@@ -23,7 +23,7 @@
 #include "../src/environmentplaintextedit.h"
 #include <QLabel>
 #include <QPlainTextEdit>
-#include <qtest.h>
+#include <QTest>
 EnvironmentSettingsRulesPageTest::EnvironmentSettingsRulesPageTest(QObject *parent)
     : QObject(parent)
 {
