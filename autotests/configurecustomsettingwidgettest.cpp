@@ -24,8 +24,8 @@
 #include <QLabel>
 #include <KLineEdit>
 #include <QSignalSpy>
-#include <qcheckbox.h>
-#include <qtest.h>
+#include <QCheckBox>
+#include <QTest>
 
 ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *parent)
     : QObject(parent)

@@ -20,7 +20,7 @@
 
 #include "categorytypecomboboxtest.h"
 #include "../src/categorytypecombobox.h"
-#include <qtest.h>
+#include <QTest>
 
 CategoryTypeComboBoxTest::CategoryTypeComboBoxTest(QObject *parent)
     : QObject(parent)

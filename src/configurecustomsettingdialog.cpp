@@ -21,9 +21,9 @@
 #include "configurecustomsettingdialog.h"
 #include "configurecustomsettingwidget.h"
 
-#include <qboxlayout.h>
+#include <QBoxLayout>
 #include <KLocalizedString>
-#include <qdialogbuttonbox.h>
+#include <QDialogButtonBox>
 #include <QPushButton>
 
 ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)

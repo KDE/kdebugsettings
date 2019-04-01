@@ -20,7 +20,7 @@
 
 #include "kdebugsettingutiltest.h"
 #include "../src/kdebugsettingsutil.h"
-#include <qtest.h>
+#include <QTest>
 #include <QDebug>
 
 KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)

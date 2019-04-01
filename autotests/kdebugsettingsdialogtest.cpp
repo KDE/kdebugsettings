@@ -25,7 +25,7 @@
 #include <QPushButton>
 #include <QTabWidget>
 #include <QStandardPaths>
-#include <qtest.h>
+#include <QTest>
 
 KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
     : QObject(parent)

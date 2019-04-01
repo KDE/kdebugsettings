@@ -23,7 +23,7 @@
 #include "../src/configurecustomsettingwidget.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <qtest.h>
+#include <QTest>
 ConfigureCustomSettingDialogTest::ConfigureCustomSettingDialogTest(QObject *parent)
     : QObject(parent)
 {
