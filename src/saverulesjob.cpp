@@ -51,10 +51,10 @@ bool SaveRulesJob::start()
     //Save Rules
     QTextStream out(&qtlogging);
     out << QLatin1String("[Rules]\n");
-    for (LoggingCategory cat : mListKde) {
+    for (const LoggingCategory &cat : mListKde) {
         out << cat.createRule() + QLatin1Char('\n');
     }
-    for (LoggingCategory cat : mListCustom) {
+    for (const LoggingCategory &cat : mListCustom) {
         out << cat.createCustomRule() + QLatin1Char('\n');
     }
     return true;

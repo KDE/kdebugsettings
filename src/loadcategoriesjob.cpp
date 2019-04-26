@@ -115,7 +115,7 @@ void LoadCategoriesJob::start()
         KdeLoggingCategory kdeCat = mCategories.at(i);
 
         bool foundInConfigFile = false;
-        for (KDebugSettingsUtil::LoadLoggingCategory cat : qAsConst(qtCategories)) {
+        for (const KDebugSettingsUtil::LoadLoggingCategory &cat : qAsConst(qtCategories)) {
             if (cat.logName == kdeCat.categoryName) {
                 LoggingCategory tmp;
                 LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);

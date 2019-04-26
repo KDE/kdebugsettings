@@ -81,7 +81,7 @@ void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
     ConfigureCustomSettingWidget w;
     KLineEdit *categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
     QVERIFY(categoryLineEdit);
-    QSignalSpy spy(&w, SIGNAL(enableButton(bool)));
+    QSignalSpy spy(&w, &ConfigureCustomSettingWidget::enableButton);
     categoryLineEdit->setText(QStringLiteral("bla"));
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).toBool(), true);
