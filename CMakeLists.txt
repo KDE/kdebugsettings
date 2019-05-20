@@ -7,7 +7,7 @@ cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project(kdebugsettings VERSION ${KDE_APPLICATIONS_VERSION})
 
 set(QT_MIN_VERSION "5.10.0")
-set(KF5_MIN_VERSION "5.56.0")
+set(KF5_MIN_VERSION "5.57.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 
@@ -35,10 +35,7 @@ include(ECMQtDeclareLoggingCategory)
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
-if (${KF5Config_VERSION} STRGREATER "5.56.0") 
-	add_definitions(-DQT_NO_FOREACH)
-	MESSAGE(STATUS "compile without foreach")
-endif()
+add_definitions(-DQT_NO_FOREACH)
 
 
 
