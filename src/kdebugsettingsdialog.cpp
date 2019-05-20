@@ -43,7 +43,9 @@
 #include <QUrl>
 #include <QTextStream>
 #include "kdebugsettings_debug.h"
-
+namespace {
+constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
+}
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -104,7 +106,7 @@ KDebugSettingsDialog::~KDebugSettingsDialog()
 
 void KDebugSettingsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "KDebugSettingsDialog");
+    KConfigGroup group(KSharedConfig::openConfig(), QLatin1String(KDebugSettingsDialogGroupName));
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -113,7 +115,7 @@ void KDebugSettingsDialog::readConfig()
 
 void KDebugSettingsDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "KDebugSettingsDialog");
+    KConfigGroup group(KSharedConfig::openConfig(), QLatin1String(KDebugSettingsDialogGroupName));
     group.writeEntry("Size", size());
     group.sync();
 }
