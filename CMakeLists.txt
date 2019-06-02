@@ -36,8 +36,9 @@ include(ECMQtDeclareLoggingCategory)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 add_definitions(-DQT_NO_FOREACH)
-
-
+if (${KF5Config_VERSION} STRGREATER "5.58.0")
+	set(LOGGINGCATEGORIESDIR "${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_LOGGINGCATEGORIESDIR}")
+endif()
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
