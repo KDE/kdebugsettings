@@ -1,5 +1,5 @@
 
-include_directories(${kdebugsettings_BINARY_DIR}/src)
+include_directories(${kdebugsettings_BINARY_DIR}/src ${kdebugsettings_BINARY_DIR})
 add_definitions( -DKDEBUGSETTINGS_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 
 set(full_source_file

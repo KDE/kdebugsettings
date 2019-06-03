@@ -26,6 +26,7 @@
 #include "categorywarning.h"
 #include "loadcategoriesjob.h"
 #include "saverulesjob.h"
+#include "config-kdebugsettings.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -144,6 +145,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     mRenameCategoriesList.clear();
     // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
+    //qDebug() << " dirs 1 " << dirs;
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
@@ -152,6 +154,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     }
     //TODO add load rename file from external kde apps.
     const QStringList dirs2 = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
+    //qDebug() << " dirs 2 " << dirs2;
     for (const QString &dir : dirs2) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
@@ -161,6 +164,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 
     // Load *.categories file in QStandardPaths::ConfigLocation for kde apps.
     const QStringList dirs3 = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
+    //qDebug() << " dirs 3 " << dirs3;
     for (const QString &dir : dirs3) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {
@@ -172,6 +176,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 
     // Load *.categories files. in qdebug.categories for external kde apps.
     const QStringList dirs4 = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
+    //qDebug() << " dirs 4 " << dirs4;
     for (const QString &dir : dirs4) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {
