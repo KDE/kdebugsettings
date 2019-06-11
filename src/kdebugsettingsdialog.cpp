@@ -135,7 +135,7 @@ void KDebugSettingsDialog::readQtLoggingFile()
 void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
-    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("kde.categories"));
+    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/kde.categories"));
     if (confAreasFile.isEmpty()) {
         qCWarning(KDEBUGSETTINGS_LOG) << "Impossible to find kde.categories file";
     } else {
@@ -144,8 +144,8 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
 
     mRenameCategoriesList.clear();
     // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
-    //qDebug() << " dirs 1 " << dirs;
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory) +
+            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
@@ -163,9 +163,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     }
 
     // Load *.categories file in QStandardPaths::ConfigLocation for kde apps.
-    const QStringList dirs3 = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
-    //qDebug() << " dirs 3 " << dirs3;
-    for (const QString &dir : dirs3) {
+    for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {
             if (file != QStringLiteral("kde.categories")) {
@@ -175,9 +173,7 @@ void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
     }
 
     // Load *.categories files. in qdebug.categories for external kde apps.
-    const QStringList dirs4 = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
-    //qDebug() << " dirs 4 " << dirs4;
-    for (const QString &dir : dirs4) {
+    for (const QString &dir : dirs2) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {
             KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, mCategoriesList, true);
