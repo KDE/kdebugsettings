@@ -36,9 +36,6 @@ include(ECMQtDeclareLoggingCategory)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 add_definitions(-DQT_NO_FOREACH)
-if (${KF5Config_VERSION} STRGREATER "5.58.0")
-        set(LOGGINGCATEGORIESDIR "${KDE_INSTALL_LOGGINGCATEGORIESDIR}")
-endif()
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
@@ -46,6 +43,6 @@ add_subdirectory( src )
 if (BUILD_TESTING)
    add_subdirectory( autotests )
 endif()
-install( FILES data/kde.categories data/kde.renamecategories DESTINATION ${LOGGINGCATEGORIESDIR} )
+install( FILES data/kde.categories data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
