@@ -22,7 +22,6 @@
 #define KDEBUGSETTINGSUTIL_H
 
 #include <QString>
-#include <QObject>
 #include <QDebug>
 #include "kdeloggingcategory.h"
 #include "loggingcategory.h"

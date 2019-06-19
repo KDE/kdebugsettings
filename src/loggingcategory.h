@@ -21,7 +21,6 @@
 #define LOGGINGCATEGORY_H
 
 #include <QVector>
-#include <QObject>
 #include <QString>
 #include <QDebug>
 

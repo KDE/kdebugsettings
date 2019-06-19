@@ -23,7 +23,6 @@
 
 #include <QVector>
 #include <QString>
-#include <QObject>
 #include <QDebug>
 struct KdeLoggingCategory {
     KdeLoggingCategory();

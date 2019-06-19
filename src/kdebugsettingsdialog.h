@@ -22,7 +22,6 @@
 #define KDEBUGSETTINGSDIALOG_H
 
 #include <QDialog>
-#include <QVector>
 #include "kdeloggingcategory.h"
 #include "renamecategory.h"
 class QTabWidget;

@@ -41,7 +41,6 @@
 #include <QDir>
 #include <QDesktopServices>
 #include <QUrl>
-#include <QTextStream>
 #include "kdebugsettings_debug.h"
 namespace {
 constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";

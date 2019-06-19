@@ -21,7 +21,6 @@
 #include "kdebugsettingsutil.h"
 #include "kdebugsettings_debug.h"
 #include <QFile>
-#include <QFileInfo>
 #include <QRegularExpression>
 #include <KLocalizedString>
 

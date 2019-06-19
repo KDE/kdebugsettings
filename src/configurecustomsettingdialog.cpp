@@ -21,10 +21,10 @@
 #include "configurecustomsettingdialog.h"
 #include "configurecustomsettingwidget.h"
 
-#include <QBoxLayout>
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     : QDialog(parent)

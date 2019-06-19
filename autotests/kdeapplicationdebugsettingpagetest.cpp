@@ -21,7 +21,6 @@
 #include "kdeapplicationdebugsettingpagetest.h"
 #include "../src/kdeapplicationdebugsettingpage.h"
 #include "../src/kdeapplicationtreelistwidget.h"
-#include <QListWidget>
 #include <QPushButton>
 #include <QHeaderView>
 #include <QTest>
