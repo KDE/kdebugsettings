@@ -6,6 +6,3 @@ kscreen libkscreen
 
 #kdebase
 log_kdepassword kdepassword
-
-#kdebugsettings
-log_kdebugsettings kdebugsettings IDENTIFIER [KDEBUGSETTINGS_LOG]

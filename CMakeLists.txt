@@ -43,6 +43,6 @@ add_subdirectory( src )
 if (BUILD_TESTING)
    add_subdirectory( autotests )
 endif()
-install( FILES data/kde.categories data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
+install( FILES data/kde.categories data/kde.renamecategories data/kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
