@@ -2,7 +2,6 @@
 
 #workspace
 powerdevil powerdevil
-kscreen libkscreen
 
 #kdebase
 log_kdepassword kdepassword
