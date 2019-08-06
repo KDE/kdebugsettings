@@ -27,6 +27,7 @@
 #include <KAboutData>
 #include <QCommandLineParser>
 #include <KDBusService>
+#include <QStandardPaths>
 
 int main(int argc, char **argv)
 {
@@ -45,8 +46,16 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
+
+    QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
+    parser.addOption(testModeOption);
+
     parser.process(app);
     aboutData.processCommandLine(&parser);
+
+    if (parser.isSet(testModeOption)) {
+        QStandardPaths::setTestModeEnabled(true);
+    }
 
     KDBusService service(KDBusService::Unique);
     KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
