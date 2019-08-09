@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>org.kde.kdebugsettings</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LGPL-2.1-or-later</project_license>
+  <name>KDebug Settings</name>
+  <summary>Set which debug messages are shown</summary>
+  <description>
+    <p>
+      KDebug Settings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can which applications display messages for information, warning or critical errors to help debugging Qt applications.
+    </p>
+  </description>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
+  <url type="help">https://doc.qt.io/qt-5/qloggingcategory.html</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=kdebugsettings&amp;source=appdata</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/kdebugsettings/kdebugsettings.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kdebugsettings</binary>
+  </provides>
+</component>
