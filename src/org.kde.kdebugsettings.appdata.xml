@@ -7,7 +7,7 @@
   <summary>Set which debug messages are shown</summary>
   <description>
     <p>
-      KDebug Settings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can which applications display messages for information, warning or critical errors to help debugging Qt applications.
+      KDebug Settings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
     </p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
