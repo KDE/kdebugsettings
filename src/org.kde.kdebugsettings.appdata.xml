@@ -4,11 +4,20 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-2.1-or-later</project_license>
   <name>KDebug Settings</name>
+  <name xml:lang="ca">Ajustaments del KDebug</name>
+  <name xml:lang="eu">KDebug ezarpenak</name>
+  <name xml:lang="uk">Параметри KDebug</name>
+  <name xml:lang="x-test">xxKDebug Settingsxx</name>
   <summary>Set which debug messages are shown</summary>
+  <summary xml:lang="ca">Estableix quins missatges de depuració es mostraran</summary>
+  <summary xml:lang="eu">Ezarri zein arazte mezu erakutsiko diren</summary>
+  <summary xml:lang="uk">Визначення того, які з діагностичних повідомлень буде показано</summary>
+  <summary xml:lang="x-test">xxSet which debug messages are shownxx</summary>
   <description>
     <p>
       KDebug Settings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
     </p>
+    <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
   <url type="help">https://doc.qt.io/qt-5/qloggingcategory.html</url>
