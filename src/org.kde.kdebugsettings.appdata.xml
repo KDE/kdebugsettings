@@ -3,7 +3,7 @@
   <id>org.kde.kdebugsettings</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-2.1-or-later</project_license>
-  <name>KDebug Settings</name>
+  <name>KDebugSettings</name>
   <name xml:lang="ca">Ajustaments del KDebug</name>
   <name xml:lang="en-GB">KDebug Settings</name>
   <name xml:lang="eu">KDebug ezarpenak</name>
@@ -25,7 +25,7 @@
   <summary xml:lang="x-test">xxSet which debug messages are shownxx</summary>
   <description>
     <p>
-      KDebug Settings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
+      KDebugSettings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
     </p>
     <p xml:lang="ca">Els Ajustaments del KDebug edita quina «QLoggingCategory» es mostrarà. La «QLoggingCategory» imprimeix missatges a la consola per a les aplicacions, de manera que podreu definir quines aplicacions mostraran missatges informatius, avís o errors crítics per ajudar a depurar les aplicacions Qt.</p>
     <p xml:lang="en-GB">KDebug Settings edits which QLoggingCategory are displayed. QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.</p>
