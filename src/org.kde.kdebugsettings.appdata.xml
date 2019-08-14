@@ -4,6 +4,13 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-2.1-or-later</project_license>
   <name>KDebugSettings</name>
+  <name xml:lang="ca">Ajustaments del KDebug</name>
+  <name xml:lang="de">KDebugSettings</name>
+  <name xml:lang="es">KDebugSettings</name>
+  <name xml:lang="eu">KDebug ezarpenak</name>
+  <name xml:lang="it">KDebugSettings</name>
+  <name xml:lang="uk">Параметри KDebug</name>
+  <name xml:lang="x-test">xxKDebugSettingsxx</name>
   <summary>Set which debug messages are shown</summary>
   <summary xml:lang="ca">Estableix quins missatges de depuració es mostraran</summary>
   <summary xml:lang="de">Einstellung der angezeigten Debug-Meldungen</summary>
@@ -11,6 +18,7 @@
   <summary xml:lang="en-GB">Set which debug messages are shown</summary>
   <summary xml:lang="es">Definir los mensajes de depuración que se deben mostrar</summary>
   <summary xml:lang="eu">Ezarri zein arazte mezu erakutsiko diren</summary>
+  <summary xml:lang="it">Imposta quali messaggi di debug mostrare</summary>
   <summary xml:lang="nl">Stelt in welke debugberichten getoond worden</summary>
   <summary xml:lang="pl">Ustaw wyświetlane wiadomości diagnostyczne</summary>
   <summary xml:lang="pt">Definir quais as mensagens de depuração que são apresentadas</summary>
@@ -21,6 +29,13 @@
     <p>
       KDebugSettings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
     </p>
+    <p xml:lang="ca">Els Ajustaments del KDebug edita quina «QLoggingCategory» es mostrarà. La «QLoggingCategory» imprimeix missatges a la consola per a les aplicacions, de manera que podreu definir quines aplicacions mostraran missatges informatius, avís o errors crítics per ajudar a depurar les aplicacions Qt.</p>
+    <p xml:lang="de">Mit KDebugSettings wird festgelegt, welche QLoggingCategory angezeigt wird. QLoggingCategory gibt Nachrichten auf der Konsole für Anwendungen aus und Sie können definieren, welche Anwendungen Nachrichten über Informationen, Warnungen oder kritische Fehler ausgeben, um die Fehlersuche von Qt-Anwendungen zu erleichtern.</p>
+    <p xml:lang="es">Las preferencias de KDebug escogen la QLoggingCategory que se muestra. QLoggingCategory muestra mensajes de las aplicaciones en la consola. Aquí puede definir los mensajes que muestran las aplicaciones para informaciones, advertencias o errores críticos, para ayudarle a depurar aplicaciones de Qt.</p>
+    <p xml:lang="eu">KDebug ezarpenek zein «QLoggingCategory» azalduko diren editatzen du. «QLoggingCategory»k kontsolan aplikazioen mezuak inprimatzen ditu eta zuk zehaztu dezakezu zein aplikaziok azalduko dituzten Qt aplikazioak arazten laguntzeko informazio-mezuak, abisu-mezuak edo mezu larriak .</p>
+    <p xml:lang="it">KDebugSettings modifica quale QLoggingCategory visualizzare. Questo stampa i messaggi sulla console per le applicazioni, e tu puoi definire quali applicazioni visualizzano i messaggi di informazione, di avviso o di errore critico, in modo da aiutare il debug delle applicazioni Qt.</p>
+    <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
+    <p xml:lang="x-test">xxKDebugSettings edits which QLoggingCategory are displayed. QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.xx</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
   <url type="help">https://doc.qt.io/qt-5/qloggingcategory.html</url>
