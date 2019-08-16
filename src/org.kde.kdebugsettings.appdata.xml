@@ -8,8 +8,10 @@
   <name xml:lang="de">KDebugSettings</name>
   <name xml:lang="es">KDebugSettings</name>
   <name xml:lang="eu">KDebug ezarpenak</name>
+  <name xml:lang="id">KDebugSettings</name>
   <name xml:lang="it">KDebugSettings</name>
   <name xml:lang="nl">KDebugSettings</name>
+  <name xml:lang="pl">KDebugSettings</name>
   <name xml:lang="pt">KDebugSettings</name>
   <name xml:lang="sk">KDebugSettings</name>
   <name xml:lang="sv">KDebugSettings</name>
@@ -22,6 +24,7 @@
   <summary xml:lang="en-GB">Set which debug messages are shown</summary>
   <summary xml:lang="es">Definir los mensajes de depuración que se deben mostrar</summary>
   <summary xml:lang="eu">Ezarri zein arazte mezu erakutsiko diren</summary>
+  <summary xml:lang="id">Atur pesan debug mana yang akan ditampilkan</summary>
   <summary xml:lang="it">Imposta quali messaggi di debug mostrare</summary>
   <summary xml:lang="nl">Stelt in welke debugberichten getoond worden</summary>
   <summary xml:lang="pl">Ustaw wyświetlane wiadomości diagnostyczne</summary>
@@ -38,8 +41,10 @@
     <p xml:lang="de">Mit KDebugSettings wird festgelegt, welche QLoggingCategory angezeigt wird. QLoggingCategory gibt Nachrichten auf der Konsole für Anwendungen aus und Sie können definieren, welche Anwendungen Nachrichten über Informationen, Warnungen oder kritische Fehler ausgeben, um die Fehlersuche von Qt-Anwendungen zu erleichtern.</p>
     <p xml:lang="es">Las preferencias de KDebug escogen la QLoggingCategory que se muestra. QLoggingCategory muestra mensajes de las aplicaciones en la consola. Aquí puede definir los mensajes que muestran las aplicaciones para informaciones, advertencias o errores críticos, para ayudarle a depurar aplicaciones de Qt.</p>
     <p xml:lang="eu">KDebug ezarpenek zein «QLoggingCategory» azalduko diren editatzen du. «QLoggingCategory»k kontsolan aplikazioen mezuak inprimatzen ditu eta zuk zehaztu dezakezu zein aplikaziok azalduko dituzten Qt aplikazioak arazten laguntzeko informazio-mezuak, abisu-mezuak edo mezu larriak .</p>
+    <p xml:lang="id">KDebugSettings untuk mengedit QLoggingCategory mana yang akan didisplaikan. QLoggingCategory mencetakkan pesan di konsol untuk aplikasi dan kamu bisa  mendisplaikan pesan informasi aplikasi mana, peringatan atau error kritis untuk membantu pendebugan aplikasi Qt.</p>
     <p xml:lang="it">KDebugSettings modifica quale QLoggingCategory visualizzare. Questo stampa i messaggi sulla console per le applicazioni, e tu puoi definire quali applicazioni visualizzano i messaggi di informazione, di avviso o di errore critico, in modo da aiutare il debug delle applicazioni Qt.</p>
     <p xml:lang="nl">KDebugSettings bewerkt welke QLoggingCategory worden getoond. QLoggingCategory toont meldingen op de console voor toepassingen en u kunt definiëren welke toepassingen berichten voor informatie tonen, waarschuwing of kritische fouten om Qt toepassingen te helpen bij debuggen.</p>
+    <p xml:lang="pl">KDebugSettings edytuje, które QLoggingCategory są wyświetlane. QLoggingCategory wyświetla wiadomości w konsoli dla aplikacji i można wybrać rodzaj wyświetlanych danych, jak np. informacje, ostrzeżenia krytyczne błędy, aby usprawnić diagnostykę aplikacji Qt.</p>
     <p xml:lang="pt">O KDebugSettings edita quais as instâncias de QLoggingCategory que são apresentadas. O QLoggingCategory imprime mensagens na consola para as aplicações e poderá definir quais as aplicações que mostram mensagens de informação, avisos ou críticas que ajudam na depuração de aplicações do Qt.</p>
     <p xml:lang="sv">KDebugSettings redigerar vilka kategorier i QLoggingCategory som visas. QLoggingCategory skriver ut meddelanden på terminalen åt program, och du kan definiera vilka program som visar meddelanden såsom information, varningar eller kritiska fel för att hjälpa till att felsöka Qt-program.</p>
     <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
