@@ -5,6 +5,7 @@
   <project_license>LGPL-2.1-or-later</project_license>
   <name>KDebugSettings</name>
   <name xml:lang="ca">Ajustaments del KDebug</name>
+  <name xml:lang="cs">Nastavení KDebug</name>
   <name xml:lang="de">KDebugSettings</name>
   <name xml:lang="el">KDebugSettings</name>
   <name xml:lang="es">KDebugSettings</name>
