@@ -47,9 +47,9 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     QVERIFY(tab);
     for (int i = 0; i < tab->count(); ++i) {
         const QString objName = tab->widget(i)->objectName();
-        const bool hasCorrectName = (objName == QStringLiteral("kdeapplicationsettingspage"))
-                                    || (objName == QStringLiteral("customsettingspage"))
-                                    || (objName == QStringLiteral("environmentsettingsrulespage"));
+        const bool hasCorrectName = (objName == QLatin1String("kdeapplicationsettingspage"))
+                                    || (objName == QLatin1String("customsettingspage"))
+                                    || (objName == QLatin1String("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
     QPushButton *saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
