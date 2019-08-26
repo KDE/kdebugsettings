@@ -10,6 +10,7 @@
   <name xml:lang="el">KDebugSettings</name>
   <name xml:lang="es">KDebugSettings</name>
   <name xml:lang="eu">KDebug ezarpenak</name>
+  <name xml:lang="fr">KDebugSettings</name>
   <name xml:lang="id">KDebugSettings</name>
   <name xml:lang="it">KDebugSettings</name>
   <name xml:lang="nl">KDebugSettings</name>
@@ -28,6 +29,7 @@
   <summary xml:lang="en-GB">Set which debug messages are shown</summary>
   <summary xml:lang="es">Definir los mensajes de depuración que se deben mostrar</summary>
   <summary xml:lang="eu">Ezarri zein arazte mezu erakutsiko diren</summary>
+  <summary xml:lang="fr">Définir quels messages de débogage sont affichés</summary>
   <summary xml:lang="id">Atur pesan debug mana yang akan ditampilkan</summary>
   <summary xml:lang="it">Imposta quali messaggi di debug mostrare</summary>
   <summary xml:lang="nl">Stelt in welke debugberichten getoond worden</summary>
@@ -47,6 +49,7 @@
     <p xml:lang="el">Το KDebugSettings επεξεργάζεται ποια QLoggingCategory εμφανίζονται. Το QLoggingCategory εκτυπώνει μηνύματα στην κονσόλα γαι εφαρμογές και μπορείτε να ορίσετε ποιες εφαρμογές εμφανίζουν μηνύματα για πληροφόρηση, προειδοποίηση ή κρίσιμα σφάλματα για να βοηθήσει τη διόρθωση σφαλμάτων των Qt εφαρμογών.</p>
     <p xml:lang="es">Las preferencias de KDebug escogen la QLoggingCategory que se muestra. QLoggingCategory muestra mensajes de las aplicaciones en la consola. Aquí puede definir los mensajes que muestran las aplicaciones para informaciones, advertencias o errores críticos, para ayudarle a depurar aplicaciones de Qt.</p>
     <p xml:lang="eu">KDebug ezarpenek zein «QLoggingCategory» azalduko diren editatzen du. «QLoggingCategory»k kontsolan aplikazioen mezuak inprimatzen ditu eta zuk zehaztu dezakezu zein aplikaziok azalduko dituzten Qt aplikazioak arazten laguntzeko informazio-mezuak, abisu-mezuak edo mezu larriak .</p>
+    <p xml:lang="fr">KDebugSettings permet de modifier les QLoggingCategory affichées. Les QLoggingCategory déterminent les messages affichés sur la console par les applications, vous pouvez définir quelles applications affichent les messages d'information, les avertissements ou les erreurs critiques afin de déboguer des applications Qt.</p>
     <p xml:lang="id">KDebugSettings untuk mengedit QLoggingCategory mana yang akan didisplaikan. QLoggingCategory mencetakkan pesan di konsol untuk aplikasi dan kamu bisa  mendisplaikan pesan informasi aplikasi mana, peringatan atau error kritis untuk membantu pendebugan aplikasi Qt.</p>
     <p xml:lang="it">KDebugSettings modifica quale QLoggingCategory visualizzare. Questo stampa i messaggi sulla console per le applicazioni, e tu puoi definire quali applicazioni visualizzano i messaggi di informazione, di avviso o di errore critico, in modo da aiutare il debug delle applicazioni Qt.</p>
     <p xml:lang="nl">KDebugSettings bewerkt welke QLoggingCategory worden getoond. QLoggingCategory toont meldingen op de console voor toepassingen en u kunt definiëren welke toepassingen berichten voor informatie tonen, waarschuwing of kritische fouten om Qt toepassingen te helpen bij debuggen.</p>
