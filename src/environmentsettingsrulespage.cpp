@@ -43,7 +43,7 @@ EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
 
 void EnvironmentSettingsRulesPage::setRules(const QString &rules)
 {
-    const QString information = QStringLiteral("<qt><b>") + i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.") + QStringLiteral(
+    const QString information = QLatin1String("<qt><b>") + i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.") + QLatin1String(
         "</b><qt>");
     QString newRules = rules;
     mRichTextEdit->setHtml(information + i18n("Current rules:") + QStringLiteral("<br>") + newRules.replace(QLatin1Char('\n'), QLatin1String("<br>")));
