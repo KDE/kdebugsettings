@@ -13,6 +13,7 @@ set(kdebugsettings_LIB_SRCS
     saverulesjob.cpp
     categorytypecombobox.cpp
     environmentplaintextedit.cpp
+    changedebugmodejob.cpp
 
     ${kdebugsettings_debug_SRCS}
     )
