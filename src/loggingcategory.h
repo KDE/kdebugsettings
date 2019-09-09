@@ -23,8 +23,9 @@
 #include <QVector>
 #include <QString>
 #include <QDebug>
+#include "kdebugsettingsprivate_export.h"
 
-struct LoggingCategory {
+struct KDEBUGSETTINGSPRIVATE_EXPORT LoggingCategory {
     enum LoggingType {
         All = 0,
         Info,
@@ -59,7 +60,7 @@ struct LoggingCategory {
     LoggingType defaultSeverityType = Info;
     bool enabled = true;
 };
-QDebug operator<<(QDebug debug, const LoggingCategory &cat);
+KDEBUGSETTINGSPRIVATE_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 
 Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(LoggingCategory)

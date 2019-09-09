@@ -24,7 +24,9 @@
 #include <QVector>
 #include <QString>
 #include <QDebug>
-struct KdeLoggingCategory {
+#include "kdebugsettingsprivate_export.h"
+
+struct KDEBUGSETTINGSPRIVATE_EXPORT KdeLoggingCategory {
     KdeLoggingCategory();
     typedef QVector<KdeLoggingCategory> List;
     Q_REQUIRED_RESULT bool operator ==(const KdeLoggingCategory &other) const;
@@ -36,7 +38,7 @@ struct KdeLoggingCategory {
     QString identifierName;
     QString defaultSeverity;
 };
-QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
+KDEBUGSETTINGSPRIVATE_EXPORT QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(KdeLoggingCategory)
 

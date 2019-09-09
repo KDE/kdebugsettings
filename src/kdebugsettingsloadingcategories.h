@@ -25,8 +25,9 @@
 #include "kdeloggingcategory.h"
 #include "renamecategory.h"
 #include "loggingcategory.h"
+#include "kdebugsettingsprivate_export.h"
 
-class KDebugSettingsLoadingCategories
+class KDEBUGSETTINGSPRIVATE_EXPORT KDebugSettingsLoadingCategories
 {
 public:
     KDebugSettingsLoadingCategories();

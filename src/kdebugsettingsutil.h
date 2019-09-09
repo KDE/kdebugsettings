@@ -26,9 +26,10 @@
 #include "kdeloggingcategory.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
+#include "kdebugsettingsprivate_export.h"
 
 namespace KDebugSettingsUtil {
-struct LineLoggingQtCategory {
+struct KDEBUGSETTINGSPRIVATE_EXPORT LineLoggingQtCategory {
     LineLoggingQtCategory()
         : enabled(true)
         , type(Unknown)
@@ -61,7 +62,7 @@ struct LineLoggingQtCategory {
     QString logName;
 };
 
-struct LoadLoggingCategory {
+struct KDEBUGSETTINGSPRIVATE_EXPORT LoadLoggingCategory {
     enum Status {
         Enabled = 0,
         Disabled = 1,
@@ -103,17 +104,17 @@ struct LoadLoggingCategory {
     QMap<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;
 };
 
-void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
+KDEBUGSETTINGSPRIVATE_EXPORT void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
-Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
-Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
 
-Q_REQUIRED_RESULT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
-Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
-Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line, const QString &filename);
-Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
-Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
-Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line, const QString &filename);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
+KDEBUGSETTINGSPRIVATE_EXPORT Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

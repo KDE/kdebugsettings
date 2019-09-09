@@ -1,13 +1,23 @@
 include_directories(${CMAKE_BINARY_DIR})
 
-set(kdebugsettingsprivate_LIB_SRCS
+set(kdebugsettings_debug_SRCS)
+ecm_qt_declare_logging_category(kdebugsettings_debug_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings)
 
+set(kdebugsettingsprivate_LIB_SRCS
+    kdebugsettingsloadingcategories.cpp
+    kdeloggingcategory.cpp
+    renamecategory.cpp
+    loggingcategory.cpp
+    kdebugsettingsutil.cpp
+    loadcategoriesjob.cpp
+    ${kdebugsettings_debug_SRCS}
     )
 
 add_library(kdebugsettingsprivate ${kdebugsettingsprivate_LIB_SRCS})
 generate_export_header(kdebugsettingsprivate BASE_NAME kdebugsettingsprivate)
 target_link_libraries(kdebugsettingsprivate
     Qt5::Core
+    KF5::I18n
 )
 
 set_target_properties(kdebugsettingsprivate
@@ -22,7 +32,7 @@ set(kdebugsettings_SRCS
    kdebugsettingsdialog.cpp
    customdebugsettingspage.cpp
    kdeapplicationdebugsettingpage.cpp
-   kdebugsettingsutil.cpp
+
    configurecustomsettingdialog.cpp
    configurecustomsettingwidget.cpp
    environmentsettingsrulespage.cpp
@@ -30,19 +40,14 @@ set(kdebugsettings_SRCS
    categorytypecombobox.cpp
    kdeapplicationtreelistwidget.cpp
    categorywarning.cpp
-   loggingcategory.cpp
-   kdeloggingcategory.cpp
-   loadcategoriesjob.cpp
-   renamecategory.cpp
-   saverulesjob.cpp
-   kdebugsettingsloadingcategories.cpp
-   )
 
-ecm_qt_declare_logging_category(kdebugsettings_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings)
+   saverulesjob.cpp
+   ${kdebugsettings_debug_SRCS}
+   )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})
 
-target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons KF5::ConfigCore KF5::WidgetsAddons KF5::ItemViews KF5::Completion)
+target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons KF5::ConfigCore KF5::WidgetsAddons KF5::ItemViews KF5::Completion kdebugsettingsprivate)
 
 install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

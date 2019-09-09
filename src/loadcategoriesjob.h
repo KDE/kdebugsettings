@@ -24,8 +24,9 @@
 #include "kdeloggingcategory.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
+#include "kdebugsettingsprivate_export.h"
 
-class LoadCategoriesJob
+class KDEBUGSETTINGSPRIVATE_EXPORT LoadCategoriesJob
 {
 public:
     LoadCategoriesJob();
