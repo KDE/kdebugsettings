@@ -50,6 +50,12 @@ int main(int argc, char **argv)
     QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
     parser.addOption(testModeOption);
 
+    QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"), i18n("Change debug mode as console (in console)"), QStringLiteral("Full|Info|Warning|Critical|Off"));
+    parser.addOption(changeDebugSettingOption);
+    parser.addPositionalArgument(
+        QStringLiteral("logging category name"),
+        i18n("Specify logging category name that you want to change debug mode (in console)"));
+
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
@@ -57,9 +63,15 @@ int main(int argc, char **argv)
         QStandardPaths::setTestModeEnabled(true);
     }
 
-    KDBusService service(KDBusService::Unique);
-    KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
-    const int ret = dialog->exec();
-    delete dialog;
-    return ret;
+    const QString changeModeValue = parser.value(changeDebugSettingOption);
+    if (!changeModeValue.isEmpty() && !parser.positionalArguments().isEmpty()) {
+        qDebug() << " Change mode" << changeModeValue;
+        return 1;
+    } else {
+        KDBusService service(KDBusService::Unique);
+        KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
+        const int ret = dialog->exec();
+        delete dialog;
+        return ret;
+    }
 }
