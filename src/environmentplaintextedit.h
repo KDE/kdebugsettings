@@ -22,13 +22,14 @@
 #define ENVIRONMENTPLAINTEXTEDIT_H
 
 #include <QTextEdit>
+#include "libkdebugsettings_export.h"
 class QPaintEvent;
-class EnvironmentPlainTextEdit : public QTextEdit
+class LIBKDEBUGSETTINGS_EXPORT EnvironmentPlainTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:
     explicit EnvironmentPlainTextEdit(QWidget *parent = nullptr);
-    ~EnvironmentPlainTextEdit();
+    ~EnvironmentPlainTextEdit() override;
 
 protected:
     void paintEvent(QPaintEvent *event) override;

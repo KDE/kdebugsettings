@@ -44,13 +44,13 @@ set(KDEBUGSETTINGS_LIB_VERSION "${KDE_APPLICATIONS_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "5")
 
 if(BUILD_TESTING)
-   add_definitions(-DBUILD_TESTING)
+	add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
 
 add_subdirectory( src )
 if (BUILD_TESTING)
-   add_subdirectory( autotests )
+	add_subdirectory( autotests )
 endif()
 install( FILES data/kde.categories data/kde.renamecategories data/kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
 

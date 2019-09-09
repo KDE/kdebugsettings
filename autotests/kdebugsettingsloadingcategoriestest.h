@@ -18,29 +18,19 @@
 
 */
 
-#ifndef CATEGORYTYPECOMBOBOX_H
-#define CATEGORYTYPECOMBOBOX_H
+#ifndef KDEBUGSETTINGSLOADINGCATEGORIESTEST_H
+#define KDEBUGSETTINGSLOADINGCATEGORIESTEST_H
 
-#include <QComboBox>
-#include "loggingcategory.h"
-#include "libkdebugsettings_export.h"
+#include <QObject>
 
-class LIBKDEBUGSETTINGS_EXPORT CategoryTypeComboBox : public QComboBox
+class KDebugSettingsLoadingCategoriesTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CategoryTypeComboBox(bool customType, QWidget *parent = nullptr);
-    ~CategoryTypeComboBox();
-
-    Q_REQUIRED_RESULT LoggingCategory::LoggingType type() const;
-    void setType(LoggingCategory::LoggingType type);
-    Q_REQUIRED_RESULT bool loggingCategoryIsNotDefault() const;
-    void setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories);
-    Q_REQUIRED_RESULT LoggingCategory::LoggingType defaultCategories() const;
-
-    void restoreToDefault();
-private:
-    LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
+    explicit KDebugSettingsLoadingCategoriesTest(QObject *parent = nullptr);
+    ~KDebugSettingsLoadingCategoriesTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
-#endif // CATEGORYTYPECOMBOBOX_H
+#endif // KDEBUGSETTINGSLOADINGCATEGORIES_H

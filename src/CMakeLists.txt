@@ -3,28 +3,33 @@ include_directories(${CMAKE_BINARY_DIR})
 set(kdebugsettings_debug_SRCS)
 ecm_qt_declare_logging_category(kdebugsettings_debug_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings)
 
-set(kdebugsettingsprivate_LIB_SRCS
+set(kdebugsettings_LIB_SRCS
     kdebugsettingsloadingcategories.cpp
     kdeloggingcategory.cpp
     renamecategory.cpp
     loggingcategory.cpp
     kdebugsettingsutil.cpp
     loadcategoriesjob.cpp
+    saverulesjob.cpp
+    categorytypecombobox.cpp
+    environmentplaintextedit.cpp
+
     ${kdebugsettings_debug_SRCS}
     )
 
-add_library(kdebugsettingsprivate ${kdebugsettingsprivate_LIB_SRCS})
-generate_export_header(kdebugsettingsprivate BASE_NAME kdebugsettingsprivate)
-target_link_libraries(kdebugsettingsprivate
+add_library(libkdebugsettings ${kdebugsettings_LIB_SRCS})
+generate_export_header(libkdebugsettings BASE_NAME libkdebugsettings)
+target_link_libraries(libkdebugsettings
     Qt5::Core
     KF5::I18n
+    Qt5::Widgets
 )
 
-set_target_properties(kdebugsettingsprivate
-    PROPERTIES OUTPUT_NAME kdebugsettingsprivate VERSION ${KDEBUGSETTINGS_LIB_VERSION} SOVERSION ${KDEBUGSETTINGS_LIB_SOVERSION}
+set_target_properties(libkdebugsettings
+    PROPERTIES OUTPUT_NAME kdebugsettings VERSION ${KDEBUGSETTINGS_LIB_VERSION} SOVERSION ${KDEBUGSETTINGS_LIB_SOVERSION}
     )
 
-install(TARGETS kdebugsettingsprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+install(TARGETS libkdebugsettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
 set(kdebugsettings_SRCS 
@@ -36,18 +41,15 @@ set(kdebugsettings_SRCS
    configurecustomsettingdialog.cpp
    configurecustomsettingwidget.cpp
    environmentsettingsrulespage.cpp
-   environmentplaintextedit.cpp
-   categorytypecombobox.cpp
    kdeapplicationtreelistwidget.cpp
    categorywarning.cpp
 
-   saverulesjob.cpp
    ${kdebugsettings_debug_SRCS}
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})
 
-target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons KF5::ConfigCore KF5::WidgetsAddons KF5::ItemViews KF5::Completion kdebugsettingsprivate)
+target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons KF5::ConfigCore KF5::WidgetsAddons KF5::ItemViews KF5::Completion libkdebugsettings)
 
 install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

@@ -23,8 +23,8 @@
 #include <QVector>
 #include <QString>
 #include <QObject>
-#include "kdebugsettingsprivate_export.h"
-struct KDEBUGSETTINGSPRIVATE_EXPORT RenameCategory
+#include "libkdebugsettings_private_export.h"
+struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory
 {
 public:
     RenameCategory()

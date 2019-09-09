@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2017-2019 Montel Laurent <montel@kde.org>
+  Copyright (c) 2015-2019 Montel Laurent <montel@kde.org>
 
   This library is free software; you can redistribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
@@ -18,28 +18,25 @@
 
 */
 
-#ifndef SAVERULESJOB_H
-#define SAVERULESJOB_H
+#include "kdebugsettingsloadingcategoriestest.h"
+#include "kdebugsettingsloadingcategories.h"
+#include <QTest>
+QTEST_GUILESS_MAIN(KDebugSettingsLoadingCategoriesTest)
 
-#include "loggingcategory.h"
-#include "libkdebugsettings_export.h"
-class LIBKDEBUGSETTINGS_EXPORT SaveRulesJob
+KDebugSettingsLoadingCategoriesTest::KDebugSettingsLoadingCategoriesTest(QObject *parent)
+    : QObject(parent)
 {
-public:
-    SaveRulesJob();
-    ~SaveRulesJob() = default;
 
-    void setListKde(const LoggingCategory::List &listKde);
-    void setListCustom(const LoggingCategory::List &listCustom);
+}
 
-    void setFileName(const QString &fileName);
+void KDebugSettingsLoadingCategoriesTest::shouldHaveDefaultValues()
+{
+    KDebugSettingsLoadingCategories w;
+    QVERIFY(w.customCategories().isEmpty());
+    QVERIFY(w.environmentrules().isEmpty());
+    QVERIFY(w.renameCategoriesList().isEmpty());
+    QVERIFY(w.categoriesList().isEmpty());
+    QVERIFY(w.qtKdeCategories().isEmpty());
+    QVERIFY(!w.foundOverrideRule());
+}
 
-    Q_REQUIRED_RESULT bool start();
-
-private:
-    LoggingCategory::List mListKde;
-    LoggingCategory::List mListCustom;
-    QString mFileName;
-};
-
-#endif // SAVERULESJOB_H

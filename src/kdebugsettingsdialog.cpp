@@ -26,6 +26,7 @@
 #include "categorywarning.h"
 #include "loadcategoriesjob.h"
 #include "saverulesjob.h"
+#include "kdebugsettingsloadingcategories.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -121,89 +122,25 @@ void KDebugSettingsDialog::saveConfig()
 
 void KDebugSettingsDialog::readQtLoggingFile()
 {
-    const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("QtProject/qtlogging.ini"));
-    if (!envPath.isEmpty()) {
-        readCategoriesFiles(envPath);
-    } else {
-        const QString dataPath = QDir(QLibraryInfo::location(QLibraryInfo::DataPath)).absoluteFilePath(QStringLiteral("qtlogging.ini"));
-        readCategoriesFiles(dataPath);
-    }
+    mLoggings.readQtLoggingFile();
+    updateLogginsCategories();
 }
 
-void KDebugSettingsDialog::readCategoriesFiles(const QString &path)
+void KDebugSettingsDialog::updateLogginsCategories()
 {
-    // KDE debug categories area
-    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/kde.categories"));
-    if (confAreasFile.isEmpty()) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Impossible to find kde.categories file";
-    } else {
-        KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategoriesList, false);
+    if (!mLoggings.environmentrules().isEmpty()) {
+        mEnvironmentSettingsRulesPage->setRules(mLoggings.environmentrules());
     }
-
-    mRenameCategoriesList.clear();
-    // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory) +
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
-    for (const QString &dir : dirs) {
-        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
-        for (const QString &file : fileNames) {
-            mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
-        }
-    }
-    //TODO add load rename file from external kde apps.
-    const QStringList dirs2 = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
-    //qDebug() << " dirs 2 " << dirs2;
-    for (const QString &dir : dirs2) {
-        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
-        for (const QString &file : fileNames) {
-            mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
-        }
-    }
-
-    // Load *.categories file in QStandardPaths::ConfigLocation for kde apps.
-    for (const QString &dir : dirs) {
-        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
-        for (const QString &file : fileNames) {
-            if (file != QLatin1String("kde.categories")) {
-                KDebugSettingsUtil::readLoggingCategories(dir + file, mCategoriesList, true);
-            }
-        }
-    }
-
-    // Load *.categories files. in qdebug.categories for external kde apps.
-    for (const QString &dir : dirs2) {
-        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
-        for (const QString &file : fileNames) {
-            KDebugSettingsUtil::readLoggingCategories(dir + QLatin1Char('/') + file, mCategoriesList, true);
-        }
-    }
-
-    const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
-    if (!rulesFilePath.isEmpty()) {
-        const QList<KDebugSettingsUtil::LoadLoggingCategory> envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
-        //TODO
-    }
-
-    const QString environmentrules = QString::fromLatin1(qgetenv("QT_LOGGING_RULES"));
-    if (!environmentrules.isEmpty()) {
-        mEnvironmentSettingsRulesPage->setRules(environmentrules);
-    }
-    // qt logging.ini
-    LoadCategoriesJob job;
-    job.setFileName(path);
-    job.setCategories(mCategoriesList);
-    job.setRenamedCategories(mRenameCategoriesList);
-    job.start();
-
-    const LoggingCategory::List customCategories = job.customCategories();
-    const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
-    const bool foundOverrideRule = job.foundOverrideRule();
+    const LoggingCategory::List customCategories = mLoggings.customCategories();
+    const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
+    const bool foundOverrideRule = mLoggings.foundOverrideRule();
 
     mKdeApplicationSettingsPage->fillList(qtKdeCategories);
     mCustomSettingsPage->fillList(customCategories);
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
     }
+    mCategoriesList = mLoggings.categoriesList();
 }
 
 bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRules)
@@ -274,7 +211,8 @@ void KDebugSettingsDialog::slotLoad()
 {
     const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"));
     if (!path.isEmpty()) {
-        readCategoriesFiles(path);
+        mLoggings.readCategoriesFiles(path);
+        updateLogginsCategories();
     }
 }
 

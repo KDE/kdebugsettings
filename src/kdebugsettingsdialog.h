@@ -22,6 +22,7 @@
 #define KDEBUGSETTINGSDIALOG_H
 
 #include <QDialog>
+#include "kdebugsettingsloadingcategories.h"
 #include "kdeloggingcategory.h"
 #include "renamecategory.h"
 class QTabWidget;
@@ -49,11 +50,11 @@ private:
     void readQtLoggingFile();
     bool saveRules(const QString &path, bool forceSavingAllRules = false);
     bool saveInQtLogging();
-    void readCategoriesFiles(const QString &path);
     void saveConfig();
     void readConfig();
+    void updateLogginsCategories();
     KdeLoggingCategory::List mCategoriesList;
-    RenameCategory::List mRenameCategoriesList;
+    KDebugSettingsLoadingCategories mLoggings;
     QTabWidget *mTabWidget = nullptr;
     KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage = nullptr;
     CustomDebugSettingsPage *mCustomSettingsPage = nullptr;

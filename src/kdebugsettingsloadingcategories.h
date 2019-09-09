@@ -25,9 +25,9 @@
 #include "kdeloggingcategory.h"
 #include "renamecategory.h"
 #include "loggingcategory.h"
-#include "kdebugsettingsprivate_export.h"
+#include "libkdebugsettings_export.h"
 
-class KDEBUGSETTINGSPRIVATE_EXPORT KDebugSettingsLoadingCategories
+class LIBKDEBUGSETTINGS_EXPORT KDebugSettingsLoadingCategories
 {
 public:
     KDebugSettingsLoadingCategories();
@@ -42,8 +42,8 @@ public:
     Q_REQUIRED_RESULT LoggingCategory::List qtKdeCategories() const;
     Q_REQUIRED_RESULT bool foundOverrideRule() const;
 
-private:
     void readCategoriesFiles(const QString &path);
+private:
     KdeLoggingCategory::List mCategoriesList;
     RenameCategory::List mRenameCategoriesList;
     QString mEnvironmentrules;

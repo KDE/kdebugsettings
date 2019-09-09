@@ -6,25 +6,17 @@ set(full_source_file
     ../src/kdebugsettingsdialog.cpp
     ../src/customdebugsettingspage.cpp
     ../src/kdeapplicationdebugsettingpage.cpp
-    ../src/kdebugsettingsutil.cpp
     ../src/configurecustomsettingdialog.cpp
     ../src/configurecustomsettingwidget.cpp
     ../src/environmentsettingsrulespage.cpp
-    ../src/environmentplaintextedit.cpp
-    ../src/categorytypecombobox.cpp
     ../src/kdeapplicationtreelistwidget.cpp
     ../src/categorywarning.cpp
-    ../src/loggingcategory.cpp
-    ../src/kdeloggingcategory.cpp
-    ../src/loadcategoriesjob.cpp
-    ../src/renamecategory.cpp
-    ../src/saverulesjob.cpp
     ${CMAKE_BINARY_DIR}/src/kdebugsettings_debug.cpp
     )
 
 # convenience macro to add qtest unit tests
 macro(add_unittest _source _additionalsource)
-    set(_test ${_source} ${_additionalsource})
+    set(_test ${_source} ${_additionalsource} "../src/kdebugsettings_debug.cpp")
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )
@@ -38,20 +30,22 @@ macro(add_unittest _source _additionalsource)
         KF5::WidgetsAddons
         KF5::ItemViews
         KF5::Completion
+        libkdebugsettings
         )
 endmacro ()
 
 add_unittest( kdebugsettingsdialogtest.cpp "${full_source_file}")
-add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeloggingcategory.cpp;../src/kdebugsettingsutil.cpp;../src/renamecategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp")
-add_unittest( customdebugsettingspagetest.cpp "../src/renamecategory.cpp;../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( configurecustomsettingdialogtest.cpp "../src/renamecategory.cpp;../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( configurecustomsettingwidgettest.cpp "../src/renamecategory.cpp;../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/categorytypecombobox.cpp;../src/configurecustomsettingwidget.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( environmentsettingsrulespagetest.cpp "../src/renamecategory.cpp;../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/environmentsettingsrulespage.cpp;../src/environmentplaintextedit.cpp")
-add_unittest( kdebugsettingutiltest.cpp "../src/renamecategory.cpp;../src/kdeloggingcategory.cpp;../src/loggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( categorytypecomboboxtest.cpp "../src/loggingcategory.cpp;../src/categorytypecombobox.cpp")
-add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/renamecategory.cpp;../src/renamecategory.cpp;../src/loggingcategory.cpp;../src/kdeapplicationtreelistwidget.cpp;../src/categorytypecombobox.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationtreelistwidget.cpp")
+add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp")
+add_unittest( configurecustomsettingdialogtest.cpp "../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp")
+add_unittest( configurecustomsettingwidgettest.cpp "../src/configurecustomsettingwidget.cpp")
+add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp")
+add_unittest( kdebugsettingutiltest.cpp "")
+add_unittest( categorytypecomboboxtest.cpp "")
+add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/kdeapplicationtreelistwidget.cpp")
 add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")
-add_unittest( loggingcategorytest.cpp "../src/loggingcategory.cpp")
-add_unittest( loadcategoriesjobtest.cpp "../src/renamecategory.cpp;../src/loadcategoriesjob.cpp;../src/loggingcategory.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
-add_unittest( renamecategorytest.cpp "../src/renamecategory.cpp;../src/kdebugsettingsutil.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp")
-add_unittest( saverulesjobtest.cpp "../src/saverulesjob.cpp;../src/renamecategory.cpp;../src/loadcategoriesjob.cpp;../src/loggingcategory.cpp;../src/kdeloggingcategory.cpp;../src/kdebugsettings_debug.cpp;../src/kdebugsettingsutil.cpp")
+add_unittest( loggingcategorytest.cpp "")
+add_unittest( loadcategoriesjobtest.cpp "")
+add_unittest( renamecategorytest.cpp "")
+add_unittest( saverulesjobtest.cpp "")
+add_unittest( kdebugsettingsloadingcategoriestest.cpp "")
