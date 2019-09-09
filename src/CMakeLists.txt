@@ -1,5 +1,22 @@
 include_directories(${CMAKE_BINARY_DIR})
 
+set(kdebugsettingsprivate_LIB_SRCS
+
+    )
+
+add_library(kdebugsettingsprivate ${kdebugsettingsprivate_LIB_SRCS})
+generate_export_header(kdebugsettingsprivate BASE_NAME kdebugsettingsprivate)
+target_link_libraries(kdebugsettingsprivate
+    Qt5::Core
+)
+
+set_target_properties(kdebugsettingsprivate
+    PROPERTIES OUTPUT_NAME kdebugsettingsprivate VERSION ${KDEBUGSETTINGS_LIB_VERSION} SOVERSION ${KDEBUGSETTINGS_LIB_SOVERSION}
+    )
+
+install(TARGETS kdebugsettingsprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+
+
 set(kdebugsettings_SRCS 
    main.cpp 
    kdebugsettingsdialog.cpp

@@ -32,12 +32,17 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMQtDeclareLoggingCategory)
+include(GenerateExportHeader)
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 add_definitions(-DQT_NO_FOREACH)
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
+
+set(KDEBUGSETTINGS_LIB_VERSION "${KDE_APPLICATIONS_VERSION}")
+set(KDEBUGSETTINGS_LIB_SOVERSION "5")
+
 
 add_subdirectory( src )
 if (BUILD_TESTING)
