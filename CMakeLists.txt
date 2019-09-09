@@ -43,6 +43,10 @@ configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-
 set(KDEBUGSETTINGS_LIB_VERSION "${KDE_APPLICATIONS_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "5")
 
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif(BUILD_TESTING)
+
 
 add_subdirectory( src )
 if (BUILD_TESTING)
