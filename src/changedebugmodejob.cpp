@@ -23,12 +23,10 @@
 
 ChangeDebugModeJob::ChangeDebugModeJob()
 {
-
 }
 
 ChangeDebugModeJob::~ChangeDebugModeJob()
 {
-
 }
 
 bool ChangeDebugModeJob::canStart() const

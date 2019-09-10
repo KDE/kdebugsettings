@@ -26,7 +26,6 @@ QTEST_GUILESS_MAIN(KDebugSettingsLoadingCategoriesTest)
 KDebugSettingsLoadingCategoriesTest::KDebugSettingsLoadingCategoriesTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void KDebugSettingsLoadingCategoriesTest::shouldHaveDefaultValues()
@@ -39,4 +38,3 @@ void KDebugSettingsLoadingCategoriesTest::shouldHaveDefaultValues()
     QVERIFY(w.qtKdeCategories().isEmpty());
     QVERIFY(!w.foundOverrideRule());
 }
-

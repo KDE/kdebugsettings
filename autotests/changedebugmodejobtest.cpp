@@ -26,7 +26,6 @@ QTEST_GUILESS_MAIN(ChangeDebugModeJobTest)
 ChangeDebugModeJobTest::ChangeDebugModeJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void ChangeDebugModeJobTest::shouldHaveDefaultValue()

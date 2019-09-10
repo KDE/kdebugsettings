@@ -29,12 +29,10 @@
 
 KDebugSettingsLoadingCategories::KDebugSettingsLoadingCategories()
 {
-
 }
 
 KDebugSettingsLoadingCategories::~KDebugSettingsLoadingCategories()
 {
-
 }
 
 void KDebugSettingsLoadingCategories::readQtLoggingFile()
@@ -61,8 +59,8 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
 
     mRenameCategoriesList.clear();
     // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory) +
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory)
+                             +QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
