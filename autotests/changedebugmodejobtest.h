@@ -31,6 +31,9 @@ public:
     ~ChangeDebugModeJobTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldBeAbleToStart();
+    void shouldBeAbleToStartWithoutArgument();
+    void shouldConvertToLoggingType();
 };
 
 #endif // CHANGEDEBUGMODEJOBTEST_H

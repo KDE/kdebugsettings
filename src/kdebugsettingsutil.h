@@ -115,6 +115,7 @@ LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT RenameCategory parseRenam
 LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
 LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
 LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
+LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT QString qtFileName();
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

@@ -30,6 +30,8 @@
 #include <KDBusService>
 #include <QStandardPaths>
 
+#include <iostream>
+
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -51,6 +53,12 @@ int main(int argc, char **argv)
     QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
     parser.addOption(testModeOption);
 
+    QCommandLineOption switchFullDebugOption(QStringLiteral("enable-full-debug"), i18n("Activate full debug for all modules."));
+    parser.addOption(switchFullDebugOption);
+    QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
+    parser.addOption(switchOffDebugOption);
+
+
     QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"), i18n("Change debug mode as console (in console)"), QStringLiteral("Full|Info|Warning|Critical|Off"));
     parser.addOption(changeDebugSettingOption);
     parser.addPositionalArgument(
@@ -64,11 +72,33 @@ int main(int argc, char **argv)
         QStandardPaths::setTestModeEnabled(true);
     }
 
+    if (parser.isSet(switchFullDebugOption)) {
+        ChangeDebugModeJob job;
+        job.setDebugMode(QStringLiteral("Full"));
+        job.setWithoutArguments(true);
+        if (!job.start()) {
+            std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+        }
+
+        return 1;
+    }
+    if (parser.isSet(switchOffDebugOption)) {
+        ChangeDebugModeJob job;
+        job.setDebugMode(QStringLiteral("Off"));
+        job.setWithoutArguments(true);
+        if (!job.start()) {
+            std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+        }
+        return 1;
+    }
     const QString changeModeValue = parser.value(changeDebugSettingOption);
     if (!changeModeValue.isEmpty() && !parser.positionalArguments().isEmpty()) {
         ChangeDebugModeJob job;
         job.setDebugMode(changeModeValue);
-        qDebug() << " Change mode" << changeModeValue;
+        job.setLoggingCategoriesName(parser.positionalArguments());
+        if (!job.start()) {
+            std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+        }
         return 1;
     } else {
         KDBusService service(KDBusService::Unique);

@@ -59,3 +59,8 @@ bool SaveRulesJob::start()
     }
     return true;
 }
+
+QString SaveRulesJob::fileName() const
+{
+    return mFileName;
+}

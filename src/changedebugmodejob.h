@@ -22,6 +22,7 @@
 #define CHANGEDEBUGMODEJOB_H
 
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
 #include <QString>
 #include <QStringList>
 
@@ -36,13 +37,19 @@ public:
     void setDebugMode(const QString &mode);
     Q_REQUIRED_RESULT QString debugMode() const;
 
-    Q_REQUIRED_RESULT QStringList loggingCategoryName() const;
-    void setLoggingCategoryName(const QStringList &loggingCategoryName);
+    Q_REQUIRED_RESULT QStringList loggingCategoriesName() const;
+    void setLoggingCategoriesName(const QStringList &loggingCategoriesName);
 
     Q_REQUIRED_RESULT bool canStart() const;
+    Q_REQUIRED_RESULT bool debugModeIsValid(const QString &value) const;
+    Q_REQUIRED_RESULT LoggingCategory::LoggingType convertDebugModeToLoggingType(const QString &value);
+    void setWithoutArguments(bool b);
+    Q_REQUIRED_RESULT bool withoutArguments() const;
+
 private:
     QString mDebugMode;
-    QStringList mLoggingCategoryNames;
+    QStringList mLoggingCategoriesName;
+    bool mWithoutArguments = false;
 };
 
 #endif // CHANGEDEBUGMODEJOB_H

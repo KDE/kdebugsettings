@@ -158,9 +158,7 @@ bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRul
 
 bool KDebugSettingsDialog::saveInQtLogging()
 {
-    const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/QtProject");
-    QDir().mkpath(envPath);
-    return saveRules(envPath + QStringLiteral("/qtlogging.ini"));
+    return saveRules(KDebugSettingsUtil::qtFileName());
 }
 
 void KDebugSettingsDialog::slotAccepted()

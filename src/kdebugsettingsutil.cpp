@@ -23,6 +23,8 @@
 #include <QFile>
 #include <QRegularExpression>
 #include <KLocalizedString>
+#include <QStandardPaths>
+#include <QDir>
 
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QString &filename)
 {
@@ -444,4 +446,11 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
         break;
     }
     return str;
+}
+QString KDebugSettingsUtil::qtFileName()
+{
+    const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/QtProject");
+    QDir().mkpath(envPath);
+    const QString qtloggingFileName = envPath + QStringLiteral("/qtlogging.ini");
+    return qtloggingFileName;
 }

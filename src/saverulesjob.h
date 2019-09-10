@@ -36,6 +36,8 @@ public:
 
     Q_REQUIRED_RESULT bool start();
 
+    Q_REQUIRED_RESULT QString fileName() const;
+
 private:
     LoggingCategory::List mListKde;
     LoggingCategory::List mListCustom;
