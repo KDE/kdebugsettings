@@ -18,52 +18,21 @@
 
 */
 
+#include "changedebugmodejobtest.h"
 #include "changedebugmodejob.h"
-#include "kdebugsettingsloadingcategories.h"
+#include <QTest>
+QTEST_GUILESS_MAIN(ChangeDebugModeJobTest)
 
-ChangeDebugModeJob::ChangeDebugModeJob()
+ChangeDebugModeJobTest::ChangeDebugModeJobTest(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
-ChangeDebugModeJob::~ChangeDebugModeJob()
+void ChangeDebugModeJobTest::shouldHaveDefaultValue()
 {
-
-}
-
-bool ChangeDebugModeJob::canStart() const
-{
-    if (mDebugMode.isEmpty()) {
-        return false;
-    }
-    //TODO add mLoggingCategoryName
-    return true;
-}
-
-bool ChangeDebugModeJob::start()
-{
-    if (!canStart()) {
-        return false;
-    }
-    return false;
-}
-
-void ChangeDebugModeJob::setDebugMode(const QString &mode)
-{
-    mDebugMode = mode;
-}
-
-QString ChangeDebugModeJob::debugMode() const
-{
-    return mDebugMode;
-}
-
-QStringList ChangeDebugModeJob::loggingCategoryName() const
-{
-    return mLoggingCategoryNames;
-}
-
-void ChangeDebugModeJob::setLoggingCategoryName(const QStringList &loggingCategoryName)
-{
-    mLoggingCategoryNames = loggingCategoryName;
+    ChangeDebugModeJob job;
+    QVERIFY(job.debugMode().isEmpty());
+    QVERIFY(job.loggingCategoryName().isEmpty());
+    QVERIFY(!job.canStart());
 }

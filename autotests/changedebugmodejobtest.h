@@ -18,19 +18,19 @@
 
 */
 
-#ifndef KDEBUGSETTINGSLOADINGCATEGORIESTEST_H
-#define KDEBUGSETTINGSLOADINGCATEGORIESTEST_H
+#ifndef CHANGEDEBUGMODEJOBTEST_H
+#define CHANGEDEBUGMODEJOBTEST_H
 
 #include <QObject>
 
-class KDebugSettingsLoadingCategoriesTest : public QObject
+class ChangeDebugModeJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDebugSettingsLoadingCategoriesTest(QObject *parent = nullptr);
-    ~KDebugSettingsLoadingCategoriesTest() = default;
+    explicit ChangeDebugModeJobTest(QObject *parent = nullptr);
+    ~ChangeDebugModeJobTest() = default;
 private Q_SLOTS:
-    void shouldHaveDefaultValues();
+    void shouldHaveDefaultValue();
 };
 
-#endif // KDEBUGSETTINGSLOADINGCATEGORIES_H
+#endif // CHANGEDEBUGMODEJOBTEST_H

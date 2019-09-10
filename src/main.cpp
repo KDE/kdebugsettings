@@ -22,6 +22,7 @@
 
 #include <config-kdebugsettings.h>
 #include "kdebugsettingsdialog.h"
+#include "changedebugmodejob.h"
 
 #include <KLocalizedString>
 #include <KAboutData>
@@ -65,6 +66,8 @@ int main(int argc, char **argv)
 
     const QString changeModeValue = parser.value(changeDebugSettingOption);
     if (!changeModeValue.isEmpty() && !parser.positionalArguments().isEmpty()) {
+        ChangeDebugModeJob job;
+        job.setDebugMode(changeModeValue);
         qDebug() << " Change mode" << changeModeValue;
         return 1;
     } else {

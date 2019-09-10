@@ -23,6 +23,7 @@
 
 #include "libkdebugsettings_export.h"
 #include <QString>
+#include <QStringList>
 
 class LIBKDEBUGSETTINGS_EXPORT ChangeDebugModeJob
 {
@@ -35,8 +36,13 @@ public:
     void setDebugMode(const QString &mode);
     Q_REQUIRED_RESULT QString debugMode() const;
 
+    Q_REQUIRED_RESULT QStringList loggingCategoryName() const;
+    void setLoggingCategoryName(const QStringList &loggingCategoryName);
+
+    Q_REQUIRED_RESULT bool canStart() const;
 private:
     QString mDebugMode;
+    QStringList mLoggingCategoryNames;
 };
 
 #endif // CHANGEDEBUGMODEJOB_H
