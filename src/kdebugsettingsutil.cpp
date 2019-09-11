@@ -447,6 +447,7 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
     }
     return str;
 }
+
 QString KDebugSettingsUtil::qtFileName()
 {
     const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/QtProject");

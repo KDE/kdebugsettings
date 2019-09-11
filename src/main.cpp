@@ -58,7 +58,6 @@ int main(int argc, char **argv)
     QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
     parser.addOption(switchOffDebugOption);
 
-
     QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"), i18n("Change debug mode as console (in console)"), QStringLiteral("Full|Info|Warning|Critical|Off"));
     parser.addOption(changeDebugSettingOption);
     parser.addPositionalArgument(

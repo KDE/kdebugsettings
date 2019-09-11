@@ -102,7 +102,7 @@ LoggingCategory::LoggingType ChangeDebugModeJob::convertDebugModeToLoggingType(c
         return LoggingCategory::LoggingType::Info;
     } else if (value == QLatin1String("Warning")) {
         return LoggingCategory::LoggingType::Warning;
-    } else if(value == QLatin1String("Critical")) {
+    } else if (value == QLatin1String("Critical")) {
         return LoggingCategory::LoggingType::Critical;
     } else if (value == QLatin1String("Off")) {
         return LoggingCategory::LoggingType::Off;
