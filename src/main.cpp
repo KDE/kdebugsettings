@@ -34,12 +34,10 @@
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, true);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    /**
-     * enable high dpi support
-     */
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+    QApplication app(argc, argv);
 
     KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"), KAboutLicense::GPL_V2,
