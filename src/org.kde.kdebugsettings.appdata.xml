@@ -26,6 +26,7 @@
   <name xml:lang="sv">KDebugSettings</name>
   <name xml:lang="uk">Параметри KDebug</name>
   <name xml:lang="x-test">xxKDebugSettingsxx</name>
+  <name xml:lang="zh-TW">KDebugSettings</name>
   <summary>Set which debug messages are shown</summary>
   <summary xml:lang="ca">Estableix quins missatges de depuració es mostraran</summary>
   <summary xml:lang="de">Einstellung der angezeigten Debug-Meldungen</summary>
