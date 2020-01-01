@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2015-2019 Montel Laurent <montel@kde.org>
+  Copyright (c) 2015-2020 Laurent Montel <montel@kde.org>
 
   This library is free software; you can redistribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 
     KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("kdebugssettings"), QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"), KAboutLicense::GPL_V2,
-                         i18n("(c) 2015-2019 kdebugsettings authors"));
+                         i18n("(c) 2015-2020 kdebugsettings authors"));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     KAboutData::setApplicationData(aboutData);
 
