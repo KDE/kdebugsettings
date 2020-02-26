@@ -35,7 +35,7 @@ public:
     Q_REQUIRED_RESULT LoggingCategory::LoggingType type() const;
     void setType(LoggingCategory::LoggingType type);
     Q_REQUIRED_RESULT bool loggingCategoryIsNotDefault() const;
-    void setDefaultCategories(const LoggingCategory::LoggingType &defaultCategories);
+    void setDefaultCategories(LoggingCategory::LoggingType defaultCategories);
     Q_REQUIRED_RESULT LoggingCategory::LoggingType defaultCategories() const;
 
     void restoreToDefault();
