@@ -16,6 +16,7 @@
   <name xml:lang="fi">KDebugSettings</name>
   <name xml:lang="fr">KDebugSettings</name>
   <name xml:lang="gl">KDebugSettings</name>
+  <name xml:lang="ia">KDebugSettungs - Preferentias de KDebug</name>
   <name xml:lang="id">KDebugSettings</name>
   <name xml:lang="it">KDebugSettings</name>
   <name xml:lang="ko">KDebugSettings</name>
@@ -42,6 +43,7 @@
   <summary xml:lang="fi">Aseta näytettävät virheenpaikannusviestit</summary>
   <summary xml:lang="fr">Définir quels messages de débogage sont affichés</summary>
   <summary xml:lang="gl">Definir que mensaxes de depuración se mostran</summary>
+  <summary xml:lang="ia">Pone qual messages de debug (cribrar) es monstrate</summary>
   <summary xml:lang="id">Atur pesan debug mana yang akan ditampilkan</summary>
   <summary xml:lang="it">Imposta quali messaggi di debug mostrare</summary>
   <summary xml:lang="ko">표시할 디버그 메시지 선택</summary>
@@ -95,6 +97,7 @@
     <binary>kdebugsettings</binary>
   </provides>
   <releases>
+    <release version="19.12.3" date="2020-03-05"/>
     <release version="19.12.2" date="2020-02-06"/>
     <release version="19.12.1" date="2020-01-09"/>
     <release version="19.12.0" date="2019-12-12"/>
