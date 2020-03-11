@@ -29,6 +29,7 @@
   <name xml:lang="sv">KDebugSettings</name>
   <name xml:lang="uk">Параметри KDebug</name>
   <name xml:lang="x-test">xxKDebugSettingsxx</name>
+  <name xml:lang="zh-CN">KDebugSettings</name>
   <name xml:lang="zh-TW">KDebugSettings</name>
   <summary>Set which debug messages are shown</summary>
   <summary xml:lang="ca">Estableix quins missatges de depuració es mostraran</summary>
@@ -54,6 +55,7 @@
   <summary xml:lang="sv">Ställ in vilka felsökningsmeddelanden som visas</summary>
   <summary xml:lang="uk">Визначення того, які з діагностичних повідомлень буде показано</summary>
   <summary xml:lang="x-test">xxSet which debug messages are shownxx</summary>
+  <summary xml:lang="zh-CN">设置显示哪些调试消息</summary>
   <description>
     <p>
       KDebugSettings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
