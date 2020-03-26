@@ -164,7 +164,6 @@ void LoadCategoriesJob::start()
                     break;
                 case KDebugSettingsUtil::LoadLoggingCategory::Off:
                     tmp.loggingType = LoggingCategory::Off;
-                    tmp.enabled = false;
                     break;
                 case KDebugSettingsUtil::LoadLoggingCategory::Info:
                     tmp.loggingType = LoggingCategory::Info;
