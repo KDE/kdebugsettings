@@ -6,8 +6,8 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.12.0")
-set(KF5_MIN_VERSION "5.66.0")
+set(QT_MIN_VERSION "5.13.0")
+set(KF5_MIN_VERSION "5.68.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 
@@ -57,11 +57,7 @@ add_subdirectory( src )
 if (BUILD_TESTING)
 	add_subdirectory( autotests )
 endif()
-if (NOT ECM_VERSION VERSION_LESS "5.68.0")
-   ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-else()
-   install( FILES data/kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
-endif()
+ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
-install( FILES data/kde.categories data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
+install( FILES data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
