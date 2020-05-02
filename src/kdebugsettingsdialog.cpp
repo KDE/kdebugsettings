@@ -199,7 +199,7 @@ void KDebugSettingsDialog::slotInsertCategories()
 
 void KDebugSettingsDialog::slotSaveAs()
 {
-    const QString path = QFileDialog::getSaveFileName(this, i18n("Save As"));
+    const QString path = QFileDialog::getSaveFileName(this, i18n("Save As"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
     if (!path.isEmpty()) {
         saveRules(path, true);
     }
@@ -207,7 +207,7 @@ void KDebugSettingsDialog::slotSaveAs()
 
 void KDebugSettingsDialog::slotLoad()
 {
-    const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"));
+    const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
     if (!path.isEmpty()) {
         mLoggings.readCategoriesFiles(path);
         updateLogginsCategories();
