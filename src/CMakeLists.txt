@@ -15,6 +15,7 @@ set(kdebugsettings_LIB_SRCS
     categorytypecombobox.cpp
     environmentplaintextedit.cpp
     changedebugmodejob.cpp
+    loadgroupmenu.cpp
 
     ${kdebugsettings_debug_SRCS}
     )
