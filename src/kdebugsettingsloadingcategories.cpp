@@ -23,7 +23,6 @@
 #include "kdebugsettingsutil.h"
 #include "loadcategoriesjob.h"
 #include <QStandardPaths>
-#include <QString>
 #include <QLibraryInfo>
 #include <QDir>
 

@@ -26,7 +26,6 @@
 #include "categorywarning.h"
 #include "loadcategoriesjob.h"
 #include "saverulesjob.h"
-#include "kdebugsettingsloadingcategories.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
