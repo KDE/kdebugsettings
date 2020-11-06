@@ -28,7 +28,7 @@
 
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KdeLoggingCategory {
     KdeLoggingCategory();
-    typedef QVector<KdeLoggingCategory> List;
+    using List = QVector<KdeLoggingCategory>;
     Q_REQUIRED_RESULT bool operator ==(const KdeLoggingCategory &other) const;
     Q_REQUIRED_RESULT bool operator !=(const KdeLoggingCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;

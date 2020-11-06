@@ -40,10 +40,10 @@ KDebugSettingsDialogTest::~KDebugSettingsDialogTest()
 void KDebugSettingsDialogTest::shouldHaveDefaultValue()
 {
     KDebugSettingsDialog dlg;
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
-    QTabWidget *tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto *tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tab);
     for (int i = 0; i < tab->count(); ++i) {
         const QString objName = tab->widget(i)->objectName();
@@ -52,13 +52,13 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
                                     || (objName == QLatin1String("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
-    QPushButton *saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
+    auto *saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
     QVERIFY(saveAs);
-    QPushButton *load = buttonBox->findChild<QPushButton *>(QStringLiteral("load_button"));
+    auto *load = buttonBox->findChild<QPushButton *>(QStringLiteral("load_button"));
     QVERIFY(load);
-    QPushButton *insertCategories = buttonBox->findChild<QPushButton *>(QStringLiteral("insert_button"));
+    auto *insertCategories = buttonBox->findChild<QPushButton *>(QStringLiteral("insert_button"));
     QVERIFY(insertCategories);
-    CategoryWarning *categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));
+    auto *categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());
 }

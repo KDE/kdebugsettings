@@ -46,7 +46,7 @@ struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
     {
     }
 
-    typedef QVector<LoggingCategory> List;
+    using List = QVector<LoggingCategory>;
     Q_REQUIRED_RESULT bool operator ==(const LoggingCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
 

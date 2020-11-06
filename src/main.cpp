@@ -99,7 +99,7 @@ int main(int argc, char **argv)
         return 1;
     } else {
         KDBusService service(KDBusService::Unique);
-        KDebugSettingsDialog *dialog = new KDebugSettingsDialog;
+        auto *dialog = new KDebugSettingsDialog;
         const int ret = dialog->exec();
         delete dialog;
         return ret;

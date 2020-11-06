@@ -38,26 +38,26 @@ KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest()
 void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 {
     KDEApplicationDebugSettingPage page;
-    KDEApplicationTreeListWidget *listWidget = page.findChild<KDEApplicationTreeListWidget *>(QStringLiteral("listwidget"));
+    auto *listWidget = page.findChild<KDEApplicationTreeListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(listWidget);
     QVERIFY(!listWidget->rootIsDecorated());
     QVERIFY(listWidget->header()->isHidden());
     QVERIFY(listWidget->isColumnHidden(2));
     QCOMPARE(listWidget->columnCount(), 4);
 
-    QPushButton *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
+    auto *selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
     QVERIFY(selectAll);
     QVERIFY(selectAll->isEnabled());
 
-    QPushButton *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));
+    auto *deselectAll = page.findChild<QPushButton *>(QStringLiteral("deselectall"));
     QVERIFY(deselectAll);
     QVERIFY(deselectAll->isEnabled());
 
-    QPushButton *mTurnOffAllMessages = page.findChild<QPushButton *>(QStringLiteral("deselectallmessage"));
+    auto *mTurnOffAllMessages = page.findChild<QPushButton *>(QStringLiteral("deselectallmessage"));
     QVERIFY(mTurnOffAllMessages);
     QVERIFY(mTurnOffAllMessages->isEnabled());
 
-    KTreeWidgetSearchLine *searchLine = page.findChild<KTreeWidgetSearchLine *>(QStringLiteral("searchline"));
+    auto *searchLine = page.findChild<KTreeWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);
     QVERIFY(searchLine->text().isEmpty());
 }

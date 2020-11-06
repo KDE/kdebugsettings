@@ -30,7 +30,7 @@
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     mTreeListWidget = new KDEApplicationTreeListWidget(this);
     mTreeListWidget->setObjectName(QStringLiteral("listwidget"));
@@ -43,7 +43,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
 
     mainLayout->addWidget(mTreeListWidget);
 
-    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    auto *buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
     mEnableDebug = new QPushButton(i18n("Enable All Debug"), this);
@@ -76,7 +76,7 @@ void KDEApplicationDebugSettingPage::forceFocus()
 bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
 {
     if (event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
-        QKeyEvent *key = static_cast<QKeyEvent *>(event);
+        auto *key = static_cast<QKeyEvent *>(event);
         if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
             event->accept();
             return true;

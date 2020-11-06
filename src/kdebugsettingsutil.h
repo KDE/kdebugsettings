@@ -86,7 +86,7 @@ struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadLoggingCategory {
         }
     }
 
-    typedef QVector<LoadLoggingCategory> List;
+    using List = QVector<LoadLoggingCategory>;
 
     bool isValid() const
     {

@@ -36,10 +36,10 @@ ConfigureCustomSettingDialogTest::~ConfigureCustomSettingDialogTest()
 void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
 {
     ConfigureCustomSettingDialog dlg;
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
     QVERIFY(!buttonBox->button(QDialogButtonBox::Ok)->isEnabled());
-    ConfigureCustomSettingWidget *widget = dlg.findChild<ConfigureCustomSettingWidget *>(QStringLiteral("customsettingwidget"));
+    auto *widget = dlg.findChild<ConfigureCustomSettingWidget *>(QStringLiteral("customsettingwidget"));
     QVERIFY(widget);
 }
 
