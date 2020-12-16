@@ -21,6 +21,9 @@ set(kdebugsettings_LIB_SRCS
     )
 
 add_library(libkdebugsettings ${kdebugsettings_LIB_SRCS})
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(libkdebugsettings PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(libkdebugsettings BASE_NAME libkdebugsettings)
 target_link_libraries(libkdebugsettings
     Qt5::Core
@@ -51,6 +54,9 @@ set(kdebugsettings_SRCS
    )
    
 add_executable(kdebugsettings ${kdebugsettings_SRCS})
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(kdebugsettings PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons KF5::ConfigCore KF5::WidgetsAddons KF5::ItemViews KF5::Completion libkdebugsettings)
 

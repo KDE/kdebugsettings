@@ -37,10 +37,8 @@ include(GenerateExportHeader)
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_FOREACH)
-if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
-   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
-endif()
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
 
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
@@ -52,6 +50,16 @@ if(BUILD_TESTING)
 	add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" FALSE)
+
+set(COMPILE_WITH_UNITY_CMAKE_SUPPORT false)
+if (USE_UNITY_CMAKE_SUPPORT)
+    if(${CMAKE_VERSION} VERSION_LESS "3.16.0")
+        message(STATUS "CMAKE version is less than 3.16.0 . We can't use cmake unify build support")
+    else()
+        set(COMPILE_WITH_UNITY_CMAKE_SUPPORT true)
+    endif()
+endif()
 
 add_subdirectory( src )
 if (BUILD_TESTING)
