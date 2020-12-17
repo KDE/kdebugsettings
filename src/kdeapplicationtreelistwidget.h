@@ -34,8 +34,8 @@ public:
         IdentifierName = 3
     };
 
-    KDEApplicationTreeListWidgetItem(const QString &logName, QTreeWidget *parent);
-    ~KDEApplicationTreeListWidgetItem();
+    explicit KDEApplicationTreeListWidgetItem(const QString &logName, QTreeWidget *parent);
+    ~KDEApplicationTreeListWidgetItem() override;
 
     Q_REQUIRED_RESULT QString logName() const;
     void setLogName(const QString &category);

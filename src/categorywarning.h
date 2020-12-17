@@ -28,7 +28,7 @@ class CategoryWarning : public KMessageWidget
     Q_OBJECT
 public:
     explicit CategoryWarning(QWidget *parent = nullptr);
-    ~CategoryWarning();
+    ~CategoryWarning() override;
 };
 
 #endif // CATEGORYWARNING_H

@@ -29,7 +29,7 @@ class ConfigureCustomSettingDialog : public QDialog
     Q_OBJECT
 public:
     explicit ConfigureCustomSettingDialog(QWidget *parent = nullptr);
-    ~ConfigureCustomSettingDialog();
+    ~ConfigureCustomSettingDialog() override;
     void setRule(const QString &rule);
     Q_REQUIRED_RESULT QString rule() const;
 private:

@@ -30,7 +30,7 @@ class ConfigureCustomSettingWidget : public QWidget
     Q_OBJECT
 public:
     explicit ConfigureCustomSettingWidget(QWidget *parent = nullptr);
-    ~ConfigureCustomSettingWidget();
+    ~ConfigureCustomSettingWidget() override;
 
     Q_REQUIRED_RESULT QString rule() const;
     void setRule(const QString &rule);

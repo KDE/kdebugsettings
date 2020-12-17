@@ -36,7 +36,7 @@ class KDebugSettingsDialog : public QDialog
     Q_OBJECT
 public:
     explicit KDebugSettingsDialog(QWidget *parent = nullptr);
-    ~KDebugSettingsDialog();
+    ~KDebugSettingsDialog() override;
 
 private:
     void slotAccepted();

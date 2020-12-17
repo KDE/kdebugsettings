@@ -30,7 +30,7 @@ class CustomDebugSettingsPage : public QWidget
     Q_OBJECT
 public:
     explicit CustomDebugSettingsPage(QWidget *parent = nullptr);
-    ~CustomDebugSettingsPage();
+    ~CustomDebugSettingsPage() override;
 
     void fillList(const LoggingCategory::List &list);
     Q_REQUIRED_RESULT LoggingCategory::List rules() const;

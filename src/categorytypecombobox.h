@@ -30,7 +30,7 @@ class LIBKDEBUGSETTINGS_EXPORT CategoryTypeComboBox : public QComboBox
     Q_OBJECT
 public:
     explicit CategoryTypeComboBox(bool customType, QWidget *parent = nullptr);
-    ~CategoryTypeComboBox();
+    ~CategoryTypeComboBox() override;
 
     Q_REQUIRED_RESULT LoggingCategory::LoggingType type() const;
     void setType(LoggingCategory::LoggingType type);

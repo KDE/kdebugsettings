@@ -28,7 +28,7 @@ class EnvironmentSettingsRulesPage : public QWidget
     Q_OBJECT
 public:
     explicit EnvironmentSettingsRulesPage(QWidget *parent = nullptr);
-    ~EnvironmentSettingsRulesPage();
+    ~EnvironmentSettingsRulesPage() override;
     void setRules(const QString &rules);
 private:
     EnvironmentPlainTextEdit *mRichTextEdit = nullptr;
