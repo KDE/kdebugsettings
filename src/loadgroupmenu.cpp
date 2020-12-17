@@ -18,16 +18,13 @@
 
 */
 
-
 #include "loadgroupmenu.h"
 
 LoadGroupMenu::LoadGroupMenu(QWidget *parent)
     : QMenu(parent)
 {
-
 }
 
 LoadGroupMenu::~LoadGroupMenu()
 {
-
 }

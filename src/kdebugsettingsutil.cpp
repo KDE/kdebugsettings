@@ -44,11 +44,11 @@ RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QStri
         qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: "
                                       << line << " from file:" << filename
                                  #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
-                                      << endl
+            << endl
                                  #else
-                                      << Qt::endl
+            << Qt::endl
                                  #endif
-                                         ;
+        ;
         return category;
     }
 
@@ -100,11 +100,11 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
         qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: "
                                       << line << " from file:" << filename
                                  #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
-                                      << endl
+            << endl
                                  #else
-                                      << Qt::endl
+            << Qt::endl
                                  #endif
-                                         ;
+        ;
         return category;
     }
     QString logName;
