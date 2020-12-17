@@ -53,7 +53,7 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
                                     || (objName == QLatin1String("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
-    auto saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
+    auto saveAs = buttonBox->findChild<QToolButton *>(QStringLiteral("saveas_button"));
     QVERIFY(saveAs);
     auto load = buttonBox->findChild<QToolButton *>(QStringLiteral("load_button"));
     QVERIFY(load);

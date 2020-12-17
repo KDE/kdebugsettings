@@ -72,10 +72,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
-    QPushButton *saveAs = new QPushButton(i18n("Save As..."), this);
+    QToolButton *saveAs = new QToolButton(this);
+    saveAs->setText(i18n("Save As..."));
     saveAs->setObjectName(QStringLiteral("saveas_button"));
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
-    connect(saveAs, &QPushButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
+    connect(saveAs, &QToolButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
 
     QToolButton *load = new QToolButton(this);
     load->setText(i18n("Load..."));
