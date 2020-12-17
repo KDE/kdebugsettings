@@ -30,7 +30,7 @@ QTEST_GUILESS_MAIN(SaveRulesJobTest)
 void compareFile(const QString &name)
 {
     const QString refFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ref");
-    const QString generatedFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
+    const QString generatedFile = QLatin1String(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
 
     // compare to reference file
     QStringList args = QStringList()
@@ -71,7 +71,9 @@ void SaveRulesJobTest::shouldSaveLoadRules()
     const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
 
     SaveRulesJob saveJob;
-    saveJob.setFileName(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.ref"));
+    QDir().mkpath(QLatin1String(KDEBUGSETTINGS_BINARY_DATA_DIR));
+    saveJob.setFileName(QLatin1String(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.ref"));
+    qDebug() << " save " << saveJob.fileName();
     saveJob.setListCustom(customCategories);
     saveJob.setListKde(qtKdeCategories);
     QVERIFY(saveJob.start());
