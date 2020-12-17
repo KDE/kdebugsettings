@@ -31,8 +31,6 @@
 namespace KDebugSettingsUtil {
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LineLoggingQtCategory {
     LineLoggingQtCategory()
-        : enabled(true)
-        , type(Unknown)
     {
     }
 
@@ -57,8 +55,8 @@ struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LineLoggingQtCategory {
                && (logName == other.logName);
     }
 
-    bool enabled;
-    LoggingType type;
+    bool enabled = true;
+    LoggingType type = Unknown;
     QString logName;
 };
 
