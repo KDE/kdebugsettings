@@ -94,7 +94,7 @@ QList<int> KDEApplicationTreeListWidget::searchColumns() const
 void KDEApplicationTreeListWidget::selectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        auto *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        auto itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
         if (!itemWidget->isHidden()) {
             itemWidget->setType(LoggingCategory::Debug);
         }
@@ -104,7 +104,7 @@ void KDEApplicationTreeListWidget::selectAllDebugCategories()
 void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        auto *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        auto itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
         if (!itemWidget->isHidden()) {
             itemWidget->setType(LoggingCategory::Info);
         }
@@ -114,7 +114,7 @@ void KDEApplicationTreeListWidget::deSelectAllDebugCategories()
 void KDEApplicationTreeListWidget::deSelectAllMessagesCategories()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        auto *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        auto itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
         if (!itemWidget->isHidden()) {
             itemWidget->setType(LoggingCategory::Off);
         }
@@ -142,7 +142,7 @@ void KDEApplicationTreeListWidget::addListItems(const LoggingCategory::List &lis
         clear();
     }
     for (const LoggingCategory &cat : list) {
-        auto *item = new KDEApplicationTreeListWidgetItem(cat.categoryName, this);
+        auto item = new KDEApplicationTreeListWidgetItem(cat.categoryName, this);
         item->setToolTip(0, generateToolTip(cat));
         item->setText(KDEApplicationTreeListWidgetItem::Description, cat.description);
         item->setType(cat.loggingType);
@@ -162,7 +162,7 @@ LoggingCategory::List KDEApplicationTreeListWidget::rules(bool forceSavingAllRul
 {
     LoggingCategory::List lst;
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        auto *listWidgetItem = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        auto listWidgetItem = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
         const LoggingCategory cat = listWidgetItem->rule(forceSavingAllRules);
         if (cat.isValid()) {
             lst.append(cat);
@@ -174,7 +174,7 @@ LoggingCategory::List KDEApplicationTreeListWidget::rules(bool forceSavingAllRul
 void KDEApplicationTreeListWidget::restoreToDefault()
 {
     for (int i = 0; i < topLevelItemCount(); ++i) {
-        auto *itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
+        auto itemWidget = static_cast<KDEApplicationTreeListWidgetItem *>(topLevelItem(i));
         itemWidget->restoreToDefault();
     }
 }

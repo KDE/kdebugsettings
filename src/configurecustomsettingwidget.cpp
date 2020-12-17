@@ -32,7 +32,7 @@
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
 
     QLabel *lab = new QLabel(i18n("Category:"), this);
     lab->setObjectName(QStringLiteral("category_label"));
@@ -41,7 +41,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     mCategoryLineEdit->setClearButtonEnabled(true);
     mCategoryLineEdit->setObjectName(QStringLiteral("category_lineedit"));
     connect(mCategoryLineEdit, &KLineEdit::textChanged, this, &ConfigureCustomSettingWidget::slotTextChanged);
-    auto *categoryLayout = new QHBoxLayout;
+    auto categoryLayout = new QHBoxLayout;
     vbox->addLayout(categoryLayout);
     categoryLayout->addWidget(lab);
     categoryLayout->addWidget(mCategoryLineEdit);

@@ -27,7 +27,7 @@
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QLabel *lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("label"));
     mRichTextEdit = new EnvironmentPlainTextEdit(this);

@@ -34,17 +34,17 @@
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     QLabel *lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("custom_label"));
     mainLayout->addWidget(lab);
 
-    auto *horizontalLayout = new QHBoxLayout;
+    auto horizontalLayout = new QHBoxLayout;
     horizontalLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->addLayout(horizontalLayout);
 
-    auto *vbox = new QVBoxLayout;
+    auto vbox = new QVBoxLayout;
     horizontalLayout->addLayout(vbox);
 
     mListWidget = new QListWidget(this);
@@ -52,13 +52,13 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
-    auto *searchLine = new KListWidgetSearchLine(this, mListWidget);
+    auto searchLine = new KListWidgetSearchLine(this, mListWidget);
     searchLine->setObjectName(QStringLiteral("searchline"));
     searchLine->setPlaceholderText(i18n("Search..."));
     vbox->addWidget(searchLine);
     vbox->addWidget(mListWidget);
 
-    auto *buttonLayout = new QVBoxLayout;
+    auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
     mAddRule = new QPushButton(i18n("Add..."), this);

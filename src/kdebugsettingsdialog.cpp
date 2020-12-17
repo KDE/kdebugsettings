@@ -48,7 +48,7 @@ constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     mCategoryWarning = new CategoryWarning(this);
     mCategoryWarning->setObjectName(QStringLiteral("categorywarning"));
