@@ -48,9 +48,15 @@ void LoadGroupMenu::init()
     }
     QDir dir(groupPath);
     const QStringList groups = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+    if (groups.isEmpty()) {
+        setEnabled(false);
+        return;
+    }
     for (const QString &file : groups) {
-        //TODO add connect etc.
-        //TODO groupPath + file.
-        addAction(file);
+        QAction *act = addAction(file);
+        const QString fullPath = groupPath + QLatin1Char('/') + file;
+        connect(act, &QAction::triggered, this, [this, fullPath]{
+            Q_EMIT loadGroupRequested(fullPath);
+        });
     }
 }

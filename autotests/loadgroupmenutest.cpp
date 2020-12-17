@@ -21,6 +21,7 @@
 #include "loadgroupmenutest.h"
 #include "loadgroupmenu.h"
 #include <QTest>
+#include <QStandardPaths>
 QTEST_MAIN(LoadGroupMenuTest)
 LoadGroupMenuTest::LoadGroupMenuTest(QObject *parent)
     : QObject(parent)
@@ -31,5 +32,7 @@ LoadGroupMenuTest::LoadGroupMenuTest(QObject *parent)
 void LoadGroupMenuTest::shouldHaveDefaultValues()
 {
     LoadGroupMenu m;
+    QVERIFY(m.isEmpty());
+    QVERIFY(!m.isEnabled());
     //TODO
 }
