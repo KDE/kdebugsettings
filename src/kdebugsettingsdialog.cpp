@@ -26,11 +26,13 @@
 #include "categorywarning.h"
 #include "loadcategoriesjob.h"
 #include "saverulesjob.h"
+#include "loadgroupmenu.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KMessageBox>
+#include <QToolButton>
 
 #include <QFileDialog>
 #include <QDialogButtonBox>
@@ -75,10 +77,16 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
     connect(saveAs, &QPushButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
 
-    QPushButton *load = new QPushButton(i18n("Load..."), this);
+    QToolButton *load = new QToolButton(this);
+    load->setText(i18n("Load..."));
     load->setObjectName(QStringLiteral("load_button"));
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
-    connect(load, &QPushButton::clicked, this, &KDebugSettingsDialog::slotLoad);
+    connect(load, &QToolButton::clicked, this, &KDebugSettingsDialog::slotLoad);
+
+    LoadGroupMenu *loadMenu = new LoadGroupMenu(this);
+    loadMenu->setObjectName(QStringLiteral("loadMenu"));
+    connect(loadMenu, &LoadGroupMenu::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
+    load->setMenu(loadMenu);
 
     QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
     insertCategories->setObjectName(QStringLiteral("insert_button"));
@@ -115,6 +123,14 @@ void KDebugSettingsDialog::saveConfig()
     KConfigGroup group(KSharedConfig::openConfig(), QLatin1String(KDebugSettingsDialogGroupName));
     group.writeEntry("Size", size());
     group.sync();
+}
+
+void KDebugSettingsDialog::slotLoadGroup(const QString &fullPath)
+{
+    if (!fullPath.isEmpty()) {
+        mLoggings.readCategoriesFiles(fullPath);
+        updateLogginsCategories();
+    }
 }
 
 void KDebugSettingsDialog::readQtLoggingFile()

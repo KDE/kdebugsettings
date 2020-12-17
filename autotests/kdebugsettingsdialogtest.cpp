@@ -26,6 +26,7 @@
 #include <QTabWidget>
 #include <QStandardPaths>
 #include <QTest>
+#include <QToolButton>
 
 KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
     : QObject(parent)
@@ -54,8 +55,9 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     }
     auto *saveAs = buttonBox->findChild<QPushButton *>(QStringLiteral("saveas_button"));
     QVERIFY(saveAs);
-    auto *load = buttonBox->findChild<QPushButton *>(QStringLiteral("load_button"));
+    auto *load = buttonBox->findChild<QToolButton *>(QStringLiteral("load_button"));
     QVERIFY(load);
+    QVERIFY(load->menu());
     auto *insertCategories = buttonBox->findChild<QPushButton *>(QStringLiteral("insert_button"));
     QVERIFY(insertCategories);
     auto *categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));

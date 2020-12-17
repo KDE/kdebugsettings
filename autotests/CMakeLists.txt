@@ -1,7 +1,7 @@
 
 include_directories(${kdebugsettings_BINARY_DIR}/src ${kdebugsettings_BINARY_DIR})
 add_definitions( -DKDEBUGSETTINGS_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
-
+add_definitions( -DKDEBUGSETTINGS_BINARY_DATA_DIR="${CMAKE_CURRENT_BINARY_DIR}/data" )
 # convenience macro to add qtest unit tests
 macro(add_unittest _source _additionalsource)
     set(_test ${_source} ${_additionalsource})
