@@ -39,28 +39,28 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 {
     CustomDebugSettingsPage page;
 
-    auto *lab = page.findChild<QLabel *>(QStringLiteral("custom_label"));
+    auto lab = page.findChild<QLabel *>(QStringLiteral("custom_label"));
     QVERIFY(lab);
 
-    auto *listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
+    auto listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
     QVERIFY(listWidget);
     QCOMPARE(listWidget->selectionMode(), QAbstractItemView::MultiSelection);
     QCOMPARE(listWidget->count(), 0);
 
-    auto *searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
+    auto searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);
     QVERIFY(!searchLine->placeholderText().isEmpty());
     QCOMPARE(searchLine->listWidget(), listWidget);
 
-    auto *addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
+    auto addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
     QVERIFY(addButton);
     QVERIFY(addButton->isEnabled());
 
-    auto *editButton = page.findChild<QPushButton *>(QStringLiteral("edit_rule"));
+    auto editButton = page.findChild<QPushButton *>(QStringLiteral("edit_rule"));
     QVERIFY(editButton);
     QVERIFY(!editButton->isEnabled());
 
-    auto *removeButton = page.findChild<QPushButton *>(QStringLiteral("remove_rule"));
+    auto removeButton = page.findChild<QPushButton *>(QStringLiteral("remove_rule"));
     QVERIFY(removeButton);
     QVERIFY(!removeButton->isEnabled());
 }

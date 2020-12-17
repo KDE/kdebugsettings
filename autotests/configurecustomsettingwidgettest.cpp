@@ -39,20 +39,20 @@ ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest()
 void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
 {
     ConfigureCustomSettingWidget w;
-    auto *lab = w.findChild<QLabel *>(QStringLiteral("category_label"));
+    auto lab = w.findChild<QLabel *>(QStringLiteral("category_label"));
     QVERIFY(lab);
 
-    auto *categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
+    auto categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
     QVERIFY(categoryLineEdit);
     QVERIFY(categoryLineEdit->trapReturnKey());
     QVERIFY(categoryLineEdit->isClearButtonEnabled());
 
-    auto *enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
+    auto enableCategory = w.findChild<QCheckBox *>(QStringLiteral("enable_category"));
     QVERIFY(enableCategory);
 
     lab = w.findChild<QLabel *>(QStringLiteral("categorytype_label"));
     QVERIFY(lab);
-    auto *categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
+    auto categoryType = w.findChild<QComboBox *>(QStringLiteral("categorytype_combobox"));
     QVERIFY(categoryType);
     QCOMPARE(categoryType->count(), 4);
 }
@@ -79,7 +79,7 @@ void ConfigureCustomSettingWidgetTest::shouldRestoreRules()
 void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
 {
     ConfigureCustomSettingWidget w;
-    auto *categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
+    auto categoryLineEdit = w.findChild<KLineEdit *>(QStringLiteral("category_lineedit"));
     QVERIFY(categoryLineEdit);
     QSignalSpy spy(&w, &ConfigureCustomSettingWidget::enableButton);
     categoryLineEdit->setText(QStringLiteral("bla"));
