@@ -34,11 +34,9 @@
 
 #include <QFileDialog>
 #include <QDialogButtonBox>
-#include <QLibraryInfo>
 #include <QTabWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
-#include <QDir>
 #include <QDesktopServices>
 #include <QUrl>
 #include "kdebugsettings_debug.h"
