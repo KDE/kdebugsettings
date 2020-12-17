@@ -18,19 +18,19 @@
 
 */
 
-#ifndef LOADGROUPMENU_H
-#define LOADGROUPMENU_H
+#ifndef LOADGROUPMENUTEST_H
+#define LOADGROUPMENUTEST_H
 
-#include <QMenu>
-#include "libkdebugsettings_private_export.h"
-class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadGroupMenu : public QMenu
+#include <QObject>
+
+class LoadGroupMenuTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LoadGroupMenu(QWidget *parent = nullptr);
-    ~LoadGroupMenu() override;
-private:
-    void init();
+    explicit LoadGroupMenuTest(QObject *parent = nullptr);
+    ~LoadGroupMenuTest() override = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
-#endif // LOADGROUPMENU_H
+#endif // LOADGROUPMENUTEST_H
