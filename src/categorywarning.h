@@ -22,8 +22,8 @@
 #define CATEGORYWARNING_H
 
 #include <KMessageWidget>
-
-class CategoryWarning : public KMessageWidget
+#include "libkdebugsettings_private_export.h"
+class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT CategoryWarning : public KMessageWidget
 {
     Q_OBJECT
 public:

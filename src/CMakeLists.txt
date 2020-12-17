@@ -17,6 +17,16 @@ set(kdebugsettings_LIB_SRCS
     changedebugmodejob.cpp
     loadgroupmenu.cpp
 
+    kdebugsettingsdialog.cpp
+    customdebugsettingspage.cpp
+    kdeapplicationdebugsettingpage.cpp
+
+    configurecustomsettingdialog.cpp
+    configurecustomsettingwidget.cpp
+    environmentsettingsrulespage.cpp
+    kdeapplicationtreelistwidget.cpp
+    categorywarning.cpp
+
     ${kdebugsettings_debug_SRCS}
     )
 
@@ -29,6 +39,10 @@ target_link_libraries(libkdebugsettings
     Qt5::Core
     KF5::I18n
     Qt5::Widgets
+    KF5::WidgetsAddons
+    KF5::ItemViews
+    KF5::ConfigCore
+    KF5::Completion
 )
 
 set_target_properties(libkdebugsettings
@@ -40,16 +54,6 @@ install(TARGETS libkdebugsettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NA
 
 set(kdebugsettings_SRCS 
    main.cpp 
-   kdebugsettingsdialog.cpp
-   customdebugsettingspage.cpp
-   kdeapplicationdebugsettingpage.cpp
-
-   configurecustomsettingdialog.cpp
-   configurecustomsettingwidget.cpp
-   environmentsettingsrulespage.cpp
-   kdeapplicationtreelistwidget.cpp
-   categorywarning.cpp
-
    ${kdebugsettings_debug_SRCS}
    )
    
@@ -58,7 +62,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kdebugsettings PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons KF5::ConfigCore KF5::WidgetsAddons KF5::ItemViews KF5::Completion libkdebugsettings)
+target_link_libraries(kdebugsettings Qt5::Widgets KF5::I18n KF5::DBusAddons KF5::CoreAddons libkdebugsettings)
 
 install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

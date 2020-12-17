@@ -25,13 +25,14 @@
 #include "kdebugsettingsloadingcategories.h"
 #include "kdeloggingcategory.h"
 #include "renamecategory.h"
+#include "libkdebugsettings_export.h"
 class QTabWidget;
 class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
 class EnvironmentSettingsRulesPage;
 class CategoryWarning;
 
-class KDebugSettingsDialog : public QDialog
+class LIBKDEBUGSETTINGS_EXPORT KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:

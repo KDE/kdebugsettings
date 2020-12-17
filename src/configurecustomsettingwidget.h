@@ -22,10 +22,11 @@
 #define CONFIGURECUSTOMSETTINGWIDGET_H
 
 #include <QWidget>
+#include "libkdebugsettings_private_export.h"
 class KLineEdit;
 class QCheckBox;
 class CategoryTypeComboBox;
-class ConfigureCustomSettingWidget : public QWidget
+class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT ConfigureCustomSettingWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -22,8 +22,9 @@
 #define ENVIRONMENTSETTINGSRULESPAGE_H
 
 #include <QWidget>
+#include "libkdebugsettings_private_export.h"
 class EnvironmentPlainTextEdit;
-class EnvironmentSettingsRulesPage : public QWidget
+class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT EnvironmentSettingsRulesPage : public QWidget
 {
     Q_OBJECT
 public:

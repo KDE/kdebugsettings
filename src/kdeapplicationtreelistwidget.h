@@ -23,8 +23,9 @@
 
 #include <QTreeWidget>
 #include "loggingcategory.h"
+#include "libkdebugsettings_private_export.h"
 class CategoryTypeComboBox;
-class KDEApplicationTreeListWidgetItem : public QTreeWidgetItem
+class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KDEApplicationTreeListWidgetItem : public QTreeWidgetItem
 {
 public:
     enum ColumnType {
@@ -49,12 +50,12 @@ private:
     CategoryTypeComboBox *mCategoryTypeCombobox = nullptr;
 };
 
-class KDEApplicationTreeListWidget : public QTreeWidget
+class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KDEApplicationTreeListWidget : public QTreeWidget
 {
     Q_OBJECT
 public:
     explicit KDEApplicationTreeListWidget(QWidget *parent = nullptr);
-    ~KDEApplicationTreeListWidget();
+    ~KDEApplicationTreeListWidget() override;
 
     void deSelectAllDebugCategories();
     void selectAllDebugCategories();

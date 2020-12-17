@@ -23,10 +23,11 @@
 
 #include <QWidget>
 #include "loggingcategory.h"
+#include "libkdebugsettings_export.h"
 class QPushButton;
 class KDEApplicationTreeListWidget;
 class KTreeWidgetSearchLine;
-class KDEApplicationDebugSettingPage : public QWidget
+class LIBKDEBUGSETTINGS_EXPORT KDEApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
 public:

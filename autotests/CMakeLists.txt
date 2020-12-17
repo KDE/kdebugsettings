@@ -2,21 +2,9 @@
 include_directories(${kdebugsettings_BINARY_DIR}/src ${kdebugsettings_BINARY_DIR})
 add_definitions( -DKDEBUGSETTINGS_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 
-set(full_source_file
-    ../src/kdebugsettingsdialog.cpp
-    ../src/customdebugsettingspage.cpp
-    ../src/kdeapplicationdebugsettingpage.cpp
-    ../src/configurecustomsettingdialog.cpp
-    ../src/configurecustomsettingwidget.cpp
-    ../src/environmentsettingsrulespage.cpp
-    ../src/kdeapplicationtreelistwidget.cpp
-    ../src/categorywarning.cpp
-    ${CMAKE_BINARY_DIR}/src/kdebugsettings_debug.cpp
-    )
-
 # convenience macro to add qtest unit tests
 macro(add_unittest _source _additionalsource)
-    set(_test ${_source} ${_additionalsource} "../src/kdebugsettings_debug.cpp")
+    set(_test ${_source} ${_additionalsource})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )
@@ -33,16 +21,16 @@ macro(add_unittest _source _additionalsource)
         )
 endmacro ()
 
-add_unittest( kdebugsettingsdialogtest.cpp "${full_source_file}")
-add_unittest( kdeapplicationdebugsettingpagetest.cpp "../src/kdeapplicationdebugsettingpage.cpp;../src/kdeapplicationtreelistwidget.cpp")
-add_unittest( customdebugsettingspagetest.cpp "../src/customdebugsettingspage.cpp;../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp")
-add_unittest( configurecustomsettingdialogtest.cpp "../src/configurecustomsettingdialog.cpp;../src/configurecustomsettingwidget.cpp")
-add_unittest( configurecustomsettingwidgettest.cpp "../src/configurecustomsettingwidget.cpp")
-add_unittest( environmentsettingsrulespagetest.cpp "../src/environmentsettingsrulespage.cpp")
+add_unittest( kdebugsettingsdialogtest.cpp "")
+add_unittest( kdeapplicationdebugsettingpagetest.cpp "")
+add_unittest( customdebugsettingspagetest.cpp "")
+add_unittest( configurecustomsettingdialogtest.cpp "")
+add_unittest( configurecustomsettingwidgettest.cpp "")
+add_unittest( environmentsettingsrulespagetest.cpp "")
 add_unittest( kdebugsettingutiltest.cpp "")
 add_unittest( categorytypecomboboxtest.cpp "")
-add_unittest( kdeapplicationtreelistwidgettest.cpp "../src/kdeapplicationtreelistwidget.cpp")
-add_unittest( categorywarningtest.cpp "../src/categorywarning.cpp")
+add_unittest( kdeapplicationtreelistwidgettest.cpp "")
+add_unittest( categorywarningtest.cpp "")
 add_unittest( loggingcategorytest.cpp "")
 add_unittest( loadcategoriesjobtest.cpp "")
 add_unittest( renamecategorytest.cpp "")

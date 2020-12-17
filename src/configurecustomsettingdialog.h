@@ -23,8 +23,10 @@
 
 #include <QDialog>
 #include "kdebugsettingsdialog.h"
+#include "libkdebugsettings_export.h"
+
 class ConfigureCustomSettingWidget;
-class ConfigureCustomSettingDialog : public QDialog
+class LIBKDEBUGSETTINGS_EXPORT ConfigureCustomSettingDialog : public QDialog
 {
     Q_OBJECT
 public:

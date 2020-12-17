@@ -23,9 +23,10 @@
 
 #include <QWidget>
 #include "loggingcategory.h"
+#include "libkdebugsettings_export.h"
 class QListWidget;
 class QPushButton;
-class CustomDebugSettingsPage : public QWidget
+class LIBKDEBUGSETTINGS_EXPORT CustomDebugSettingsPage : public QWidget
 {
     Q_OBJECT
 public:

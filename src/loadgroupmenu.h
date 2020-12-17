@@ -29,6 +29,8 @@ class LoadGroupMenu : public QMenu
 public:
     explicit LoadGroupMenu(QWidget *parent);
     ~LoadGroupMenu() override;
+private:
+    void init();
 };
 
 #endif // LOADGROUPMENU_H
