@@ -23,8 +23,14 @@
 LoadGroupMenu::LoadGroupMenu(QWidget *parent)
     : QMenu(parent)
 {
+    init();
 }
 
 LoadGroupMenu::~LoadGroupMenu()
 {
+}
+
+void LoadGroupMenu::init()
+{
+
 }
