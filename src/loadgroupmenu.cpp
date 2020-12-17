@@ -20,6 +20,9 @@
 
 #include "loadgroupmenu.h"
 
+#include <QDir>
+#include <QStandardPaths>
+
 LoadGroupMenu::LoadGroupMenu(QWidget *parent)
     : QMenu(parent)
 {
@@ -30,7 +33,24 @@ LoadGroupMenu::~LoadGroupMenu()
 {
 }
 
+void LoadGroupMenu::refreshMenu()
+{
+    clear();
+    init();
+}
+
 void LoadGroupMenu::init()
 {
-
+    const QString groupPath = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/groups");
+    if (groupPath.isEmpty()) {
+        setEnabled(false);
+        return;
+    }
+    QDir dir(groupPath);
+    const QStringList groups = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+    for (const QString &file : groups) {
+        //TODO add connect etc.
+        //TODO groupPath + file.
+        addAction(file);
+    }
 }

@@ -29,6 +29,12 @@ class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadGroupMenu : public QMenu
 public:
     explicit LoadGroupMenu(QWidget *parent = nullptr);
     ~LoadGroupMenu() override;
+
+    void refreshMenu();
+
+Q_SIGNALS:
+    void loadGroupRequested(const QString &filePath);
+
 private:
     void init();
 };
