@@ -7,7 +7,7 @@ cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.13.0")
-set(KF5_MIN_VERSION "5.70.0")
+set(KF5_MIN_VERSION "5.76.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 
