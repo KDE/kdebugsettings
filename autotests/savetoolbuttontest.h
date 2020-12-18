@@ -18,21 +18,19 @@
 
 */
 
-#include "loadtoolbuttontest.h"
-#include "loadtoolbutton.h"
-#include <QTest>
-QTEST_MAIN(LoadToolButtonTest)
-LoadToolButtonTest::LoadToolButtonTest(QObject *parent)
-    : QObject(parent)
+#ifndef SAVETOOLBUTTONTEST_H
+#define SAVETOOLBUTTONTEST_H
+
+#include <QObject>
+
+class SaveToolButtonTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit SaveToolButtonTest(QObject *parent = nullptr);
+    ~SaveToolButtonTest() override = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
+};
 
-}
-
-void LoadToolButtonTest::shouldHaveDefaultValues()
-{
-    LoadToolButton w;
-    QVERIFY(w.menu());
-    QVERIFY(!w.text().isEmpty());
-
-    //TODO
-}
+#endif // SAVETOOLBUTTONTEST_H
