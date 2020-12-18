@@ -33,6 +33,5 @@ void LoadToolButtonTest::shouldHaveDefaultValues()
     LoadToolButton w;
     QVERIFY(w.menu());
     QVERIFY(!w.text().isEmpty());
-
-    //TODO
+    QCOMPARE(w.popupMode(), QToolButton::InstantPopup);
 }
