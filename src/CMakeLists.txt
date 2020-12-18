@@ -27,6 +27,7 @@ set(kdebugsettings_LIB_SRCS
     kdeapplicationtreelistwidget.cpp
     categorywarning.cpp
     loadtoolbutton.cpp
+    savetoolbutton.cpp
 
     ${kdebugsettings_debug_SRCS}
     )
