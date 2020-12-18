@@ -34,5 +34,5 @@ void LoadGroupMenuTest::shouldHaveDefaultValues()
     LoadGroupMenu m;
     QVERIFY(m.isEmpty());
     QVERIFY(!m.isEnabled());
-    //TODO
+    QVERIFY(!m.title().isEmpty());
 }

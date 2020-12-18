@@ -20,12 +20,15 @@
 
 #include "loadgroupmenu.h"
 
+#include <KLocalizedString>
+
 #include <QDir>
 #include <QStandardPaths>
 
 LoadGroupMenu::LoadGroupMenu(QWidget *parent)
     : QMenu(parent)
 {
+    setTitle(i18n("Load Group"));
     init();
 }
 

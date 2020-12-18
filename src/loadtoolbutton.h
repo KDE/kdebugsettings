@@ -32,6 +32,7 @@ public:
     ~LoadToolButton() override;
 Q_SIGNALS:
     void loadGroupRequested(const QString &fullPath);
+    void loadFromFile();
 };
 
 #endif // LOADTOOLBUTTON_H
