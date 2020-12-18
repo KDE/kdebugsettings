@@ -36,6 +36,7 @@ public:
 
 Q_SIGNALS:
     void loadGroupRequested(const QString &filePath);
+    void manageGroupRequested();
 
 private:
     void init();

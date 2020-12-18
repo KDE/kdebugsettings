@@ -36,6 +36,7 @@ LoadToolButton::LoadToolButton(QWidget *parent)
 
     mLoadMenu->setObjectName(QStringLiteral("loadMenu"));
     connect(mLoadMenu, &LoadGroupMenu::loadGroupRequested, this, &LoadToolButton::loadGroupRequested);
+    connect(mLoadMenu, &LoadGroupMenu::manageGroupRequested, this, &LoadToolButton::manageGroupRequested);
     mainMenu->addMenu(mLoadMenu);
 }
 

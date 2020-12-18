@@ -67,4 +67,7 @@ void LoadGroupMenu::init()
             Q_EMIT loadGroupRequested(fullPath);
         });
     }
+    addSeparator();
+    QAction *manageGroup = addAction(i18n("Manage Group"));
+    connect(manageGroup, &QAction::triggered, this, &LoadGroupMenu::manageGroupRequested);
 }

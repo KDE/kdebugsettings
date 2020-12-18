@@ -87,6 +87,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
     connect(load, &LoadToolButton::loadFromFile, this, &KDebugSettingsDialog::slotLoad);
     connect(load, &LoadToolButton::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
+    connect(load, &LoadToolButton::manageGroupRequested, this, &KDebugSettingsDialog::slotManageGroup);
     connect(this, &KDebugSettingsDialog::updateLoadGroupMenu, load, &LoadToolButton::updateLoadGroupMenu);
 
     QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
@@ -241,4 +242,9 @@ void KDebugSettingsDialog::slotLoad()
 void KDebugSettingsDialog::slotRestoreDefault()
 {
     mKdeApplicationSettingsPage->restoreToDefault();
+}
+
+void KDebugSettingsDialog::slotManageGroup()
+{
+    //TODO
 }
