@@ -28,6 +28,8 @@
 #include "saverulesjob.h"
 #include "loadtoolbutton.h"
 #include "savetoolbutton.h"
+#include "loadgroupmenu.h"
+#include "kdebugsettings_debug.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -42,7 +44,7 @@
 #include <QPushButton>
 #include <QDesktopServices>
 #include <QUrl>
-#include "kdebugsettings_debug.h"
+#include <QInputDialog>
 namespace {
 constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
 }
@@ -85,6 +87,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
     connect(load, &LoadToolButton::loadFromFile, this, &KDebugSettingsDialog::slotLoad);
     connect(load, &LoadToolButton::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
+    connect(this, &KDebugSettingsDialog::updateLoadGroupMenu, load, &LoadToolButton::updateLoadGroupMenu);
 
     QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
     insertCategories->setObjectName(QStringLiteral("insert_button"));
@@ -210,7 +213,12 @@ void KDebugSettingsDialog::slotInsertCategories()
 
 void KDebugSettingsDialog::slotSaveAsGroup()
 {
-    //TODO
+    const QString groupPath = LoadGroupMenu::defaultGroupPath();
+    const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name"));
+    if (!name.isEmpty()) {
+        saveRules(groupPath + QLatin1Char('/') + name, true);
+        Q_EMIT updateLoadGroupMenu();
+    }
 }
 
 void KDebugSettingsDialog::slotSaveAs()

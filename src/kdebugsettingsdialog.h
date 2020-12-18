@@ -39,6 +39,9 @@ public:
     explicit KDebugSettingsDialog(QWidget *parent = nullptr);
     ~KDebugSettingsDialog() override;
 
+Q_SIGNALS:
+    void updateLoadGroupMenu();
+
 private:
     void slotAccepted();
     void slotHelpRequested();

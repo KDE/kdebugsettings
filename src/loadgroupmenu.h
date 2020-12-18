@@ -32,6 +32,8 @@ public:
 
     void refreshMenu();
 
+    static Q_REQUIRED_RESULT QString defaultGroupPath();
+
 Q_SIGNALS:
     void loadGroupRequested(const QString &filePath);
 

@@ -24,15 +24,20 @@
 #include <QToolButton>
 
 #include "libkdebugsettings_private_export.h"
+class LoadGroupMenu;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadToolButton : public QToolButton
 {
     Q_OBJECT
 public:
     explicit LoadToolButton(QWidget *parent = nullptr);
     ~LoadToolButton() override;
+
+    void updateLoadGroupMenu();
 Q_SIGNALS:
     void loadGroupRequested(const QString &fullPath);
     void loadFromFile();
+private:
+    LoadGroupMenu *const mLoadMenu;
 };
 
 #endif // LOADTOOLBUTTON_H
