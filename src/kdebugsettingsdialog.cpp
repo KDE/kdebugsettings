@@ -26,7 +26,7 @@
 #include "categorywarning.h"
 #include "loadcategoriesjob.h"
 #include "saverulesjob.h"
-#include "loadgroupmenu.h"
+#include "loadtoolbutton.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -78,16 +78,12 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
     connect(saveAs, &QToolButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
 
-    QToolButton *load = new QToolButton(this);
-    load->setText(i18n("Load..."));
+
+    LoadToolButton *load = new LoadToolButton(this);
     load->setObjectName(QStringLiteral("load_button"));
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
     connect(load, &QToolButton::clicked, this, &KDebugSettingsDialog::slotLoad);
-
-    LoadGroupMenu *loadMenu = new LoadGroupMenu(this);
-    loadMenu->setObjectName(QStringLiteral("loadMenu"));
-    connect(loadMenu, &LoadGroupMenu::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
-    load->setMenu(loadMenu);
+    connect(load, &LoadToolButton::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
 
     QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
     insertCategories->setObjectName(QStringLiteral("insert_button"));

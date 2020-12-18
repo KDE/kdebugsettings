@@ -19,8 +19,9 @@
 */
 
 #include "kdebugsettingsdialogtest.h"
-#include "../src/kdebugsettingsdialog.h"
-#include "../src/categorywarning.h"
+#include "kdebugsettingsdialog.h"
+#include "categorywarning.h"
+#include "loadtoolbutton.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTabWidget>
@@ -55,7 +56,7 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     }
     auto saveAs = buttonBox->findChild<QToolButton *>(QStringLiteral("saveas_button"));
     QVERIFY(saveAs);
-    auto load = buttonBox->findChild<QToolButton *>(QStringLiteral("load_button"));
+    auto load = buttonBox->findChild<LoadToolButton *>(QStringLiteral("load_button"));
     QVERIFY(load);
     QVERIFY(load->menu());
     auto insertCategories = buttonBox->findChild<QPushButton *>(QStringLiteral("insert_button"));
