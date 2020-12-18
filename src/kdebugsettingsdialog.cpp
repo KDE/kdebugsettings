@@ -130,17 +130,17 @@ void KDebugSettingsDialog::slotLoadGroup(const QString &fullPath)
 {
     if (!fullPath.isEmpty()) {
         mLoggings.readCategoriesFiles(fullPath);
-        updateLogginsCategories();
+        updateLoggingCategories();
     }
 }
 
 void KDebugSettingsDialog::readQtLoggingFile()
 {
     mLoggings.readQtLoggingFile();
-    updateLogginsCategories();
+    updateLoggingCategories();
 }
 
-void KDebugSettingsDialog::updateLogginsCategories()
+void KDebugSettingsDialog::updateLoggingCategories()
 {
     if (!mLoggings.environmentrules().isEmpty()) {
         mEnvironmentSettingsRulesPage->setRules(mLoggings.environmentrules());
@@ -234,7 +234,7 @@ void KDebugSettingsDialog::slotLoad()
     const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
     if (!path.isEmpty()) {
         mLoggings.readCategoriesFiles(path);
-        updateLogginsCategories();
+        updateLoggingCategories();
     }
 }
 

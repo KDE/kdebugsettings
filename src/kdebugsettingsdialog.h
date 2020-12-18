@@ -56,7 +56,7 @@ private:
     bool saveInQtLogging();
     void saveConfig();
     void readConfig();
-    void updateLogginsCategories();
+    void updateLoggingCategories();
     void slotLoadGroup(const QString &fullPath);
     void slotSaveAsGroup();
     KdeLoggingCategory::List mCategoriesList;
