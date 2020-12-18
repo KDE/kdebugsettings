@@ -77,7 +77,8 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     saveAs->setText(i18n("Save As..."));
     saveAs->setObjectName(QStringLiteral("saveas_button"));
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
-    connect(saveAs, &SaveToolButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
+    connect(saveAs, &SaveToolButton::saveAsFile, this, &KDebugSettingsDialog::slotSaveAs);
+    connect(saveAs, &SaveToolButton::saveAsGroup, this, &KDebugSettingsDialog::slotSaveAsGroup);
 
     LoadToolButton *load = new LoadToolButton(this);
     load->setObjectName(QStringLiteral("load_button"));
@@ -205,6 +206,11 @@ void KDebugSettingsDialog::slotInsertCategories()
         }
         mKdeApplicationSettingsPage->insertCategories(newCategories);
     }
+}
+
+void KDebugSettingsDialog::slotSaveAsGroup()
+{
+    //TODO
 }
 
 void KDebugSettingsDialog::slotSaveAs()

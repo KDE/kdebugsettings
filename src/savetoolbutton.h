@@ -30,6 +30,9 @@ class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT SaveToolButton : public QToolButton
 public:
     explicit SaveToolButton(QWidget *parent = nullptr);
     ~SaveToolButton() override;
+Q_SIGNALS:
+    void saveAsFile();
+    void saveAsGroup();
 };
 
 #endif // SAVETOOLBUTTON_H

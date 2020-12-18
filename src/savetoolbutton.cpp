@@ -19,12 +19,22 @@
 */
 #include "savetoolbutton.h"
 #include <KLocalizedString>
+#include <QAction>
+#include <QMenu>
 
 SaveToolButton::SaveToolButton(QWidget *parent)
     : QToolButton(parent)
 {
     setText(i18n("Save As..."));
-    //TODO
+    setPopupMode(QToolButton::InstantPopup);
+    QMenu *mainMenu = new QMenu(this);
+    setMenu(mainMenu);
+
+    QAction *act = mainMenu->addAction(i18n("Save As File..."));
+    connect(act, &QAction::triggered, this, &SaveToolButton::saveAsFile);
+
+    QAction *actGroup = mainMenu->addAction(i18n("Save As Group..."));
+    connect(actGroup, &QAction::triggered, this, &SaveToolButton::saveAsGroup);
 }
 
 SaveToolButton::~SaveToolButton()

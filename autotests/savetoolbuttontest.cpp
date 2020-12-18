@@ -30,5 +30,8 @@ SaveToolButtonTest::SaveToolButtonTest(QObject *parent)
 
 void  SaveToolButtonTest::shouldHaveDefaultValues()
 {
-    //TODO
+    SaveToolButton w;
+    QVERIFY(w.menu());
+    QVERIFY(!w.text().isEmpty());
+    QCOMPARE(w.popupMode(), QToolButton::InstantPopup);
 }

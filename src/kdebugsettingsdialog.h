@@ -55,6 +55,7 @@ private:
     void readConfig();
     void updateLogginsCategories();
     void slotLoadGroup(const QString &fullPath);
+    void slotSaveAsGroup();
     KdeLoggingCategory::List mCategoriesList;
     KDebugSettingsLoadingCategories mLoggings;
     QTabWidget *mTabWidget = nullptr;
