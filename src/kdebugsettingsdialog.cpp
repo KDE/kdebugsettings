@@ -79,11 +79,10 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
     connect(saveAs, &SaveToolButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
 
-
     LoadToolButton *load = new LoadToolButton(this);
     load->setObjectName(QStringLiteral("load_button"));
     buttonBox->addButton(load, QDialogButtonBox::ActionRole);
-    connect(load, &QToolButton::clicked, this, &KDebugSettingsDialog::slotLoad);
+    connect(load, &LoadToolButton::clicked, this, &KDebugSettingsDialog::slotLoad);
     connect(load, &LoadToolButton::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
 
     QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
