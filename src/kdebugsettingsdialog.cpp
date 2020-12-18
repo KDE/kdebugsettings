@@ -27,6 +27,7 @@
 #include "loadcategoriesjob.h"
 #include "saverulesjob.h"
 #include "loadtoolbutton.h"
+#include "savetoolbutton.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -72,11 +73,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
-    QToolButton *saveAs = new QToolButton(this);
+    SaveToolButton *saveAs = new SaveToolButton(this);
     saveAs->setText(i18n("Save As..."));
     saveAs->setObjectName(QStringLiteral("saveas_button"));
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
-    connect(saveAs, &QToolButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
+    connect(saveAs, &SaveToolButton::clicked, this, &KDebugSettingsDialog::slotSaveAs);
 
 
     LoadToolButton *load = new LoadToolButton(this);

@@ -18,10 +18,12 @@
 
 */
 #include "savetoolbutton.h"
+#include <KLocalizedString>
 
 SaveToolButton::SaveToolButton(QWidget *parent)
     : QToolButton(parent)
 {
+    setText(i18n("Save As..."));
     //TODO
 }
 

@@ -22,6 +22,7 @@
 #include "kdebugsettingsdialog.h"
 #include "categorywarning.h"
 #include "loadtoolbutton.h"
+#include "savetoolbutton.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTabWidget>
@@ -54,7 +55,7 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
                                     || (objName == QLatin1String("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
-    auto saveAs = buttonBox->findChild<QToolButton *>(QStringLiteral("saveas_button"));
+    auto saveAs = buttonBox->findChild<SaveToolButton *>(QStringLiteral("saveas_button"));
     QVERIFY(saveAs);
     auto load = buttonBox->findChild<LoadToolButton *>(QStringLiteral("load_button"));
     QVERIFY(load);
