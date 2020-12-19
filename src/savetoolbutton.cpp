@@ -39,5 +39,4 @@ SaveToolButton::SaveToolButton(QWidget *parent)
 
 SaveToolButton::~SaveToolButton()
 {
-
 }

@@ -25,7 +25,6 @@ QTEST_MAIN(LoadToolButtonTest)
 LoadToolButtonTest::LoadToolButtonTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LoadToolButtonTest::shouldHaveDefaultValues()

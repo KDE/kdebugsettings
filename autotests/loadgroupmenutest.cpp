@@ -26,7 +26,6 @@ QTEST_MAIN(LoadGroupMenuTest)
 LoadGroupMenuTest::LoadGroupMenuTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LoadGroupMenuTest::shouldHaveDefaultValues()

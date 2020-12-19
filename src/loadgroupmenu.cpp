@@ -63,7 +63,7 @@ void LoadGroupMenu::init()
     for (const QString &file : groups) {
         QAction *act = addAction(file);
         const QString fullPath = groupPath + QLatin1Char('/') + file;
-        connect(act, &QAction::triggered, this, [this, fullPath]{
+        connect(act, &QAction::triggered, this, [this, fullPath] {
             Q_EMIT loadGroupRequested(fullPath);
         });
     }

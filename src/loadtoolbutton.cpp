@@ -42,7 +42,6 @@ LoadToolButton::LoadToolButton(QWidget *parent)
 
 LoadToolButton::~LoadToolButton()
 {
-
 }
 
 void LoadToolButton::updateLoadGroupMenu()

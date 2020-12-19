@@ -25,10 +25,9 @@ QTEST_MAIN(SaveToolButtonTest)
 SaveToolButtonTest::SaveToolButtonTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
-void  SaveToolButtonTest::shouldHaveDefaultValues()
+void SaveToolButtonTest::shouldHaveDefaultValues()
 {
     SaveToolButton w;
     QVERIFY(w.menu());
