@@ -28,6 +28,8 @@ set(kdebugsettings_LIB_SRCS
     categorywarning.cpp
     loadtoolbutton.cpp
     savetoolbutton.cpp
+    groupmanagementdialog.cpp
+    groupmanagementwidget.cpp
 
     ${kdebugsettings_debug_SRCS}
     )
