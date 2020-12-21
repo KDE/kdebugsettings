@@ -21,6 +21,7 @@
 #include "groupmanagementwidgettest.h"
 #include "groupmanagementwidget.h"
 #include <QTest>
+#include <QVBoxLayout>
 
 QTEST_MAIN(GroupManagementWidgetTest)
 GroupManagementWidgetTest::GroupManagementWidgetTest(QObject *parent)
@@ -32,5 +33,7 @@ GroupManagementWidgetTest::GroupManagementWidgetTest(QObject *parent)
 void GroupManagementWidgetTest::shouldHaveDefaultValues()
 {
     GroupManagementWidget w;
-    //TODO
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), {});
 }

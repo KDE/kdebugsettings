@@ -19,11 +19,14 @@
 */
 
 #include "groupmanagementwidget.h"
-
+#include <KLocalizedString>
+#include <QVBoxLayout>
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     : QWidget(parent)
 {
-
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins({});
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 }
 
 GroupManagementWidget::~GroupManagementWidget()
