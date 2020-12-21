@@ -24,12 +24,16 @@
 #include <QWidget>
 
 #include "libkdebugsettings_private_export.h"
+class QListView;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT GroupManagementWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit GroupManagementWidget(QWidget *parent = nullptr);
     ~GroupManagementWidget() override;
+private:
+    void init();
+    QListView *const mListView;
 };
 
 #endif // GROUPMANAGEMENTWIDGET_H

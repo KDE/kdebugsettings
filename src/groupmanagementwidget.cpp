@@ -20,16 +20,27 @@
 
 #include "groupmanagementwidget.h"
 #include <KLocalizedString>
+#include <QListView>
 #include <QVBoxLayout>
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     : QWidget(parent)
+    , mListView(new QListView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
+
+    mListView->setObjectName(QStringLiteral("mListView"));
+    mainLayout->addWidget(mListView);
+    init();
 }
 
 GroupManagementWidget::~GroupManagementWidget()
 {
 
+}
+
+void GroupManagementWidget::init()
+{
+    //TODO
 }
