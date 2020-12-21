@@ -19,11 +19,22 @@
 */
 
 #include "groupmanagementdialog.h"
+#include "groupmanagementwidget.h"
+
+#include <QVBoxLayout>
+#include <QDialogButtonBox>
 
 GroupManagementDialog::GroupManagementDialog(QWidget *parent)
     : QDialog(parent)
+    , mGroupManagementWidget(new GroupManagementWidget(this))
 {
-
+    mGroupManagementWidget->setObjectName(QStringLiteral("mGroupManagementWidget"));
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &GroupManagementDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &GroupManagementDialog::reject);
 }
 
 GroupManagementDialog::~GroupManagementDialog()

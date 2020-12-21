@@ -24,12 +24,15 @@
 #include <QDialog>
 
 #include "libkdebugsettings_private_export.h"
+class GroupManagementWidget;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT GroupManagementDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit GroupManagementDialog(QWidget *parent = nullptr);
     ~GroupManagementDialog() override;
+private:
+    GroupManagementWidget *const mGroupManagementWidget;
 };
 
 #endif // GROUPMANAGEMENTDIALOG_H
