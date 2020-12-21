@@ -20,16 +20,28 @@
 
 #include "groupmanagementdialogtest.h"
 #include "groupmanagementdialog.h"
+#include "groupmanagementwidget.h"
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
+#include <QStandardPaths>
 QTEST_MAIN(GroupManagementDialogTest)
 GroupManagementDialogTest::GroupManagementDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GroupManagementDialogTest::shouldHaveDefaultValues()
 {
     GroupManagementDialog w;
-    //TODO
+    QVERIFY(!w.windowTitle().isEmpty());
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+
+    auto mGroupManagementWidget = w.findChild<GroupManagementWidget *>(QStringLiteral("mGroupManagementWidget"));
+    QVERIFY(mGroupManagementWidget);
+
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
 }

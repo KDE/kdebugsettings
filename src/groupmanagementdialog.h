@@ -32,6 +32,8 @@ public:
     explicit GroupManagementDialog(QWidget *parent = nullptr);
     ~GroupManagementDialog() override;
 private:
+    void writeConfig();
+    void readConfig();
     GroupManagementWidget *const mGroupManagementWidget;
 };
 
