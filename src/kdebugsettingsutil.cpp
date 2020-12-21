@@ -224,7 +224,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
                         needToAppend = false;
                         break;
                     } else if (cat.categoryName == category.categoryName) {
-                        qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: categorie:" << cat.categoryName << " filename : "<< filename;
+                        qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : "<< filename;
                         needToAppend = false;
                     }
                 }
@@ -258,7 +258,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
                             needToAppend = false;
                             break;
                         } else if (cat.categoryName == category.categoryName) {
-                            qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: categorie:" << cat.categoryName << " filename : "<< filename;
+                            qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : "<< filename;
                             needToAppend = false;
                         }
                     }
