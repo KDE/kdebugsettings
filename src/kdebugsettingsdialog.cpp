@@ -30,6 +30,7 @@
 #include "savetoolbutton.h"
 #include "loadgroupmenu.h"
 #include "kdebugsettings_debug.h"
+#include "groupmanagementdialog.h"
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -246,5 +247,7 @@ void KDebugSettingsDialog::slotRestoreDefault()
 
 void KDebugSettingsDialog::slotManageGroup()
 {
-    //TODO
+    auto groupManagementDialog = new GroupManagementDialog(this);
+    groupManagementDialog->exec();
+    delete groupManagementDialog;
 }
