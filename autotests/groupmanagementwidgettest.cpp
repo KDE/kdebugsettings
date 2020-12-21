@@ -40,4 +40,5 @@ void GroupManagementWidgetTest::shouldHaveDefaultValues()
 
     auto mListView = w.findChild<QListView *>(QStringLiteral("mListView"));
     QVERIFY(mListView);
+    QCOMPARE(mListView->selectionMode(), QAbstractItemView::MultiSelection);
 }

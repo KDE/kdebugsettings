@@ -32,6 +32,7 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
 
     mListView->setObjectName(QStringLiteral("mListView"));
     mainLayout->addWidget(mListView);
+    mListView->setSelectionMode(QAbstractItemView::MultiSelection);
     init();
 }
 
