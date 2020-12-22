@@ -46,6 +46,7 @@ GroupManagementDialog::GroupManagementDialog(QWidget *parent)
     mainLayout->addWidget(mGroupManagementWidget);
     mainLayout->addWidget(buttonBox);
     readConfig();
+    connect(mGroupManagementWidget, &GroupManagementWidget::groupsChanged, this, &GroupManagementDialog::groupsChanged);
 }
 
 GroupManagementDialog::~GroupManagementDialog()

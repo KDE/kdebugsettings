@@ -20,10 +20,14 @@
 
 #include "groupmanagementwidget.h"
 #include "loadgroupmenu.h"
+
 #include <KLocalizedString>
+#include <KMessageBox>
+
 #include <QDir>
 #include <QListWidget>
 #include <QVBoxLayout>
+
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     : QWidget(parent)
     , mListWidget(new QListWidget(this))
@@ -35,12 +39,34 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     mListWidget->setObjectName(QStringLiteral("mListWidget"));
     mainLayout->addWidget(mListWidget);
     mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
+    mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(mListWidget, &QListWidget::customContextMenuRequested, this, &GroupManagementWidget::slotCustomContextMenu);
     init();
 }
 
 GroupManagementWidget::~GroupManagementWidget()
 {
 
+}
+
+void GroupManagementWidget::slotCustomContextMenu()
+{
+    const auto items = mListWidget->selectedItems();
+    if (!items.isEmpty()) {
+        QMenu menu(this);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Groups"), this, [this, items]() {
+            for (auto item : items) {
+                const QString fullPath = item->data(FullPathRole).toString();
+                QFile f(fullPath);
+                if (!f.remove()) {
+                    KMessageBox::error(this, i18n("Impossible to remove \'%1\'", fullPath), i18n("Remove Group"));
+                }
+                delete item;
+            }
+        });
+        menu.exec(QCursor::pos());
+        Q_EMIT groupsChanged();
+    }
 }
 
 void GroupManagementWidget::init()

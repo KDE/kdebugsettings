@@ -31,6 +31,13 @@ class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT GroupManagementWidget : public QWidge
 public:
     explicit GroupManagementWidget(QWidget *parent = nullptr);
     ~GroupManagementWidget() override;
+
+private Q_SLOTS:
+    void slotCustomContextMenu();
+
+Q_SIGNALS:
+    void groupsChanged();
+
 private:
     enum {
         FullPathRole = Qt::UserRole + 1

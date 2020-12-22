@@ -248,6 +248,7 @@ void KDebugSettingsDialog::slotRestoreDefault()
 void KDebugSettingsDialog::slotManageGroup()
 {
     auto groupManagementDialog = new GroupManagementDialog(this);
+    connect(groupManagementDialog, &GroupManagementDialog::groupsChanged, this, &KDebugSettingsDialog::updateLoadGroupMenu);
     groupManagementDialog->exec();
     delete groupManagementDialog;
 }

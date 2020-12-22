@@ -31,6 +31,10 @@ class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT GroupManagementDialog : public QDialo
 public:
     explicit GroupManagementDialog(QWidget *parent = nullptr);
     ~GroupManagementDialog() override;
+
+Q_SIGNALS:
+    void groupsChanged();
+
 private:
     void writeConfig();
     void readConfig();
