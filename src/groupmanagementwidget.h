@@ -24,7 +24,7 @@
 #include <QWidget>
 
 #include "libkdebugsettings_private_export.h"
-class QListView;
+class QListWidget;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT GroupManagementWidget : public QWidget
 {
     Q_OBJECT
@@ -32,8 +32,11 @@ public:
     explicit GroupManagementWidget(QWidget *parent = nullptr);
     ~GroupManagementWidget() override;
 private:
+    enum {
+        FullPathRole = Qt::UserRole + 1
+    };
     void init();
-    QListView *const mListView;
+    QListWidget *const mListWidget;
 };
 
 #endif // GROUPMANAGEMENTWIDGET_H

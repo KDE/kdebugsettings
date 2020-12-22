@@ -20,7 +20,7 @@
 
 #include "groupmanagementwidgettest.h"
 #include "groupmanagementwidget.h"
-#include <QListView>
+#include <QListWidget>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -38,7 +38,7 @@ void GroupManagementWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), {});
 
-    auto mListView = w.findChild<QListView *>(QStringLiteral("mListView"));
-    QVERIFY(mListView);
-    QCOMPARE(mListView->selectionMode(), QAbstractItemView::MultiSelection);
+    auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("mListWidget"));
+    QVERIFY(mListWidget);
+    QCOMPARE(mListWidget->selectionMode(), QAbstractItemView::MultiSelection);
 }

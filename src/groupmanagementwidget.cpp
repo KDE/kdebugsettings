@@ -19,20 +19,22 @@
 */
 
 #include "groupmanagementwidget.h"
+#include "loadgroupmenu.h"
 #include <KLocalizedString>
-#include <QListView>
+#include <QDir>
+#include <QListWidget>
 #include <QVBoxLayout>
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     : QWidget(parent)
-    , mListView(new QListView(this))
+    , mListWidget(new QListWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mListView->setObjectName(QStringLiteral("mListView"));
-    mainLayout->addWidget(mListView);
-    mListView->setSelectionMode(QAbstractItemView::MultiSelection);
+    mListWidget->setObjectName(QStringLiteral("mListWidget"));
+    mainLayout->addWidget(mListWidget);
+    mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
     init();
 }
 
@@ -43,5 +45,18 @@ GroupManagementWidget::~GroupManagementWidget()
 
 void GroupManagementWidget::init()
 {
-    //TODO
+    const QString groupPath = LoadGroupMenu::defaultGroupPath();
+    if (groupPath.isEmpty()) {
+        return;
+    }
+    QDir dir(groupPath);
+    const QStringList groups = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+    if (groups.isEmpty()) {
+        return;
+    }
+    for (const QString &file : groups) {
+        QListWidgetItem *item = new QListWidgetItem(file, mListWidget);
+        const QString fullPath = groupPath + QLatin1Char('/') + file;
+        item->setData(FullPathRole, fullPath);
+    }
 }

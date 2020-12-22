@@ -40,9 +40,8 @@ GroupManagementDialog::GroupManagementDialog(QWidget *parent)
     mGroupManagementWidget->setObjectName(QStringLiteral("mGroupManagementWidget"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &GroupManagementDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &GroupManagementDialog::reject);
     mainLayout->addWidget(mGroupManagementWidget);
     mainLayout->addWidget(buttonBox);
