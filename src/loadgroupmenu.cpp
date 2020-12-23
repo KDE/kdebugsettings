@@ -49,6 +49,7 @@ QString LoadGroupMenu::defaultGroupPath()
 
 void LoadGroupMenu::init()
 {
+    //Load all ?
     const QString groupPath = LoadGroupMenu::defaultGroupPath();
     if (groupPath.isEmpty()) {
         setEnabled(false);
