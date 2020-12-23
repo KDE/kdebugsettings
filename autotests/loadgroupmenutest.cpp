@@ -26,6 +26,7 @@ QTEST_MAIN(LoadGroupMenuTest)
 LoadGroupMenuTest::LoadGroupMenuTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void LoadGroupMenuTest::shouldHaveDefaultValues()
