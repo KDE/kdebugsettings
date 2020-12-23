@@ -60,6 +60,7 @@ void LoadGroupMenu::init()
         setEnabled(false);
         return;
     }
+    setEnabled(true);
     for (const QString &file : groups) {
         QAction *act = addAction(file);
         const QString fullPath = groupPath + QLatin1Char('/') + file;
