@@ -215,7 +215,7 @@ void KDebugSettingsDialog::slotInsertCategories()
 
 void KDebugSettingsDialog::slotSaveAsGroup()
 {
-    const QString groupPath = LoadGroupMenu::defaultGroupPath();
+    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
     const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name"));
     const QString trimmedName = name.trimmed();
     if (!trimmedName.isEmpty()) {

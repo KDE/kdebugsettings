@@ -32,7 +32,7 @@ public:
 
     void refreshMenu();
 
-    static Q_REQUIRED_RESULT QString defaultGroupPath();
+    static Q_REQUIRED_RESULT QString defaultWritableGroupPath();
 
 Q_SIGNALS:
     void loadGroupRequested(const QString &filePath);

@@ -42,7 +42,7 @@ void LoadGroupMenu::refreshMenu()
     init();
 }
 
-QString LoadGroupMenu::defaultGroupPath()
+QString LoadGroupMenu::defaultWritableGroupPath()
 {
     return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/groups");
 }
@@ -50,7 +50,7 @@ QString LoadGroupMenu::defaultGroupPath()
 void LoadGroupMenu::init()
 {
     //Load all ?
-    const QString groupPath = LoadGroupMenu::defaultGroupPath();
+    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
     if (groupPath.isEmpty()) {
         setEnabled(false);
         return;

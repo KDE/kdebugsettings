@@ -71,7 +71,7 @@ void GroupManagementWidget::slotCustomContextMenu()
 
 void GroupManagementWidget::init()
 {
-    const QString groupPath = LoadGroupMenu::defaultGroupPath();
+    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
     if (groupPath.isEmpty()) {
         return;
     }
