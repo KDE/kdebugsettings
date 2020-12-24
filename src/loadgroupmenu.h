@@ -34,12 +34,16 @@ public:
 
     static Q_REQUIRED_RESULT QString defaultWritableGroupPath();
 
+    Q_REQUIRED_RESULT QStringList groupNames() const;
+    void setGroupNames(const QStringList &groupNames);
+
 Q_SIGNALS:
     void loadGroupRequested(const QString &filePath);
     void manageGroupRequested();
 
 private:
     void init();
+    QStringList mGroupNames;
 };
 
 #endif // LOADGROUPMENU_H

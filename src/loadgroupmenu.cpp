@@ -50,19 +50,20 @@ QString LoadGroupMenu::defaultWritableGroupPath()
 void LoadGroupMenu::init()
 {
     //Load all ?
+    mGroupNames.clear();
     const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
     if (groupPath.isEmpty()) {
         setEnabled(false);
         return;
     }
     QDir dir(groupPath);
-    const QStringList groups = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
-    if (groups.isEmpty()) {
+    mGroupNames = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+    if (mGroupNames.isEmpty()) {
         setEnabled(false);
         return;
     }
     setEnabled(true);
-    for (const QString &file : groups) {
+    for (const QString &file : mGroupNames) {
         QAction *act = addAction(file);
         const QString fullPath = groupPath + QLatin1Char('/') + file;
         connect(act, &QAction::triggered, this, [this, fullPath] {
@@ -72,4 +73,14 @@ void LoadGroupMenu::init()
     addSeparator();
     QAction *manageGroup = addAction(i18n("Manage Group"));
     connect(manageGroup, &QAction::triggered, this, &LoadGroupMenu::manageGroupRequested);
+}
+
+QStringList LoadGroupMenu::groupNames() const
+{
+    return mGroupNames;
+}
+
+void LoadGroupMenu::setGroupNames(const QStringList &groupNames)
+{
+    mGroupNames = groupNames;
 }
