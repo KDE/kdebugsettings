@@ -219,8 +219,12 @@ void KDebugSettingsDialog::slotSaveAsGroup()
     const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name"));
     const QString trimmedName = name.trimmed();
     if (!trimmedName.isEmpty()) {
-        saveRules(groupPath + QLatin1Char('/') + trimmedName, true);
-        Q_EMIT updateLoadGroupMenu();
+        if (mLoadToolButton->groupNames().contains(trimmedName)) {
+            KMessageBox::error(this, i18n("%1 is already used as a group name.", trimmedName));
+        } else {
+            saveRules(groupPath + QLatin1Char('/') + trimmedName, true);
+            Q_EMIT updateLoadGroupMenu();
+        }
     }
 }
 
