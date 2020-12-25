@@ -60,14 +60,15 @@ void GroupManagementWidget::slotCustomContextMenu()
             menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Rename Groups"), this, [this, item]() {
                 const QString fullPath = item->data(FullPathRole).toString();
                 QFile f(fullPath);
-                QFileInfo fileInfo(f);
-                const QString filePath = fileInfo.path();
-
                 const QString newName = QInputDialog::getText(this, i18n("Rename Group"), i18n("New Name:"));
                 const QString newNameTrimmed = newName.trimmed();
                 if (!newNameTrimmed.isEmpty()) {
-                    if (!f.rename(filePath + QLatin1Char('/') + newNameTrimmed)) {
+                    const QString newFullPath{LoadGroupMenu::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
+                    if (!f.rename(newFullPath)) {
                         KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'", newNameTrimmed), i18n("Rename Group"));
+                    } else {
+                        item->setText(newNameTrimmed);
+                        item->setData(FullPathRole, newFullPath);
                     }
                 }
             });
