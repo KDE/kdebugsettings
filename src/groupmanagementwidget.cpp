@@ -47,7 +47,6 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
 
 GroupManagementWidget::~GroupManagementWidget()
 {
-
 }
 
 void GroupManagementWidget::slotCustomContextMenu()
@@ -63,7 +62,7 @@ void GroupManagementWidget::slotCustomContextMenu()
                 const QString newName = QInputDialog::getText(this, i18n("Rename Group"), i18n("New Name:"));
                 const QString newNameTrimmed = newName.trimmed();
                 if (!newNameTrimmed.isEmpty()) {
-                    const QString newFullPath{LoadGroupMenu::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
+                    const QString newFullPath {LoadGroupMenu::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
                     if (!f.rename(newFullPath)) {
                         KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'", newNameTrimmed), i18n("Rename Group"));
                     } else {

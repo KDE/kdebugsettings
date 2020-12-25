@@ -53,4 +53,3 @@ QStringList LoadToolButton::groupNames() const
 {
     return mLoadMenu->groupNames();
 }
-

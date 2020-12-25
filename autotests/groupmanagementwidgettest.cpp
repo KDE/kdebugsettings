@@ -28,7 +28,6 @@ QTEST_MAIN(GroupManagementWidgetTest)
 GroupManagementWidgetTest::GroupManagementWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void GroupManagementWidgetTest::shouldHaveDefaultValues()
