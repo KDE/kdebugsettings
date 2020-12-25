@@ -83,13 +83,13 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(saveAs, &SaveToolButton::saveAsFile, this, &KDebugSettingsDialog::slotSaveAs);
     connect(saveAs, &SaveToolButton::saveAsGroup, this, &KDebugSettingsDialog::slotSaveAsGroup);
 
-    LoadToolButton *load = new LoadToolButton(this);
-    load->setObjectName(QStringLiteral("load_button"));
-    buttonBox->addButton(load, QDialogButtonBox::ActionRole);
-    connect(load, &LoadToolButton::loadFromFile, this, &KDebugSettingsDialog::slotLoad);
-    connect(load, &LoadToolButton::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
-    connect(load, &LoadToolButton::manageGroupRequested, this, &KDebugSettingsDialog::slotManageGroup);
-    connect(this, &KDebugSettingsDialog::updateLoadGroupMenu, load, &LoadToolButton::updateLoadGroupMenu);
+    mLoadToolButton = new LoadToolButton(this);
+    mLoadToolButton->setObjectName(QStringLiteral("load_button"));
+    buttonBox->addButton(mLoadToolButton, QDialogButtonBox::ActionRole);
+    connect(mLoadToolButton, &LoadToolButton::loadFromFile, this, &KDebugSettingsDialog::slotLoad);
+    connect(mLoadToolButton, &LoadToolButton::loadGroupRequested, this, &KDebugSettingsDialog::slotLoadGroup);
+    connect(mLoadToolButton, &LoadToolButton::manageGroupRequested, this, &KDebugSettingsDialog::slotManageGroup);
+    connect(this, &KDebugSettingsDialog::updateLoadGroupMenu, mLoadToolButton, &LoadToolButton::updateLoadGroupMenu);
 
     QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
     insertCategories->setObjectName(QStringLiteral("insert_button"));

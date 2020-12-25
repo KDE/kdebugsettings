@@ -48,3 +48,9 @@ void LoadToolButton::updateLoadGroupMenu()
 {
     mLoadMenu->refreshMenu();
 }
+
+QStringList LoadToolButton::groupNames() const
+{
+    return mLoadMenu->groupNames();
+}
+

@@ -31,6 +31,7 @@ class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;
 class EnvironmentSettingsRulesPage;
 class CategoryWarning;
+class LoadToolButton;
 
 class LIBKDEBUGSETTINGS_EXPORT KDebugSettingsDialog : public QDialog
 {
@@ -67,6 +68,7 @@ private:
     CustomDebugSettingsPage *mCustomSettingsPage = nullptr;
     EnvironmentSettingsRulesPage *mEnvironmentSettingsRulesPage = nullptr;
     CategoryWarning *mCategoryWarning = nullptr;
+    LoadToolButton *mLoadToolButton = nullptr;
 };
 
 #endif // KDEBUGSETTINGSDIALOG_H
