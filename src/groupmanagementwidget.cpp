@@ -27,6 +27,7 @@
 #include <QDir>
 #include <QListWidget>
 #include <QVBoxLayout>
+#include <QInputDialog>
 
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     : QWidget(parent)
@@ -54,6 +55,24 @@ void GroupManagementWidget::slotCustomContextMenu()
     const auto items = mListWidget->selectedItems();
     if (!items.isEmpty()) {
         QMenu menu(this);
+        if (mListWidget->selectedItems().count() == 1) {
+            const auto item = items.at(0);
+            menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Rename Groups"), this, [this, item]() {
+                const QString fullPath = item->data(FullPathRole).toString();
+                QFile f(fullPath);
+                QFileInfo fileInfo(f);
+                const QString filePath = fileInfo.path();
+
+                const QString newName = QInputDialog::getText(this, i18n("Rename Group"), i18n("New Name:"));
+                const QString newNameTrimmed = newName.trimmed();
+                if (!newNameTrimmed.isEmpty()) {
+                    if (!f.rename(filePath + QLatin1Char('/') + newNameTrimmed)) {
+                        KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'", newNameTrimmed), i18n("Rename Group"));
+                    }
+                }
+            });
+            menu.addSeparator();
+        }
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Groups"), this, [this, items]() {
             for (auto item : items) {
                 const QString fullPath = item->data(FullPathRole).toString();
