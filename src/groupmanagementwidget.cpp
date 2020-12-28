@@ -68,6 +68,7 @@ void GroupManagementWidget::slotCustomContextMenu()
                     } else {
                         item->setText(newNameTrimmed);
                         item->setData(FullPathRole, newFullPath);
+                        Q_EMIT groupsChanged();
                     }
                 }
             });
@@ -82,9 +83,9 @@ void GroupManagementWidget::slotCustomContextMenu()
                 }
                 delete item;
             }
+            Q_EMIT groupsChanged();
         });
         menu.exec(QCursor::pos());
-        Q_EMIT groupsChanged();
     }
 }
 
