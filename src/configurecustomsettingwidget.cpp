@@ -34,7 +34,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
 {
     auto vbox = new QVBoxLayout(this);
 
-    QLabel *lab = new QLabel(i18n("Category:"), this);
+    auto lab = new QLabel(i18n("Category:"), this);
     lab->setObjectName(QStringLiteral("category_label"));
     mCategoryLineEdit = new KLineEdit(this);
     mCategoryLineEdit->setTrapReturnKey(true);

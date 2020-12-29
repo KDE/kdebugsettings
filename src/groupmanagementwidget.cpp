@@ -101,7 +101,7 @@ void GroupManagementWidget::init()
         return;
     }
     for (const QString &file : groups) {
-        QListWidgetItem *item = new QListWidgetItem(file, mListWidget);
+        auto item = new QListWidgetItem(file, mListWidget);
         const QString fullPath = groupPath + QLatin1Char('/') + file;
         item->setData(FullPathRole, fullPath);
     }

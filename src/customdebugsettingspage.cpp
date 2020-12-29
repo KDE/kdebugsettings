@@ -36,7 +36,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    QLabel *lab = new QLabel(i18n("Rules:"), this);
+    auto lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("custom_label"));
     mainLayout->addWidget(lab);
 

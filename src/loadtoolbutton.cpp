@@ -28,7 +28,7 @@ LoadToolButton::LoadToolButton(QWidget *parent)
 {
     setPopupMode(QToolButton::InstantPopup);
     setText(i18n("Load..."));
-    QMenu *mainMenu = new QMenu(this);
+    auto mainMenu = new QMenu(this);
     setMenu(mainMenu);
 
     QAction *act = mainMenu->addAction(i18n("Load From File..."));

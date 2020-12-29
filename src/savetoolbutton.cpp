@@ -27,7 +27,7 @@ SaveToolButton::SaveToolButton(QWidget *parent)
 {
     setText(i18n("Save As..."));
     setPopupMode(QToolButton::InstantPopup);
-    QMenu *mainMenu = new QMenu(this);
+    auto mainMenu = new QMenu(this);
     setMenu(mainMenu);
 
     QAction *act = mainMenu->addAction(i18n("Save As File..."));

@@ -76,7 +76,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
-    SaveToolButton *saveAs = new SaveToolButton(this);
+    auto saveAs = new SaveToolButton(this);
     saveAs->setText(i18n("Save As..."));
     saveAs->setObjectName(QStringLiteral("saveas_button"));
     buttonBox->addButton(saveAs, QDialogButtonBox::ActionRole);
@@ -91,7 +91,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(mLoadToolButton, &LoadToolButton::manageGroupRequested, this, &KDebugSettingsDialog::slotManageGroup);
     connect(this, &KDebugSettingsDialog::updateLoadGroupMenu, mLoadToolButton, &LoadToolButton::updateLoadGroupMenu);
 
-    QPushButton *insertCategories = new QPushButton(i18n("Insert..."), this);
+    auto insertCategories = new QPushButton(i18n("Insert..."), this);
     insertCategories->setObjectName(QStringLiteral("insert_button"));
     buttonBox->addButton(insertCategories, QDialogButtonBox::ActionRole);
     connect(insertCategories, &QPushButton::clicked, this, &KDebugSettingsDialog::slotInsertCategories);
