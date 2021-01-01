@@ -15,7 +15,7 @@ class RenameCategoryTest : public QObject
     Q_OBJECT
 public:
     explicit RenameCategoryTest(QObject *parent = nullptr);
-    ~RenameCategoryTest();
+    ~RenameCategoryTest() override;
 private Q_SLOTS:
     void shouldParseRenameLine_data();
     void shouldParseRenameLine();

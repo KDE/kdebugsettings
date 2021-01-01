@@ -15,7 +15,7 @@ class ConfigureCustomSettingWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ConfigureCustomSettingWidgetTest(QObject *parent = nullptr);
-    ~ConfigureCustomSettingWidgetTest();
+    ~ConfigureCustomSettingWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldRestoreRules_data();

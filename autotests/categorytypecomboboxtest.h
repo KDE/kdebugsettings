@@ -15,7 +15,7 @@ class CategoryTypeComboBoxTest : public QObject
     Q_OBJECT
 public:
     explicit CategoryTypeComboBoxTest(QObject *parent = nullptr);
-    ~CategoryTypeComboBoxTest();
+    ~CategoryTypeComboBoxTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldSetType_data();

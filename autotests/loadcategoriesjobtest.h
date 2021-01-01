@@ -15,7 +15,7 @@ class LoadCategoriesJobTest : public QObject
     Q_OBJECT
 public:
     explicit LoadCategoriesJobTest(QObject *parent = nullptr);
-    ~LoadCategoriesJobTest();
+    ~LoadCategoriesJobTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

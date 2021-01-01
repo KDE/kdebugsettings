@@ -15,7 +15,7 @@ class EnvironmentSettingsRulesPageTest : public QObject
     Q_OBJECT
 public:
     explicit EnvironmentSettingsRulesPageTest(QObject *parent = nullptr);
-    ~EnvironmentSettingsRulesPageTest();
+    ~EnvironmentSettingsRulesPageTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

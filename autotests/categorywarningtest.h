@@ -15,7 +15,7 @@ class CategoryWarningTest : public QObject
     Q_OBJECT
 public:
     explicit CategoryWarningTest(QObject *parent = nullptr);
-    ~CategoryWarningTest();
+    ~CategoryWarningTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

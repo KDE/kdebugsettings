@@ -15,7 +15,7 @@ class KDebugSettingsLoadingCategoriesTest : public QObject
     Q_OBJECT
 public:
     explicit KDebugSettingsLoadingCategoriesTest(QObject *parent = nullptr);
-    ~KDebugSettingsLoadingCategoriesTest() = default;
+    ~KDebugSettingsLoadingCategoriesTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

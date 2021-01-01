@@ -15,7 +15,7 @@ class KDebugSettingsDialogTest : public QObject
     Q_OBJECT
 public:
     explicit KDebugSettingsDialogTest(QObject *parent = nullptr);
-    ~KDebugSettingsDialogTest();
+    ~KDebugSettingsDialogTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

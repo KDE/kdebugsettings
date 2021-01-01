@@ -15,7 +15,7 @@ class ChangeDebugModeJobTest : public QObject
     Q_OBJECT
 public:
     explicit ChangeDebugModeJobTest(QObject *parent = nullptr);
-    ~ChangeDebugModeJobTest() = default;
+    ~ChangeDebugModeJobTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToStart();
