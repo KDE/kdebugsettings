@@ -2,8 +2,7 @@ include_directories(${CMAKE_BINARY_DIR})
 
 set(kdebugsettings_debug_SRCS)
 
-ecm_qt_declare_logging_category(kdebugsettings_debug_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" 
-	    EXPORT KDEBUGSETTINGS)	
+ecm_qt_declare_logging_category(kdebugsettings_debug_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
 set(kdebugsettings_LIB_SRCS
     kdebugsettingsloadingcategories.cpp
     kdeloggingcategory.cpp
