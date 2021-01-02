@@ -6,7 +6,7 @@
 */
 
 #include "kdeapplicationtreelistwidgettest.h"
-#include "../src/kdeapplicationtreelistwidget.h"
+#include "kdeapplicationtreelistwidget.h"
 #include <QTest>
 #include <QHeaderView>
 

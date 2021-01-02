@@ -6,7 +6,7 @@
 */
 
 #include "loggingcategorytest.h"
-#include "../src/loggingcategory.h"
+#include "loggingcategory.h"
 #include <QTest>
 
 LoggingCategoryTest::LoggingCategoryTest(QObject *parent)

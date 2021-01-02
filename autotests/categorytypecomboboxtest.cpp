@@ -6,7 +6,7 @@
 */
 
 #include "categorytypecomboboxtest.h"
-#include "../src/categorytypecombobox.h"
+#include "categorytypecombobox.h"
 #include <QTest>
 
 CategoryTypeComboBoxTest::CategoryTypeComboBoxTest(QObject *parent)

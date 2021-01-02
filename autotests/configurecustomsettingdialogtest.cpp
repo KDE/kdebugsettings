@@ -6,8 +6,8 @@
 */
 
 #include "configurecustomsettingdialogtest.h"
-#include "../src/configurecustomsettingdialog.h"
-#include "../src/configurecustomsettingwidget.h"
+#include "configurecustomsettingdialog.h"
+#include "configurecustomsettingwidget.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTest>

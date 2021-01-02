@@ -6,7 +6,7 @@
 */
 
 #include "kdebugsettingutiltest.h"
-#include "../src/kdebugsettingsutil.h"
+#include "kdebugsettingsutil.h"
 #include <QTest>
 #include <QDebug>
 

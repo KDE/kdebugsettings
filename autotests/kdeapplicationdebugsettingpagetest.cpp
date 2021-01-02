@@ -6,8 +6,8 @@
 */
 
 #include "kdeapplicationdebugsettingpagetest.h"
-#include "../src/kdeapplicationdebugsettingpage.h"
-#include "../src/kdeapplicationtreelistwidget.h"
+#include "kdeapplicationdebugsettingpage.h"
+#include "kdeapplicationtreelistwidget.h"
 #include <QPushButton>
 #include <QHeaderView>
 #include <QTest>

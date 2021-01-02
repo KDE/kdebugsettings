@@ -6,7 +6,7 @@
 */
 
 #include "customdebugsettingspagetest.h"
-#include "../src/customdebugsettingspage.h"
+#include "customdebugsettingspage.h"
 #include <KListWidgetSearchLine>
 #include <QLabel>
 #include <QListWidget>

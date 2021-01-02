@@ -5,8 +5,8 @@
 
 */
 #include "renamecategorytest.h"
-#include "../src/kdebugsettingsutil.h"
-#include "../src/renamecategory.h"
+#include "kdebugsettingsutil.h"
+#include "renamecategory.h"
 #include <QTest>
 
 RenameCategoryTest::RenameCategoryTest(QObject *parent)

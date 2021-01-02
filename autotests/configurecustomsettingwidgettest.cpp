@@ -6,7 +6,7 @@
 */
 
 #include "configurecustomsettingwidgettest.h"
-#include "../src/configurecustomsettingwidget.h"
+#include "configurecustomsettingwidget.h"
 #include <QComboBox>
 #include <QLabel>
 #include <KLineEdit>

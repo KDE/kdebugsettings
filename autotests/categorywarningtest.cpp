@@ -6,7 +6,7 @@
 */
 
 #include "categorywarningtest.h"
-#include "../src/categorywarning.h"
+#include "categorywarning.h"
 #include <QTest>
 
 CategoryWarningTest::CategoryWarningTest(QObject *parent)
