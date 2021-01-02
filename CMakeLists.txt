@@ -47,7 +47,7 @@ set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "5")
 
 if(BUILD_TESTING)
-	add_definitions(-DBUILD_TESTING)
+    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" FALSE)
@@ -63,7 +63,7 @@ endif()
 
 add_subdirectory( src )
 if (BUILD_TESTING)
-	add_subdirectory( autotests )
+    add_subdirectory( autotests )
 endif()
 ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
