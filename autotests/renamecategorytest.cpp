@@ -24,7 +24,7 @@ void RenameCategoryTest::shouldParseRenameLine_data()
     QTest::addColumn<QString>("newname");
     QTest::addColumn<QString>("original");
     QTest::addColumn<bool>("valid");
-    QTest::newRow("empty") <<  QString() << QString() << QString() << false;
+    QTest::newRow("empty") << QString() << QString() << QString() << false;
     QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << true;
     QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << true;
     QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << false;

@@ -8,9 +8,9 @@
 #ifndef KDEAPPLICATIONDEBUGSETTINGPAGE_H
 #define KDEAPPLICATIONDEBUGSETTINGPAGE_H
 
-#include <QWidget>
-#include "loggingcategory.h"
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
+#include <QWidget>
 class QPushButton;
 class KDEApplicationTreeListWidget;
 class KTreeWidgetSearchLine;
@@ -27,6 +27,7 @@ public:
     void restoreToDefault();
 
     void forceFocus();
+
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 

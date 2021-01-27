@@ -5,8 +5,8 @@
 
 */
 
-#include "loadgroupmenu.h"
 #include "loadtoolbutton.h"
+#include "loadgroupmenu.h"
 #include <KLocalizedString>
 
 LoadToolButton::LoadToolButton(QWidget *parent)

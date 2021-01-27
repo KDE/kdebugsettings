@@ -8,11 +8,11 @@
 #ifndef KDEBUGSETTINGSDIALOG_H
 #define KDEBUGSETTINGSDIALOG_H
 
-#include <QDialog>
 #include "kdebugsettingsloadingcategories.h"
 #include "kdeloggingcategory.h"
-#include "renamecategory.h"
 #include "libkdebugsettings_export.h"
+#include "renamecategory.h"
+#include <QDialog>
 class QTabWidget;
 class KDEApplicationDebugSettingPage;
 class CustomDebugSettingsPage;

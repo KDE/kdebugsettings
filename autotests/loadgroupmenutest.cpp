@@ -7,8 +7,8 @@
 
 #include "loadgroupmenutest.h"
 #include "loadgroupmenu.h"
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 QTEST_MAIN(LoadGroupMenuTest)
 LoadGroupMenuTest::LoadGroupMenuTest(QObject *parent)
     : QObject(parent)

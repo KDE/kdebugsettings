@@ -8,10 +8,10 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdeapplicationtreelistwidget.h"
 #include <KLocalizedString>
-#include <QPushButton>
-#include <QVBoxLayout>
 #include <QEvent>
 #include <QKeyEvent>
+#include <QPushButton>
+#include <QVBoxLayout>
 #include <ktreewidgetsearchline.h>
 
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)

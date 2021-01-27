@@ -10,12 +10,13 @@
 
 #include <KLocalizedString>
 
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myGroupManagementDialogGroupName[] = "GroupManagementDialog";
 }
 

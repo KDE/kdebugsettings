@@ -9,9 +9,9 @@
 #include "groupmanagementdialog.h"
 #include "groupmanagementwidget.h"
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
-#include <QStandardPaths>
 QTEST_MAIN(GroupManagementDialogTest)
 GroupManagementDialogTest::GroupManagementDialogTest(QObject *parent)
     : QObject(parent)

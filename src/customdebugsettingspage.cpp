@@ -8,15 +8,15 @@
 #include "customdebugsettingspage.h"
 #include "configurecustomsettingdialog.h"
 #include "kdebugsettingsutil.h"
-#include <KLocalizedString>
 #include <KListWidgetSearchLine>
+#include <KLocalizedString>
 #include <KMessageBox>
-#include <QVBoxLayout>
 #include <QHBoxLayout>
-#include <QListWidget>
 #include <QLabel>
-#include <QPushButton>
+#include <QListWidget>
 #include <QPointer>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)

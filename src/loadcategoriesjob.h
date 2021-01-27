@@ -9,9 +9,9 @@
 #define LOADCATEGORIESJOB_H
 
 #include "kdeloggingcategory.h"
+#include "libkdebugsettings_private_export.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
-#include "libkdebugsettings_private_export.h"
 
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadCategoriesJob
 {

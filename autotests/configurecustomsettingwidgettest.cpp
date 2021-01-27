@@ -7,11 +7,11 @@
 
 #include "configurecustomsettingwidgettest.h"
 #include "configurecustomsettingwidget.h"
+#include <KLineEdit>
+#include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
-#include <KLineEdit>
 #include <QSignalSpy>
-#include <QCheckBox>
 #include <QTest>
 
 ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *parent)
@@ -48,11 +48,11 @@ void ConfigureCustomSettingWidgetTest::shouldRestoreRules_data()
 {
     QTest::addColumn<QString>("input");
 
-    QTest::newRow("empty") <<  QString();
-    QTest::newRow("validrule") <<  QStringLiteral("foo.warning=true");
-    QTest::newRow("validrule2") <<  QStringLiteral("foo=true");
-    QTest::newRow("validrule3") <<  QStringLiteral("foo=false");
-    QTest::newRow("validrule3*") <<  QStringLiteral("*.warning=false");
+    QTest::newRow("empty") << QString();
+    QTest::newRow("validrule") << QStringLiteral("foo.warning=true");
+    QTest::newRow("validrule2") << QStringLiteral("foo=true");
+    QTest::newRow("validrule3") << QStringLiteral("foo=false");
+    QTest::newRow("validrule3*") << QStringLiteral("*.warning=false");
 }
 
 void ConfigureCustomSettingWidgetTest::shouldRestoreRules()

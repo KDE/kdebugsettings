@@ -8,8 +8,8 @@
 #ifndef SAVERULESJOB_H
 #define SAVERULESJOB_H
 
-#include "loggingcategory.h"
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
 class LIBKDEBUGSETTINGS_EXPORT SaveRulesJob
 {
 public:

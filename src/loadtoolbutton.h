@@ -27,6 +27,7 @@ Q_SIGNALS:
     void loadGroupRequested(const QString &fullPath);
     void loadFromFile();
     void manageGroupRequested();
+
 private:
     LoadGroupMenu *const mLoadMenu;
 };

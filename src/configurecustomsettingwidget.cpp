@@ -9,12 +9,12 @@
 #include "categorytypecombobox.h"
 #include "kdebugsettingsdialog.h"
 #include "kdebugsettingsutil.h"
-#include <KLocalizedString>
-#include <QLabel>
 #include <KLineEdit>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
+#include <KLocalizedString>
 #include <QCheckBox>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QVBoxLayout>
 
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)

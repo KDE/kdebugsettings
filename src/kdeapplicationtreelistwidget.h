@@ -8,19 +8,14 @@
 #ifndef KDEAPPLICATIONTREELISTWIDGET_H
 #define KDEAPPLICATIONTREELISTWIDGET_H
 
-#include <QTreeWidget>
-#include "loggingcategory.h"
 #include "libkdebugsettings_private_export.h"
+#include "loggingcategory.h"
+#include <QTreeWidget>
 class CategoryTypeComboBox;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KDEApplicationTreeListWidgetItem : public QTreeWidgetItem
 {
 public:
-    enum ColumnType {
-        Description = 0,
-        CategoryType = 1,
-        LogName = 2,
-        IdentifierName = 3
-    };
+    enum ColumnType { Description = 0, CategoryType = 1, LogName = 2, IdentifierName = 3 };
 
     explicit KDEApplicationTreeListWidgetItem(const QString &logName, QTreeWidget *parent);
     ~KDEApplicationTreeListWidgetItem() override;
@@ -32,6 +27,7 @@ public:
 
     Q_REQUIRED_RESULT LoggingCategory rule(bool forceSavingAllRules) const;
     void restoreToDefault();
+
 private:
     QString mCategory;
     CategoryTypeComboBox *mCategoryTypeCombobox = nullptr;
@@ -55,6 +51,7 @@ public:
     void restoreToDefault();
 
     QList<int> searchColumns() const;
+
 private:
     void addListItems(const LoggingCategory::List &list, bool clearList);
     QString generateToolTip(const LoggingCategory &cat);

@@ -7,14 +7,14 @@
 
 #include <QApplication>
 
-#include <config-kdebugsettings.h>
-#include "kdebugsettingsdialog.h"
 #include "changedebugmodejob.h"
+#include "kdebugsettingsdialog.h"
+#include <config-kdebugsettings.h>
 
-#include <KLocalizedString>
 #include <KAboutData>
-#include <QCommandLineParser>
 #include <KDBusService>
+#include <KLocalizedString>
+#include <QCommandLineParser>
 #include <QStandardPaths>
 
 #include <iostream>
@@ -26,8 +26,11 @@ int main(int argc, char **argv)
 
     QApplication app(argc, argv);
 
-    KAboutData aboutData(QStringLiteral("kdebugsettings"), i18n("KDebugSettings"), QStringLiteral(KDEBUGSETTINGS_VERSION),
-                         i18n("Configure debug settings"), KAboutLicense::GPL_V2,
+    KAboutData aboutData(QStringLiteral("kdebugsettings"),
+                         i18n("KDebugSettings"),
+                         QStringLiteral(KDEBUGSETTINGS_VERSION),
+                         i18n("Configure debug settings"),
+                         KAboutLicense::GPL_V2,
                          i18n("(c) 2015-2021 kdebugsettings authors"));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     KAboutData::setApplicationData(aboutData);
@@ -43,11 +46,12 @@ int main(int argc, char **argv)
     QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
     parser.addOption(switchOffDebugOption);
 
-    QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"), i18n("Change debug mode as console (in console)"), QStringLiteral("Full|Info|Warning|Critical|Off"));
+    QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"),
+                                                i18n("Change debug mode as console (in console)"),
+                                                QStringLiteral("Full|Info|Warning|Critical|Off"));
     parser.addOption(changeDebugSettingOption);
-    parser.addPositionalArgument(
-        QStringLiteral("logging category name"),
-        i18n("Specify logging category name that you want to change debug mode (in console)"));
+    parser.addPositionalArgument(QStringLiteral("logging category name"),
+                                 i18n("Specify logging category name that you want to change debug mode (in console)"));
 
     parser.process(app);
     aboutData.processCommandLine(&parser);

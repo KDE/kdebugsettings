@@ -7,21 +7,13 @@
 #ifndef LOGGINGCATEGORY_H
 #define LOGGINGCATEGORY_H
 
-#include <QVector>
-#include <QString>
-#include <QDebug>
 #include "libkdebugsettings_export.h"
+#include <QDebug>
+#include <QString>
+#include <QVector>
 
 struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
-    enum LoggingType {
-        All = 0,
-        Info,
-        Warning,
-        Debug,
-        Critical,
-        Off,
-        Undefined
-    };
+    enum LoggingType { All = 0, Info, Warning, Debug, Critical, Off, Undefined };
 
     LoggingCategory();
     explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, const QString &identifier, bool enabled)
@@ -34,7 +26,7 @@ struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
     }
 
     using List = QVector<LoggingCategory>;
-    Q_REQUIRED_RESULT bool operator ==(const LoggingCategory &other) const;
+    Q_REQUIRED_RESULT bool operator==(const LoggingCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
 
     Q_REQUIRED_RESULT QString createRule() const;

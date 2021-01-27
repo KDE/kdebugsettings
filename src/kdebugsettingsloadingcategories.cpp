@@ -9,9 +9,9 @@
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
 #include "loadcategoriesjob.h"
-#include <QStandardPaths>
-#include <QLibraryInfo>
 #include <QDir>
+#include <QLibraryInfo>
+#include <QStandardPaths>
 
 KDebugSettingsLoadingCategories::KDebugSettingsLoadingCategories()
 {
@@ -46,16 +46,17 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
     mRenameCategoriesList.clear();
     // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory)
-                             +QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
+        + QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
             mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
         }
     }
-    //TODO add load rename file from external kde apps.
-    const QStringList dirs2 = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
-    //qDebug() << " dirs 2 " << dirs2;
+    // TODO add load rename file from external kde apps.
+    const QStringList dirs2 =
+        QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("qdebug.categories/"), QStandardPaths::LocateDirectory);
+    // qDebug() << " dirs 2 " << dirs2;
     for (const QString &dir : dirs2) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
@@ -83,8 +84,8 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
 
     const QByteArray rulesFilePath = qgetenv("QT_LOGGING_CONF");
     if (!rulesFilePath.isEmpty()) {
-        //const QList<KDebugSettingsUtil::LoadLoggingCategory> envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
-        //TODO
+        // const QList<KDebugSettingsUtil::LoadLoggingCategory> envCategories = KDebugSettingsUtil::readLoggingQtCategories(QString::fromLatin1(rulesFilePath));
+        // TODO
     }
 
     mEnvironmentrules = QString::fromLatin1(qgetenv("QT_LOGGING_RULES"));

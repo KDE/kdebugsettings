@@ -11,15 +11,13 @@ KdeLoggingCategory::KdeLoggingCategory()
 {
 }
 
-bool KdeLoggingCategory::operator ==(const KdeLoggingCategory &other) const
+bool KdeLoggingCategory::operator==(const KdeLoggingCategory &other) const
 {
-    return (description == other.description)
-           && (categoryName == other.categoryName)
-           && (defaultSeverity == other.defaultSeverity)
-           && (identifierName == other.identifierName);
+    return (description == other.description) && (categoryName == other.categoryName) && (defaultSeverity == other.defaultSeverity)
+        && (identifierName == other.identifierName);
 }
 
-bool KdeLoggingCategory::operator !=(const KdeLoggingCategory &other) const
+bool KdeLoggingCategory::operator!=(const KdeLoggingCategory &other) const
 {
     return !operator==(other);
 }

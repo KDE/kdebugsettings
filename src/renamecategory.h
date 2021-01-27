@@ -7,19 +7,18 @@
 #ifndef RENAMECATEGORY_H
 #define RENAMECATEGORY_H
 
-#include <QVector>
-#include <QString>
-#include <QObject>
 #include "libkdebugsettings_private_export.h"
-struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory
-{
+#include <QObject>
+#include <QString>
+#include <QVector>
+struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory {
 public:
     RenameCategory()
     {
     }
 
     using List = QVector<RenameCategory>;
-    Q_REQUIRED_RESULT bool operator ==(const RenameCategory &other) const;
+    Q_REQUIRED_RESULT bool operator==(const RenameCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
 
     QString originalName;

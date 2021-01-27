@@ -8,16 +8,16 @@
 #ifndef KDELOGGINGCATEGORY_H
 #define KDELOGGINGCATEGORY_H
 
-#include <QVector>
-#include <QString>
-#include <QDebug>
 #include "libkdebugsettings_private_export.h"
+#include <QDebug>
+#include <QString>
+#include <QVector>
 
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KdeLoggingCategory {
     KdeLoggingCategory();
     using List = QVector<KdeLoggingCategory>;
-    Q_REQUIRED_RESULT bool operator ==(const KdeLoggingCategory &other) const;
-    Q_REQUIRED_RESULT bool operator !=(const KdeLoggingCategory &other) const;
+    Q_REQUIRED_RESULT bool operator==(const KdeLoggingCategory &other) const;
+    Q_REQUIRED_RESULT bool operator!=(const KdeLoggingCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
 
     QString description;

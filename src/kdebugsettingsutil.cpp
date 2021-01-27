@@ -7,11 +7,11 @@
 
 #include "kdebugsettingsutil.h"
 #include "kdebugsettings_debug.h"
+#include <KLocalizedString>
+#include <QDir>
 #include <QFile>
 #include <QRegularExpression>
-#include <KLocalizedString>
 #include <QStandardPaths>
-#include <QDir>
 
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QString &filename)
 {
@@ -28,8 +28,8 @@ RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QStri
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: "
-                                      << line << " from file:" << filename << Qt::endl;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
+                                      << " from file:" << filename << Qt::endl;
         return category;
     }
 
@@ -78,8 +78,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: "
-                                      << line << " from file:" << filename << Qt::endl;
+        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
+                                      << " from file:" << filename << Qt::endl;
         return category;
     }
     QString logName;
@@ -89,7 +89,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
 
 #if 1
 
-    //TODO create an unique regularexpression
+    // TODO create an unique regularexpression
 
     static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*(.*)$"));
     QRegularExpressionMatch match = regularExpressionUser.match(line);
@@ -99,7 +99,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
     }
 
     bool newFormatFound = false;
-    static const QRegularExpression regularExpressionDefaultSeverityNewFormat(QStringLiteral("^(.*)\\s+DEFAULT_SEVERITY\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\](?:\\s+(.*))?"));
+    static const QRegularExpression regularExpressionDefaultSeverityNewFormat(
+        QStringLiteral("^(.*)\\s+DEFAULT_SEVERITY\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\](?:\\s+(.*))?"));
     QRegularExpressionMatch match3 = regularExpressionDefaultSeverityNewFormat.match(description);
     QString defaultSeverityCaptured;
     QString potentialIdentifier;
@@ -111,8 +112,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
         if (!descriptionCaptured.isEmpty() && !defaultSeverityCaptured.isEmpty()) {
             description = descriptionCaptured;
             defaultSeverity = defaultSeverityCaptured;
-            //qDebug() << " match.captured(1);" << descriptionCaptured;
-            //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
+            // qDebug() << " match.captured(1);" << descriptionCaptured;
+            // qDebug() << " match.captured(2);" << defaultCategoryCaptured;
         }
     }
 
@@ -126,8 +127,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
             if (!descriptionCaptured.isEmpty() && !identifierCaptured.isEmpty()) {
                 description = descriptionCaptured;
                 identifier = identifierCaptured;
-                //qDebug() << " match.captured(1);" << descriptionCaptured;
-                //qDebug() << " match.captured(2);" << identifierCaptured;
+                // qDebug() << " match.captured(1);" << descriptionCaptured;
+                // qDebug() << " match.captured(2);" << identifierCaptured;
             }
         }
     } else {
@@ -143,7 +144,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
     }
 
     if (!newFormatFound) {
-        //Old format.
+        // Old format.
         static const QRegularExpression regularExpressionDefaultSeverityOldFormat(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]"));
         QRegularExpressionMatch match2 = regularExpressionDefaultSeverityOldFormat.match(description);
         if (match2.hasMatch()) {
@@ -152,8 +153,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
             if (!descriptionCaptured.isEmpty() && !defaultSeverityCaptured.isEmpty()) {
                 description = descriptionCaptured;
                 defaultSeverity = defaultSeverityCaptured;
-                //qDebug() << " match.captured(1);" << descriptionCaptured;
-                //qDebug() << " match.captured(2);" << defaultCategoryCaptured;
+                // qDebug() << " match.captured(1);" << descriptionCaptured;
+                // qDebug() << " match.captured(2);" << defaultCategoryCaptured;
                 qCWarning(KDEBUGSETTINGS_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
             }
         } else {
@@ -199,7 +200,8 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
                         needToAppend = false;
                         break;
                     } else if (cat.categoryName == category.categoryName) {
-                        qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : "<< filename;
+                        qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName
+                                                      << " filename : " << filename;
                         needToAppend = false;
                     }
                 }
@@ -233,7 +235,8 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
                             needToAppend = false;
                             break;
                         } else if (cat.categoryName == category.categoryName) {
-                            qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : "<< filename;
+                            qCWarning(KDEBUGSETTINGS_LOG)
+                                << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
                             needToAppend = false;
                         }
                     }
@@ -252,8 +255,7 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
 {
     LineLoggingQtCategory lineCategory;
     int equalPos = line.indexOf(QLatin1Char('='));
-    if ((equalPos != -1)
-        && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
+    if ((equalPos != -1) && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
         if (valueStr == QLatin1String("true")) {
@@ -295,7 +297,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
         qCWarning(KDEBUGSETTINGS_LOG) << "Empty file name";
         return {};
     }
-    //Code based on src/corelib/io/qloggingregistry.cpp
+    // Code based on src/corelib/io/qloggingregistry.cpp
     QFile file(filename);
     QMap<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
     if (file.open(QIODevice::ReadOnly)) {
@@ -322,8 +324,8 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
             }
             if (rulesSections) {
                 KDebugSettingsUtil::LineLoggingQtCategory cat = parseLineLoggingQtCategory(line);
-                //qDebug() << " line " << line;
-                //qDebug() << "enable " << cat.enabled << " valid : " << cat.isValid();
+                // qDebug() << " line " << line;
+                // qDebug() << "enable " << cat.enabled << " valid : " << cat.isValid();
                 if (cat.isValid()) {
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
@@ -359,19 +361,22 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                         nextCat.logName = cat.logName;
                         switch (cat.type) {
                         case LineLoggingQtCategory::Unknown:
-                            nextCat.loggingTypes.insert(LoadLoggingCategory::Unknown, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
+                            nextCat.loggingTypes.insert(LoadLoggingCategory::Unknown,
+                                                        cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;
                         case LineLoggingQtCategory::Info:
                             nextCat.loggingTypes.insert(LoadLoggingCategory::Info, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;
                         case LineLoggingQtCategory::Warning:
-                            nextCat.loggingTypes.insert(LoadLoggingCategory::Warning, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
+                            nextCat.loggingTypes.insert(LoadLoggingCategory::Warning,
+                                                        cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;
                         case LineLoggingQtCategory::Debug:
                             nextCat.loggingTypes.insert(LoadLoggingCategory::Debug, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;
                         case LineLoggingQtCategory::Critical:
-                            nextCat.loggingTypes.insert(LoadLoggingCategory::Critical, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
+                            nextCat.loggingTypes.insert(LoadLoggingCategory::Critical,
+                                                        cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;
                         case LineLoggingQtCategory::All:
                             nextCat.loggingTypes.insert(LoadLoggingCategory::All, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
@@ -392,7 +397,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
 LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(const QString &str)
 {
     if (str.isEmpty()) {
-        return LoggingCategory::Info; //Default
+        return LoggingCategory::Info; // Default
     } else if (str == QLatin1String("DEBUG")) {
         return LoggingCategory::Debug;
     } else if (str == QLatin1String("INFO")) {

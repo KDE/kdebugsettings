@@ -7,10 +7,11 @@
 
 #include "kdeapplicationtreelistwidgettest.h"
 #include "kdeapplicationtreelistwidget.h"
-#include <QTest>
 #include <QHeaderView>
+#include <QTest>
 
-KDEApplicationTreeListWidgetTest::KDEApplicationTreeListWidgetTest(QObject *parent) : QObject(parent)
+KDEApplicationTreeListWidgetTest::KDEApplicationTreeListWidgetTest(QObject *parent)
+    : QObject(parent)
 {
 }
 

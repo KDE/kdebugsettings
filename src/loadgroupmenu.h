@@ -8,8 +8,8 @@
 #ifndef LOADGROUPMENU_H
 #define LOADGROUPMENU_H
 
-#include <QMenu>
 #include "libkdebugsettings_private_export.h"
+#include <QMenu>
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadGroupMenu : public QMenu
 {
     Q_OBJECT

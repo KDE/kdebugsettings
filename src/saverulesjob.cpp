@@ -35,7 +35,7 @@ bool SaveRulesJob::start()
     if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
         return false;
     }
-    //Save Rules
+    // Save Rules
     QTextStream out(&qtlogging);
     out << QLatin1String("[Rules]\n");
     for (const LoggingCategory &cat : qAsConst(mListKde)) {

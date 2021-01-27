@@ -11,14 +11,10 @@ LoggingCategory::LoggingCategory()
 {
 }
 
-bool LoggingCategory::operator ==(const LoggingCategory &other) const
+bool LoggingCategory::operator==(const LoggingCategory &other) const
 {
-    return (description == other.description)
-           && (categoryName == other.categoryName)
-           && (enabled == other.enabled)
-           && (loggingType == other.loggingType)
-           && (defaultSeverityType == other.defaultSeverityType)
-           && (identifierName == other.identifierName);
+    return (description == other.description) && (categoryName == other.categoryName) && (enabled == other.enabled) && (loggingType == other.loggingType)
+        && (defaultSeverityType == other.defaultSeverityType) && (identifierName == other.identifierName);
 }
 
 bool LoggingCategory::isValid() const

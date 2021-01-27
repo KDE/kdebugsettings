@@ -8,9 +8,9 @@
 #ifndef CATEGORYTYPECOMBOBOX_H
 #define CATEGORYTYPECOMBOBOX_H
 
-#include <QComboBox>
-#include "loggingcategory.h"
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
+#include <QComboBox>
 
 class LIBKDEBUGSETTINGS_EXPORT CategoryTypeComboBox : public QComboBox
 {
@@ -26,6 +26,7 @@ public:
     Q_REQUIRED_RESULT LoggingCategory::LoggingType defaultCategories() const;
 
     void restoreToDefault();
+
 private:
     LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
 };

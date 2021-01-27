@@ -6,34 +6,35 @@
 */
 
 #include "kdebugsettingsdialog.h"
-#include "customdebugsettingspage.h"
-#include "kdeapplicationdebugsettingpage.h"
-#include "environmentsettingsrulespage.h"
-#include "kdebugsettingsutil.h"
 #include "categorywarning.h"
-#include "loadcategoriesjob.h"
-#include "saverulesjob.h"
-#include "loadtoolbutton.h"
-#include "savetoolbutton.h"
-#include "loadgroupmenu.h"
-#include "kdebugsettings_debug.h"
+#include "customdebugsettingspage.h"
+#include "environmentsettingsrulespage.h"
 #include "groupmanagementdialog.h"
+#include "kdeapplicationdebugsettingpage.h"
+#include "kdebugsettings_debug.h"
+#include "kdebugsettingsutil.h"
+#include "loadcategoriesjob.h"
+#include "loadgroupmenu.h"
+#include "loadtoolbutton.h"
+#include "saverulesjob.h"
+#include "savetoolbutton.h"
 
-#include <KLocalizedString>
 #include <KConfigGroup>
-#include <KSharedConfig>
+#include <KLocalizedString>
 #include <KMessageBox>
+#include <KSharedConfig>
 #include <QToolButton>
 
-#include <QFileDialog>
-#include <QDialogButtonBox>
-#include <QTabWidget>
-#include <QVBoxLayout>
-#include <QPushButton>
 #include <QDesktopServices>
-#include <QUrl>
+#include <QDialogButtonBox>
+#include <QFileDialog>
 #include <QInputDialog>
-namespace {
+#include <QPushButton>
+#include <QTabWidget>
+#include <QUrl>
+#include <QVBoxLayout>
+namespace
+{
 constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
 }
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
@@ -60,7 +61,9 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     mTabWidget->addTab(mEnvironmentSettingsRulesPage, i18n("Rules Settings With Environment Variable"));
     mTabWidget->setFocusPolicy(Qt::NoFocus);
 
-    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help
+                                              | QDialogButtonBox::Apply,
+                                          this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
     auto saveAs = new SaveToolButton(this);
@@ -183,7 +186,8 @@ void KDebugSettingsDialog::slotApply()
 
 void KDebugSettingsDialog::slotInsertCategories()
 {
-    const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"), QString(), QStringLiteral("%1 (*.categories)").arg(i18n("Categories Files")));
+    const QString path =
+        QFileDialog::getOpenFileName(this, i18n("Insert Categories"), QString(), QStringLiteral("%1 (*.categories)").arg(i18n("Categories Files")));
     if (!path.isEmpty()) {
         const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategoriesList);
         LoggingCategory::List newCategories;

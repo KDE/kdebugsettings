@@ -8,9 +8,9 @@
 #ifndef CUSTOMDEBUGSETTINGSPAGE_H
 #define CUSTOMDEBUGSETTINGSPAGE_H
 
-#include <QWidget>
-#include "loggingcategory.h"
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
+#include <QWidget>
 class QListWidget;
 class QPushButton;
 class LIBKDEBUGSETTINGS_EXPORT CustomDebugSettingsPage : public QWidget
@@ -22,6 +22,7 @@ public:
 
     void fillList(const LoggingCategory::List &list);
     Q_REQUIRED_RESULT LoggingCategory::List rules() const;
+
 private:
     void slotRemoveRules();
     void slotAddRule();

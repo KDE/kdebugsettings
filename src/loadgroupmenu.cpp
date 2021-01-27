@@ -36,7 +36,7 @@ QString LoadGroupMenu::defaultWritableGroupPath()
 
 void LoadGroupMenu::init()
 {
-    //Load all ?
+    // Load all ?
     mGroupNames.clear();
     const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
     if (groupPath.isEmpty()) {

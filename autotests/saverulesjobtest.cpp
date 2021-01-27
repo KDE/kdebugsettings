@@ -20,10 +20,7 @@ void compareFile(const QString &name)
     const QString generatedFile = QLatin1String(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
 
     // compare to reference file
-    QStringList args = QStringList()
-                       << QStringLiteral("-u")
-                       << refFile
-                       << generatedFile;
+    QStringList args = QStringList() << QStringLiteral("-u") << refFile << generatedFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);

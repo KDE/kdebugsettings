@@ -8,38 +8,30 @@
 #ifndef KDEBUGSETTINGSUTIL_H
 #define KDEBUGSETTINGSUTIL_H
 
-#include <QString>
-#include <QDebug>
 #include "kdeloggingcategory.h"
+#include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
-#include "libkdebugsettings_export.h"
+#include <QDebug>
+#include <QString>
 
-namespace KDebugSettingsUtil {
+namespace KDebugSettingsUtil
+{
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LineLoggingQtCategory {
     LineLoggingQtCategory()
     {
     }
 
-    enum LoggingType {
-        Unknown = 0,
-        Info,
-        Warning,
-        Debug,
-        Critical,
-        All
-    };
+    enum LoggingType { Unknown = 0, Info, Warning, Debug, Critical, All };
 
     Q_REQUIRED_RESULT bool isValid() const
     {
         return !logName.isEmpty();
     }
 
-    Q_REQUIRED_RESULT bool operator ==(const LineLoggingQtCategory &other) const
+    Q_REQUIRED_RESULT bool operator==(const LineLoggingQtCategory &other) const
     {
-        return (enabled == other.enabled)
-               && (type == other.type)
-               && (logName == other.logName);
+        return (enabled == other.enabled) && (type == other.type) && (logName == other.logName);
     }
 
     bool enabled = true;
@@ -48,21 +40,9 @@ struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LineLoggingQtCategory {
 };
 
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadLoggingCategory {
-    enum Status {
-        Enabled = 0,
-        Disabled = 1,
-        UnknownStatus = 2
-    };
+    enum Status { Enabled = 0, Disabled = 1, UnknownStatus = 2 };
 
-    enum LogType {
-        Unknown = 0,
-        Off,
-        Info,
-        Warning,
-        Debug,
-        Critical,
-        All
-    };
+    enum LogType { Unknown = 0, Off, Info, Warning, Debug, Critical, All };
 
     LoadLoggingCategory()
     {
@@ -78,21 +58,22 @@ struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadLoggingCategory {
         return !logName.isEmpty();
     }
 
-    Q_REQUIRED_RESULT bool operator ==(const LoadLoggingCategory &other) const
+    Q_REQUIRED_RESULT bool operator==(const LoadLoggingCategory &other) const
     {
-        //qDebug() << " logname " << logName << " other.logName :" << other.logName;
-        return (logName == other.logName)
-               && (loggingTypes == other.loggingTypes);
+        // qDebug() << " logname " << logName << " other.logName :" << other.logName;
+        return (logName == other.logName) && (loggingTypes == other.loggingTypes);
     }
 
     QString logName;
     QMap<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;
 };
 
-LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
+LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT void
+readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
 LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
-LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename, KdeLoggingCategory::List &categoriesList);
+LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename,
+                                                                                                      KdeLoggingCategory::List &categoriesList);
 
 LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
 LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);

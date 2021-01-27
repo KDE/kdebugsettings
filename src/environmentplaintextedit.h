@@ -8,8 +8,8 @@
 #ifndef ENVIRONMENTPLAINTEXTEDIT_H
 #define ENVIRONMENTPLAINTEXTEDIT_H
 
-#include <QTextEdit>
 #include "libkdebugsettings_export.h"
+#include <QTextEdit>
 class QPaintEvent;
 class LIBKDEBUGSETTINGS_EXPORT EnvironmentPlainTextEdit : public QTextEdit
 {
@@ -22,6 +22,7 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
     void contextMenuEvent(QContextMenuEvent *event) override;
+
 private:
     void slotGeneralPaletteChanged();
 

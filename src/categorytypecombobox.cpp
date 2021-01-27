@@ -36,7 +36,7 @@ void CategoryTypeComboBox::setType(LoggingCategory::LoggingType type)
     if (pos != -1) {
         setCurrentIndex(pos);
     } else {
-        //Default;
+        // Default;
         setCurrentIndex(0);
     }
 }

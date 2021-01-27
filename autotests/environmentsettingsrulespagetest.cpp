@@ -6,8 +6,8 @@
 */
 
 #include "environmentsettingsrulespagetest.h"
-#include "environmentsettingsrulespage.h"
 #include "environmentplaintextedit.h"
+#include "environmentsettingsrulespage.h"
 #include <QLabel>
 #include <QTest>
 EnvironmentSettingsRulesPageTest::EnvironmentSettingsRulesPageTest(QObject *parent)

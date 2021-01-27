@@ -8,8 +8,8 @@
 #include "kdeapplicationtreelistwidget.h"
 #include "categorytypecombobox.h"
 #include "kdebugsettingsutil.h"
-#include <QHeaderView>
 #include <KLocalizedString>
+#include <QHeaderView>
 
 KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString &category, QTreeWidget *parent)
     : QTreeWidgetItem(parent)

@@ -6,14 +6,14 @@
 */
 
 #include "kdebugsettingsdialogtest.h"
-#include "kdebugsettingsdialog.h"
 #include "categorywarning.h"
+#include "kdebugsettingsdialog.h"
 #include "loadtoolbutton.h"
 #include "savetoolbutton.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QTabWidget>
 #include <QStandardPaths>
+#include <QTabWidget>
 #include <QTest>
 #include <QToolButton>
 
@@ -32,14 +32,14 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     KDebugSettingsDialog dlg;
     auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
-    QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
+    QCOMPARE(buttonBox->standardButtons(),
+             QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
     auto tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tab);
     for (int i = 0; i < tab->count(); ++i) {
         const QString objName = tab->widget(i)->objectName();
-        const bool hasCorrectName = (objName == QLatin1String("kdeapplicationsettingspage"))
-                                    || (objName == QLatin1String("customsettingspage"))
-                                    || (objName == QLatin1String("environmentsettingsrulespage"));
+        const bool hasCorrectName = (objName == QLatin1String("kdeapplicationsettingspage")) || (objName == QLatin1String("customsettingspage"))
+            || (objName == QLatin1String("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
     auto saveAs = buttonBox->findChild<SaveToolButton *>(QStringLiteral("saveas_button"));

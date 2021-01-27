@@ -8,11 +8,11 @@
 #ifndef KDEBUGSETTINGSLOADINGCATEGORIES_H
 #define KDEBUGSETTINGSLOADINGCATEGORIES_H
 
-#include <QString>
 #include "kdeloggingcategory.h"
-#include "renamecategory.h"
-#include "loggingcategory.h"
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
+#include "renamecategory.h"
+#include <QString>
 
 class LIBKDEBUGSETTINGS_EXPORT KDebugSettingsLoadingCategories
 {
@@ -30,6 +30,7 @@ public:
     Q_REQUIRED_RESULT bool foundOverrideRule() const;
 
     void readCategoriesFiles(const QString &path);
+
 private:
     KdeLoggingCategory::List mCategoriesList;
     RenameCategory::List mRenameCategoriesList;

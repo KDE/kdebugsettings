@@ -31,8 +31,8 @@ void CategoryTypeComboBoxTest::shouldSetType_data()
 {
     QTest::addColumn<LoggingCategory::LoggingType>("input");
 
-    QTest::newRow("all") <<  LoggingCategory::All;
-    QTest::newRow("info") <<  LoggingCategory::Info;
+    QTest::newRow("all") << LoggingCategory::All;
+    QTest::newRow("info") << LoggingCategory::Info;
     QTest::newRow("warning") << LoggingCategory::Warning;
     QTest::newRow("critical") << LoggingCategory::Critical;
     QTest::newRow("off") << LoggingCategory::Off;

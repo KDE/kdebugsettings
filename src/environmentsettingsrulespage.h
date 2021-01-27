@@ -8,8 +8,8 @@
 #ifndef ENVIRONMENTSETTINGSRULESPAGE_H
 #define ENVIRONMENTSETTINGSRULESPAGE_H
 
-#include <QWidget>
 #include "libkdebugsettings_private_export.h"
+#include <QWidget>
 class EnvironmentPlainTextEdit;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT EnvironmentSettingsRulesPage : public QWidget
 {
@@ -18,6 +18,7 @@ public:
     explicit EnvironmentSettingsRulesPage(QWidget *parent = nullptr);
     ~EnvironmentSettingsRulesPage() override;
     void setRules(const QString &rules);
+
 private:
     EnvironmentPlainTextEdit *mRichTextEdit = nullptr;
 };

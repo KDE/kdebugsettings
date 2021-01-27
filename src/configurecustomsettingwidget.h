@@ -8,8 +8,8 @@
 #ifndef CONFIGURECUSTOMSETTINGWIDGET_H
 #define CONFIGURECUSTOMSETTINGWIDGET_H
 
-#include <QWidget>
 #include "libkdebugsettings_private_export.h"
+#include <QWidget>
 class KLineEdit;
 class QCheckBox;
 class CategoryTypeComboBox;

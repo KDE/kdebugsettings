@@ -8,10 +8,10 @@
 #include "kdeapplicationdebugsettingpagetest.h"
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdeapplicationtreelistwidget.h"
-#include <QPushButton>
-#include <QHeaderView>
-#include <QTest>
 #include <KTreeWidgetSearchLine>
+#include <QHeaderView>
+#include <QPushButton>
+#include <QTest>
 
 KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)

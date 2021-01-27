@@ -8,8 +8,8 @@
 #ifndef CATEGORYWARNING_H
 #define CATEGORYWARNING_H
 
-#include <KMessageWidget>
 #include "libkdebugsettings_private_export.h"
+#include <KMessageWidget>
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT CategoryWarning : public KMessageWidget
 {
     Q_OBJECT

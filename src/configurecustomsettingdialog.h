@@ -8,9 +8,9 @@
 #ifndef CONFIGURECUSTOMSETTINGDIALOG_H
 #define CONFIGURECUSTOMSETTINGDIALOG_H
 
-#include <QDialog>
 #include "kdebugsettingsdialog.h"
 #include "libkdebugsettings_export.h"
+#include <QDialog>
 
 class ConfigureCustomSettingWidget;
 class LIBKDEBUGSETTINGS_EXPORT ConfigureCustomSettingDialog : public QDialog
@@ -21,6 +21,7 @@ public:
     ~ConfigureCustomSettingDialog() override;
     void setRule(const QString &rule);
     Q_REQUIRED_RESULT QString rule() const;
+
 private:
     ConfigureCustomSettingWidget *mCustomSettingWidget = nullptr;
 };

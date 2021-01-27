@@ -6,10 +6,10 @@
 */
 
 #include "changedebugmodejob.h"
-#include "kdebugsettingsloadingcategories.h"
 #include "kdebugsettings_debug.h"
-#include "saverulesjob.h"
+#include "kdebugsettingsloadingcategories.h"
 #include "kdebugsettingsutil.h"
+#include "saverulesjob.h"
 
 ChangeDebugModeJob::ChangeDebugModeJob()
 {
@@ -129,7 +129,8 @@ void ChangeDebugModeJob::setLoggingCategoriesName(const QStringList &loggingCate
 
 bool ChangeDebugModeJob::debugModeIsValid(const QString &value) const
 {
-    if (value == QLatin1String("Full") || value == QLatin1String("Info") || value == QLatin1String("Warning") || value == QLatin1String("Critical") || value == QLatin1String("Off")) {
+    if (value == QLatin1String("Full") || value == QLatin1String("Info") || value == QLatin1String("Warning") || value == QLatin1String("Critical")
+        || value == QLatin1String("Off")) {
         return true;
     }
     return false;
