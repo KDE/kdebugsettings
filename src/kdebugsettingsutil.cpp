@@ -12,6 +12,9 @@
 #include <QFile>
 #include <QRegularExpression>
 #include <QStandardPaths>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QTextCodec>
+#endif
 
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QString &filename)
 {
@@ -51,7 +54,11 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
     } else {
         QString data;
         QTextStream ts(&file);
-        ts.setCodec("ISO-8859-1");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        ts.setCodec(QTextCodec::codecForName("ISO-8859-1"));
+#else
+        ts.setEncoding(QStringConverter::Encoding::Latin1);
+#endif
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
             const RenameCategory category = parseRenameCategory(data, filename);
@@ -189,7 +196,11 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
     } else {
         QString data;
         QTextStream ts(&file);
-        ts.setCodec("ISO-8859-1");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        ts.setCodec(QTextCodec::codecForName("ISO-8859-1"));
+#else
+        ts.setEncoding(QStringConverter::Encoding::Latin1);
+#endif
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
             const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
@@ -223,7 +234,11 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
     } else {
         QString data;
         QTextStream ts(&file);
-        ts.setCodec("ISO-8859-1");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        ts.setCodec(QTextCodec::codecForName("ISO-8859-1"));
+#else
+        ts.setEncoding(QStringConverter::Encoding::Latin1);
+#endif
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
             const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
