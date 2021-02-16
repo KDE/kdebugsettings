@@ -20,7 +20,7 @@ public:
     void setRules(const QString &rules);
 
 private:
-    EnvironmentPlainTextEdit *mRichTextEdit = nullptr;
+    EnvironmentPlainTextEdit *const mRichTextEdit;
 };
 
 #endif // ENVIRONMENTSETTINGSRULESPAGE_H

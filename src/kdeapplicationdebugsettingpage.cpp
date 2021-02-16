@@ -16,13 +16,16 @@
 
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
+    , mTreeListWidget(new KDEApplicationTreeListWidget(this))
+    , mTreeListWidgetSearchLine(new KTreeWidgetSearchLine(this, mTreeListWidget))
+    , mEnableDebug(new QPushButton(i18n("Enable All Debug"), this))
+    , mTurnOffDebug(new QPushButton(i18n("Turn Off Debug"), this))
+    , mTurnOffAllMessages(new QPushButton(i18n("Turn Off All Messages"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    mTreeListWidget = new KDEApplicationTreeListWidget(this);
     mTreeListWidget->setObjectName(QStringLiteral("listwidget"));
 
-    mTreeListWidgetSearchLine = new KTreeWidgetSearchLine(this, mTreeListWidget);
     mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
     mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
     mTreeListWidgetSearchLine->setSearchColumns(mTreeListWidget->searchColumns());
@@ -33,17 +36,14 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     auto buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
-    mEnableDebug = new QPushButton(i18n("Enable All Debug"), this);
     mEnableDebug->setObjectName(QStringLiteral("selectall"));
     buttonLayout->addWidget(mEnableDebug);
     connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAllDebug);
 
-    mTurnOffDebug = new QPushButton(i18n("Turn Off Debug"), this);
     mTurnOffDebug->setObjectName(QStringLiteral("deselectall"));
     buttonLayout->addWidget(mTurnOffDebug);
     connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllDebug);
 
-    mTurnOffAllMessages = new QPushButton(i18n("Turn Off All Messages"), this);
     mTurnOffAllMessages->setObjectName(QStringLiteral("deselectallmessage"));
     buttonLayout->addWidget(mTurnOffAllMessages);
     connect(mTurnOffAllMessages, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllMessages);

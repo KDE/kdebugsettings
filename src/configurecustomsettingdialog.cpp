@@ -15,11 +15,11 @@
 
 ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     : QDialog(parent)
+    , mCustomSettingWidget(new ConfigureCustomSettingWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Add custom rule"));
 
-    mCustomSettingWidget = new ConfigureCustomSettingWidget(this);
     mCustomSettingWidget->setObjectName(QStringLiteral("customsettingwidget"));
     mainLayout->addWidget(mCustomSettingWidget);
 

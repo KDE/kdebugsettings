@@ -23,7 +23,7 @@ public:
     Q_REQUIRED_RESULT QString rule() const;
 
 private:
-    ConfigureCustomSettingWidget *mCustomSettingWidget = nullptr;
+    ConfigureCustomSettingWidget *const mCustomSettingWidget;
 };
 
 #endif // CONFIGURECUSTOMSETTINGDIALOG_H

@@ -13,11 +13,11 @@
 
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     : QWidget(parent)
+    , mRichTextEdit(new EnvironmentPlainTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     auto lab = new QLabel(i18n("Rules:"), this);
     lab->setObjectName(QStringLiteral("label"));
-    mRichTextEdit = new EnvironmentPlainTextEdit(this);
     mRichTextEdit->setReadOnly(true);
     mRichTextEdit->setObjectName(QStringLiteral("richtext"));
     mainLayout->addWidget(lab);

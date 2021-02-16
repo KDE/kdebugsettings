@@ -36,11 +36,11 @@ private:
     void slotDeselectAllDebug();
     void slotDeselectAllMessages();
 
-    KDEApplicationTreeListWidget *mTreeListWidget = nullptr;
-    KTreeWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
-    QPushButton *mEnableDebug = nullptr;
-    QPushButton *mTurnOffDebug = nullptr;
-    QPushButton *mTurnOffAllMessages = nullptr;
+    KDEApplicationTreeListWidget *const mTreeListWidget;
+    KTreeWidgetSearchLine *const mTreeListWidgetSearchLine;
+    QPushButton *const mEnableDebug;
+    QPushButton *const mTurnOffDebug;
+    QPushButton *const mTurnOffAllMessages;
 };
 
 #endif // KDEAPPLICATIONDEBUGSETTINGPAGE_H

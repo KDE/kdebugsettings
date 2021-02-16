@@ -29,9 +29,9 @@ Q_SIGNALS:
 private:
     void slotTextChanged(const QString &);
 
-    KLineEdit *mCategoryLineEdit = nullptr;
-    QCheckBox *mEnableCategory = nullptr;
-    CategoryTypeComboBox *mCategoryType = nullptr;
+    KLineEdit *const mCategoryLineEdit;
+    QCheckBox *const mEnableCategory;
+    CategoryTypeComboBox *const mCategoryType;
 };
 
 #endif // CONFIGURECUSTOMSETTINGWIDGET_H
