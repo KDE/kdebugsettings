@@ -7,7 +7,7 @@ cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.14.0")
-set(KF5_MIN_VERSION "5.76.0")
+set(KF5_MIN_VERSION "5.79.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 
@@ -25,9 +25,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     ItemViews
     Completion)
 include(FeatureSummary)
-if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
-   include(KDEGitCommitHooks)
-endif()
+include(KDEGitCommitHooks)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
 include(KDEInstallDirs)
@@ -72,7 +70,5 @@ endif()
 ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 install( FILES data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
-if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
-    kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
-endif()
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
