@@ -29,10 +29,10 @@ private:
     void slotEditRule();
     void updateButtons();
 
-    QListWidget *mListWidget = nullptr;
-    QPushButton *mAddRule = nullptr;
-    QPushButton *mEditRule = nullptr;
-    QPushButton *mRemoveRule = nullptr;
+    QListWidget *const mListWidget;
+    QPushButton *const mAddRule;
+    QPushButton *const mEditRule;
+    QPushButton *const mRemoveRule;
 };
 
 #endif // CUSTOMDEBUGSETTINGSPAGE_H

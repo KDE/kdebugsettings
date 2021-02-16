@@ -20,6 +20,10 @@
 
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
+    , mListWidget(new QListWidget(this))
+    , mAddRule(new QPushButton(i18n("Add..."), this))
+    , mEditRule(new QPushButton(i18n("Edit..."), this))
+    , mRemoveRule(new QPushButton(i18n("Remove..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
 
@@ -34,7 +38,6 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     auto vbox = new QVBoxLayout;
     horizontalLayout->addLayout(vbox);
 
-    mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
     mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
@@ -48,17 +51,14 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
-    mAddRule = new QPushButton(i18n("Add..."), this);
     mAddRule->setObjectName(QStringLiteral("add_rule"));
     buttonLayout->addWidget(mAddRule);
     connect(mAddRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotAddRule);
 
-    mEditRule = new QPushButton(i18n("Edit..."), this);
     mEditRule->setObjectName(QStringLiteral("edit_rule"));
     buttonLayout->addWidget(mEditRule);
     connect(mEditRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotEditRule);
 
-    mRemoveRule = new QPushButton(i18n("Remove..."), this);
     mRemoveRule->setObjectName(QStringLiteral("remove_rule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch();
