@@ -28,6 +28,7 @@ private:
     void slotAddRule();
     void slotEditRule();
     void updateButtons();
+    void slotCustomContextMenu(const QPoint &pos);
 
     QListWidget *const mListWidget;
     QPushButton *const mAddRule;

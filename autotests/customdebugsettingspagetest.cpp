@@ -33,6 +33,7 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
     QVERIFY(listWidget);
     QCOMPARE(listWidget->selectionMode(), QAbstractItemView::MultiSelection);
     QCOMPARE(listWidget->count(), 0);
+    QCOMPARE(listWidget->contextMenuPolicy(), Qt::CustomContextMenu);
 
     auto searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
     QVERIFY(searchLine);
