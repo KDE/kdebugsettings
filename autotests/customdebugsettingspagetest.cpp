@@ -31,7 +31,7 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 
     auto listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
     QVERIFY(listWidget);
-    QCOMPARE(listWidget->selectionMode(), QAbstractItemView::MultiSelection);
+    QCOMPARE(listWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
     QCOMPARE(listWidget->count(), 0);
     QCOMPARE(listWidget->contextMenuPolicy(), Qt::CustomContextMenu);
 

@@ -40,7 +40,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     horizontalLayout->addLayout(vbox);
 
     mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
-    mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
+    mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
