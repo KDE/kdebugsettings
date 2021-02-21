@@ -31,6 +31,7 @@ Q_SIGNALS:
 private:
     void init();
     QStringList mGroupNames;
+    Q_REQUIRED_RESULT QStringList defaultReadableGroupPath() const;
 };
 
 #endif // LOADGROUPMENU_H
