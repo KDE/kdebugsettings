@@ -68,6 +68,7 @@ if (BUILD_TESTING)
     add_subdirectory( autotests )
 endif()
 ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+add_subdirectory(data/groups)
 
 install( FILES data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
