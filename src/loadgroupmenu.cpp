@@ -9,6 +9,7 @@
 
 #include <KLocalizedString>
 
+#include <QDebug>
 #include <QDir>
 #include <QStandardPaths>
 
@@ -36,31 +37,32 @@ QString LoadGroupMenu::defaultWritableGroupPath()
 
 QStringList LoadGroupMenu::defaultReadableGroupPath() const
 {
-    return QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, QLatin1String("/groups"), QStandardPaths::LocateFile);
+    return QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, QLatin1String("/groups/"), QStandardPaths::LocateDirectory);
 }
 
 void LoadGroupMenu::init()
 {
     // Load all ?
     mGroupNames.clear();
-    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
+    const QStringList groupPath = defaultReadableGroupPath();
     if (groupPath.isEmpty()) {
         setEnabled(false);
         return;
     }
-    QDir dir(groupPath);
-    mGroupNames = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
-    if (mGroupNames.isEmpty()) {
+    for (const QString &dirName : groupPath) {
+        QDir dir(dirName);
+        mGroupNames = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+        for (const QString &file : mGroupNames) {
+            QAction *act = addAction(file);
+            const QString fullPath = dirName + QLatin1Char('/') + file;
+            connect(act, &QAction::triggered, this, [this, fullPath] {
+                Q_EMIT loadGroupRequested(fullPath);
+            });
+        }
+    }
+    if (isEmpty()) {
         setEnabled(false);
         return;
-    }
-    setEnabled(true);
-    for (const QString &file : mGroupNames) {
-        QAction *act = addAction(file);
-        const QString fullPath = groupPath + QLatin1Char('/') + file;
-        connect(act, &QAction::triggered, this, [this, fullPath] {
-            Q_EMIT loadGroupRequested(fullPath);
-        });
     }
     addSeparator();
     QAction *manageGroup = addAction(i18n("Manage Group"));
