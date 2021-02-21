@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEBUGSETTINGSLOADINGCATEGORIES_H
-#define KDEBUGSETTINGSLOADINGCATEGORIES_H
+#pragma once
 
 #include "kdeloggingcategory.h"
 #include "libkdebugsettings_export.h"
@@ -41,4 +40,3 @@ private:
     bool mFoundOverrideRule = false;
 };
 
-#endif // KDEBUGSETTINGSLOADINGCATEGORIES_H

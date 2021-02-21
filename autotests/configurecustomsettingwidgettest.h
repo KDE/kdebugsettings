@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CONFIGURECUSTOMSETTINGWIDGETTEST_H
-#define CONFIGURECUSTOMSETTINGWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldEmitSignalWhenWeChangeLogName();
 };
 
-#endif // CONFIGURECUSTOMSETTINGWIDGETTEST_H

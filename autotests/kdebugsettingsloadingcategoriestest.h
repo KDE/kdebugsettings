@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEBUGSETTINGSLOADINGCATEGORIESTEST_H
-#define KDEBUGSETTINGSLOADINGCATEGORIESTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // KDEBUGSETTINGSLOADINGCATEGORIES_H

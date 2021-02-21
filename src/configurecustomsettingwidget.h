@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CONFIGURECUSTOMSETTINGWIDGET_H
-#define CONFIGURECUSTOMSETTINGWIDGET_H
+#pragma once
 
 #include "libkdebugsettings_private_export.h"
 #include <QWidget>
@@ -34,4 +33,3 @@ private:
     CategoryTypeComboBox *const mCategoryType;
 };
 
-#endif // CONFIGURECUSTOMSETTINGWIDGET_H

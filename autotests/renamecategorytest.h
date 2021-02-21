@@ -5,8 +5,7 @@
 
 */
 
-#ifndef RENAMECATEGORYTEST_H
-#define RENAMECATEGORYTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldParseRenameLine();
 };
 
-#endif // RENAMECATEGORYTEST_H

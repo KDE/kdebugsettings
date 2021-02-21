@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LIBKDEBUGSETTINGSPRIVATE_EXPORT_H
-#define LIBKDEBUGSETTINGSPRIVATE_EXPORT_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT
 #endif
 
-#endif

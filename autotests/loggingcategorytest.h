@@ -5,8 +5,7 @@
 
 */
 
-#ifndef LOGGINGCATEGORYTEST_H
-#define LOGGINGCATEGORYTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldCreateRules_data();
 };
 
-#endif // LOGGINGCATEGORYTEST_H

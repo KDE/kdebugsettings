@@ -5,8 +5,7 @@
 
 */
 
-#ifndef GROUPMANAGEMENTDIALOGTEST_H
-#define GROUPMANAGEMENTDIALOGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // GROUPMANAGEMENTDIALOGTEST_H

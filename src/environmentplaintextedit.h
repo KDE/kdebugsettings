@@ -5,8 +5,7 @@
 
 */
 
-#ifndef ENVIRONMENTPLAINTEXTEDIT_H
-#define ENVIRONMENTPLAINTEXTEDIT_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include <QTextEdit>
@@ -29,4 +28,3 @@ private:
     QColor mTextColor;
 };
 
-#endif // ENVIRONMENTPLAINTEXTEDIT_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEAPPLICATIONTREELISTWIDGET_H
-#define KDEAPPLICATIONTREELISTWIDGET_H
+#pragma once
 
 #include "libkdebugsettings_private_export.h"
 #include "loggingcategory.h"
@@ -57,4 +56,3 @@ private:
     QString generateToolTip(const LoggingCategory &cat);
 };
 
-#endif // KDEAPPLICATIONTREELISTWIDGET_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CATEGORYWARNING_H
-#define CATEGORYWARNING_H
+#pragma once
 
 #include "libkdebugsettings_private_export.h"
 #include <KMessageWidget>
@@ -18,4 +17,3 @@ public:
     ~CategoryWarning() override;
 };
 
-#endif // CATEGORYWARNING_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef ENVIRONMENTSETTINGSRULESPAGE_H
-#define ENVIRONMENTSETTINGSRULESPAGE_H
+#pragma once
 
 #include "libkdebugsettings_private_export.h"
 #include <QWidget>
@@ -23,4 +22,3 @@ private:
     EnvironmentPlainTextEdit *const mRichTextEdit;
 };
 
-#endif // ENVIRONMENTSETTINGSRULESPAGE_H

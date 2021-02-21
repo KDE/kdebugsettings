@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEBUGSETTINGSDIALOG_H
-#define KDEBUGSETTINGSDIALOG_H
+#pragma once
 
 #include "kdebugsettingsloadingcategories.h"
 #include "kdeloggingcategory.h"
@@ -58,4 +57,3 @@ private:
     LoadToolButton *mLoadToolButton = nullptr;
 };
 
-#endif // KDEBUGSETTINGSDIALOG_H

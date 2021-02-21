@@ -5,8 +5,7 @@
 
 */
 
-#ifndef LOADCATEGORIESJOBTEST_H
-#define LOADCATEGORIESJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldReadRules();
 };
 
-#endif // LOADCATEGORIESJOBTEST_H

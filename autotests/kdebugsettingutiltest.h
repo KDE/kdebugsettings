@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEBUGSETTINGUTILTEST_H
-#define KDEBUGSETTINGUTILTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -33,4 +32,3 @@ private Q_SLOTS:
     void shouldConvertCategoryTypeFromString();
 };
 
-#endif // KDEBUGSETTINGUTILTEST_H

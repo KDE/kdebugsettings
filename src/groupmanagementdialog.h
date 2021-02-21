@@ -5,8 +5,7 @@
 
 */
 
-#ifndef GROUPMANAGEMENTDIALOG_H
-#define GROUPMANAGEMENTDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -28,4 +27,3 @@ private:
     GroupManagementWidget *const mGroupManagementWidget;
 };
 
-#endif // GROUPMANAGEMENTDIALOG_H

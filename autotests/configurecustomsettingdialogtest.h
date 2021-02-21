@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CONFIGURECUSTOMSETTINGDIALOGTEST_H
-#define CONFIGURECUSTOMSETTINGDIALOGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // CONFIGURECUSTOMSETTINGDIALOGTEST_H

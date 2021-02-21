@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CHANGEDEBUGMODEJOB_H
-#define CHANGEDEBUGMODEJOB_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
@@ -39,4 +38,3 @@ private:
     bool mWithoutArguments = false;
 };
 
-#endif // CHANGEDEBUGMODEJOB_H

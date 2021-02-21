@@ -5,8 +5,7 @@
 
 */
 
-#ifndef SAVETOOLBUTTON_H
-#define SAVETOOLBUTTON_H
+#pragma once
 
 #include <QToolButton>
 
@@ -22,4 +21,3 @@ Q_SIGNALS:
     void saveAsGroup();
 };
 
-#endif // SAVETOOLBUTTON_H

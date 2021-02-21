@@ -5,8 +5,7 @@
 
 */
 
-#ifndef LOADCATEGORIESJOB_H
-#define LOADCATEGORIESJOB_H
+#pragma once
 
 #include "kdeloggingcategory.h"
 #include "libkdebugsettings_private_export.h"
@@ -37,4 +36,3 @@ private:
     bool mFoundOverrideRule = false;
 };
 
-#endif // LOADCATEGORIESJOB_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 
 */
-#ifndef LOGGINGCATEGORY_H
-#define LOGGINGCATEGORY_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include <QDebug>
@@ -45,4 +44,3 @@ Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(LoggingCategory)
 Q_DECLARE_METATYPE(LoggingCategory::LoggingType)
 
-#endif // LOGGINGCATEGORY_H

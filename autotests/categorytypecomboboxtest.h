@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CATEGORYTYPECOMBOBOXTEST_H
-#define CATEGORYTYPECOMBOBOXTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -27,4 +26,3 @@ private Q_SLOTS:
     void shouldVerifyThatDefaultCategoryIsCorrect();
 };
 
-#endif // CATEGORYTYPECOMBOBOXTEST_H

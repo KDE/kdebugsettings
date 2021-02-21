@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CUSTOMDEBUGSETTINGSPAGETEST_H
-#define CUSTOMDEBUGSETTINGSPAGETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // CUSTOMDEBUGSETTINGSPAGETEST_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEAPPLICATIONDEBUGSETTINGPAGE_H
-#define KDEAPPLICATIONDEBUGSETTINGPAGE_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
@@ -43,4 +42,3 @@ private:
     QPushButton *const mTurnOffAllMessages;
 };
 
-#endif // KDEAPPLICATIONDEBUGSETTINGPAGE_H

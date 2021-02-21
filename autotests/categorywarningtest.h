@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CATEGORYWARNINGTEST_H
-#define CATEGORYWARNINGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // CATEGORYWARNINGTEST_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CUSTOMDEBUGSETTINGSPAGE_H
-#define CUSTOMDEBUGSETTINGSPAGE_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
@@ -36,4 +35,3 @@ private:
     QPushButton *const mRemoveRule;
 };
 
-#endif // CUSTOMDEBUGSETTINGSPAGE_H

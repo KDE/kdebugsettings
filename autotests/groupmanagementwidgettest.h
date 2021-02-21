@@ -5,8 +5,7 @@
 
 */
 
-#ifndef GROUPMANAGEMENTWIDGETTEST_H
-#define GROUPMANAGEMENTWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // GROUPMANAGEMENTWIDGETTEST_H

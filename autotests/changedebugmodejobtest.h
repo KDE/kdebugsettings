@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CHANGEDEBUGMODEJOBTEST_H
-#define CHANGEDEBUGMODEJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldConvertToLoggingType();
 };
 
-#endif // CHANGEDEBUGMODEJOBTEST_H

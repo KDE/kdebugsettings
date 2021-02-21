@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEBUGSETTINGSUTIL_H
-#define KDEBUGSETTINGSUTIL_H
+#pragma once
 
 #include "kdeloggingcategory.h"
 #include "libkdebugsettings_export.h"
@@ -88,4 +87,3 @@ Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LineLoggingQtCategory::LoggingType)
 
-#endif // KDEBUGSETTINGSUTIL_H

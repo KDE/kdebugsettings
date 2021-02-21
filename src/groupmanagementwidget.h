@@ -5,8 +5,7 @@
 
 */
 
-#ifndef GROUPMANAGEMENTWIDGET_H
-#define GROUPMANAGEMENTWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -33,4 +32,3 @@ private:
     void renameGroup(QListWidgetItem *item);
 };
 
-#endif // GROUPMANAGEMENTWIDGET_H

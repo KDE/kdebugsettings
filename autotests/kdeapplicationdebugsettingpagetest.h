@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEAPPLICATIONDEBUGSETTINGPAGETEST_H
-#define KDEAPPLICATIONDEBUGSETTINGPAGETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // KDEAPPLICATIONDEBUGSETTINGPAGETEST_H

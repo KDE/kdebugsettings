@@ -5,8 +5,7 @@
 
 */
 
-#ifndef LOADTOOLBUTTONTEST_H
-#define LOADTOOLBUTTONTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // LOADTOOLBUTTONTEST_H

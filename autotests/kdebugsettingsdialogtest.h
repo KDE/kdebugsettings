@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEBUGSETTINGSDIALOGTEST_H
-#define KDEBUGSETTINGSDIALOGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // KDEBUGSETTINGSDIALOGTEST_H

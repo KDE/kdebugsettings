@@ -5,8 +5,7 @@
 
 */
 
-#ifndef SAVETOOLBUTTONTEST_H
-#define SAVETOOLBUTTONTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // SAVETOOLBUTTONTEST_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CONFIGURECUSTOMSETTINGDIALOG_H
-#define CONFIGURECUSTOMSETTINGDIALOG_H
+#pragma once
 
 #include "kdebugsettingsdialog.h"
 #include "libkdebugsettings_export.h"
@@ -26,4 +25,3 @@ private:
     ConfigureCustomSettingWidget *const mCustomSettingWidget;
 };
 
-#endif // CONFIGURECUSTOMSETTINGDIALOG_H

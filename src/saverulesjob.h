@@ -5,8 +5,7 @@
 
 */
 
-#ifndef SAVERULESJOB_H
-#define SAVERULESJOB_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
@@ -31,4 +30,3 @@ private:
     QString mFileName;
 };
 
-#endif // SAVERULESJOB_H

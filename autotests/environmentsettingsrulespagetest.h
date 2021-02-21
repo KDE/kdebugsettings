@@ -5,8 +5,7 @@
 
 */
 
-#ifndef ENVIRONMENTSETTINGSRULESPAGETEST_H
-#define ENVIRONMENTSETTINGSRULESPAGETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -22,4 +21,3 @@ private Q_SLOTS:
     void shouldSetRules();
 };
 
-#endif // ENVIRONMENTSETTINGSRULESPAGETEST_H

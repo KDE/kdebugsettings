@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CATEGORYTYPECOMBOBOX_H
-#define CATEGORYTYPECOMBOBOX_H
+#pragma once
 
 #include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
@@ -31,4 +30,3 @@ private:
     LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
 };
 
-#endif // CATEGORYTYPECOMBOBOX_H

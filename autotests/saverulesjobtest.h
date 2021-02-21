@@ -5,8 +5,7 @@
 
 */
 
-#ifndef SAVERULESJOBTEST_H
-#define SAVERULESJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldSaveLoadRules();
 };
 
-#endif // SAVERULESJOBTEST_H

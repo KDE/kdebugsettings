@@ -5,8 +5,7 @@
 
 */
 
-#ifndef LOADGROUPMENU_H
-#define LOADGROUPMENU_H
+#pragma once
 
 #include "libkdebugsettings_private_export.h"
 #include <QMenu>
@@ -34,4 +33,3 @@ private:
     Q_REQUIRED_RESULT QStringList defaultReadableGroupPath() const;
 };
 
-#endif // LOADGROUPMENU_H

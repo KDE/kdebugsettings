@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDELOGGINGCATEGORY_H
-#define KDELOGGINGCATEGORY_H
+#pragma once
 
 #include "libkdebugsettings_private_export.h"
 #include <QDebug>
@@ -29,4 +28,3 @@ LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT QDebug operator<<(QDebug debug, const KdeLo
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(KdeLoggingCategory)
 
-#endif // KDELOGGINGCATEGORY_H

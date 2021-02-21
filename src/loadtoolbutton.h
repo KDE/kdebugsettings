@@ -5,8 +5,7 @@
 
 */
 
-#ifndef LOADTOOLBUTTON_H
-#define LOADTOOLBUTTON_H
+#pragma once
 
 #include <QToolButton>
 
@@ -32,4 +31,3 @@ private:
     LoadGroupMenu *const mLoadMenu;
 };
 
-#endif // LOADTOOLBUTTON_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef KDEAPPLICATIONTREELISTWIDGETTEST_H
-#define KDEAPPLICATIONTREELISTWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // KDEAPPLICATIONTREELISTWIDGETTEST_H
