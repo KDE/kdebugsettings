@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
-#include <QToolButton>
 
 #include <QDesktopServices>
 #include <QDialogButtonBox>

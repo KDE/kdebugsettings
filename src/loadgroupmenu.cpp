@@ -9,7 +9,6 @@
 
 #include <KLocalizedString>
 
-#include <QDebug>
 #include <QDir>
 #include <QStandardPaths>
 
