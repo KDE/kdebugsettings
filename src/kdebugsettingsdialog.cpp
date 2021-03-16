@@ -206,7 +206,7 @@ void KDebugSettingsDialog::slotInsertCategories()
 void KDebugSettingsDialog::slotSaveAsGroup()
 {
     const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
-    const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name"));
+    const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name:"));
     const QString trimmedName = name.trimmed();
     if (!trimmedName.isEmpty()) {
         if (mLoadToolButton->groupNames().contains(trimmedName)) {
@@ -215,6 +215,8 @@ void KDebugSettingsDialog::slotSaveAsGroup()
             saveRules(groupPath + QLatin1Char('/') + trimmedName, true);
             Q_EMIT updateLoadGroupMenu();
         }
+    } else {
+        KMessageBox::error(this, i18n("Can not save as empty name. Please use a new one."));
     }
 }
 
