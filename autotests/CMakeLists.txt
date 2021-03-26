@@ -10,9 +10,9 @@ macro(add_unittest _source _additionalsource)
     add_test(NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(kdebugsettings-${_name})
     target_link_libraries( ${_name}
-        Qt5::Test
+        Qt::Test
         KF5::I18n
-        Qt5::Widgets
+        Qt::Widgets
         KF5::ConfigCore
         KF5::WidgetsAddons
         KF5::ItemViews
