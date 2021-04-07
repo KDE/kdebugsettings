@@ -44,7 +44,7 @@ GroupManagementDialog::~GroupManagementDialog()
 
 void GroupManagementDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myGroupManagementDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myGroupManagementDialogGroupName);
     const QSize sizeDialog = group.readEntry("Size", QSize(400, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
@@ -53,6 +53,6 @@ void GroupManagementDialog::readConfig()
 
 void GroupManagementDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myGroupManagementDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myGroupManagementDialogGroupName);
     group.writeEntry("Size", size());
 }
