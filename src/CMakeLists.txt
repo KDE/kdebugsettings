@@ -1,9 +1,9 @@
 include_directories(${CMAKE_BINARY_DIR})
 
-set(kdebugsettings_debug_SRCS)
+add_library(libkdebugsettings SHARED)
 
-ecm_qt_declare_logging_category(kdebugsettings_debug_SRCS HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
-set(kdebugsettings_LIB_SRCS
+ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
+target_sources(libkdebugsettings PRIVATE
     kdebugsettingsloadingcategories.cpp
     kdeloggingcategory.cpp
     renamecategory.cpp
@@ -29,11 +29,8 @@ set(kdebugsettings_LIB_SRCS
     savetoolbutton.cpp
     groupmanagementdialog.cpp
     groupmanagementwidget.cpp
-
-    ${kdebugsettings_debug_SRCS}
     )
 
-add_library(libkdebugsettings ${kdebugsettings_LIB_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libkdebugsettings PROPERTIES UNITY_BUILD ON)
 endif()
@@ -55,12 +52,7 @@ set_target_properties(libkdebugsettings
 install(TARGETS libkdebugsettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
-set(kdebugsettings_SRCS 
-   main.cpp 
-   ${kdebugsettings_debug_SRCS}
-   )
-   
-add_executable(kdebugsettings ${kdebugsettings_SRCS})
+add_executable(kdebugsettings main.cpp)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kdebugsettings PROPERTIES UNITY_BUILD ON)
 endif()
