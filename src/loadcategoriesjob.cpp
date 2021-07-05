@@ -79,7 +79,7 @@ void LoadCategoriesJob::start()
     const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
     QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories;
     for (KDebugSettingsUtil::LoadLoggingCategory cat : originalQtCategories) { // clazy:exclude=range-loop
-        for (const RenameCategory &catRenamed : qAsConst(mRenameCategories)) {
+        for (const RenameCategory &catRenamed : std::as_const(mRenameCategories)) {
             if (cat.logName == catRenamed.originalName) {
                 cat.logName = catRenamed.newName;
                 break;
@@ -92,7 +92,7 @@ void LoadCategoriesJob::start()
         KdeLoggingCategory kdeCat = mCategories.at(i);
 
         bool foundInConfigFile = false;
-        for (const KDebugSettingsUtil::LoadLoggingCategory &cat : qAsConst(qtCategories)) {
+        for (const KDebugSettingsUtil::LoadLoggingCategory &cat : std::as_const(qtCategories)) {
             if (cat.logName == kdeCat.categoryName) {
                 LoggingCategory tmp;
                 LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
@@ -128,7 +128,7 @@ void LoadCategoriesJob::start()
     }
 
     // qDebug()<<" KEEP "<< qtCategories.count();
-    for (const KDebugSettingsUtil::LoadLoggingCategory &cat : qAsConst(qtCategories)) {
+    for (const KDebugSettingsUtil::LoadLoggingCategory &cat : std::as_const(qtCategories)) {
         QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
         while (i.hasNext()) {
             i.next();

@@ -48,7 +48,7 @@ bool ChangeDebugModeJob::start()
             cat.loggingType = type;
             customCategories[i] = cat;
         } else {
-            for (const QString &categoryName : qAsConst(mLoggingCategoriesName)) {
+            for (const QString &categoryName : std::as_const(mLoggingCategoriesName)) {
                 if (cat.categoryName.contains(categoryName)) {
                     cat.loggingType = type;
                     customCategories[i] = cat;
@@ -63,7 +63,7 @@ bool ChangeDebugModeJob::start()
             cat.loggingType = type;
             qtKdeCategories[i] = cat;
         } else {
-            for (const QString &categoryName : qAsConst(mLoggingCategoriesName)) {
+            for (const QString &categoryName : std::as_const(mLoggingCategoriesName)) {
                 if (cat.categoryName.contains(categoryName)) {
                     cat.loggingType = type;
                     qtKdeCategories[i] = cat;

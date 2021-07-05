@@ -190,7 +190,7 @@ void KDebugSettingsDialog::slotInsertCategories()
     if (!path.isEmpty()) {
         const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategoriesList);
         LoggingCategory::List newCategories;
-        for (const KdeLoggingCategory &cat : qAsConst(insertCategoriesList)) {
+        for (const KdeLoggingCategory &cat : std::as_const(insertCategoriesList)) {
             LoggingCategory loggingCat;
             loggingCat.description = cat.description;
             loggingCat.categoryName = cat.categoryName;

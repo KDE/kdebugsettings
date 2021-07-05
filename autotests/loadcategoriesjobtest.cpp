@@ -208,7 +208,7 @@ void LoadCategoriesJobTest::shouldReadRules()
         }
 
         qDebug() << "AFTER";
-        for (const LoggingCategory &cat : qAsConst(customcategories)) {
+        for (const LoggingCategory &cat : std::as_const(customcategories)) {
             qDebug() << "customcategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type "
                      << cat.loggingType;
         }
@@ -225,7 +225,7 @@ void LoadCategoriesJobTest::shouldReadRules()
         }
 
         qDebug() << "AFTER";
-        for (const LoggingCategory &cat : qAsConst(qtkdecategories)) {
+        for (const LoggingCategory &cat : std::as_const(qtkdecategories)) {
             qDebug() << "qtKdeCategories cat." << cat.description << " logname" << cat.categoryName << " enabled " << cat.enabled << "type " << cat.loggingType;
         }
     }
