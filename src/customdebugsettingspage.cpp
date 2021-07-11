@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QHBoxLayout>
+#include <QKeyEvent>
 #include <QLabel>
 #include <QListWidget>
 #include <QMenu>
@@ -45,10 +46,10 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
     connect(mListWidget, &QListWidget::customContextMenuRequested, this, &CustomDebugSettingsPage::slotCustomContextMenu);
-    auto searchLine = new KListWidgetSearchLine(this, mListWidget);
-    searchLine->setObjectName(QStringLiteral("searchline"));
-    searchLine->setPlaceholderText(i18n("Search..."));
-    vbox->addWidget(searchLine);
+    mTreeListWidgetSearchLine = new KListWidgetSearchLine(this, mListWidget);
+    mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
+    mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
+    vbox->addWidget(mTreeListWidgetSearchLine);
     vbox->addWidget(mListWidget);
 
     auto buttonLayout = new QVBoxLayout;
@@ -67,10 +68,23 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     buttonLayout->addStretch();
     connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRules);
     updateButtons();
+    mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage()
 {
+}
+
+bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
+        auto key = static_cast<QKeyEvent *>(event);
+        if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
+            event->accept();
+            return true;
+        }
+    }
+    return QWidget::eventFilter(obj, event);
 }
 
 void CustomDebugSettingsPage::slotCustomContextMenu(const QPoint &pos)

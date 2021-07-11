@@ -12,6 +12,7 @@
 #include <QWidget>
 class QListWidget;
 class QPushButton;
+class KListWidgetSearchLine;
 class LIBKDEBUGSETTINGS_EXPORT CustomDebugSettingsPage : public QWidget
 {
     Q_OBJECT
@@ -21,6 +22,9 @@ public:
 
     void fillList(const LoggingCategory::List &list);
     Q_REQUIRED_RESULT LoggingCategory::List rules() const;
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     void slotRemoveRules();
@@ -33,5 +37,6 @@ private:
     QPushButton *const mAddRule;
     QPushButton *const mEditRule;
     QPushButton *const mRemoveRule;
+    KListWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
 };
 
