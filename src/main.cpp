@@ -38,17 +38,17 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 
-    QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
+    const QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
     parser.addOption(testModeOption);
 
-    QCommandLineOption switchFullDebugOption(QStringLiteral("enable-full-debug"), i18n("Activate full debug for all modules."));
+    const QCommandLineOption switchFullDebugOption(QStringLiteral("enable-full-debug"), i18n("Activate full debug for all modules."));
     parser.addOption(switchFullDebugOption);
-    QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
+    const QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
     parser.addOption(switchOffDebugOption);
 
-    QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"),
-                                                i18n("Change debug mode as console (in console)"),
-                                                QStringLiteral("Full|Info|Warning|Critical|Off"));
+    const QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"),
+                                                      i18n("Change debug mode as console (in console)"),
+                                                      QStringLiteral("Full|Info|Warning|Critical|Off"));
     parser.addOption(changeDebugSettingOption);
     parser.addPositionalArgument(QStringLiteral("logging category name"),
                                  i18n("Specify logging category name that you want to change debug mode (in console)"));
