@@ -91,13 +91,13 @@ void CustomDebugSettingsPage::slotCustomContextMenu(const QPoint &pos)
 {
     QMenu menu(this);
     const int selectedItemCount{mListWidget->selectedItems().count()};
-    menu.addAction(i18n("Add Rule..."), this, &CustomDebugSettingsPage::slotAddRule);
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &CustomDebugSettingsPage::slotAddRule);
     if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Edit Rule"), this, &CustomDebugSettingsPage::slotEditRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule"), this, &CustomDebugSettingsPage::slotEditRule);
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, &CustomDebugSettingsPage::slotRemoveRules);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove Rule"), this, &CustomDebugSettingsPage::slotRemoveRules);
     }
     menu.exec(mListWidget->viewport()->mapToGlobal(pos));
 }
