@@ -37,9 +37,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/kde.categories"));
-    if (confAreasFile.isEmpty()) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Impossible to find kde.categories file";
-    } else {
+    if (!confAreasFile.isEmpty()) {
         KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategoriesList, false);
     }
 
