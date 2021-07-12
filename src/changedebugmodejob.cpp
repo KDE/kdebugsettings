@@ -42,7 +42,7 @@ bool ChangeDebugModeJob::start()
     loading.readQtLoggingFile();
     const LoggingCategory::LoggingType type = convertDebugModeToLoggingType(mDebugMode);
     LoggingCategory::List customCategories = loading.customCategories();
-    for (int i = 0; i < customCategories.count(); ++i) {
+    for (int i = 0, total = customCategories.count(); i < total; ++i) {
         LoggingCategory cat = customCategories[i];
         if (mWithoutArguments) {
             cat.loggingType = type;

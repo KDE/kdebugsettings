@@ -29,7 +29,7 @@ public:
 
 private:
     QString mCategory;
-    CategoryTypeComboBox *mCategoryTypeCombobox = nullptr;
+    CategoryTypeComboBox *const mCategoryTypeCombobox;
 };
 
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KDEApplicationTreeListWidget : public QTreeWidget
