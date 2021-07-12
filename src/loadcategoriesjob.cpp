@@ -78,7 +78,7 @@ void LoadCategoriesJob::start()
     const int number(mCategories.count());
     const QList<KDebugSettingsUtil::LoadLoggingCategory> originalQtCategories = KDebugSettingsUtil::readLoggingQtCategories(mFileName);
     QList<KDebugSettingsUtil::LoadLoggingCategory> qtCategories;
-    for (KDebugSettingsUtil::LoadLoggingCategory cat : originalQtCategories) { // clazy:exclude=range-loop
+    for (KDebugSettingsUtil::LoadLoggingCategory cat : originalQtCategories) { // clazy:exclude=range-loop-reference
         for (const RenameCategory &catRenamed : std::as_const(mRenameCategories)) {
             if (cat.logName == catRenamed.originalName) {
                 cat.logName = catRenamed.newName;
