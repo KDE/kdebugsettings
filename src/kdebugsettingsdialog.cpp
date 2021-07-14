@@ -206,17 +206,20 @@ void KDebugSettingsDialog::slotInsertCategories()
 void KDebugSettingsDialog::slotSaveAsGroup()
 {
     const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
-    const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name:"));
-    const QString trimmedName = name.trimmed();
-    if (!trimmedName.isEmpty()) {
-        if (mLoadToolButton->groupNames().contains(trimmedName)) {
-            KMessageBox::error(this, i18n("%1 is already used as a group name.\nPlease save as another name.", trimmedName));
+    bool ok = false;
+    const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name:"), QLineEdit::Normal, QString(), &ok);
+    if (ok) {
+        const QString trimmedName = name.trimmed();
+        if (!trimmedName.isEmpty()) {
+            if (mLoadToolButton->groupNames().contains(trimmedName)) {
+                KMessageBox::error(this, i18n("%1 is already used as a group name.\nPlease save as another name.", trimmedName));
+            } else {
+                saveRules(groupPath + QLatin1Char('/') + trimmedName, true);
+                Q_EMIT updateLoadGroupMenu();
+            }
         } else {
-            saveRules(groupPath + QLatin1Char('/') + trimmedName, true);
-            Q_EMIT updateLoadGroupMenu();
+            KMessageBox::error(this, i18n("Can not save as empty name. Please use a new one."));
         }
-    } else {
-        KMessageBox::error(this, i18n("Can not save as empty name. Please use a new one."));
     }
 }
 
