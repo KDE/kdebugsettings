@@ -12,6 +12,16 @@ set(KF5_MIN_VERSION "5.85.0")
 set(ECM_VERSION ${KF5_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
+include(FeatureSummary)
+include(KDEGitCommitHooks)
+include(ECMAddAppIcon)
+include(ECMInstallIcons)
+include(KDEInstallDirs)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDECMakeSettings)
+include(ECMAddTests)
+include(ECMQtDeclareLoggingCategory)
+include(GenerateExportHeader)
 
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
@@ -23,24 +33,10 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
     ItemViews
     Completion)
-include(FeatureSummary)
-include(KDEGitCommitHooks)
-include(ECMAddAppIcon)
-include(ECMInstallIcons)
-include(KDEInstallDirs)
-include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
-include(KDECMakeSettings)
-include(ECMAddTests)
-include(ECMQtDeclareLoggingCategory)
-include(GenerateExportHeader)
-
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
