@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
+Dependencies:
+- 'on': ['@all']
+  'require':
+    'frameworks/kcoreaddons': '@latest'
+    'frameworks/kconfig': '@latest'
+    'frameworks/kdbusadons': '@latest'
+    'frameworks/ki18n': '@latest'
+    'frameworks/extra-cmake-modules': '@latest'
+    'frameworks/kwidgetsaddons': '@latest'
+    'frameworks/kcompletion' : '@latest'
+    'frameworks/kitemviews' : '@latest'
