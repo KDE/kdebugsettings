@@ -201,6 +201,7 @@ void KDebugSettingsDialog::slotInsertCategories()
             }
         }
         mKdeApplicationSettingsPage->insertCategories(newCategories);
+        KMessageBox::information(this, i18n("Categories from file \'%1\' inserted.", path), i18n("Insert Categories"));
     }
 }
 
