@@ -29,6 +29,30 @@ target_sources(libkdebugsettings PRIVATE
     savetoolbutton.cpp
     groupmanagementdialog.cpp
     groupmanagementwidget.cpp
+    environmentplaintextedit.h
+    renamecategory.h
+    configurecustomsettingwidget.h
+    kdeapplicationtreelistwidget.h
+    saverulesjob.h
+    kdeloggingcategory.h
+    loadtoolbutton.h
+    groupmanagementwidget.h
+    loadgroupmenu.h
+    environmentsettingsrulespage.h
+    groupmanagementdialog.h
+    categorytypecombobox.h
+    libkdebugsettings_private_export.h
+    loadcategoriesjob.h
+    customdebugsettingspage.h
+    loggingcategory.h
+    categorywarning.h
+    kdebugsettingsdialog.h
+    kdeapplicationdebugsettingpage.h
+    savetoolbutton.h
+    kdebugsettingsloadingcategories.h
+    changedebugmodejob.h
+    kdebugsettingsutil.h
+    configurecustomsettingdialog.h
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
