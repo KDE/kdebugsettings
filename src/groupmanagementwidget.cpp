@@ -33,9 +33,7 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     init();
 }
 
-GroupManagementWidget::~GroupManagementWidget()
-{
-}
+GroupManagementWidget::~GroupManagementWidget() = default;
 
 void GroupManagementWidget::renameGroup(QListWidgetItem *item)
 {

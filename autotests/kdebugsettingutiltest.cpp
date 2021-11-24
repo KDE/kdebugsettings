@@ -15,9 +15,7 @@ KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)
 {
 }
 
-KDebugSettingUtilTest::~KDebugSettingUtilTest()
-{
-}
+KDebugSettingUtilTest::~KDebugSettingUtilTest() = default;
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
 {

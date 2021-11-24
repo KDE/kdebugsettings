@@ -24,9 +24,7 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     mainLayout->addWidget(mRichTextEdit);
 }
 
-EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage()
-{
-}
+EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage() = default;
 
 void EnvironmentSettingsRulesPage::setRules(const QString &rules)
 {

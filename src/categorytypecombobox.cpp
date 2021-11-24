@@ -21,9 +21,7 @@ CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
     }
 }
 
-CategoryTypeComboBox::~CategoryTypeComboBox()
-{
-}
+CategoryTypeComboBox::~CategoryTypeComboBox() = default;
 
 void CategoryTypeComboBox::restoreToDefault()
 {

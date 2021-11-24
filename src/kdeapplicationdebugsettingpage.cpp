@@ -51,9 +51,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
-KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage()
-{
-}
+KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage() = default;
 
 void KDEApplicationDebugSettingPage::forceFocus()
 {

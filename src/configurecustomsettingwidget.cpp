@@ -46,9 +46,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     categoryLayout->addWidget(mEnableCategory);
 }
 
-ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget()
-{
-}
+ConfigureCustomSettingWidget::~ConfigureCustomSettingWidget() = default;
 
 void ConfigureCustomSettingWidget::slotTextChanged(const QString &text)
 {

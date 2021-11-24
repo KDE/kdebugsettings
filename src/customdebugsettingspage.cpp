@@ -71,9 +71,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
-CustomDebugSettingsPage::~CustomDebugSettingsPage()
-{
-}
+CustomDebugSettingsPage::~CustomDebugSettingsPage() = default;
 
 bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
 {

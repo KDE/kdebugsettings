@@ -13,13 +13,9 @@
 #include <QLibraryInfo>
 #include <QStandardPaths>
 
-KDebugSettingsLoadingCategories::KDebugSettingsLoadingCategories()
-{
-}
+KDebugSettingsLoadingCategories::KDebugSettingsLoadingCategories() = default;
 
-KDebugSettingsLoadingCategories::~KDebugSettingsLoadingCategories()
-{
-}
+KDebugSettingsLoadingCategories::~KDebugSettingsLoadingCategories() = default;
 
 void KDebugSettingsLoadingCategories::readQtLoggingFile()
 {

@@ -16,9 +16,7 @@ ConfigureCustomSettingDialogTest::ConfigureCustomSettingDialogTest(QObject *pare
 {
 }
 
-ConfigureCustomSettingDialogTest::~ConfigureCustomSettingDialogTest()
-{
-}
+ConfigureCustomSettingDialogTest::~ConfigureCustomSettingDialogTest() = default;
 
 void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
 {

@@ -18,9 +18,7 @@ LoadCategoriesJobTest::LoadCategoriesJobTest(QObject *parent)
 {
 }
 
-LoadCategoriesJobTest::~LoadCategoriesJobTest()
-{
-}
+LoadCategoriesJobTest::~LoadCategoriesJobTest() = default;
 
 void LoadCategoriesJobTest::shouldHaveDefaultValue()
 {

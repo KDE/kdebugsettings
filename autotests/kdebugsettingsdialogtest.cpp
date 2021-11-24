@@ -22,9 +22,7 @@ KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-KDebugSettingsDialogTest::~KDebugSettingsDialogTest()
-{
-}
+KDebugSettingsDialogTest::~KDebugSettingsDialogTest() = default;
 
 void KDebugSettingsDialogTest::shouldHaveDefaultValue()
 {

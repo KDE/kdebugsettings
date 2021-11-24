@@ -14,9 +14,7 @@ CategoryWarningTest::CategoryWarningTest(QObject *parent)
 {
 }
 
-CategoryWarningTest::~CategoryWarningTest()
-{
-}
+CategoryWarningTest::~CategoryWarningTest() = default;
 
 void CategoryWarningTest::shouldHaveDefaultValue()
 {

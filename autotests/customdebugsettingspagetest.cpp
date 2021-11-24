@@ -18,9 +18,7 @@ CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
 {
 }
 
-CustomDebugSettingsPageTest::~CustomDebugSettingsPageTest()
-{
-}
+CustomDebugSettingsPageTest::~CustomDebugSettingsPageTest() = default;
 
 void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 {

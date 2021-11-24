@@ -15,9 +15,7 @@ EnvironmentPlainTextEdit::EnvironmentPlainTextEdit(QWidget *parent)
 {
 }
 
-EnvironmentPlainTextEdit::~EnvironmentPlainTextEdit()
-{
-}
+EnvironmentPlainTextEdit::~EnvironmentPlainTextEdit() = default;
 
 void EnvironmentPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
 {

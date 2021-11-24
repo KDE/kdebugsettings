@@ -7,9 +7,7 @@
 
 #include "kdeloggingcategory.h"
 
-KdeLoggingCategory::KdeLoggingCategory()
-{
-}
+KdeLoggingCategory::KdeLoggingCategory() = default;
 
 bool KdeLoggingCategory::operator==(const KdeLoggingCategory &other) const
 {

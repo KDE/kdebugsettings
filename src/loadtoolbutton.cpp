@@ -27,9 +27,7 @@ LoadToolButton::LoadToolButton(QWidget *parent)
     mainMenu->addMenu(mLoadMenu);
 }
 
-LoadToolButton::~LoadToolButton()
-{
-}
+LoadToolButton::~LoadToolButton() = default;
 
 void LoadToolButton::updateLoadGroupMenu()
 {

@@ -14,9 +14,7 @@ LoggingCategoryTest::LoggingCategoryTest(QObject *parent)
 {
 }
 
-LoggingCategoryTest::~LoggingCategoryTest()
-{
-}
+LoggingCategoryTest::~LoggingCategoryTest() = default;
 
 void LoggingCategoryTest::shouldHaveDefaultValue()
 {

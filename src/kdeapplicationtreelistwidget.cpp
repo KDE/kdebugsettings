@@ -19,9 +19,7 @@ KDEApplicationTreeListWidgetItem::KDEApplicationTreeListWidgetItem(const QString
     treeWidget()->setItemWidget(this, CategoryType, mCategoryTypeCombobox);
 }
 
-KDEApplicationTreeListWidgetItem::~KDEApplicationTreeListWidgetItem()
-{
-}
+KDEApplicationTreeListWidgetItem::~KDEApplicationTreeListWidgetItem() = default;
 
 void KDEApplicationTreeListWidgetItem::restoreToDefault()
 {
@@ -69,9 +67,7 @@ KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
     header()->hide();
 }
 
-KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget()
-{
-}
+KDEApplicationTreeListWidget::~KDEApplicationTreeListWidget() = default;
 
 QList<int> KDEApplicationTreeListWidget::searchColumns() const
 {

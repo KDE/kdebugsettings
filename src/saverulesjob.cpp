@@ -10,9 +10,7 @@
 #include <QFile>
 #include <QTextStream>
 
-SaveRulesJob::SaveRulesJob()
-{
-}
+SaveRulesJob::SaveRulesJob() = default;
 
 void SaveRulesJob::setListKde(const LoggingCategory::List &listKde)
 {

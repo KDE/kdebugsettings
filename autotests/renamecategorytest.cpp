@@ -14,9 +14,7 @@ RenameCategoryTest::RenameCategoryTest(QObject *parent)
 {
 }
 
-RenameCategoryTest::~RenameCategoryTest()
-{
-}
+RenameCategoryTest::~RenameCategoryTest() = default;
 
 void RenameCategoryTest::shouldParseRenameLine_data()
 {

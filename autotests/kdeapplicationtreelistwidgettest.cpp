@@ -15,9 +15,7 @@ KDEApplicationTreeListWidgetTest::KDEApplicationTreeListWidgetTest(QObject *pare
 {
 }
 
-KDEApplicationTreeListWidgetTest::~KDEApplicationTreeListWidgetTest()
-{
-}
+KDEApplicationTreeListWidgetTest::~KDEApplicationTreeListWidgetTest() = default;
 
 void KDEApplicationTreeListWidgetTest::shouldHaveDefaultValue()
 {

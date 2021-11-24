@@ -8,9 +8,7 @@
 #include "loadcategoriesjob.h"
 #include "kdebugsettingsutil.h"
 
-LoadCategoriesJob::LoadCategoriesJob()
-{
-}
+LoadCategoriesJob::LoadCategoriesJob() = default;
 
 void LoadCategoriesJob::setFileName(const QString &filename)
 {

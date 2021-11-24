@@ -18,9 +18,7 @@ KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *
 {
 }
 
-KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest()
-{
-}
+KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest() = default;
 
 void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 {

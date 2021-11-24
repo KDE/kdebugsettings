@@ -15,9 +15,7 @@ EnvironmentSettingsRulesPageTest::EnvironmentSettingsRulesPageTest(QObject *pare
 {
 }
 
-EnvironmentSettingsRulesPageTest::~EnvironmentSettingsRulesPageTest()
-{
-}
+EnvironmentSettingsRulesPageTest::~EnvironmentSettingsRulesPageTest() = default;
 
 void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 {

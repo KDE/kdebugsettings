@@ -19,9 +19,7 @@ LoadGroupMenu::LoadGroupMenu(QWidget *parent)
     init();
 }
 
-LoadGroupMenu::~LoadGroupMenu()
-{
-}
+LoadGroupMenu::~LoadGroupMenu() = default;
 
 void LoadGroupMenu::refreshMenu()
 {

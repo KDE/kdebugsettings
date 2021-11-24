@@ -12,9 +12,7 @@
 #include <QVector>
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory {
 public:
-    RenameCategory()
-    {
-    }
+    RenameCategory() = default;
 
     using List = QVector<RenameCategory>;
     Q_REQUIRED_RESULT bool operator==(const RenameCategory &other) const;

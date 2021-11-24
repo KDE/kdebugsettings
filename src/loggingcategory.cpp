@@ -7,9 +7,7 @@
 
 #include "loggingcategory.h"
 
-LoggingCategory::LoggingCategory()
-{
-}
+LoggingCategory::LoggingCategory() = default;
 
 bool LoggingCategory::operator==(const LoggingCategory &other) const
 {

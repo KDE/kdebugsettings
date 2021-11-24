@@ -33,9 +33,7 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
 }
 
-ConfigureCustomSettingDialog::~ConfigureCustomSettingDialog()
-{
-}
+ConfigureCustomSettingDialog::~ConfigureCustomSettingDialog() = default;
 
 void ConfigureCustomSettingDialog::setRule(const QString &rule)
 {

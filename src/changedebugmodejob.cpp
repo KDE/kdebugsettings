@@ -11,13 +11,9 @@
 #include "kdebugsettingsutil.h"
 #include "saverulesjob.h"
 
-ChangeDebugModeJob::ChangeDebugModeJob()
-{
-}
+ChangeDebugModeJob::ChangeDebugModeJob() = default;
 
-ChangeDebugModeJob::~ChangeDebugModeJob()
-{
-}
+ChangeDebugModeJob::~ChangeDebugModeJob() = default;
 
 bool ChangeDebugModeJob::canStart() const
 {

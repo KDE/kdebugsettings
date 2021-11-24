@@ -17,6 +17,4 @@ CategoryWarning::CategoryWarning(QWidget *parent)
     setWordWrap(true);
 }
 
-CategoryWarning::~CategoryWarning()
-{
-}
+CategoryWarning::~CategoryWarning() = default;

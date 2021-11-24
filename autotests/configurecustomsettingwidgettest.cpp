@@ -19,9 +19,7 @@ ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *pare
 {
 }
 
-ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest()
-{
-}
+ConfigureCustomSettingWidgetTest::~ConfigureCustomSettingWidgetTest() = default;
 
 void ConfigureCustomSettingWidgetTest::shouldHaveDefaultValue()
 {

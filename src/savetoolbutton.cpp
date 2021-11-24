@@ -24,6 +24,4 @@ SaveToolButton::SaveToolButton(QWidget *parent)
     connect(actGroup, &QAction::triggered, this, &SaveToolButton::saveAsGroup);
 }
 
-SaveToolButton::~SaveToolButton()
-{
-}
+SaveToolButton::~SaveToolButton() = default;

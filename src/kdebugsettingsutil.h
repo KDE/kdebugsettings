@@ -17,9 +17,7 @@
 namespace KDebugSettingsUtil
 {
 struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LineLoggingQtCategory {
-    LineLoggingQtCategory()
-    {
-    }
+    LineLoggingQtCategory() = default;
 
     enum LoggingType { Unknown = 0, Info, Warning, Debug, Critical, All };
 
