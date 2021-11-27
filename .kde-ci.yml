@@ -6,7 +6,7 @@ Dependencies:
   'require':
     'frameworks/kcoreaddons': '@latest'
     'frameworks/kconfig': '@latest'
-    'frameworks/kdbusadons': '@latest'
+    'frameworks/kdbusaddons': '@latest'
     'frameworks/ki18n': '@latest'
     'frameworks/extra-cmake-modules': '@latest'
     'frameworks/kwidgetsaddons': '@latest'
