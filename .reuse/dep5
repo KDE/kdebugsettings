@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kdebugsettings
+Upstream-Contact: Montel Laurent <montel@kde.org>
+Source: https://invent.kde.org/utilities/kdebugsettings
+
+Files: autotests/data/*.ini autotests/data/*.ref autotests/data/*.categories autotests/data/*.renamecategories
+Copyright: none
+License: CC0-1.0
