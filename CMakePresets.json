@@ -112,6 +112,10 @@
             "configurePreset": "dev-clang"
         },
         {
+            "name": "asan",
+            "configurePreset": "asan"
+        },	
+        {
             "name": "clazy",
             "configurePreset": "clazy",
             "environment": {
