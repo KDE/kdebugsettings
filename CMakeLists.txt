@@ -29,7 +29,7 @@ include(ECMQtDeclareLoggingCategory)
 include(GenerateExportHeader)
 
 
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS 
     CoreAddons 
     Config
@@ -61,7 +61,7 @@ endif()
 
 add_subdirectory( src )
 if (BUILD_TESTING)
-    find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
+    find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
     add_subdirectory( autotests )
 endif()
 ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})

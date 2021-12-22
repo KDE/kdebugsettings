@@ -22,7 +22,7 @@ void GroupManagementWidgetTest::shouldHaveDefaultValues()
     GroupManagementWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), {});
+    QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
     auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("mListWidget"));
     QVERIFY(mListWidget);

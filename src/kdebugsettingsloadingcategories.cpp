@@ -24,7 +24,11 @@ void KDebugSettingsLoadingCategories::readQtLoggingFile()
     if (!envPath.isEmpty()) {
         readCategoriesFiles(envPath);
     } else {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        const QString dataPath = QDir(QLibraryInfo::path(QLibraryInfo::DataPath)).absoluteFilePath(QStringLiteral("qtlogging.ini"));
+#else
         const QString dataPath = QDir(QLibraryInfo::location(QLibraryInfo::DataPath)).absoluteFilePath(QStringLiteral("qtlogging.ini"));
+#endif
         readCategoriesFiles(dataPath);
     }
 }
