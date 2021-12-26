@@ -120,3 +120,4 @@ X-DBUS-StartupType=Unique
 Categories=Qt;KDE;Development;
 X-DBUS-ServiceName=org.kde.kdebugsettings
 NoDisplay=true
+X-GNOME-SingleWindow=true
