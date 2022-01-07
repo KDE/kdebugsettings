@@ -36,15 +36,24 @@ void KDebugSettingsLoadingCategories::readQtLoggingFile()
 void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
 {
     // KDE debug categories area
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    const QString confAreasFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories6/kde.categories"));
+#else
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/kde.categories"));
+#endif
     if (!confAreasFile.isEmpty()) {
         KDebugSettingsUtil::readLoggingCategories(confAreasFile, mCategoriesList, false);
     }
 
     mRenameCategoriesList.clear();
     // Load *.renamecategories file in QStandardPaths::ConfigLocation for kde apps.
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory)
+        + QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories6/"), QStandardPaths::LocateDirectory);
+#else
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory)
         + QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("qlogging-categories5/"), QStandardPaths::LocateDirectory);
+#endif
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.renamecategories"));
         for (const QString &file : fileNames) {
