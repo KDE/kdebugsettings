@@ -18,7 +18,7 @@ public:
 
     void refreshMenu();
 
-    static Q_REQUIRED_RESULT QString defaultWritableGroupPath();
+    Q_REQUIRED_RESULT static QString defaultWritableGroupPath();
 
     Q_REQUIRED_RESULT QStringList groupNames() const;
     void setGroupNames(const QStringList &groupNames);
