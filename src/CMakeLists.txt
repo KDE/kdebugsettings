@@ -62,9 +62,9 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(libkdebugsettings BASE_NAME libkdebugsettings)
 target_link_libraries(libkdebugsettings
-    Qt${QT_MAJOR_VERSION}::Core
+    Qt::Core
     KF5::I18n
-    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt::Widgets
     KF5::WidgetsAddons
     KF5::ItemViews
     KF5::ConfigCore
