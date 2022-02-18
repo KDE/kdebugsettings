@@ -9,7 +9,7 @@ cmake_minimum_required (VERSION 3.16.0 FATAL_ERROR)
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.90.0")
+set(KF5_MIN_VERSION "5.91.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
@@ -27,7 +27,7 @@ include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMQtDeclareLoggingCategory)
 include(GenerateExportHeader)
-
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS 
@@ -40,8 +40,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion)
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
+ecm_set_disabled_deprecation_versions(QT 6.0
+    KF 6.0
+)
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
