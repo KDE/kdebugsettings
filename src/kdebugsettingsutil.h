@@ -84,4 +84,3 @@ LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT QString qtFileName();
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LineLoggingQtCategory::LoggingType)
-

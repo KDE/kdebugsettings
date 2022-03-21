@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT
 #endif
-

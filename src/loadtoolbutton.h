@@ -30,4 +30,3 @@ Q_SIGNALS:
 private:
     LoadGroupMenu *const mLoadMenu;
 };
-

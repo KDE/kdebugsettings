@@ -37,4 +37,3 @@ private:
     QStringList mLoggingCategoriesName;
     bool mWithoutArguments = false;
 };
-

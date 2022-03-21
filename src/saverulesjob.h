@@ -29,4 +29,3 @@ private:
     LoggingCategory::List mListCustom;
     QString mFileName;
 };
-

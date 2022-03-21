@@ -23,4 +23,3 @@ public:
 };
 Q_DECLARE_TYPEINFO(RenameCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(RenameCategory)
-

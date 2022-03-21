@@ -39,4 +39,3 @@ private:
     LoggingCategory::List mQtKdeCategories;
     bool mFoundOverrideRule = false;
 };
-

@@ -24,4 +24,3 @@ public:
 private:
     ConfigureCustomSettingWidget *const mCustomSettingWidget;
 };
-

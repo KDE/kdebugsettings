@@ -32,4 +32,3 @@ private:
     QCheckBox *const mEnableCategory;
     CategoryTypeComboBox *const mCategoryType;
 };
-

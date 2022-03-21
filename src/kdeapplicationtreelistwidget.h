@@ -55,4 +55,3 @@ private:
     void addListItems(const LoggingCategory::List &list, bool clearList);
     QString generateToolTip(const LoggingCategory &cat);
 };
-

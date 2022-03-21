@@ -26,4 +26,3 @@ private:
     void readConfig();
     GroupManagementWidget *const mGroupManagementWidget;
 };
-

@@ -27,4 +27,3 @@ struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KdeLoggingCategory {
 LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(KdeLoggingCategory)
-

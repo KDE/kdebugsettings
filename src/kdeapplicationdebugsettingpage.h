@@ -41,4 +41,3 @@ private:
     QPushButton *const mTurnOffDebug;
     QPushButton *const mTurnOffAllMessages;
 };
-

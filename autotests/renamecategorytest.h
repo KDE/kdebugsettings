@@ -19,4 +19,3 @@ private Q_SLOTS:
     void shouldParseRenameLine_data();
     void shouldParseRenameLine();
 };
-

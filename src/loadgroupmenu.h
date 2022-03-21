@@ -32,4 +32,3 @@ private:
     QStringList mGroupNames;
     Q_REQUIRED_RESULT QStringList defaultReadableGroupPath() const;
 };
-

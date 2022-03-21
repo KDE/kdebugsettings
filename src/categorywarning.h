@@ -16,4 +16,3 @@ public:
     explicit CategoryWarning(QWidget *parent = nullptr);
     ~CategoryWarning() override;
 };
-

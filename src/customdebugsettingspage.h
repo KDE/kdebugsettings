@@ -39,4 +39,3 @@ private:
     QPushButton *const mRemoveRule;
     KListWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
 };
-

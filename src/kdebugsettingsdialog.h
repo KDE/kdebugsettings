@@ -56,4 +56,3 @@ private:
     CategoryWarning *mCategoryWarning = nullptr;
     LoadToolButton *mLoadToolButton = nullptr;
 };
-

@@ -31,4 +31,3 @@ private:
     QListWidget *const mListWidget;
     void renameGroup(QListWidgetItem *item);
 };
-

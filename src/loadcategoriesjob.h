@@ -35,4 +35,3 @@ private:
     QString mFileName;
     bool mFoundOverrideRule = false;
 };
-

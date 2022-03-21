@@ -29,4 +29,3 @@ public:
 private:
     LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
 };
-

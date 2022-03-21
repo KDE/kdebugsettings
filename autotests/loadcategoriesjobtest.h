@@ -21,4 +21,3 @@ private Q_SLOTS:
     void shouldReadRules_data();
     void shouldReadRules();
 };
-

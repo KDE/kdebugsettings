@@ -31,4 +31,3 @@ private Q_SLOTS:
     void shouldConvertCategoryTypeFromString_data();
     void shouldConvertCategoryTypeFromString();
 };
-
