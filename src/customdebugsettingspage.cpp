@@ -88,7 +88,7 @@ bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
 void CustomDebugSettingsPage::slotCustomContextMenu(const QPoint &pos)
 {
     QMenu menu(this);
-    const int selectedItemCount{mListWidget->selectedItems().count()};
+    const auto selectedItemCount{mListWidget->selectedItems().count()};
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &CustomDebugSettingsPage::slotAddRule);
     if (selectedItemCount == 1) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule"), this, &CustomDebugSettingsPage::slotEditRule);
