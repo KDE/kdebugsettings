@@ -12,6 +12,7 @@
 #include <QHeaderView>
 #include <QPushButton>
 #include <QTest>
+#include <QVBoxLayout>
 
 KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)
@@ -30,6 +31,9 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QVERIFY(listWidget->isColumnHidden(2));
     QCOMPARE(listWidget->columnCount(), 4);
     QVERIFY(listWidget->uniformRowHeights());
+
+    auto mainLayout = page.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
 
     auto selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
     QVERIFY(selectAll);

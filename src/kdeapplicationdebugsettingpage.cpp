@@ -23,6 +23,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     , mTurnOffAllMessages(new QPushButton(i18n("Turn Off All Messages"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mTreeListWidget->setObjectName(QStringLiteral("listwidget"));
 
