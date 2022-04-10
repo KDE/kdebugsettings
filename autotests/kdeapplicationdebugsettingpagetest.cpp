@@ -29,6 +29,7 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QVERIFY(listWidget->header()->isHidden());
     QVERIFY(listWidget->isColumnHidden(2));
     QCOMPARE(listWidget->columnCount(), 4);
+    QVERIFY(listWidget->uniformRowHeights());
 
     auto selectAll = page.findChild<QPushButton *>(QStringLiteral("selectall"));
     QVERIFY(selectAll);
