@@ -1271,11 +1271,6 @@ org.kde.pim.akonadislave.warning=true
 org.kde.pim.akonadislave.critical=true
 org.kde.pim.akonadislave.debug=false
 
-org.kde.pim.pop3.info=true
-org.kde.pim.pop3.warning=true
-org.kde.pim.pop3.critical=true
-org.kde.pim.pop3.debug=false
-
 org.kde.pim.migration.info=true
 org.kde.pim.migration.warning=true
 org.kde.pim.migration.critical=true
@@ -3147,34 +3142,19 @@ kf.kio.widgets.fileitemactions.purpose.warning=true
 kf.kio.widgets.fileitemactions.purpose.critical=true
 kf.kio.widgets.fileitemactions.purpose.debug=false
 
-org.kde.ruqola.qml=true
-
-org.kde.rocketchatqtrestapi=true
-
+org.kde.ruqola.rocketchatqtrestapi=true
 org.kde.ruqola=true
-
 org.kde.ruqola.message=true
-
 org.kde.ruqola.ddpapi=true
-
 org.kde.ruqola.ddpapi.command=true
-
 org.kde.ruqola.ddp.collectiontype=true
-
 org.kde.ruqola.typingnotification=true
-
 org.kde.ruqola.completion=true
-
 org.kde.ruqola.notification=true
-
 org.kde.ruqola.commands=true
-
 org.kde.ruqola.rooms=true
-
 org.kde.ruqola.widgets=true
-
 org.kde.ruqola.widgets.selection=true
-
 org.kde.ruqola_passwordauthenticationplugin=true
 
 org.kde.pim.sieveeditor.info=true
