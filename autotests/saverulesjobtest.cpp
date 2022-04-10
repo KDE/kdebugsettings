@@ -18,6 +18,7 @@ void compareFile(const QString &name)
 {
     const QString refFile = QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ref");
     const QString generatedFile = QLatin1String(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
+    QProcess proc;
 
 #ifdef _WIN32
     QStringList args = QStringList() << QStringLiteral("Compare-Object") << QString(QStringLiteral("(Get-Content %1)")).arg(refFile)
@@ -34,7 +35,6 @@ void compareFile(const QString &name)
     QCOMPARE(pStdOut.size(), 0);
 #else
     // compare to reference file
-    QProcess proc;
     const QStringList args = QStringList() << QStringLiteral("-u") << refFile << generatedFile;
 
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
