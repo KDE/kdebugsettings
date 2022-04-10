@@ -121,3 +121,4 @@ Categories=Qt;KDE;Development;
 X-DBUS-ServiceName=org.kde.kdebugsettings
 NoDisplay=true
 SingleMainWindow=true
+Version=1.5
