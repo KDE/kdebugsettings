@@ -62,6 +62,7 @@ KDEApplicationTreeListWidget::KDEApplicationTreeListWidget(QWidget *parent)
 {
     setColumnCount(4);
     setRootIsDecorated(false);
+    setUniformRowHeights(true);
     setColumnHidden(KDEApplicationTreeListWidgetItem::LogName, true);
     setColumnHidden(KDEApplicationTreeListWidgetItem::IdentifierName, true);
     header()->hide();
