@@ -12,3 +12,6 @@ Dependencies:
     'frameworks/kwidgetsaddons': '@latest'
     'frameworks/kcompletion' : '@latest'
     'frameworks/kitemviews' : '@latest'
+
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]
