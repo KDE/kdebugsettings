@@ -238,7 +238,7 @@ void KDebugSettingUtilTest::shouldConvertCategoryTypeFromString_data()
     QTest::newRow("Info") << QStringLiteral("INFO") << LoggingCategory::LoggingType::Info;
     QTest::newRow("Debug") << QStringLiteral("DEBUG") << LoggingCategory::LoggingType::Debug;
     QTest::newRow("Critical") << QStringLiteral("CRITICAL") << LoggingCategory::LoggingType::Critical;
-    QTest::newRow("unknow") << QStringLiteral("foo") << LoggingCategory::LoggingType::Info;
+    QTest::newRow("unknown") << QStringLiteral("foo") << LoggingCategory::LoggingType::Info;
 }
 
 void KDebugSettingUtilTest::shouldConvertCategoryTypeFromString()
