@@ -68,17 +68,17 @@ struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadLoggingCategory {
 LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT void
 readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
-LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
-LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename,
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename,
                                                                                                       KdeLoggingCategory::List &categoriesList);
 
-LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
-LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
-LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT RenameCategory parseRenameCategory(QString line, const QString &filename);
-LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT Q_REQUIRED_RESULT RenameCategory::List readRenameCategories(const QString &filename);
-LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
-LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
-LIBKDEBUGSETTINGS_EXPORT Q_REQUIRED_RESULT QString qtFileName();
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory parseRenameCategory(QString line, const QString &filename);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory::List readRenameCategories(const QString &filename);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT QString qtFileName();
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
