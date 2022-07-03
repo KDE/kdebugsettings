@@ -117,6 +117,13 @@
   <screenshots>
     <screenshot type="default">
       <caption>The main window of KDebugSettings.</caption>
+      <caption xml:lang="ca">La finestra principal del KDebugSettings.</caption>
+      <caption xml:lang="ca-valencia">La finestra principal de KDebugSettings.</caption>
+      <caption xml:lang="nl">Het hoofdvenster van KDebugSettings.</caption>
+      <caption xml:lang="nn">Hovudvindauget i KDebugSettings.</caption>
+      <caption xml:lang="tr">KDebugSettings'in ana penceresi.</caption>
+      <caption xml:lang="uk">Головне вікно KDebugSettings.</caption>
+      <caption xml:lang="x-test">xxThe main window of KDebugSettings.xx</caption>
       <image>https://cdn.kde.org/screenshots/kdebugsettings/kdebugsettings.png</image>
     </screenshot>
   </screenshots>
