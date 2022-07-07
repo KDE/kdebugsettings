@@ -94,8 +94,6 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
     QString defaultSeverity;
     QString identifier;
 
-#if 1
-
     // TODO create an unique regularexpression
 
     static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*(.*)$"));
@@ -168,17 +166,6 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
             qCWarning(KDEBUGSETTINGS_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
         }
     }
-#else
-    static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*([\\w._-\\(\\)\\s*]+)\\s*(?:\\[(DEBUG|INFO|WARNING|CRITICAL)\\])?$"));
-    QRegularExpressionMatch match = regularExpressionUser.match(line);
-    if (match.hasMatch()) {
-        logName = match.captured(1);
-        description = match.captured(2);
-        defaultSeverity = match.captured(3);
-        identifier = match.captured(4);
-    }
-
-#endif
     category.categoryName = logName;
     category.description = description;
     category.defaultSeverity = defaultSeverity;
