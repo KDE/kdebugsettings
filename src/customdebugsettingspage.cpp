@@ -182,7 +182,7 @@ void CustomDebugSettingsPage::slotRemoveRules()
     }
     const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", lst.count());
 
-    if (KMessageBox::No == KMessageBox::warningYesNo(this, str)) {
+    if (KMessageBox::No == KMessageBox::warningYesNo(this, str, i18n("Remove Rule"), KStandardGuiItem::remove())) {
         return;
     }
     for (int i = 0; i < lst.count(); ++i) {
