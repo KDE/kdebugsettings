@@ -127,6 +127,7 @@ Keywords[ia]=log;logging;category;categories;journal;logging levels;debug
 Keywords[it]=registro;registrazione;categoria;categorie;journal;livelli di registrazione;debug
 Keywords[ko]=log;logging;category;categories;journal;logging levels;debug;로그;분류;저널;디버그
 Keywords[nl]=log;loggen;categorie;categorieën;journaal;logniveaus;debug
+Keywords[nn]=logg;logging;kategori;kategoriar;journal;loggnivå;debug;feilsøking
 Keywords[pt]=log;registo;categoria;categorias;diário;níveis de registo;depuração
 Keywords[pt_BR]=log;logging;registro;registrar;categoria;categorias;jornal;journal;níveis de logging;níveis de log;níveis de registro;depuração;debug
 Keywords[sk]=log;logovanie;kategória;kategórie;denník;úrovne logovania;ladenie
