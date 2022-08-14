@@ -132,6 +132,7 @@ Keywords[nn]=logg;logging;kategori;kategoriar;journal;loggnivå;debug;feilsøkin
 Keywords[pl]=dziennik;rejestrowanie;kategoria;kategorie;dziennik;poziomy dziennika;diagnostyka
 Keywords[pt]=log;registo;categoria;categorias;diário;níveis de registo;depuração
 Keywords[pt_BR]=log;logging;registro;registrar;categoria;categorias;jornal;journal;níveis de logging;níveis de log;níveis de registro;depuração;debug
+Keywords[ru]=log;logging;category;categories;journal;logging levels;debug;логирование;журналирование;категории;журнал;уровни сообщений;отладка
 Keywords[sk]=log;logovanie;kategória;kategórie;denník;úrovne logovania;ladenie
 Keywords[sl]=dnevnik;pisanje dnevnika;kategorija;kategorije;beleženje;nivo beleženja;razhroščevanje
 Keywords[sv]=logg;loggning;kategori;kategorier;journal;loggningsnivåer;felsökning
