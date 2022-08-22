@@ -40,7 +40,6 @@ GenericName[uk]=Параметри діагностики
 GenericName[x-test]=xxDebug settingsxx
 GenericName[zh_CN]=调试设置
 GenericName[zh_TW]=除錯設定
-Terminal=false
 Name=KDebugSettings
 Name[az]=KDebugSettings
 Name[ca]=KDebugSettings
