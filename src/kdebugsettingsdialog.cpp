@@ -23,6 +23,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
+#include <KWindowConfig>
 
 #include <QDesktopServices>
 #include <QDialogButtonBox>
@@ -33,6 +34,7 @@
 #include <QTabWidget>
 #include <QUrl>
 #include <QVBoxLayout>
+#include <QWindow>
 namespace
 {
 constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
@@ -104,18 +106,17 @@ KDebugSettingsDialog::~KDebugSettingsDialog()
 
 void KDebugSettingsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(KDebugSettingsDialogGroupName));
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 300));
+    KConfigGroup group(KSharedConfig::openStateConfig(), KDebugSettingsDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void KDebugSettingsDialog::saveConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(KDebugSettingsDialogGroupName));
-    group.writeEntry("Size", size());
-    group.sync();
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void KDebugSettingsDialog::slotLoadGroup(const QString &fullPath)

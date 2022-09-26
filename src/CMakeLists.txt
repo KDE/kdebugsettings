@@ -69,6 +69,7 @@ target_link_libraries(libkdebugsettings
     KF5::ItemViews
     KF5::ConfigCore
     KF5::Completion
+    KF5::ConfigGui
 )
 
 set_target_properties(libkdebugsettings
