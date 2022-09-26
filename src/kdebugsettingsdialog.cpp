@@ -13,7 +13,6 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
-#include "loadcategoriesjob.h"
 #include "loadgroupmenu.h"
 #include "loadtoolbutton.h"
 #include "saverulesjob.h"

@@ -7,7 +7,6 @@
 
 #include "configurecustomsettingwidget.h"
 #include "categorytypecombobox.h"
-#include "kdebugsettingsdialog.h"
 #include "kdebugsettingsutil.h"
 #include <KLineEdit>
 #include <KLocalizedString>

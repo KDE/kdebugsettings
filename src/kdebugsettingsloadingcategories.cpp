@@ -6,7 +6,6 @@
 */
 
 #include "kdebugsettingsloadingcategories.h"
-#include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
 #include "loadcategoriesjob.h"
 #include <QDir>
