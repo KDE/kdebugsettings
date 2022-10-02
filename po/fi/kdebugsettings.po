@@ -1,0 +1,443 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:48+0000\n"
+"PO-Revision-Date: 2021-11-29 17:34+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: src/categorytypecombobox.cpp:15
+#, kde-format
+msgid "Full Debug"
+msgstr "Täysi virheenpaikannus"
+
+#: src/categorytypecombobox.cpp:16
+#, kde-format
+msgid "Info"
+msgstr "Tietoja"
+
+#: src/categorytypecombobox.cpp:17
+#, kde-format
+msgid "Warning"
+msgstr "Varoitus"
+
+#: src/categorytypecombobox.cpp:18
+#, kde-format
+msgid "Critical"
+msgstr "Kriittinen"
+
+#: src/categorytypecombobox.cpp:20
+#, kde-format
+msgid "Off"
+msgstr "Ei käytössä"
+
+#: src/categorywarning.cpp:16
+#, kde-format
+msgid ""
+"You have a rule as '*=true' or '*=false' which will override all your "
+"specific rule. Better to remove it."
+msgstr ""
+"Sääntö ”*=true” tai ”*=false” on määritettynä. Se syrjäyttää kaikki "
+"tarkemmat säännöt ja kannattaa poistaa."
+
+#: src/configurecustomsettingdialog.cpp:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Add custom rule"
+msgstr "Lisää oma sääntö"
+
+#: src/configurecustomsettingdialog.cpp:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit custom rule"
+msgstr "Muokkaa omaa sääntöä"
+
+#: src/configurecustomsettingwidget.cpp:21
+#, kde-format
+msgid "Enable"
+msgstr "Käytössä"
+
+#: src/configurecustomsettingwidget.cpp:26
+#, kde-format
+msgid "Category:"
+msgstr "Luokka:"
+
+#: src/configurecustomsettingwidget.cpp:37
+#, kde-format
+msgid "Type:"
+msgstr "Tyyppi:"
+
+#: src/customdebugsettingspage.cpp:26
+#, kde-format
+msgid "Add..."
+msgstr "Lisää…"
+
+#: src/customdebugsettingspage.cpp:27
+#, kde-format
+msgid "Edit..."
+msgstr "Muokkaa…"
+
+#: src/customdebugsettingspage.cpp:28
+#, kde-format
+msgid "Remove..."
+msgstr "Poista…"
+
+#: src/customdebugsettingspage.cpp:32 src/environmentsettingsrulespage.cpp:19
+#, kde-format
+msgid "Rules:"
+msgstr "Säännöt:"
+
+#: src/customdebugsettingspage.cpp:51 src/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Etsi…"
+
+#: src/customdebugsettingspage.cpp:92
+#, kde-format
+msgid "Add Rule..."
+msgstr "Lisää sääntö…"
+
+#: src/customdebugsettingspage.cpp:94
+#, kde-format
+msgid "Edit Rule"
+msgstr "Muokkaa sääntöä"
+
+#: src/customdebugsettingspage.cpp:98 src/customdebugsettingspage.cpp:185
+#, kde-format
+msgid "Remove Rule"
+msgstr "Poista sääntö"
+
+#: src/customdebugsettingspage.cpp:183
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these %1 rules?"
+msgstr[0] "Haluatko poistaa tämän säännön?"
+msgstr[1] "Haluatko poistaa nämä %1 sääntöä?"
+
+#: src/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr ""
+"Yhtään sääntöä ei ole määritetty ympäristömuuttujassa ”QT_LOGGING_RULES”."
+
+#: src/environmentsettingsrulespage.cpp:32
+#, kde-format
+msgid ""
+"These rules cannot be edited with this application. You need to set them in "
+"QT_LOGGING_RULES variable directly."
+msgstr ""
+"Näitä sääntöjä ei voi muokata tällä ohjelmalla. Ne tarvitsee asettaa suoraan "
+"QT_LOGGING_RULES-muuttujaan."
+
+#: src/environmentsettingsrulespage.cpp:34
+#, kde-format
+msgid "Current rules:"
+msgstr "Nykyiset säännöt:"
+
+#: src/groupmanagementdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Group"
+msgstr "Hallitse ryhmää"
+
+#: src/groupmanagementwidget.cpp:45 src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Rename Group"
+msgstr "Muuta ryhmän nimeä"
+
+#: src/groupmanagementwidget.cpp:45
+#, kde-format
+msgid "New Name:"
+msgstr "Uusi nimi:"
+
+#: src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Impossible to rename group as '%1'"
+msgstr "Ryhmän nimeksi ei voi muuttaa ”%1”"
+
+#: src/groupmanagementwidget.cpp:66
+#, kde-format
+msgid "Rename Groups"
+msgstr "Muuta ryhmien nimiä…"
+
+#: src/groupmanagementwidget.cpp:71
+#, kde-format
+msgid "Remove Groups"
+msgstr "Poista ryhmät"
+
+#: src/groupmanagementwidget.cpp:76
+#, kde-format
+msgid "Impossible to remove '%1'"
+msgstr "Ei voida poistaa: ”%1”"
+
+#: src/groupmanagementwidget.cpp:76
+#, kde-format
+msgid "Remove Group"
+msgstr "Poista ryhmä"
+
+#: src/kdeapplicationdebugsettingpage.cpp:21
+#, kde-format
+msgid "Enable All Debug"
+msgstr "Käytä kaikkea vianpaikannusta"
+
+#: src/kdeapplicationdebugsettingpage.cpp:22
+#, kde-format
+msgid "Turn Off Debug"
+msgstr "Poista vianpaikannus käytöstä"
+
+#: src/kdeapplicationdebugsettingpage.cpp:23
+#, kde-format
+msgid "Turn Off All Messages"
+msgstr "Poista kaikki viestit käytöstä"
+
+#: src/kdeapplicationtreelistwidget.cpp:115
+#, kde-format
+msgid "Category name: %1"
+msgstr "Luokan nimi: %1"
+
+#: src/kdeapplicationtreelistwidget.cpp:117
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Tunniste: %1"
+
+#: src/kdeapplicationtreelistwidget.cpp:119
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Oletusvakavuus: %1"
+
+#: src/kdebugsettingsdialog.cpp:60
+#, kde-format
+msgid "KDE Application"
+msgstr "KDE-sovellus"
+
+#: src/kdebugsettingsdialog.cpp:61
+#, kde-format
+msgid "Custom Rules"
+msgstr "Omat säännöt"
+
+#: src/kdebugsettingsdialog.cpp:62
+#, kde-format
+msgid "Rules Settings With Environment Variable"
+msgstr "Ympäristömuuttujassa määritetyt säännöt"
+
+#: src/kdebugsettingsdialog.cpp:71 src/savetoolbutton.cpp:15
+#, kde-format
+msgid "Save As..."
+msgstr "Tallenna nimellä…"
+
+#: src/kdebugsettingsdialog.cpp:85
+#, kde-format
+msgid "Insert..."
+msgstr "Lisää…"
+
+#: src/kdebugsettingsdialog.cpp:159
+#, kde-format
+msgid "'%1' cannot be opened. Please verify it."
+msgstr "”%1” ei voitu avata. Tarkista se."
+
+#: src/kdebugsettingsdialog.cpp:190 src/kdebugsettingsdialog.cpp:204
+#, kde-format
+msgid "Insert Categories"
+msgstr "Lisää luokkia"
+
+#: src/kdebugsettingsdialog.cpp:190
+#, kde-format
+msgid "Categories Files"
+msgstr "Luokkatiedostot"
+
+#: src/kdebugsettingsdialog.cpp:204
+#, kde-format
+msgid "Categories from file '%1' inserted."
+msgstr "Tiedoston ”%1” luokat lisätty."
+
+#: src/kdebugsettingsdialog.cpp:212
+#, kde-format
+msgid "Group Name"
+msgstr "Ryhmän nimi"
+
+#: src/kdebugsettingsdialog.cpp:212
+#, kde-format
+msgid "Name:"
+msgstr "Nimi:"
+
+#: src/kdebugsettingsdialog.cpp:217
+#, kde-format
+msgid ""
+"'%1' is already used as a group name.\n"
+"Please save as another name."
+msgstr ""
+"”%1” on jo käytössä ryhmän nimenä.\n"
+"Tallenna toisella nimellä."
+
+#: src/kdebugsettingsdialog.cpp:226
+#, kde-format
+msgid "Can not save as empty name. Please use a new one."
+msgstr "Tyhjälle nimelle ei voi tallentaa. Käytä uutta nimeä."
+
+#: src/kdebugsettingsdialog.cpp:233
+#, kde-format
+msgid "Save As"
+msgstr "Tallenna nimellä"
+
+#: src/kdebugsettingsdialog.cpp:233 src/kdebugsettingsdialog.cpp:241
+#, kde-format
+msgid "KDebugSettings File (*.kdebugsettingsrules)"
+msgstr "KDebugSettings-tiedosto (*.kdebugsettingsrules)"
+
+#: src/kdebugsettingsdialog.cpp:241
+#, kde-format
+msgid "Load Debug Settings Files"
+msgstr "Lataa vianpaikannuksen asetustiedostoja"
+
+#: src/kdebugsettingsutil.cpp:421
+#, kde-format
+msgid "All Debug Messages"
+msgstr "Kaikki virheenpaikannusviestit"
+
+#: src/kdebugsettingsutil.cpp:424
+#, kde-format
+msgid "Info Messages"
+msgstr "Tiedottavat viestit"
+
+#: src/kdebugsettingsutil.cpp:427
+#, kde-format
+msgid "Warning Messages"
+msgstr "Varoitusviestit"
+
+#: src/kdebugsettingsutil.cpp:430
+#, kde-format
+msgid "Debug Messages"
+msgstr "Virheenpaikannusviestit"
+
+#: src/kdebugsettingsutil.cpp:433
+#, kde-format
+msgid "Critical Messages"
+msgstr "Kriittiset viestit"
+
+#: src/kdebugsettingsutil.cpp:436
+#, kde-format
+msgid "No Debug Messages"
+msgstr "Ei virheenpaikannusviestejä"
+
+#: src/kdebugsettingsutil.cpp:439
+#, kde-format
+msgid "Undefined"
+msgstr "Määrittämätön"
+
+#: src/loadgroupmenu.cpp:18
+#, kde-format
+msgid "Load Group"
+msgstr "Lataa ryhmä"
+
+#: src/loadgroupmenu.cpp:65
+#, kde-format
+msgid "Manage Group"
+msgstr "Hallitse ryhmää"
+
+#: src/loadtoolbutton.cpp:17
+#, kde-format
+msgid "Load..."
+msgstr "Lataa…"
+
+#: src/loadtoolbutton.cpp:21
+#, kde-format
+msgid "Load From File..."
+msgstr "Lataa tiedostosta…"
+
+#: src/main.cpp:32
+#, kde-format
+msgid "KDebugSettings"
+msgstr "KDebugSettings"
+
+#: src/main.cpp:34
+#, kde-format
+msgid "Configure debug settings"
+msgstr "Muokkaa virheenpaikannusasetuksia"
+
+#: src/main.cpp:36
+#, fuzzy, kde-format
+#| msgid "(c) 2015-2021 kdebugsettings authors"
+msgid "(c) 2015-%1 kdebugsettings authors"
+msgstr "© 2015–21 kdebugsettingsin tekijät"
+
+#: src/main.cpp:37
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: src/main.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
+
+#: src/main.cpp:43
+#, kde-format
+msgid ""
+"Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
+msgstr ""
+"Käytä QStandardPaths-testitilaa, ts. yksikkötestien käyttämät luku- ja "
+"kirjoitusasetukset"
+
+#: src/main.cpp:46
+#, kde-format
+msgid "Activate full debug for all modules."
+msgstr "Aktivoi kaikille moduuleille täysi virheenpaikannus."
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Disable full debug for all modules."
+msgstr "Poista virheenpaikannus käytöstä kaikilta moduuleilta."
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Change debug mode as console (in console)"
+msgstr "Vaihda virheenpaikannustilaksi konsoli (konsolissa)"
+
+#: src/main.cpp:56
+#, kde-format
+msgid ""
+"Specify logging category name that you want to change debug mode (in console)"
+msgstr ""
+"Määritä lokiluokan nimi, jolle haluat vaihtaa virheenpaikannustilaa "
+"(konsolissa)"
+
+#: src/main.cpp:70 src/main.cpp:80 src/main.cpp:90
+#, kde-format
+msgid "Impossible to change debug mode"
+msgstr "Mahdotonta vaihtaa virheenpaikannustilaa"
+
+#: src/savetoolbutton.cpp:20
+#, kde-format
+msgid "Save As File..."
+msgstr "Tallenna tiedostoksi…"
+
+#: src/savetoolbutton.cpp:23
+#, kde-format
+msgid "Save As Group..."
+msgstr "Tallenna ryhmänä…"
+
+#~ msgid "All"
+#~ msgstr "Kaikki"
+
+#~ msgid "Load"
+#~ msgstr "Lataa"
+
+#~ msgid "Select All"
+#~ msgstr "Valitse kaikki"
+
+#~ msgid "Deselect All"
+#~ msgstr "Poista kaikki valinnat"

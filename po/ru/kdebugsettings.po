@@ -1,0 +1,449 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2015, 2019.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:48+0000\n"
+"PO-Revision-Date: 2022-06-02 11:20+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Russian <l10n@basealt.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: src/categorytypecombobox.cpp:15
+#, kde-format
+msgid "Full Debug"
+msgstr "Полная отладочная информация"
+
+#: src/categorytypecombobox.cpp:16
+#, kde-format
+msgid "Info"
+msgstr "Информационные сообщения"
+
+#: src/categorytypecombobox.cpp:17
+#, kde-format
+msgid "Warning"
+msgstr "Предупреждающие сообщения"
+
+#: src/categorytypecombobox.cpp:18
+#, kde-format
+msgid "Critical"
+msgstr "Критические сообщения"
+
+#: src/categorytypecombobox.cpp:20
+#, kde-format
+msgid "Off"
+msgstr "Отключено"
+
+#: src/categorywarning.cpp:16
+#, kde-format
+msgid ""
+"You have a rule as '*=true' or '*=false' which will override all your "
+"specific rule. Better to remove it."
+msgstr ""
+"Присутствует правило вида «*=true» или «*=false», которое переопределит все "
+"заданные вами правила. Лучше удалить его."
+
+#: src/configurecustomsettingdialog.cpp:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Add custom rule"
+msgstr "Добавление правила"
+
+#: src/configurecustomsettingdialog.cpp:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit custom rule"
+msgstr "Изменение правила"
+
+#: src/configurecustomsettingwidget.cpp:21
+#, kde-format
+msgid "Enable"
+msgstr "Включить"
+
+#: src/configurecustomsettingwidget.cpp:26
+#, kde-format
+msgid "Category:"
+msgstr "Категория:"
+
+#: src/configurecustomsettingwidget.cpp:37
+#, kde-format
+msgid "Type:"
+msgstr "Тип:"
+
+#: src/customdebugsettingspage.cpp:26
+#, kde-format
+msgid "Add..."
+msgstr "Добавить..."
+
+#: src/customdebugsettingspage.cpp:27
+#, kde-format
+msgid "Edit..."
+msgstr "Изменить..."
+
+# BUGME: "Remove" should not have ellipsis. --aspotashev
+#: src/customdebugsettingspage.cpp:28
+#, kde-format
+msgid "Remove..."
+msgstr "Удалить"
+
+#: src/customdebugsettingspage.cpp:32 src/environmentsettingsrulespage.cpp:19
+#, kde-format
+msgid "Rules:"
+msgstr "Правила:"
+
+#: src/customdebugsettingspage.cpp:51 src/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Поиск..."
+
+#: src/customdebugsettingspage.cpp:92
+#, kde-format
+msgid "Add Rule..."
+msgstr "Добавить правило…"
+
+#: src/customdebugsettingspage.cpp:94
+#, kde-format
+msgid "Edit Rule"
+msgstr "Изменить правило"
+
+#: src/customdebugsettingspage.cpp:98 src/customdebugsettingspage.cpp:185
+#, kde-format
+msgid "Remove Rule"
+msgstr "Удалить правило"
+
+#: src/customdebugsettingspage.cpp:183
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these %1 rules?"
+msgstr[0] "Удалить %1 данное правило?"
+msgstr[1] "Удалить %1 данных правила?"
+msgstr[2] "Удалить %1 данных правил?"
+msgstr[3] "Удалить данное правило?"
+
+#: src/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr "Для переменной среды «QT_LOGGING_RULES» правила не определены."
+
+#: src/environmentsettingsrulespage.cpp:32
+#, kde-format
+msgid ""
+"These rules cannot be edited with this application. You need to set them in "
+"QT_LOGGING_RULES variable directly."
+msgstr ""
+"Эти правила невозможно изменить в данном приложении. Необходимо задать их "
+"непосредственно в переменной QT_LOGGING_RULES."
+
+#: src/environmentsettingsrulespage.cpp:34
+#, kde-format
+msgid "Current rules:"
+msgstr "Текущие правила:"
+
+#: src/groupmanagementdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Group"
+msgstr "Управление группой"
+
+#: src/groupmanagementwidget.cpp:45 src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Rename Group"
+msgstr "Переименовать группу"
+
+#: src/groupmanagementwidget.cpp:45
+#, kde-format
+msgid "New Name:"
+msgstr "Новое название:"
+
+#: src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Impossible to rename group as '%1'"
+msgstr "Невозможно переименовать группу в «%1»"
+
+#: src/groupmanagementwidget.cpp:66
+#, kde-format
+msgid "Rename Groups"
+msgstr "Переименовать группы"
+
+#: src/groupmanagementwidget.cpp:71
+#, kde-format
+msgid "Remove Groups"
+msgstr "Удалить группы"
+
+#: src/groupmanagementwidget.cpp:76
+#, kde-format
+msgid "Impossible to remove '%1'"
+msgstr "Невозможно удалить «%1»"
+
+#: src/groupmanagementwidget.cpp:76
+#, kde-format
+msgid "Remove Group"
+msgstr "Удалить группу"
+
+#: src/kdeapplicationdebugsettingpage.cpp:21
+#, kde-format
+msgid "Enable All Debug"
+msgstr "Включить всю отладку"
+
+#: src/kdeapplicationdebugsettingpage.cpp:22
+#, kde-format
+msgid "Turn Off Debug"
+msgstr "Отключить отладку"
+
+#: src/kdeapplicationdebugsettingpage.cpp:23
+#, kde-format
+msgid "Turn Off All Messages"
+msgstr "Отключить все сообщения"
+
+#: src/kdeapplicationtreelistwidget.cpp:115
+#, kde-format
+msgid "Category name: %1"
+msgstr "Название категории: %1"
+
+#: src/kdeapplicationtreelistwidget.cpp:117
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Идентификатор: %1"
+
+#: src/kdeapplicationtreelistwidget.cpp:119
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Серьёзность по умолчанию: %1"
+
+#: src/kdebugsettingsdialog.cpp:60
+#, kde-format
+msgid "KDE Application"
+msgstr "Приложения KDE"
+
+#: src/kdebugsettingsdialog.cpp:61
+#, kde-format
+msgid "Custom Rules"
+msgstr "Другие правила"
+
+#: src/kdebugsettingsdialog.cpp:62
+#, kde-format
+msgid "Rules Settings With Environment Variable"
+msgstr "Настройка правил через переменную среды"
+
+#: src/kdebugsettingsdialog.cpp:71 src/savetoolbutton.cpp:15
+#, kde-format
+msgid "Save As..."
+msgstr "Сохранить как..."
+
+#: src/kdebugsettingsdialog.cpp:85
+#, kde-format
+msgid "Insert..."
+msgstr "Вставить..."
+
+#: src/kdebugsettingsdialog.cpp:159
+#, kde-format
+msgid "'%1' cannot be opened. Please verify it."
+msgstr "Не удалось открыть файл «%1»."
+
+# BUGME: please add @title:window --aspotashev
+#: src/kdebugsettingsdialog.cpp:190 src/kdebugsettingsdialog.cpp:204
+#, kde-format
+msgid "Insert Categories"
+msgstr "Вставка категорий"
+
+# BUGME: please add @title:window --aspotashev
+#: src/kdebugsettingsdialog.cpp:190
+#, kde-format
+msgid "Categories Files"
+msgstr "Файлы категорий"
+
+#: src/kdebugsettingsdialog.cpp:204
+#, kde-format
+msgid "Categories from file '%1' inserted."
+msgstr "Категории из файла «%1» вставлены."
+
+#: src/kdebugsettingsdialog.cpp:212
+#, kde-format
+msgid "Group Name"
+msgstr "Название группы"
+
+#: src/kdebugsettingsdialog.cpp:212
+#, kde-format
+msgid "Name:"
+msgstr "Название:"
+
+#: src/kdebugsettingsdialog.cpp:217
+#, kde-format
+msgid ""
+"'%1' is already used as a group name.\n"
+"Please save as another name."
+msgstr ""
+"«%1» уже используется в качестве названия группы.\n"
+"Выберите другое название."
+
+#: src/kdebugsettingsdialog.cpp:226
+#, kde-format
+msgid "Can not save as empty name. Please use a new one."
+msgstr "Название не может быть пустым. Используйте новое название."
+
+# BUGME: please add @title:window --aspotashev
+#: src/kdebugsettingsdialog.cpp:233
+#, kde-format
+msgid "Save As"
+msgstr "Сохранение в файл"
+
+#: src/kdebugsettingsdialog.cpp:233 src/kdebugsettingsdialog.cpp:241
+#, kde-format
+msgid "KDebugSettings File (*.kdebugsettingsrules)"
+msgstr "Файл приложения KDebugSettings (*.kdebugsettingsrules)"
+
+#: src/kdebugsettingsdialog.cpp:241
+#, kde-format
+msgid "Load Debug Settings Files"
+msgstr "Загрузка файлов параметров отладки"
+
+#: src/kdebugsettingsutil.cpp:421
+#, kde-format
+msgid "All Debug Messages"
+msgstr "Все сообщения отладки"
+
+#: src/kdebugsettingsutil.cpp:424
+#, kde-format
+msgid "Info Messages"
+msgstr "Информационные сообщения"
+
+#: src/kdebugsettingsutil.cpp:427
+#, kde-format
+msgid "Warning Messages"
+msgstr "Предупреждающие сообщения"
+
+#: src/kdebugsettingsutil.cpp:430
+#, kde-format
+msgid "Debug Messages"
+msgstr "Сообщения отладки"
+
+#: src/kdebugsettingsutil.cpp:433
+#, kde-format
+msgid "Critical Messages"
+msgstr "Критические сообщения"
+
+#: src/kdebugsettingsutil.cpp:436
+#, kde-format
+msgid "No Debug Messages"
+msgstr "Без сообщений отладки"
+
+#: src/kdebugsettingsutil.cpp:439
+#, kde-format
+msgid "Undefined"
+msgstr "Не определено"
+
+#: src/loadgroupmenu.cpp:18
+#, kde-format
+msgid "Load Group"
+msgstr "Загрузить группу"
+
+#: src/loadgroupmenu.cpp:65
+#, kde-format
+msgid "Manage Group"
+msgstr "Управлять группой"
+
+#: src/loadtoolbutton.cpp:17
+#, kde-format
+msgid "Load..."
+msgstr "Загрузить..."
+
+#: src/loadtoolbutton.cpp:21
+#, kde-format
+msgid "Load From File..."
+msgstr "Загрузить из файла…"
+
+#: src/main.cpp:32
+#, kde-format
+msgid "KDebugSettings"
+msgstr "KDebugSettings"
+
+#: src/main.cpp:34
+#, kde-format
+msgid "Configure debug settings"
+msgstr "Настройка отладки"
+
+#: src/main.cpp:36
+#, kde-format
+msgid "(c) 2015-%1 kdebugsettings authors"
+msgstr "© Авторы kdebugsettings, 2015–%1"
+
+#: src/main.cpp:37
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: src/main.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "Сопровождающий"
+
+#: src/main.cpp:43
+#, kde-format
+msgid ""
+"Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
+msgstr ""
+"Включить тестовый режим QStandardPaths, то есть параметры чтения/записи, "
+"используемые unittests."
+
+#: src/main.cpp:46
+#, kde-format
+msgid "Activate full debug for all modules."
+msgstr "Включить полную отладочную информацию для всех модулей."
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Disable full debug for all modules."
+msgstr "Отключить полную отладочную информацию для всех модулей."
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Change debug mode as console (in console)"
+msgstr "Изменить режим отладки из консоли."
+
+#: src/main.cpp:56
+#, kde-format
+msgid ""
+"Specify logging category name that you want to change debug mode (in console)"
+msgstr ""
+"Укажите название категории ведения журнала, для которой будет изменён режим "
+"отладки из консоли."
+
+#: src/main.cpp:70 src/main.cpp:80 src/main.cpp:90
+#, kde-format
+msgid "Impossible to change debug mode"
+msgstr "Невозможно изменить режим отладки"
+
+#: src/savetoolbutton.cpp:20
+#, kde-format
+msgid "Save As File..."
+msgstr "Сохранить как файл…"
+
+#: src/savetoolbutton.cpp:23
+#, kde-format
+msgid "Save As Group..."
+msgstr "Сохранить как группу…"
+
+#~ msgid "All"
+#~ msgstr "Все"
+
+# BUGME: please add @title:window --aspotashev
+#~ msgid "Load"
+#~ msgstr "Загрузка из файла"
+
+#~ msgid "Select All"
+#~ msgstr "Выбрать все"
+
+#~ msgid "Deselect All"
+#~ msgstr "Отменить весь выбор"

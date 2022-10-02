@@ -1,0 +1,343 @@
+# Translation of kdebugsettings.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebugsettings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-03 03:29+0200\n"
+"PO-Revision-Date: 2017-12-31 22:42+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+# >> @item:inlistbox
+#: src/categorytypecombobox.cpp:28
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgid "Full Debug"
+msgstr "исправљање"
+
+# >> @item:inlistbox
+#: src/categorytypecombobox.cpp:29
+#, kde-format
+msgid "Info"
+msgstr "информативно"
+
+# >> @item:inlistbox
+#: src/categorytypecombobox.cpp:30
+#, kde-format
+msgid "Warning"
+msgstr "упозорење"
+
+# >> @item:inlistbox
+#: src/categorytypecombobox.cpp:31
+#, kde-format
+msgid "Critical"
+msgstr "критично"
+
+# >> @item:inlistbox
+#: src/categorytypecombobox.cpp:33
+#, kde-format
+msgid "Off"
+msgstr "искључено"
+
+#: src/categorywarning.cpp:29
+#, kde-format
+msgid ""
+"You have a rule as '*=true' or '*=false' which will override all your "
+"specific rule. Better to remove it."
+msgstr ""
+"Имате правило попут „*=true“ или „*=false“, што ће потиснути сва специфична "
+"правила. Боље га уклоните."
+
+# >> @title:window
+#: src/configurecustomsettingdialog.cpp:33
+#, fuzzy, kde-format
+#| msgid "Add custom rule"
+msgctxt "@title:window"
+msgid "Add custom rule"
+msgstr "Додавање посебног правила"
+
+# >> @title:window
+#: src/configurecustomsettingdialog.cpp:55
+#, fuzzy, kde-format
+#| msgid "Edit custom rule"
+msgctxt "@title:window"
+msgid "Edit custom rule"
+msgstr "Уређивање посебног правила"
+
+#: src/configurecustomsettingwidget.cpp:37
+#, kde-format
+msgid "Category:"
+msgstr "Категорија:"
+
+#: src/configurecustomsettingwidget.cpp:49
+#, kde-format
+msgid "Type:"
+msgstr "Тип:"
+
+#: src/configurecustomsettingwidget.cpp:57
+#, kde-format
+msgid "Enable"
+msgstr "Укључи"
+
+# >> @title:column
+#: src/customdebugsettingspage.cpp:39 src/environmentsettingsrulespage.cpp:31
+#, kde-format
+msgid "Rules:"
+msgstr "Правила:"
+
+#: src/customdebugsettingspage.cpp:57 src/kdeapplicationdebugsettingpage.cpp:39
+#, kde-format
+msgid "Search..."
+msgstr "Тражи..."
+
+#: src/customdebugsettingspage.cpp:64
+#, kde-format
+msgid "Add..."
+msgstr "Додај..."
+
+#: src/customdebugsettingspage.cpp:69
+#, kde-format
+msgid "Edit..."
+msgstr "Уреди..."
+
+#: src/customdebugsettingspage.cpp:74
+#, kde-format
+msgid "Remove..."
+msgstr "Уклони..."
+
+#: src/customdebugsettingspage.cpp:166
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these %1 rules?"
+msgstr[0] "Желите ли да уклоните ово %1 правило?"
+msgstr[1] "Желите ли да уклоните ова %1 правила?"
+msgstr[2] "Желите ли да уклоните ових %1 правила?"
+msgstr[3] "Желите ли да уклоните ово правило?"
+
+#: src/environmentplaintextedit.cpp:57
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr "Ниједно правило није дефинисано променљивом окружења QT_LOGGING_RULES."
+
+#: src/environmentsettingsrulespage.cpp:46
+#, kde-format
+msgid ""
+"These rules cannot be edited with this application. You need to set them in "
+"QT_LOGGING_RULES variable directly."
+msgstr ""
+"Ова правила не могу да се уређују овим програмом. Морате да их задате "
+"директно променљивом QT_LOGGING_RULES."
+
+#: src/environmentsettingsrulespage.cpp:49
+#, kde-format
+msgid "Current rules:"
+msgstr "Тренутна правила:"
+
+#: src/kdeapplicationdebugsettingpage.cpp:49
+#, kde-format
+msgid "Enable All Debug"
+msgstr "Укључи сво исправљање"
+
+#: src/kdeapplicationdebugsettingpage.cpp:54
+#, kde-format
+msgid "Turn Off Debug"
+msgstr "Искључи исправљање"
+
+#: src/kdeapplicationdebugsettingpage.cpp:59
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgid "Turn Off All Messages"
+msgstr "Искључи исправљање"
+
+#: src/kdeapplicationtreelistwidget.cpp:131
+#, fuzzy, kde-format
+#| msgid "Category:"
+msgid "Category name: %1"
+msgstr "Категорија:"
+
+#: src/kdeapplicationtreelistwidget.cpp:133
+#, kde-format
+msgid "Identifier: %1"
+msgstr ""
+
+#: src/kdeapplicationtreelistwidget.cpp:135
+#, kde-format
+msgid "Default Severity: %1"
+msgstr ""
+
+# @title:tab
+#: src/kdebugsettingsdialog.cpp:68
+#, kde-format
+msgid "KDE Application"
+msgstr "КДЕ програм"
+
+# @title:tab
+#: src/kdebugsettingsdialog.cpp:69
+#, kde-format
+msgid "Custom Rules"
+msgstr "Посебна правила"
+
+# @title:tab
+# rewrite-msgid: /Settings/Set/
+#: src/kdebugsettingsdialog.cpp:70
+#, kde-format
+msgid "Rules Settings With Environment Variable"
+msgstr "Правила задата променљивом окружења"
+
+#: src/kdebugsettingsdialog.cpp:76
+#, kde-format
+msgid "Save As..."
+msgstr "Сачувај као..."
+
+#: src/kdebugsettingsdialog.cpp:81
+#, kde-format
+msgid "Load..."
+msgstr "Учитај..."
+
+#: src/kdebugsettingsdialog.cpp:86
+#, kde-format
+msgid "Insert..."
+msgstr "Уметни..."
+
+#: src/kdebugsettingsdialog.cpp:153
+#, kde-format
+msgid "'%1' cannot be opened. Please verify it."
+msgstr "„%1“ не може да се отвори. Проверите то."
+
+# >> @title:window
+#: src/kdebugsettingsdialog.cpp:183
+#, kde-format
+msgid "Insert Categories"
+msgstr "Уметање категорија"
+
+# >> @item
+#: src/kdebugsettingsdialog.cpp:183
+#, kde-format
+msgid "Categories Files"
+msgstr "фајлови категорија"
+
+# >> @title:window
+#: src/kdebugsettingsdialog.cpp:202
+#, kde-format
+msgid "Save As"
+msgstr "Уписивање као"
+
+#: src/kdebugsettingsdialog.cpp:202 src/kdebugsettingsdialog.cpp:210
+#, kde-format
+msgid "KDebugSettings File (*.kdebugsettingsrules)"
+msgstr ""
+
+# >> @title:window
+#: src/kdebugsettingsdialog.cpp:210
+#, kde-format
+msgid "Load Debug Settings Files"
+msgstr "Учитавање фајлова поставки исправљања"
+
+#: src/kdebugsettingsutil.cpp:439
+#, kde-format
+msgid "All Debug Messages"
+msgstr ""
+
+#: src/kdebugsettingsutil.cpp:442
+#, kde-format
+msgid "Info Messages"
+msgstr ""
+
+# >> @item:inlistbox
+#: src/kdebugsettingsutil.cpp:445
+#, fuzzy, kde-format
+#| msgid "Warning"
+msgid "Warning Messages"
+msgstr "упозорење"
+
+#: src/kdebugsettingsutil.cpp:448
+#, kde-format
+msgid "Debug Messages"
+msgstr ""
+
+# >> @item:inlistbox
+#: src/kdebugsettingsutil.cpp:451
+#, fuzzy, kde-format
+#| msgid "Critical"
+msgid "Critical Messages"
+msgstr "критично"
+
+#: src/kdebugsettingsutil.cpp:454
+#, kde-format
+msgid "No Debug Messages"
+msgstr ""
+
+#: src/kdebugsettingsutil.cpp:457
+#, kde-format
+msgid "Undefined"
+msgstr ""
+
+#: src/main.cpp:42
+#, fuzzy, kde-format
+#| msgid "kdebugssettings"
+msgid "KDebugSettings"
+msgstr "К‑исправљачке-поставке"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Configure debug settings"
+msgstr "Подесите исправљачке поставке"
+
+#: src/main.cpp:44
+#, fuzzy, kde-format
+#| msgid "(c) 2015-2017 kdebugsettings authors"
+msgid "(c) 2015-2020 kdebugsettings authors"
+msgstr "© 2015–2017, аутори К‑исправљачких-поставки"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Лорен Монтел"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Maintainer"
+msgstr "Одржавалац"
+
+#: src/main.cpp:51
+#, kde-format
+msgid ""
+"Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
+msgstr ""
+
+#: src/main.cpp:54
+#, kde-format
+msgid "Activate full debug for all modules."
+msgstr ""
+
+#: src/main.cpp:56
+#, kde-format
+msgid "Disable full debug for all modules."
+msgstr ""
+
+#: src/main.cpp:59
+#, kde-format
+msgid "Change debug mode as console (in console)"
+msgstr ""
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Specify logging category name that you want to change debug mode (in console)"
+msgstr ""
+
+#: src/main.cpp:77 src/main.cpp:87 src/main.cpp:97
+#, kde-format
+msgid "Impossible to change debug mode"
+msgstr ""
