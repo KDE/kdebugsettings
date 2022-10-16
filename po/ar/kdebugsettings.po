@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:50+0000\n"
 "PO-Revision-Date: ٢٠١٦-٠١-٢٠ ٠٧:٣٤+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -80,49 +80,50 @@ msgstr "الفئة:"
 msgid "Type:"
 msgstr "النّوع:"
 
-#: src/customdebugsettingspage.cpp:26
+#: src/customdebugsettingspage.cpp:27
 #, kde-format
 msgid "Add..."
 msgstr "أضف..."
 
-#: src/customdebugsettingspage.cpp:27
+#: src/customdebugsettingspage.cpp:28
 #, kde-format
 msgid "Edit..."
 msgstr "حرّر..."
 
-#: src/customdebugsettingspage.cpp:28
+#: src/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "أزل..."
 
-#: src/customdebugsettingspage.cpp:32 src/environmentsettingsrulespage.cpp:19
+#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
 #, kde-format
 msgid "Rules:"
 msgstr "القواعد:"
 
-#: src/customdebugsettingspage.cpp:51 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "ابحث..."
 
-#: src/customdebugsettingspage.cpp:92
+#: src/customdebugsettingspage.cpp:93
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:94
+#: src/customdebugsettingspage.cpp:95
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "حرّر القاعدة المخصّصة"
 
-#: src/customdebugsettingspage.cpp:98 src/customdebugsettingspage.cpp:185
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
+#: src/customdebugsettingspage.cpp:190
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "أزل..."
 
-#: src/customdebugsettingspage.cpp:183
+#: src/customdebugsettingspage.cpp:184
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule \"%1\"?"
 msgid "Do you want to remove this rule?"

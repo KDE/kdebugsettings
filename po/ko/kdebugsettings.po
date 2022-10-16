@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:50+0000\n"
 "PO-Revision-Date: 2022-02-20 21:57+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -78,47 +78,48 @@ msgstr "분류:"
 msgid "Type:"
 msgstr "종류:"
 
-#: src/customdebugsettingspage.cpp:26
+#: src/customdebugsettingspage.cpp:27
 #, kde-format
 msgid "Add..."
 msgstr "추가..."
 
-#: src/customdebugsettingspage.cpp:27
+#: src/customdebugsettingspage.cpp:28
 #, kde-format
 msgid "Edit..."
 msgstr "편집..."
 
-#: src/customdebugsettingspage.cpp:28
+#: src/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "삭제..."
 
-#: src/customdebugsettingspage.cpp:32 src/environmentsettingsrulespage.cpp:19
+#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
 #, kde-format
 msgid "Rules:"
 msgstr "규칙:"
 
-#: src/customdebugsettingspage.cpp:51 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "찾기..."
 
-#: src/customdebugsettingspage.cpp:92
+#: src/customdebugsettingspage.cpp:93
 #, kde-format
 msgid "Add Rule..."
 msgstr "규칙 추가..."
 
-#: src/customdebugsettingspage.cpp:94
+#: src/customdebugsettingspage.cpp:95
 #, kde-format
 msgid "Edit Rule"
 msgstr "규칙 편집"
 
-#: src/customdebugsettingspage.cpp:98 src/customdebugsettingspage.cpp:185
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
+#: src/customdebugsettingspage.cpp:190
 #, kde-format
 msgid "Remove Rule"
 msgstr "규칙 삭제"
 
-#: src/customdebugsettingspage.cpp:183
+#: src/customdebugsettingspage.cpp:184
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"

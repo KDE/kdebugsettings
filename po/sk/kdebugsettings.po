@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:50+0000\n"
 "PO-Revision-Date: 2022-04-09 19:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -78,47 +78,48 @@ msgstr "Kategória:"
 msgid "Type:"
 msgstr "Typ:"
 
-#: src/customdebugsettingspage.cpp:26
+#: src/customdebugsettingspage.cpp:27
 #, kde-format
 msgid "Add..."
 msgstr "Pridať..."
 
-#: src/customdebugsettingspage.cpp:27
+#: src/customdebugsettingspage.cpp:28
 #, kde-format
 msgid "Edit..."
 msgstr "Upraviť..."
 
-#: src/customdebugsettingspage.cpp:28
+#: src/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "Odstrániť..."
 
-#: src/customdebugsettingspage.cpp:32 src/environmentsettingsrulespage.cpp:19
+#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
 #, kde-format
 msgid "Rules:"
 msgstr "Pravidlá:"
 
-#: src/customdebugsettingspage.cpp:51 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Hľadať..."
 
-#: src/customdebugsettingspage.cpp:92
+#: src/customdebugsettingspage.cpp:93
 #, kde-format
 msgid "Add Rule..."
 msgstr "Pridať pravidlo..."
 
-#: src/customdebugsettingspage.cpp:94
+#: src/customdebugsettingspage.cpp:95
 #, kde-format
 msgid "Edit Rule"
 msgstr "Upraviť pravidlo"
 
-#: src/customdebugsettingspage.cpp:98 src/customdebugsettingspage.cpp:185
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
+#: src/customdebugsettingspage.cpp:190
 #, kde-format
 msgid "Remove Rule"
 msgstr "Odstrániť pravidlo"
 
-#: src/customdebugsettingspage.cpp:183
+#: src/customdebugsettingspage.cpp:184
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
