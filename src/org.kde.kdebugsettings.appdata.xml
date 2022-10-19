@@ -25,6 +25,7 @@
   <name xml:lang="ia">KDebugSettings</name>
   <name xml:lang="id">KDebugSettings</name>
   <name xml:lang="it">KDebugSettings</name>
+  <name xml:lang="ka">KDebugSettings</name>
   <name xml:lang="ko">KDebugSettings</name>
   <name xml:lang="nl">KDebugSettings</name>
   <name xml:lang="nn">KDebugSettings</name>
@@ -131,6 +132,7 @@
       <caption xml:lang="ia">Le fenestra principal de KDebugSettings.</caption>
       <caption xml:lang="id">Jendela utamanya KDebugSettings.</caption>
       <caption xml:lang="it">La finestra principale di KDebugSettings.</caption>
+      <caption xml:lang="ka">KDebugSettings-ის მთავარი ფანჯარა.</caption>
       <caption xml:lang="ko">KDebugSettings 주 창입니다.</caption>
       <caption xml:lang="nl">Het hoofdvenster van KDebugSettings.</caption>
       <caption xml:lang="nn">Hovudvindauget i KDebugSettings.</caption>
