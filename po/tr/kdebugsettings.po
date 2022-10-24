@@ -230,7 +230,7 @@ msgstr "Özel Kurallar"
 #: src/kdebugsettingsdialog.cpp:62
 #, kde-format
 msgid "Rules Settings With Environment Variable"
-msgstr "Ortam Değişkeni İle Kural Ayarları"
+msgstr "Çevre Değişkeni İle Kural Ayarları"
 
 #: src/kdebugsettingsdialog.cpp:71 src/savetoolbutton.cpp:15
 #, kde-format
