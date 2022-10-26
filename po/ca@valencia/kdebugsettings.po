@@ -159,7 +159,7 @@ msgstr "Gestiona el grup"
 #: src/groupmanagementwidget.cpp:45 src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Rename Group"
-msgstr "Canvia el nom el grup"
+msgstr "Canvia el nom del grup"
 
 #: src/groupmanagementwidget.cpp:45
 #, kde-format
@@ -174,7 +174,7 @@ msgstr "Impossible canviar el nom del grup com a «%1»"
 #: src/groupmanagementwidget.cpp:66
 #, kde-format
 msgid "Rename Groups"
-msgstr "Canvia el nom els grups"
+msgstr "Canvia el nom dels grups"
 
 #: src/groupmanagementwidget.cpp:71
 #, kde-format
