@@ -40,8 +40,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion)
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
-ecm_set_disabled_deprecation_versions(QT 6.0
-    KF 6.0
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+    KF 5.99
 )
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
