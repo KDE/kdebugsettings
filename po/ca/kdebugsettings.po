@@ -430,15 +430,3 @@ msgstr "Desa com a fitxer..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "Desa com a grup..."
-
-#~ msgid "All"
-#~ msgstr "Tot"
-
-#~ msgid "Load"
-#~ msgstr "Carrega"
-
-#~ msgid "Select All"
-#~ msgstr "Selecciona-ho tot"
-
-#~ msgid "Deselect All"
-#~ msgstr "Desselecciona-ho tot"
