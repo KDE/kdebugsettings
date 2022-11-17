@@ -183,12 +183,8 @@ void CustomDebugSettingsPage::slotRemoveRules()
     }
     const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", lst.count());
 
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     if (KMessageBox::ButtonCode::SecondaryAction
         == KMessageBox::warningTwoActions(this, str, i18n("Remove Rule"), KStandardGuiItem::remove(), KStandardGuiItem::cancel())) {
-#else
-    if (KMessageBox::No == KMessageBox::warningYesNo(this, str, i18n("Remove Rule"), KStandardGuiItem::remove())) {
-#endif
         return;
     }
     for (int i = 0; i < lst.count(); ++i) {
