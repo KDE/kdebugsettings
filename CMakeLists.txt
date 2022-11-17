@@ -9,7 +9,7 @@ cmake_minimum_required (VERSION 3.16.0 FATAL_ERROR)
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.99.0")
+set(KF5_MIN_VERSION "5.100.0")
 
 set(ECM_VERSION ${KF5_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
@@ -41,7 +41,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 ecm_set_disabled_deprecation_versions(QT 5.15.2
-    KF 5.99
+    KF 5.100
 )
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
