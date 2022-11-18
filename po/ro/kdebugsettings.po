@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:50+0000\n"
+"POT-Creation-Date: 2022-11-18 00:48+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -116,8 +116,7 @@ msgstr ""
 msgid "Edit Rule"
 msgstr "Modifică regula personalizată"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
-#: src/customdebugsettingspage.cpp:190
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"

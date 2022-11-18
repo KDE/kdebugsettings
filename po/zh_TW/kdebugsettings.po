@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:50+0000\n"
+"POT-Creation-Date: 2022-11-18 00:48+0000\n"
 "PO-Revision-Date: 2020-02-20 19:09+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -117,8 +117,7 @@ msgstr ""
 msgid "Edit Rule"
 msgstr "編輯自訂規則"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
-#: src/customdebugsettingspage.cpp:190
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:50+0000\n"
+"POT-Creation-Date: 2022-11-18 00:48+0000\n"
 "PO-Revision-Date: 2015-07-30 08:57+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -112,8 +112,7 @@ msgstr ""
 msgid "Edit Rule"
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
-#: src/customdebugsettingspage.cpp:190
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
 #, kde-format
 msgid "Remove Rule"
 msgstr ""

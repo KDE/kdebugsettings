@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:50+0000\n"
+"POT-Creation-Date: 2022-11-18 00:48+0000\n"
 "PO-Revision-Date: 2022-09-07 17:54+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: KDE\n"
@@ -115,8 +115,7 @@ msgstr "Lisää sääntö…"
 msgid "Edit Rule"
 msgstr "Muokkaa sääntöä"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
-#: src/customdebugsettingspage.cpp:190
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
 #, kde-format
 msgid "Remove Rule"
 msgstr "Poista sääntö"

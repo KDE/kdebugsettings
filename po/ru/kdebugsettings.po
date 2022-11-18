@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:50+0000\n"
+"POT-Creation-Date: 2022-11-18 00:48+0000\n"
 "PO-Revision-Date: 2022-06-02 11:20+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Russian <l10n@basealt.ru>\n"
@@ -117,8 +117,7 @@ msgstr "Добавить правило…"
 msgid "Edit Rule"
 msgstr "Изменить правило"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:188
-#: src/customdebugsettingspage.cpp:190
+#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
 #, kde-format
 msgid "Remove Rule"
 msgstr "Удалить правило"
