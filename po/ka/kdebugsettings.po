@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:48+0000\n"
-"PO-Revision-Date: 2022-10-08 10:50+0200\n"
+"PO-Revision-Date: 2022-12-07 15:48+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: src/categorytypecombobox.cpp:15
 #, kde-format
@@ -140,18 +140,18 @@ msgstr ""
 #: src/environmentsettingsrulespage.cpp:34
 #, kde-format
 msgid "Current rules:"
-msgstr "მიდინარე წესები"
+msgstr "მიმდინარე წესები:"
 
 #: src/groupmanagementdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
-msgstr ""
+msgstr "ჯგუფის მართვა"
 
 #: src/groupmanagementwidget.cpp:45 src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Rename Group"
-msgstr ""
+msgstr "ჯგუფის სახელის გადარქემვა"
 
 #: src/groupmanagementwidget.cpp:45
 #, kde-format
@@ -161,22 +161,22 @@ msgstr "ახალი სახელი:"
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Impossible to rename group as '%1'"
-msgstr ""
+msgstr "ჯგუფის სახელის '%1'-ზე გადარქმევის შეცდომა"
 
 #: src/groupmanagementwidget.cpp:66
 #, kde-format
 msgid "Rename Groups"
-msgstr ""
+msgstr "ჯგუფების სახელის გადარქმევა"
 
 #: src/groupmanagementwidget.cpp:71
 #, kde-format
 msgid "Remove Groups"
-msgstr ""
+msgstr "ჯგუფების წაშლა"
 
 #: src/groupmanagementwidget.cpp:76
 #, kde-format
 msgid "Impossible to remove '%1'"
-msgstr ""
+msgstr "'%1'-ის წაშლა შეუძლებელია"
 
 #: src/groupmanagementwidget.cpp:76
 #, kde-format
@@ -186,22 +186,22 @@ msgstr "ჯგუფის წაშლა"
 #: src/kdeapplicationdebugsettingpage.cpp:21
 #, kde-format
 msgid "Enable All Debug"
-msgstr ""
+msgstr "ყველა გამართვის ჩართვა"
 
 #: src/kdeapplicationdebugsettingpage.cpp:22
 #, kde-format
 msgid "Turn Off Debug"
-msgstr ""
+msgstr "გამართვის გამორთვა"
 
 #: src/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
 msgid "Turn Off All Messages"
-msgstr ""
+msgstr "ყველა შეტყობინების გამორთვა"
 
 #: src/kdeapplicationtreelistwidget.cpp:115
 #, kde-format
 msgid "Category name: %1"
-msgstr ""
+msgstr "კატეგორიის სახელი: %1"
 
 #: src/kdeapplicationtreelistwidget.cpp:117
 #, kde-format
@@ -211,12 +211,12 @@ msgstr "იდენტიფიკატორი: %1"
 #: src/kdeapplicationtreelistwidget.cpp:119
 #, kde-format
 msgid "Default Severity: %1"
-msgstr ""
+msgstr "ნაგულისხმები სიმძიმე: %1"
 
 #: src/kdebugsettingsdialog.cpp:60
 #, kde-format
 msgid "KDE Application"
-msgstr ""
+msgstr "KDE-ის აპლიკაცია"
 
 #: src/kdebugsettingsdialog.cpp:61
 #, kde-format
@@ -241,22 +241,22 @@ msgstr "ჩასმა..."
 #: src/kdebugsettingsdialog.cpp:159
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr ""
+msgstr "'%1'-ის გახსნა შეუძლებელია. გადაამოწმეთ."
 
 #: src/kdebugsettingsdialog.cpp:190 src/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Insert Categories"
-msgstr ""
+msgstr "კატეგორიების ჩასმა"
 
 #: src/kdebugsettingsdialog.cpp:190
 #, kde-format
 msgid "Categories Files"
-msgstr ""
+msgstr "კატეგორიის ფაილები"
 
 #: src/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr ""
+msgstr "ფაილიდან '%1' კატეგორიების ჩასმა წარმატებულია."
 
 #: src/kdebugsettingsdialog.cpp:212
 #, kde-format
@@ -274,11 +274,13 @@ msgid ""
 "'%1' is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
+"'%1' ჯგუფის სახელს უკვე წარმოადგენს.\n"
+"სხვა სახელითშეინახეთ."
 
 #: src/kdebugsettingsdialog.cpp:226
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr ""
+msgstr "ცარიელი სახელით ვერ შეინახავთ.აირჩიეთ ახალისახელი."
 
 #: src/kdebugsettingsdialog.cpp:233
 #, kde-format
@@ -288,42 +290,42 @@ msgstr "შენახვა როგორც"
 #: src/kdebugsettingsdialog.cpp:233 src/kdebugsettingsdialog.cpp:241
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
-msgstr ""
+msgstr "KDebugSettings -ის ფაილი (*.kdebugsettingsrules)"
 
 #: src/kdebugsettingsdialog.cpp:241
 #, kde-format
 msgid "Load Debug Settings Files"
-msgstr ""
+msgstr "გამართვის პარამეტრების ფაილის ჩატვირთვა"
 
 #: src/kdebugsettingsutil.cpp:421
 #, kde-format
 msgid "All Debug Messages"
-msgstr ""
+msgstr "ყველა გამართვის შეტყობინება"
 
 #: src/kdebugsettingsutil.cpp:424
 #, kde-format
 msgid "Info Messages"
-msgstr ""
+msgstr "საინფორმაციო შეტყობინებები"
 
 #: src/kdebugsettingsutil.cpp:427
 #, kde-format
 msgid "Warning Messages"
-msgstr ""
+msgstr "გაფრთხილების შეტყობინებები"
 
 #: src/kdebugsettingsutil.cpp:430
 #, kde-format
 msgid "Debug Messages"
-msgstr ""
+msgstr "გამართვის შეტყობინებები"
 
 #: src/kdebugsettingsutil.cpp:433
 #, kde-format
 msgid "Critical Messages"
-msgstr ""
+msgstr "კრიტიკული შეტყობინებები"
 
 #: src/kdebugsettingsutil.cpp:436
 #, kde-format
 msgid "No Debug Messages"
-msgstr ""
+msgstr "გამართვის შეტყობინებების გარეშე"
 
 #: src/kdebugsettingsutil.cpp:439
 #, kde-format
@@ -333,12 +335,12 @@ msgstr "გაურკვეველი"
 #: src/loadgroupmenu.cpp:18
 #, kde-format
 msgid "Load Group"
-msgstr ""
+msgstr "ჯგუფის ჩატვირთვა"
 
 #: src/loadgroupmenu.cpp:65
 #, kde-format
 msgid "Manage Group"
-msgstr ""
+msgstr "ჯგუფის მართვა"
 
 #: src/loadtoolbutton.cpp:17
 #, kde-format
@@ -358,12 +360,12 @@ msgstr "KDebugSettings"
 #: src/main.cpp:34
 #, kde-format
 msgid "Configure debug settings"
-msgstr ""
+msgstr "გამართვის მორგება"
 
 #: src/main.cpp:36
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr ""
+msgstr "(c) 2015-%1 kdebugsettings -ის ავტორები"
 
 #: src/main.cpp:37
 #, kde-format
@@ -384,12 +386,12 @@ msgstr ""
 #: src/main.cpp:46
 #, kde-format
 msgid "Activate full debug for all modules."
-msgstr ""
+msgstr "ყველა მოდულის გამართვის ჩართვა."
 
 #: src/main.cpp:48
 #, kde-format
 msgid "Disable full debug for all modules."
-msgstr ""
+msgstr "ყველა მოდულის გამართვის გამორთვა."
 
 #: src/main.cpp:52
 #, kde-format
@@ -405,14 +407,14 @@ msgstr ""
 #: src/main.cpp:70 src/main.cpp:80 src/main.cpp:90
 #, kde-format
 msgid "Impossible to change debug mode"
-msgstr ""
+msgstr "გამართვის რეჟიმის შეცვლა შეუძლებელია"
 
 #: src/savetoolbutton.cpp:20
 #, kde-format
 msgid "Save As File..."
-msgstr ""
+msgstr "ფაილად შენახვა..."
 
 #: src/savetoolbutton.cpp:23
 #, kde-format
 msgid "Save As Group..."
-msgstr ""
+msgstr "ჯგუფად შენახვა..."
