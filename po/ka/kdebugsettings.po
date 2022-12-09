@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:48+0000\n"
-"PO-Revision-Date: 2022-12-07 15:48+0100\n"
+"PO-Revision-Date: 2022-12-08 07:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -49,6 +49,8 @@ msgid ""
 "You have a rule as '*=true' or '*=false' which will override all your "
 "specific rule. Better to remove it."
 msgstr ""
+"გაქვთ წესი '*=true' ან '*=false', რომელიც ყველა დანარჩენ მითითებულ წესს "
+"გადაფარავს. წაშალეთ ის."
 
 #: src/configurecustomsettingdialog.cpp:21
 #, kde-format
@@ -128,7 +130,7 @@ msgstr[1] "გსურთ %1 წესის წაშლა?"
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr ""
+msgstr "გარემოს ცვლადში 'QT_LOGGING_RULES' წესები აღწერილი არაა."
 
 #: src/environmentsettingsrulespage.cpp:32
 #, kde-format
@@ -136,6 +138,8 @@ msgid ""
 "These rules cannot be edited with this application. You need to set them in "
 "QT_LOGGING_RULES variable directly."
 msgstr ""
+"ეს წესები აპლიკაციით ვერ ჩასწორდება. ისინი QT_LOGGING_RULES-ის ცვლადში უნდა "
+"დააყენოთ."
 
 #: src/environmentsettingsrulespage.cpp:34
 #, kde-format
@@ -226,7 +230,7 @@ msgstr "ხელით მითითებული წესები"
 #: src/kdebugsettingsdialog.cpp:62
 #, kde-format
 msgid "Rules Settings With Environment Variable"
-msgstr ""
+msgstr "წესების დაყენება გარემოს ცვლადით"
 
 #: src/kdebugsettingsdialog.cpp:71 src/savetoolbutton.cpp:15
 #, kde-format
@@ -382,6 +386,8 @@ msgstr "წამყვანი პროგრამისტი"
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
+"QStandardPaths -ის ტესტირების ჩართვა. ანუ unittests-ის მიერ გამოყენებული "
+"პარამეტრების ჩაწერა/წაკითხვა"
 
 #: src/main.cpp:46
 #, kde-format
@@ -396,13 +402,15 @@ msgstr "ყველა მოდულის გამართვის გა
 #: src/main.cpp:52
 #, kde-format
 msgid "Change debug mode as console (in console)"
-msgstr ""
+msgstr "გამართვის რეჟიმის კონსოლზე გადართვა (კონსოლში)"
 
 #: src/main.cpp:56
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
+"მიუთითეთ ჟურნალის კატეგორია, რომლის გამართვის რეჟიმის შეცვლაც გნებავთ "
+"(კონსოლში)"
 
 #: src/main.cpp:70 src/main.cpp:80 src/main.cpp:90
 #, kde-format
