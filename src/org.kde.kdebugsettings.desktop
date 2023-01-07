@@ -122,6 +122,7 @@ Keywords[az]=log;logging;category;categories;journal;logging levels;debug;jurnal
 Keywords[ca]=registre;enregistrament;categoria;categories;diari;nivells de registre;depuració
 Keywords[ca@valencia]=registre;gravació;categoria;categories;diari;nivells de registre;depuració
 Keywords[de]=protokoll;fehlersuche
+Keywords[el]=log;καταγραφή;κατηγορία;κατηγορίες;χρονικό;επίπεδο καταγραφής;αποσφαλμάτωση
 Keywords[en_GB]=log;logging;category;categories;journal;logging levels;debug
 Keywords[es]=registrar;registro;categoría;categorías;diario;niveles de registro;depuración
 Keywords[eu]=egunkaria;erregistratzea;kategoria;kategoriak;egunerokoa;erregistro mailak;araztea
