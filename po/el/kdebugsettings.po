@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Petros Vidalis <pvidalis@gmail.com>, 2017, 2018.
-# Stelios <sstavra@gmail.com>, 2019, 2020, 2021.
+# Stelios <sstavra@gmail.com>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:48+0000\n"
-"PO-Revision-Date: 2021-10-17 10:07+0300\n"
+"PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: src/categorytypecombobox.cpp:15
 #, kde-format
@@ -368,10 +368,9 @@ msgid "Configure debug settings"
 msgstr "Διαμόρφωση ρυθμίσεων αποσφαλμάτωσης"
 
 #: src/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2021 kdebugsettings authors"
+#, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-2021 οι συγγραφείς του kdebugsettings"
+msgstr "(c) 2015-%1 οι συγγραφείς του kdebugsettings"
 
 #: src/main.cpp:37
 #, kde-format
