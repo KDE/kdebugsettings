@@ -149,6 +149,7 @@
       <caption xml:lang="tr">KDebugSettings'in ana penceresi.</caption>
       <caption xml:lang="uk">Головне вікно KDebugSettings.</caption>
       <caption xml:lang="x-test">xxThe main window of KDebugSettings.xx</caption>
+      <caption xml:lang="zh-CN">KDebugSettings 的主窗口。</caption>
       <image>https://cdn.kde.org/screenshots/kdebugsettings/kdebugsettings.png</image>
     </screenshot>
   </screenshots>
