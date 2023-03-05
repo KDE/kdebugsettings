@@ -228,7 +228,7 @@ msgstr ""
 #: src/kdebugsettingsdialog.cpp:60
 #, kde-format
 msgid "KDE Application"
-msgstr "تطبيق كدي"
+msgstr "تطبيق كِيدِي"
 
 #: src/kdebugsettingsdialog.cpp:61
 #, kde-format
