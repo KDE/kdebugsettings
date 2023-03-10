@@ -48,8 +48,9 @@ void LoadGroupMenu::init()
     }
     for (const QString &dirName : groupPath) {
         QDir dir(dirName);
-        mGroupNames += dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
-        for (const QString &file : std::as_const(mGroupNames)) {
+        const QStringList dirNameList = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+        mGroupNames += dirNameList;
+        for (const QString &file : dirNameList) {
             QAction *act = addAction(file);
             const QString fullPath = dirName + QLatin1Char('/') + file;
             connect(act, &QAction::triggered, this, [this, fullPath] {
