@@ -71,6 +71,7 @@ target_link_libraries(libkdebugsettings
     KF${KF_MAJOR_VERSION}::Completion
     KF${KF_MAJOR_VERSION}::ConfigGui
     KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::CoreAddons
 )
 
 set_target_properties(libkdebugsettings

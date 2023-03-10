@@ -13,6 +13,7 @@ Dependencies:
     'frameworks/kcompletion' : '@latest-kf6'
     'frameworks/kitemviews' : '@latest-kf6'
     'frameworks/kxmlgui': '@latest-kf6'
+    'frameworks/kcoreaddons': '@latest-kf6'
 
 - 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
   'require':
@@ -25,6 +26,7 @@ Dependencies:
     'frameworks/kcompletion' : '@latest'
     'frameworks/kitemviews' : '@latest'
     'frameworks/kxmlgui': '@latest'
+    'frameworks/kcoreaddons': '@latest'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]
