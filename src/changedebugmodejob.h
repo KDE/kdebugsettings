@@ -28,7 +28,7 @@ public:
 
     Q_REQUIRED_RESULT bool canStart() const;
     Q_REQUIRED_RESULT bool debugModeIsValid(const QString &value) const;
-    Q_REQUIRED_RESULT LoggingCategory::LoggingType convertDebugModeToLoggingType(const QString &value);
+    Q_REQUIRED_RESULT LoggingCategory::LoggingType convertDebugModeToLoggingType(const QString &value) const;
     void setWithoutArguments(bool b);
     Q_REQUIRED_RESULT bool withoutArguments() const;
 

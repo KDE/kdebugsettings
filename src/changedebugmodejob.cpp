@@ -77,7 +77,7 @@ bool ChangeDebugModeJob::start()
     return true;
 }
 
-LoggingCategory::LoggingType ChangeDebugModeJob::convertDebugModeToLoggingType(const QString &value)
+LoggingCategory::LoggingType ChangeDebugModeJob::convertDebugModeToLoggingType(const QString &value) const
 {
     if (value == QLatin1String("Full")) {
         return LoggingCategory::LoggingType::All;
@@ -125,9 +125,8 @@ void ChangeDebugModeJob::setLoggingCategoriesName(const QStringList &loggingCate
 
 bool ChangeDebugModeJob::debugModeIsValid(const QString &value) const
 {
-    if (value == QLatin1String("Full") || value == QLatin1String("Info") || value == QLatin1String("Warning") || value == QLatin1String("Critical")
-        || value == QLatin1String("Off")) {
-        return true;
+    if (convertDebugModeToLoggingType(value) == LoggingCategory::LoggingType::Undefined) {
+        return false;
     }
-    return false;
+    return true;
 }
