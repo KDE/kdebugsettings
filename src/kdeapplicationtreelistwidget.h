@@ -49,9 +49,9 @@ public:
 
     void restoreToDefault();
 
-    QList<int> searchColumns() const;
+    Q_REQUIRED_RESULT QList<int> searchColumns() const;
 
 private:
     void addListItems(const LoggingCategory::List &list, bool clearList);
-    QString generateToolTip(const LoggingCategory &cat);
+    Q_REQUIRED_RESULT QString generateToolTip(const LoggingCategory &cat);
 };
