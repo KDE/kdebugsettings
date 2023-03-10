@@ -27,7 +27,7 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
 
     mListWidget->setObjectName(QStringLiteral("mListWidget"));
     mainLayout->addWidget(mListWidget);
-    mListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
+    mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &GroupManagementWidget::renameGroup);
     connect(mListWidget, &QListWidget::customContextMenuRequested, this, &GroupManagementWidget::slotCustomContextMenu);

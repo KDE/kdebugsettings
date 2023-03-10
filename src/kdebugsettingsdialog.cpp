@@ -215,7 +215,7 @@ void KDebugSettingsDialog::slotSaveAsGroup()
         const QString trimmedName = name.trimmed();
         if (!trimmedName.isEmpty()) {
             if (mLoadToolButton->groupNames().contains(trimmedName)) {
-                KMessageBox::error(this, i18n("\'%1\' is already used as a group name.\nPlease save as another name.", trimmedName));
+                KMessageBox::error(this, i18n("<b>\'%1\'</b> is already used as a group name.\nPlease save as another name.", trimmedName));
             } else {
                 if (!QDir().mkpath(groupPath)) {
                     qCWarning(KDEBUGSETTINGS_LOG) << "Unable to create folder: " << groupPath;
