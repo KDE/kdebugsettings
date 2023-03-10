@@ -31,7 +31,6 @@ Q_SIGNALS:
 
 private:
     void slotAccepted();
-    void slotHelpRequested();
     void slotApply();
     void slotSaveAs();
     void slotLoad();

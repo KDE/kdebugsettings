@@ -34,6 +34,10 @@
 #include <QUrl>
 #include <QVBoxLayout>
 #include <QWindow>
+
+#include <KAboutData>
+#include <KHelpMenu>
+
 namespace
 {
 constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
@@ -89,7 +93,9 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    connect(buttonBox, &QDialogButtonBox::helpRequested, this, &KDebugSettingsDialog::slotHelpRequested);
+    auto helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
+    buttonBox->button(QDialogButtonBox::Help)->setMenu(helpMenu->menu());
+
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &KDebugSettingsDialog::slotApply);
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &KDebugSettingsDialog::slotRestoreDefault);
     mainLayout->addWidget(buttonBox);
@@ -172,11 +178,6 @@ void KDebugSettingsDialog::slotAccepted()
     if (saveInQtLogging()) {
         accept();
     }
-}
-
-void KDebugSettingsDialog::slotHelpRequested()
-{
-    QDesktopServices::openUrl(QUrl(QStringLiteral("https://doc.qt.io/qt-5/qloggingcategory.html#details")));
 }
 
 void KDebugSettingsDialog::slotApply()

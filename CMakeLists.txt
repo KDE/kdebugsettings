@@ -45,7 +45,9 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
     I18n 
     WidgetsAddons
     ItemViews
-    Completion)
+    Completion
+    XmlGui
+)
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 ecm_set_disabled_deprecation_versions(QT 6.4.0

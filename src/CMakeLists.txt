@@ -70,6 +70,7 @@ target_link_libraries(libkdebugsettings
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::Completion
     KF${KF_MAJOR_VERSION}::ConfigGui
+    KF${KF_MAJOR_VERSION}::XmlGui
 )
 
 set_target_properties(libkdebugsettings
