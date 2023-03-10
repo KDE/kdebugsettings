@@ -44,22 +44,23 @@ constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
 }
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
+    , mTabWidget(new QTabWidget(this))
+    , mKdeApplicationSettingsPage(new KDEApplicationDebugSettingPage(this))
+    , mCustomSettingsPage(new CustomDebugSettingsPage(this))
+    , mEnvironmentSettingsRulesPage(new EnvironmentSettingsRulesPage(this))
+    , mCategoryWarning(new CategoryWarning(this))
+    , mLoadToolButton(new LoadToolButton(this))
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    mCategoryWarning = new CategoryWarning(this);
     mCategoryWarning->setObjectName(QStringLiteral("categorywarning"));
     mainLayout->addWidget(mCategoryWarning);
 
-    mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
-    mKdeApplicationSettingsPage = new KDEApplicationDebugSettingPage(this);
     mKdeApplicationSettingsPage->setObjectName(QStringLiteral("kdeapplicationsettingspage"));
-    mCustomSettingsPage = new CustomDebugSettingsPage(this);
     mCustomSettingsPage->setObjectName(QStringLiteral("customsettingspage"));
-    mEnvironmentSettingsRulesPage = new EnvironmentSettingsRulesPage(this);
     mEnvironmentSettingsRulesPage->setObjectName(QStringLiteral("environmentsettingsrulespage"));
     mTabWidget->addTab(mKdeApplicationSettingsPage, i18n("KDE Application"));
     mTabWidget->addTab(mCustomSettingsPage, i18n("Custom Rules"));
@@ -78,7 +79,6 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(saveAs, &SaveToolButton::saveAsFile, this, &KDebugSettingsDialog::slotSaveAs);
     connect(saveAs, &SaveToolButton::saveAsGroup, this, &KDebugSettingsDialog::slotSaveAsGroup);
 
-    mLoadToolButton = new LoadToolButton(this);
     mLoadToolButton->setObjectName(QStringLiteral("load_button"));
     buttonBox->addButton(mLoadToolButton, QDialogButtonBox::ActionRole);
     connect(mLoadToolButton, &LoadToolButton::loadFromFile, this, &KDebugSettingsDialog::slotLoad);

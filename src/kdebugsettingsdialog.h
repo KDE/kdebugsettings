@@ -48,10 +48,10 @@ private:
     void slotManageGroup();
     KdeLoggingCategory::List mCategoriesList;
     KDebugSettingsLoadingCategories mLoggings;
-    QTabWidget *mTabWidget = nullptr;
-    KDEApplicationDebugSettingPage *mKdeApplicationSettingsPage = nullptr;
-    CustomDebugSettingsPage *mCustomSettingsPage = nullptr;
-    EnvironmentSettingsRulesPage *mEnvironmentSettingsRulesPage = nullptr;
-    CategoryWarning *mCategoryWarning = nullptr;
-    LoadToolButton *mLoadToolButton = nullptr;
+    QTabWidget *const mTabWidget;
+    KDEApplicationDebugSettingPage *const mKdeApplicationSettingsPage;
+    CustomDebugSettingsPage *const mCustomSettingsPage;
+    EnvironmentSettingsRulesPage *const mEnvironmentSettingsRulesPage;
+    CategoryWarning *const mCategoryWarning;
+    LoadToolButton *const mLoadToolButton;
 };
