@@ -29,6 +29,7 @@ Q_SIGNALS:
 
 private:
     void init();
-    QStringList mGroupNames;
+    void slotAboutToShow();
     Q_REQUIRED_RESULT QStringList defaultReadableGroupPath() const;
+    QStringList mGroupNames;
 };

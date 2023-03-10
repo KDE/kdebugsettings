@@ -6,6 +6,7 @@
 */
 
 #include "loadgroupmenu.h"
+#include "kdebugsettingsutil.h"
 
 #include <KLocalizedString>
 
@@ -62,9 +63,11 @@ void LoadGroupMenu::init()
         setEnabled(false);
         return;
     }
-    addSeparator();
-    QAction *manageGroup = addAction(i18n("Manage Group"));
-    connect(manageGroup, &QAction::triggered, this, &LoadGroupMenu::manageGroupRequested);
+    if (KDebugSettingsUtil::hasWritableGroups()) {
+        addSeparator();
+        QAction *manageGroup = addAction(i18n("Manage Group"));
+        connect(manageGroup, &QAction::triggered, this, &LoadGroupMenu::manageGroupRequested);
+    }
 }
 
 QStringList LoadGroupMenu::groupNames() const

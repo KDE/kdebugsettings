@@ -462,7 +462,7 @@ QStringList KDebugSettingsUtil::groupFileList()
     return groups;
 }
 
-bool KDebugSettingsUtil::hasGroups()
+bool KDebugSettingsUtil::hasWritableGroups()
 {
     return !groupFileList().isEmpty();
 }
