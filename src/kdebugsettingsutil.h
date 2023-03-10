@@ -79,6 +79,8 @@ Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory::List read
 Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
 Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
 Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT QString qtFileName();
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT bool hasGroups();
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGS_EXPORT QStringList groupFileList();
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

@@ -7,6 +7,7 @@
 
 #include "kdebugsettingsutil.h"
 #include "kdebugsettings_debug.h"
+#include "loadgroupmenu.h"
 #include <KLocalizedString>
 #include <QDir>
 #include <QFile>
@@ -448,4 +449,20 @@ QString KDebugSettingsUtil::qtFileName()
     QDir().mkpath(envPath);
     const QString qtloggingFileName = envPath + QStringLiteral("/qtlogging.ini");
     return qtloggingFileName;
+}
+
+QStringList KDebugSettingsUtil::groupFileList()
+{
+    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
+    if (groupPath.isEmpty()) {
+        return {};
+    }
+    QDir dir(groupPath);
+    const QStringList groups = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+    return groups;
+}
+
+bool KDebugSettingsUtil::hasGroups()
+{
+    return !groupFileList().isEmpty();
 }

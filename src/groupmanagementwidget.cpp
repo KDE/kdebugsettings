@@ -6,6 +6,7 @@
 */
 
 #include "groupmanagementwidget.h"
+#include "kdebugsettingsutil.h"
 #include "loadgroupmenu.h"
 
 #include <KLocalizedString>
@@ -85,18 +86,13 @@ void GroupManagementWidget::slotCustomContextMenu()
 
 void GroupManagementWidget::init()
 {
-    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
-    if (groupPath.isEmpty()) {
-        return;
-    }
-    QDir dir(groupPath);
-    const QStringList groups = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
-    if (groups.isEmpty()) {
-        return;
-    }
-    for (const QString &file : groups) {
-        auto item = new QListWidgetItem(file, mListWidget);
-        const QString fullPath = groupPath + QLatin1Char('/') + file;
-        item->setData(FullPathRole, fullPath);
+    const QStringList groups = KDebugSettingsUtil::groupFileList();
+    if (!groups.isEmpty()) {
+        const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
+        for (const QString &file : groups) {
+            auto item = new QListWidgetItem(file, mListWidget);
+            const QString fullPath = groupPath + QLatin1Char('/') + file;
+            item->setData(FullPathRole, fullPath);
+        }
     }
 }
