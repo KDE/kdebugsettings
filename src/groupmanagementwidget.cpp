@@ -43,11 +43,12 @@ void GroupManagementWidget::exportGroup(QListWidgetItem *item)
     }
     const QString fullPath = item->data(FullPathRole).toString();
     QFile f(fullPath);
-    QString newPath;
-    if (!f.copy(newPath)) {
+    const QString newPath = QDir::homePath() + QStringLiteral("/%1").arg(item->text());
+    if (f.copy(newPath)) {
+        KMessageBox::information(this, i18n("Group exported to %1", newPath), i18n("Export Group"));
+    } else {
         KMessageBox::error(this, i18n("Impossible to export group \'%2\' to \'%1\'", newPath, item->text()), i18n("Export Group"));
     }
-    // TODO
 }
 
 void GroupManagementWidget::renameGroup(QListWidgetItem *item)
