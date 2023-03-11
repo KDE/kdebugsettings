@@ -28,6 +28,7 @@ Q_SIGNALS:
 private:
     enum { FullPathRole = Qt::UserRole + 1 };
     void init();
-    QListWidget *const mListWidget;
     void renameGroup(QListWidgetItem *item);
+    void exportGroup(QListWidgetItem *item);
+    QListWidget *const mListWidget;
 };

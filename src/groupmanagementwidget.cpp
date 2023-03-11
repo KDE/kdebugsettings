@@ -36,6 +36,20 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
 
 GroupManagementWidget::~GroupManagementWidget() = default;
 
+void GroupManagementWidget::exportGroup(QListWidgetItem *item)
+{
+    if (!item) {
+        return;
+    }
+    const QString fullPath = item->data(FullPathRole).toString();
+    QFile f(fullPath);
+    QString newPath;
+    if (!f.copy(newPath)) {
+        KMessageBox::error(this, i18n("Impossible to export group \'%2\' to \'%1\'", newPath, item->text()), i18n("Export Group"));
+    }
+    // TODO
+}
+
 void GroupManagementWidget::renameGroup(QListWidgetItem *item)
 {
     if (!item) {
@@ -66,6 +80,10 @@ void GroupManagementWidget::slotCustomContextMenu()
             const auto item = items.at(0);
             menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Rename Groups"), this, [this, item]() {
                 renameGroup(item);
+            });
+            menu.addSeparator();
+            menu.addAction(QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Group"), this, [this, item]() {
+                exportGroup(item);
             });
             menu.addSeparator();
         }
