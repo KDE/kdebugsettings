@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:48+0000\n"
+"POT-Creation-Date: 2023-03-11 00:52+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -157,39 +157,39 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:45 src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:46 src/groupmanagementwidget.cpp:51
 #, kde-format
 msgid "Rename Group"
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:45
+#: src/groupmanagementwidget.cpp:46
 #, kde-format
 msgid "New Name:"
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "Impossible to change debug mode"
 msgid "Impossible to rename group as '%1'"
 msgstr "Nu se poate schimba regimul de depanare"
 
-#: src/groupmanagementwidget.cpp:66
+#: src/groupmanagementwidget.cpp:67
 #, kde-format
 msgid "Rename Groups"
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:71
+#: src/groupmanagementwidget.cpp:72
 #, kde-format
 msgid "Remove Groups"
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:76
+#: src/groupmanagementwidget.cpp:77
 #, fuzzy, kde-format
 #| msgid "Impossible to change debug mode"
 msgid "Impossible to remove '%1'"
 msgstr "Nu se poate schimba regimul de depanare"
 
-#: src/groupmanagementwidget.cpp:76
+#: src/groupmanagementwidget.cpp:77
 #, kde-format
 msgid "Remove Group"
 msgstr ""
@@ -224,129 +224,129 @@ msgstr "Identificator: %1"
 msgid "Default Severity: %1"
 msgstr "Severitate implicită: %1"
 
-#: src/kdebugsettingsdialog.cpp:60
+#: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
 msgstr "Aplicație KDE"
 
-#: src/kdebugsettingsdialog.cpp:61
+#: src/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Custom Rules"
 msgstr "Reguli personalizate"
 
-#: src/kdebugsettingsdialog.cpp:62
+#: src/kdebugsettingsdialog.cpp:67
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Configurări reguli cu variabilă de mediu"
 
-#: src/kdebugsettingsdialog.cpp:71 src/savetoolbutton.cpp:15
+#: src/kdebugsettingsdialog.cpp:76 src/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
 msgstr "Salvează ca..."
 
-#: src/kdebugsettingsdialog.cpp:85
+#: src/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert..."
 msgstr "Inserează..."
 
-#: src/kdebugsettingsdialog.cpp:159
+#: src/kdebugsettingsdialog.cpp:165
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "„%1” nu poate fi deschis. Verificați-l."
 
-#: src/kdebugsettingsdialog.cpp:190 src/kdebugsettingsdialog.cpp:204
+#: src/kdebugsettingsdialog.cpp:191 src/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Insert Categories"
 msgstr "Inserează categorii"
 
-#: src/kdebugsettingsdialog.cpp:190
+#: src/kdebugsettingsdialog.cpp:191
 #, kde-format
 msgid "Categories Files"
 msgstr "Fișiere cu categorii"
 
-#: src/kdebugsettingsdialog.cpp:204
+#: src/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr ""
 
-#: src/kdebugsettingsdialog.cpp:212
+#: src/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid "Group Name"
 msgstr ""
 
-#: src/kdebugsettingsdialog.cpp:212
+#: src/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid "Name:"
 msgstr ""
 
-#: src/kdebugsettingsdialog.cpp:217
+#: src/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid ""
-"'%1' is already used as a group name.\n"
+"<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
 
-#: src/kdebugsettingsdialog.cpp:226
+#: src/kdebugsettingsdialog.cpp:227
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr ""
 
-#: src/kdebugsettingsdialog.cpp:233
+#: src/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "Save As"
 msgstr "Salvează ca"
 
-#: src/kdebugsettingsdialog.cpp:233 src/kdebugsettingsdialog.cpp:241
+#: src/kdebugsettingsdialog.cpp:234 src/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Fișier KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/kdebugsettingsdialog.cpp:241
+#: src/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Încarcă fișiere cu reguli de depanare"
 
-#: src/kdebugsettingsutil.cpp:421
+#: src/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Toate mesajele de depanare"
 
-#: src/kdebugsettingsutil.cpp:424
+#: src/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Info Messages"
 msgstr "Mesaje informative"
 
-#: src/kdebugsettingsutil.cpp:427
+#: src/kdebugsettingsutil.cpp:428
 #, kde-format
 msgid "Warning Messages"
 msgstr "Mesaje de avertizare"
 
-#: src/kdebugsettingsutil.cpp:430
+#: src/kdebugsettingsutil.cpp:431
 #, kde-format
 msgid "Debug Messages"
 msgstr "Mesaje de depanare"
 
-#: src/kdebugsettingsutil.cpp:433
+#: src/kdebugsettingsutil.cpp:434
 #, kde-format
 msgid "Critical Messages"
 msgstr "Mesaje critice"
 
-#: src/kdebugsettingsutil.cpp:436
+#: src/kdebugsettingsutil.cpp:437
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Fără mesaje de depanare"
 
-#: src/kdebugsettingsutil.cpp:439
+#: src/kdebugsettingsutil.cpp:440
 #, kde-format
 msgid "Undefined"
 msgstr "Nedefinit"
 
-#: src/loadgroupmenu.cpp:18
+#: src/loadgroupmenu.cpp:19
 #, kde-format
 msgid "Load Group"
 msgstr ""
 
-#: src/loadgroupmenu.cpp:65
+#: src/loadgroupmenu.cpp:68
 #, kde-format
 msgid "Manage Group"
 msgstr ""

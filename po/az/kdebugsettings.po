@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:48+0000\n"
+"POT-Creation-Date: 2023-03-11 00:52+0000\n"
 "PO-Revision-Date: 2022-07-06 09:32+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -151,37 +151,37 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Qrupların idarə edilməsi"
 
-#: src/groupmanagementwidget.cpp:45 src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:46 src/groupmanagementwidget.cpp:51
 #, kde-format
 msgid "Rename Group"
 msgstr "Qrupun adını dəyişdirmək"
 
-#: src/groupmanagementwidget.cpp:45
+#: src/groupmanagementwidget.cpp:46
 #, kde-format
 msgid "New Name:"
 msgstr "Yeni ad:"
 
-#: src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:51
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "Qrupun adını \"%1\" kimi dəyişmək mümkün deyil"
 
-#: src/groupmanagementwidget.cpp:66
+#: src/groupmanagementwidget.cpp:67
 #, kde-format
 msgid "Rename Groups"
 msgstr "Qrupların adılarını dəyişdirmək"
 
-#: src/groupmanagementwidget.cpp:71
+#: src/groupmanagementwidget.cpp:72
 #, kde-format
 msgid "Remove Groups"
 msgstr "Qrupları silmək"
 
-#: src/groupmanagementwidget.cpp:76
+#: src/groupmanagementwidget.cpp:77
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "\"%1\" silmək mümkün deyil"
 
-#: src/groupmanagementwidget.cpp:76
+#: src/groupmanagementwidget.cpp:77
 #, kde-format
 msgid "Remove Group"
 msgstr "Qrupu silmək"
@@ -216,131 +216,134 @@ msgstr "Tanımlayıcı: %1"
 msgid "Default Severity: %1"
 msgstr "Əsas ciddiyyət: %1"
 
-#: src/kdebugsettingsdialog.cpp:60
+#: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
 msgstr "kDE Tətbiqi"
 
-#: src/kdebugsettingsdialog.cpp:61
+#: src/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Custom Rules"
 msgstr "İstifadəçi Qaydaları"
 
-#: src/kdebugsettingsdialog.cpp:62
+#: src/kdebugsettingsdialog.cpp:67
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Mühit dəyişəni ilə qaydaların ayarlanması"
 
-#: src/kdebugsettingsdialog.cpp:71 src/savetoolbutton.cpp:15
+#: src/kdebugsettingsdialog.cpp:76 src/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
 msgstr "Belə saxlamaq..."
 
-#: src/kdebugsettingsdialog.cpp:85
+#: src/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert..."
 msgstr "Daxil etmək..."
 
-#: src/kdebugsettingsdialog.cpp:159
+#: src/kdebugsettingsdialog.cpp:165
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "\"%1\" açıla bilmir. Lütfən, icazə verin."
 
-#: src/kdebugsettingsdialog.cpp:190 src/kdebugsettingsdialog.cpp:204
+#: src/kdebugsettingsdialog.cpp:191 src/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Insert Categories"
 msgstr "Kateqoriyalar daxil etmək"
 
-#: src/kdebugsettingsdialog.cpp:190
+#: src/kdebugsettingsdialog.cpp:191
 #, kde-format
 msgid "Categories Files"
 msgstr "Kateqoriya faylları"
 
-#: src/kdebugsettingsdialog.cpp:204
+#: src/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "\"%1\" faylından kateqoriyalar əlavə edildi."
 
-#: src/kdebugsettingsdialog.cpp:212
+#: src/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid "Group Name"
 msgstr "Qrup adı"
 
-#: src/kdebugsettingsdialog.cpp:212
+#: src/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid "Name:"
 msgstr "Adı:"
 
-#: src/kdebugsettingsdialog.cpp:217
-#, kde-format
+#: src/kdebugsettingsdialog.cpp:218
+#, fuzzy, kde-format
+#| msgid ""
+#| "'%1' is already used as a group name.\n"
+#| "Please save as another name."
 msgid ""
-"'%1' is already used as a group name.\n"
+"<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
 "%1, artıq qrup adı kimi istifadə olunur.\n"
 "Başqa adla saxlayın."
 
-#: src/kdebugsettingsdialog.cpp:226
+#: src/kdebugsettingsdialog.cpp:227
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Ad boş saxlanıla bilməz. Yenisini istifadə edin."
 
-#: src/kdebugsettingsdialog.cpp:233
+#: src/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "Save As"
 msgstr "Belə Saxlayın"
 
-#: src/kdebugsettingsdialog.cpp:233 src/kdebugsettingsdialog.cpp:241
+#: src/kdebugsettingsdialog.cpp:234 src/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings tətbiqi faylı (*.kdebugsettingsrules)"
 
-#: src/kdebugsettingsdialog.cpp:241
+#: src/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Sazlama parametrləri fayllarının yüklənməsi"
 
-#: src/kdebugsettingsutil.cpp:421
+#: src/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Bütün sazlama ismarıcları"
 
-#: src/kdebugsettingsutil.cpp:424
+#: src/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Info Messages"
 msgstr "Məlumat ismarıcları"
 
-#: src/kdebugsettingsutil.cpp:427
+#: src/kdebugsettingsutil.cpp:428
 #, kde-format
 msgid "Warning Messages"
 msgstr "Xəbərdarlıq ismarıcları"
 
-#: src/kdebugsettingsutil.cpp:430
+#: src/kdebugsettingsutil.cpp:431
 #, kde-format
 msgid "Debug Messages"
 msgstr "Sazlama ismarıcları"
 
-#: src/kdebugsettingsutil.cpp:433
+#: src/kdebugsettingsutil.cpp:434
 #, kde-format
 msgid "Critical Messages"
 msgstr "Kritik ismarıclar"
 
-#: src/kdebugsettingsutil.cpp:436
+#: src/kdebugsettingsutil.cpp:437
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Sazlama ismarıcları yoxdur"
 
-#: src/kdebugsettingsutil.cpp:439
+#: src/kdebugsettingsutil.cpp:440
 #, kde-format
 msgid "Undefined"
 msgstr "Qeyri-müəyyən"
 
-#: src/loadgroupmenu.cpp:18
+#: src/loadgroupmenu.cpp:19
 #, kde-format
 msgid "Load Group"
 msgstr "Qrupu yükləmək"
 
-#: src/loadgroupmenu.cpp:65
+#: src/loadgroupmenu.cpp:68
 #, kde-format
 msgid "Manage Group"
 msgstr "Qrupların idarə edilməsi"
