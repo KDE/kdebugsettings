@@ -79,11 +79,11 @@ void GroupManagementWidget::slotCustomContextMenu()
         QMenu menu(this);
         if (mListWidget->selectedItems().count() == 1) {
             const auto item = items.at(0);
-            menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Rename Groups"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Rename Group..."), this, [this, item]() {
                 renameGroup(item);
             });
             menu.addSeparator();
-            menu.addAction(QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Group"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Group..."), this, [this, item]() {
                 exportGroup(item);
             });
             menu.addSeparator();
