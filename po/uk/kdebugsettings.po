@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-11 00:52+0000\n"
-"PO-Revision-Date: 2022-01-02 08:55+0200\n"
+"POT-Creation-Date: 2023-03-12 00:49+0000\n"
+"PO-Revision-Date: 2023-03-11 09:38+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -156,37 +156,61 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Керування групою"
 
-#: src/groupmanagementwidget.cpp:46 src/groupmanagementwidget.cpp:51
+#: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:52
+#, fuzzy, kde-format
+#| msgid "Load Group"
+msgid "Export Group"
+msgstr "Завантажити групу"
+
+#: src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Group exported to %1"
+msgstr ""
+
+#: src/groupmanagementwidget.cpp:52
+#, fuzzy, kde-format
+#| msgid "Impossible to rename group as '%1'"
+msgid "Impossible to export group '%2' to '%1'"
+msgstr "Неможливо перейменувати групу на «%1»"
+
+#: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "Rename Group"
 msgstr "Перейменувати групу"
 
-#: src/groupmanagementwidget.cpp:46
+#: src/groupmanagementwidget.cpp:64
 #, kde-format
 msgid "New Name:"
 msgstr "Нова назва:"
 
-#: src/groupmanagementwidget.cpp:51
+#: src/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "Неможливо перейменувати групу на «%1»"
 
-#: src/groupmanagementwidget.cpp:67
-#, kde-format
-msgid "Rename Groups"
-msgstr "Перейменувати групи"
+#: src/groupmanagementwidget.cpp:85
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgid "Rename Group..."
+msgstr "Перейменувати групу"
 
-#: src/groupmanagementwidget.cpp:72
+#: src/groupmanagementwidget.cpp:89
+#, kde-format
+msgid "Export Group..."
+msgstr ""
+
+#: src/groupmanagementwidget.cpp:94
 #, kde-format
 msgid "Remove Groups"
 msgstr "Вилучити групи"
 
-#: src/groupmanagementwidget.cpp:77
+#: src/groupmanagementwidget.cpp:99
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Не вдалося вилучити «%1»"
 
-#: src/groupmanagementwidget.cpp:77
+#: src/groupmanagementwidget.cpp:99
 #, kde-format
 msgid "Remove Group"
 msgstr "Вилучення групи"
@@ -277,15 +301,12 @@ msgid "Name:"
 msgstr "Назва:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"«%1» вже використано як назву групи.\n"
+"<b>%1</b> вже використано як назву групи.\n"
 "Будь ласка, виберіть іншу назву."
 
 #: src/kdebugsettingsdialog.cpp:227
@@ -433,6 +454,9 @@ msgstr "Зберегти як файл…"
 #, kde-format
 msgid "Save As Group..."
 msgstr "Зберегти як групу…"
+
+#~ msgid "Rename Groups"
+#~ msgstr "Перейменувати групи"
 
 #~ msgid "All"
 #~ msgstr "Всі"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-11 00:52+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"POT-Creation-Date: 2023-03-12 00:49+0000\n"
+"PO-Revision-Date: 2023-03-11 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -150,37 +150,61 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "管理分组"
 
-#: src/groupmanagementwidget.cpp:46 src/groupmanagementwidget.cpp:51
+#: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:52
+#, fuzzy, kde-format
+#| msgid "Load Group"
+msgid "Export Group"
+msgstr "加载分组"
+
+#: src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Group exported to %1"
+msgstr ""
+
+#: src/groupmanagementwidget.cpp:52
+#, fuzzy, kde-format
+#| msgid "Impossible to rename group as '%1'"
+msgid "Impossible to export group '%2' to '%1'"
+msgstr "无法将分组重命名为“%1”"
+
+#: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "Rename Group"
 msgstr "重命名分组"
 
-#: src/groupmanagementwidget.cpp:46
+#: src/groupmanagementwidget.cpp:64
 #, kde-format
 msgid "New Name:"
 msgstr "新分组名称："
 
-#: src/groupmanagementwidget.cpp:51
+#: src/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "无法将分组重命名为“%1”"
 
-#: src/groupmanagementwidget.cpp:67
-#, kde-format
-msgid "Rename Groups"
+#: src/groupmanagementwidget.cpp:85
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgid "Rename Group..."
 msgstr "重命名分组"
 
-#: src/groupmanagementwidget.cpp:72
+#: src/groupmanagementwidget.cpp:89
+#, kde-format
+msgid "Export Group..."
+msgstr ""
+
+#: src/groupmanagementwidget.cpp:94
 #, kde-format
 msgid "Remove Groups"
 msgstr "移除分组"
 
-#: src/groupmanagementwidget.cpp:77
+#: src/groupmanagementwidget.cpp:99
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "无法移除分组“%1”"
 
-#: src/groupmanagementwidget.cpp:77
+#: src/groupmanagementwidget.cpp:99
 #, kde-format
 msgid "Remove Group"
 msgstr "移除分组"
@@ -423,3 +447,6 @@ msgstr "保存为文件…"
 #, kde-format
 msgid "Save As Group..."
 msgstr "保存到分组…"
+
+#~ msgid "Rename Groups"
+#~ msgstr "重命名分组"

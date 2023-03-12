@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-11 00:52+0000\n"
+"POT-Creation-Date: 2023-03-12 00:49+0000\n"
 "PO-Revision-Date: 2022-01-02 07:34+0100\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -155,37 +155,61 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Gestiona el grup"
 
-#: src/groupmanagementwidget.cpp:46 src/groupmanagementwidget.cpp:51
+#: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
+#: src/groupmanagementwidget.cpp:52
+#, fuzzy, kde-format
+#| msgid "Load Group"
+msgid "Export Group"
+msgstr "Carrega un grup"
+
+#: src/groupmanagementwidget.cpp:50
+#, kde-format
+msgid "Group exported to %1"
+msgstr ""
+
+#: src/groupmanagementwidget.cpp:52
+#, fuzzy, kde-format
+#| msgid "Impossible to rename group as '%1'"
+msgid "Impossible to export group '%2' to '%1'"
+msgstr "Impossible canviar el nom del grup com a «%1»"
+
+#: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "Rename Group"
 msgstr "Canvia el nom del grup"
 
-#: src/groupmanagementwidget.cpp:46
+#: src/groupmanagementwidget.cpp:64
 #, kde-format
 msgid "New Name:"
 msgstr "Nom nou:"
 
-#: src/groupmanagementwidget.cpp:51
+#: src/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "Impossible canviar el nom del grup com a «%1»"
 
-#: src/groupmanagementwidget.cpp:67
-#, kde-format
-msgid "Rename Groups"
-msgstr "Canvia el nom dels grups"
+#: src/groupmanagementwidget.cpp:85
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgid "Rename Group..."
+msgstr "Canvia el nom del grup"
 
-#: src/groupmanagementwidget.cpp:72
+#: src/groupmanagementwidget.cpp:89
+#, kde-format
+msgid "Export Group..."
+msgstr ""
+
+#: src/groupmanagementwidget.cpp:94
 #, kde-format
 msgid "Remove Groups"
 msgstr "Elimina els grups"
 
-#: src/groupmanagementwidget.cpp:77
+#: src/groupmanagementwidget.cpp:99
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Impossible eliminar «%1»"
 
-#: src/groupmanagementwidget.cpp:77
+#: src/groupmanagementwidget.cpp:99
 #, kde-format
 msgid "Remove Group"
 msgstr "Elimina el grup"
@@ -432,3 +456,6 @@ msgstr "Anomena i guarda fitxer..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "Anomena i guarda grup..."
+
+#~ msgid "Rename Groups"
+#~ msgstr "Canvia el nom dels grups"
