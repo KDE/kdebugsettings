@@ -60,10 +60,11 @@ void GroupManagementWidget::renameGroup(QListWidgetItem *item)
         return;
     }
     const QString fullPath = item->data(FullPathRole).toString();
+    const QString currentName = item->text();
     QFile f(fullPath);
     const QString newName = QInputDialog::getText(this, i18n("Rename Group"), i18n("New Name:"));
     const QString newNameTrimmed = newName.trimmed();
-    if (!newNameTrimmed.isEmpty()) {
+    if (!newNameTrimmed.isEmpty() && (currentName != newNameTrimmed)) {
         const QString newFullPath{LoadGroupMenu::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
         if (!f.rename(newFullPath)) {
             KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'", newNameTrimmed), i18n("Rename Group"));
