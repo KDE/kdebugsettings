@@ -2,23 +2,23 @@
 # This file is distributed under the same license as the kdebugsettings package.
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2015, 2016, 2017, 2018.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2019, 2020, 2021, 2022.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-18 11:51+0100\n"
+"PO-Revision-Date: 2023-03-12 08:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: src/categorytypecombobox.cpp:15
 #, kde-format
@@ -158,21 +158,19 @@ msgstr "Upravljaj grupo"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Naloži grupo"
+msgstr "Izvozi grupo"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Grupa izvožena v %1"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Ni mogoče preimenovati grupe '%1'"
+msgstr "Ni mogoče izvoziti grupe '%2' v '%1'"
 
 #: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
 #, kde-format
@@ -190,15 +188,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "Ni mogoče preimenovati grupe '%1'"
 
 #: src/groupmanagementwidget.cpp:85
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Preimenuj grupo"
+msgstr "Preimenuj grupo..."
 
 #: src/groupmanagementwidget.cpp:89
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Izvoz grupe..."
 
 #: src/groupmanagementwidget.cpp:94
 #, kde-format
@@ -301,15 +298,12 @@ msgid "Name:"
 msgstr "Ime:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"'%1' je že uporabljeno kot ime grupe.\n"
+"<b>'%1'</b> je že uporabljeno kot ime grupe.\n"
 "Shranite jo pod drugim imenom."
 
 #: src/kdebugsettingsdialog.cpp:227

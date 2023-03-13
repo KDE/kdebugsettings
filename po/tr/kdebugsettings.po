@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 00:49+0000\n"
-"PO-Revision-Date: 2023-03-11 15:53+0300\n"
+"PO-Revision-Date: 2023-03-12 12:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -153,21 +153,19 @@ msgstr "Grubu Yönet"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Grubu Yükle"
+msgstr "Grubu Dışa Aktar"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Grup, %1 konumuna dışa aktarıldı"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Grup, '%1' olarak yeniden adlandırılamıyor"
+msgstr "'%2' grubu, '%1' konumuna dışa aktarılamıyor"
 
 #: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
 #, kde-format
@@ -185,15 +183,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "Grup, '%1' olarak yeniden adlandırılamıyor"
 
 #: src/groupmanagementwidget.cpp:85
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Grubu Yeniden Adlandır"
+msgstr "Grubu Yeniden Adlandır..."
 
 #: src/groupmanagementwidget.cpp:89
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Grubu Dışa Aktar..."
 
 #: src/groupmanagementwidget.cpp:94
 #, kde-format

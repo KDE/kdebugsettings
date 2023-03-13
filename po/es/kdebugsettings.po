@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 00:49+0000\n"
-"PO-Revision-Date: 2023-03-11 20:32+0100\n"
+"PO-Revision-Date: 2023-03-12 13:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -156,21 +156,19 @@ msgstr "Gestión del grupo"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Cargar grupo"
+msgstr "Exportar grupo"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Grupo exportado a %1"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "No se ha podido cambiar el nombre del grupo a «%1»"
+msgstr "No se ha podido exportar el grupo «%2» a «%1»"
 
 #: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
 #, kde-format
@@ -188,15 +186,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "No se ha podido cambiar el nombre del grupo a «%1»"
 
 #: src/groupmanagementwidget.cpp:85
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Cambiar nombre del grupo"
+msgstr "Cambiar nombre del grupo..."
 
 #: src/groupmanagementwidget.cpp:89
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Exportar grupo..."
 
 #: src/groupmanagementwidget.cpp:94
 #, kde-format
