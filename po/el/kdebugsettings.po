@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 00:49+0000\n"
+"POT-Creation-Date: 2023-03-14 00:49+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -171,43 +171,43 @@ msgstr ""
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 
-#: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
+#: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Rename Group"
 msgstr "Μετονομασία ομάδας"
 
-#: src/groupmanagementwidget.cpp:64
+#: src/groupmanagementwidget.cpp:65
 #, kde-format
 msgid "New Name:"
 msgstr "Νέο όνομα:"
 
-#: src/groupmanagementwidget.cpp:69
+#: src/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 
-#: src/groupmanagementwidget.cpp:85
+#: src/groupmanagementwidget.cpp:86
 #, fuzzy, kde-format
 #| msgid "Rename Group"
 msgid "Rename Group..."
 msgstr "Μετονομασία ομάδας"
 
-#: src/groupmanagementwidget.cpp:89
+#: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:94
+#: src/groupmanagementwidget.cpp:95
 #, kde-format
 msgid "Remove Groups"
 msgstr "Αφαίρεση ομάδων"
 
-#: src/groupmanagementwidget.cpp:99
+#: src/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Αδυναμία αφαίρεσης του '%1'"
 
-#: src/groupmanagementwidget.cpp:99
+#: src/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Remove Group"
 msgstr "Αφαίρεση ομάδας"

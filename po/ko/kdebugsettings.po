@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 00:49+0000\n"
+"POT-Creation-Date: 2023-03-14 00:49+0000\n"
 "PO-Revision-Date: 2022-02-20 21:57+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -168,43 +168,43 @@ msgstr ""
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "그룹 이름을 '%1'(으)로 바꿀 수 없음"
 
-#: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
+#: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Rename Group"
 msgstr "그룹 이름 바꾸기"
 
-#: src/groupmanagementwidget.cpp:64
+#: src/groupmanagementwidget.cpp:65
 #, kde-format
 msgid "New Name:"
 msgstr "새 이름:"
 
-#: src/groupmanagementwidget.cpp:69
+#: src/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "그룹 이름을 '%1'(으)로 바꿀 수 없음"
 
-#: src/groupmanagementwidget.cpp:85
+#: src/groupmanagementwidget.cpp:86
 #, fuzzy, kde-format
 #| msgid "Rename Group"
 msgid "Rename Group..."
 msgstr "그룹 이름 바꾸기"
 
-#: src/groupmanagementwidget.cpp:89
+#: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
 msgstr ""
 
-#: src/groupmanagementwidget.cpp:94
+#: src/groupmanagementwidget.cpp:95
 #, kde-format
 msgid "Remove Groups"
 msgstr "그룹 삭제"
 
-#: src/groupmanagementwidget.cpp:99
+#: src/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "'%1'을(를) 삭제할 수 없음"
 
-#: src/groupmanagementwidget.cpp:99
+#: src/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Remove Group"
 msgstr "그룹 삭제"

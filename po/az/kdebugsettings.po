@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdebugsettings package.
 #
-# Kheyyam Gojayev <xxmn77@gmail.com>, 2021, 2022.
+# Kheyyam Gojayev <xxmn77@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 00:49+0000\n"
-"PO-Revision-Date: 2022-07-06 09:32+0400\n"
+"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"PO-Revision-Date: 2023-03-12 18:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/categorytypecombobox.cpp:15
 #, kde-format
@@ -153,59 +153,56 @@ msgstr "Qrupların idarə edilməsi"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Qrupu yükləmək"
+msgstr "Qrupu ixrac et"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Qrup buraya ixrac edildi: %1"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Qrupun adını \"%1\" kimi dəyişmək mümkün deyil"
+msgstr "\"%2\" qrupunu \"%1\" axilinə ixrac etmək mümkün olmadı"
 
-#: src/groupmanagementwidget.cpp:64 src/groupmanagementwidget.cpp:69
+#: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Rename Group"
 msgstr "Qrupun adını dəyişdirmək"
 
-#: src/groupmanagementwidget.cpp:64
+#: src/groupmanagementwidget.cpp:65
 #, kde-format
 msgid "New Name:"
 msgstr "Yeni ad:"
 
-#: src/groupmanagementwidget.cpp:69
+#: src/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "Qrupun adını \"%1\" kimi dəyişmək mümkün deyil"
 
-#: src/groupmanagementwidget.cpp:85
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#: src/groupmanagementwidget.cpp:86
+#, kde-format
 msgid "Rename Group..."
-msgstr "Qrupun adını dəyişdirmək"
+msgstr "Qrupun adını dəyişdir..."
 
-#: src/groupmanagementwidget.cpp:89
+#: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Qrupu ixrac et..."
 
-#: src/groupmanagementwidget.cpp:94
+#: src/groupmanagementwidget.cpp:95
 #, kde-format
 msgid "Remove Groups"
 msgstr "Qrupları silmək"
 
-#: src/groupmanagementwidget.cpp:99
+#: src/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "\"%1\" silmək mümkün deyil"
 
-#: src/groupmanagementwidget.cpp:99
+#: src/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Remove Group"
 msgstr "Qrupu silmək"
@@ -296,16 +293,13 @@ msgid "Name:"
 msgstr "Adı:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"%1, artıq qrup adı kimi istifadə olunur.\n"
-"Başqa adla saxlayın."
+"<b>\"%1\"</b> artıq qrup adı kimi istifadə olunur.\n"
+"Lütfən başqa adla saxlayın."
 
 #: src/kdebugsettingsdialog.cpp:227
 #, kde-format
