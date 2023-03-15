@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 05:01+0000\n"
-"PO-Revision-Date: 2022-12-08 07:07+0100\n"
+"PO-Revision-Date: 2023-03-14 04:43+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -273,16 +273,13 @@ msgid "Name:"
 msgstr "სახელი:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"'%1' ჯგუფის სახელს უკვე წარმოადგენს.\n"
-"სხვა სახელითშეინახეთ."
+"<b>'%1'</b>უკვე გამოიყენება, როგორც ჯგუფის სახელი.\n"
+"შეინახეთ სხვა სახელით."
 
 #: src/kdebugsettingsdialog.cpp:227
 #, kde-format
