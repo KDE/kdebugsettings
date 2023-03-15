@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-08 07:07+0100\n"
+"PO-Revision-Date: 2023-03-14 05:08+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -154,21 +154,19 @@ msgstr "ჯგუფის მართვა"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "ჯგუფის ჩატვირთვა"
+msgstr "ჯგუფის გატანა"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "ჯგუფი გატანილია %1-ში"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "ჯგუფის სახელის '%1'-ზე გადარქმევის შეცდომა"
+msgstr "ჯგუფის ('%2') '%1'-ში გატანა შეუძლებელია"
 
 #: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
@@ -186,15 +184,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "ჯგუფის სახელის '%1'-ზე გადარქმევის შეცდომა"
 
 #: src/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "ჯგუფის სახელის გადარქემვა"
+msgstr "ჯგუფის გადარქმევა..."
 
 #: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "ჯგუფის გატანა..."
 
 #: src/groupmanagementwidget.cpp:95
 #, kde-format
@@ -297,16 +294,13 @@ msgid "Name:"
 msgstr "სახელი:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"'%1' ჯგუფის სახელს უკვე წარმოადგენს.\n"
-"სხვა სახელითშეინახეთ."
+"<b>'%1'</b>უკვე გამოიყენება, როგორც ჯგუფის სახელი.\n"
+"შეინახეთ სხვა სახელით."
 
 #: src/kdebugsettingsdialog.cpp:227
 #, kde-format
