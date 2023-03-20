@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:49+0000\n"
-"PO-Revision-Date: 2023-03-11 15:06+0100\n"
+"PO-Revision-Date: 2023-03-19 14:45+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -158,17 +158,17 @@ msgstr "Handsam gruppe"
 #: src/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Export Group"
-msgstr ""
+msgstr "Eksporter gruppe"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Grupper eksportert til %1"
 
 #: src/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr ""
+msgstr "Umogleg å eksportera gruppa «%2» til «%1»"
 
 #: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
@@ -188,12 +188,12 @@ msgstr "Ikkje mogleg å endra namn på gruppe til «%1»"
 #: src/groupmanagementwidget.cpp:86
 #, kde-format
 msgid "Rename Group..."
-msgstr ""
+msgstr "Endra namn på gruppe …"
 
 #: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Eksporter gruppe …"
 
 #: src/groupmanagementwidget.cpp:95
 #, kde-format
