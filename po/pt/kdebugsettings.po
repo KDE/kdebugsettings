@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:49+0000\n"
-"PO-Revision-Date: 2022-03-27 00:32+0000\n"
+"PO-Revision-Date: 2023-03-20 14:29+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -152,21 +152,19 @@ msgstr "Gerir o Grupo"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Carregar um Grupo"
+msgstr "Exportar o Grupo"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Grupo exportado para %1"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Não é possível mudar o nome do grupo para '%1'"
+msgstr "Não é possível exportar o grupo '%2' para '%1'"
 
 #: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
@@ -184,15 +182,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "Não é possível mudar o nome do grupo para '%1'"
 
 #: src/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Mudar o Nome do Grupo"
+msgstr "Mudar o Nome do Grupo..."
 
 #: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Exportar o Grupo..."
 
 #: src/groupmanagementwidget.cpp:95
 #, kde-format
@@ -295,15 +292,12 @@ msgid "Name:"
 msgstr "Nome:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"O '%1' já está a ser usado como nome do grupo.\n"
+"O <b>'%1'</b> já está a ser usado como nome do grupo.\n"
 "Por favor, grave com outro nome."
 
 #: src/kdebugsettingsdialog.cpp:227
@@ -451,6 +445,3 @@ msgstr "Gravar como um Ficheiro..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "Gravar como um Grupo..."
-
-#~ msgid "Rename Groups"
-#~ msgstr "Mudar o Nome dos Grupos"
