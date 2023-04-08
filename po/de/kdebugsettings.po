@@ -1,19 +1,19 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2015, 2017, 2018, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2021, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:49+0000\n"
-"PO-Revision-Date: 2022-03-06 18:35+0100\n"
+"PO-Revision-Date: 2023-04-03 16:23+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
-"Language-Team: German <kde-i18n-doc@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/categorytypecombobox.cpp:15
 #, kde-format
@@ -152,21 +152,19 @@ msgstr "Gruppe verwalten"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Gruppe laden"
+msgstr "Gruppe exportieren"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Gruppe nach %1 exportiert"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Gruppe kann nicht in „%1“ umbenannt werden"
+msgstr "Gruppe „%2“ kann nicht nach „%1“ exportiert werden"
 
 #: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
@@ -184,15 +182,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "Gruppe kann nicht in „%1“ umbenannt werden"
 
 #: src/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Gruppe umbenennen"
+msgstr "Gruppe umbenennen ..."
 
 #: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Gruppe exportieren ..."
 
 #: src/groupmanagementwidget.cpp:95
 #, kde-format
@@ -295,15 +292,12 @@ msgid "Name:"
 msgstr "Name:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"„%1“ wird bereits als Gruppenname verwendet.\n"
+"<b>%1</b> wird bereits als Gruppenname verwendet.\n"
 "Bitte speichern Sie unter einem anderen Namen."
 
 #: src/kdebugsettingsdialog.cpp:227
