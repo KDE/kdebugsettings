@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:49+0000\n"
-"PO-Revision-Date: 2022-02-20 21:57+0100\n"
+"PO-Revision-Date: 2023-04-22 00:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/categorytypecombobox.cpp:15
 #, kde-format
@@ -152,21 +152,19 @@ msgstr "그룹 관리"
 
 #: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "그룹 불러오기"
+msgstr "그룹 내보내기"
 
 #: src/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "%1(으)로 그룹 내보냄"
 
 #: src/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "그룹 이름을 '%1'(으)로 바꿀 수 없음"
+msgstr "'%2' 그룹을 '%1'(으)로 내보낼 수 없음"
 
 #: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
 #, kde-format
@@ -184,15 +182,14 @@ msgid "Impossible to rename group as '%1'"
 msgstr "그룹 이름을 '%1'(으)로 바꿀 수 없음"
 
 #: src/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "그룹 이름 바꾸기"
+msgstr "그룹 이름 바꾸기..."
 
 #: src/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "그룹 내보내기..."
 
 #: src/groupmanagementwidget.cpp:95
 #, kde-format
@@ -295,15 +292,12 @@ msgid "Name:"
 msgstr "이름:"
 
 #: src/kdebugsettingsdialog.cpp:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"이름이 '%1'인 그룹이 이미 있습니다.\n"
+"이름이 <b>'%1'</b>인 그룹이 이미 있습니다.\n"
 "다른 이름으로 저장하십시오."
 
 #: src/kdebugsettingsdialog.cpp:227
