@@ -9,7 +9,7 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.103.0")
+set(KF_MIN_VERSION "5.105.0")
 
 set(ECM_VERSION ${KF_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
@@ -50,8 +50,8 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
-ecm_set_disabled_deprecation_versions(QT 6.4.0
-    KF 5.104
+ecm_set_disabled_deprecation_versions(QT 6.5.0
+    KF 5.105
 )
 
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
