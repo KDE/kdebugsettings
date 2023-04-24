@@ -12,7 +12,15 @@
 #include <QVector>
 
 struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
-    enum LoggingType { All = 0, Info, Warning, Debug, Critical, Off, Undefined };
+    enum LoggingType {
+        All = 0,
+        Info,
+        Warning,
+        Debug,
+        Critical,
+        Off,
+        Undefined,
+    };
 
     LoggingCategory();
     explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, const QString &identifier, bool enabled)
