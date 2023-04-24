@@ -31,9 +31,9 @@ protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    void slotSelectAllDebug();
-    void slotDeselectAllDebug();
-    void slotDeselectAllMessages();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotSelectAllDebug();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotDeselectAllDebug();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotDeselectAllMessages();
 
     KDEApplicationTreeListWidget *const mTreeListWidget;
     KTreeWidgetSearchLine *const mTreeListWidgetSearchLine;

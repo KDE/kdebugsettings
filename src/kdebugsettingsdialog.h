@@ -29,22 +29,22 @@ Q_SIGNALS:
     void updateLoadGroupMenu();
 
 private:
-    void slotAccepted();
-    void slotApply();
-    void slotSaveAs();
-    void slotLoad();
-    void slotInsertCategories();
-    void slotRestoreDefault();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotAccepted();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotApply();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotSaveAs();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotLoad();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotInsertCategories();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotRestoreDefault();
 
-    void readQtLoggingFile();
-    bool saveRules(const QString &path, bool forceSavingAllRules = false);
-    bool saveInQtLogging();
-    void saveConfig();
-    void readConfig();
-    void updateLoggingCategories();
-    void slotLoadGroup(const QString &fullPath);
-    void slotSaveAsGroup();
-    void slotManageGroup();
+    LIBKDEBUGSETTINGS_NO_EXPORT void readQtLoggingFile();
+    LIBKDEBUGSETTINGS_NO_EXPORT bool saveRules(const QString &path, bool forceSavingAllRules = false);
+    LIBKDEBUGSETTINGS_NO_EXPORT bool saveInQtLogging();
+    LIBKDEBUGSETTINGS_NO_EXPORT void saveConfig();
+    LIBKDEBUGSETTINGS_NO_EXPORT void readConfig();
+    LIBKDEBUGSETTINGS_NO_EXPORT void updateLoggingCategories();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotLoadGroup(const QString &fullPath);
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotSaveAsGroup();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotManageGroup();
     KdeLoggingCategory::List mCategoriesList;
     KDebugSettingsLoadingCategories mLoggings;
     QTabWidget *const mTabWidget;
