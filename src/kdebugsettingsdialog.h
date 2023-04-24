@@ -10,7 +10,6 @@
 #include "kdebugsettingsloadingcategories.h"
 #include "kdeloggingcategory.h"
 #include "libkdebugsettings_export.h"
-#include "renamecategory.h"
 #include <QDialog>
 class QTabWidget;
 class KDEApplicationDebugSettingPage;
