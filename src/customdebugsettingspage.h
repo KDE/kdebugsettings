@@ -27,11 +27,11 @@ protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    void slotRemoveRules();
-    void slotAddRule();
-    void slotEditRule();
-    void updateButtons();
-    void slotCustomContextMenu(const QPoint &pos);
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotRemoveRules();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotAddRule();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotEditRule();
+    LIBKDEBUGSETTINGS_NO_EXPORT void updateButtons();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotCustomContextMenu(const QPoint &pos);
 
     QListWidget *const mListWidget;
     QPushButton *const mAddRule;

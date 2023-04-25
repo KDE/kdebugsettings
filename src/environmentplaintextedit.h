@@ -23,7 +23,7 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
 private:
-    void slotGeneralPaletteChanged();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotGeneralPaletteChanged();
 
     QColor mTextColor;
 };
