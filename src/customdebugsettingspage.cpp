@@ -177,7 +177,7 @@ LoggingCategory::List CustomDebugSettingsPage::rules() const
 
 void CustomDebugSettingsPage::slotRemoveRules()
 {
-    QList<QListWidgetItem *> lst = mListWidget->selectedItems();
+    const QList<QListWidgetItem *> lst = mListWidget->selectedItems();
     if (lst.isEmpty()) {
         return;
     }
