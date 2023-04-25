@@ -6,52 +6,55 @@ add_library(libkdebugsettings SHARED)
 
 ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
 target_sources(libkdebugsettings PRIVATE
-    customdebugsettingspage.cpp
-    customdebugsettingspage.h
-    environmentplaintextedit.h
-    kdeapplicationdebugsettingpage.h
-    kdebugsettingsdialog.h
-    loggingcategory.h
-    loadgroupmenu.h
-    groupmanagementwidget.cpp
-    groupmanagementwidget.h
     changedebugmodejob.cpp
     changedebugmodejob.h
-    kdebugsettingsdialog.cpp
-    loadgroupmenu.cpp
     kdebugsettingsutil.cpp
     kdebugsettingsutil.h
-    kdeapplicationtreelistwidget.h
-    saverulesjob.h
-    kdeloggingcategory.h
-    configurecustomsettingwidget.h
-    savetoolbutton.cpp
-    configurecustomsettingdialog.h
-    environmentplaintextedit.cpp
-    groupmanagementdialog.h
-    environmentsettingsrulespage.h
-    saverulesjob.cpp
-    renamecategory.h
-    groupmanagementdialog.cpp
-    categorywarning.h
-    loadcategoriesjob.cpp
-    libkdebugsettings_private_export.h
-    loadtoolbutton.h
     kdeloggingcategory.cpp
-    loadtoolbutton.cpp
-    environmentsettingsrulespage.cpp
+    kdeloggingcategory.h
     loggingcategory.cpp
-    categorywarning.cpp
-    kdebugsettingsloadingcategories.cpp
-    loadcategoriesjob.h
-    categorytypecombobox.cpp
-    configurecustomsettingwidget.cpp
-    kdebugsettingsloadingcategories.h
-    configurecustomsettingdialog.cpp
+    loggingcategory.h
     renamecategory.cpp
+    renamecategory.h
+    saverulesjob.cpp
+    saverulesjob.h
+    kdebugsettingsloadingcategories.cpp
+    kdebugsettingsloadingcategories.h
+)
+
+target_sources(libkdebugsettings PRIVATE
+    categorytypecombobox.cpp
     categorytypecombobox.h
-    kdeapplicationtreelistwidget.cpp
+    categorywarning.cpp
+    categorywarning.h
+    configurecustomsettingdialog.cpp
+    configurecustomsettingdialog.h
+    configurecustomsettingwidget.cpp
+    configurecustomsettingwidget.h
+    customdebugsettingspage.cpp
+    customdebugsettingspage.h
+    environmentplaintextedit.cpp
+    environmentplaintextedit.h
+    environmentsettingsrulespage.cpp
+    environmentsettingsrulespage.h
+    groupmanagementdialog.cpp
+    groupmanagementdialog.h
+    groupmanagementwidget.cpp
+    groupmanagementwidget.h
     kdeapplicationdebugsettingpage.cpp
+    kdeapplicationdebugsettingpage.h
+    kdeapplicationtreelistwidget.cpp
+    kdeapplicationtreelistwidget.h
+    kdebugsettingsdialog.cpp
+    kdebugsettingsdialog.h
+    libkdebugsettings_private_export.h
+    loadcategoriesjob.cpp
+    loadcategoriesjob.h
+    loadgroupmenu.cpp
+    loadgroupmenu.h
+    loadtoolbutton.cpp
+    loadtoolbutton.h
+    savetoolbutton.cpp
     savetoolbutton.h
     )
 
