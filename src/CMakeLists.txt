@@ -64,15 +64,15 @@ endif()
 generate_export_header(libkdebugsettings BASE_NAME libkdebugsettings)
 target_link_libraries(libkdebugsettings
     Qt::Core
+    KF${KF_MAJOR_VERSION}::Completion
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::CoreAddons
     KF${KF_MAJOR_VERSION}::I18n
     Qt::Widgets
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::Completion
     KF${KF_MAJOR_VERSION}::ConfigGui
     KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::CoreAddons
 )
 
 set_target_properties(libkdebugsettings
@@ -87,7 +87,12 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kdebugsettings PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(kdebugsettings Qt::Widgets KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::DBusAddons KF${KF_MAJOR_VERSION}::CoreAddons libkdebugsettings)
+target_link_libraries(kdebugsettings
+    Qt::Widgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::DBusAddons
+    libkdebugsettings
+)
 
 install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
