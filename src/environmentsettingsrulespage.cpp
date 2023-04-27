@@ -8,7 +8,6 @@
 #include "environmentsettingsrulespage.h"
 #include "environmentplaintextedit.h"
 #include <KLocalizedString>
-#include <QLabel>
 #include <QVBoxLayout>
 
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
@@ -16,11 +15,8 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     , mRichTextEdit(new EnvironmentPlainTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    auto lab = new QLabel(i18n("Rules:"), this);
-    lab->setObjectName(QStringLiteral("label"));
     mRichTextEdit->setReadOnly(true);
     mRichTextEdit->setObjectName(QStringLiteral("richtext"));
-    mainLayout->addWidget(lab);
     mainLayout->addWidget(mRichTextEdit);
 }
 

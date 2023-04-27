@@ -30,10 +30,6 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    auto lab = new QLabel(i18n("Rules:"), this);
-    lab->setObjectName(QStringLiteral("custom_label"));
-    mainLayout->addWidget(lab);
-
     auto horizontalLayout = new QHBoxLayout;
     horizontalLayout->setContentsMargins({});
     mainLayout->addLayout(horizontalLayout);

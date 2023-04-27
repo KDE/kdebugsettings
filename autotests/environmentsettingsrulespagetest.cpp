@@ -21,8 +21,6 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 {
     EnvironmentSettingsRulesPage w;
 
-    auto lab = w.findChild<QLabel *>(QStringLiteral("label"));
-    QVERIFY(lab);
     auto plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("richtext"));
     QVERIFY(plainText);
     QVERIFY(plainText->toPlainText().isEmpty());

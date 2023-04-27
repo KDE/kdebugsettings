@@ -24,9 +24,6 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 {
     CustomDebugSettingsPage page;
 
-    auto lab = page.findChild<QLabel *>(QStringLiteral("custom_label"));
-    QVERIFY(lab);
-
     auto listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
     QVERIFY(listWidget);
     QCOMPARE(listWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
