@@ -35,7 +35,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     mainLayout->addWidget(lab);
 
     auto horizontalLayout = new QHBoxLayout;
-    horizontalLayout->setContentsMargins(0, 0, 0, 0);
+    horizontalLayout->setContentsMargins({});
     mainLayout->addLayout(horizontalLayout);
 
     auto vbox = new QVBoxLayout;
