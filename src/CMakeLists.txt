@@ -20,6 +20,8 @@ target_sources(libkdebugsettings PRIVATE
     saverulesjob.h
     kdebugsettingsloadingcategories.cpp
     kdebugsettingsloadingcategories.h
+    customdebugmodel.h
+    customdebugmodel.cpp
 )
 
 target_sources(libkdebugsettings PRIVATE
