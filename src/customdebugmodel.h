@@ -11,6 +11,15 @@ class CustomDebugModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    enum BannerInfosRoles {
+        Description = Qt::UserRole + 1,
+        CategoryName,
+        IdentifierName,
+    };
+
     explicit CustomDebugModel(QObject *parent = nullptr);
     ~CustomDebugModel() override;
+
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
 };

@@ -12,3 +12,15 @@ CustomDebugModel::CustomDebugModel(QObject *parent)
 }
 
 CustomDebugModel::~CustomDebugModel() = default;
+
+int CustomDebugModel::rowCount(const QModelIndex &parent) const
+{
+    // TODO
+    return -1;
+}
+
+QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
+{
+    // TODO
+    return {};
+}
