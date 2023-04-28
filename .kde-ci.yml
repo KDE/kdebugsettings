@@ -29,5 +29,5 @@ Dependencies:
     'frameworks/kcoreaddons': '@latest'
 
 Options:
-  require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]
+  require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5' ]
   cppcheck-arguments: '--enable=warning,style,performance --inline-suppr --suppress=passedByValue --suppress=nullPointer'
