@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"POT-Creation-Date: 2023-04-28 00:51+0000\n"
 "PO-Revision-Date: 2023-04-22 00:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -93,32 +93,27 @@ msgstr "편집..."
 msgid "Remove..."
 msgstr "삭제..."
 
-#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
-#, kde-format
-msgid "Rules:"
-msgstr "규칙:"
-
-#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "찾기..."
 
-#: src/customdebugsettingspage.cpp:93
+#: src/customdebugsettingspage.cpp:89
 #, kde-format
 msgid "Add Rule..."
 msgstr "규칙 추가..."
 
-#: src/customdebugsettingspage.cpp:95
+#: src/customdebugsettingspage.cpp:91
 #, kde-format
 msgid "Edit Rule"
 msgstr "규칙 편집"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
+#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
 #, kde-format
 msgid "Remove Rule"
 msgstr "규칙 삭제"
 
-#: src/customdebugsettingspage.cpp:184
+#: src/customdebugsettingspage.cpp:180
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -130,7 +125,7 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "\"QT_LOGGING_RULES\" 환경 변수에 규칙이 정의되지 않았습니다."
 
-#: src/environmentsettingsrulespage.cpp:32
+#: src/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -139,7 +134,7 @@ msgstr ""
 "이 프로그램으로는 해당 규칙을 편집할 수 없습니다. QT_LOGGING_RULES 환경 변수"
 "를 직접 편집하십시오."
 
-#: src/environmentsettingsrulespage.cpp:34
+#: src/environmentsettingsrulespage.cpp:30
 #, kde-format
 msgid "Current rules:"
 msgstr "현재 규칙:"
@@ -442,6 +437,9 @@ msgstr "파일로 저장..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "그룹으로 저장..."
+
+#~ msgid "Rules:"
+#~ msgstr "규칙:"
 
 #~ msgid "Rename Groups"
 #~ msgstr "그룹 이름 바꾸기"

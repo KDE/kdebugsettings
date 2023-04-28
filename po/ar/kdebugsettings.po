@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"POT-Creation-Date: 2023-04-28 00:51+0000\n"
 "PO-Revision-Date: ٢٠١٦-٠١-٢٠ ٠٧:٣٤+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -95,34 +95,29 @@ msgstr "حرّر..."
 msgid "Remove..."
 msgstr "أزل..."
 
-#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
-#, kde-format
-msgid "Rules:"
-msgstr "القواعد:"
-
-#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "ابحث..."
 
-#: src/customdebugsettingspage.cpp:93
+#: src/customdebugsettingspage.cpp:89
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:95
+#: src/customdebugsettingspage.cpp:91
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "حرّر القاعدة المخصّصة"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
+#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "أزل..."
 
-#: src/customdebugsettingspage.cpp:184
+#: src/customdebugsettingspage.cpp:180
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule \"%1\"?"
 msgid "Do you want to remove this rule?"
@@ -140,14 +135,14 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr ""
 
-#: src/environmentsettingsrulespage.cpp:32
+#: src/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
 "QT_LOGGING_RULES variable directly."
 msgstr ""
 
-#: src/environmentsettingsrulespage.cpp:34
+#: src/environmentsettingsrulespage.cpp:30
 #, fuzzy, kde-format
 #| msgid "Custom Rules"
 msgid "Current rules:"
@@ -454,6 +449,9 @@ msgstr "احفظ ك‍..."
 #| msgid "Save As..."
 msgid "Save As Group..."
 msgstr "احفظ ك‍..."
+
+#~ msgid "Rules:"
+#~ msgstr "القواعد:"
 
 #~ msgid "All"
 #~ msgstr "الكلّ"

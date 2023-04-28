@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"POT-Creation-Date: 2023-04-28 00:51+0000\n"
 "PO-Revision-Date: 2023-03-12 18:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -93,32 +93,27 @@ msgstr "Dəyişmək..."
 msgid "Remove..."
 msgstr "Silmək..."
 
-#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
-#, kde-format
-msgid "Rules:"
-msgstr "Qaydalar:"
-
-#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Axtarış..."
 
-#: src/customdebugsettingspage.cpp:93
+#: src/customdebugsettingspage.cpp:89
 #, kde-format
 msgid "Add Rule..."
 msgstr "Qayda Əlavə Etmək..."
 
-#: src/customdebugsettingspage.cpp:95
+#: src/customdebugsettingspage.cpp:91
 #, kde-format
 msgid "Edit Rule"
 msgstr "Qaydanı dəyişmək"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
+#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
 #, kde-format
 msgid "Remove Rule"
 msgstr "Qaydanı silmək"
 
-#: src/customdebugsettingspage.cpp:184
+#: src/customdebugsettingspage.cpp:180
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -131,7 +126,7 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "\"QT_LOGGING_RULES\" mühit dəyişənində qaydalar müəyyən edilməyib."
 
-#: src/environmentsettingsrulespage.cpp:32
+#: src/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -140,7 +135,7 @@ msgstr ""
 "Bu qaydalar bu tətbiq vasitəsi ilə dəyişdirilə bilməz. Siz onları "
 "QT_LOGGING_RULES mühit dəyişənində təyin etməlisiniz."
 
-#: src/environmentsettingsrulespage.cpp:34
+#: src/environmentsettingsrulespage.cpp:30
 #, kde-format
 msgid "Current rules:"
 msgstr "Cari qaydalar:"
@@ -446,6 +441,9 @@ msgstr "Fayl kimi saxlamaq..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "Qrup kimi saxlamaq..."
+
+#~ msgid "Rules:"
+#~ msgstr "Qaydalar:"
 
 #~ msgid "Rename Groups"
 #~ msgstr "Qrupların adılarını dəyişdirmək"

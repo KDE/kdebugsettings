@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"POT-Creation-Date: 2023-04-28 00:51+0000\n"
 "PO-Revision-Date: 2020-02-20 19:09+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -95,35 +95,30 @@ msgstr "編輯..."
 msgid "Remove..."
 msgstr "移除..."
 
-#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
-#, kde-format
-msgid "Rules:"
-msgstr "規則："
-
-#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "搜尋..."
 
-#: src/customdebugsettingspage.cpp:93
+#: src/customdebugsettingspage.cpp:89
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:95
+#: src/customdebugsettingspage.cpp:91
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "編輯自訂規則"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
+#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "移除..."
 
-#: src/customdebugsettingspage.cpp:184
+#: src/customdebugsettingspage.cpp:180
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -135,14 +130,14 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "在環境變數 QT_LOGGING_RULES 中沒有定義任何規則。"
 
-#: src/environmentsettingsrulespage.cpp:32
+#: src/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
 "QT_LOGGING_RULES variable directly."
 msgstr "這些規則不能在這裡編輯。您必須在 QT_LOGGING_RULES 變數中設定。"
 
-#: src/environmentsettingsrulespage.cpp:34
+#: src/environmentsettingsrulespage.cpp:30
 #, kde-format
 msgid "Current rules:"
 msgstr "目前的規則："
@@ -449,3 +444,6 @@ msgstr "另存為..."
 #| msgid "Save As..."
 msgid "Save As Group..."
 msgstr "另存為..."
+
+#~ msgid "Rules:"
+#~ msgstr "規則："

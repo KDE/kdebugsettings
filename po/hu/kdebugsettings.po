@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"POT-Creation-Date: 2023-04-28 00:51+0000\n"
 "PO-Revision-Date: 2015-09-11 13:17+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -96,34 +96,29 @@ msgstr "Szerkesztés…"
 msgid "Remove..."
 msgstr "Eltávolítás…"
 
-#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
-#, kde-format
-msgid "Rules:"
-msgstr "Szabályok:"
-
-#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Keresés…"
 
-#: src/customdebugsettingspage.cpp:93
+#: src/customdebugsettingspage.cpp:89
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:95
+#: src/customdebugsettingspage.cpp:91
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "Saját szabály szerkesztése"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
+#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "Eltávolítás…"
 
-#: src/customdebugsettingspage.cpp:184
+#: src/customdebugsettingspage.cpp:180
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule \"%1\"?"
 msgid "Do you want to remove this rule?"
@@ -137,7 +132,7 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "Nincs szabály definiálva a „QT_LOGGING_RULES” környezeti változóban."
 
-#: src/environmentsettingsrulespage.cpp:32
+#: src/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -146,7 +141,7 @@ msgstr ""
 "Ezek a szabályok nem szerkeszthetők ezzel az alkalmazással, közvetlenül a "
 "QT_LOGGING_RULES változóban kell megadnia ezeket."
 
-#: src/environmentsettingsrulespage.cpp:34
+#: src/environmentsettingsrulespage.cpp:30
 #, fuzzy, kde-format
 #| msgid "Custom Rules"
 msgid "Current rules:"
@@ -457,6 +452,9 @@ msgstr "Mentés másként…"
 #| msgid "Save As..."
 msgid "Save As Group..."
 msgstr "Mentés másként…"
+
+#~ msgid "Rules:"
+#~ msgstr "Szabályok:"
 
 #~ msgid "All"
 #~ msgstr "Mind"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:49+0000\n"
+"POT-Creation-Date: 2023-04-28 00:51+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -94,35 +94,30 @@ msgstr "Modifică..."
 msgid "Remove..."
 msgstr "Elimină..."
 
-#: src/customdebugsettingspage.cpp:33 src/environmentsettingsrulespage.cpp:19
-#, kde-format
-msgid "Rules:"
-msgstr "Reguli:"
-
-#: src/customdebugsettingspage.cpp:52 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Caută..."
 
-#: src/customdebugsettingspage.cpp:93
+#: src/customdebugsettingspage.cpp:89
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:95
+#: src/customdebugsettingspage.cpp:91
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "Modifică regula personalizată"
 
-#: src/customdebugsettingspage.cpp:99 src/customdebugsettingspage.cpp:187
+#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "Elimină..."
 
-#: src/customdebugsettingspage.cpp:184
+#: src/customdebugsettingspage.cpp:180
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -137,7 +132,7 @@ msgid ""
 msgstr ""
 "Nu a fost definită nicio regulă în variabila de mediu „QT_LOGGING_RULES”."
 
-#: src/environmentsettingsrulespage.cpp:32
+#: src/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -146,7 +141,7 @@ msgstr ""
 "Aceste reguli nu pot fi modificate cu această aplicație. Trebuie să le "
 "configurați direct în variabila QT_LOGGING_RULES."
 
-#: src/environmentsettingsrulespage.cpp:34
+#: src/environmentsettingsrulespage.cpp:30
 #, kde-format
 msgid "Current rules:"
 msgstr "Reguli actuale:"
@@ -457,6 +452,9 @@ msgstr "Salvează ca..."
 #| msgid "Save As..."
 msgid "Save As Group..."
 msgstr "Salvează ca..."
+
+#~ msgid "Rules:"
+#~ msgstr "Reguli:"
 
 #~ msgid "All"
 #~ msgstr "Toate"
