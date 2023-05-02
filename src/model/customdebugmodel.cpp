@@ -27,14 +27,16 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
         return {};
     }
     const LoggingCategory &category = mLoggingCategories.at(index.row());
-    // TODO
     switch (role) {
     case Description:
         return category.description;
+    case CategoryName:
+        return category.categoryName;
+    case IdentifierName:
+        return category.identifierName;
     case Qt::DisplayRole: // for the completion popup (until we have a delegate)
         return category.description;
     }
-
     return {};
 }
 
