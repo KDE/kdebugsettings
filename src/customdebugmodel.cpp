@@ -24,3 +24,7 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
     // TODO
     return {};
 }
+
+void CustomDebugModel::setLoggingCategories(const LoggingCategory::List &list)
+{
+}
