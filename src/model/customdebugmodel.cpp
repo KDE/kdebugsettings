@@ -15,16 +15,39 @@ CustomDebugModel::~CustomDebugModel() = default;
 
 int CustomDebugModel::rowCount(const QModelIndex &parent) const
 {
-    // TODO
-    return -1;
+    if (parent.isValid()) {
+        return 0; // flat model
+    }
+    return mLoggingCategories.count();
 }
 
 QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
 {
+    if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
+        return {};
+    }
+    const LoggingCategory &category = mLoggingCategories.at(index.row());
     // TODO
+    switch (role) {
+    case Description:
+        return category.description;
+    case Qt::DisplayRole: // for the completion popup (until we have a delegate)
+        return category.description;
+    }
+
     return {};
 }
 
 void CustomDebugModel::setLoggingCategories(const LoggingCategory::List &list)
 {
+    if (rowCount() != 0) {
+        beginRemoveRows(QModelIndex(), 0, mLoggingCategories.count() - 1);
+        mLoggingCategories.clear();
+        endRemoveRows();
+    }
+    if (!mLoggingCategories.isEmpty()) {
+        beginInsertRows(QModelIndex(), 0, mLoggingCategories.count() - 1);
+        mLoggingCategories = list;
+        endInsertRows();
+    }
 }
