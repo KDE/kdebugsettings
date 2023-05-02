@@ -8,6 +8,11 @@ ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h 
 target_sources(libkdebugsettings PRIVATE
     jobs/changedebugmodejob.cpp
     jobs/changedebugmodejob.h
+    jobs/loadcategoriesjob.cpp
+    jobs/loadcategoriesjob.h
+    jobs/saverulesjob.cpp
+    jobs/saverulesjob.h
+
     kdebugsettingsutil.cpp
     kdebugsettingsutil.h
     kdeloggingcategory.cpp
@@ -16,8 +21,6 @@ target_sources(libkdebugsettings PRIVATE
     loggingcategory.h
     renamecategory.cpp
     renamecategory.h
-    jobs/saverulesjob.cpp
-    jobs/saverulesjob.h
     kdebugsettingsloadingcategories.cpp
     kdebugsettingsloadingcategories.h
     model/customdebugmodel.h
@@ -50,8 +53,6 @@ target_sources(libkdebugsettings PRIVATE
     kdebugsettingsdialog.cpp
     kdebugsettingsdialog.h
     libkdebugsettings_private_export.h
-    jobs/loadcategoriesjob.cpp
-    jobs/loadcategoriesjob.h
     loadgroupmenu.cpp
     loadgroupmenu.h
     loadtoolbutton.cpp
