@@ -6,8 +6,8 @@
 */
 
 #include "saverulesjobtest.h"
-#include "loadcategoriesjob.h"
-#include "saverulesjob.h"
+#include "jobs/loadcategoriesjob.h"
+#include "jobs/saverulesjob.h"
 
 #include <QProcess>
 #include <QTest>

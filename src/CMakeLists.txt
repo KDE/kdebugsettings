@@ -6,8 +6,8 @@ add_library(libkdebugsettings SHARED)
 
 ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
 target_sources(libkdebugsettings PRIVATE
-    changedebugmodejob.cpp
-    changedebugmodejob.h
+    jobs/changedebugmodejob.cpp
+    jobs/changedebugmodejob.h
     kdebugsettingsutil.cpp
     kdebugsettingsutil.h
     kdeloggingcategory.cpp
@@ -16,8 +16,8 @@ target_sources(libkdebugsettings PRIVATE
     loggingcategory.h
     renamecategory.cpp
     renamecategory.h
-    saverulesjob.cpp
-    saverulesjob.h
+    jobs/saverulesjob.cpp
+    jobs/saverulesjob.h
     kdebugsettingsloadingcategories.cpp
     kdebugsettingsloadingcategories.h
     model/customdebugmodel.h
@@ -50,8 +50,8 @@ target_sources(libkdebugsettings PRIVATE
     kdebugsettingsdialog.cpp
     kdebugsettingsdialog.h
     libkdebugsettings_private_export.h
-    loadcategoriesjob.cpp
-    loadcategoriesjob.h
+    jobs/loadcategoriesjob.cpp
+    jobs/loadcategoriesjob.h
     loadgroupmenu.cpp
     loadgroupmenu.h
     loadtoolbutton.cpp

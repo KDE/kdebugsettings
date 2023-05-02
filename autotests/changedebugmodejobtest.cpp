@@ -6,7 +6,7 @@
 */
 
 #include "changedebugmodejobtest.h"
-#include "changedebugmodejob.h"
+#include "jobs/changedebugmodejob.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(ChangeDebugModeJobTest)
 

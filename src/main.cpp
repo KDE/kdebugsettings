@@ -7,7 +7,7 @@
 
 #include <QApplication>
 
-#include "changedebugmodejob.h"
+#include "jobs/changedebugmodejob.h"
 #include "kdebugsettingsdialog.h"
 #include <config-kdebugsettings.h>
 

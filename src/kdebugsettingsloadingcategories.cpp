@@ -6,8 +6,8 @@
 */
 
 #include "kdebugsettingsloadingcategories.h"
+#include "jobs/loadcategoriesjob.h"
 #include "kdebugsettingsutil.h"
-#include "loadcategoriesjob.h"
 #include <QDir>
 #include <QLibraryInfo>
 #include <QStandardPaths>

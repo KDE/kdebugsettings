@@ -10,12 +10,12 @@
 #include "customdebugsettingspage.h"
 #include "environmentsettingsrulespage.h"
 #include "groupmanagementdialog.h"
+#include "jobs/saverulesjob.h"
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
 #include "loadgroupmenu.h"
 #include "loadtoolbutton.h"
-#include "saverulesjob.h"
 #include "savetoolbutton.h"
 
 #include <KConfigGroup>
