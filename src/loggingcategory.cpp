@@ -6,6 +6,8 @@
 */
 
 #include "loggingcategory.h"
+#include "kdebugsettingsutil.h"
+#include <KLocalizedString>
 
 LoggingCategory::LoggingCategory() = default;
 
@@ -99,4 +101,14 @@ QDebug operator<<(QDebug d, const LoggingCategory &cat)
     d << "identifier: " << cat.identifierName;
     d << "default category: " << cat.defaultSeverityType;
     return d;
+}
+
+QString LoggingCategory::generateToolTip() const
+{
+    QString toopTip = i18n("Category name: %1", categoryName);
+    if (!identifierName.isEmpty()) {
+        toopTip += QLatin1Char('\n') + i18n("Identifier: %1", identifierName);
+    }
+    toopTip += QLatin1Char('\n') + i18n("Default Severity: %1", KDebugSettingsUtil::convertCategoryTypeToString(defaultSeverityType));
+    return toopTip;
 }

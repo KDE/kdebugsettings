@@ -38,6 +38,7 @@ struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
 
     Q_REQUIRED_RESULT QString createRule() const;
     Q_REQUIRED_RESULT QString createCustomRule() const;
+    Q_REQUIRED_RESULT QString generateToolTip() const;
 
     QString description;
     QString categoryName;
