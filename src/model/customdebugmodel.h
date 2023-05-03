@@ -28,6 +28,8 @@ public:
 
     void setLoggingCategories(const LoggingCategory::List &list);
 
+    void clear();
+
 private:
     LoggingCategory::List mLoggingCategories;
 };

@@ -59,3 +59,12 @@ void CustomDebugModel::setLoggingCategories(const LoggingCategory::List &list)
         endInsertRows();
     }
 }
+
+void CustomDebugModel::clear()
+{
+    if (!mLoggingCategories.isEmpty()) {
+        beginRemoveRows(QModelIndex(), 0, mLoggingCategories.count() - 1);
+        mLoggingCategories.clear();
+        endRemoveRows();
+    }
+}
