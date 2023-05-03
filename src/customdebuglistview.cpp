@@ -6,10 +6,12 @@
 */
 
 #include "customdebuglistview.h"
+#include "model/customdebugmodel.h"
 
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
 {
+    setModel(new CustomDebugModel(this));
 }
 
 CustomDebugListView::~CustomDebugListView()
