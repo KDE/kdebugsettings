@@ -16,6 +16,8 @@ public:
         Description = Qt::UserRole + 1,
         CategoryName,
         IdentifierName,
+        DefaultCategory,
+        LoggingType,
     };
 
     explicit CustomDebugModel(QObject *parent = nullptr);

@@ -34,8 +34,14 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
         return category.categoryName;
     case IdentifierName:
         return category.identifierName;
+    case Qt::ToolTip:
+        return category.generateToolTip();
     case Qt::DisplayRole: // for the completion popup (until we have a delegate)
         return category.description;
+    case DefaultCategory:
+        return category.defaultSeverityType;
+    case LoggingType:
+        return category.loggingType;
     }
     return {};
 }
