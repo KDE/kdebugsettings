@@ -6,12 +6,17 @@
 */
 #pragma once
 
+#include "loggingcategory.h"
 #include <QListView>
-
+class CustomDebugModel;
 class CustomDebugListView : public QListView
 {
     Q_OBJECT
 public:
     explicit CustomDebugListView(QWidget *parent = nullptr);
     ~CustomDebugListView() override;
+    void setLoggingCategories(const LoggingCategory::List &list);
+
+private:
+    CustomDebugModel *const mCustomDebugModel;
 };

@@ -10,10 +10,15 @@
 
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
+    , mCustomDebugModel(new CustomDebugModel(this))
 {
-    setModel(new CustomDebugModel(this));
+    // TODO add proxymodel
+    setModel(mCustomDebugModel);
 }
 
-CustomDebugListView::~CustomDebugListView()
+CustomDebugListView::~CustomDebugListView() = default;
+
+void CustomDebugListView::setLoggingCategories(const LoggingCategory::List &list)
 {
+    mCustomDebugModel->setLoggingCategories(list);
 }
