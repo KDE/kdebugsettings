@@ -13,6 +13,9 @@ target_sources(libkdebugsettings PRIVATE
     jobs/saverulesjob.cpp
     jobs/saverulesjob.h
 
+    model/customdebugmodel.h
+    model/customdebugmodel.cpp
+
     kdebugsettingsutil.cpp
     kdebugsettingsutil.h
     kdeloggingcategory.cpp
@@ -23,8 +26,6 @@ target_sources(libkdebugsettings PRIVATE
     renamecategory.h
     kdebugsettingsloadingcategories.cpp
     kdebugsettingsloadingcategories.h
-    model/customdebugmodel.h
-    model/customdebugmodel.cpp
 )
 
 target_sources(libkdebugsettings PRIVATE
