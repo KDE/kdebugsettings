@@ -40,6 +40,9 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
         return category.description;
     case DefaultCategory:
         return category.defaultSeverityType;
+        // case Qt::DisplayRole:
+    case DisplayRule:
+        return category.generateDisplayRule();
     case LoggingType:
         return category.loggingType;
     }

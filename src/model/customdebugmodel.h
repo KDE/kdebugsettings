@@ -17,6 +17,7 @@ public:
         CategoryName,
         IdentifierName,
         DefaultCategory,
+        DisplayRule,
         LoggingType,
     };
 
