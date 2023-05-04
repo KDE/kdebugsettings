@@ -17,6 +17,7 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
     , mCustomDebugModel(new CustomDebugModel(this))
 {
+    mCustomDebugModel->setObjectName(QStringLiteral("mCustomDebugModel"));
     // TODO add proxymodel
     setModel(mCustomDebugModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);

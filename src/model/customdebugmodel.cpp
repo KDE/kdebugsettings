@@ -36,13 +36,17 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
         return category.identifierName;
     case Qt::ToolTip:
         return category.generateToolTip();
+#if 0
     case Qt::DisplayRole:
         return category.description;
+#endif
     case DefaultCategory:
         return category.defaultSeverityType;
-        // case Qt::DisplayRole:
-    case DisplayRule:
+
+    case Qt::DisplayRole:
+    case DisplayRule: {
         return category.generateDisplayRule();
+    }
     case LoggingType:
         return category.loggingType;
     }
@@ -56,8 +60,8 @@ void CustomDebugModel::setLoggingCategories(const LoggingCategory::List &list)
         mLoggingCategories.clear();
         endRemoveRows();
     }
-    if (!mLoggingCategories.isEmpty()) {
-        beginInsertRows(QModelIndex(), 0, mLoggingCategories.count() - 1);
+    if (!list.isEmpty()) {
+        beginInsertRows(QModelIndex(), 0, list.count() - 1);
         mLoggingCategories = list;
         endInsertRows();
     }

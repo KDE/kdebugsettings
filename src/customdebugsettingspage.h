@@ -13,6 +13,7 @@
 class QListWidget;
 class QPushButton;
 class KListWidgetSearchLine;
+class CustomDebugListView;
 class LIBKDEBUGSETTINGS_EXPORT CustomDebugSettingsPage : public QWidget
 {
     Q_OBJECT
@@ -38,4 +39,5 @@ private:
     QPushButton *const mEditRule;
     QPushButton *const mRemoveRule;
     KListWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;
+    CustomDebugListView *mCustomDebugListView = nullptr;
 };

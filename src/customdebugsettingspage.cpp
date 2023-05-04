@@ -7,6 +7,7 @@
 
 #include "customdebugsettingspage.h"
 #include "configurecustomsettingdialog.h"
+#include "customdebuglistview.h"
 #include "kdebugsettingsutil.h"
 #include <KListWidgetSearchLine>
 #include <KLocalizedString>
@@ -49,6 +50,10 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     vbox->addWidget(mTreeListWidgetSearchLine);
     vbox->addWidget(mListWidget);
 
+#if 0
+    mCustomDebugListView = new CustomDebugListView(this);
+    vbox->addWidget(mCustomDebugListView);
+#endif
     auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
@@ -108,6 +113,9 @@ void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
     for (const LoggingCategory &cat : list) {
         const QString ruleStr = cat.generateDisplayRule();
         new QListWidgetItem(ruleStr, mListWidget);
+    }
+    if (mCustomDebugListView) {
+        mCustomDebugListView->setLoggingCategories(list);
     }
 }
 
