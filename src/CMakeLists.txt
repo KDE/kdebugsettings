@@ -16,6 +16,9 @@ target_sources(libkdebugsettings PRIVATE
     model/customdebugmodel.h
     model/customdebugmodel.cpp
 
+    model/customdebugproxymodel.h
+    model/customdebugproxymodel.cpp
+
     kdebugsettingsutil.cpp
     kdebugsettingsutil.h
     kdeloggingcategory.cpp

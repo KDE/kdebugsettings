@@ -17,6 +17,9 @@ public:
     ~CustomDebugListView() override;
     void setLoggingCategories(const LoggingCategory::List &list);
 
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
+
 private:
     CustomDebugModel *const mCustomDebugModel;
 };
