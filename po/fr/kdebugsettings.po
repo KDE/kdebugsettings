@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: 2023-03-14 07:27+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -225,21 +225,6 @@ msgstr "Désactiver le débogage"
 msgid "Turn Off All Messages"
 msgstr "Désactiver tous les messages"
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, kde-format
-msgid "Category name: %1"
-msgstr "Nom de la catégorie : %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr "Identifiant : %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "Sévérité par défaut : %1"
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -379,6 +364,21 @@ msgstr "Charger..."
 #, kde-format
 msgid "Load From File..."
 msgstr "Charger depuis un fichier..."
+
+#: src/loggingcategory.cpp:108
+#, kde-format
+msgid "Category name: %1"
+msgstr "Nom de la catégorie : %1"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Identifiant : %1"
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Sévérité par défaut : %1"
 
 #: src/main.cpp:32
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: ٢٠١٦-٠١-٢٠ ٠٧:٣٤+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -226,22 +226,6 @@ msgstr ""
 msgid "Turn Off All Messages"
 msgstr ""
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, fuzzy, kde-format
-#| msgid "Category:"
-msgid "Category name: %1"
-msgstr "الفئة:"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr ""
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr ""
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -379,6 +363,22 @@ msgstr "حمّل..."
 #: src/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load From File..."
+msgstr ""
+
+#: src/loggingcategory.cpp:108
+#, fuzzy, kde-format
+#| msgid "Category:"
+msgid "Category name: %1"
+msgstr "الفئة:"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr ""
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
 msgstr ""
 
 #: src/main.cpp:32

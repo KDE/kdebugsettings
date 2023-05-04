@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: 2023-05-02 21:40+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -219,21 +219,6 @@ msgstr "Desactivar a depuración"
 msgid "Turn Off All Messages"
 msgstr "Desactivar todas as mensaxes"
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, kde-format
-msgid "Category name: %1"
-msgstr "Nome da categoría: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr "Identificador: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "Gravidade predeterminada: %1"
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -372,6 +357,21 @@ msgstr "Cargar…"
 #, kde-format
 msgid "Load From File..."
 msgstr "Cargar dun ficheiro…"
+
+#: src/loggingcategory.cpp:108
+#, kde-format
+msgid "Category name: %1"
+msgstr "Nome da categoría: %1"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Identificador: %1"
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Gravidade predeterminada: %1"
 
 #: src/main.cpp:32
 #, kde-format

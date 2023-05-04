@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: 2023-03-14 05:08+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -218,21 +218,6 @@ msgstr "გამართვის გამორთვა"
 msgid "Turn Off All Messages"
 msgstr "ყველა შეტყობინების გამორთვა"
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, kde-format
-msgid "Category name: %1"
-msgstr "კატეგორიის სახელი: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr "იდენტიფიკატორი: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "ნაგულისხმები სიმძიმე: %1"
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -371,6 +356,21 @@ msgstr "ჩატვირთვა..."
 #, kde-format
 msgid "Load From File..."
 msgstr "ფაილიდან ჩატვირთვა..."
+
+#: src/loggingcategory.cpp:108
+#, kde-format
+msgid "Category name: %1"
+msgstr "კატეგორიის სახელი: %1"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr "იდენტიფიკატორი: %1"
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "ნაგულისხმები სიმძიმე: %1"
 
 #: src/main.cpp:32
 #, kde-format

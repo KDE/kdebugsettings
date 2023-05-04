@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: 2023-04-29 11:26+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -219,21 +219,6 @@ msgstr "Wyłącz diagnostykę"
 msgid "Turn Off All Messages"
 msgstr "Wyłącz wszystkie wiadomości"
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, kde-format
-msgid "Category name: %1"
-msgstr "Nazwa kategorii: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr "Identyfikator: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "Domyślna ważność: %1"
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -372,6 +357,21 @@ msgstr "Wczytaj..."
 #, kde-format
 msgid "Load From File..."
 msgstr "Wczytaj z pliku..."
+
+#: src/loggingcategory.cpp:108
+#, kde-format
+msgid "Category name: %1"
+msgstr "Nazwa kategorii: %1"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Identyfikator: %1"
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Domyślna ważność: %1"
 
 #: src/main.cpp:32
 #, kde-format

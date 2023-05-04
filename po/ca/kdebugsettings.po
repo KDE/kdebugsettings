@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: 2023-03-12 11:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -221,21 +221,6 @@ msgstr "Inactiva la depuració"
 msgid "Turn Off All Messages"
 msgstr "Desactiva tots els missatges"
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, kde-format
-msgid "Category name: %1"
-msgstr "Nom de la categoria: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr "Identificador: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "Severitat predeterminada: %1"
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -374,6 +359,21 @@ msgstr "Carrega..."
 #, kde-format
 msgid "Load From File..."
 msgstr "Carrega des d'un fitxer..."
+
+#: src/loggingcategory.cpp:108
+#, kde-format
+msgid "Category name: %1"
+msgstr "Nom de la categoria: %1"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Identificador: %1"
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Severitat predeterminada: %1"
 
 #: src/main.cpp:32
 #, kde-format

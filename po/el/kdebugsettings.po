@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-28 00:51+0000\n"
+"POT-Creation-Date: 2023-05-04 00:50+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -222,21 +222,6 @@ msgstr "Απενεργοποίηση αποσφαλμάτωσης"
 msgid "Turn Off All Messages"
 msgstr "Απενεργοποίηση όλων των μηνυμάτων"
 
-#: src/kdeapplicationtreelistwidget.cpp:115
-#, kde-format
-msgid "Category name: %1"
-msgstr "Όνομα κατηγορίας: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:117
-#, kde-format
-msgid "Identifier: %1"
-msgstr "Αναγνωριστικό: %1"
-
-#: src/kdeapplicationtreelistwidget.cpp:119
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "Προκαθορισμένη αυστηρότητα: %1"
-
 #: src/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
@@ -378,6 +363,21 @@ msgstr "Φόρτωση..."
 #, kde-format
 msgid "Load From File..."
 msgstr "Φόρτωση από αρχείο..."
+
+#: src/loggingcategory.cpp:108
+#, kde-format
+msgid "Category name: %1"
+msgstr "Όνομα κατηγορίας: %1"
+
+#: src/loggingcategory.cpp:110
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Αναγνωριστικό: %1"
+
+#: src/loggingcategory.cpp:112
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Προκαθορισμένη αυστηρότητα: %1"
 
 #: src/main.cpp:32
 #, kde-format
