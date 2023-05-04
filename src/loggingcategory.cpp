@@ -49,6 +49,37 @@ QString LoggingCategory::createCustomRule() const
     return str;
 }
 
+QString LoggingCategory::generateDisplayRule() const
+{
+    // Cache it ?
+    QString ruleStr = categoryName;
+    switch (loggingType) {
+    case LoggingCategory::Undefined:
+    case LoggingCategory::All:
+        break;
+    case LoggingCategory::Info:
+        ruleStr += QStringLiteral(".info");
+        break;
+    case LoggingCategory::Warning:
+        ruleStr += QStringLiteral(".warning");
+        break;
+    case LoggingCategory::Debug:
+        ruleStr += QStringLiteral(".debug");
+        break;
+    case LoggingCategory::Critical:
+        ruleStr += QStringLiteral(".critical");
+        break;
+    case LoggingCategory::Off:
+        break;
+    }
+    if (enabled) {
+        ruleStr += QStringLiteral("=true");
+    } else {
+        ruleStr += QStringLiteral("=false");
+    }
+    return ruleStr;
+}
+
 QString LoggingCategory::createRule() const
 {
     QString str;
