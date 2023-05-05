@@ -26,6 +26,7 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
     if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
         return {};
     }
+
     const LoggingCategory &category = mLoggingCategories.at(index.row());
     switch (role) {
     case Description:
@@ -34,12 +35,8 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
         return category.categoryName;
     case IdentifierName:
         return category.identifierName;
-    case Qt::ToolTip:
+    case Qt::ToolTipRole:
         return category.generateToolTip();
-#if 0
-    case Qt::DisplayRole:
-        return category.description;
-#endif
     case DefaultCategory:
         return category.defaultSeverityType;
 
