@@ -32,6 +32,7 @@ target_sources(libkdebugsettingscore PRIVATE
     kdebugsettingsloadingcategories.h
 
 
+    libkdebugsettingscore_private_export.h
 
 )
 
