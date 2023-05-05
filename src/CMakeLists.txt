@@ -92,20 +92,7 @@ set_target_properties(libkdebugsettings
 install(TARGETS libkdebugsettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
-add_executable(kdebugsettings main.cpp)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(kdebugsettings PROPERTIES UNITY_BUILD ON)
-endif()
-
-target_link_libraries(kdebugsettings
-    Qt::Widgets
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::DBusAddons
-    libkdebugsettings
-)
-
-install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-
+add_subdirectory(apps)
 
 ########### install files ###############
 
