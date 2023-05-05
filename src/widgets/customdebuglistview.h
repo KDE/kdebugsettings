@@ -22,5 +22,8 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
 private:
+    void slotAddRule();
+    void slotEditRule();
+    void slotRemoveRules();
     CustomDebugModel *const mCustomDebugModel;
 };
