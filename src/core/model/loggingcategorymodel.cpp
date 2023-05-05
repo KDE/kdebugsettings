@@ -4,16 +4,16 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "customdebugmodel.h"
+#include "loggingcategorymodel.h"
 
-CustomDebugModel::CustomDebugModel(QObject *parent)
+LoggingCategoryModel::LoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
 }
 
-CustomDebugModel::~CustomDebugModel() = default;
+LoggingCategoryModel::~LoggingCategoryModel() = default;
 
-int CustomDebugModel::rowCount(const QModelIndex &parent) const
+int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         return 0; // flat model
@@ -21,7 +21,7 @@ int CustomDebugModel::rowCount(const QModelIndex &parent) const
     return mLoggingCategories.count();
 }
 
-QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
+QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
         return {};
@@ -48,14 +48,14 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
-void CustomDebugModel::setLoggingCategories(const LoggingCategory::List &list)
+void LoggingCategoryModel::setLoggingCategories(const LoggingCategory::List &list)
 {
     beginResetModel();
     mLoggingCategories = list;
     endResetModel();
 }
 
-void CustomDebugModel::clear()
+void LoggingCategoryModel::clear()
 {
     if (!mLoggingCategories.isEmpty()) {
         beginResetModel();

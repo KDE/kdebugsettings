@@ -9,7 +9,7 @@
 #include "loggingcategory.h"
 #include <QAbstractListModel>
 
-class LIBKDEBUGSETTINGSCORE_EXPORT CustomDebugModel : public QAbstractListModel
+class LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategoryModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
@@ -22,8 +22,8 @@ public:
         LoggingType,
     };
 
-    explicit CustomDebugModel(QObject *parent = nullptr);
-    ~CustomDebugModel() override;
+    explicit LoggingCategoryModel(QObject *parent = nullptr);
+    ~LoggingCategoryModel() override;
 
     Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
