@@ -8,6 +8,7 @@
 #include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
+#include "loggingmanager.h"
 #include <config-kdebugsettings.h>
 
 #include <KAboutData>
@@ -97,6 +98,9 @@ int main(int argc, char **argv)
         KDBusService service(KDBusService::Unique);
         QQmlApplicationEngine engine;
         engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+        LoggingManager loggingManager;
+        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &loggingManager);
+
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         return app.exec();
     }
