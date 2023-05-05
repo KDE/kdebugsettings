@@ -7,7 +7,6 @@
 
 #include "groupmanagementwidget.h"
 #include "kdebugsettingsutil.h"
-#include "loadgroupmenu.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -16,6 +15,7 @@
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QListWidget>
+#include <QMenu>
 #include <QVBoxLayout>
 
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
