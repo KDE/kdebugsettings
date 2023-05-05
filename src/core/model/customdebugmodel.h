@@ -13,7 +13,7 @@ class LIBKDEBUGSETTINGSCORE_EXPORT CustomDebugModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum BannerInfosRoles {
+    enum CategoryRoles {
         Description = Qt::UserRole + 1,
         CategoryName,
         IdentifierName,
