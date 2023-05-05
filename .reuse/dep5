@@ -3,6 +3,6 @@ Upstream-Name: kdebugsettings
 Upstream-Contact: Montel Laurent <montel@kde.org>
 Source: https://invent.kde.org/utilities/kdebugsettings
 
-Files: autotests/data/*.ini autotests/data/*.ref autotests/data/*.categories autotests/data/*.renamecategories data/kde.categories data/kde.renamecategories data/groups/Full Debug Ruqola logo.png
+Files: src/core/autotests/data/*.ini src/core/autotests/data/*.ref src/core/autotests/data/*.categories src/core/autotests/data/*.renamecategories data/kde.categories data/kde.renamecategories data/groups/Full Debug Ruqola logo.png
 Copyright: none
 License: CC0-1.0
