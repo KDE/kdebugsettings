@@ -25,7 +25,7 @@ public:
     ~CustomDebugModel() override;
 
     Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
     void setLoggingCategories(const LoggingCategory::List &list);
 
