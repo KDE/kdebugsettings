@@ -8,11 +8,11 @@
 #pragma once
 
 #include "kdeloggingcategory.h"
-#include "libkdebugsettings_private_export.h"
+#include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
 
-class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadCategoriesJob
+class LIBKDEBUGSETTINGSCORE_EXPORT LoadCategoriesJob
 {
 public:
     LoadCategoriesJob();

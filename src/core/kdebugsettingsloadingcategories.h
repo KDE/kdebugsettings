@@ -8,12 +8,12 @@
 #pragma once
 
 #include "kdeloggingcategory.h"
-#include "libkdebugsettings_export.h"
+#include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
 #include <QString>
 
-class LIBKDEBUGSETTINGS_EXPORT KDebugSettingsLoadingCategories
+class LIBKDEBUGSETTINGSCORE_EXPORT KDebugSettingsLoadingCategories
 {
 public:
     KDebugSettingsLoadingCategories();

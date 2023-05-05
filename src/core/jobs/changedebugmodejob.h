@@ -7,12 +7,12 @@
 
 #pragma once
 
-#include "libkdebugsettings_export.h"
+#include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
 #include <QString>
 #include <QStringList>
 
-class LIBKDEBUGSETTINGS_EXPORT ChangeDebugModeJob
+class LIBKDEBUGSETTINGSCORE_EXPORT ChangeDebugModeJob
 {
 public:
     ChangeDebugModeJob();

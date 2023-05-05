@@ -6,12 +6,12 @@
 */
 #pragma once
 
-#include "libkdebugsettings_export.h"
+#include "libkdebugsettingscore_export.h"
 #include <QDebug>
 #include <QString>
 #include <QVector>
 
-struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
+struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     enum LoggingType {
         All = 0,
         Info,
@@ -48,7 +48,7 @@ struct LIBKDEBUGSETTINGS_EXPORT LoggingCategory {
     LoggingType defaultSeverityType = Info;
     bool enabled = true;
 };
-LIBKDEBUGSETTINGS_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
+LIBKDEBUGSETTINGSCORE_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 
 Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(LoggingCategory)

@@ -6,11 +6,11 @@
 */
 #pragma once
 
-#include "libkdebugsettings_private_export.h"
+#include "libkdebugsettingscore_private_export.h"
 #include <QObject>
 #include <QString>
 #include <QVector>
-struct LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT RenameCategory {
+struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT RenameCategory {
 public:
     RenameCategory() = default;
 

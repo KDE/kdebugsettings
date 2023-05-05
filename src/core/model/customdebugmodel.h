@@ -5,10 +5,11 @@
 */
 #pragma once
 
+#include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
 #include <QAbstractListModel>
 
-class CustomDebugModel : public QAbstractListModel
+class LIBKDEBUGSETTINGSCORE_EXPORT CustomDebugModel : public QAbstractListModel
 {
     Q_OBJECT
 public:

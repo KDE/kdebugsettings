@@ -7,9 +7,9 @@
 
 #pragma once
 
-#include "libkdebugsettings_export.h"
+#include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
-class LIBKDEBUGSETTINGS_EXPORT SaveRulesJob
+class LIBKDEBUGSETTINGSCORE_EXPORT SaveRulesJob
 {
 public:
     SaveRulesJob();

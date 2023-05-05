@@ -2,36 +2,11 @@
 # SPDX-License-Identifier: BSD-3-Clause
 include_directories(${CMAKE_BINARY_DIR})
 
-#add_subdirectory(core)
+add_subdirectory(core)
 
 add_library(libkdebugsettings SHARED)
 
 ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
-target_sources(libkdebugsettings PRIVATE
-    core/jobs/changedebugmodejob.cpp
-    core/jobs/changedebugmodejob.h
-    core/jobs/loadcategoriesjob.cpp
-    core/jobs/loadcategoriesjob.h
-    core/jobs/saverulesjob.cpp
-    core/jobs/saverulesjob.h
-
-    core/model/customdebugmodel.h
-    core/model/customdebugmodel.cpp
-
-    core/model/customdebugproxymodel.h
-    core/model/customdebugproxymodel.cpp
-
-    kdebugsettingsutil.cpp
-    kdebugsettingsutil.h
-    kdeloggingcategory.cpp
-    kdeloggingcategory.h
-    loggingcategory.cpp
-    loggingcategory.h
-    renamecategory.cpp
-    renamecategory.h
-    kdebugsettingsloadingcategories.cpp
-    kdebugsettingsloadingcategories.h
-)
 
 target_sources(libkdebugsettings PRIVATE
     categorytypecombobox.cpp
@@ -85,6 +60,7 @@ target_link_libraries(libkdebugsettings
     KF${KF_MAJOR_VERSION}::ItemViews
     KF${KF_MAJOR_VERSION}::ConfigGui
     KF${KF_MAJOR_VERSION}::XmlGui
+    libkdebugsettingscore
 )
 
 set_target_properties(libkdebugsettings

@@ -65,7 +65,7 @@ void GroupManagementWidget::renameGroup(QListWidgetItem *item)
     const QString newName = QInputDialog::getText(this, i18n("Rename Group"), i18n("New Name:"));
     const QString newNameTrimmed = newName.trimmed();
     if (!newNameTrimmed.isEmpty() && (currentName != newNameTrimmed)) {
-        const QString newFullPath{LoadGroupMenu::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
+        const QString newFullPath{KDebugSettingsUtil::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
         if (!f.rename(newFullPath)) {
             KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'", newNameTrimmed), i18n("Rename Group"));
         } else {
@@ -111,7 +111,7 @@ void GroupManagementWidget::init()
 {
     const QStringList groups = KDebugSettingsUtil::groupFileList();
     if (!groups.isEmpty()) {
-        const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
+        const QString groupPath = KDebugSettingsUtil::defaultWritableGroupPath();
         for (const QString &file : groups) {
             auto item = new QListWidgetItem(file, mListWidget);
             const QString fullPath = groupPath + QLatin1Char('/') + file;

@@ -4,10 +4,10 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #pragma once
-
+#include "libkdebugsettingscore_export.h"
 #include <QSortFilterProxyModel>
 
-class CustomDebugProxyModel : public QSortFilterProxyModel
+class LIBKDEBUGSETTINGSCORE_EXPORT CustomDebugProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:

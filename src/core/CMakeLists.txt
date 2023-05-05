@@ -18,6 +18,21 @@ target_sources(libkdebugsettingscore PRIVATE
 
     model/customdebugproxymodel.h
     model/customdebugproxymodel.cpp
+
+    loggingcategory.cpp
+    loggingcategory.h
+    kdebugsettingsutil.cpp
+    kdebugsettingsutil.h
+    renamecategory.cpp
+    renamecategory.h
+
+    kdeloggingcategory.cpp
+    kdeloggingcategory.h
+    kdebugsettingsloadingcategories.cpp
+    kdebugsettingsloadingcategories.h
+
+
+
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

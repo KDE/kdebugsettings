@@ -6,7 +6,7 @@
 */
 
 #include "changedebugmodejob.h"
-#include "kdebugsettings_debug.h"
+#include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsloadingcategories.h"
 #include "kdebugsettingsutil.h"
 #include "saverulesjob.h"
@@ -72,7 +72,7 @@ bool ChangeDebugModeJob::start()
     job.setListKde(qtKdeCategories);
     job.setListCustom(customCategories);
     if (!job.start()) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Impossible to save in file " << job.fileName();
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Impossible to save in file " << job.fileName();
     }
     return true;
 }

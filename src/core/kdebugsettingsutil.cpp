@@ -6,8 +6,7 @@
 */
 
 #include "kdebugsettingsutil.h"
-#include "kdebugsettings_debug.h"
-#include "loadgroupmenu.h"
+#include "kdebugsettingscore_debug.h"
 #include <KLocalizedString>
 #include <QDir>
 #include <QFile>
@@ -32,8 +31,8 @@ RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QStri
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
-                                      << " from file:" << filename << Qt::endl;
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
+                                          << " from file:" << filename << Qt::endl;
         return category;
     }
 
@@ -51,7 +50,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
         QString data;
         QTextStream ts(&file);
@@ -86,8 +85,8 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
     line = line.simplified();
     const int space = line.indexOf(QLatin1Char(' '));
     if (space == -1) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
-                                      << " from file:" << filename << Qt::endl;
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
+                                          << " from file:" << filename << Qt::endl;
         return category;
     }
     QString logName;
@@ -161,10 +160,10 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
                 defaultSeverity = defaultSeverityCaptured;
                 // qDebug() << " match.captured(1);" << descriptionCaptured;
                 // qDebug() << " match.captured(2);" << defaultCategoryCaptured;
-                qCWarning(KDEBUGSETTINGS_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
+                qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
             }
         } else {
-            qCWarning(KDEBUGSETTINGS_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
+            qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
         }
     }
     category.categoryName = logName;
@@ -180,7 +179,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
         QString data;
         QTextStream ts(&file);
@@ -199,8 +198,8 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
                         needToAppend = false;
                         break;
                     } else if (cat.categoryName == category.categoryName) {
-                        qCWarning(KDEBUGSETTINGS_LOG) << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName
-                                                      << " filename : " << filename;
+                        qCWarning(KDEBUGSETTINGSCORE_LOG)
+                            << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
                         needToAppend = false;
                     }
                 }
@@ -218,7 +217,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
 {
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Couldn't open" << filename;
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
         QString data;
         QTextStream ts(&file);
@@ -238,7 +237,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
                             needToAppend = false;
                             break;
                         } else if (cat.categoryName == category.categoryName) {
-                            qCWarning(KDEBUGSETTINGS_LOG)
+                            qCWarning(KDEBUGSETTINGSCORE_LOG)
                                 << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
                             needToAppend = false;
                         }
@@ -297,7 +296,7 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
 QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQtCategories(const QString &filename)
 {
     if (filename.isEmpty()) {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Empty file name";
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Empty file name";
         return {};
     }
     // Code based on src/corelib/io/qloggingregistry.cpp
@@ -391,7 +390,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
             }
         }
     } else {
-        qCWarning(KDEBUGSETTINGS_LOG) << "Impossible to open file: " << filename;
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "Impossible to open file: " << filename;
     }
 
     return hashLoadLoggingCategories.values();
@@ -410,7 +409,7 @@ LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(c
     } else if (str == QLatin1String("CRITICAL")) {
         return LoggingCategory::Critical;
     }
-    qCWarning(KDEBUGSETTINGS_LOG) << "Default category is unknown: " << str;
+    qCWarning(KDEBUGSETTINGSCORE_LOG) << "Default category is unknown: " << str;
     return LoggingCategory::Info;
 }
 
@@ -451,9 +450,14 @@ QString KDebugSettingsUtil::qtFileName()
     return qtloggingFileName;
 }
 
+QString KDebugSettingsUtil::defaultWritableGroupPath()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/groups");
+}
+
 QStringList KDebugSettingsUtil::groupFileList()
 {
-    const QString groupPath = LoadGroupMenu::defaultWritableGroupPath();
+    const QString groupPath = KDebugSettingsUtil::defaultWritableGroupPath();
     if (groupPath.isEmpty()) {
         return {};
     }
