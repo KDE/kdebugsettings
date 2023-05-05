@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-04 00:50+0000\n"
+"POT-Creation-Date: 2023-05-05 00:50+0000\n"
 "PO-Revision-Date: ٢٠١٦-٠١-٢٠ ٠٧:٣٤+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -80,44 +80,25 @@ msgstr "الفئة:"
 msgid "Type:"
 msgstr "النّوع:"
 
-#: src/customdebugsettingspage.cpp:27
-#, kde-format
-msgid "Add..."
-msgstr "أضف..."
-
-#: src/customdebugsettingspage.cpp:28
-#, kde-format
-msgid "Edit..."
-msgstr "حرّر..."
-
-#: src/customdebugsettingspage.cpp:29
-#, kde-format
-msgid "Remove..."
-msgstr "أزل..."
-
-#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "ابحث..."
-
-#: src/customdebugsettingspage.cpp:89
+#: src/customdebuglistview.cpp:38 src/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:91
+#: src/customdebuglistview.cpp:40 src/customdebugsettingspage.cpp:96
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "حرّر القاعدة المخصّصة"
 
-#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
+#: src/customdebuglistview.cpp:44 src/customdebuglistview.cpp:62
+#: src/customdebugsettingspage.cpp:100 src/customdebugsettingspage.cpp:166
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "أزل..."
 
-#: src/customdebugsettingspage.cpp:180
+#: src/customdebuglistview.cpp:59 src/customdebugsettingspage.cpp:163
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule \"%1\"?"
 msgid "Do you want to remove this rule?"
@@ -128,6 +109,26 @@ msgstr[2] "أتريد إزالة القاعدة \"%1\" هذه؟"
 msgstr[3] "أتريد إزالة القاعدة \"%1\" هذه؟"
 msgstr[4] "أتريد إزالة القاعدة \"%1\" هذه؟"
 msgstr[5] "أتريد إزالة القاعدة \"%1\" هذه؟"
+
+#: src/customdebugsettingspage.cpp:28
+#, kde-format
+msgid "Add..."
+msgstr "أضف..."
+
+#: src/customdebugsettingspage.cpp:29
+#, kde-format
+msgid "Edit..."
+msgstr "حرّر..."
+
+#: src/customdebugsettingspage.cpp:30
+#, kde-format
+msgid "Remove..."
+msgstr "أزل..."
+
+#: src/customdebugsettingspage.cpp:49 src/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "ابحث..."
 
 #: src/environmentplaintextedit.cpp:42
 #, kde-format
@@ -365,18 +366,18 @@ msgstr "حمّل..."
 msgid "Load From File..."
 msgstr ""
 
-#: src/loggingcategory.cpp:108
+#: src/loggingcategory.cpp:139
 #, fuzzy, kde-format
 #| msgid "Category:"
 msgid "Category name: %1"
 msgstr "الفئة:"
 
-#: src/loggingcategory.cpp:110
+#: src/loggingcategory.cpp:141
 #, kde-format
 msgid "Identifier: %1"
 msgstr ""
 
-#: src/loggingcategory.cpp:112
+#: src/loggingcategory.cpp:143
 #, kde-format
 msgid "Default Severity: %1"
 msgstr ""

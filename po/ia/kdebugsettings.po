@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-04 00:50+0000\n"
+"POT-Creation-Date: 2023-05-05 00:50+0000\n"
 "PO-Revision-Date: 2023-03-14 23:24+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -78,47 +78,48 @@ msgstr "Categoria:"
 msgid "Type:"
 msgstr "Typo:"
 
-#: src/customdebugsettingspage.cpp:27
-#, kde-format
-msgid "Add..."
-msgstr "Adde..."
-
-#: src/customdebugsettingspage.cpp:28
-#, kde-format
-msgid "Edit..."
-msgstr "Edita ..."
-
-#: src/customdebugsettingspage.cpp:29
-#, kde-format
-msgid "Remove..."
-msgstr "Remove"
-
-#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Cerca..."
-
-#: src/customdebugsettingspage.cpp:89
+#: src/customdebuglistview.cpp:38 src/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Adde regula"
 
-#: src/customdebugsettingspage.cpp:91
+#: src/customdebuglistview.cpp:40 src/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Modifica regula"
 
-#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
+#: src/customdebuglistview.cpp:44 src/customdebuglistview.cpp:62
+#: src/customdebugsettingspage.cpp:100 src/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Remove regula"
 
-#: src/customdebugsettingspage.cpp:180
+#: src/customdebuglistview.cpp:59 src/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "Tu vole remover iste regula?"
 msgstr[1] "Tu vole remover iste %1 regulas?"
+
+#: src/customdebugsettingspage.cpp:28
+#, kde-format
+msgid "Add..."
+msgstr "Adde..."
+
+#: src/customdebugsettingspage.cpp:29
+#, kde-format
+msgid "Edit..."
+msgstr "Edita ..."
+
+#: src/customdebugsettingspage.cpp:30
+#, kde-format
+msgid "Remove..."
+msgstr "Remove"
+
+#: src/customdebugsettingspage.cpp:49 src/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Cerca..."
 
 #: src/environmentplaintextedit.cpp:42
 #, kde-format
@@ -358,17 +359,17 @@ msgstr "Carga..."
 msgid "Load From File..."
 msgstr "Carga ex file ..."
 
-#: src/loggingcategory.cpp:108
+#: src/loggingcategory.cpp:139
 #, kde-format
 msgid "Category name: %1"
 msgstr "Nomine de Categoria: %1"
 
-#: src/loggingcategory.cpp:110
+#: src/loggingcategory.cpp:141
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identificator: %1"
 
-#: src/loggingcategory.cpp:112
+#: src/loggingcategory.cpp:143
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Gravitate predefinite: %1"

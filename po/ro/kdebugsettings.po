@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-04 00:50+0000\n"
+"POT-Creation-Date: 2023-05-05 00:50+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -79,51 +79,52 @@ msgstr "Categorie:"
 msgid "Type:"
 msgstr "Tip:"
 
-#: src/customdebugsettingspage.cpp:27
-#, kde-format
-msgid "Add..."
-msgstr "Adaugă..."
-
-#: src/customdebugsettingspage.cpp:28
-#, kde-format
-msgid "Edit..."
-msgstr "Modifică..."
-
-#: src/customdebugsettingspage.cpp:29
-#, kde-format
-msgid "Remove..."
-msgstr "Elimină..."
-
-#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Caută..."
-
-#: src/customdebugsettingspage.cpp:89
+#: src/customdebuglistview.cpp:38 src/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/customdebugsettingspage.cpp:91
+#: src/customdebuglistview.cpp:40 src/customdebugsettingspage.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "Modifică regula personalizată"
 
-#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
+#: src/customdebuglistview.cpp:44 src/customdebuglistview.cpp:62
+#: src/customdebugsettingspage.cpp:100 src/customdebugsettingspage.cpp:166
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "Elimină..."
 
-#: src/customdebugsettingspage.cpp:180
+#: src/customdebuglistview.cpp:59 src/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "Doriți să eliminați această regulă?"
 msgstr[1] "Doriți să eliminați aceste %1 reguli?"
 msgstr[2] "Doriți să eliminați aceste %1 de reguli?"
+
+#: src/customdebugsettingspage.cpp:28
+#, kde-format
+msgid "Add..."
+msgstr "Adaugă..."
+
+#: src/customdebugsettingspage.cpp:29
+#, kde-format
+msgid "Edit..."
+msgstr "Modifică..."
+
+#: src/customdebugsettingspage.cpp:30
+#, kde-format
+msgid "Remove..."
+msgstr "Elimină..."
+
+#: src/customdebugsettingspage.cpp:49 src/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Caută..."
 
 #: src/environmentplaintextedit.cpp:42
 #, kde-format
@@ -364,17 +365,17 @@ msgstr "Încarcă..."
 msgid "Load From File..."
 msgstr ""
 
-#: src/loggingcategory.cpp:108
+#: src/loggingcategory.cpp:139
 #, kde-format
 msgid "Category name: %1"
 msgstr "Denumire categorie: %1"
 
-#: src/loggingcategory.cpp:110
+#: src/loggingcategory.cpp:141
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identificator: %1"
 
-#: src/loggingcategory.cpp:112
+#: src/loggingcategory.cpp:143
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Severitate implicită: %1"

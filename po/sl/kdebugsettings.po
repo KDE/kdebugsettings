@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-04 00:50+0000\n"
+"POT-Creation-Date: 2023-05-05 00:50+0000\n"
 "PO-Revision-Date: 2023-03-12 08:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -81,42 +81,23 @@ msgstr "Kategorija:"
 msgid "Type:"
 msgstr "Vrsta:"
 
-#: src/customdebugsettingspage.cpp:27
-#, kde-format
-msgid "Add..."
-msgstr "Dodaj..."
-
-#: src/customdebugsettingspage.cpp:28
-#, kde-format
-msgid "Edit..."
-msgstr "Uredi..."
-
-#: src/customdebugsettingspage.cpp:29
-#, kde-format
-msgid "Remove..."
-msgstr "Odstrani..."
-
-#: src/customdebugsettingspage.cpp:48 src/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Poišči..."
-
-#: src/customdebugsettingspage.cpp:89
+#: src/customdebuglistview.cpp:38 src/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Dodaj pravilo..."
 
-#: src/customdebugsettingspage.cpp:91
+#: src/customdebuglistview.cpp:40 src/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Uredi pravilo"
 
-#: src/customdebugsettingspage.cpp:95 src/customdebugsettingspage.cpp:183
+#: src/customdebuglistview.cpp:44 src/customdebuglistview.cpp:62
+#: src/customdebugsettingspage.cpp:100 src/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Odstrani pravilo"
 
-#: src/customdebugsettingspage.cpp:180
+#: src/customdebuglistview.cpp:59 src/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -124,6 +105,26 @@ msgstr[0] "Ali želite odstraniti to %1 pravilo?"
 msgstr[1] "Ali želite odstraniti ti %1 pravili?"
 msgstr[2] "Ali želite odstraniti ta %1 pravila?"
 msgstr[3] "Ali želite odstraniti teh %1 pravil?"
+
+#: src/customdebugsettingspage.cpp:28
+#, kde-format
+msgid "Add..."
+msgstr "Dodaj..."
+
+#: src/customdebugsettingspage.cpp:29
+#, kde-format
+msgid "Edit..."
+msgstr "Uredi..."
+
+#: src/customdebugsettingspage.cpp:30
+#, kde-format
+msgid "Remove..."
+msgstr "Odstrani..."
+
+#: src/customdebugsettingspage.cpp:49 src/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Poišči..."
 
 #: src/environmentplaintextedit.cpp:42
 #, kde-format
@@ -361,17 +362,17 @@ msgstr "Naloži..."
 msgid "Load From File..."
 msgstr "Naloži iz datoteke..."
 
-#: src/loggingcategory.cpp:108
+#: src/loggingcategory.cpp:139
 #, kde-format
 msgid "Category name: %1"
 msgstr "Ime kategorije: %1"
 
-#: src/loggingcategory.cpp:110
+#: src/loggingcategory.cpp:141
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identifikator: %1"
 
-#: src/loggingcategory.cpp:112
+#: src/loggingcategory.cpp:143
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Privzeta resnost: %1"
