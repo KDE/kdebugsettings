@@ -9,7 +9,7 @@ Kirigami.ApplicationWindow {
     id: root
 
     pageStack {
-        // initialPage: InitialPage {}
+        initialPage: MainPage {}
         defaultColumnWidth: root.width
 
         globalToolBar {
