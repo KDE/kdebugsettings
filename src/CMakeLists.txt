@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 include_directories(${CMAKE_BINARY_DIR})
 
+#add_subdirectory(core)
+
 add_library(libkdebugsettings SHARED)
 
 ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
