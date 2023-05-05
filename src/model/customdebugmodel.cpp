@@ -55,23 +55,16 @@ QVariant CustomDebugModel::data(const QModelIndex &index, int role) const
 
 void CustomDebugModel::setLoggingCategories(const LoggingCategory::List &list)
 {
-    if (rowCount() != 0) {
-        beginRemoveRows(QModelIndex(), 0, mLoggingCategories.count() - 1);
-        mLoggingCategories.clear();
-        endRemoveRows();
-    }
-    if (!list.isEmpty()) {
-        beginInsertRows(QModelIndex(), 0, list.count() - 1);
-        mLoggingCategories = list;
-        endInsertRows();
-    }
+    beginResetModel();
+    mLoggingCategories = list;
+    endResetModel();
 }
 
 void CustomDebugModel::clear()
 {
     if (!mLoggingCategories.isEmpty()) {
-        beginRemoveRows(QModelIndex(), 0, mLoggingCategories.count() - 1);
+        beginResetModel();
         mLoggingCategories.clear();
-        endRemoveRows();
+        endResetModel();
     }
 }
