@@ -97,7 +97,7 @@ int main(int argc, char **argv)
         KDBusService service(KDBusService::Unique);
         QQmlApplicationEngine engine;
         engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-
+        engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         return app.exec();
     }
 }

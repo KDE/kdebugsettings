@@ -1,7 +1,8 @@
 # SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_executable(kdebugsettingsquick main.cpp)
+add_executable(kdebugsettingsquick)
+target_sources(kdebugsettingsquick PRIVATE main.cpp resources.qrc)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kdebugsettingsquick PROPERTIES UNITY_BUILD ON)
 endif()
