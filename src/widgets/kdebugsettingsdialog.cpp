@@ -7,10 +7,10 @@
 
 #include "kdebugsettingsdialog.h"
 #include "categorywarning.h"
-#include "core/jobs/saverulesjob.h"
 #include "customdebugsettingspage.h"
 #include "environmentsettingsrulespage.h"
 #include "groupmanagementdialog.h"
+#include "jobs/saverulesjob.h"
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"

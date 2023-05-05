@@ -331,7 +331,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                 if (cat.isValid()) {
                     KDebugSettingsUtil::LoadLoggingCategory nextCat = hashLoadLoggingCategories.value(cat.logName);
                     if (nextCat.isValid()) {
-                        LoadLoggingCategory::LogType type;
+                        LoadLoggingCategory::LogType type = LoadLoggingCategory::Unknown;
                         switch (cat.type) {
                         case LineLoggingQtCategory::Unknown:
                             type = LoadLoggingCategory::Unknown;

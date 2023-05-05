@@ -31,9 +31,7 @@ target_sources(libkdebugsettingscore PRIVATE
     kdebugsettingsloadingcategories.cpp
     kdebugsettingsloadingcategories.h
 
-
     libkdebugsettingscore_private_export.h
-
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
@@ -50,3 +48,8 @@ set_target_properties(libkdebugsettingscore
     )
 
 install(TARGETS libkdebugsettingscore ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+
+if (BUILD_TESTING)
+    add_subdirectory( autotests )
+endif()
+

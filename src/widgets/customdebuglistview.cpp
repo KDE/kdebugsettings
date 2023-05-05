@@ -6,7 +6,7 @@
 */
 
 #include "customdebuglistview.h"
-#include "core/model/customdebugmodel.h"
+#include "model/customdebugmodel.h"
 
 #include <KLocalizedString>
 
