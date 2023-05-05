@@ -6,12 +6,29 @@
 */
 
 #include "customdebuglistviewgui.h"
+#include "customdebuglistview.h"
 
 #include <QApplication>
+#include <QVBoxLayout>
 
 CustomDebugListViewGui::CustomDebugListViewGui(QWidget *parent)
     : QWidget{parent}
 {
+    auto vboxLayout = new QVBoxLayout(this);
+    auto view = new CustomDebugListView(this);
+
+    LoggingCategory::List lst;
+    for (int i = 0; i < 5; ++i) {
+        LoggingCategory cat;
+        cat.categoryName = QStringLiteral("foo-%1").arg(i);
+        cat.identifierName = QStringLiteral("ident-%1").arg(i);
+        cat.description = QStringLiteral("desc-%1").arg(i);
+        cat.enabled = (i % 2);
+        lst.append(cat);
+    }
+
+    view->setLoggingCategories(lst);
+    vboxLayout->addWidget(view);
 }
 
 int main(int argc, char *argv[])

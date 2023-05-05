@@ -6,10 +6,11 @@
 */
 #pragma once
 
+#include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
 #include <QListView>
 class CustomDebugModel;
-class CustomDebugListView : public QListView
+class LIBKDEBUGSETTINGS_EXPORT CustomDebugListView : public QListView
 {
     Q_OBJECT
 public:
