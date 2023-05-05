@@ -19,7 +19,14 @@ namespace KDebugSettingsUtil
 struct LIBKDEBUGSETTINGSCORE_EXPORT LineLoggingQtCategory {
     LineLoggingQtCategory() = default;
 
-    enum LoggingType { Unknown = 0, Info, Warning, Debug, Critical, All };
+    enum LoggingType {
+        Unknown = 0,
+        Info,
+        Warning,
+        Debug,
+        Critical,
+        All,
+    };
 
     Q_REQUIRED_RESULT bool isValid() const
     {
@@ -37,9 +44,21 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LineLoggingQtCategory {
 };
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoadLoggingCategory {
-    enum Status { Enabled = 0, Disabled = 1, UnknownStatus = 2 };
+    enum Status {
+        Enabled = 0,
+        Disabled = 1,
+        UnknownStatus = 2,
+    };
 
-    enum LogType { Unknown = 0, Off, Info, Warning, Debug, Critical, All };
+    enum LogType {
+        Unknown = 0,
+        Off,
+        Info,
+        Warning,
+        Debug,
+        Critical,
+        All,
+    };
 
     LoadLoggingCategory()
     {
