@@ -6,7 +6,7 @@
 */
 
 #include "loadcategoriesjobtest.h"
-#include "jobs/loadcategoriesjob.h"
+#include "core/jobs/loadcategoriesjob.h"
 #include "kdebugsettingsutil.h"
 
 #include <QDebug>

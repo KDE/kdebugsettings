@@ -6,18 +6,18 @@ add_library(libkdebugsettings SHARED)
 
 ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)
 target_sources(libkdebugsettings PRIVATE
-    jobs/changedebugmodejob.cpp
-    jobs/changedebugmodejob.h
-    jobs/loadcategoriesjob.cpp
-    jobs/loadcategoriesjob.h
-    jobs/saverulesjob.cpp
-    jobs/saverulesjob.h
+    core/jobs/changedebugmodejob.cpp
+    core/jobs/changedebugmodejob.h
+    core/jobs/loadcategoriesjob.cpp
+    core/jobs/loadcategoriesjob.h
+    core/jobs/saverulesjob.cpp
+    core/jobs/saverulesjob.h
 
-    model/customdebugmodel.h
-    model/customdebugmodel.cpp
+    core/model/customdebugmodel.h
+    core/model/customdebugmodel.cpp
 
-    model/customdebugproxymodel.h
-    model/customdebugproxymodel.cpp
+    core/model/customdebugproxymodel.h
+    core/model/customdebugproxymodel.cpp
 
     kdebugsettingsutil.cpp
     kdebugsettingsutil.h
