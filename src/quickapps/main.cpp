@@ -23,6 +23,19 @@
 
 #include <iostream>
 
+class About : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(KAboutData data READ data CONSTANT)
+    Q_REQUIRED_RESULT static KAboutData data()
+    {
+        return KAboutData::applicationData();
+    }
+
+public:
+    using QObject::QObject;
+};
+
 int main(int argc, char **argv)
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -101,7 +114,8 @@ int main(int argc, char **argv)
 
         LoggingManager loggingManager;
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &loggingManager);
-
+        auto about = new About;
+        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "CommandLineArguments", about);
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
@@ -110,3 +124,4 @@ int main(int argc, char **argv)
         return app.exec();
     }
 }
+#include "main.moc"

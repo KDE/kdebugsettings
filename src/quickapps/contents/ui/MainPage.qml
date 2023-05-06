@@ -13,4 +13,8 @@ Kirigami.ScrollablePage {
 
     leftPadding: 20
 
+    contextualActions: [
+        aboutAction
+    ]
+
 }
