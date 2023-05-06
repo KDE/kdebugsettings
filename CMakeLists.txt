@@ -60,6 +60,8 @@ configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "5")
 
+option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
+
 if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
