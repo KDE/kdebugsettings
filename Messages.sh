@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
 # SPDX-FileCopyrightText: 2015-2023 Montel Laurent <montel@kde.org>
+# SPDX-FileCopyrightText: 2023 Luigi Toscano <luigi.toscano@tiscali.it>
 # SPDX-License-Identifier: BSD-3-Clause
-$XGETTEXT src/*.cpp -o $podir/kdebugsettings.pot
+$XGETTEXT `find src/ -name '*.cpp' | grep -v '/tests/' | grep -v '/autotests/'` -o $podir/kdebugsettings.pot
