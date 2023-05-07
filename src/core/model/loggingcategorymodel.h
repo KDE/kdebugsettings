@@ -14,12 +14,12 @@ class LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategoryModel : public QAbstractListMo
     Q_OBJECT
 public:
     enum CategoryRoles {
-        Description = Qt::UserRole + 1,
-        CategoryName,
-        IdentifierName,
-        DefaultCategory,
-        DisplayRule,
-        LoggingType,
+        DescriptionRole = Qt::UserRole + 1,
+        CategoryNameRole,
+        IdentifierNameRole,
+        DefaultCategoryRole,
+        DisplayRuleRole,
+        LoggingTypeRole,
     };
 
     explicit LoggingCategoryModel(QObject *parent = nullptr);

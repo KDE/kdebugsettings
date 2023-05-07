@@ -29,20 +29,20 @@ QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
 
     const LoggingCategory &category = mLoggingCategories.at(index.row());
     switch (role) {
-    case Description:
+    case DescriptionRole:
         return category.description;
-    case CategoryName:
+    case CategoryNameRole:
         return category.categoryName;
-    case IdentifierName:
+    case IdentifierNameRole:
         return category.identifierName;
     case Qt::ToolTipRole:
         return category.generateToolTip();
-    case DefaultCategory:
+    case DefaultCategoryRole:
         return category.defaultSeverityType;
     case Qt::DisplayRole:
-    case DisplayRule:
+    case DisplayRuleRole:
         return category.generateDisplayRule();
-    case LoggingType:
+    case LoggingTypeRole:
         return category.loggingType;
     }
     return {};
