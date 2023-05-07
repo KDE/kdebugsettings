@@ -6,8 +6,9 @@
 */
 #pragma once
 #include "libkdebugsettingscore_export.h"
+#include "model/loggingcategorymodel.h"
+
 #include <QObject>
-class LoggingCategoryModel;
 class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
 {
     Q_OBJECT

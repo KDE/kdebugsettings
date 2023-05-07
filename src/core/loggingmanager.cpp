@@ -6,7 +6,6 @@
 */
 
 #include "loggingmanager.h"
-#include "model/loggingcategorymodel.h"
 
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
