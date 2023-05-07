@@ -9,6 +9,7 @@
 
 #include "jobs/changedebugmodejob.h"
 #include "loggingmanager.h"
+#include "model/loggingcategorymodel.h"
 #include <config-kdebugsettings.h>
 
 #include <KAboutData>
@@ -114,8 +115,9 @@ int main(int argc, char **argv)
 
         LoggingManager loggingManager;
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &loggingManager);
+        qRegisterMetaType<LoggingCategoryModel *>("LoggingCategoryModel *");
         auto about = new About;
-        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "CommandLineArguments", about);
+        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "About", about);
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {

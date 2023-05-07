@@ -11,6 +11,8 @@ class LoggingCategoryModel;
 class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(LoggingCategoryModel *customCategoryModel READ customCategoryModel CONSTANT)
+
 public:
     explicit LoggingManager(QObject *parent = nullptr);
     ~LoggingManager() override;
