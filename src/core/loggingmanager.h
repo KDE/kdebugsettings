@@ -15,6 +15,8 @@ public:
     explicit LoggingManager(QObject *parent = nullptr);
     ~LoggingManager() override;
 
+    Q_REQUIRED_RESULT LoggingCategoryModel *customCategoryModel() const;
+
 private:
-    LoggingCategoryModel *mCustomCategoryModel = nullptr;
+    LoggingCategoryModel *const mCustomCategoryModel;
 };
