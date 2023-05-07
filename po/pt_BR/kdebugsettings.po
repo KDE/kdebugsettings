@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:50+0000\n"
+"POT-Creation-Date: 2023-05-07 00:53+0000\n"
 "PO-Revision-Date: 2023-03-21 09:45-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -19,32 +19,151 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/categorytypecombobox.cpp:15
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:49
+#, kde-format
+msgid "KDebugSettings"
+msgstr "KDebugSettings"
+
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:51
+#, kde-format
+msgid "Configure debug settings"
+msgstr "Configura as definições de depuração"
+
+#: src/apps/main.cpp:36
+#, kde-format
+msgid "(c) 2015-%1 kdebugsettings authors"
+msgstr "(c) 2015-%1 Autores do kdebugsettings"
+
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:54
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:54
+#, kde-format
+msgid "Maintainer"
+msgstr "Mantenedor"
+
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:60
+#, kde-format
+msgid ""
+"Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
+msgstr ""
+"Habilita o modo de testes QStandardPaths, por ex. as configurações de "
+"leitura/escrita usadas nos testes unitários"
+
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:63
+#, kde-format
+msgid "Activate full debug for all modules."
+msgstr "Ativar a depuração completa para todos os módulos."
+
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:65
+#, kde-format
+msgid "Disable full debug for all modules."
+msgstr "Desabilitar a depuração completa para todos os módulos."
+
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:69
+#, kde-format
+msgid "Change debug mode as console (in console)"
+msgstr "Alterar modo de depuração como console (no console)"
+
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:73
+#, kde-format
+msgid ""
+"Specify logging category name that you want to change debug mode (in console)"
+msgstr ""
+"Especifique o nome da categoria de log que você quer alterar para modo de "
+"depuração (no console)"
+
+#: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
+#: src/quickapps/main.cpp:87 src/quickapps/main.cpp:97
+#: src/quickapps/main.cpp:107
+#, kde-format
+msgid "Impossible to change debug mode"
+msgstr "Não foi possível alterar o modo de depuração"
+
+#: src/core/kdebugsettingsutil.cpp:421
+#, kde-format
+msgid "All Debug Messages"
+msgstr "Todas as mensagens de depuração"
+
+#: src/core/kdebugsettingsutil.cpp:424
+#, kde-format
+msgid "Info Messages"
+msgstr "Mensagens de informação"
+
+#: src/core/kdebugsettingsutil.cpp:427
+#, kde-format
+msgid "Warning Messages"
+msgstr "Mensagens de aviso"
+
+#: src/core/kdebugsettingsutil.cpp:430
+#, kde-format
+msgid "Debug Messages"
+msgstr "Mensagens de depuração"
+
+#: src/core/kdebugsettingsutil.cpp:433
+#, kde-format
+msgid "Critical Messages"
+msgstr "Mensagens críticas"
+
+#: src/core/kdebugsettingsutil.cpp:436
+#, kde-format
+msgid "No Debug Messages"
+msgstr "Sem mensagens de depuração"
+
+#: src/core/kdebugsettingsutil.cpp:439
+#, kde-format
+msgid "Undefined"
+msgstr "Indefinido"
+
+#: src/core/loggingcategory.cpp:139
+#, kde-format
+msgid "Category name: %1"
+msgstr "Nome da categoria: %1"
+
+#: src/core/loggingcategory.cpp:141
+#, kde-format
+msgid "Identifier: %1"
+msgstr "Identificador: %1"
+
+#: src/core/loggingcategory.cpp:143
+#, kde-format
+msgid "Default Severity: %1"
+msgstr "Gravidade padrão: %1"
+
+#: src/quickapps/main.cpp:53
+#, fuzzy, kde-format
+#| msgid "(c) 2015-%1 kdebugsettings authors"
+msgid "(c) %1 kdebugsettings authors"
+msgstr "(c) 2015-%1 Autores do kdebugsettings"
+
+#: src/widgets/categorytypecombobox.cpp:15
 #, kde-format
 msgid "Full Debug"
 msgstr "Depuração completa"
 
-#: src/categorytypecombobox.cpp:16
+#: src/widgets/categorytypecombobox.cpp:16
 #, kde-format
 msgid "Info"
 msgstr "Informações"
 
-#: src/categorytypecombobox.cpp:17
+#: src/widgets/categorytypecombobox.cpp:17
 #, kde-format
 msgid "Warning"
 msgstr "Aviso"
 
-#: src/categorytypecombobox.cpp:18
+#: src/widgets/categorytypecombobox.cpp:18
 #, kde-format
 msgid "Critical"
 msgstr "Crítico"
 
-#: src/categorytypecombobox.cpp:20
+#: src/widgets/categorytypecombobox.cpp:20
 #, kde-format
 msgid "Off"
 msgstr "Desligado"
 
-#: src/categorywarning.cpp:16
+#: src/widgets/categorywarning.cpp:16
 #, kde-format
 msgid ""
 "You have a rule as '*=true' or '*=false' which will override all your "
@@ -53,84 +172,90 @@ msgstr ""
 "Você tem uma regra do tipo '*=true' ou '*=false', que irá substituir todas "
 "as suas regras específicas. É melhor removê-la."
 
-#: src/configurecustomsettingdialog.cpp:21
+#: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Add custom rule"
 msgstr "Adicionar regra personalizada"
 
-#: src/configurecustomsettingdialog.cpp:40
+#: src/widgets/configurecustomsettingdialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit custom rule"
 msgstr "Editar regra personalizada"
 
-#: src/configurecustomsettingwidget.cpp:21
+#: src/widgets/configurecustomsettingwidget.cpp:21
 #, kde-format
 msgid "Enable"
 msgstr "Ativar"
 
-#: src/configurecustomsettingwidget.cpp:26
+#: src/widgets/configurecustomsettingwidget.cpp:26
 #, kde-format
 msgid "Category:"
 msgstr "Categoria:"
 
-#: src/configurecustomsettingwidget.cpp:37
+#: src/widgets/configurecustomsettingwidget.cpp:37
 #, kde-format
 msgid "Type:"
 msgstr "Tipo:"
 
-#: src/customdebuglistview.cpp:38 src/customdebugsettingspage.cpp:94
+#: src/widgets/customdebuglistview.cpp:39
+#: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Adicionar regra..."
 
-#: src/customdebuglistview.cpp:40 src/customdebugsettingspage.cpp:96
+#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Editar regra"
 
-#: src/customdebuglistview.cpp:44 src/customdebuglistview.cpp:62
-#: src/customdebugsettingspage.cpp:100 src/customdebugsettingspage.cpp:166
+#: src/widgets/customdebuglistview.cpp:45
+#: src/widgets/customdebuglistview.cpp:61
+#: src/widgets/customdebugsettingspage.cpp:100
+#: src/widgets/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Remover regra"
 
-#: src/customdebuglistview.cpp:59 src/customdebugsettingspage.cpp:163
+#: src/widgets/customdebuglistview.cpp:58
+#: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "Deseja remover esta regra?"
 msgstr[1] "Deseja remover estas %1 regras?"
 
-#: src/customdebugsettingspage.cpp:28
+#: src/widgets/customdebugsettingspage.cpp:28
 #, kde-format
 msgid "Add..."
 msgstr "Adicionar..."
 
-#: src/customdebugsettingspage.cpp:29
+#: src/widgets/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Edit..."
 msgstr "Editar..."
 
-#: src/customdebugsettingspage.cpp:30
+#: src/widgets/customdebugsettingspage.cpp:30
 #, kde-format
 msgid "Remove..."
 msgstr "Remover..."
 
-#: src/customdebugsettingspage.cpp:49 src/kdeapplicationdebugsettingpage.cpp:30
+#: src/widgets/customdebugsettingspage.cpp:49
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Pesquisar..."
 
-#: src/environmentplaintextedit.cpp:42
+#: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr ""
 "Nenhuma regra foi definida na variável de ambiente \"QT_LOGGING_RULES\"."
 
-#: src/environmentsettingsrulespage.cpp:28
+#: src/widgets/environmentsettingsrulespage.cpp:28
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -139,144 +264,147 @@ msgstr ""
 "Estas regras não podem ser editadas com este aplicativo. Você precisa defini-"
 "las diretamente na variável QT_LOGGING_RULES."
 
-#: src/environmentsettingsrulespage.cpp:30
+#: src/widgets/environmentsettingsrulespage.cpp:30
 #, kde-format
 msgid "Current rules:"
 msgstr "Regras atuais:"
 
-#: src/groupmanagementdialog.cpp:28
+#: src/widgets/groupmanagementdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Gerenciar grupo"
 
-#: src/groupmanagementwidget.cpp:47 src/groupmanagementwidget.cpp:50
-#: src/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:47
+#: src/widgets/groupmanagementwidget.cpp:50
+#: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Export Group"
 msgstr "Exportar grupo"
 
-#: src/groupmanagementwidget.cpp:50
+#: src/widgets/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
 msgstr "Grupo exportado para %1"
 
-#: src/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Não foi possível exportar o grupo '%2' como '%1'"
 
-#: src/groupmanagementwidget.cpp:65 src/groupmanagementwidget.cpp:70
+#: src/widgets/groupmanagementwidget.cpp:65
+#: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Rename Group"
 msgstr "Renomear grupo"
 
-#: src/groupmanagementwidget.cpp:65
+#: src/widgets/groupmanagementwidget.cpp:65
 #, kde-format
 msgid "New Name:"
 msgstr "Novo nome:"
 
-#: src/groupmanagementwidget.cpp:70
+#: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'"
 msgstr "Não foi possível renomear o grupo como '%1'"
 
-#: src/groupmanagementwidget.cpp:86
+#: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
 msgid "Rename Group..."
 msgstr "Renomear grupo..."
 
-#: src/groupmanagementwidget.cpp:90
+#: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
 msgstr "Exportar grupo..."
 
-#: src/groupmanagementwidget.cpp:95
+#: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
 msgid "Remove Groups"
 msgstr "Remover grupos"
 
-#: src/groupmanagementwidget.cpp:100
+#: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Não foi possível remover '%1'"
 
-#: src/groupmanagementwidget.cpp:100
+#: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Remove Group"
 msgstr "Remover grupo"
 
-#: src/kdeapplicationdebugsettingpage.cpp:21
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:21
 #, kde-format
 msgid "Enable All Debug"
 msgstr "Habilitar todas as depurações"
 
-#: src/kdeapplicationdebugsettingpage.cpp:22
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:22
 #, kde-format
 msgid "Turn Off Debug"
 msgstr "Desligar depuração"
 
-#: src/kdeapplicationdebugsettingpage.cpp:23
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
 msgid "Turn Off All Messages"
 msgstr "Desligar todas as mensagens"
 
-#: src/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
 msgstr "Aplicativo KDE"
 
-#: src/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Custom Rules"
 msgstr "Regras personalizadas"
 
-#: src/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:67
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Configuração das regras com variável de ambiente"
 
-#: src/kdebugsettingsdialog.cpp:76 src/savetoolbutton.cpp:15
+#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
 msgstr "Salvar como..."
 
-#: src/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert..."
 msgstr "Inserir..."
 
-#: src/kdebugsettingsdialog.cpp:165
+#: src/widgets/kdebugsettingsdialog.cpp:165
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "Não é possível abrir o '%1'. Verifique."
 
-#: src/kdebugsettingsdialog.cpp:191 src/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:191
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Insert Categories"
 msgstr "Inserir categorias"
 
-#: src/kdebugsettingsdialog.cpp:191
+#: src/widgets/kdebugsettingsdialog.cpp:191
 #, kde-format
 msgid "Categories Files"
 msgstr "Arquivos de categorias"
 
-#: src/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Categorias do arquivo '%1' inseridas."
 
-#: src/kdebugsettingsdialog.cpp:213
+#: src/widgets/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid "Group Name"
 msgstr "Nome do grupo"
 
-#: src/kdebugsettingsdialog.cpp:213
+#: src/widgets/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid "Name:"
 msgstr "Nome:"
 
-#: src/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -285,163 +413,53 @@ msgstr ""
 "<b>'%1'</b> já está em uso como nome de grupo.\n"
 "Salve com outro nome."
 
-#: src/kdebugsettingsdialog.cpp:227
+#: src/widgets/kdebugsettingsdialog.cpp:227
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Não foi possível salvar como nome vazio. Use um outro nome."
 
-#: src/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "Save As"
 msgstr "Salvar como"
 
-#: src/kdebugsettingsdialog.cpp:234 src/kdebugsettingsdialog.cpp:242
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Arquivo do KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/kdebugsettingsdialog.cpp:242
+#: src/widgets/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Carregar arquivos de configurações de depuração"
 
-#: src/kdebugsettingsutil.cpp:422
-#, kde-format
-msgid "All Debug Messages"
-msgstr "Todas as mensagens de depuração"
-
-#: src/kdebugsettingsutil.cpp:425
-#, kde-format
-msgid "Info Messages"
-msgstr "Mensagens de informação"
-
-#: src/kdebugsettingsutil.cpp:428
-#, kde-format
-msgid "Warning Messages"
-msgstr "Mensagens de aviso"
-
-#: src/kdebugsettingsutil.cpp:431
-#, kde-format
-msgid "Debug Messages"
-msgstr "Mensagens de depuração"
-
-#: src/kdebugsettingsutil.cpp:434
-#, kde-format
-msgid "Critical Messages"
-msgstr "Mensagens críticas"
-
-#: src/kdebugsettingsutil.cpp:437
-#, kde-format
-msgid "No Debug Messages"
-msgstr "Sem mensagens de depuração"
-
-#: src/kdebugsettingsutil.cpp:440
-#, kde-format
-msgid "Undefined"
-msgstr "Indefinido"
-
-#: src/loadgroupmenu.cpp:19
+#: src/widgets/loadgroupmenu.cpp:19
 #, kde-format
 msgid "Load Group"
 msgstr "Carregar grupo"
 
-#: src/loadgroupmenu.cpp:68
+#: src/widgets/loadgroupmenu.cpp:68
 #, kde-format
 msgid "Manage Group"
 msgstr "Gerenciar grupo"
 
-#: src/loadtoolbutton.cpp:17
+#: src/widgets/loadtoolbutton.cpp:17
 #, kde-format
 msgid "Load..."
 msgstr "Carregar..."
 
-#: src/loadtoolbutton.cpp:21
+#: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load From File..."
 msgstr "Carregar do arquivo..."
 
-#: src/loggingcategory.cpp:139
-#, kde-format
-msgid "Category name: %1"
-msgstr "Nome da categoria: %1"
-
-#: src/loggingcategory.cpp:141
-#, kde-format
-msgid "Identifier: %1"
-msgstr "Identificador: %1"
-
-#: src/loggingcategory.cpp:143
-#, kde-format
-msgid "Default Severity: %1"
-msgstr "Gravidade padrão: %1"
-
-#: src/main.cpp:32
-#, kde-format
-msgid "KDebugSettings"
-msgstr "KDebugSettings"
-
-#: src/main.cpp:34
-#, kde-format
-msgid "Configure debug settings"
-msgstr "Configura as definições de depuração"
-
-#: src/main.cpp:36
-#, kde-format
-msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1 Autores do kdebugsettings"
-
-#: src/main.cpp:37
-#, kde-format
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: src/main.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "Mantenedor"
-
-#: src/main.cpp:43
-#, kde-format
-msgid ""
-"Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
-msgstr ""
-"Habilita o modo de testes QStandardPaths, por ex. as configurações de "
-"leitura/escrita usadas nos testes unitários"
-
-#: src/main.cpp:46
-#, kde-format
-msgid "Activate full debug for all modules."
-msgstr "Ativar a depuração completa para todos os módulos."
-
-#: src/main.cpp:48
-#, kde-format
-msgid "Disable full debug for all modules."
-msgstr "Desabilitar a depuração completa para todos os módulos."
-
-#: src/main.cpp:52
-#, kde-format
-msgid "Change debug mode as console (in console)"
-msgstr "Alterar modo de depuração como console (no console)"
-
-#: src/main.cpp:56
-#, kde-format
-msgid ""
-"Specify logging category name that you want to change debug mode (in console)"
-msgstr ""
-"Especifique o nome da categoria de log que você quer alterar para modo de "
-"depuração (no console)"
-
-#: src/main.cpp:70 src/main.cpp:80 src/main.cpp:90
-#, kde-format
-msgid "Impossible to change debug mode"
-msgstr "Não foi possível alterar o modo de depuração"
-
-#: src/savetoolbutton.cpp:20
+#: src/widgets/savetoolbutton.cpp:20
 #, kde-format
 msgid "Save As File..."
 msgstr "Salvar como arquivo..."
 
-#: src/savetoolbutton.cpp:23
+#: src/widgets/savetoolbutton.cpp:23
 #, kde-format
 msgid "Save As Group..."
 msgstr "Salvar como grupo..."
