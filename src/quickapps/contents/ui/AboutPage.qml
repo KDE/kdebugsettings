@@ -10,5 +10,5 @@ import org.kde.kirigami 2.6 as Kirigami
 import org.kde.kdebugsettings 1.0
 
 Kirigami.AboutPage {
-    aboutData: CommandLineArguments.aboutData
+    aboutData: About.aboutData
 }
