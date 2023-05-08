@@ -21,7 +21,10 @@ public:
 
     Q_REQUIRED_RESULT LoggingCategoryModel *customCategoryModel() const;
 
+    Q_REQUIRED_RESULT LoggingCategoryModel *qtKdeCategoryModel() const;
+
 private:
     LoggingCategoryModel *const mCustomCategoryModel;
+    LoggingCategoryModel *const mQtKdeCategoryModel;
     KDebugSettingsLoadingCategories mLoggings;
 };
