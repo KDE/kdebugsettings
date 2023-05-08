@@ -5,6 +5,7 @@
 
 */
 #pragma once
+#include "kdebugsettingsloadingcategories.h"
 #include "libkdebugsettingscore_export.h"
 #include "model/loggingcategorymodel.h"
 
@@ -22,4 +23,5 @@ public:
 
 private:
     LoggingCategoryModel *const mCustomCategoryModel;
+    KDebugSettingsLoadingCategories mLoggings;
 };

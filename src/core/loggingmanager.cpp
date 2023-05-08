@@ -11,6 +11,7 @@ LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
     , mCustomCategoryModel(new LoggingCategoryModel(this))
 {
+    mLoggings.readQtLoggingFile();
 }
 
 LoggingManager::~LoggingManager() = default;
