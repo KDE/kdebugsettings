@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:53+0000\n"
-"PO-Revision-Date: 2023-03-12 12:31+0300\n"
+"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"PO-Revision-Date: 2023-05-07 13:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:49
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:50
 #, kde-format
 msgid "KDebugSettings"
-msgstr "KDebugSettings"
+msgstr "K Hata Ayıklama Ayarları"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:51
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hata ayıklama ayarlarını yapılandır"
@@ -30,19 +30,19 @@ msgstr "Hata ayıklama ayarlarını yapılandır"
 #: src/apps/main.cpp:36
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1 KDebugSettings yazarları"
+msgstr "(c) 2015-%1 K Hata Ayıklama Ayarları yazarları"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Proje Yürütücüsü"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:61
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -50,22 +50,22 @@ msgstr ""
 "QStandardPaths sınama kipini etkinleştir; örneğin birim sınamaları "
 "tarafından kullanılan okuma/yazma ayarları"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:63
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Tüm modüller için tam hata ayıklamayı etkinleştir."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:66
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Tüm modüller için tam hata ayıklamayı devre dışı bırak."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:69
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:70
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Hata ayıklama kipini konsol olarak değiştir (konsolda)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:73
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:74
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -74,8 +74,8 @@ msgstr ""
 "belirtin (konsolda)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:87 src/quickapps/main.cpp:97
-#: src/quickapps/main.cpp:107
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:108
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Hata ayıklama kipi değiştirilemiyor"
@@ -130,11 +130,10 @@ msgstr "Tanımlayıcı: %1"
 msgid "Default Severity: %1"
 msgstr "Öntanımlı Ciddiyet: %1"
 
-#: src/quickapps/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#: src/quickapps/main.cpp:54
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1 KDebugSettings yazarları"
+msgstr "(c) %1 K Hata Ayıklama Ayarları yazarları"
 
 #: src/widgets/categorytypecombobox.cpp:15
 #, kde-format
@@ -424,7 +423,7 @@ msgstr "Farklı Kaydet"
 #: src/widgets/kdebugsettingsdialog.cpp:242
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
-msgstr "KDebugSettings Dosyası (*.kdebugsettingsrules)"
+msgstr "K Hata Ayıklama Ayarları Dosyası (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:242
 #, kde-format
