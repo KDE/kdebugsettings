@@ -6,8 +6,10 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
+import QtQuick.Controls 1.4
+import org.kde.kdebugsettings 1.0
 
-Kirigami.ScrollablePage {
+Kirigami.Page {
     id: root
     title: i18nc("@title", "Rules Settings with Environment Variable")
 
@@ -16,6 +18,9 @@ Kirigami.ScrollablePage {
     contextualActions: [
         aboutAction
     ]
-
+    TextField {
+        placeholderText: i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".")
+        text: LoggingManager.environmentrules()
+    }
 }
 
