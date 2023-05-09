@@ -10,5 +10,8 @@
         <file alias="AboutPage.qml">contents/ui/AboutPage.qml</file>
         <file alias="GlobalMenu.qml">contents/ui/GlobalMenu.qml</file>
         <file alias="ActionMenuItem.qml">contents/ui/ActionMenuItem.qml</file>
+        <file alias="CustomRulesPage.qml">contents/ui/CustomRulesPage.qml</file>
+        <file alias="EnvironmentVariableRulesPage.qml">contents/ui/EnvironmentVariableRulesPage.qml</file>
+        <file alias="KDEApplicationRulesPage.qml">contents/ui/KDEApplicationRulesPage.qml</file>
     </qresource>
 </RCC>
