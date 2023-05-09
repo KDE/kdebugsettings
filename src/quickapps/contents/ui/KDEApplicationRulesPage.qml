@@ -16,6 +16,11 @@ Kirigami.ScrollablePage {
     contextualActions: [
         aboutAction
     ]
+    ColumnLayout {
+        spacing: Kirigami.Units.gridUnit
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        anchors.centerIn: parent
+    }
 
 }
 
