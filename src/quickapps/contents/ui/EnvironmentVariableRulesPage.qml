@@ -9,7 +9,7 @@ import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 Kirigami.ScrollablePage {
     id: root
-    title: i18n("Rules Settings with Environment Variable")
+    title: i18nc("@title", "Rules Settings with Environment Variable")
 
     leftPadding: 20
 

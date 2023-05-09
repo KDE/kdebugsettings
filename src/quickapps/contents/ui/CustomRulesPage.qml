@@ -9,7 +9,7 @@ import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 Kirigami.ScrollablePage {
     id: root
-    title: i18n("Custom Rules")
+    title: i18nc("@title", "Custom Rules")
 
     leftPadding: 20
 
