@@ -27,7 +27,7 @@ Kirigami.ApplicationWindow {
     Kirigami.Action {
         id: aboutAction
         displayHint: Kirigami.Action.AlwaysHide
-        icon.name: "kdebugsettings"
+        icon.name: "debug-run"
         text: i18nc("@action opens about app page", "About")
         onTriggered: { pageStack.layers.push("qrc:/AboutPage.qml") }
     }
