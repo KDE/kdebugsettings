@@ -39,7 +39,8 @@ Kirigami.ScrollablePage {
         goToCustomCategories,
         goToEnviromnentCategories,
         helpAction,
-        aboutAction
+        aboutAction,
+        quitAction
     ]
     ColumnLayout {
         spacing: Kirigami.Units.gridUnit

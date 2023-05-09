@@ -39,5 +39,19 @@ Kirigami.ApplicationWindow {
         text: i18nc("@action", "Open Handbook")
         onTriggered: { Qt.openUrlExternally("help:/kdebugsettings") }
     }
+    // TODO fixme
+    Kirigami.Action {
+        id: separatorAction
+        displayHint: Kirigami.Action.AlwaysHide
+        separator: true
+    }
+    Kirigami.Action {
+        id: quitAction
+        displayHint: Kirigami.Action.AlwaysHide
+        text: i18nc("@menu-action", "Quit")
+        icon.name: "gtk-quit"
+        shortcut: StandardKey.Quit
+        onTriggered: Qt.quit()
+    }
     GlobalMenu {}
 }
