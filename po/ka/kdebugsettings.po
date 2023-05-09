@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-08 00:49+0000\n"
-"PO-Revision-Date: 2023-03-14 05:08+0100\n"
+"PO-Revision-Date: 2023-05-08 05:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -132,10 +132,9 @@ msgid "Default Severity: %1"
 msgstr "ნაგულისხმები სიმძიმე: %1"
 
 #: src/quickapps/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1 kdebugsettings -ის ავტორები"
+msgstr "(c) %1 kdebugsettings -ის ავტორები"
 
 #: src/widgets/categorytypecombobox.cpp:15
 #, kde-format
