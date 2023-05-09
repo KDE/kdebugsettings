@@ -24,6 +24,7 @@ public:
     Q_REQUIRED_RESULT LoggingCategoryModel *qtKdeCategoryModel() const;
 
 private:
+    void updateLoggingCategories();
     LoggingCategoryModel *const mCustomCategoryModel;
     LoggingCategoryModel *const mQtKdeCategoryModel;
     KDebugSettingsLoadingCategories mLoggings;
