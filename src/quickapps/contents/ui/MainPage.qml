@@ -13,8 +13,46 @@ Kirigami.ScrollablePage {
 
     leftPadding: 20
 
+    Kirigami.Action {
+        id: goToKdeApplicationCategories
+        // enabled: page.state === ""
+        // iconName: "go-home"
+        text: i18nc("@action", "Show KDE Application Categories")
+        // onTriggered: pageStack.currentIndex = 0
+    }
+    Kirigami.Action {
+        id: goToCustomCategories
+        // enabled: page.state === ""
+        // iconName: "go-home"
+        text: i18nc("@action", "Show Custom Categories")
+        // onTriggered: pageStack.currentIndex = 0
+    }
+    Kirigami.Action {
+        id: goToEnviromnentCategories
+        // enabled: page.state === ""
+        // iconName: "go-home"
+        text: i18nc("@action", "Show Environment Categories")
+        // onTriggered: pageStack.currentIndex = 0
+    }
     contextualActions: [
+        goToKdeApplicationCategories,
+        goToCustomCategories,
+        goToEnviromnentCategories,
         aboutAction
     ]
-
+    ColumnLayout {
+        spacing: Kirigami.Units.gridUnit
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        anchors.centerIn: parent
+        Kirigami.Icon {
+            Layout.alignment: Qt.AlignHCenter
+            source: "debug-run"
+            implicitWidth: Kirigami.Units.iconSizes.enormous
+            implicitHeight: implicitWidth
+        }
+        Kirigami.Heading {
+            Layout.alignment: Qt.AlignHCenter
+            text: i18nc("@title", "Welcome to kdebugsettings")
+        }
+    }
 }
