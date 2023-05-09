@@ -27,13 +27,13 @@ LoggingCategoryModel *LoggingManager::qtKdeCategoryModel() const
     return mQtKdeCategoryModel;
 }
 
+QString LoggingManager::environmentrules() const
+{
+    return mLoggings.environmentrules();
+}
+
 void LoggingManager::updateLoggingCategories()
 {
-#if 0
-    if (!mLoggings.environmentrules().isEmpty()) {
-        mEnvironmentSettingsRulesPage->setRules(mLoggings.environmentrules());
-    }
-#endif
     const LoggingCategory::List customCategories = mLoggings.customCategories();
     const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
     const bool foundOverrideRule = mLoggings.foundOverrideRule();
