@@ -38,6 +38,7 @@ Kirigami.ScrollablePage {
         goToKdeApplicationCategories,
         goToCustomCategories,
         goToEnviromnentCategories,
+        helpAction,
         aboutAction
     ]
     ColumnLayout {

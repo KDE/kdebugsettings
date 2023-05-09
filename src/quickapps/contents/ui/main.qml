@@ -31,5 +31,13 @@ Kirigami.ApplicationWindow {
         text: i18nc("@action opens about app page", "About")
         onTriggered: { pageStack.layers.push("qrc:/AboutPage.qml") }
     }
+
+    Kirigami.Action {
+        id: helpAction
+        displayHint: Kirigami.Action.AlwaysHide
+        icon.name: "help-browser"
+        text: i18nc("@action", "Open Handbook")
+        onTriggered: { Qt.openUrlExternally("help:/kdebugsettings") }
+    }
     GlobalMenu {}
 }
