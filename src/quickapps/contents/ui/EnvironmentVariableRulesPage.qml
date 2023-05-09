@@ -18,9 +18,14 @@ Kirigami.Page {
     contextualActions: [
         aboutAction
     ]
-    TextField {
-        placeholderText: i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".")
-        text: LoggingManager.environmentrules()
+    ColumnLayout {
+        spacing: Kirigami.Units.gridUnit
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        anchors.centerIn: parent
+        TextEdit {
+            //placeholderText: i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".")
+            text: LoggingManager.environmentrules().length === 0 ? "dddd" : LoggingManager.environmentrules()
+        }
     }
 }
 

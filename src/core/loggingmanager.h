@@ -23,7 +23,7 @@ public:
 
     Q_REQUIRED_RESULT LoggingCategoryModel *qtKdeCategoryModel() const;
 
-    Q_REQUIRED_RESULT QString environmentrules() const;
+    Q_INVOKABLE Q_REQUIRED_RESULT QString environmentrules() const;
 
 private:
     void updateLoggingCategories();
