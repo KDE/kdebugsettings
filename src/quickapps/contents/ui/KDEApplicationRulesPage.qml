@@ -7,6 +7,8 @@ import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
+import org.kde.kdebugsettings 1.0
+
 Kirigami.ScrollablePage {
     id: root
     title: i18nc("@title", "KDE Application Rules")
@@ -14,13 +16,27 @@ Kirigami.ScrollablePage {
     leftPadding: 20
 
     contextualActions: [
-        aboutAction
+        aboutAction,
+        quitAction,
     ]
     ColumnLayout {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         anchors.centerIn: parent
-    }
 
+        Component {
+            id: loggingDelegate
+            Item {
+                width: 180; height: 40
+                Column {
+                    Text { text: "ddd" + description }
+                }
+            }
+        }
+        ListView {
+            delegate: loggingDelegate
+            model: LoggingManager.qtKdeCategoryModel
+        }
+    }
 }
 

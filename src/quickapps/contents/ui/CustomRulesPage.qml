@@ -7,19 +7,41 @@ import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
+import org.kde.kdebugsettings 1.0
+
 Kirigami.ScrollablePage {
     id: root
-    title: i18nc("@title", "Custom Rules")
+    title: i18nc("@title", "Custom111 Rules")
 
     leftPadding: 20
 
     contextualActions: [
-        aboutAction
+        aboutAction,
+        quitAction,
     ]
     ColumnLayout {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         anchors.centerIn: parent
+        TextEdit {
+            text: i18n("test")
+        }
+            Text {
+                text: "dddd";
+            }
+            Component {
+                id: loggingDelegate
+                Item {
+                    width: 180; height: 40
+                    Column {
+                        Text { text: "cccc" + displayRule }
+                    }
+                }
+            }
+            ListView {
+                delegate: loggingDelegate
+                model: LoggingManager.customCategoryModel
+            }
     }
 }
 
