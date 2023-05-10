@@ -24,7 +24,7 @@ Kirigami.Page {
         anchors.centerIn: parent
         TextEdit {
             //placeholderText: i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".")
-            text: LoggingManager.environmentrules().length === 0 ? "dddd" : LoggingManager.environmentrules()
+            text: LoggingManager.environmentrules().length === 0 ? i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".") : LoggingManager.environmentrules()
         }
     }
 }
