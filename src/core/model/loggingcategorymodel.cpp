@@ -28,6 +28,8 @@ int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
     return mLoggingCategories.count();
 }
 
+// TODO add setData
+
 QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
