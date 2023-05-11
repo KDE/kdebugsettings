@@ -33,11 +33,15 @@ QString LoggingManager::environmentrules() const
     return mLoggings.environmentrules();
 }
 
+bool LoggingManager::foundOverrideRule() const
+{
+    return mLoggings.foundOverrideRule();
+}
+
 void LoggingManager::updateLoggingCategories()
 {
     const LoggingCategory::List customCategories = mLoggings.customCategories();
     const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
-    const bool foundOverrideRule = mLoggings.foundOverrideRule();
     mCustomCategoryModel->setLoggingCategories(customCategories);
     mQtKdeCategoryModel->setLoggingCategories(qtKdeCategories);
 #if 0
