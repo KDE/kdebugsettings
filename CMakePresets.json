@@ -41,6 +41,18 @@
             ]
         },
         {
+            "name": "dev-quick",
+            "displayName": "Build as debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+		"BUILD_QUICK_VERSION": "ON"
+            },
+            "inherits": [
+                "base"
+            ]
+        },	
+        {
             "name": "dev-qt6",
             "displayName": "Build against qt6",
             "binaryDir": "${sourceDir}/build-qt6",
@@ -150,6 +162,10 @@
         }
     ],
     "buildPresets": [
+        {
+            "name": "dev-quick",
+            "configurePreset": "dev-quick"
+        },
         {
             "name": "dev",
             "configurePreset": "dev"
