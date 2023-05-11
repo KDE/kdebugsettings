@@ -36,5 +36,5 @@ public:
 
 private:
     LoggingCategory::List mLoggingCategories;
-    QHash<int, QByteArray> m_roleNames;
+    QHash<int, QByteArray> mRoleNames;
 };

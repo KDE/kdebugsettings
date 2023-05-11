@@ -9,13 +9,13 @@
 LoggingCategoryModel::LoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    m_roleNames.insert(Qt::DisplayRole, "display");
-    m_roleNames.insert(DescriptionRole, "description");
-    m_roleNames.insert(CategoryNameRole, "categoryName");
-    m_roleNames.insert(IdentifierNameRole, "identifierName");
-    m_roleNames.insert(DefaultCategoryRole, "defaultCategory");
-    m_roleNames.insert(DisplayRuleRole, "displayRule");
-    m_roleNames.insert(LoggingTypeRole, "loggingType");
+    mRoleNames.insert(Qt::DisplayRole, "display");
+    mRoleNames.insert(DescriptionRole, "description");
+    mRoleNames.insert(CategoryNameRole, "categoryName");
+    mRoleNames.insert(IdentifierNameRole, "identifierName");
+    mRoleNames.insert(DefaultCategoryRole, "defaultCategory");
+    mRoleNames.insert(DisplayRuleRole, "displayRule");
+    mRoleNames.insert(LoggingTypeRole, "loggingType");
 }
 
 LoggingCategoryModel::~LoggingCategoryModel() = default;
@@ -73,5 +73,5 @@ void LoggingCategoryModel::clear()
 
 QHash<int, QByteArray> LoggingCategoryModel::roleNames() const
 {
-    return m_roleNames;
+    return mRoleNames;
 }
