@@ -9,38 +9,25 @@ import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 import org.kde.kdebugsettings 1.0
 
-Kirigami.Page {
-    id: root
+Kirigami.ScrollablePage {
+    id: page2
     title: i18nc("@title", "Custom Rules")
 
     leftPadding: 20
 
     contextualActions: [
         aboutAction,
-        quitAction,
     ]
-    ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-        width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        anchors.centerIn: parent
-        anchors.fill: parent
-            // TODO remove it.
-            Text {
-                text: "List";
-            }
-            Component {
-                id: loggingDelegate
-                Item {
-                    width: 180; height: 40
-                    Column {
-                        Text { text: "cccc" + displayRule }
-                    }
-                }
-            }
-            ListView {
-                delegate: loggingDelegate
-                model: LoggingManager.customCategoryModel
-            }
+    ListView {
+        id: listviewRules
+        reuseItems: true
+        focus: true // keyboard navigation
+        activeFocusOnTab: true // keyboard navigation
+        clip: true
+        model: LoggingManager.customCategoryModel
+        delegate: Kirigami.BasicListItem {
+            label: model.displayRule
+        }
     }
 }
 

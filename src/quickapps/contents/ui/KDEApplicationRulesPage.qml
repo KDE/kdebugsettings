@@ -9,8 +9,8 @@ import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 import org.kde.kdebugsettings 1.0
 
-Kirigami.Page {
-    id: root
+Kirigami.ScrollablePage {
+    id: page
     title: i18nc("@title", "KDE Application Rules")
 
     leftPadding: 20
@@ -18,31 +18,14 @@ Kirigami.Page {
     contextualActions: [
         aboutAction,
     ]
-    ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-        width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        anchors.centerIn: parent
-        anchors.fill: parent
-
-
-        Component {
-            id: loggingDelegate
-            Item {
-                width: listviewRules.width
-                height: 50
-                Column {
-                    Text { text: description }
-                }
-            }
-        }
-        ListView {
-            height: 400
-            id: listviewRules
-            focus: true // keyboard navigation
-            activeFocusOnTab: true // keyboard navigation
-            delegate: loggingDelegate
-            //clip: true
-            model: LoggingManager.qtKdeCategoryModel
+    ListView {
+        id: listviewRules
+        focus: true // keyboard navigation
+        activeFocusOnTab: true // keyboard navigation
+        clip: true
+        model: LoggingManager.qtKdeCategoryModel
+        delegate: Kirigami.BasicListItem {
+            label: model.description
         }
     }
 }
