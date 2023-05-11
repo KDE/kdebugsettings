@@ -13,6 +13,7 @@ LoggingManager::LoggingManager(QObject *parent)
     , mQtKdeCategoryModel(new LoggingCategoryModel(this))
 {
     mLoggings.readQtLoggingFile();
+    updateLoggingCategories();
 }
 
 LoggingManager::~LoggingManager() = default;
