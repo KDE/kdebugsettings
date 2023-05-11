@@ -17,7 +17,6 @@ Kirigami.ScrollablePage {
 
     contextualActions: [
         aboutAction,
-        quitAction,
     ]
     ColumnLayout {
         spacing: Kirigami.Units.gridUnit

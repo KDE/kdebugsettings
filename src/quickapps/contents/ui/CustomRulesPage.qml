@@ -23,11 +23,9 @@ Kirigami.ScrollablePage {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         anchors.centerIn: parent
-        TextEdit {
-            text: i18n("test")
-        }
+            // TODO remove it.
             Text {
-                text: "dddd";
+                text: "List";
             }
             Component {
                 id: loggingDelegate
