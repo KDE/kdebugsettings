@@ -9,9 +9,9 @@ import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 import org.kde.kdebugsettings 1.0
 
-Kirigami.ScrollablePage {
+Kirigami.Page {
     id: root
-    title: i18nc("@title", "Custom111 Rules")
+    title: i18nc("@title", "Custom Rules")
 
     leftPadding: 20
 
@@ -23,6 +23,7 @@ Kirigami.ScrollablePage {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         anchors.centerIn: parent
+        anchors.fill: parent
             // TODO remove it.
             Text {
                 text: "List";
