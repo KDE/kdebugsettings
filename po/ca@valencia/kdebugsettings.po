@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-08 00:49+0000\n"
-"PO-Revision-Date: 2023-03-12 11:14+0100\n"
+"PO-Revision-Date: 2023-05-07 21:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -34,7 +34,7 @@ msgstr "Configura els paràmetres de la depuració"
 #: src/apps/main.cpp:36
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1, Els autors del kdebugsettings"
+msgstr "(c) 2015-%1, Els autors de kdebugsettings"
 
 #: src/apps/main.cpp:37 src/quickapps/main.cpp:55
 #, kde-format
@@ -135,10 +135,9 @@ msgid "Default Severity: %1"
 msgstr "Gravetat predeterminada: %1"
 
 #: src/quickapps/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1, Els autors del kdebugsettings"
+msgstr "(c) %1, els autors de «kdebugsettings»"
 
 #: src/widgets/categorytypecombobox.cpp:15
 #, kde-format
@@ -464,6 +463,3 @@ msgstr "Anomena i guarda fitxer..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "Anomena i guarda grup..."
-
-#~ msgid "Rules:"
-#~ msgstr "Regles:"
