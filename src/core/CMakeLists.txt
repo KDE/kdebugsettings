@@ -2,8 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 include_directories(${CMAKE_BINARY_DIR})
 
-add_library(libkdebugsettingscore SHARED
-    loggingmanager.h loggingmanager.cpp)
+add_library(libkdebugsettingscore SHARED)
 
 ecm_qt_declare_logging_category(libkdebugsettingscore HEADER kdebugsettingscore_debug.h IDENTIFIER KDEBUGSETTINGSCORE_LOG CATEGORY_NAME log_kdebugsettingscore DESCRIPTION "kdebugsettings core" EXPORT KDEBUGSETTINGS)
 target_sources(libkdebugsettingscore PRIVATE
@@ -19,6 +18,8 @@ target_sources(libkdebugsettingscore PRIVATE
 
     model/customdebugproxymodel.h
     model/customdebugproxymodel.cpp
+    model/categorytypemodel.h
+    model/categorytypemodel.cpp
 
     loggingcategory.cpp
     loggingcategory.h
@@ -33,6 +34,9 @@ target_sources(libkdebugsettingscore PRIVATE
     kdebugsettingsloadingcategories.h
 
     libkdebugsettingscore_private_export.h
+
+
+    loggingmanager.h loggingmanager.cpp
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
