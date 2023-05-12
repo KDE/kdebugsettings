@@ -25,7 +25,16 @@ Kirigami.ScrollablePage {
         clip: true
         model: LoggingManager.qtKdeCategoryModel
         delegate: Kirigami.BasicListItem {
-            label: model.description
+            RowLayout {
+                QQC2.Label {
+                    Layout.fillHeight: true
+                    Layout.leftMargin: 4
+                    text: model.description
+                }
+                QQC2.ComboBox {
+                    model:
+                }
+            }
         }
     }
 }
