@@ -11,7 +11,20 @@
 class LIBKDEBUGSETTINGSCORE_EXPORT CategoryTypeProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    Q_PROPERTY(bool showOffType READ showOffType WRITE setShowOffType NOTIFY showOffTypeChanged FINAL)
 public:
     explicit CategoryTypeProxyModel(QObject *parent = nullptr);
     ~CategoryTypeProxyModel() override;
+
+    Q_REQUIRED_RESULT bool showOffType() const;
+    void setShowOffType(bool newShowOffType);
+
+protected:
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
+
+Q_SIGNALS:
+    void showOffTypeChanged();
+
+private:
+    bool mShowOffType = false;
 };

@@ -21,4 +21,5 @@ add_kdebugsettingscore_unittest( loadcategoriesjobtest.cpp)
 add_kdebugsettingscore_unittest( renamecategorytest.cpp)
 add_kdebugsettingscore_unittest( saverulesjobtest.cpp)
 add_kdebugsettingscore_unittest( changedebugmodejobtest.cpp)
+add_kdebugsettingscore_unittest( categorytypemodeltest.cpp)
 

@@ -5,15 +5,16 @@
 */
 #pragma once
 #include "libkdebugsettingscore_export.h"
+#include "loggingcategory.h"
 #include <QAbstractListModel>
 
 class LIBKDEBUGSETTINGSCORE_EXPORT CategoryTypeModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    // TODO add more enum
     enum CategoryTypeRoles {
         CategoryTypeNameRole = Qt::UserRole + 1,
+        LoggingCategoryTypeRole,
     };
     explicit CategoryTypeModel(QObject *parent = nullptr);
     ~CategoryTypeModel() override;
@@ -24,6 +25,11 @@ public:
     Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
 
 private:
+    struct CategoryInfo {
+        QString displayText;
+        LoggingCategory::LoggingType type;
+    };
     void fillCategoryTypes();
+    QVector<CategoryInfo> mCategoryInfoList;
     QHash<int, QByteArray> mRoleNames;
 };
