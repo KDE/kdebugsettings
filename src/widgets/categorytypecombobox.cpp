@@ -6,19 +6,20 @@
 */
 
 #include "categorytypecombobox.h"
-
+#include "model/categorytypemodel.h"
+#include "model/categorytypeproxymodel.h"
 #include <KLocalizedString>
 
 CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
     : QComboBox(parent)
+    , mCategoryTypeModel(new CategoryTypeModel(this))
 {
-    addItem(i18n("Full Debug"), QVariant::fromValue(LoggingCategory::All));
-    addItem(i18n("Info"), QVariant::fromValue(LoggingCategory::Info));
-    addItem(i18n("Warning"), QVariant::fromValue(LoggingCategory::Warning));
-    addItem(i18n("Critical"), QVariant::fromValue(LoggingCategory::Critical));
-    if (!customType) {
-        addItem(i18n("Off"), QVariant::fromValue(LoggingCategory::Off));
-    }
+    auto proxy = new CategoryTypeProxyModel(this);
+    proxy->setObjectName(QStringLiteral("proxy"));
+    mCategoryTypeModel->setObjectName(QStringLiteral("mCategoryTypeModel"));
+    proxy->setSourceModel(mCategoryTypeModel);
+    proxy->setShowOffType(!customType);
+    setModel(proxy);
 }
 
 CategoryTypeComboBox::~CategoryTypeComboBox() = default;
@@ -30,7 +31,7 @@ void CategoryTypeComboBox::restoreToDefault()
 
 void CategoryTypeComboBox::setType(LoggingCategory::LoggingType type)
 {
-    const int pos = findData(QVariant::fromValue(type));
+    const int pos = findData(QVariant::fromValue(type), CategoryTypeModel::LoggingCategoryTypeRole);
     if (pos != -1) {
         setCurrentIndex(pos);
     } else {
@@ -41,7 +42,7 @@ void CategoryTypeComboBox::setType(LoggingCategory::LoggingType type)
 
 LoggingCategory::LoggingType CategoryTypeComboBox::type() const
 {
-    return currentData().value<LoggingCategory::LoggingType>();
+    return currentData(CategoryTypeModel::LoggingCategoryTypeRole).value<LoggingCategory::LoggingType>();
 }
 
 bool CategoryTypeComboBox::loggingCategoryIsNotDefault() const
