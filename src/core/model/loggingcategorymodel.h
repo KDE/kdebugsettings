@@ -32,7 +32,7 @@ public:
 
     void clear();
 
-    QHash<int, QByteArray> roleNames() const override;
+    Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
 
 private:
     LoggingCategory::List mLoggingCategories;
