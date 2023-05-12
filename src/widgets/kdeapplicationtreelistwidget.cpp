@@ -7,7 +7,6 @@
 
 #include "kdeapplicationtreelistwidget.h"
 #include "categorytypecombobox.h"
-#include "kdebugsettingsutil.h"
 #include <KLocalizedString>
 #include <QHeaderView>
 
