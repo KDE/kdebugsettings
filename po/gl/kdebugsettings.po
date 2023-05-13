@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2023-05-07 09:34+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -131,35 +131,35 @@ msgstr "Identificador: %1"
 msgid "Default Severity: %1"
 msgstr "Gravidade predeterminada: %1"
 
-#: src/quickapps/main.cpp:54
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr "© %1 Persoas autoras de kdebugsettings"
-
-#: src/widgets/categorytypecombobox.cpp:15
+#: src/core/model/categorytypemodel.cpp:47
 #, kde-format
 msgid "Full Debug"
 msgstr "Depuración completa"
 
-#: src/widgets/categorytypecombobox.cpp:16
+#: src/core/model/categorytypemodel.cpp:48
 #, kde-format
 msgid "Info"
 msgstr "Información"
 
-#: src/widgets/categorytypecombobox.cpp:17
+#: src/core/model/categorytypemodel.cpp:49
 #, kde-format
 msgid "Warning"
 msgstr "Aviso"
 
-#: src/widgets/categorytypecombobox.cpp:18
+#: src/core/model/categorytypemodel.cpp:50
 #, kde-format
 msgid "Critical"
 msgstr "Crítico"
 
-#: src/widgets/categorytypecombobox.cpp:20
+#: src/core/model/categorytypemodel.cpp:51
 #, kde-format
 msgid "Off"
 msgstr "Desactivado"
+
+#: src/quickapps/main.cpp:54
+#, kde-format
+msgid "(c) %1 kdebugsettings authors"
+msgstr "© %1 Persoas autoras de kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

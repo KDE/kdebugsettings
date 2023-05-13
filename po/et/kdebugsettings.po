@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2020-05-04 11:03+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -131,36 +131,36 @@ msgstr "Identifikaator: %1"
 msgid "Default Severity: %1"
 msgstr "Vaikimisi raskusaste: %1"
 
+#: src/core/model/categorytypemodel.cpp:47
+#, kde-format
+msgid "Full Debug"
+msgstr "Täielik silumisteave"
+
+#: src/core/model/categorytypemodel.cpp:48
+#, kde-format
+msgid "Info"
+msgstr "Teave"
+
+#: src/core/model/categorytypemodel.cpp:49
+#, kde-format
+msgid "Warning"
+msgstr "Hoiatus"
+
+#: src/core/model/categorytypemodel.cpp:50
+#, kde-format
+msgid "Critical"
+msgstr "Kriitiline"
+
+#: src/core/model/categorytypemodel.cpp:51
+#, kde-format
+msgid "Off"
+msgstr "Väljas"
+
 #: src/quickapps/main.cpp:54
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2020 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) 2015-2020: kdebugsettingsi autorid"
-
-#: src/widgets/categorytypecombobox.cpp:15
-#, kde-format
-msgid "Full Debug"
-msgstr "Täielik silumisteave"
-
-#: src/widgets/categorytypecombobox.cpp:16
-#, kde-format
-msgid "Info"
-msgstr "Teave"
-
-#: src/widgets/categorytypecombobox.cpp:17
-#, kde-format
-msgid "Warning"
-msgstr "Hoiatus"
-
-#: src/widgets/categorytypecombobox.cpp:18
-#, kde-format
-msgid "Critical"
-msgstr "Kriitiline"
-
-#: src/widgets/categorytypecombobox.cpp:20
-#, kde-format
-msgid "Off"
-msgstr "Väljas"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

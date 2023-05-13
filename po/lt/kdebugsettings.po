@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2015-07-30 08:57+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -127,34 +127,34 @@ msgstr ""
 msgid "Default Severity: %1"
 msgstr ""
 
-#: src/quickapps/main.cpp:54
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr ""
-
-#: src/widgets/categorytypecombobox.cpp:15
+#: src/core/model/categorytypemodel.cpp:47
 #, kde-format
 msgid "Full Debug"
 msgstr ""
 
-#: src/widgets/categorytypecombobox.cpp:16
+#: src/core/model/categorytypemodel.cpp:48
 #, kde-format
 msgid "Info"
 msgstr ""
 
-#: src/widgets/categorytypecombobox.cpp:17
+#: src/core/model/categorytypemodel.cpp:49
 #, kde-format
 msgid "Warning"
 msgstr ""
 
-#: src/widgets/categorytypecombobox.cpp:18
+#: src/core/model/categorytypemodel.cpp:50
 #, kde-format
 msgid "Critical"
 msgstr ""
 
-#: src/widgets/categorytypecombobox.cpp:20
+#: src/core/model/categorytypemodel.cpp:51
 #, kde-format
 msgid "Off"
+msgstr ""
+
+#: src/quickapps/main.cpp:54
+#, kde-format
+msgid "(c) %1 kdebugsettings authors"
 msgstr ""
 
 #: src/widgets/categorywarning.cpp:16

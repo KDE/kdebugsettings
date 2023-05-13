@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2023-04-14 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -132,36 +132,36 @@ msgstr "Tunniste: %1"
 msgid "Default Severity: %1"
 msgstr "Oletusvakavuus: %1"
 
+#: src/core/model/categorytypemodel.cpp:47
+#, kde-format
+msgid "Full Debug"
+msgstr "Täysi virheenpaikannus"
+
+#: src/core/model/categorytypemodel.cpp:48
+#, kde-format
+msgid "Info"
+msgstr "Tietoja"
+
+#: src/core/model/categorytypemodel.cpp:49
+#, kde-format
+msgid "Warning"
+msgstr "Varoitus"
+
+#: src/core/model/categorytypemodel.cpp:50
+#, kde-format
+msgid "Critical"
+msgstr "Kriittinen"
+
+#: src/core/model/categorytypemodel.cpp:51
+#, kde-format
+msgid "Off"
+msgstr "Ei käytössä"
+
 #: src/quickapps/main.cpp:54
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
 msgstr "© 2015–%1 kdebugsettingsin tekijät"
-
-#: src/widgets/categorytypecombobox.cpp:15
-#, kde-format
-msgid "Full Debug"
-msgstr "Täysi virheenpaikannus"
-
-#: src/widgets/categorytypecombobox.cpp:16
-#, kde-format
-msgid "Info"
-msgstr "Tietoja"
-
-#: src/widgets/categorytypecombobox.cpp:17
-#, kde-format
-msgid "Warning"
-msgstr "Varoitus"
-
-#: src/widgets/categorytypecombobox.cpp:18
-#, kde-format
-msgid "Critical"
-msgstr "Kriittinen"
-
-#: src/widgets/categorytypecombobox.cpp:20
-#, kde-format
-msgid "Off"
-msgstr "Ei käytössä"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

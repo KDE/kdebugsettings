@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2023-05-07 13:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -130,35 +130,35 @@ msgstr "Tanımlayıcı: %1"
 msgid "Default Severity: %1"
 msgstr "Öntanımlı Ciddiyet: %1"
 
-#: src/quickapps/main.cpp:54
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) %1 K Hata Ayıklama Ayarları yazarları"
-
-#: src/widgets/categorytypecombobox.cpp:15
+#: src/core/model/categorytypemodel.cpp:47
 #, kde-format
 msgid "Full Debug"
 msgstr "Tam Hata Ayıklama"
 
-#: src/widgets/categorytypecombobox.cpp:16
+#: src/core/model/categorytypemodel.cpp:48
 #, kde-format
 msgid "Info"
 msgstr "Bilgi"
 
-#: src/widgets/categorytypecombobox.cpp:17
+#: src/core/model/categorytypemodel.cpp:49
 #, kde-format
 msgid "Warning"
 msgstr "Uyarı"
 
-#: src/widgets/categorytypecombobox.cpp:18
+#: src/core/model/categorytypemodel.cpp:50
 #, kde-format
 msgid "Critical"
 msgstr "Kritik"
 
-#: src/widgets/categorytypecombobox.cpp:20
+#: src/core/model/categorytypemodel.cpp:51
 #, kde-format
 msgid "Off"
 msgstr "Kapalı"
+
+#: src/quickapps/main.cpp:54
+#, kde-format
+msgid "(c) %1 kdebugsettings authors"
+msgstr "(c) %1 K Hata Ayıklama Ayarları yazarları"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

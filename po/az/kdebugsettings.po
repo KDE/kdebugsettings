@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2023-03-12 18:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -130,36 +130,36 @@ msgstr "Tanımlayıcı: %1"
 msgid "Default Severity: %1"
 msgstr "Əsas ciddiyyət: %1"
 
+#: src/core/model/categorytypemodel.cpp:47
+#, kde-format
+msgid "Full Debug"
+msgstr "Tam xəta hesabatı"
+
+#: src/core/model/categorytypemodel.cpp:48
+#, kde-format
+msgid "Info"
+msgstr "Məlumat"
+
+#: src/core/model/categorytypemodel.cpp:49
+#, kde-format
+msgid "Warning"
+msgstr "Xəbərdarlıq"
+
+#: src/core/model/categorytypemodel.cpp:50
+#, kde-format
+msgid "Critical"
+msgstr "Kritik"
+
+#: src/core/model/categorytypemodel.cpp:51
+#, kde-format
+msgid "Off"
+msgstr "Söndürülüb"
+
 #: src/quickapps/main.cpp:54
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings müəllifləri"
-
-#: src/widgets/categorytypecombobox.cpp:15
-#, kde-format
-msgid "Full Debug"
-msgstr "Tam xəta hesabatı"
-
-#: src/widgets/categorytypecombobox.cpp:16
-#, kde-format
-msgid "Info"
-msgstr "Məlumat"
-
-#: src/widgets/categorytypecombobox.cpp:17
-#, kde-format
-msgid "Warning"
-msgstr "Xəbərdarlıq"
-
-#: src/widgets/categorytypecombobox.cpp:18
-#, kde-format
-msgid "Critical"
-msgstr "Kritik"
-
-#: src/widgets/categorytypecombobox.cpp:20
-#, kde-format
-msgid "Off"
-msgstr "Söndürülüb"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

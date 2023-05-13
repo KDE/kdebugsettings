@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2015-09-11 13:17+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -131,37 +131,37 @@ msgstr ""
 msgid "Default Severity: %1"
 msgstr ""
 
-#: src/quickapps/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "(c) 2015 kdebugsettings authors"
-msgid "(c) %1 kdebugsettings authors"
-msgstr "© A kdebugsettings szerzői, 2015."
-
-#: src/widgets/categorytypecombobox.cpp:15
+#: src/core/model/categorytypemodel.cpp:47
 #, fuzzy, kde-format
 #| msgid "Debug"
 msgid "Full Debug"
 msgstr "Hibakeresés"
 
-#: src/widgets/categorytypecombobox.cpp:16
+#: src/core/model/categorytypemodel.cpp:48
 #, kde-format
 msgid "Info"
 msgstr ""
 
-#: src/widgets/categorytypecombobox.cpp:17
+#: src/core/model/categorytypemodel.cpp:49
 #, kde-format
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: src/widgets/categorytypecombobox.cpp:18
+#: src/core/model/categorytypemodel.cpp:50
 #, kde-format
 msgid "Critical"
 msgstr "Kritikus"
 
-#: src/widgets/categorytypecombobox.cpp:20
+#: src/core/model/categorytypemodel.cpp:51
 #, kde-format
 msgid "Off"
 msgstr ""
+
+#: src/quickapps/main.cpp:54
+#, fuzzy, kde-format
+#| msgid "(c) 2015 kdebugsettings authors"
+msgid "(c) %1 kdebugsettings authors"
+msgstr "© A kdebugsettings szerzői, 2015."
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

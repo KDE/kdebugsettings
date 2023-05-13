@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2020-02-20 19:09+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -129,36 +129,36 @@ msgstr "身份提供者：%1"
 msgid "Default Severity: %1"
 msgstr "預設優先級：%1"
 
+#: src/core/model/categorytypemodel.cpp:47
+#, kde-format
+msgid "Full Debug"
+msgstr "完整除錯"
+
+#: src/core/model/categorytypemodel.cpp:48
+#, kde-format
+msgid "Info"
+msgstr "資訊"
+
+#: src/core/model/categorytypemodel.cpp:49
+#, kde-format
+msgid "Warning"
+msgstr "警告"
+
+#: src/core/model/categorytypemodel.cpp:50
+#, kde-format
+msgid "Critical"
+msgstr "嚴重錯誤"
+
+#: src/core/model/categorytypemodel.cpp:51
+#, kde-format
+msgid "Off"
+msgstr "關"
+
 #: src/quickapps/main.cpp:54
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2020 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) 2015-2020 kdebugsettings 作者群"
-
-#: src/widgets/categorytypecombobox.cpp:15
-#, kde-format
-msgid "Full Debug"
-msgstr "完整除錯"
-
-#: src/widgets/categorytypecombobox.cpp:16
-#, kde-format
-msgid "Info"
-msgstr "資訊"
-
-#: src/widgets/categorytypecombobox.cpp:17
-#, kde-format
-msgid "Warning"
-msgstr "警告"
-
-#: src/widgets/categorytypecombobox.cpp:18
-#, kde-format
-msgid "Critical"
-msgstr "嚴重錯誤"
-
-#: src/widgets/categorytypecombobox.cpp:20
-#, kde-format
-msgid "Off"
-msgstr "關"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

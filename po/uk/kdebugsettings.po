@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 00:49+0000\n"
+"POT-Creation-Date: 2023-05-13 00:50+0000\n"
 "PO-Revision-Date: 2023-05-07 09:43+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -133,35 +133,35 @@ msgstr "Ідентифікатор: %1"
 msgid "Default Severity: %1"
 msgstr "Типова критичність: %1"
 
-#: src/quickapps/main.cpp:54
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr "© Автори kdebugsettings, %1"
-
-#: src/widgets/categorytypecombobox.cpp:15
+#: src/core/model/categorytypemodel.cpp:47
 #, kde-format
 msgid "Full Debug"
 msgstr "Повна діагностика"
 
-#: src/widgets/categorytypecombobox.cpp:16
+#: src/core/model/categorytypemodel.cpp:48
 #, kde-format
 msgid "Info"
 msgstr "Відомості"
 
-#: src/widgets/categorytypecombobox.cpp:17
+#: src/core/model/categorytypemodel.cpp:49
 #, kde-format
 msgid "Warning"
 msgstr "Попередження"
 
-#: src/widgets/categorytypecombobox.cpp:18
+#: src/core/model/categorytypemodel.cpp:50
 #, kde-format
 msgid "Critical"
 msgstr "Критичні"
 
-#: src/widgets/categorytypecombobox.cpp:20
+#: src/core/model/categorytypemodel.cpp:51
 #, kde-format
 msgid "Off"
 msgstr "Вимкнено"
+
+#: src/quickapps/main.cpp:54
+#, kde-format
+msgid "(c) %1 kdebugsettings authors"
+msgstr "© Автори kdebugsettings, %1"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
