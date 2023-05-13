@@ -51,6 +51,19 @@
             "inherits": [
                 "base"
             ]
+        },
+        {
+            "name": "dev-quick-qt6",
+            "displayName": "Build as debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+		"BUILD_WITH_QT6": "ON",
+                "BUILD_QUICK_VERSION": "ON"
+            },
+            "inherits": [
+                "base-qt6"
+            ]
         },	
         {
             "name": "dev-qt6",
@@ -166,6 +179,10 @@
             "name": "dev-quick",
             "configurePreset": "dev-quick"
         },
+        {
+            "name": "dev-quick-qt6",
+            "configurePreset": "dev-quick-qt6"
+        },	
         {
             "name": "dev",
             "configurePreset": "dev"
