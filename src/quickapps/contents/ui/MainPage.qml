@@ -14,7 +14,7 @@ Kirigami.Page {
     leftPadding: 20
 
 
-    contextualActions: [
+    actions: [
         goToKdeApplicationCategories,
         goToCustomCategories,
         goToEnviromnentCategories,

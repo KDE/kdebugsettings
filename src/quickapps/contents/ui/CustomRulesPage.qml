@@ -15,9 +15,9 @@ Kirigami.ScrollablePage {
 
     leftPadding: 20
 
-    contextualActions: [
-        aboutAction,
-    ]
+//    contextualActions: [
+//        aboutAction,
+//    ]
     ListView {
         id: listviewRules
         reuseItems: true

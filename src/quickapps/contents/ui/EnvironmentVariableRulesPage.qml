@@ -15,9 +15,9 @@ Kirigami.Page {
 
     leftPadding: 20
 
-    contextualActions: [
-        aboutAction
-    ]
+//    contextualActions: [
+//        aboutAction
+//    ]
     ColumnLayout {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
