@@ -32,7 +32,7 @@ Kirigami.ScrollablePage {
                     text: model.description
                 }
                 QQC2.ComboBox {
-                    model:
+                    //model:
                 }
             }
         }
