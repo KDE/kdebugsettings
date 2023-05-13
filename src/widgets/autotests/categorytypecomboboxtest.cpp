@@ -23,6 +23,9 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 
     CategoryTypeComboBox w2(false);
     QCOMPARE(w2.count(), 5);
+
+    auto proxy = w.model();
+    QCOMPARE(proxy->objectName(), QStringLiteral("proxy"));
 }
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
