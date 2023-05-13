@@ -26,6 +26,8 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
 
     auto proxy = w.model();
     QCOMPARE(proxy->objectName(), QStringLiteral("proxy"));
+
+    QCOMPARE(w.defaultCategories(), LoggingCategory::Info);
 }
 
 void CategoryTypeComboBoxTest::shouldSetType_data()
