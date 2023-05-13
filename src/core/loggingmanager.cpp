@@ -11,6 +11,7 @@ LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
     , mCustomCategoryModel(new LoggingCategoryModel(this))
     , mQtKdeCategoryModel(new LoggingCategoryModel(this))
+    , mCategoryTypeModel(new CategoryTypeModel(this))
 {
     mLoggings.readQtLoggingFile();
     updateLoggingCategories();
@@ -26,6 +27,11 @@ LoggingCategoryModel *LoggingManager::customCategoryModel() const
 LoggingCategoryModel *LoggingManager::qtKdeCategoryModel() const
 {
     return mQtKdeCategoryModel;
+}
+
+CategoryTypeModel *LoggingManager::categoryTypeModel() const
+{
+    return mCategoryTypeModel;
 }
 
 QString LoggingManager::environmentrules() const
