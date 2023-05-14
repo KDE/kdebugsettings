@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-13 00:50+0000\n"
-"PO-Revision-Date: 2023-04-29 11:26+0200\n"
+"PO-Revision-Date: 2023-05-13 08:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -157,10 +157,9 @@ msgid "Off"
 msgstr "Wył."
 
 #: src/quickapps/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1 Autorzy kdebugsettings"
+msgstr "(c) %1 Autorzy kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
