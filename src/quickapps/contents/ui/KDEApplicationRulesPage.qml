@@ -33,6 +33,7 @@ Kirigami.ScrollablePage {
                 }
                 QQC2.ComboBox {
                     model: LoggingManager.categoryTypeModel
+                    textRole: "display"
                 }
             }
         }
