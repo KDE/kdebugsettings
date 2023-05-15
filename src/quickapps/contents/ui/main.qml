@@ -25,19 +25,19 @@ Kirigami.ApplicationWindow {
     }
     Kirigami.Action {
         id: goToKdeApplicationCategories
-        // iconName: "go-home"
+        // icon.name: "go-home"
         text: i18nc("@action", "Show KDE Application Categories")
         onTriggered: { pageStack.layers.push("qrc:/KDEApplicationRulesPage.qml") }
     }
     Kirigami.Action {
         id: goToCustomCategories
-        // iconName: "go-home"
+        // icon.name: "go-home"
         text: i18nc("@action", "Show Custom Categories")
         onTriggered: { pageStack.layers.push("qrc:/CustomRulesPage.qml") }
     }
     Kirigami.Action {
         id: goToEnviromnentCategories
-        // iconName: "go-home"
+        // icon.name: "go-home"
         text: i18nc("@action", "Show Environment Categories")
         onTriggered: { pageStack.layers.push("qrc:/EnvironmentVariableRulesPage.qml") }
     }
