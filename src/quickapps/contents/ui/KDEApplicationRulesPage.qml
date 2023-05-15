@@ -15,9 +15,6 @@ Kirigami.ScrollablePage {
 
     leftPadding: 20
 
-//    contextualActions: [
-//        aboutAction,
-//    ]
     ListView {
         id: listviewRules
         focus: true // keyboard navigation
