@@ -9,8 +9,8 @@ Platform.MenuItem {
 
     checkable: action.checkable
     checked: action.checked
-    icon.name: action.iconName
-    icon.source: action.iconSource
+    icon.name: action.icon.name
+    icon.source: action.icon.source
     shortcut: action.shortcut
     separator: action.separator
     text: action.text

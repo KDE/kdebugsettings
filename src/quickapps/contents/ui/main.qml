@@ -43,7 +43,7 @@ Kirigami.ApplicationWindow {
     }
     Kirigami.Action {
         id: aboutAction
-        displayHint: Kirigami.Action.AlwaysHide
+        displayHint: Kirigami.DisplayHint.AlwaysHide
         icon.name: "debug-run"
         text: i18nc("@action opens about app page", "About")
         onTriggered: { pageStack.layers.push("qrc:/AboutPage.qml") }
@@ -51,7 +51,7 @@ Kirigami.ApplicationWindow {
 
     Kirigami.Action {
         id: helpAction
-        displayHint: Kirigami.Action.AlwaysHide
+        displayHint: Kirigami.DisplayHint.AlwaysHide
         icon.name: "help-browser"
         text: i18nc("@action", "Open Handbook")
         onTriggered: { Qt.openUrlExternally("help:/kdebugsettings") }
@@ -59,12 +59,12 @@ Kirigami.ApplicationWindow {
     // TODO fixme
     Kirigami.Action {
         id: separatorAction
-        displayHint: Kirigami.Action.AlwaysHide
+        displayHint: Kirigami.DisplayHint.AlwaysHide
         separator: true
     }
     Kirigami.Action {
         id: quitAction
-        displayHint: Kirigami.Action.AlwaysHide
+        displayHint: Kirigami.DisplayHint.AlwaysHide
         text: i18nc("@menu-action", "Quit")
         icon.name: "gtk-quit"
         shortcut: StandardKey.Quit
