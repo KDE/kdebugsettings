@@ -29,10 +29,13 @@ Kirigami.ScrollablePage {
                     text: model.description
                 }
                 QQC2.ComboBox {
-                    model: LoggingManager.categoryTypeModel
+                    model: CategoryTypeProxyModel {
+                        sourceModel: LoggingManager.categoryTypeModel
+                        showOffType: true
+                    }
                     textRole: "display"
                     valueRole: "categoryType"
-                    currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(valueRole)
+                    currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(listviewRules.model.categoryType)
                 }
             }
         }

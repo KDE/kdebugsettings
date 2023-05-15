@@ -9,6 +9,7 @@
 
 #include "jobs/changedebugmodejob.h"
 #include "loggingmanager.h"
+#include "model/categorytypeproxymodel.h"
 #include "model/loggingcategorymodel.h"
 #include <config-kdebugsettings.h>
 
@@ -118,6 +119,7 @@ int main(int argc, char **argv)
         qRegisterMetaType<LoggingCategoryModel *>("LoggingCategoryModel *");
         auto about = new About;
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "About", about);
+        qmlRegisterType<CategoryTypeProxyModel>("org.kde.kdebugsettings", 1, 0, "CategoryTypeProxyModel");
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
