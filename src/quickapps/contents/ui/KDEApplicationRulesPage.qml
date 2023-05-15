@@ -32,6 +32,7 @@ Kirigami.ScrollablePage {
                     model: LoggingManager.categoryTypeModel
                     textRole: "display"
                     valueRole: "categoryType"
+                    currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(valueRole)
                 }
             }
         }

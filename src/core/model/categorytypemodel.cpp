@@ -17,6 +17,16 @@ CategoryTypeModel::CategoryTypeModel(QObject *parent)
 
 CategoryTypeModel::~CategoryTypeModel() = default;
 
+int CategoryTypeModel::indexOfCategory(LoggingCategory::LoggingType type) const
+{
+    for (int i = 0; i < mCategoryInfoList.count(); ++i) {
+        if (mCategoryInfoList.at(i).type == type) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int CategoryTypeModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
@@ -36,7 +46,7 @@ QVariant CategoryTypeModel::data(const QModelIndex &index, int role) const
     case CategoryTypeNameRole:
         return statusInfo.displayText;
     case LoggingCategoryTypeRole:
-        return QVariant::fromValue(statusInfo.type);
+        return statusInfo.type;
     }
     return {};
 }

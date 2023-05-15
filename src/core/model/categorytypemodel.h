@@ -24,6 +24,8 @@ public:
 
     Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
 
+    Q_INVOKABLE Q_REQUIRED_RESULT int indexOfCategory(LoggingCategory::LoggingType type) const;
+
 private:
     struct CategoryInfo {
         QString displayText;
