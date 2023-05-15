@@ -14,13 +14,23 @@ Kirigami.ScrollablePage {
     title: i18nc("@title", "KDE Application Rules")
 
     leftPadding: 20
+    actions: [
+        Kirigami.Action {
+            displayComponent: Kirigami.SearchField {
+                onAccepted: loggingDebugProxyModel.filterText = text
+            }
+        }
+    ]
 
     ListView {
         id: listviewRules
         focus: true // keyboard navigation
         activeFocusOnTab: true // keyboard navigation
         clip: true
-        model: LoggingManager.qtKdeCategoryModel
+        model: CustomDebugProxyModel {
+            id: loggingDebugProxyModel
+            sourceModel: LoggingManager.qtKdeCategoryModel
+        }
         delegate: Kirigami.BasicListItem {
             RowLayout {
                 QQC2.Label {

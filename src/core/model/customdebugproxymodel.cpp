@@ -12,3 +12,17 @@ CustomDebugProxyModel::CustomDebugProxyModel(QObject *parent)
 }
 
 CustomDebugProxyModel::~CustomDebugProxyModel() = default;
+
+QString CustomDebugProxyModel::filterText() const
+{
+    return mFilterText;
+}
+
+void CustomDebugProxyModel::setFilterText(const QString &newFilterText)
+{
+    if (mFilterText != newFilterText) {
+        mFilterText = newFilterText;
+        setFilterFixedString(mFilterText);
+        Q_EMIT filterTextChanged();
+    }
+}

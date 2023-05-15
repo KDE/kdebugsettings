@@ -10,7 +10,17 @@
 class LIBKDEBUGSETTINGSCORE_EXPORT CustomDebugProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    Q_PROPERTY(QString filterText READ filterText WRITE setFilterText NOTIFY filterTextChanged FINAL)
 public:
     explicit CustomDebugProxyModel(QObject *parent = nullptr);
     ~CustomDebugProxyModel() override;
+
+    Q_REQUIRED_RESULT QString filterText() const;
+    void setFilterText(const QString &newFilterText);
+
+Q_SIGNALS:
+    void filterTextChanged();
+
+private:
+    QString mFilterText;
 };
