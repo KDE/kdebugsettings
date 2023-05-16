@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-13 00:50+0000\n"
+"POT-Creation-Date: 2023-05-16 00:50+0000\n"
 "PO-Revision-Date: 2023-05-07 09:34+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.0\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:52
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:54
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Configurar as opcións de depuración"
@@ -33,17 +33,17 @@ msgstr "Configurar as opcións de depuración"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015-%1 Persoas autoras de kdebugsettings"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantedor."
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:61
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:63
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -51,22 +51,22 @@ msgstr ""
 "Activar o modo de probas de QStandardPaths, é dicir, a configuración de "
 "lectura e escritura que usan as probas unitarias"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:66
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Activar a depuración completa para todos os módulos."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:66
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:68
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Desactivar a depuración completa para todos os módulos."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:70
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:72
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Cambiar o modo de depuración a consola (na consola)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:74
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:76
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -75,8 +75,8 @@ msgstr ""
 "depuración (na consola)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
-#: src/quickapps/main.cpp:108
+#: src/quickapps/main.cpp:90 src/quickapps/main.cpp:100
+#: src/quickapps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Non se pode cambiar o modo de depuración"
@@ -131,32 +131,32 @@ msgstr "Identificador: %1"
 msgid "Default Severity: %1"
 msgstr "Gravidade predeterminada: %1"
 
-#: src/core/model/categorytypemodel.cpp:47
+#: src/core/model/categorytypemodel.cpp:57
 #, kde-format
 msgid "Full Debug"
 msgstr "Depuración completa"
 
-#: src/core/model/categorytypemodel.cpp:48
+#: src/core/model/categorytypemodel.cpp:58
 #, kde-format
 msgid "Info"
 msgstr "Información"
 
-#: src/core/model/categorytypemodel.cpp:49
+#: src/core/model/categorytypemodel.cpp:59
 #, kde-format
 msgid "Warning"
 msgstr "Aviso"
 
-#: src/core/model/categorytypemodel.cpp:50
+#: src/core/model/categorytypemodel.cpp:60
 #, kde-format
 msgid "Critical"
 msgstr "Crítico"
 
-#: src/core/model/categorytypemodel.cpp:51
+#: src/core/model/categorytypemodel.cpp:61
 #, kde-format
 msgid "Off"
 msgstr "Desactivado"
 
-#: src/quickapps/main.cpp:54
+#: src/quickapps/main.cpp:56
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "© %1 Persoas autoras de kdebugsettings"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-13 00:50+0000\n"
+"POT-Creation-Date: 2023-05-16 00:50+0000\n"
 "PO-Revision-Date: 2015-09-11 13:17+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:52
 #, fuzzy, kde-format
 #| msgid "kdebugssettings"
 msgid "KDebugSettings"
 msgstr "kdebugssettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:54
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hibakeresési beállítások módosítása"
@@ -34,46 +34,46 @@ msgstr "Hibakeresési beállítások módosítása"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© A kdebugsettings szerzői, 2015."
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:61
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:63
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:66
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr ""
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:66
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:68
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr ""
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:70
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:72
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr ""
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:74
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:76
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
-#: src/quickapps/main.cpp:108
+#: src/quickapps/main.cpp:90 src/quickapps/main.cpp:100
+#: src/quickapps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr ""
@@ -131,33 +131,33 @@ msgstr ""
 msgid "Default Severity: %1"
 msgstr ""
 
-#: src/core/model/categorytypemodel.cpp:47
+#: src/core/model/categorytypemodel.cpp:57
 #, fuzzy, kde-format
 #| msgid "Debug"
 msgid "Full Debug"
 msgstr "Hibakeresés"
 
-#: src/core/model/categorytypemodel.cpp:48
+#: src/core/model/categorytypemodel.cpp:58
 #, kde-format
 msgid "Info"
 msgstr ""
 
-#: src/core/model/categorytypemodel.cpp:49
+#: src/core/model/categorytypemodel.cpp:59
 #, kde-format
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: src/core/model/categorytypemodel.cpp:50
+#: src/core/model/categorytypemodel.cpp:60
 #, kde-format
 msgid "Critical"
 msgstr "Kritikus"
 
-#: src/core/model/categorytypemodel.cpp:51
+#: src/core/model/categorytypemodel.cpp:61
 #, kde-format
 msgid "Off"
 msgstr ""
 
-#: src/quickapps/main.cpp:54
+#: src/quickapps/main.cpp:56
 #, fuzzy, kde-format
 #| msgid "(c) 2015 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
