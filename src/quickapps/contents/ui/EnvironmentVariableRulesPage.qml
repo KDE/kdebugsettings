@@ -6,7 +6,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
-import QtQuick.Controls 1.4
 import org.kde.kdebugsettings 1.0
 
 Kirigami.Page {
