@@ -25,6 +25,35 @@ Kirigami.ScrollablePage {
         delegate: Kirigami.BasicListItem {
             label: model.displayRule
         }
+        QQC2.Menu {
+            id: contextMenu
+            QQC2.MenuItem {
+                action: Kirigami.Action {
+                    icon.name: "list-add"
+                    text: i18nc("@action add custom rule", "Add Rule...")
+                }
+                onTriggered: {}
+            }
+            QQC2.MenuItem {
+                action: Kirigami.Action {
+                    icon.name: "document-edit" // TODO fixit
+                    text: i18nc("@action edit custom rule", "Edit Rule...")
+                }
+                onTriggered: {}
+            }
+            QQC2.MenuSeparator { }
+            QQC2.MenuItem {
+                action: Kirigami.Action {
+                    icon.name: "edit-delete"
+                    text: i18nc("@action remove custom rule", "Remove Rule")
+                }
+                onTriggered: {}
+            }
+        }
+        TapHandler {
+            acceptedButtons: Qt.RightButton
+            onTapped: contextMenu.popup()
+        }
     }
 }
 
