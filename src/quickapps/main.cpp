@@ -26,19 +26,6 @@
 
 #include <iostream>
 
-class About : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(KAboutData data READ data CONSTANT)
-    Q_REQUIRED_RESULT static KAboutData data()
-    {
-        return KAboutData::applicationData();
-    }
-
-public:
-    using QObject::QObject;
-};
-
 int main(int argc, char **argv)
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -113,15 +100,18 @@ int main(int argc, char **argv)
     } else {
         KDBusService service(KDBusService::Unique);
         QQmlApplicationEngine engine;
-        engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
         LoggingManager loggingManager;
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &loggingManager);
         qRegisterMetaType<LoggingCategoryModel *>("LoggingCategoryModel *");
-        auto about = new About;
-        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "About", about);
         qmlRegisterType<CategoryTypeProxyModel>("org.kde.kdebugsettings", 1, 0, "CategoryTypeProxyModel");
         qmlRegisterType<CustomDebugProxyModel>("org.kde.kdebugsettings", 1, 0, "CustomDebugProxyModel");
+
+        qmlRegisterSingletonType("org.kde.kdebugsettings", 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
+            return engine->toScriptValue(KAboutData::applicationData());
+        });
+
+        engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
