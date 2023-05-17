@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 00:50+0000\n"
+"POT-Creation-Date: 2023-05-17 00:49+0000\n"
 "PO-Revision-Date: 2023-05-08 05:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:39
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Configure debug settings"
 msgstr "გამართვის მორგება"
@@ -33,17 +33,17 @@ msgstr "გამართვის მორგება"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings -ის ავტორები"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
 #, kde-format
 msgid "Maintainer"
 msgstr "წამყვანი პროგრამისტი"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:63
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:50
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -51,22 +51,22 @@ msgstr ""
 "QStandardPaths -ის ტესტირების ჩართვა. ანუ unittests-ის მიერ გამოყენებული "
 "პარამეტრების ჩაწერა/წაკითხვა"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:66
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:53
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "ყველა მოდულის გამართვის ჩართვა."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:68
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "ყველა მოდულის გამართვის გამორთვა."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:72
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:59
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "გამართვის რეჟიმის კონსოლზე გადართვა (კონსოლში)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:63
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -75,8 +75,8 @@ msgstr ""
 "(კონსოლში)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:90 src/quickapps/main.cpp:100
-#: src/quickapps/main.cpp:110
+#: src/quickapps/main.cpp:77 src/quickapps/main.cpp:87
+#: src/quickapps/main.cpp:97
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "გამართვის რეჟიმის შეცვლა შეუძლებელია"
@@ -156,7 +156,7 @@ msgstr "კრიტიკული"
 msgid "Off"
 msgstr "გამორთული"
 
-#: src/quickapps/main.cpp:56
+#: src/quickapps/main.cpp:43
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings -ის ავტორები"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 00:50+0000\n"
+"POT-Creation-Date: 2023-05-17 00:49+0000\n"
 "PO-Revision-Date: 2023-05-07 13:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.03.70\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:39
 #, kde-format
 msgid "KDebugSettings"
 msgstr "K Hata Ayıklama Ayarları"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hata ayıklama ayarlarını yapılandır"
@@ -32,17 +32,17 @@ msgstr "Hata ayıklama ayarlarını yapılandır"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 K Hata Ayıklama Ayarları yazarları"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
 #, kde-format
 msgid "Maintainer"
 msgstr "Proje Yürütücüsü"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:63
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:50
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -50,22 +50,22 @@ msgstr ""
 "QStandardPaths sınama kipini etkinleştir; örneğin birim sınamaları "
 "tarafından kullanılan okuma/yazma ayarları"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:66
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:53
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Tüm modüller için tam hata ayıklamayı etkinleştir."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:68
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Tüm modüller için tam hata ayıklamayı devre dışı bırak."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:72
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:59
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Hata ayıklama kipini konsol olarak değiştir (konsolda)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:63
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -74,8 +74,8 @@ msgstr ""
 "belirtin (konsolda)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:90 src/quickapps/main.cpp:100
-#: src/quickapps/main.cpp:110
+#: src/quickapps/main.cpp:77 src/quickapps/main.cpp:87
+#: src/quickapps/main.cpp:97
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Hata ayıklama kipi değiştirilemiyor"
@@ -155,7 +155,7 @@ msgstr "Kritik"
 msgid "Off"
 msgstr "Kapalı"
 
-#: src/quickapps/main.cpp:56
+#: src/quickapps/main.cpp:43
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 K Hata Ayıklama Ayarları yazarları"
