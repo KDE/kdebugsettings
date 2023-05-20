@@ -73,6 +73,11 @@ void LoggingCategoryModel::clear()
     }
 }
 
+void LoggingCategoryModel::removeCategory(const QString &identifier)
+{
+    // TODO
+}
+
 void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {

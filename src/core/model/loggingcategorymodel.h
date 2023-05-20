@@ -36,6 +36,8 @@ public:
 
     void insertCategories(const LoggingCategory::List &categories);
 
+    void removeCategory(const QString &identifier);
+
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;
