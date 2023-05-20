@@ -73,6 +73,15 @@ void LoggingCategoryModel::clear()
     }
 }
 
+void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
+{
+    if (!categories.isEmpty()) {
+        beginInsertRows(QModelIndex(), 0, categories.count() - 1);
+        mLoggingCategories.append(categories);
+        endInsertRows();
+    }
+}
+
 QHash<int, QByteArray> LoggingCategoryModel::roleNames() const
 {
     return mRoleNames;
