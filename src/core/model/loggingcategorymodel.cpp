@@ -75,13 +75,20 @@ void LoggingCategoryModel::clear()
 
 void LoggingCategoryModel::removeCategory(const QString &identifier)
 {
-    // TODO
+    for (int i = 0; i < mLoggingCategories.count(); ++i) {
+        if (mLoggingCategories.at(i).identifierName == identifier) {
+            beginRemoveRows(QModelIndex(), i, i);
+            mLoggingCategories.removeAt(i);
+            endRemoveRows();
+            break;
+        }
+    }
 }
 
 void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {
-        beginInsertRows(QModelIndex(), 0, categories.count() - 1);
+        beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count() + categories.count() - 1);
         mLoggingCategories.append(categories);
         endInsertRows();
     }
