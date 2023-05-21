@@ -66,7 +66,9 @@ if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
-option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
+endif()
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if (USE_UNITY_CMAKE_SUPPORT)
