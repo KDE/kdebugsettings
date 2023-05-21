@@ -35,7 +35,8 @@ public:
     Q_REQUIRED_RESULT bool foundOverrideRule() const;
 
 private:
-    void updateLoggingCategories();
+    LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
+    LIBKDEBUGSETTINGSCORE_NO_EXPORT void updateLoggingCategories();
     LoggingCategoryModel *const mCustomCategoryModel;
     LoggingCategoryModel *const mQtKdeCategoryModel;
     CategoryTypeModel *const mCategoryTypeModel;
