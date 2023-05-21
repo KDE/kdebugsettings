@@ -5,6 +5,7 @@
 */
 
 #include "loggingcategorymodel.h"
+#include "kdebugsettingscore_debug.h"
 
 LoggingCategoryModel::LoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
@@ -28,7 +29,15 @@ int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
     return mLoggingCategories.count();
 }
 
-// TODO add setData
+bool LoggingCategoryModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!index.isValid()) {
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: invalid index";
+        return false;
+    }
+    // TODO
+    return false;
+}
 
 QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
 {
