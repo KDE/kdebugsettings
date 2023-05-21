@@ -10,7 +10,6 @@
 #include "libkdebugsettings_export.h"
 #include "loggingcategory.h"
 #include <QComboBox>
-class CategoryTypeModel;
 class LIBKDEBUGSETTINGS_EXPORT CategoryTypeComboBox : public QComboBox
 {
     Q_OBJECT
@@ -28,5 +27,4 @@ public:
 
 private:
     LoggingCategory::LoggingType mDefaultCategories = LoggingCategory::Info;
-    CategoryTypeModel *const mCategoryTypeModel;
 };
