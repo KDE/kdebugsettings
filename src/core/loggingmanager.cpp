@@ -17,6 +17,12 @@ LoggingManager::LoggingManager(QObject *parent)
     updateLoggingCategories();
 }
 
+LoggingManager &LoggingManager::self()
+{
+    static LoggingManager c;
+    return c;
+}
+
 LoggingManager::~LoggingManager() = default;
 
 LoggingCategoryModel *LoggingManager::customCategoryModel() const

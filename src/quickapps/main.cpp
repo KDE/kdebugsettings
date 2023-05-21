@@ -101,8 +101,7 @@ int main(int argc, char **argv)
         KDBusService service(KDBusService::Unique);
         QQmlApplicationEngine engine;
 
-        LoggingManager loggingManager;
-        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &loggingManager);
+        qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &LoggingManager::self());
         qRegisterMetaType<LoggingCategoryModel *>("LoggingCategoryModel *");
         qmlRegisterType<CategoryTypeProxyModel>("org.kde.kdebugsettings", 1, 0, "CategoryTypeProxyModel");
         qmlRegisterType<CustomDebugProxyModel>("org.kde.kdebugsettings", 1, 0, "CustomDebugProxyModel");

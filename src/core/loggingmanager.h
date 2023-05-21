@@ -20,7 +20,8 @@ class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
     Q_PROPERTY(bool foundOverrideRule READ foundOverrideRule CONSTANT)
 
 public:
-    explicit LoggingManager(QObject *parent = nullptr);
+    static LoggingManager &self();
+
     ~LoggingManager() override;
 
     Q_REQUIRED_RESULT LoggingCategoryModel *customCategoryModel() const;
