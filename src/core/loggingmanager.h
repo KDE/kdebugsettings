@@ -34,6 +34,11 @@ public:
 
     Q_REQUIRED_RESULT bool foundOverrideRule() const;
 
+    // Remove it when we will port kdebugsettings to models.
+    Q_REQUIRED_RESULT KDebugSettingsLoadingCategories loggings() const;
+
+    void readCategoriesFiles(const QString &path);
+
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
     LIBKDEBUGSETTINGSCORE_NO_EXPORT void updateLoggingCategories();

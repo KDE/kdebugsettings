@@ -63,3 +63,13 @@ void LoggingManager::updateLoggingCategories()
     mCategoriesList = mLoggings.categoriesList();
 #endif
 }
+
+KDebugSettingsLoadingCategories LoggingManager::loggings() const
+{
+    return mLoggings;
+}
+
+void LoggingManager::readCategoriesFiles(const QString &path)
+{
+    mLoggings.readCategoriesFiles(path);
+}

@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include "kdebugsettingsloadingcategories.h"
 #include "kdeloggingcategory.h"
 #include "libkdebugsettings_export.h"
 #include <QDialog>
@@ -46,7 +45,6 @@ private:
     LIBKDEBUGSETTINGS_NO_EXPORT void slotSaveAsGroup();
     LIBKDEBUGSETTINGS_NO_EXPORT void slotManageGroup();
     KdeLoggingCategory::List mCategoriesList;
-    KDebugSettingsLoadingCategories mLoggings;
     QTabWidget *const mTabWidget;
     KDEApplicationDebugSettingPage *const mKdeApplicationSettingsPage;
     CustomDebugSettingsPage *const mCustomSettingsPage;

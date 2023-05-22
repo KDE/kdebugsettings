@@ -14,8 +14,8 @@
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
-#include "loadgroupmenu.h"
 #include "loadtoolbutton.h"
+#include "loggingmanager.h"
 #include "savetoolbutton.h"
 
 #include <KConfigGroup>
@@ -127,32 +127,32 @@ void KDebugSettingsDialog::saveConfig()
 void KDebugSettingsDialog::slotLoadGroup(const QString &fullPath)
 {
     if (!fullPath.isEmpty()) {
-        mLoggings.readCategoriesFiles(fullPath);
+        LoggingManager::self().readCategoriesFiles(fullPath);
         updateLoggingCategories();
     }
 }
 
 void KDebugSettingsDialog::readQtLoggingFile()
 {
-    mLoggings.readQtLoggingFile();
+    LoggingManager::self().loggings().readQtLoggingFile();
     updateLoggingCategories();
 }
 
 void KDebugSettingsDialog::updateLoggingCategories()
 {
-    if (!mLoggings.environmentrules().isEmpty()) {
-        mEnvironmentSettingsRulesPage->setRules(mLoggings.environmentrules());
+    if (!LoggingManager::self().environmentrules().isEmpty()) {
+        mEnvironmentSettingsRulesPage->setRules(LoggingManager::self().environmentrules());
     }
-    const LoggingCategory::List customCategories = mLoggings.customCategories();
-    const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
-    const bool foundOverrideRule = mLoggings.foundOverrideRule();
+    const LoggingCategory::List customCategories = LoggingManager::self().loggings().customCategories();
+    const LoggingCategory::List qtKdeCategories = LoggingManager::self().loggings().qtKdeCategories();
+    const bool foundOverrideRule = LoggingManager::self().foundOverrideRule();
 
     mKdeApplicationSettingsPage->fillList(qtKdeCategories);
     mCustomSettingsPage->fillList(customCategories);
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
     }
-    mCategoriesList = mLoggings.categoriesList();
+    mCategoriesList = LoggingManager::self().loggings().categoriesList();
 }
 
 bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRules)
@@ -241,7 +241,7 @@ void KDebugSettingsDialog::slotLoad()
 {
     const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
     if (!path.isEmpty()) {
-        mLoggings.readCategoriesFiles(path);
+        LoggingManager::self().readCategoriesFiles(path);
         updateLoggingCategories();
     }
 }
