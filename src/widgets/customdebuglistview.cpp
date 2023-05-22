@@ -6,6 +6,7 @@
 */
 
 #include "customdebuglistview.h"
+#include "model/customdebugproxymodel.h"
 #include "model/loggingcategorymodel.h"
 
 #include <KLocalizedString>
@@ -17,10 +18,11 @@
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
     , mLoggingCategoryModel(new LoggingCategoryModel(this))
+    , mCystomDebugProxyModel(new CustomDebugProxyModel(this))
 {
     mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
-    // TODO add proxymodel
-    setModel(mLoggingCategoryModel);
+    mCystomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
+    setModel(mCystomDebugProxyModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);
 }
 

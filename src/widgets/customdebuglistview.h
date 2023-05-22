@@ -10,6 +10,7 @@
 #include "loggingcategory.h"
 #include <QListView>
 class LoggingCategoryModel;
+class CustomDebugProxyModel;
 class LIBKDEBUGSETTINGS_EXPORT CustomDebugListView : public QListView
 {
     Q_OBJECT
@@ -26,4 +27,5 @@ private:
     void slotEditRule();
     void slotRemoveRules();
     LoggingCategoryModel *const mLoggingCategoryModel;
+    CustomDebugProxyModel *const mCystomDebugProxyModel;
 };
