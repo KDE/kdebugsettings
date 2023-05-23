@@ -94,6 +94,21 @@ void LoggingCategoryModel::removeCategory(const QString &identifier)
     }
 }
 
+void LoggingCategoryModel::editCategory(const LoggingCategory &category)
+{
+    // TODO
+#if 0
+    for (int i = 0; i < mLoggingCategories.count(); ++i) {
+        if (mLoggingCategories.at(i).identifierName == category.identifierName) {
+            beginRemoveRows(QModelIndex(), i, i);
+            mLoggingCategories.removeAt(i);
+            endRemoveRows();
+            break;
+        }
+    }
+#endif
+}
+
 bool LoggingCategoryModel::addCategory(const LoggingCategory &category)
 {
     bool found = false;
