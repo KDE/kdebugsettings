@@ -28,6 +28,7 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
     mCystomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
     setModel(mCystomDebugProxyModel);
     setContextMenuPolicy(Qt::CustomContextMenu);
+    setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
 }
 
