@@ -87,7 +87,8 @@ void CustomDebugListView::slotEditRule(const QModelIndex &index)
         const QString ruleStr = dlg->rule();
         if (!ruleStr.isEmpty()) {
             const LoggingCategory cat = KDebugSettingsUtil::convertRuleStrToLoggingCategory(ruleStr);
-            // TODO mLoggingCategoryModel->insertCategories({tmp});
+
+            mLoggingCategoryModel->setData(index, QVariant::fromValue(cat), LoggingCategoryModel::CategoryRole);
         }
     }
     delete dlg;
