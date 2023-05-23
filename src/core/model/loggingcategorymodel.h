@@ -20,6 +20,7 @@ public:
         DefaultCategoryRole,
         DisplayRuleRole,
         LoggingTypeRole,
+        CategoryRole,
     };
 
     explicit LoggingCategoryModel(QObject *parent = nullptr);

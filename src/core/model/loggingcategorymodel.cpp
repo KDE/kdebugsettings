@@ -29,13 +29,24 @@ int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
     return mLoggingCategories.count();
 }
 
-bool LoggingCategoryModel::setData(const QModelIndex &index, const QVariant &value, int role)
+bool LoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
 {
-    if (!index.isValid()) {
+    if (!modelIndex.isValid()) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: invalid index";
         return false;
     }
-    // TODO
+    const int idx = modelIndex.row();
+    LoggingCategory &cat = mLoggingCategories[idx];
+    switch (role) {
+    case CategoryRole: {
+        cat = value.value<LoggingCategory>();
+        const QModelIndex newIndex = index(modelIndex.row(), CategoryRole);
+        Q_EMIT dataChanged(newIndex, newIndex);
+        return true;
+    }
+    default:
+        break;
+    }
     return false;
 }
 
@@ -62,6 +73,8 @@ QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
         return category.generateDisplayRule();
     case LoggingTypeRole:
         return category.loggingType;
+    case CategoryRole:
+        return QVariant::fromValue(category);
     }
     return {};
 }
