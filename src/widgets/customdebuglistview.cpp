@@ -6,6 +6,7 @@
 */
 
 #include "customdebuglistview.h"
+#include "configurecustomsettingdialog.h"
 #include "model/customdebugproxymodel.h"
 #include "model/loggingcategorymodel.h"
 
@@ -14,6 +15,7 @@
 #include <QAction>
 #include <QContextMenuEvent>
 #include <QMenu>
+#include <QPointer>
 
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
@@ -23,7 +25,8 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
     mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
     mCystomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
     setModel(mCystomDebugProxyModel);
-    setContextMenuPolicy(Qt::DefaultContextMenu);
+    setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
 }
 
 CustomDebugListView::~CustomDebugListView() = default;
@@ -33,25 +36,29 @@ void CustomDebugListView::setLoggingCategories(const LoggingCategory::List &list
     mLoggingCategoryModel->setLoggingCategories(list);
 }
 
-void CustomDebugListView::contextMenuEvent(QContextMenuEvent *event)
+void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
 {
+    const QModelIndex index = indexAt(pos);
     QMenu menu(this);
     const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
     const auto selectedItemCount{selectedIndexes.count()};
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &CustomDebugListView::slotAddRule);
-    if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule"), this, &CustomDebugListView::slotEditRule);
+    if (index.isValid()) {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule"), this, [this, index]() {
+            slotEditRule(index);
+        });
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove Rule"), this, &CustomDebugListView::slotRemoveRules);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove Rule"), this, [this, selectedIndexes]() {
+            slotRemoveRules(selectedIndexes);
+        });
     }
-    menu.exec(viewport()->mapToGlobal(event->pos()));
+    menu.exec(viewport()->mapToGlobal(pos));
 }
 
-void CustomDebugListView::slotRemoveRules()
+void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes)
 {
-    const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
 #if 0
     const QList<QListWidgetItem *> lst = mListWidget->selectedItems();
     if (lst.isEmpty()) {
@@ -70,7 +77,7 @@ void CustomDebugListView::slotRemoveRules()
 #endif
 }
 
-void CustomDebugListView::slotEditRule()
+void CustomDebugListView::slotEditRule(const QModelIndex &index)
 {
     const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
     const auto selectedItemCount{selectedIndexes.count()};
@@ -94,9 +101,9 @@ void CustomDebugListView::slotEditRule()
 
 void CustomDebugListView::slotAddRule()
 {
-#if 0
     QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
     if (dlg->exec()) {
+#if 0
         const QString ruleStr = dlg->rule();
         if (!ruleStr.isEmpty()) {
             bool alreadyAdded = false;
@@ -111,7 +118,7 @@ void CustomDebugListView::slotAddRule()
                 mListWidget->addItem(ruleStr);
             }
         }
+#endif
     }
     delete dlg;
-#endif
 }
