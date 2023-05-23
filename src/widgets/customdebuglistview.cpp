@@ -110,7 +110,6 @@ void CustomDebugListView::slotEditRule(const QModelIndex &index)
                     tmp.loggingType = LoggingCategory::All;
                     break;
                 }
-                qDebug() << "DSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDdd" << tmp;
                 mLoggingCategoryModel->insertCategories({tmp});
             }
         }
@@ -124,26 +123,10 @@ void CustomDebugListView::slotAddRule()
     if (dlg->exec()) {
         const QString ruleStr = dlg->rule();
         const LoggingCategory cat = KDebugSettingsUtil::convertRuleStrToLoggingCategory(ruleStr);
-        if (cat.isValid()) {
-            // TODO verify if existing or not
-            mLoggingCategoryModel->insertCategories({cat});
+        if (mLoggingCategoryModel->addCategory(cat)) {
+            qDebug() << " categorie already exist";
         }
     }
 
-#if 0
-        if (!ruleStr.isEmpty()) {
-            bool alreadyAdded = false;
-            const int number(mListWidget->count());
-            for (int i = 0; i < number; ++i) {
-                if (ruleStr == mListWidget->item(i)->text()) {
-                    alreadyAdded = true;
-                    break;
-                }
-            }
-            if (!alreadyAdded) {
-                mListWidget->addItem(ruleStr);
-            }
-        }
-#endif
     delete dlg;
 }

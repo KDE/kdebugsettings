@@ -94,6 +94,24 @@ void LoggingCategoryModel::removeCategory(const QString &identifier)
     }
 }
 
+bool LoggingCategoryModel::addCategory(const LoggingCategory &category)
+{
+    bool found = false;
+    if (category.isValid()) {
+        auto it = std::find_if(mLoggingCategories.cbegin(), mLoggingCategories.cend(), [category](const LoggingCategory &cat) {
+            return cat == category;
+        });
+        if (it == mLoggingCategories.cend()) {
+            beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count());
+            mLoggingCategories.append(category);
+            endInsertRows();
+        } else {
+            found = true;
+        }
+    }
+    return found;
+}
+
 void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {

@@ -10,6 +10,8 @@
 #include <QDebug>
 #include <QTest>
 
+QTEST_GUILESS_MAIN(KDebugSettingUtilTest)
+
 KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)
     : QObject(parent)
 {
@@ -247,5 +249,3 @@ void KDebugSettingUtilTest::shouldConvertCategoryTypeFromString()
     QFETCH(LoggingCategory::LoggingType, loggingType);
     QCOMPARE(KDebugSettingsUtil::convertCategoryTypeFromString(input), loggingType);
 }
-
-QTEST_GUILESS_MAIN(KDebugSettingUtilTest)
