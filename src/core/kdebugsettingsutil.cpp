@@ -470,3 +470,33 @@ bool KDebugSettingsUtil::hasWritableGroups()
 {
     return !groupFileList().isEmpty();
 }
+
+LoggingCategory KDebugSettingsUtil::convertRuleStrToLoggingCategory(const QString &ruleStr)
+{
+    LoggingCategory tmp;
+    const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(ruleStr);
+    if (cat.isValid()) {
+        tmp.categoryName = cat.logName;
+        tmp.enabled = cat.enabled;
+        switch (cat.type) {
+        case KDebugSettingsUtil::LineLoggingQtCategory::Unknown:
+            break;
+        case KDebugSettingsUtil::LineLoggingQtCategory::Info:
+            tmp.loggingType = LoggingCategory::Info;
+            break;
+        case KDebugSettingsUtil::LineLoggingQtCategory::Warning:
+            tmp.loggingType = LoggingCategory::Warning;
+            break;
+        case KDebugSettingsUtil::LineLoggingQtCategory::Debug:
+            tmp.loggingType = LoggingCategory::Debug;
+            break;
+        case KDebugSettingsUtil::LineLoggingQtCategory::Critical:
+            tmp.loggingType = LoggingCategory::Critical;
+            break;
+        case KDebugSettingsUtil::LineLoggingQtCategory::All:
+            tmp.loggingType = LoggingCategory::All;
+            break;
+        }
+    }
+    return tmp;
+}
