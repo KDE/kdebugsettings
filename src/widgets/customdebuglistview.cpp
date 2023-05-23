@@ -40,7 +40,8 @@ void CustomDebugListView::setLoggingCategories(const LoggingCategory::List &list
 
 void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
 {
-    const QModelIndex index = indexAt(pos);
+    const QModelIndex idx = indexAt(pos);
+    const QModelIndex index = mCystomDebugProxyModel->mapToSource(idx);
     QMenu menu(this);
     const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
     const auto selectedItemCount{selectedIndexes.count()};

@@ -42,8 +42,6 @@ public:
 
     Q_REQUIRED_RESULT bool addCategory(const LoggingCategory &category);
 
-    void editCategory(const LoggingCategory &category);
-
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;
