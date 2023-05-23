@@ -11,6 +11,7 @@
 #include "model/loggingcategorymodel.h"
 
 #include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QAction>
 #include <QContextMenuEvent>
@@ -59,17 +60,16 @@ void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
 
 void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes)
 {
-#if 0
-    const QList<QListWidgetItem *> lst = mListWidget->selectedItems();
-    if (lst.isEmpty()) {
+    if (selectedIndexes.isEmpty()) {
         return;
     }
-    const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", lst.count());
+    const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", selectedIndexes.count());
 
     if (KMessageBox::ButtonCode::SecondaryAction
         == KMessageBox::warningTwoActions(this, str, i18n("Remove Rule"), KStandardGuiItem::remove(), KStandardGuiItem::cancel())) {
         return;
     }
+#if 0
     for (int i = 0; i < lst.count(); ++i) {
         QListWidgetItem *item = lst.at(i);
         delete item;
@@ -79,32 +79,24 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
 
 void CustomDebugListView::slotEditRule(const QModelIndex &index)
 {
-    const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
-    const auto selectedItemCount{selectedIndexes.count()};
-    if (selectedItemCount == 1) {
-#if 0
-        QListWidgetItem *item = mListWidget->selectedItems().at(0);
-        if (item) {
-            QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
-            dlg->setRule(item->text());
-            if (dlg->exec()) {
-                const QString ruleStr = dlg->rule();
-                if (!ruleStr.isEmpty()) {
-                    item->setText(dlg->rule());
-                }
-            }
-            delete dlg;
+    const QString rule = mLoggingCategoryModel->index(index.row(), LoggingCategoryModel::DisplayRuleRole).data().toString();
+    QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
+    dlg->setRule(rule);
+    if (dlg->exec()) {
+        const QString ruleStr = dlg->rule();
+        if (!ruleStr.isEmpty()) {
+            // item->setText(dlg->rule());
         }
-#endif
     }
+    delete dlg;
 }
 
 void CustomDebugListView::slotAddRule()
 {
     QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
     if (dlg->exec()) {
-#if 0
         const QString ruleStr = dlg->rule();
+#if 0
         if (!ruleStr.isEmpty()) {
             bool alreadyAdded = false;
             const int number(mListWidget->count());
