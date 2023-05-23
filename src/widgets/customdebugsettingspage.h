@@ -35,7 +35,6 @@ private:
     LIBKDEBUGSETTINGS_NO_EXPORT void slotCustomContextMenu(const QPoint &pos);
 
     QListWidget *const mListWidget;
-    QPushButton *const mAddRule;
     QPushButton *const mEditRule;
     QPushButton *const mRemoveRule;
     KListWidgetSearchLine *mTreeListWidgetSearchLine = nullptr;

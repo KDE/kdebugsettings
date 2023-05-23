@@ -25,7 +25,6 @@
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
     , mListWidget(new QListWidget(this))
-    , mAddRule(new QPushButton(i18n("Add..."), this))
     , mEditRule(new QPushButton(i18n("Edit..."), this))
     , mRemoveRule(new QPushButton(i18n("Remove..."), this))
 {
@@ -57,9 +56,10 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
-    mAddRule->setObjectName(QStringLiteral("add_rule"));
-    buttonLayout->addWidget(mAddRule);
-    connect(mAddRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotAddRule);
+    auto addRulePushButton = new QPushButton(i18n("Add..."), this);
+    addRulePushButton->setObjectName(QStringLiteral("add_rule"));
+    buttonLayout->addWidget(addRulePushButton);
+    connect(addRulePushButton, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotAddRule);
 
     mEditRule->setObjectName(QStringLiteral("edit_rule"));
     buttonLayout->addWidget(mEditRule);
