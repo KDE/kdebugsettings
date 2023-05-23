@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 00:49+0000\n"
+"POT-Creation-Date: 2023-05-23 00:49+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -199,13 +199,13 @@ msgstr "Categorie:"
 msgid "Type:"
 msgstr "Tip:"
 
-#: src/widgets/customdebuglistview.cpp:39
+#: src/widgets/customdebuglistview.cpp:41
 #: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:43
 #: src/widgets/customdebugsettingspage.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
@@ -213,8 +213,8 @@ msgstr ""
 msgid "Edit Rule"
 msgstr "Modifică regula personalizată"
 
-#: src/widgets/customdebuglistview.cpp:45
-#: src/widgets/customdebuglistview.cpp:61
+#: src/widgets/customdebuglistview.cpp:47
+#: src/widgets/customdebuglistview.cpp:63
 #: src/widgets/customdebugsettingspage.cpp:100
 #: src/widgets/customdebugsettingspage.cpp:166
 #, fuzzy, kde-format
@@ -222,7 +222,7 @@ msgstr "Modifică regula personalizată"
 msgid "Remove Rule"
 msgstr "Elimină..."
 
-#: src/widgets/customdebuglistview.cpp:58
+#: src/widgets/customdebuglistview.cpp:60
 #: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"

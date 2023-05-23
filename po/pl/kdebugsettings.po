@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 00:49+0000\n"
+"POT-Creation-Date: 2023-05-23 00:49+0000\n"
 "PO-Revision-Date: 2023-05-13 08:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -197,27 +197,27 @@ msgstr "Kategoria:"
 msgid "Type:"
 msgstr "Rodzaj:"
 
-#: src/widgets/customdebuglistview.cpp:39
+#: src/widgets/customdebuglistview.cpp:41
 #: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Dodaj zasadę..."
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:43
 #: src/widgets/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Zmień zasadę"
 
-#: src/widgets/customdebuglistview.cpp:45
-#: src/widgets/customdebuglistview.cpp:61
+#: src/widgets/customdebuglistview.cpp:47
+#: src/widgets/customdebuglistview.cpp:63
 #: src/widgets/customdebugsettingspage.cpp:100
 #: src/widgets/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Usuń zasadę"
 
-#: src/widgets/customdebuglistview.cpp:58
+#: src/widgets/customdebuglistview.cpp:60
 #: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
