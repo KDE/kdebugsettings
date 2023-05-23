@@ -82,7 +82,7 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
 
 void CustomDebugListView::slotEditRule(const QModelIndex &index)
 {
-    const QString rule = mLoggingCategoryModel->index(index.row(), LoggingCategoryModel::DisplayRuleRole).data().toString();
+    const QString rule = mLoggingCategoryModel->index(index.row()).data(LoggingCategoryModel::DisplayRuleRole).toString();
     QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
     dlg->setRule(rule);
     if (dlg->exec()) {
