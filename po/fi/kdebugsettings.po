@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-23 00:49+0000\n"
+"POT-Creation-Date: 2023-05-24 00:49+0000\n"
 "PO-Revision-Date: 2023-04-14 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -199,27 +199,27 @@ msgstr "Luokka:"
 msgid "Type:"
 msgstr "Tyyppi:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:49
 #: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Lisää sääntö…"
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:51
 #: src/widgets/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Muokkaa sääntöä"
 
-#: src/widgets/customdebuglistview.cpp:47
-#: src/widgets/customdebuglistview.cpp:63
+#: src/widgets/customdebuglistview.cpp:57
+#: src/widgets/customdebuglistview.cpp:72
 #: src/widgets/customdebugsettingspage.cpp:100
 #: src/widgets/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Poista sääntö"
 
-#: src/widgets/customdebuglistview.cpp:60
+#: src/widgets/customdebuglistview.cpp:69
 #: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
@@ -229,24 +229,24 @@ msgstr[1] "Haluatko poistaa nämä %1 sääntöä?"
 
 #: src/widgets/customdebugsettingspage.cpp:28
 #, kde-format
-msgid "Add..."
-msgstr "Lisää…"
-
-#: src/widgets/customdebugsettingspage.cpp:29
-#, kde-format
 msgid "Edit..."
 msgstr "Muokkaa…"
 
-#: src/widgets/customdebugsettingspage.cpp:30
+#: src/widgets/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "Poista…"
 
-#: src/widgets/customdebugsettingspage.cpp:49
+#: src/widgets/customdebugsettingspage.cpp:48
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Etsi…"
+
+#: src/widgets/customdebugsettingspage.cpp:59
+#, kde-format
+msgid "Add..."
+msgstr "Lisää…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format

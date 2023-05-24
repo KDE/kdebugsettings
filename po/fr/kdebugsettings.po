@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-23 00:49+0000\n"
+"POT-Creation-Date: 2023-05-24 00:49+0000\n"
 "PO-Revision-Date: 2023-05-09 13:17+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -203,27 +203,27 @@ msgstr "Catégorie :"
 msgid "Type:"
 msgstr "Type :"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:49
 #: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Ajouter une règle..."
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:51
 #: src/widgets/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Éditer la règle"
 
-#: src/widgets/customdebuglistview.cpp:47
-#: src/widgets/customdebuglistview.cpp:63
+#: src/widgets/customdebuglistview.cpp:57
+#: src/widgets/customdebuglistview.cpp:72
 #: src/widgets/customdebugsettingspage.cpp:100
 #: src/widgets/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Supprimer une règle..."
 
-#: src/widgets/customdebuglistview.cpp:60
+#: src/widgets/customdebuglistview.cpp:69
 #: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
@@ -233,24 +233,24 @@ msgstr[1] "Voulez-vous supprimer ces %1 règles ?"
 
 #: src/widgets/customdebugsettingspage.cpp:28
 #, kde-format
-msgid "Add..."
-msgstr "Ajouter..."
-
-#: src/widgets/customdebugsettingspage.cpp:29
-#, kde-format
 msgid "Edit..."
 msgstr "Modifier..."
 
-#: src/widgets/customdebugsettingspage.cpp:30
+#: src/widgets/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "Supprimer..."
 
-#: src/widgets/customdebugsettingspage.cpp:49
+#: src/widgets/customdebugsettingspage.cpp:48
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Rechercher..."
+
+#: src/widgets/customdebugsettingspage.cpp:59
+#, kde-format
+msgid "Add..."
+msgstr "Ajouter..."
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format

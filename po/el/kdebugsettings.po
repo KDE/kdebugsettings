@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-23 00:49+0000\n"
+"POT-Creation-Date: 2023-05-24 00:49+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -198,27 +198,27 @@ msgstr "Κατηγορία:"
 msgid "Type:"
 msgstr "Τύπος:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:49
 #: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr "Προσθήκη κανόνα..."
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:51
 #: src/widgets/customdebugsettingspage.cpp:96
 #, kde-format
 msgid "Edit Rule"
 msgstr "Επεξεργασία κανόνα"
 
-#: src/widgets/customdebuglistview.cpp:47
-#: src/widgets/customdebuglistview.cpp:63
+#: src/widgets/customdebuglistview.cpp:57
+#: src/widgets/customdebuglistview.cpp:72
 #: src/widgets/customdebugsettingspage.cpp:100
 #: src/widgets/customdebugsettingspage.cpp:166
 #, kde-format
 msgid "Remove Rule"
 msgstr "Αφαίρεση κανόνα"
 
-#: src/widgets/customdebuglistview.cpp:60
+#: src/widgets/customdebuglistview.cpp:69
 #: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
@@ -228,24 +228,24 @@ msgstr[1] "Επιθυμείτε πραγματικά την αφαίρεση τ�
 
 #: src/widgets/customdebugsettingspage.cpp:28
 #, kde-format
-msgid "Add..."
-msgstr "Προσθήκη..."
-
-#: src/widgets/customdebugsettingspage.cpp:29
-#, kde-format
 msgid "Edit..."
 msgstr "Επεξεργασία..."
 
-#: src/widgets/customdebugsettingspage.cpp:30
+#: src/widgets/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "Αφαίρεση..."
 
-#: src/widgets/customdebugsettingspage.cpp:49
+#: src/widgets/customdebugsettingspage.cpp:48
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Αναζήτηση..."
+
+#: src/widgets/customdebugsettingspage.cpp:59
+#, kde-format
+msgid "Add..."
+msgstr "Προσθήκη..."
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format

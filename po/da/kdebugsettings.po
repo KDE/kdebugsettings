@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-23 00:49+0000\n"
+"POT-Creation-Date: 2023-05-24 00:49+0000\n"
 "PO-Revision-Date: 2020-07-21 17:54+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -198,13 +198,13 @@ msgstr "Kategori:"
 msgid "Type:"
 msgstr "Type:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:49
 #: src/widgets/customdebugsettingspage.cpp:94
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:51
 #: src/widgets/customdebugsettingspage.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
@@ -212,8 +212,8 @@ msgstr ""
 msgid "Edit Rule"
 msgstr "Redigér tilpasset regel"
 
-#: src/widgets/customdebuglistview.cpp:47
-#: src/widgets/customdebuglistview.cpp:63
+#: src/widgets/customdebuglistview.cpp:57
+#: src/widgets/customdebuglistview.cpp:72
 #: src/widgets/customdebugsettingspage.cpp:100
 #: src/widgets/customdebugsettingspage.cpp:166
 #, fuzzy, kde-format
@@ -221,7 +221,7 @@ msgstr "Redigér tilpasset regel"
 msgid "Remove Rule"
 msgstr "Fjern..."
 
-#: src/widgets/customdebuglistview.cpp:60
+#: src/widgets/customdebuglistview.cpp:69
 #: src/widgets/customdebugsettingspage.cpp:163
 #, kde-format
 msgid "Do you want to remove this rule?"
@@ -231,24 +231,24 @@ msgstr[1] "Vil du fjerne disse %1 regler?"
 
 #: src/widgets/customdebugsettingspage.cpp:28
 #, kde-format
-msgid "Add..."
-msgstr "Tilføj..."
-
-#: src/widgets/customdebugsettingspage.cpp:29
-#, kde-format
 msgid "Edit..."
 msgstr "Redigér..."
 
-#: src/widgets/customdebugsettingspage.cpp:30
+#: src/widgets/customdebugsettingspage.cpp:29
 #, kde-format
 msgid "Remove..."
 msgstr "Fjern..."
 
-#: src/widgets/customdebugsettingspage.cpp:49
+#: src/widgets/customdebugsettingspage.cpp:48
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Søg..."
+
+#: src/widgets/customdebugsettingspage.cpp:59
+#, kde-format
+msgid "Add..."
+msgstr "Tilføj..."
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
