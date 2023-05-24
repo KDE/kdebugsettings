@@ -7,7 +7,6 @@
 #pragma once
 
 #include "libkdebugsettings_export.h"
-#include "loggingcategory.h"
 #include <QListView>
 class LoggingCategoryModel;
 class CustomDebugProxyModel;
@@ -28,5 +27,5 @@ private:
     void slotRemoveRules(const QModelIndexList &selectedIndexes);
     void slotCustomContextMenuRequested(const QPoint &pos);
     LoggingCategoryModel *mLoggingCategoryModel = nullptr;
-    CustomDebugProxyModel *mCustomDebugProxyModel = nullptr;
+    CustomDebugProxyModel *const mCustomDebugProxyModel;
 };

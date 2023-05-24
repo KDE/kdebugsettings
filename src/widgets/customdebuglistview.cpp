@@ -21,7 +21,9 @@
 
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
+    , mCustomDebugProxyModel(new CustomDebugProxyModel(this))
 {
+    mCustomDebugProxyModel->setObjectName(QStringLiteral("mCustomDebugProxyModel"));
     setContextMenuPolicy(Qt::CustomContextMenu);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
@@ -59,9 +61,8 @@ LoggingCategoryModel *CustomDebugListView::loggingCategoryModel() const
 void CustomDebugListView::setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel)
 {
     mLoggingCategoryModel = newLoggingCategoryModel;
-
-    mCustomDebugProxyModel = new CustomDebugProxyModel(this);
     mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
+
     mCustomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
     setModel(mCustomDebugProxyModel);
 }

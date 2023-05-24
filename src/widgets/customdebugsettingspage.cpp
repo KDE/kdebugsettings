@@ -48,12 +48,12 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 
     mEditRule->setObjectName(QStringLiteral("edit_rule"));
     buttonLayout->addWidget(mEditRule);
-    // connect(mEditRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotEditRule);
+    // connect(mEditRule, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::slotEditRule);
 
     mRemoveRule->setObjectName(QStringLiteral("remove_rule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch();
-    // connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRules);
+    // connect(mRemoveRule, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::slotRemoveRules);
     updateButtons();
     mSearchLineEdit->installEventFilter(this);
 }
