@@ -7,6 +7,7 @@
 
 #include "customdebuglistview.h"
 #include "configurecustomsettingdialog.h"
+#include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
 #include "model/customdebugproxymodel.h"
 #include "model/loggingcategorymodel.h"
@@ -108,7 +109,7 @@ void CustomDebugListView::slotAddRule()
         const QString ruleStr = dlg->rule();
         const LoggingCategory cat = KDebugSettingsUtil::convertRuleStrToLoggingCategory(ruleStr);
         if (mLoggingCategoryModel->addCategory(cat)) {
-            qDebug() << " categorie already exist";
+            qCDebug(KDEBUGSETTINGS_LOG) << " categorie already exist";
         }
     }
 
