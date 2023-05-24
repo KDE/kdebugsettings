@@ -12,6 +12,7 @@
 #include <QHBoxLayout>
 #include <QKeyEvent>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -19,6 +20,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
     , mEditRule(new QPushButton(i18n("Edit..."), this))
     , mRemoveRule(new QPushButton(i18n("Remove..."), this))
+    , mSearchLineEdit(new QLineEdit(this))
     , mCustomDebugListView(new CustomDebugListView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
@@ -30,7 +32,10 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     auto vbox = new QVBoxLayout;
     horizontalLayout->addLayout(vbox);
 
+    vbox->addWidget(mSearchLineEdit);
+    mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
     vbox->addWidget(mCustomDebugListView);
+    mCustomDebugListView->setObjectName(QStringLiteral("mCustomDebugListView"));
 
     mCustomDebugListView->setLoggingCategoryModel(LoggingManager::self().customCategoryModel());
     auto buttonLayout = new QVBoxLayout;

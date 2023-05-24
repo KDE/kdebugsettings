@@ -12,6 +12,7 @@
 #include <QWidget>
 class QPushButton;
 class CustomDebugListView;
+class QLineEdit;
 class LIBKDEBUGSETTINGS_EXPORT CustomDebugSettingsPage : public QWidget
 {
     Q_OBJECT
@@ -29,5 +30,6 @@ private:
 
     QPushButton *const mEditRule;
     QPushButton *const mRemoveRule;
+    QLineEdit *const mSearchLineEdit;
     CustomDebugListView *const mCustomDebugListView;
 };
