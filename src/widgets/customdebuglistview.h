@@ -24,6 +24,8 @@ public:
     Q_REQUIRED_RESULT LoggingCategoryModel *loggingCategoryModel() const;
     void setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel);
 
+    void setFilterRuleStr(const QString &str);
+
 private:
     void slotEditRule(const QModelIndex &index);
     void slotRemoveRules(const QModelIndexList &selectedIndexes);

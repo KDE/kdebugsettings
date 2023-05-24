@@ -125,3 +125,8 @@ void CustomDebugListView::editRule()
 {
     // TODO
 }
+
+void CustomDebugListView::setFilterRuleStr(const QString &str)
+{
+    mCustomDebugProxyModel->setFilterText(str);
+}

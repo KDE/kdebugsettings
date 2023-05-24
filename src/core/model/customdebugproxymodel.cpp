@@ -24,7 +24,8 @@ bool CustomDebugProxyModel::filterAcceptsRow(int source_row, const QModelIndex &
     const QString categoryName = sourceIndex.data(LoggingCategoryModel::CategoryNameRole).toString();
     if (sourceIndex.data(LoggingCategoryModel::CategoryNameRole).toString().contains(mFilterText)
         || sourceIndex.data(LoggingCategoryModel::DescriptionRole).toString().contains(mFilterText)
-        || sourceIndex.data(LoggingCategoryModel::IdentifierNameRole).toString().contains(mFilterText)) {
+        || sourceIndex.data(LoggingCategoryModel::IdentifierNameRole).toString().contains(mFilterText)
+        || sourceIndex.data(LoggingCategoryModel::DisplayRuleRole).toString().contains(mFilterText)) {
         return true;
     }
     return false;

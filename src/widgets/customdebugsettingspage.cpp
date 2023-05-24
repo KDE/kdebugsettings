@@ -56,6 +56,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     connect(mRemoveRule, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::removeRules);
     updateButtons();
     mSearchLineEdit->installEventFilter(this);
+    connect(mSearchLineEdit, &QLineEdit::textChanged, mCustomDebugListView, &CustomDebugListView::setFilterRuleStr);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage() = default;
