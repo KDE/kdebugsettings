@@ -124,7 +124,7 @@ void CustomDebugListView::removeRules()
 
 void CustomDebugListView::editRule()
 {
-    // TODO
+    slotEditRule(selectionModel()->currentIndex());
 }
 
 void CustomDebugListView::setFilterRuleStr(const QString &str)
