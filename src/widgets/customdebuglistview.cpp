@@ -15,7 +15,6 @@
 #include <KMessageBox>
 
 #include <QAction>
-#include <QContextMenuEvent>
 #include <QMenu>
 #include <QPointer>
 

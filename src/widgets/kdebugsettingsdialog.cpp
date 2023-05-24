@@ -24,14 +24,12 @@
 #include <KSharedConfig>
 #include <KWindowConfig>
 
-#include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QDir>
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QPushButton>
 #include <QTabWidget>
-#include <QUrl>
 #include <QVBoxLayout>
 #include <QWindow>
 

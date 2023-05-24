@@ -8,7 +8,6 @@
 #include "customdebugsettingspagetest.h"
 #include "customdebugsettingspage.h"
 #include <KListWidgetSearchLine>
-#include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
 #include <QTest>
