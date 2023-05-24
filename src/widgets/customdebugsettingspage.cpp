@@ -6,27 +6,20 @@
 */
 
 #include "customdebugsettingspage.h"
-#include "configurecustomsettingdialog.h"
 #include "customdebuglistview.h"
-#include "kdebugsettingsutil.h"
-#include <KListWidgetSearchLine>
+#include "loggingmanager.h"
 #include <KLocalizedString>
-#include <KMessageBox>
 #include <QHBoxLayout>
 #include <QKeyEvent>
 #include <QLabel>
-#include <QListWidget>
-#include <QMenu>
-#include <QPointer>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
-    , mListWidget(new QListWidget(this))
     , mEditRule(new QPushButton(i18n("Edit..."), this))
     , mRemoveRule(new QPushButton(i18n("Remove..."), this))
+    , mCustomDebugListView(new CustomDebugListView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
 
@@ -37,44 +30,32 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     auto vbox = new QVBoxLayout;
     horizontalLayout->addLayout(vbox);
 
-    mListWidget->setObjectName(QStringLiteral("custom_listwidget"));
-    mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(mListWidget, &QListWidget::itemSelectionChanged, this, &CustomDebugSettingsPage::updateButtons);
-    connect(mListWidget, &QListWidget::itemDoubleClicked, this, &CustomDebugSettingsPage::slotEditRule);
-    connect(mListWidget, &QListWidget::customContextMenuRequested, this, &CustomDebugSettingsPage::slotCustomContextMenu);
-    mTreeListWidgetSearchLine = new KListWidgetSearchLine(this, mListWidget);
-    mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
-    mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
-    vbox->addWidget(mTreeListWidgetSearchLine);
-    vbox->addWidget(mListWidget);
-
-#if 0
-    mCustomDebugListView = new CustomDebugListView(this);
     vbox->addWidget(mCustomDebugListView);
-#endif
+
+    mCustomDebugListView->setLoggingCategoryModel(LoggingManager::self().customCategoryModel());
     auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
     auto addRulePushButton = new QPushButton(i18n("Add..."), this);
     addRulePushButton->setObjectName(QStringLiteral("add_rule"));
     buttonLayout->addWidget(addRulePushButton);
-    connect(addRulePushButton, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotAddRule);
+    connect(addRulePushButton, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::slotAddRule);
 
     mEditRule->setObjectName(QStringLiteral("edit_rule"));
     buttonLayout->addWidget(mEditRule);
-    connect(mEditRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotEditRule);
+    // connect(mEditRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotEditRule);
 
     mRemoveRule->setObjectName(QStringLiteral("remove_rule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch();
-    connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRules);
+    // connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRules);
     updateButtons();
-    mTreeListWidgetSearchLine->installEventFilter(this);
+    // mTreeListWidgetSearchLine->installEventFilter(this);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage() = default;
 
+/*
 bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
 {
     if (event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
@@ -86,42 +67,18 @@ bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
     }
     return QWidget::eventFilter(obj, event);
 }
-
-void CustomDebugSettingsPage::slotCustomContextMenu(const QPoint &pos)
-{
-    QMenu menu(this);
-    const auto selectedItemCount{mListWidget->selectedItems().count()};
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &CustomDebugSettingsPage::slotAddRule);
-    if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule"), this, &CustomDebugSettingsPage::slotEditRule);
-    }
-    if (selectedItemCount > 0) {
-        menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove Rule"), this, &CustomDebugSettingsPage::slotRemoveRules);
-    }
-    menu.exec(mListWidget->viewport()->mapToGlobal(pos));
-}
+*/
 
 void CustomDebugSettingsPage::updateButtons()
 {
-    mEditRule->setEnabled(mListWidget->selectedItems().count() == 1);
-    mRemoveRule->setEnabled(!mListWidget->selectedItems().isEmpty());
-}
-
-void CustomDebugSettingsPage::fillList(const LoggingCategory::List &list)
-{
-    for (const LoggingCategory &cat : list) {
-        const QString ruleStr = cat.generateDisplayRule();
-        new QListWidgetItem(ruleStr, mListWidget);
-    }
-    if (mCustomDebugListView) {
-        mCustomDebugListView->setLoggingCategories(list);
-    }
+    // mEditRule->setEnabled(mListWidget->selectedItems().count() == 1);
+    // mRemoveRule->setEnabled(!mListWidget->selectedItems().isEmpty());
 }
 
 LoggingCategory::List CustomDebugSettingsPage::rules() const
 {
     LoggingCategory::List lst;
+    /*
     const int number(mListWidget->count());
     for (int i = 0; i < number; ++i) {
         const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
@@ -151,63 +108,6 @@ LoggingCategory::List CustomDebugSettingsPage::rules() const
             lst.append(tmp);
         }
     }
+    */
     return lst;
-}
-
-void CustomDebugSettingsPage::slotRemoveRules()
-{
-    const QList<QListWidgetItem *> lst = mListWidget->selectedItems();
-    if (lst.isEmpty()) {
-        return;
-    }
-    const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", lst.count());
-
-    if (KMessageBox::ButtonCode::SecondaryAction
-        == KMessageBox::warningTwoActions(this, str, i18n("Remove Rule"), KStandardGuiItem::remove(), KStandardGuiItem::cancel())) {
-        return;
-    }
-    for (int i = 0; i < lst.count(); ++i) {
-        QListWidgetItem *item = lst.at(i);
-        delete item;
-    }
-}
-
-void CustomDebugSettingsPage::slotEditRule()
-{
-    if (mListWidget->selectedItems().count() == 1) {
-        QListWidgetItem *item = mListWidget->selectedItems().at(0);
-        if (item) {
-            QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
-            dlg->setRule(item->text());
-            if (dlg->exec()) {
-                const QString ruleStr = dlg->rule();
-                if (!ruleStr.isEmpty()) {
-                    item->setText(dlg->rule());
-                }
-            }
-            delete dlg;
-        }
-    }
-}
-
-void CustomDebugSettingsPage::slotAddRule()
-{
-    QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
-    if (dlg->exec()) {
-        const QString ruleStr = dlg->rule();
-        if (!ruleStr.isEmpty()) {
-            bool alreadyAdded = false;
-            const int number(mListWidget->count());
-            for (int i = 0; i < number; ++i) {
-                if (ruleStr == mListWidget->item(i)->text()) {
-                    alreadyAdded = true;
-                    break;
-                }
-            }
-            if (!alreadyAdded) {
-                mListWidget->addItem(ruleStr);
-            }
-        }
-    }
-    delete dlg;
 }

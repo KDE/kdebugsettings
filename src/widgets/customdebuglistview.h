@@ -19,11 +19,15 @@ public:
     ~CustomDebugListView() override;
     void setLoggingCategories(const LoggingCategory::List &list);
 
-private:
     void slotAddRule();
+
+    Q_REQUIRED_RESULT LoggingCategoryModel *loggingCategoryModel() const;
+    void setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel);
+
+private:
     void slotEditRule(const QModelIndex &index);
     void slotRemoveRules(const QModelIndexList &selectedIndexes);
     void slotCustomContextMenuRequested(const QPoint &pos);
-    LoggingCategoryModel *const mLoggingCategoryModel;
-    CustomDebugProxyModel *const mCystomDebugProxyModel;
+    LoggingCategoryModel *mLoggingCategoryModel = nullptr;
+    CustomDebugProxyModel *mCustomDebugProxyModel = nullptr;
 };

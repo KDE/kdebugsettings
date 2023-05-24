@@ -22,11 +22,11 @@
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
     , mLoggingCategoryModel(new LoggingCategoryModel(this))
-    , mCystomDebugProxyModel(new CustomDebugProxyModel(this))
+    , mCustomDebugProxyModel(new CustomDebugProxyModel(this))
 {
     mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
-    mCystomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
-    setModel(mCystomDebugProxyModel);
+    mCustomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
+    setModel(mCustomDebugProxyModel);
     setContextMenuPolicy(Qt::CustomContextMenu);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
@@ -42,7 +42,7 @@ void CustomDebugListView::setLoggingCategories(const LoggingCategory::List &list
 void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
 {
     const QModelIndex idx = indexAt(pos);
-    const QModelIndex index = mCystomDebugProxyModel->mapToSource(idx);
+    const QModelIndex index = mCustomDebugProxyModel->mapToSource(idx);
     QMenu menu(this);
     const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
     const auto selectedItemCount{selectedIndexes.count()};
@@ -59,6 +59,21 @@ void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
         });
     }
     menu.exec(viewport()->mapToGlobal(pos));
+}
+
+LoggingCategoryModel *CustomDebugListView::loggingCategoryModel() const
+{
+    return mLoggingCategoryModel;
+}
+
+void CustomDebugListView::setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel)
+{
+    mLoggingCategoryModel = newLoggingCategoryModel;
+
+    mCustomDebugProxyModel = new CustomDebugProxyModel(this);
+    mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
+    mCustomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
+    setModel(mCustomDebugProxyModel);
 }
 
 void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes)

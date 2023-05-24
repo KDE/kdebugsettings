@@ -148,7 +148,6 @@ void KDebugSettingsDialog::updateLoggingCategories()
     const bool foundOverrideRule = LoggingManager::self().foundOverrideRule();
 
     mKdeApplicationSettingsPage->fillList(qtKdeCategories);
-    mCustomSettingsPage->fillList(customCategories);
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
     }
