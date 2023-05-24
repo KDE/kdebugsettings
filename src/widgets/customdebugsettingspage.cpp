@@ -33,6 +33,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     horizontalLayout->addLayout(vbox);
 
     vbox->addWidget(mSearchLineEdit);
+    mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
     vbox->addWidget(mCustomDebugListView);
     mCustomDebugListView->setObjectName(QStringLiteral("mCustomDebugListView"));
