@@ -81,33 +81,5 @@ void ConfigureCustomSettingWidget::setRule(const QString &rule)
 
 QString ConfigureCustomSettingWidget::rule() const
 {
-    QString ruleStr = mCategoryLineEdit->text().trimmed();
-    if (!ruleStr.isEmpty()) {
-        switch (mCategoryType->type()) {
-        case LoggingCategory::All:
-            break;
-        case LoggingCategory::Info:
-            ruleStr += QStringLiteral(".info");
-            break;
-        case LoggingCategory::Warning:
-            ruleStr += QStringLiteral(".warning");
-            break;
-        case LoggingCategory::Debug:
-            ruleStr += QStringLiteral(".debug");
-            break;
-        case LoggingCategory::Critical:
-            ruleStr += QStringLiteral(".critical");
-            break;
-        case LoggingCategory::Off:
-        case LoggingCategory::Undefined:
-            break;
-        }
-
-        if (mEnableCategory->isChecked()) {
-            ruleStr += QStringLiteral("=true");
-        } else {
-            ruleStr += QStringLiteral("=false");
-        }
-    }
-    return ruleStr;
+    return KDebugSettingsUtil::generateDisplayRule(mCategoryLineEdit->text().trimmed(), mEnableCategory->isChecked(), mCategoryType->type());
 }

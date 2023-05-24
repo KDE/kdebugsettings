@@ -101,6 +101,7 @@ Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT bool hasWritableGroups();
 Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QString defaultWritableGroupPath();
 Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QStringList groupFileList();
 Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory convertRuleStrToLoggingCategory(const QString &ruleStr);
+Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QString generateDisplayRule(const QString &categoryName, bool state, LoggingCategory::LoggingType type);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)
