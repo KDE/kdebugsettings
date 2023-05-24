@@ -41,6 +41,10 @@ target_sources(libkdebugsettings PRIVATE
 
     customdebuglistview.h
     customdebuglistview.cpp
+
+
+    kdeapplicationlistview.h
+    kdeapplicationlistview.cpp
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
