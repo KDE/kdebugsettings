@@ -125,6 +125,11 @@ bool LoggingCategoryModel::addCategory(const LoggingCategory &category)
     return found;
 }
 
+LoggingCategory::List LoggingCategoryModel::loggingCategories() const
+{
+    return mLoggingCategories;
+}
+
 void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {
