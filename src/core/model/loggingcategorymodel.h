@@ -38,7 +38,7 @@ public:
 
     void insertCategories(const LoggingCategory::List &categories);
 
-    void removeCategory(const QString &identifier);
+    void removeCategory(const LoggingCategory::List &categories);
 
     Q_REQUIRED_RESULT bool addCategory(const LoggingCategory &category);
 

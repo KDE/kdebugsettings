@@ -95,16 +95,18 @@ void LoggingCategoryModel::clear()
     }
 }
 
-void LoggingCategoryModel::removeCategory(const QString &identifier)
+void LoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
 {
-    for (int i = 0; i < mLoggingCategories.count(); ++i) {
-        if (mLoggingCategories.at(i).identifierName == identifier) {
-            beginRemoveRows(QModelIndex(), i, i);
-            mLoggingCategories.removeAt(i);
-            endRemoveRows();
-            break;
+    beginResetModel();
+    for (int j = 0; j < categories.count(); ++j) {
+        for (int i = 0; i < mLoggingCategories.count(); ++i) {
+            if (mLoggingCategories.at(i) == categories.at(j)) {
+                mLoggingCategories.removeAt(i);
+                break;
+            }
         }
     }
+    endResetModel();
 }
 
 bool LoggingCategoryModel::addCategory(const LoggingCategory &category)

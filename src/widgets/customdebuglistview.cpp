@@ -78,12 +78,12 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
         == KMessageBox::warningTwoActions(this, str, i18n("Remove Rule"), KStandardGuiItem::remove(), KStandardGuiItem::cancel())) {
         return;
     }
-#if 0
-    for (int i = 0; i < lst.count(); ++i) {
-        QListWidgetItem *item = lst.at(i);
-        delete item;
+    LoggingCategory::List categories;
+    for (const auto &index : selectedIndexes) {
+        const auto cat = mLoggingCategoryModel->index(index.row()).data(LoggingCategoryModel::CategoryRole).value<LoggingCategory>();
+        categories.append(cat);
     }
-#endif
+    mLoggingCategoryModel->removeCategory(categories);
 }
 
 void CustomDebugListView::slotEditRule(const QModelIndex &index)
