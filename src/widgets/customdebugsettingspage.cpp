@@ -57,6 +57,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     updateButtons();
     mSearchLineEdit->installEventFilter(this);
     connect(mSearchLineEdit, &QLineEdit::textChanged, mCustomDebugListView, &CustomDebugListView::setFilterRuleStr);
+    connect(mCustomDebugListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &CustomDebugSettingsPage::updateButtons);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage() = default;
@@ -75,8 +76,8 @@ bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
 
 void CustomDebugSettingsPage::updateButtons()
 {
-    // mEditRule->setEnabled(mListWidget->selectedItems().count() == 1);
-    // mRemoveRule->setEnabled(!mListWidget->selectedItems().isEmpty());
+    mEditRule->setEnabled(mCustomDebugListView->selectionModel()->selection().indexes().count() == 1);
+    mRemoveRule->setEnabled(mCustomDebugListView->selectionModel()->hasSelection());
 }
 
 LoggingCategory::List CustomDebugSettingsPage::rules() const
