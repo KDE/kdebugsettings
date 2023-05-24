@@ -23,7 +23,7 @@ public:
     Q_REQUIRED_RESULT LoggingCategory::List rules() const;
 
 protected:
-    // bool eventFilter(QObject *obj, QEvent *event) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     LIBKDEBUGSETTINGS_NO_EXPORT void updateButtons();

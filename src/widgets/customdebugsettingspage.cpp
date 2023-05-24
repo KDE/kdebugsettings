@@ -8,10 +8,10 @@
 #include "customdebugsettingspage.h"
 #include "customdebuglistview.h"
 #include "loggingmanager.h"
+
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QKeyEvent>
-#include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -55,15 +55,14 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     buttonLayout->addStretch();
     // connect(mRemoveRule, &QAbstractButton::clicked, this, &CustomDebugSettingsPage::slotRemoveRules);
     updateButtons();
-    // mTreeListWidgetSearchLine->installEventFilter(this);
+    mSearchLineEdit->installEventFilter(this);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage() = default;
 
-/*
 bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
 {
-    if (event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
+    if (event->type() == QEvent::KeyPress && obj == mSearchLineEdit) {
         auto key = static_cast<QKeyEvent *>(event);
         if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
             event->accept();
@@ -72,7 +71,6 @@ bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
     }
     return QWidget::eventFilter(obj, event);
 }
-*/
 
 void CustomDebugSettingsPage::updateButtons()
 {
@@ -82,5 +80,6 @@ void CustomDebugSettingsPage::updateButtons()
 
 LoggingCategory::List CustomDebugSettingsPage::rules() const
 {
+    // Remove it ????
     return LoggingManager::self().customCategoryModel()->loggingCategories();
 }
