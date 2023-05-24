@@ -115,3 +115,13 @@ void CustomDebugListView::slotAddRule()
 
     delete dlg;
 }
+
+void CustomDebugListView::removeRules()
+{
+    // TODO
+}
+
+void CustomDebugListView::editRule()
+{
+    // TODO
+}

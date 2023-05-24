@@ -18,6 +18,8 @@ public:
     ~CustomDebugListView() override;
 
     void slotAddRule();
+    void removeRules();
+    void editRule();
 
     Q_REQUIRED_RESULT LoggingCategoryModel *loggingCategoryModel() const;
     void setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel);
