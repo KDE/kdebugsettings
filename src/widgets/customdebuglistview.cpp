@@ -118,7 +118,8 @@ void CustomDebugListView::slotAddRule()
 
 void CustomDebugListView::removeRules()
 {
-    // TODO
+    const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
+    slotRemoveRules(selectedIndexes);
 }
 
 void CustomDebugListView::editRule()
