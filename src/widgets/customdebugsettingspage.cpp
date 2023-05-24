@@ -82,37 +82,5 @@ void CustomDebugSettingsPage::updateButtons()
 
 LoggingCategory::List CustomDebugSettingsPage::rules() const
 {
-    LoggingCategory::List lst;
-    /*
-    const int number(mListWidget->count());
-    for (int i = 0; i < number; ++i) {
-        const KDebugSettingsUtil::LineLoggingQtCategory cat = KDebugSettingsUtil::parseLineLoggingQtCategory(mListWidget->item(i)->text());
-        if (cat.isValid()) {
-            LoggingCategory tmp;
-            tmp.categoryName = cat.logName;
-            tmp.enabled = cat.enabled;
-            switch (cat.type) {
-            case KDebugSettingsUtil::LineLoggingQtCategory::Unknown:
-                break;
-            case KDebugSettingsUtil::LineLoggingQtCategory::Info:
-                tmp.loggingType = LoggingCategory::Info;
-                break;
-            case KDebugSettingsUtil::LineLoggingQtCategory::Warning:
-                tmp.loggingType = LoggingCategory::Warning;
-                break;
-            case KDebugSettingsUtil::LineLoggingQtCategory::Debug:
-                tmp.loggingType = LoggingCategory::Debug;
-                break;
-            case KDebugSettingsUtil::LineLoggingQtCategory::Critical:
-                tmp.loggingType = LoggingCategory::Critical;
-                break;
-            case KDebugSettingsUtil::LineLoggingQtCategory::All:
-                tmp.loggingType = LoggingCategory::All;
-                break;
-            }
-            lst.append(tmp);
-        }
-    }
-    */
-    return lst;
+    return LoggingManager::self().customCategoryModel()->loggingCategories();
 }
