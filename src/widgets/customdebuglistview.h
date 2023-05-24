@@ -17,7 +17,6 @@ class LIBKDEBUGSETTINGS_EXPORT CustomDebugListView : public QListView
 public:
     explicit CustomDebugListView(QWidget *parent = nullptr);
     ~CustomDebugListView() override;
-    void setLoggingCategories(const LoggingCategory::List &list);
 
     void slotAddRule();
 

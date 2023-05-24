@@ -29,11 +29,6 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
 
 CustomDebugListView::~CustomDebugListView() = default;
 
-void CustomDebugListView::setLoggingCategories(const LoggingCategory::List &list)
-{
-    mLoggingCategoryModel->setLoggingCategories(list);
-}
-
 void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
 {
     const QModelIndex idx = indexAt(pos);

@@ -7,6 +7,7 @@
 
 #include "customdebuglistviewgui.h"
 #include "customdebuglistview.h"
+#include "model/loggingcategorymodel.h"
 
 #include <QApplication>
 #include <QVBoxLayout>
@@ -27,7 +28,9 @@ CustomDebugListViewGui::CustomDebugListViewGui(QWidget *parent)
         lst.append(cat);
     }
 
-    view->setLoggingCategories(lst);
+    auto model = new LoggingCategoryModel(this);
+    model->setLoggingCategories(lst);
+    view->setLoggingCategoryModel(model);
     vboxLayout->addWidget(view);
 }
 
