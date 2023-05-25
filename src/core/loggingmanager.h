@@ -8,14 +8,14 @@
 #include "kdebugsettingsloadingcategories.h"
 #include "libkdebugsettingscore_export.h"
 #include "model/categorytypemodel.h"
-#include "model/loggingcategorymodel.h"
+#include "model/customloggingcategorymodel.h"
 
 #include <QObject>
 class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(LoggingCategoryModel *customCategoryModel READ customCategoryModel CONSTANT)
-    Q_PROPERTY(LoggingCategoryModel *qtKdeCategoryModel READ qtKdeCategoryModel CONSTANT)
+    Q_PROPERTY(CustomLoggingCategoryModel *customCategoryModel READ customCategoryModel CONSTANT)
+    Q_PROPERTY(CustomLoggingCategoryModel *qtKdeCategoryModel READ qtKdeCategoryModel CONSTANT)
     Q_PROPERTY(CategoryTypeModel *categoryTypeModel READ categoryTypeModel CONSTANT)
     Q_PROPERTY(bool foundOverrideRule READ foundOverrideRule CONSTANT)
 
@@ -24,9 +24,9 @@ public:
 
     ~LoggingManager() override;
 
-    Q_REQUIRED_RESULT LoggingCategoryModel *customCategoryModel() const;
+    Q_REQUIRED_RESULT CustomLoggingCategoryModel *customCategoryModel() const;
 
-    Q_REQUIRED_RESULT LoggingCategoryModel *qtKdeCategoryModel() const;
+    Q_REQUIRED_RESULT CustomLoggingCategoryModel *qtKdeCategoryModel() const;
 
     Q_REQUIRED_RESULT CategoryTypeModel *categoryTypeModel() const;
 
@@ -42,8 +42,8 @@ public:
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
     LIBKDEBUGSETTINGSCORE_NO_EXPORT void updateLoggingCategories();
-    LoggingCategoryModel *const mCustomCategoryModel;
-    LoggingCategoryModel *const mQtKdeCategoryModel;
+    CustomLoggingCategoryModel *const mCustomCategoryModel;
+    CustomLoggingCategoryModel *const mQtKdeCategoryModel;
     CategoryTypeModel *const mCategoryTypeModel;
     KDebugSettingsLoadingCategories mLoggings;
 };

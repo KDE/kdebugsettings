@@ -9,8 +9,8 @@
 
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
-    , mCustomCategoryModel(new LoggingCategoryModel(this))
-    , mQtKdeCategoryModel(new LoggingCategoryModel(this))
+    , mCustomCategoryModel(new CustomLoggingCategoryModel(this))
+    , mQtKdeCategoryModel(new CustomLoggingCategoryModel(this))
     , mCategoryTypeModel(new CategoryTypeModel(this))
 {
     mLoggings.readQtLoggingFile();
@@ -25,12 +25,12 @@ LoggingManager &LoggingManager::self()
 
 LoggingManager::~LoggingManager() = default;
 
-LoggingCategoryModel *LoggingManager::customCategoryModel() const
+CustomLoggingCategoryModel *LoggingManager::customCategoryModel() const
 {
     return mCustomCategoryModel;
 }
 
-LoggingCategoryModel *LoggingManager::qtKdeCategoryModel() const
+CustomLoggingCategoryModel *LoggingManager::qtKdeCategoryModel() const
 {
     return mQtKdeCategoryModel;
 }

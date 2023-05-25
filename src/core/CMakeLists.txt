@@ -13,8 +13,8 @@ target_sources(libkdebugsettingscore PRIVATE
     jobs/saverulesjob.cpp
     jobs/saverulesjob.h
 
-    model/loggingcategorymodel.h
-    model/loggingcategorymodel.cpp
+    model/customloggingcategorymodel.h
+    model/customloggingcategorymodel.cpp
 
     model/customloggingcategoryproxymodel.h
     model/customloggingcategoryproxymodel.cpp

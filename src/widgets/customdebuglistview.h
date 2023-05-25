@@ -8,7 +8,7 @@
 
 #include "libkdebugsettings_export.h"
 #include <QListView>
-class LoggingCategoryModel;
+class CustomLoggingCategoryModel;
 class CustomLoggingCategoryProxyModel;
 class LIBKDEBUGSETTINGS_EXPORT CustomDebugListView : public QListView
 {
@@ -21,8 +21,8 @@ public:
     void removeRules();
     void editRule();
 
-    Q_REQUIRED_RESULT LoggingCategoryModel *loggingCategoryModel() const;
-    void setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel);
+    Q_REQUIRED_RESULT CustomLoggingCategoryModel *loggingCategoryModel() const;
+    void setLoggingCategoryModel(CustomLoggingCategoryModel *newLoggingCategoryModel);
 
     void setFilterRuleStr(const QString &str);
 
@@ -30,6 +30,6 @@ private:
     void slotEditRule(const QModelIndex &index);
     void slotRemoveRules(const QModelIndexList &selectedIndexes);
     void slotCustomContextMenuRequested(const QPoint &pos);
-    LoggingCategoryModel *mLoggingCategoryModel = nullptr;
+    CustomLoggingCategoryModel *mCustomLoggingCategoryModel = nullptr;
     CustomLoggingCategoryProxyModel *const mCustomLoggingCategoryProxyModel;
 };

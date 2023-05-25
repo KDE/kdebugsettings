@@ -10,8 +10,8 @@
 #include "jobs/changedebugmodejob.h"
 #include "loggingmanager.h"
 #include "model/categorytypeproxymodel.h"
+#include "model/customloggingcategorymodel.h"
 #include "model/customloggingcategoryproxymodel.h"
-#include "model/loggingcategorymodel.h"
 #include <config-kdebugsettings.h>
 
 #include <KAboutData>
@@ -102,7 +102,7 @@ int main(int argc, char **argv)
         QQmlApplicationEngine engine;
 
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &LoggingManager::self());
-        qRegisterMetaType<LoggingCategoryModel *>("LoggingCategoryModel *");
+        qRegisterMetaType<CustomLoggingCategoryModel *>("CustomLoggingCategoryModel *");
         qmlRegisterType<CategoryTypeProxyModel>("org.kde.kdebugsettings", 1, 0, "CategoryTypeProxyModel");
         qmlRegisterType<CustomLoggingCategoryProxyModel>("org.kde.kdebugsettings", 1, 0, "CustomLoggingCategoryProxyModel");
 

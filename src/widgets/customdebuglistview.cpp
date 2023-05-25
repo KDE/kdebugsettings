@@ -9,8 +9,8 @@
 #include "configurecustomsettingdialog.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
+#include "model/customloggingcategorymodel.h"
 #include "model/customloggingcategoryproxymodel.h"
-#include "model/loggingcategorymodel.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -53,17 +53,17 @@ void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
     menu.exec(viewport()->mapToGlobal(pos));
 }
 
-LoggingCategoryModel *CustomDebugListView::loggingCategoryModel() const
+CustomLoggingCategoryModel *CustomDebugListView::loggingCategoryModel() const
 {
-    return mLoggingCategoryModel;
+    return mCustomLoggingCategoryModel;
 }
 
-void CustomDebugListView::setLoggingCategoryModel(LoggingCategoryModel *newLoggingCategoryModel)
+void CustomDebugListView::setLoggingCategoryModel(CustomLoggingCategoryModel *newLoggingCategoryModel)
 {
-    mLoggingCategoryModel = newLoggingCategoryModel;
-    mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
+    mCustomLoggingCategoryModel = newLoggingCategoryModel;
+    mCustomLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
 
-    mCustomLoggingCategoryProxyModel->setSourceModel(mLoggingCategoryModel);
+    mCustomLoggingCategoryProxyModel->setSourceModel(mCustomLoggingCategoryModel);
     setModel(mCustomLoggingCategoryProxyModel);
 }
 
@@ -80,15 +80,15 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
     }
     LoggingCategory::List categories;
     for (const auto &index : selectedIndexes) {
-        const auto cat = mLoggingCategoryModel->index(index.row()).data(LoggingCategoryModel::CategoryRole).value<LoggingCategory>();
+        const auto cat = mCustomLoggingCategoryModel->index(index.row()).data(CustomLoggingCategoryModel::CategoryRole).value<LoggingCategory>();
         categories.append(cat);
     }
-    mLoggingCategoryModel->removeCategory(categories);
+    mCustomLoggingCategoryModel->removeCategory(categories);
 }
 
 void CustomDebugListView::slotEditRule(const QModelIndex &index)
 {
-    const QString rule = mLoggingCategoryModel->index(index.row()).data(LoggingCategoryModel::DisplayRuleRole).toString();
+    const QString rule = mCustomLoggingCategoryModel->index(index.row()).data(CustomLoggingCategoryModel::DisplayRuleRole).toString();
     QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
     dlg->setRule(rule);
     if (dlg->exec()) {
@@ -96,7 +96,7 @@ void CustomDebugListView::slotEditRule(const QModelIndex &index)
         if (!ruleStr.isEmpty()) {
             const LoggingCategory cat = KDebugSettingsUtil::convertRuleStrToLoggingCategory(ruleStr);
 
-            mLoggingCategoryModel->setData(index, QVariant::fromValue(cat), LoggingCategoryModel::CategoryRole);
+            mCustomLoggingCategoryModel->setData(index, QVariant::fromValue(cat), CustomLoggingCategoryModel::CategoryRole);
         }
     }
     delete dlg;
@@ -108,7 +108,7 @@ void CustomDebugListView::slotAddRule()
     if (dlg->exec()) {
         const QString ruleStr = dlg->rule();
         const LoggingCategory cat = KDebugSettingsUtil::convertRuleStrToLoggingCategory(ruleStr);
-        if (mLoggingCategoryModel->addCategory(cat)) {
+        if (mCustomLoggingCategoryModel->addCategory(cat)) {
             qCDebug(KDEBUGSETTINGS_LOG) << " categorie already exist";
         }
     }

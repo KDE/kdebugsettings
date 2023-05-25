@@ -7,7 +7,7 @@
 
 #include "kdeapplicationtreeviewgui.h"
 #include "kdeapplicationtreeview.h"
-#include "model/loggingcategorymodel.h"
+#include "model/customloggingcategorymodel.h"
 
 #include <QApplication>
 #include <QVBoxLayout>

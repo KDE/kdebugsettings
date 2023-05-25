@@ -4,10 +4,10 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "loggingcategorymodel.h"
+#include "customloggingcategorymodel.h"
 #include "kdebugsettingscore_debug.h"
 
-LoggingCategoryModel::LoggingCategoryModel(QObject *parent)
+CustomLoggingCategoryModel::CustomLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
     mRoleNames.insert(Qt::DisplayRole, "display");
@@ -19,9 +19,9 @@ LoggingCategoryModel::LoggingCategoryModel(QObject *parent)
     mRoleNames.insert(LoggingTypeRole, "loggingType");
 }
 
-LoggingCategoryModel::~LoggingCategoryModel() = default;
+CustomLoggingCategoryModel::~CustomLoggingCategoryModel() = default;
 
-int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
+int CustomLoggingCategoryModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         return 0; // flat model
@@ -29,13 +29,13 @@ int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
     return mLoggingCategories.count();
 }
 
-int LoggingCategoryModel::columnCount(const QModelIndex &parent) const
+int CustomLoggingCategoryModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     return 1;
 }
 
-bool LoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
+bool CustomLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
 {
     if (!modelIndex.isValid()) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: invalid index";
@@ -56,7 +56,7 @@ bool LoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant
     return false;
 }
 
-QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
+QVariant CustomLoggingCategoryModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
         return {};
@@ -84,14 +84,14 @@ QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
-void LoggingCategoryModel::setLoggingCategories(const LoggingCategory::List &list)
+void CustomLoggingCategoryModel::setLoggingCategories(const LoggingCategory::List &list)
 {
     beginResetModel();
     mLoggingCategories = list;
     endResetModel();
 }
 
-void LoggingCategoryModel::clear()
+void CustomLoggingCategoryModel::clear()
 {
     if (!mLoggingCategories.isEmpty()) {
         beginResetModel();
@@ -100,7 +100,7 @@ void LoggingCategoryModel::clear()
     }
 }
 
-void LoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
+void CustomLoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
 {
     beginResetModel();
     for (int j = 0; j < categories.count(); ++j) {
@@ -114,7 +114,7 @@ void LoggingCategoryModel::removeCategory(const LoggingCategory::List &categorie
     endResetModel();
 }
 
-bool LoggingCategoryModel::addCategory(const LoggingCategory &category)
+bool CustomLoggingCategoryModel::addCategory(const LoggingCategory &category)
 {
     bool found = false;
     if (category.isValid()) {
@@ -132,12 +132,12 @@ bool LoggingCategoryModel::addCategory(const LoggingCategory &category)
     return found;
 }
 
-LoggingCategory::List LoggingCategoryModel::loggingCategories() const
+LoggingCategory::List CustomLoggingCategoryModel::loggingCategories() const
 {
     return mLoggingCategories;
 }
 
-void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
+void CustomLoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {
         beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count() + categories.count() - 1);
@@ -146,7 +146,7 @@ void LoggingCategoryModel::insertCategories(const LoggingCategory::List &categor
     }
 }
 
-QHash<int, QByteArray> LoggingCategoryModel::roleNames() const
+QHash<int, QByteArray> CustomLoggingCategoryModel::roleNames() const
 {
     return mRoleNames;
 }
