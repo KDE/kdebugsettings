@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 00:49+0000\n"
+"POT-Creation-Date: 2023-05-25 00:49+0000\n"
 "PO-Revision-Date: 2023-05-08 23:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -113,17 +113,17 @@ msgstr "Keine Debug-Meldungen"
 msgid "Undefined"
 msgstr "Undefiniert"
 
-#: src/core/loggingcategory.cpp:139
+#: src/core/loggingcategory.cpp:113
 #, kde-format
 msgid "Category name: %1"
 msgstr "Kategorienname: %1"
 
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:115
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Kennung: %1"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:117
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Standard-Schweregrad: %1"
@@ -194,51 +194,40 @@ msgstr "Kategorie:"
 msgid "Type:"
 msgstr "Typ:"
 
-#: src/widgets/customdebuglistview.cpp:49
-#: src/widgets/customdebugsettingspage.cpp:94
+#: src/widgets/customdebuglistview.cpp:41
 #, kde-format
 msgid "Add Rule..."
 msgstr "Regel hinzufügen ..."
 
-#: src/widgets/customdebuglistview.cpp:51
-#: src/widgets/customdebugsettingspage.cpp:96
+#: src/widgets/customdebuglistview.cpp:43
 #, kde-format
 msgid "Edit Rule"
 msgstr "Regel bearbeiten"
 
-#: src/widgets/customdebuglistview.cpp:57
-#: src/widgets/customdebuglistview.cpp:72
-#: src/widgets/customdebugsettingspage.cpp:100
-#: src/widgets/customdebugsettingspage.cpp:166
+#: src/widgets/customdebuglistview.cpp:49
+#: src/widgets/customdebuglistview.cpp:78
 #, kde-format
 msgid "Remove Rule"
 msgstr "Regel entfernen"
 
-#: src/widgets/customdebuglistview.cpp:69
-#: src/widgets/customdebugsettingspage.cpp:163
+#: src/widgets/customdebuglistview.cpp:75
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "Möchten Sie diese Regel entfernen?"
 msgstr[1] "Möchten Sie diese Regeln „%1“ entfernen?"
 
-#: src/widgets/customdebugsettingspage.cpp:28
+#: src/widgets/customdebugsettingspage.cpp:21
 #, kde-format
 msgid "Edit..."
 msgstr "Bearbeiten ..."
 
-#: src/widgets/customdebugsettingspage.cpp:29
+#: src/widgets/customdebugsettingspage.cpp:22
 #, kde-format
 msgid "Remove..."
 msgstr "Entfernen ..."
 
-#: src/widgets/customdebugsettingspage.cpp:48
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Suchen ..."
-
-#: src/widgets/customdebugsettingspage.cpp:59
+#: src/widgets/customdebugsettingspage.cpp:45
 #, kde-format
 msgid "Add..."
 msgstr "Hinzufügen ..."
@@ -343,63 +332,68 @@ msgstr "Fehlersuche ausschalten"
 msgid "Turn Off All Messages"
 msgstr "Alle Meldungen abschalten"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Suchen ..."
+
+#: src/widgets/kdebugsettingsdialog.cpp:63
 #, kde-format
 msgid "KDE Application"
 msgstr "KDE-Anwendung"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:64
 #, kde-format
 msgid "Custom Rules"
 msgstr "Benutzerdefinierte Regeln"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Regeleinstellung mit Umgebungsvariablen"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
+#: src/widgets/kdebugsettingsdialog.cpp:74 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
 msgstr "Speichern unter ..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:87
 #, kde-format
 msgid "Insert..."
 msgstr "Einfügen ..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:165
+#: src/widgets/kdebugsettingsdialog.cpp:162
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "„%1“ kann nicht geöffnet werden. Bitte überprüfen Sie es."
 
-#: src/widgets/kdebugsettingsdialog.cpp:191
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Insert Categories"
 msgstr "Kategorien einfügen"
 
-#: src/widgets/kdebugsettingsdialog.cpp:191
+#: src/widgets/kdebugsettingsdialog.cpp:188
 #, kde-format
 msgid "Categories Files"
 msgstr "Kategorie-Dateien"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Kategorien aus Datei „%1“ wurden eingefügt."
 
-#: src/widgets/kdebugsettingsdialog.cpp:213
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgid "Group Name"
 msgstr "Gruppenname"
 
-#: src/widgets/kdebugsettingsdialog.cpp:213
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgid "Name:"
 msgstr "Name:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:215
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -408,23 +402,23 @@ msgstr ""
 "<b>%1</b> wird bereits als Gruppenname verwendet.\n"
 "Bitte speichern Sie unter einem anderen Namen."
 
-#: src/widgets/kdebugsettingsdialog.cpp:227
+#: src/widgets/kdebugsettingsdialog.cpp:224
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Der Name darf nicht leer sein Bitte geben Sie einen neuen Namen ein."
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, kde-format
 msgid "Save As"
 msgstr "Speichern unter"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
-#: src/widgets/kdebugsettingsdialog.cpp:242
+#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings-Datei (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:242
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Debug-Einstellungsdateien laden"
