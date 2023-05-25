@@ -30,6 +30,7 @@ public:
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
+    // Use only for test apps
     void setLoggingCategories(const LoggingCategory::List &list);
 
     void clear();
