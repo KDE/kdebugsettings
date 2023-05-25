@@ -30,12 +30,12 @@ QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QSt
 
 void KDEApplicationListViewDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    // qobject_cast<CategoryTypeComboBox *>(editor)->setCurrentCustomerId(index.data(Qt::EditRole).value<CustomerId>());
+    // qobject_cast<CategoryTypeComboBox *>(editor)->setType(index.data(Qt::EditRole).value<CustomerId>());
 }
 
 void KDEApplicationListViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    // model->setData(index, qobject_cast<CategoryTypeComboBox *>(editor)->currentCustomerId());
+    // model->setData(index, qobject_cast<CategoryTypeComboBox *>(editor)->type());
 }
 
 void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /*index*/) const

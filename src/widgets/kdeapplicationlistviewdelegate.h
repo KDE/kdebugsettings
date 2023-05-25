@@ -14,6 +14,7 @@ class KDEApplicationListViewDelegate : public QStyledItemDelegate
 public:
     explicit KDEApplicationListViewDelegate(QObject *parent = nullptr);
     ~KDEApplicationListViewDelegate() override;
+
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
