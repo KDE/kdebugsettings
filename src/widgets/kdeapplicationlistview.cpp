@@ -5,10 +5,12 @@
 */
 
 #include "kdeapplicationlistview.h"
+#include <QHeaderView>
 
 KDEApplicationListView::KDEApplicationListView(QWidget *parent)
-    : QListView(parent)
+    : QTreeView(parent)
 {
+    header()->hide();
 }
 
 KDEApplicationListView::~KDEApplicationListView() = default;

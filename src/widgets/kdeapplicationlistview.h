@@ -6,9 +6,9 @@
 
 #pragma once
 #include "libkdebugsettings_export.h"
-#include <QListView>
+#include <QTreeView>
 
-class LIBKDEBUGSETTINGS_EXPORT KDEApplicationListView : public QListView
+class LIBKDEBUGSETTINGS_EXPORT KDEApplicationListView : public QTreeView
 {
     Q_OBJECT
 public:
