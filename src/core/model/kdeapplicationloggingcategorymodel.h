@@ -16,7 +16,8 @@ public:
     enum CategoryRoles {
         DescriptionRole,
         LoggingTypeRole,
-        LastColumn = LoggingTypeRole,
+        LoggingTypeStrRole,
+        LastColumn = LoggingTypeStrRole,
     };
 
     explicit KDEApplicationLoggingCategoryModel(QObject *parent = nullptr);

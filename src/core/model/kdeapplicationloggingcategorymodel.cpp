@@ -6,6 +6,7 @@
 
 #include "kdeapplicationloggingcategorymodel.h"
 #include "kdebugsettingscore_debug.h"
+#include "kdebugsettingsutil.h"
 
 KDEApplicationLoggingCategoryModel::KDEApplicationLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
@@ -68,6 +69,8 @@ QVariant KDEApplicationLoggingCategoryModel::data(const QModelIndex &index, int 
     case DescriptionRole: {
         return category.description;
     }
+    case LoggingTypeStrRole:
+        return KDebugSettingsUtil::convertCategoryTypeToString(category.loggingType);
     case LoggingTypeRole:
         return category.loggingType;
     }

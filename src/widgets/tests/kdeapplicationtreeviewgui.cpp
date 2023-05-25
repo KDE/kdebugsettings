@@ -24,6 +24,7 @@ KDEApplicationTreeViewGui::KDEApplicationTreeViewGui(QWidget *parent)
         cat.categoryName = QStringLiteral("foo-%1").arg(i);
         cat.identifierName = QStringLiteral("ident-%1").arg(i);
         cat.description = QStringLiteral("desc-%1").arg(i);
+        cat.loggingType = LoggingCategory::Critical;
         cat.enabled = (i % 2);
         lst.append(cat);
     }

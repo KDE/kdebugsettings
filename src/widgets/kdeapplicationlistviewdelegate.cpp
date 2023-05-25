@@ -18,6 +18,7 @@ QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QSt
 {
     auto *comboBox = new CategoryTypeComboBox(parent);
     auto *that = const_cast<KDEApplicationListViewDelegate *>(this);
+    qDebug() << " KDEApplicationListViewDelegate::createEditor";
 #if 0
     connect(comboBox, &CategoryTypeComboBox::customerActivated, this, [=]() {
         Q_EMIT that->commitData(mComboBox);
@@ -30,7 +31,7 @@ QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QSt
 
 void KDEApplicationListViewDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    // qobject_cast<CategoryTypeComboBox *>(editor)->setType(index.data(Qt::EditRole).value<CustomerId>());
+    qobject_cast<CategoryTypeComboBox *>(editor)->setType(LoggingCategory::LoggingType::Critical);
 }
 
 void KDEApplicationListViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
