@@ -8,10 +8,10 @@
 #include "libkdebugsettings_export.h"
 #include <QTreeView>
 
-class LIBKDEBUGSETTINGS_EXPORT KDEApplicationListView : public QTreeView
+class LIBKDEBUGSETTINGS_EXPORT KDEApplicationTreeView : public QTreeView
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationListView(QWidget *parent = nullptr);
-    ~KDEApplicationListView() override;
+    explicit KDEApplicationTreeView(QWidget *parent = nullptr);
+    ~KDEApplicationTreeView() override;
 };

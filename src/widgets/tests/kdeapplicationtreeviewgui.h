@@ -8,10 +8,10 @@
 
 #include <QWidget>
 
-class KDEApplicationListViewGui : public QWidget
+class KDEApplicationTreeViewGui : public QWidget
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationListViewGui(QWidget *parent = nullptr);
-    ~KDEApplicationListViewGui() override = default;
+    explicit KDEApplicationTreeViewGui(QWidget *parent = nullptr);
+    ~KDEApplicationTreeViewGui() override = default;
 };

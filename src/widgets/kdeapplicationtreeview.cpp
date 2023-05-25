@@ -4,13 +4,13 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "kdeapplicationlistview.h"
+#include "kdeapplicationtreeview.h"
 #include <QHeaderView>
 
-KDEApplicationListView::KDEApplicationListView(QWidget *parent)
+KDEApplicationTreeView::KDEApplicationTreeView(QWidget *parent)
     : QTreeView(parent)
 {
     header()->hide();
 }
 
-KDEApplicationListView::~KDEApplicationListView() = default;
+KDEApplicationTreeView::~KDEApplicationTreeView() = default;

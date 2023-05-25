@@ -43,8 +43,8 @@ target_sources(libkdebugsettings PRIVATE
     customdebuglistview.cpp
 
 
-    kdeapplicationlistview.h
-    kdeapplicationlistview.cpp
+    kdeapplicationtreeview.h
+    kdeapplicationtreeview.cpp
     kdeapplicationlistviewdelegate.h
     kdeapplicationlistviewdelegate.cpp
     )

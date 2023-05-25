@@ -8,12 +8,12 @@
 
 #include <QObject>
 
-class KDEApplicationListViewTest : public QObject
+class KDEApplicationTreeViewTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationListViewTest(QObject *parent = nullptr);
-    ~KDEApplicationListViewTest() override = default;
+    explicit KDEApplicationTreeViewTest(QObject *parent = nullptr);
+    ~KDEApplicationTreeViewTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

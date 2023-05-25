@@ -5,14 +5,14 @@
 
 */
 
-#include "kdeapplicationlistviewgui.h"
+#include "kdeapplicationtreeviewgui.h"
 #include "customdebuglistview.h"
 #include "model/loggingcategorymodel.h"
 
 #include <QApplication>
 #include <QVBoxLayout>
 
-KDEApplicationListViewGui::KDEApplicationListViewGui(QWidget *parent)
+KDEApplicationTreeViewGui::KDEApplicationTreeViewGui(QWidget *parent)
     : QWidget{parent}
 {
 #if 0	
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    KDEApplicationListViewGui w;
+    KDEApplicationTreeViewGui w;
     w.show();
     return app.exec();
 }
