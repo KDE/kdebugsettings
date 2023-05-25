@@ -16,8 +16,8 @@ target_sources(libkdebugsettingscore PRIVATE
     model/loggingcategorymodel.h
     model/loggingcategorymodel.cpp
 
-    model/customdebugproxymodel.h
-    model/customdebugproxymodel.cpp
+    model/customloggingcategoryproxymodel.h
+    model/customloggingcategoryproxymodel.cpp
 
     model/categorytypemodel.h
     model/categorytypemodel.cpp

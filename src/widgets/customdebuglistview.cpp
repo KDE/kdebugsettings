@@ -9,7 +9,7 @@
 #include "configurecustomsettingdialog.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
-#include "model/customdebugproxymodel.h"
+#include "model/customloggingcategoryproxymodel.h"
 #include "model/loggingcategorymodel.h"
 
 #include <KLocalizedString>
@@ -21,9 +21,9 @@
 
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
-    , mCustomDebugProxyModel(new CustomDebugProxyModel(this))
+    , mCustomLoggingCategoryProxyModel(new CustomLoggingCategoryProxyModel(this))
 {
-    mCustomDebugProxyModel->setObjectName(QStringLiteral("mCustomDebugProxyModel"));
+    mCustomLoggingCategoryProxyModel->setObjectName(QStringLiteral("mCustomDebugProxyModel"));
     setContextMenuPolicy(Qt::CustomContextMenu);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
@@ -34,7 +34,7 @@ CustomDebugListView::~CustomDebugListView() = default;
 void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
 {
     const QModelIndex idx = indexAt(pos);
-    const QModelIndex index = mCustomDebugProxyModel->mapToSource(idx);
+    const QModelIndex index = mCustomLoggingCategoryProxyModel->mapToSource(idx);
     QMenu menu(this);
     const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
     const auto selectedItemCount{selectedIndexes.count()};
@@ -63,8 +63,8 @@ void CustomDebugListView::setLoggingCategoryModel(LoggingCategoryModel *newLoggi
     mLoggingCategoryModel = newLoggingCategoryModel;
     mLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
 
-    mCustomDebugProxyModel->setSourceModel(mLoggingCategoryModel);
-    setModel(mCustomDebugProxyModel);
+    mCustomLoggingCategoryProxyModel->setSourceModel(mLoggingCategoryModel);
+    setModel(mCustomLoggingCategoryProxyModel);
 }
 
 void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes)
@@ -129,5 +129,5 @@ void CustomDebugListView::editRule()
 
 void CustomDebugListView::setFilterRuleStr(const QString &str)
 {
-    mCustomDebugProxyModel->setFilterText(str);
+    mCustomLoggingCategoryProxyModel->setFilterText(str);
 }

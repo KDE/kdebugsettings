@@ -7,13 +7,13 @@
 #include "libkdebugsettingscore_export.h"
 #include <QSortFilterProxyModel>
 
-class LIBKDEBUGSETTINGSCORE_EXPORT CustomDebugProxyModel : public QSortFilterProxyModel
+class LIBKDEBUGSETTINGSCORE_EXPORT CustomLoggingCategoryProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
     Q_PROPERTY(QString filterText READ filterText WRITE setFilterText NOTIFY filterTextChanged FINAL)
 public:
-    explicit CustomDebugProxyModel(QObject *parent = nullptr);
-    ~CustomDebugProxyModel() override;
+    explicit CustomLoggingCategoryProxyModel(QObject *parent = nullptr);
+    ~CustomLoggingCategoryProxyModel() override;
 
     Q_REQUIRED_RESULT QString filterText() const;
     void setFilterText(const QString &newFilterText);

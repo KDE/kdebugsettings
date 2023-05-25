@@ -4,17 +4,17 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "customdebugproxymodel.h"
+#include "customloggingcategoryproxymodel.h"
 #include "loggingcategorymodel.h"
 
-CustomDebugProxyModel::CustomDebugProxyModel(QObject *parent)
+CustomLoggingCategoryProxyModel::CustomLoggingCategoryProxyModel(QObject *parent)
     : QSortFilterProxyModel{parent}
 {
 }
 
-CustomDebugProxyModel::~CustomDebugProxyModel() = default;
+CustomLoggingCategoryProxyModel::~CustomLoggingCategoryProxyModel() = default;
 
-bool CustomDebugProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+bool CustomLoggingCategoryProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (mFilterText.isEmpty()) {
         return true;
@@ -31,12 +31,12 @@ bool CustomDebugProxyModel::filterAcceptsRow(int source_row, const QModelIndex &
     return false;
 }
 
-QString CustomDebugProxyModel::filterText() const
+QString CustomLoggingCategoryProxyModel::filterText() const
 {
     return mFilterText;
 }
 
-void CustomDebugProxyModel::setFilterText(const QString &newFilterText)
+void CustomLoggingCategoryProxyModel::setFilterText(const QString &newFilterText)
 {
     if (mFilterText != newFilterText) {
         mFilterText = newFilterText;

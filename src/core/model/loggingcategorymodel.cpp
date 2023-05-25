@@ -61,7 +61,6 @@ QVariant LoggingCategoryModel::data(const QModelIndex &index, int role) const
     if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
         return {};
     }
-
     const LoggingCategory &category = mLoggingCategories.at(index.row());
     switch (role) {
     case DescriptionRole:
