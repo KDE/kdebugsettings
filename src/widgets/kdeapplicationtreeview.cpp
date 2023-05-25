@@ -6,10 +6,13 @@
 
 #include "kdeapplicationtreeview.h"
 #include "kdeapplicationlistviewdelegate.h"
+#include "model/kdeapplicationloggingcategorymodel.h"
+#include "model/kdeapplicationloggingcategoryproxymodel.h"
 #include <QHeaderView>
 
 KDEApplicationTreeView::KDEApplicationTreeView(QWidget *parent)
     : QTreeView(parent)
+    , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))
 {
     header()->hide();
     setRootIsDecorated(false);
@@ -19,3 +22,12 @@ KDEApplicationTreeView::KDEApplicationTreeView(QWidget *parent)
 }
 
 KDEApplicationTreeView::~KDEApplicationTreeView() = default;
+
+void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCategoryModel *newLoggingCategoryModel)
+{
+    mKdeApplicationLoggingCategoryModel = newLoggingCategoryModel;
+    mKdeApplicationLoggingCategoryModel->setObjectName(QStringLiteral("mKdeApplicationLoggingCategoryModel"));
+
+    mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mKdeApplicationLoggingCategoryModel);
+    setModel(mKdeApplicationLoggingCategoryProxyModel);
+}

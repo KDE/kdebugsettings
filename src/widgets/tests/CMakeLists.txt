@@ -9,10 +9,10 @@ target_link_libraries(customdebuglistviewgui
 )
 
 ######
-add_executable(kdeapplicationlistviewgui)
-target_sources(kdeapplicationlistviewgui PRIVATE
+add_executable(kdeapplicationtreeviewgui)
+target_sources(kdeapplicationtreeviewgui PRIVATE
     kdeapplicationtreeviewgui.h kdeapplicationtreeviewgui.cpp)
 
-target_link_libraries(kdeapplicationlistviewgui
+target_link_libraries(kdeapplicationtreeviewgui
     libkdebugsettings
 )

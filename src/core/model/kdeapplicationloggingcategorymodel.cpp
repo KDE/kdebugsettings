@@ -36,20 +36,18 @@ bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, 
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: invalid index";
         return false;
     }
-#if 0
     const int idx = modelIndex.row();
     LoggingCategory &cat = mLoggingCategories[idx];
-    switch (role) {
-    case CategoryRole: {
+    switch (static_cast<CategoryRoles>(modelIndex.column())) {
+    case LoggingTypeRole: {
         cat = value.value<LoggingCategory>();
-        const QModelIndex newIndex = index(modelIndex.row(), CategoryRole);
+        const QModelIndex newIndex = index(modelIndex.row(), LoggingTypeRole);
         Q_EMIT dataChanged(newIndex, newIndex);
         return true;
     }
     default:
         break;
     }
-#endif
     return false;
 }
 
@@ -59,27 +57,20 @@ QVariant KDEApplicationLoggingCategoryModel::data(const QModelIndex &index, int 
         return {};
     }
     const LoggingCategory &category = mLoggingCategories.at(index.row());
-#if 0
-    switch (role) {
-    case DescriptionRole:
-        return category.description;
-    case CategoryNameRole:
-        return category.categoryName;
-    case IdentifierNameRole:
-        return category.identifierName;
-    case Qt::ToolTipRole:
+    if (role == Qt::ToolTipRole) {
         return category.generateToolTip();
-    case DefaultCategoryRole:
-        return category.defaultSeverityType;
-    case Qt::DisplayRole:
-    case DisplayRuleRole:
-        return category.generateDisplayRule();
+    }
+    if (role != Qt::DisplayRole) {
+        return {};
+    }
+
+    switch (static_cast<CategoryRoles>(index.column())) {
+    case DescriptionRole: {
+        return category.description;
+    }
     case LoggingTypeRole:
         return category.loggingType;
-    case CategoryRole:
-        return QVariant::fromValue(category);
     }
-#endif
     return {};
 }
 
