@@ -6,7 +6,7 @@
 */
 
 #include "kdeapplicationtreeviewgui.h"
-#include "customdebuglistview.h"
+#include "kdeapplicationtreeview.h"
 #include "model/loggingcategorymodel.h"
 
 #include <QApplication>
@@ -15,9 +15,9 @@
 KDEApplicationTreeViewGui::KDEApplicationTreeViewGui(QWidget *parent)
     : QWidget{parent}
 {
-#if 0	
     auto vboxLayout = new QVBoxLayout(this);
-    auto view = new CustomDebugListView(this);
+    auto view = new KDEApplicationTreeView(this);
+#if 0
 
     LoggingCategory::List lst;
     for (int i = 0; i < 5; ++i) {
@@ -32,8 +32,8 @@ KDEApplicationTreeViewGui::KDEApplicationTreeViewGui(QWidget *parent)
     auto model = new LoggingCategoryModel(this);
     model->setLoggingCategories(lst);
     view->setLoggingCategoryModel(model);
-    vboxLayout->addWidget(view);
 #endif
+    vboxLayout->addWidget(view);
 }
 
 int main(int argc, char *argv[])

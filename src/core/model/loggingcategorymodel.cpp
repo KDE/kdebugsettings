@@ -29,6 +29,12 @@ int LoggingCategoryModel::rowCount(const QModelIndex &parent) const
     return mLoggingCategories.count();
 }
 
+int LoggingCategoryModel::columnCount(const QModelIndex &parent) const
+{
+    Q_UNUSED(parent)
+    return 1;
+}
+
 bool LoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
 {
     if (!modelIndex.isValid()) {
