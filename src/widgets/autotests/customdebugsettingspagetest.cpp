@@ -28,6 +28,7 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 
     auto mSearchLineEdit = page.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
     QVERIFY(mSearchLineEdit);
+    QVERIFY(!mSearchLineEdit->placeholderText().isEmpty());
 
     auto addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
     QVERIFY(addButton);
