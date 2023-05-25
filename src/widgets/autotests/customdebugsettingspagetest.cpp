@@ -6,9 +6,9 @@
 */
 
 #include "customdebugsettingspagetest.h"
+#include "customdebuglistview.h"
 #include "customdebugsettingspage.h"
-#include <KListWidgetSearchLine>
-#include <QListWidget>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QTest>
 
@@ -23,16 +23,11 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 {
     CustomDebugSettingsPage page;
 
-    auto listWidget = page.findChild<QListWidget *>(QStringLiteral("custom_listwidget"));
-    QVERIFY(listWidget);
-    QCOMPARE(listWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
-    QCOMPARE(listWidget->count(), 0);
-    QCOMPARE(listWidget->contextMenuPolicy(), Qt::CustomContextMenu);
+    auto mCustomDebugListView = page.findChild<CustomDebugListView *>(QStringLiteral("mCustomDebugListView"));
+    QVERIFY(mCustomDebugListView);
 
-    auto searchLine = page.findChild<KListWidgetSearchLine *>(QStringLiteral("searchline"));
-    QVERIFY(searchLine);
-    QVERIFY(!searchLine->placeholderText().isEmpty());
-    QCOMPARE(searchLine->listWidget(), listWidget);
+    auto mSearchLineEdit = page.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    QVERIFY(mSearchLineEdit);
 
     auto addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
     QVERIFY(addButton);
