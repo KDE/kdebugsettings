@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-25 00:49+0000\n"
+"POT-Creation-Date: 2023-05-26 00:49+0000\n"
 "PO-Revision-Date: 2023-04-11 00:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:39
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Konfiguratu arazteko ezarpenak"
@@ -36,17 +36,17 @@ msgstr "Konfiguratu arazteko ezarpenak"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings-en egileak"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantentzailea"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,22 +54,22 @@ msgstr ""
 "Gaitu «QStandardPaths» proba-modua, adib. «unittests»ek erabilitako  "
 "irakurri/idatzi ezarpenak"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:53
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Gaitu arazte osoa modulu guztietarako."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Ezgaitu arazte osoa modulu guztietarako."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:59
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Aldatu arazte modua kontsola (kontsolan)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:63
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -78,8 +78,8 @@ msgstr ""
 "(kontsolan)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:77 src/quickapps/main.cpp:87
-#: src/quickapps/main.cpp:97
+#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
+#: src/quickapps/main.cpp:98
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Ezinezkoa da arazte modua aldatzea"
@@ -159,7 +159,7 @@ msgstr "Kritikoa"
 msgid "Off"
 msgstr "Desgaituta"
 
-#: src/quickapps/main.cpp:43
+#: src/quickapps/main.cpp:44
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
@@ -234,7 +234,13 @@ msgstr "Editatu..."
 msgid "Remove..."
 msgstr "Kendu..."
 
-#: src/widgets/customdebugsettingspage.cpp:45
+#: src/widgets/customdebugsettingspage.cpp:38
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Bilatu..."
+
+#: src/widgets/customdebugsettingspage.cpp:46
 #, kde-format
 msgid "Add..."
 msgstr "Gehitu..."
@@ -340,11 +346,6 @@ msgstr "Itzali araztea"
 #, kde-format
 msgid "Turn Off All Messages"
 msgstr "Itzali mezu guztiak"
-
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Bilatu..."
 
 #: src/widgets/kdebugsettingsdialog.cpp:63
 #, kde-format

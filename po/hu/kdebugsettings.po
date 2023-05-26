@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-25 00:49+0000\n"
+"POT-Creation-Date: 2023-05-26 00:49+0000\n"
 "PO-Revision-Date: 2015-09-11 13:17+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:39
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
 #, fuzzy, kde-format
 #| msgid "kdebugssettings"
 msgid "KDebugSettings"
 msgstr "kdebugssettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hibakeresési beállítások módosítása"
@@ -34,46 +34,46 @@ msgstr "Hibakeresési beállítások módosítása"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© A kdebugsettings szerzői, 2015."
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:53
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr ""
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr ""
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:59
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr ""
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:63
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:77 src/quickapps/main.cpp:87
-#: src/quickapps/main.cpp:97
+#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
+#: src/quickapps/main.cpp:98
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr ""
@@ -157,7 +157,7 @@ msgstr "Kritikus"
 msgid "Off"
 msgstr ""
 
-#: src/quickapps/main.cpp:43
+#: src/quickapps/main.cpp:44
 #, fuzzy, kde-format
 #| msgid "(c) 2015 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
@@ -237,7 +237,13 @@ msgstr "Szerkesztés…"
 msgid "Remove..."
 msgstr "Eltávolítás…"
 
-#: src/widgets/customdebugsettingspage.cpp:45
+#: src/widgets/customdebugsettingspage.cpp:38
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Keresés…"
+
+#: src/widgets/customdebugsettingspage.cpp:46
 #, kde-format
 msgid "Add..."
 msgstr "Hozzáadás…"
@@ -342,11 +348,6 @@ msgstr ""
 #, kde-format
 msgid "Turn Off All Messages"
 msgstr ""
-
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Keresés…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:63
 #, kde-format

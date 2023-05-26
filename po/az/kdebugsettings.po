@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-25 00:49+0000\n"
+"POT-Creation-Date: 2023-05-26 00:49+0000\n"
 "PO-Revision-Date: 2023-03-12 18:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:39
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Sazlama ayarlarını tənzimləmək"
@@ -32,17 +32,17 @@ msgstr "Sazlama ayarlarını tənzimləmək"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings müəllifləri"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:44
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
 #, kde-format
 msgid "Maintainer"
 msgstr "Müşayətçi"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -50,22 +50,22 @@ msgstr ""
 "QStandardPaths sınaq rejimini aktiv etmək, məs., unittests tərəfindən "
 "istifadə olunan oxuma/yazma ayarları"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:53
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Bütün modullar üçün tam sazlamanı aktivləşdirmək"
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Bütün modullar üçün tam sazlamanı söndürmək"
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:59
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Sazlama rejimini konsoldan dəyişmək"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:63
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -74,8 +74,8 @@ msgstr ""
 "göstərin"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:77 src/quickapps/main.cpp:87
-#: src/quickapps/main.cpp:97
+#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
+#: src/quickapps/main.cpp:98
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Sazlama rejimini dəyişdirmək mümkün deyil"
@@ -155,7 +155,7 @@ msgstr "Kritik"
 msgid "Off"
 msgstr "Söndürülüb"
 
-#: src/quickapps/main.cpp:43
+#: src/quickapps/main.cpp:44
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
@@ -230,7 +230,13 @@ msgstr "Dəyişmək..."
 msgid "Remove..."
 msgstr "Silmək..."
 
-#: src/widgets/customdebugsettingspage.cpp:45
+#: src/widgets/customdebugsettingspage.cpp:38
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#, kde-format
+msgid "Search..."
+msgstr "Axtarış..."
+
+#: src/widgets/customdebugsettingspage.cpp:46
 #, kde-format
 msgid "Add..."
 msgstr "Əlavə etmək..."
@@ -333,11 +339,6 @@ msgstr "Sazlamaları söndürmək"
 #, kde-format
 msgid "Turn Off All Messages"
 msgstr "Bütün ismarıcları söndürmək"
-
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
-#, kde-format
-msgid "Search..."
-msgstr "Axtarış..."
 
 #: src/widgets/kdebugsettingsdialog.cpp:63
 #, kde-format
