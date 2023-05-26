@@ -114,6 +114,35 @@ QString LoggingCategory::generateToolTip() const
     if (!identifierName.isEmpty()) {
         toopTip += QLatin1Char('\n') + i18n("Identifier: %1", identifierName);
     }
-    toopTip += QLatin1Char('\n') + i18n("Default Severity: %1", KDebugSettingsUtil::convertCategoryTypeToString(defaultSeverityType));
+    toopTip += QLatin1Char('\n') + i18n("Default Severity: %1", convertCategoryTypeToString(defaultSeverityType));
     return toopTip;
+}
+
+QString LoggingCategory::convertCategoryTypeToString(LoggingCategory::LoggingType type) const
+{
+    QString str;
+    switch (type) {
+    case LoggingCategory::All:
+        str = i18n("All Debug Messages");
+        break;
+    case LoggingCategory::Info:
+        str = i18n("Info Messages");
+        break;
+    case LoggingCategory::Warning:
+        str = i18n("Warning Messages");
+        break;
+    case LoggingCategory::Debug:
+        str = i18n("Debug Messages");
+        break;
+    case LoggingCategory::Critical:
+        str = i18n("Critical Messages");
+        break;
+    case LoggingCategory::Off:
+        str = i18n("No Debug Messages");
+        break;
+    case LoggingCategory::Undefined:
+        str = i18n("Undefined");
+        break;
+    }
+    return str;
 }

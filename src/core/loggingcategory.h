@@ -47,6 +47,9 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     LoggingType loggingType = Info;
     LoggingType defaultSeverityType = Info;
     bool enabled = true;
+
+private:
+    Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type) const;
 };
 LIBKDEBUGSETTINGSCORE_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 

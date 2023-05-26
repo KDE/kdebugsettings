@@ -418,23 +418,21 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
     QString str;
     switch (type) {
     case LoggingCategory::All:
-        str = i18n("All Debug Messages");
+        str = i18n("Full Debug");
         break;
     case LoggingCategory::Info:
-        str = i18n("Info Messages");
+        str = i18n("Info");
         break;
     case LoggingCategory::Warning:
-        str = i18n("Warning Messages");
-        break;
-    case LoggingCategory::Debug:
-        str = i18n("Debug Messages");
+        str = i18n("Warning");
         break;
     case LoggingCategory::Critical:
-        str = i18n("Critical Messages");
+        str = i18n("Critical");
         break;
     case LoggingCategory::Off:
-        str = i18n("No Debug Messages");
+        str = i18n("Off");
         break;
+    case LoggingCategory::Debug:
     case LoggingCategory::Undefined:
         str = i18n("Undefined");
         break;
