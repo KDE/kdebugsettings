@@ -417,6 +417,7 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
 {
     QString str;
     switch (type) {
+    case LoggingCategory::Debug:
     case LoggingCategory::All:
         str = i18n("Full Debug");
         break;
@@ -432,7 +433,6 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
     case LoggingCategory::Off:
         str = i18n("Off");
         break;
-    case LoggingCategory::Debug:
     case LoggingCategory::Undefined:
         str = i18n("Undefined");
         break;
