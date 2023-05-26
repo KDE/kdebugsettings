@@ -68,6 +68,7 @@ void CustomDebugListView::setLoggingCategoryModel(CustomLoggingCategoryModel *ne
     setModel(mCustomLoggingCategoryProxyModel);
     connect(mCustomLoggingCategoryModel, &QAbstractListModel::rowsRemoved, this, &CustomDebugListView::updateButtonsRequested);
     connect(mCustomLoggingCategoryModel, &QAbstractListModel::rowsInserted, this, &CustomDebugListView::updateButtonsRequested);
+    connect(mCustomLoggingCategoryModel, &QAbstractListModel::modelReset, this, &CustomDebugListView::updateButtonsRequested);
 }
 
 void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes)
