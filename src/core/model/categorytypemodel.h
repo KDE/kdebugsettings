@@ -28,9 +28,15 @@ public:
 
 private:
     struct CategoryInfo {
+        CategoryInfo(const QString &catStr, LoggingCategory::LoggingType catType)
+            : displayText(catStr)
+            , type(catType)
+        {
+        }
         QString displayText;
         LoggingCategory::LoggingType type;
     };
+    Q_REQUIRED_RESULT CategoryTypeModel::CategoryInfo createCategoryInfo(LoggingCategory::LoggingType type);
     void fillCategoryTypes();
     QVector<CategoryInfo> mCategoryInfoList;
     QHash<int, QByteArray> mRoleNames;

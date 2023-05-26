@@ -5,6 +5,7 @@
 */
 
 #include "categorytypemodel.h"
+#include "kdebugsettingsutil.h"
 #include <KLocalizedString>
 
 CategoryTypeModel::CategoryTypeModel(QObject *parent)
@@ -51,14 +52,20 @@ QVariant CategoryTypeModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
+CategoryTypeModel::CategoryInfo CategoryTypeModel::createCategoryInfo(LoggingCategory::LoggingType type)
+{
+    const CategoryTypeModel::CategoryInfo cat(KDebugSettingsUtil::convertCategoryTypeToString(type), type);
+    return cat;
+}
+
 void CategoryTypeModel::fillCategoryTypes()
 {
     mCategoryInfoList = {
-        {i18n("Full Debug"), LoggingCategory::All},
-        {i18n("Info"), LoggingCategory::Info},
-        {i18n("Warning"), LoggingCategory::Warning},
-        {i18n("Critical"), LoggingCategory::Critical},
-        {i18n("Off"), LoggingCategory::Off},
+        createCategoryInfo(LoggingCategory::All),
+        createCategoryInfo(LoggingCategory::Info),
+        createCategoryInfo(LoggingCategory::Warning),
+        createCategoryInfo(LoggingCategory::Critical),
+        createCategoryInfo(LoggingCategory::Off),
     };
 }
 
