@@ -27,6 +27,7 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
+    connect(this, &CustomDebugListView::doubleClicked, this, &CustomDebugListView::slotEditRule);
 }
 
 CustomDebugListView::~CustomDebugListView() = default;
@@ -88,6 +89,9 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
 
 void CustomDebugListView::slotEditRule(const QModelIndex &index)
 {
+    if (!index.isValid()) {
+        return;
+    }
     const QString rule = mCustomLoggingCategoryModel->index(index.row()).data(CustomLoggingCategoryModel::DisplayRuleRole).toString();
     QPointer<ConfigureCustomSettingDialog> dlg = new ConfigureCustomSettingDialog(this);
     dlg->setRule(rule);
