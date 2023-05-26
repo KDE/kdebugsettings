@@ -90,6 +90,18 @@
             ]
         },
         {
+            "name": "asan-qt6",
+            "displayName": "Build with Asan support.",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+		"BUILD_WITH_QT6": "ON",
+                "ECM_ENABLE_SANITIZERS" : "'address;undefined'"
+            },
+            "inherits": [
+                "base-qt6"
+            ]
+        },	
+        {
             "name": "dev-clang",
             "displayName": "dev-clang",
             "cacheVariables": {
@@ -219,6 +231,10 @@
 	{
             "name": "asan",
             "configurePreset": "asan"
+        },
+        {
+            "name": "asan-qt6",
+            "configurePreset": "asan-qt6"
         },
         {
             "name": "clazy",
