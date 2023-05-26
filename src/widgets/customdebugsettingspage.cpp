@@ -60,6 +60,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     mSearchLineEdit->installEventFilter(this);
     connect(mSearchLineEdit, &QLineEdit::textChanged, mCustomDebugListView, &CustomDebugListView::setFilterRuleStr);
     connect(mCustomDebugListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &CustomDebugSettingsPage::updateButtons);
+    connect(mCustomDebugListView, &CustomDebugListView::updateButtonsRequested, this, &CustomDebugSettingsPage::updateButtons);
 }
 
 CustomDebugSettingsPage::~CustomDebugSettingsPage() = default;
@@ -84,6 +85,5 @@ void CustomDebugSettingsPage::updateButtons()
 
 LoggingCategory::List CustomDebugSettingsPage::rules() const
 {
-    // Remove it ????
     return LoggingManager::self().customCategoryModel()->loggingCategories();
 }

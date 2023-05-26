@@ -26,6 +26,9 @@ public:
 
     void setFilterRuleStr(const QString &str);
 
+Q_SIGNALS:
+    void updateButtonsRequested();
+
 private:
     void slotEditRule(const QModelIndex &index);
     void slotRemoveRules(const QModelIndexList &selectedIndexes);
