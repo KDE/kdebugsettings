@@ -29,6 +29,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
     mainLayout->addWidget(mSearchLineEdit);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
+    mSearchLineEdit->setClearButtonEnabled(true);
 
     mKdeApplicationTreeView->setObjectName(QStringLiteral("mKdeApplicationTreeView"));
     mainLayout->addWidget(mKdeApplicationTreeView);
