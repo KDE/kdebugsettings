@@ -7,7 +7,6 @@
 #include "kdeapplicationlistviewdelegate.h"
 #include "categorytypecombobox.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
-#include <QSpinBox>
 
 KDEApplicationListViewDelegate::KDEApplicationListViewDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
