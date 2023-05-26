@@ -42,6 +42,7 @@ void KDEApplicationListViewDelegate::setModelData(QWidget *editor, QAbstractItem
 
 void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /*index*/) const
 {
+#if 0
     const int hCell = option.rect.height();
     const QSize hint = editor->sizeHint();
     const int hEditor = hint.height();
@@ -50,4 +51,7 @@ void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const
     size.setWidth(std::max(size.width(), hint.width()));
     size.setHeight(h);
     editor->setGeometry(QRect(option.rect.topLeft() - QPoint(0, (h - hCell) / 2), size));
+#else
+    editor->setGeometry(option.rect);
+#endif
 }

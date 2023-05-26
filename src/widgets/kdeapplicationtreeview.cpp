@@ -18,7 +18,9 @@ KDEApplicationTreeView::KDEApplicationTreeView(QWidget *parent)
     setRootIsDecorated(false);
     setAlternatingRowColors(true);
     setSelectionBehavior(QAbstractItemView::SelectRows);
-    setEditTriggers(DoubleClicked);
+    setSelectionMode(ExtendedSelection);
+    setEditTriggers(AllEditTriggers);
+    setUniformRowHeights(true);
 }
 
 KDEApplicationTreeView::~KDEApplicationTreeView() = default;
@@ -33,4 +35,5 @@ void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCatego
     // Hide column when we have model.
     hideColumn(KDEApplicationLoggingCategoryModel::LoggingTypeRole);
     setItemDelegateForColumn(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole, new KDEApplicationListViewDelegate(this));
+    resizeColumnToContents(KDEApplicationLoggingCategoryModel::DescriptionRole);
 }

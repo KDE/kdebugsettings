@@ -13,6 +13,7 @@
 class QPushButton;
 class KDEApplicationTreeListWidget;
 class KTreeWidgetSearchLine;
+class KDEApplicationTreeView;
 class LIBKDEBUGSETTINGS_EXPORT KDEApplicationDebugSettingPage : public QWidget
 {
     Q_OBJECT
@@ -40,4 +41,5 @@ private:
     QPushButton *const mEnableDebug;
     QPushButton *const mTurnOffDebug;
     QPushButton *const mTurnOffAllMessages;
+    KDEApplicationTreeView *mKdeApplicationTreeView = nullptr;
 };

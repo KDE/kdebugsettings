@@ -7,6 +7,8 @@
 
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdeapplicationtreelistwidget.h"
+#include "kdeapplicationtreeview.h"
+#include "loggingmanager.h"
 #include <KLocalizedString>
 #include <KTreeWidgetSearchLine>
 #include <QEvent>
@@ -34,6 +36,12 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
 
     mainLayout->addWidget(mTreeListWidget);
 
+#if 0
+    mKdeApplicationTreeView = new KDEApplicationTreeView(this);
+    mKdeApplicationTreeView->setObjectName(QStringLiteral("mKdeApplicationTreeView"));
+    mainLayout->addWidget(mKdeApplicationTreeView);
+    mKdeApplicationTreeView->setLoggingCategoryModel(LoggingManager::self().qtKdeCategoryModel());
+#endif
     auto buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
