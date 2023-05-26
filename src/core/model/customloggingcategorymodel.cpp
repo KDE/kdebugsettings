@@ -122,7 +122,7 @@ bool CustomLoggingCategoryModel::addCategory(const LoggingCategory &category)
             return cat == category;
         });
         if (it == mLoggingCategories.cend()) {
-            beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count());
+            beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count());
             mLoggingCategories.append(category);
             endInsertRows();
         } else {
