@@ -7,12 +7,14 @@
 
 #include "kdeapplicationdebugsettingpagetest.h"
 #include "kdeapplicationdebugsettingpage.h"
-#include "kdeapplicationtreelistwidget.h"
-#include <KTreeWidgetSearchLine>
+#include "kdeapplicationtreeview.h"
 #include <QHeaderView>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QTest>
 #include <QVBoxLayout>
+
+QTEST_MAIN(KDEApplicationDebugSettingPageTest)
 
 KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)
     : QObject(parent)
@@ -24,13 +26,11 @@ KDEApplicationDebugSettingPageTest::~KDEApplicationDebugSettingPageTest() = defa
 void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
 {
     KDEApplicationDebugSettingPage page;
-    auto listWidget = page.findChild<KDEApplicationTreeListWidget *>(QStringLiteral("listwidget"));
-    QVERIFY(listWidget);
-    QVERIFY(!listWidget->rootIsDecorated());
-    QVERIFY(listWidget->header()->isHidden());
-    QVERIFY(listWidget->isColumnHidden(2));
-    QCOMPARE(listWidget->columnCount(), 4);
-    QVERIFY(listWidget->uniformRowHeights());
+    auto mKdeApplicationTreeView = page.findChild<KDEApplicationTreeView *>(QStringLiteral("mKdeApplicationTreeView"));
+    QVERIFY(mKdeApplicationTreeView);
+    QVERIFY(!mKdeApplicationTreeView->rootIsDecorated());
+    QVERIFY(mKdeApplicationTreeView->header()->isHidden());
+    QVERIFY(mKdeApplicationTreeView->uniformRowHeights());
 
     auto mainLayout = page.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
@@ -47,9 +47,7 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QVERIFY(mTurnOffAllMessages);
     QVERIFY(mTurnOffAllMessages->isEnabled());
 
-    auto searchLine = page.findChild<KTreeWidgetSearchLine *>(QStringLiteral("searchline"));
-    QVERIFY(searchLine);
-    QVERIFY(searchLine->text().isEmpty());
+    auto mSearchLineEdit = page.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    QVERIFY(mSearchLineEdit);
+    QVERIFY(mSearchLineEdit->text().isEmpty());
 }
-
-QTEST_MAIN(KDEApplicationDebugSettingPageTest)

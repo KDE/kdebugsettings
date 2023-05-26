@@ -11,8 +11,7 @@
 #include "loggingcategory.h"
 #include <QWidget>
 class QPushButton;
-class KDEApplicationTreeListWidget;
-class KTreeWidgetSearchLine;
+class QLineEdit;
 class KDEApplicationTreeView;
 class LIBKDEBUGSETTINGS_EXPORT KDEApplicationDebugSettingPage : public QWidget
 {
@@ -20,7 +19,6 @@ class LIBKDEBUGSETTINGS_EXPORT KDEApplicationDebugSettingPage : public QWidget
 public:
     explicit KDEApplicationDebugSettingPage(QWidget *parent = nullptr);
     ~KDEApplicationDebugSettingPage() override;
-    void fillList(const LoggingCategory::List &list);
     Q_REQUIRED_RESULT LoggingCategory::List rules(bool forceSavingAllRules) const;
     void insertCategories(const LoggingCategory::List &list);
 
@@ -36,10 +34,9 @@ private:
     LIBKDEBUGSETTINGS_NO_EXPORT void slotDeselectAllDebug();
     LIBKDEBUGSETTINGS_NO_EXPORT void slotDeselectAllMessages();
 
-    KDEApplicationTreeListWidget *const mTreeListWidget;
-    KTreeWidgetSearchLine *const mTreeListWidgetSearchLine;
+    QLineEdit *const mSearchLineEdit;
     QPushButton *const mEnableDebug;
     QPushButton *const mTurnOffDebug;
     QPushButton *const mTurnOffAllMessages;
-    KDEApplicationTreeView *mKdeApplicationTreeView = nullptr;
+    KDEApplicationTreeView *const mKdeApplicationTreeView;
 };

@@ -6,42 +6,34 @@
 */
 
 #include "kdeapplicationdebugsettingpage.h"
-#include "kdeapplicationtreelistwidget.h"
 #include "kdeapplicationtreeview.h"
 #include "loggingmanager.h"
 #include <KLocalizedString>
-#include <KTreeWidgetSearchLine>
 #include <QEvent>
 #include <QKeyEvent>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QVBoxLayout>
 
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
-    , mTreeListWidget(new KDEApplicationTreeListWidget(this))
-    , mTreeListWidgetSearchLine(new KTreeWidgetSearchLine(this, mTreeListWidget))
+    , mSearchLineEdit(new QLineEdit(this))
     , mEnableDebug(new QPushButton(i18n("Enable All Debug"), this))
     , mTurnOffDebug(new QPushButton(i18n("Turn Off Debug"), this))
     , mTurnOffAllMessages(new QPushButton(i18n("Turn Off All Messages"), this))
+    , mKdeApplicationTreeView(new KDEApplicationTreeView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mTreeListWidget->setObjectName(QStringLiteral("listwidget"));
+    mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
+    mainLayout->addWidget(mSearchLineEdit);
+    mSearchLineEdit->setPlaceholderText(i18n("Search..."));
 
-    mTreeListWidgetSearchLine->setPlaceholderText(i18n("Search..."));
-    mTreeListWidgetSearchLine->setObjectName(QStringLiteral("searchline"));
-    mTreeListWidgetSearchLine->setSearchColumns(mTreeListWidget->searchColumns());
-    mainLayout->addWidget(mTreeListWidgetSearchLine);
-
-    mainLayout->addWidget(mTreeListWidget);
-
-#if 0
-    mKdeApplicationTreeView = new KDEApplicationTreeView(this);
     mKdeApplicationTreeView->setObjectName(QStringLiteral("mKdeApplicationTreeView"));
     mainLayout->addWidget(mKdeApplicationTreeView);
     mKdeApplicationTreeView->setLoggingCategoryModel(LoggingManager::self().qtKdeCategoryModel());
-#endif
+
     auto buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
@@ -57,19 +49,20 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     buttonLayout->addWidget(mTurnOffAllMessages);
     connect(mTurnOffAllMessages, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllMessages);
 
-    mTreeListWidgetSearchLine->installEventFilter(this);
+    mSearchLineEdit->installEventFilter(this);
+    connect(mSearchLineEdit, &QLineEdit::textChanged, mKdeApplicationTreeView, &KDEApplicationTreeView::setFilterRuleStr);
 }
 
 KDEApplicationDebugSettingPage::~KDEApplicationDebugSettingPage() = default;
 
 void KDEApplicationDebugSettingPage::forceFocus()
 {
-    mTreeListWidgetSearchLine->setFocus();
+    mSearchLineEdit->setFocus();
 }
 
 bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
 {
-    if (event->type() == QEvent::KeyPress && obj == mTreeListWidgetSearchLine) {
+    if (event->type() == QEvent::KeyPress && obj == mSearchLineEdit) {
         auto key = static_cast<QKeyEvent *>(event);
         if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
             event->accept();
@@ -81,35 +74,30 @@ bool KDEApplicationDebugSettingPage::eventFilter(QObject *obj, QEvent *event)
 
 void KDEApplicationDebugSettingPage::slotSelectAllDebug()
 {
-    mTreeListWidget->selectAllDebugCategories();
+    mKdeApplicationTreeView->selectAllDebugCategories();
 }
 
 void KDEApplicationDebugSettingPage::slotDeselectAllDebug()
 {
-    mTreeListWidget->deSelectAllDebugCategories();
+    mKdeApplicationTreeView->deSelectAllDebugCategories();
 }
 
 void KDEApplicationDebugSettingPage::slotDeselectAllMessages()
 {
-    mTreeListWidget->deSelectAllMessagesCategories();
-}
-
-void KDEApplicationDebugSettingPage::fillList(const LoggingCategory::List &list)
-{
-    mTreeListWidget->fillList(list);
+    mKdeApplicationTreeView->deSelectAllMessagesCategories();
 }
 
 LoggingCategory::List KDEApplicationDebugSettingPage::rules(bool forceSavingAllRules) const
 {
-    return mTreeListWidget->rules(forceSavingAllRules);
+    return mKdeApplicationTreeView->rules(forceSavingAllRules);
 }
 
 void KDEApplicationDebugSettingPage::insertCategories(const LoggingCategory::List &list)
 {
-    mTreeListWidget->insertCategories(list);
+    mKdeApplicationTreeView->insertCategories(list);
 }
 
 void KDEApplicationDebugSettingPage::restoreToDefault()
 {
-    mTreeListWidget->restoreToDefault();
+    mKdeApplicationTreeView->restoreToDefault();
 }

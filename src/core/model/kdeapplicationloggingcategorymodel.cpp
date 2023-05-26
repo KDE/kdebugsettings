@@ -42,6 +42,20 @@ Qt::ItemFlags KDEApplicationLoggingCategoryModel::flags(const QModelIndex &index
     return QAbstractItemModel::flags(index);
 }
 
+void KDEApplicationLoggingCategoryModel::replaceCategories(const LoggingCategory::List &categories)
+{
+    beginResetModel();
+    for (const auto &category : categories) {
+        for (int i = 0; i < mLoggingCategories.count(); ++i) {
+            if (mLoggingCategories.at(i).categoryName == category.categoryName) {
+                mLoggingCategories.replace(i, category);
+                break;
+            }
+        }
+    }
+    endResetModel();
+}
+
 bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
 {
     if (!modelIndex.isValid()) {
@@ -87,6 +101,8 @@ QVariant KDEApplicationLoggingCategoryModel::data(const QModelIndex &index, int 
         return KDebugSettingsUtil::convertCategoryTypeToString(category.loggingType);
     case LoggingTypeRole:
         return category.loggingType;
+    case CategoryRole:
+        return QVariant::fromValue(category);
     }
     return {};
 }

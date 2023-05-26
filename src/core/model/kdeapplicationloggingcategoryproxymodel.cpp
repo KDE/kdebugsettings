@@ -19,14 +19,11 @@ bool KDEApplicationLoggingCategoryProxyModel::filterAcceptsRow(int source_row, c
     if (mFilterText.isEmpty()) {
         return true;
     }
-    const QModelIndex sourceIndex = sourceModel()->index(source_row, 0, source_parent);
-#if 0
-    const QString categoryName = sourceIndex.data(KDEApplicationLoggingCategoryModel::DescriptionRole).toString();
-    if (sourceIndex.data(KDEApplicationLoggingCategoryModel::DescriptionRole).toString().contains(mFilterText)
-        || sourceIndex.data(CustomLoggingCategoryModel::IdentifierNameRole).toString().contains(mFilterText)) {
+    const QModelIndex sourceIndex = sourceModel()->index(source_row, KDEApplicationLoggingCategoryModel::CategoryRole, source_parent);
+    const auto category = sourceIndex.data().value<LoggingCategory>();
+    if (category.description.contains(mFilterText) || category.categoryName.contains(mFilterText) || category.identifierName.contains(mFilterText)) {
         return true;
     }
-#endif
     return false;
 }
 

@@ -6,6 +6,7 @@
 
 #pragma once
 #include "libkdebugsettings_export.h"
+#include "loggingcategory.h"
 #include <QTreeView>
 
 class KDEApplicationLoggingCategoryModel;
@@ -18,6 +19,17 @@ public:
     ~KDEApplicationTreeView() override;
 
     void setLoggingCategoryModel(KDEApplicationLoggingCategoryModel *newLoggingCategoryModel);
+
+    void setFilterRuleStr(const QString &str);
+
+    void selectAllDebugCategories();
+    void deSelectAllDebugCategories();
+    void deSelectAllMessagesCategories();
+    void restoreToDefault();
+
+    void insertCategories(const LoggingCategory::List &list);
+
+    Q_REQUIRED_RESULT LoggingCategory::List rules(bool forceSavingAllRules) const;
 
 private:
     KDEApplicationLoggingCategoryModel *mKdeApplicationLoggingCategoryModel = nullptr;

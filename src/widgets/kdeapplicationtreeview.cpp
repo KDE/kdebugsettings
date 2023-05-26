@@ -34,6 +34,94 @@ void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCatego
     setModel(mKdeApplicationLoggingCategoryProxyModel);
     // Hide column when we have model.
     hideColumn(KDEApplicationLoggingCategoryModel::LoggingTypeRole);
+    hideColumn(KDEApplicationLoggingCategoryModel::CategoryRole);
     setItemDelegateForColumn(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole, new KDEApplicationListViewDelegate(this));
     resizeColumnToContents(KDEApplicationLoggingCategoryModel::DescriptionRole);
+}
+
+void KDEApplicationTreeView::setFilterRuleStr(const QString &str)
+{
+    mKdeApplicationLoggingCategoryProxyModel->setFilterText(str);
+}
+
+void KDEApplicationTreeView::selectAllDebugCategories()
+{
+    LoggingCategory::List lst;
+    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+        QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
+            mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
+        auto cat = index.data().value<LoggingCategory>();
+        cat.loggingType = LoggingCategory::Debug;
+        lst.append(cat);
+    }
+    if (!lst.isEmpty()) {
+        mKdeApplicationLoggingCategoryModel->replaceCategories(lst);
+    }
+}
+
+void KDEApplicationTreeView::deSelectAllDebugCategories()
+{
+    LoggingCategory::List lst;
+    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+        const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
+            mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
+        auto cat = index.data().value<LoggingCategory>();
+        cat.loggingType = LoggingCategory::Info;
+        lst.append(cat);
+    }
+    if (!lst.isEmpty()) {
+        mKdeApplicationLoggingCategoryModel->replaceCategories(lst);
+    }
+}
+
+void KDEApplicationTreeView::deSelectAllMessagesCategories()
+{
+    LoggingCategory::List lst;
+    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+        const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
+            mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
+        auto cat = index.data().value<LoggingCategory>();
+        cat.loggingType = LoggingCategory::Off;
+        lst.append(cat);
+    }
+    if (!lst.isEmpty()) {
+        mKdeApplicationLoggingCategoryModel->replaceCategories(lst);
+    }
+}
+
+void KDEApplicationTreeView::insertCategories(const LoggingCategory::List &list)
+{
+    mKdeApplicationLoggingCategoryModel->insertCategories(list);
+}
+
+void KDEApplicationTreeView::restoreToDefault()
+{
+    LoggingCategory::List lst;
+    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+        const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
+            mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
+        auto cat = index.data().value<LoggingCategory>();
+        cat.loggingType = cat.defaultSeverityType;
+        lst.append(cat);
+    }
+    if (!lst.isEmpty()) {
+        mKdeApplicationLoggingCategoryModel->replaceCategories(lst);
+    }
+}
+
+LoggingCategory::List KDEApplicationTreeView::rules(bool forceSavingAllRules) const
+{
+    LoggingCategory::List lst;
+    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+        const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
+            mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
+        auto cat = index.data().value<LoggingCategory>();
+        if (forceSavingAllRules || (cat.loggingType != cat.defaultSeverityType)) {
+            cat.enabled = false;
+            if (cat.isValid()) {
+                lst.append(cat);
+            }
+        }
+    }
+    return lst;
 }

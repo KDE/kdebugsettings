@@ -16,6 +16,7 @@ public:
     enum CategoryRoles {
         DescriptionRole,
         LoggingTypeRole,
+        CategoryRole,
         LoggingTypeStrRole,
         LastColumn = LoggingTypeStrRole,
     };
@@ -44,6 +45,8 @@ public:
     Q_REQUIRED_RESULT LoggingCategory::List loggingCategories() const;
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;
+
+    void replaceCategories(const LoggingCategory::List &categories);
 
 private:
     LoggingCategory::List mLoggingCategories;
