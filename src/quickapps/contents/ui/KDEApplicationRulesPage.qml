@@ -27,7 +27,7 @@ Kirigami.ScrollablePage {
         focus: true // keyboard navigation
         activeFocusOnTab: true // keyboard navigation
         clip: true
-        model: CustomLoggingCategoryProxyModel {
+        model: KDEApplicationLoggingCategoryProxyModel {
             id: loggingDebugProxyModel
             sourceModel: LoggingManager.qtKdeCategoryModel
         }
