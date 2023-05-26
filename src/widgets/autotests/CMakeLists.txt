@@ -28,7 +28,6 @@ add_kdebugsettings_unittest( configurecustomsettingwidgettest.cpp)
 add_kdebugsettings_unittest( environmentsettingsrulespagetest.cpp)
 add_kdebugsettings_unittest( categorytypecomboboxtest.cpp)
 
-add_kdebugsettings_unittest( kdeapplicationtreelistwidgettest.cpp)
 add_kdebugsettings_unittest( categorywarningtest.cpp)
 add_kdebugsettings_unittest( loadgroupmenutest.cpp)
 add_kdebugsettings_unittest( loadtoolbuttontest.cpp)

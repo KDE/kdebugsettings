@@ -27,8 +27,6 @@ target_sources(libkdebugsettings PRIVATE
     groupmanagementwidget.h
     kdeapplicationdebugsettingpage.cpp
     kdeapplicationdebugsettingpage.h
-    kdeapplicationtreelistwidget.cpp
-    kdeapplicationtreelistwidget.h
     kdebugsettingsdialog.cpp
     kdebugsettingsdialog.h
     libkdebugsettings_private_export.h
