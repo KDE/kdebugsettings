@@ -12,7 +12,7 @@
 #include <QVector>
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
-    enum LoggingType {
+    enum LoggingType : char {
         All = 0,
         Info,
         Warning,
