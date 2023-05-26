@@ -150,3 +150,9 @@ QHash<int, QByteArray> CustomLoggingCategoryModel::roleNames() const
 {
     return mRoleNames;
 }
+
+void CustomLoggingCategoryModel::refreshModel()
+{
+    beginResetModel();
+    endResetModel();
+}

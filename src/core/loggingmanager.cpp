@@ -72,3 +72,8 @@ KdeLoggingCategory::List LoggingManager::categoriesList() const
 {
     return mLoggings.categoriesList();
 }
+
+void LoggingManager::readQtLoggingFile()
+{
+    mLoggings.readQtLoggingFile();
+}

@@ -41,6 +41,8 @@ public:
 
     Q_REQUIRED_RESULT KdeLoggingCategory::List categoriesList() const;
 
+    void readQtLoggingFile();
+
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
     LIBKDEBUGSETTINGSCORE_NO_EXPORT void updateLoggingCategories();

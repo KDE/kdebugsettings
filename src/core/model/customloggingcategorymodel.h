@@ -46,6 +46,8 @@ public:
 
     Q_REQUIRED_RESULT LoggingCategory::List loggingCategories() const;
 
+    void refreshModel();
+
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;

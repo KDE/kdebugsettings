@@ -132,7 +132,7 @@ void KDebugSettingsDialog::slotLoadGroup(const QString &fullPath)
 
 void KDebugSettingsDialog::readQtLoggingFile()
 {
-    LoggingManager::self().loggings().readQtLoggingFile();
+    LoggingManager::self().readQtLoggingFile();
     updateLoggingCategories();
 }
 
@@ -141,14 +141,14 @@ void KDebugSettingsDialog::updateLoggingCategories()
     if (!LoggingManager::self().environmentrules().isEmpty()) {
         mEnvironmentSettingsRulesPage->setRules(LoggingManager::self().environmentrules());
     }
-    const LoggingCategory::List customCategories = LoggingManager::self().loggings().customCategories();
-    const LoggingCategory::List qtKdeCategories = LoggingManager::self().loggings().qtKdeCategories();
     const bool foundOverrideRule = LoggingManager::self().foundOverrideRule();
 
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
     }
     mCategoriesList = LoggingManager::self().categoriesList();
+    LoggingManager::self().customCategoryModel()->refreshModel();
+    LoggingManager::self().qtKdeCategoryModel()->refreshModel();
 }
 
 bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRules)

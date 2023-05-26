@@ -56,6 +56,12 @@ void KDEApplicationLoggingCategoryModel::replaceCategories(const LoggingCategory
     endResetModel();
 }
 
+void KDEApplicationLoggingCategoryModel::refreshModel()
+{
+    beginResetModel();
+    endResetModel();
+}
+
 bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
 {
     if (!modelIndex.isValid()) {
