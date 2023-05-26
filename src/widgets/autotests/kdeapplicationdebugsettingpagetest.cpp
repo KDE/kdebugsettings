@@ -50,4 +50,5 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     auto mSearchLineEdit = page.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->text().isEmpty());
+    QVERIFY(mSearchLineEdit->isClearButtonEnabled());
 }
