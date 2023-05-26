@@ -61,6 +61,9 @@ CustomLoggingCategoryModel *CustomDebugListView::loggingCategoryModel() const
 
 void CustomDebugListView::setLoggingCategoryModel(CustomLoggingCategoryModel *newLoggingCategoryModel)
 {
+    if (mCustomLoggingCategoryModel) {
+        qCWarning(KDEBUGSETTINGS_LOG) << " There is a problem as there already has a model";
+    }
     mCustomLoggingCategoryModel = newLoggingCategoryModel;
     mCustomLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
 
