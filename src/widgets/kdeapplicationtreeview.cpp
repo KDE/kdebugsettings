@@ -51,7 +51,7 @@ void KDEApplicationTreeView::selectAllDebugCategories()
         QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
             mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
         auto cat = index.data().value<LoggingCategory>();
-        cat.loggingType = LoggingCategory::Debug;
+        cat.loggingType = LoggingCategory::All;
         lst.append(cat);
     }
     if (!lst.isEmpty()) {
