@@ -6,6 +6,7 @@
 
 #include "kdeapplicationlistviewdelegate.h"
 #include "categorytypecombobox.h"
+#include <QSpinBox>
 
 KDEApplicationListViewDelegate::KDEApplicationListViewDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
@@ -16,10 +17,10 @@ KDEApplicationListViewDelegate::~KDEApplicationListViewDelegate() = default;
 
 QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem & /*option*/, const QModelIndex & /*index*/) const
 {
-    auto *comboBox = new CategoryTypeComboBox(parent);
+    auto *comboBox = new CategoryTypeComboBox(false, parent);
     auto *that = const_cast<KDEApplicationListViewDelegate *>(this);
     qDebug() << " KDEApplicationListViewDelegate::createEditor";
-    connect(comboBox, &CategoryTypeComboBox::currentTextChanged, this, [=]() {
+    connect(comboBox, &CategoryTypeComboBox::activated, this, [=]() {
         Q_EMIT that->commitData(mComboBox);
         Q_EMIT that->closeEditor(mComboBox);
     });
@@ -47,10 +48,4 @@ void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const
     size.setWidth(std::max(size.width(), hint.width()));
     size.setHeight(h);
     editor->setGeometry(QRect(option.rect.topLeft() - QPoint(0, (h - hCell) / 2), size));
-}
-
-void KDEApplicationListViewDelegate::doneEditing()
-{
-    Q_EMIT commitData(mComboBox);
-    Q_EMIT closeEditor(mComboBox);
 }

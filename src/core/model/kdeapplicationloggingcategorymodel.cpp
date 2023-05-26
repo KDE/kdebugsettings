@@ -31,6 +31,17 @@ int KDEApplicationLoggingCategoryModel::columnCount(const QModelIndex &parent) c
     return static_cast<int>(KDEApplicationLoggingCategoryModel::LastColumn) + 1;
 }
 
+Qt::ItemFlags KDEApplicationLoggingCategoryModel::flags(const QModelIndex &index) const
+{
+    if (!index.isValid())
+        return Qt::NoItemFlags;
+
+    if (static_cast<CategoryRoles>(index.column()) == LoggingTypeStrRole) {
+        return Qt::ItemIsEditable | QAbstractItemModel::flags(index);
+    }
+    return QAbstractItemModel::flags(index);
+}
+
 bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
 {
     if (!modelIndex.isValid()) {

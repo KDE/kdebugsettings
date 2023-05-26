@@ -43,6 +43,8 @@ public:
 
     Q_REQUIRED_RESULT LoggingCategory::List loggingCategories() const;
 
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
+
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;

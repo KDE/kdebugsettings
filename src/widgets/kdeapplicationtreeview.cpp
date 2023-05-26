@@ -31,6 +31,6 @@ void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCatego
     mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mKdeApplicationLoggingCategoryModel);
     setModel(mKdeApplicationLoggingCategoryProxyModel);
     // Hide column when we have model.
-    // hideColumn(KDEApplicationLoggingCategoryModel::LoggingTypeRole);
+    hideColumn(KDEApplicationLoggingCategoryModel::LoggingTypeRole);
     setItemDelegateForColumn(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole, new KDEApplicationListViewDelegate(this));
 }
