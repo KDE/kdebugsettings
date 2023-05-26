@@ -56,12 +56,6 @@ void LoggingManager::updateLoggingCategories()
     const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
     mCustomCategoryModel->setLoggingCategories(customCategories);
     mQtKdeCategoryModel->setLoggingCategories(qtKdeCategories);
-#if 0
-    if (foundOverrideRule) {
-        mCategoryWarning->animatedShow();
-    }
-    mCategoriesList = mLoggings.categoriesList();
-#endif
 }
 
 KDebugSettingsLoadingCategories LoggingManager::loggings() const
@@ -72,4 +66,9 @@ KDebugSettingsLoadingCategories LoggingManager::loggings() const
 void LoggingManager::readCategoriesFiles(const QString &path)
 {
     mLoggings.readCategoriesFiles(path);
+}
+
+KdeLoggingCategory::List LoggingManager::categoriesList() const
+{
+    return mLoggings.categoriesList();
 }
