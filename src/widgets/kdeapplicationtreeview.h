@@ -5,13 +5,13 @@
 */
 
 #pragma once
-#include "libkdebugsettings_export.h"
+#include "libkdebugsettings_private_export.h"
 #include "loggingcategory.h"
 #include <QTreeView>
 
 class KDEApplicationLoggingCategoryModel;
 class KDEApplicationLoggingCategoryProxyModel;
-class LIBKDEBUGSETTINGS_EXPORT KDEApplicationTreeView : public QTreeView
+class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KDEApplicationTreeView : public QTreeView
 {
     Q_OBJECT
 public:
