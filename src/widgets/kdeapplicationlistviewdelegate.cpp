@@ -19,12 +19,10 @@ QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QSt
     auto *comboBox = new CategoryTypeComboBox(parent);
     auto *that = const_cast<KDEApplicationListViewDelegate *>(this);
     qDebug() << " KDEApplicationListViewDelegate::createEditor";
-#if 0
-    connect(comboBox, &CategoryTypeComboBox::customerActivated, this, [=]() {
+    connect(comboBox, &CategoryTypeComboBox::currentTextChanged, this, [=]() {
         Q_EMIT that->commitData(mComboBox);
         Q_EMIT that->closeEditor(mComboBox);
     });
-#endif
     const_cast<KDEApplicationListViewDelegate *>(this)->mComboBox = comboBox;
     return comboBox;
 }
@@ -36,7 +34,7 @@ void KDEApplicationListViewDelegate::setEditorData(QWidget *editor, const QModel
 
 void KDEApplicationListViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    // model->setData(index, qobject_cast<CategoryTypeComboBox *>(editor)->type());
+    model->setData(index, qobject_cast<CategoryTypeComboBox *>(editor)->type());
 }
 
 void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /*index*/) const
