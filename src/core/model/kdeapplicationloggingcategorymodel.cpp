@@ -48,11 +48,14 @@ bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, 
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: invalid index";
         return false;
     }
+    if (role != Qt::EditRole) {
+        return false;
+    }
     const int idx = modelIndex.row();
     LoggingCategory &cat = mLoggingCategories[idx];
     switch (static_cast<CategoryRoles>(modelIndex.column())) {
     case LoggingTypeRole: {
-        cat = value.value<LoggingCategory>();
+        cat.loggingType = value.value<LoggingCategory::LoggingType>();
         const QModelIndex newIndex = index(modelIndex.row(), LoggingTypeRole);
         Q_EMIT dataChanged(newIndex, newIndex);
         return true;

@@ -6,6 +6,7 @@
 
 #include "kdeapplicationlistviewdelegate.h"
 #include "categorytypecombobox.h"
+#include "model/kdeapplicationloggingcategorymodel.h"
 #include <QSpinBox>
 
 KDEApplicationListViewDelegate::KDEApplicationListViewDelegate(QObject *parent)
@@ -30,12 +31,14 @@ QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QSt
 
 void KDEApplicationListViewDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    qobject_cast<CategoryTypeComboBox *>(editor)->setType(LoggingCategory::LoggingType::Critical);
+    auto loggingIndex = index.model()->index(index.row(), KDEApplicationLoggingCategoryModel::LoggingTypeRole);
+    qobject_cast<CategoryTypeComboBox *>(editor)->setType(loggingIndex.data().value<LoggingCategory::LoggingType>());
 }
 
 void KDEApplicationListViewDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    model->setData(index, qobject_cast<CategoryTypeComboBox *>(editor)->type());
+    auto loggingIndex = index.model()->index(index.row(), KDEApplicationLoggingCategoryModel::LoggingTypeRole);
+    model->setData(loggingIndex, qobject_cast<CategoryTypeComboBox *>(editor)->type());
 }
 
 void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /*index*/) const
