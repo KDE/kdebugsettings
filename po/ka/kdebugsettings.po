@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:50+0000\n"
 "PO-Revision-Date: 2023-05-08 05:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "გამართვის მორგება"
@@ -33,17 +33,17 @@ msgstr "გამართვის მორგება"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings -ის ავტორები"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "წამყვანი პროგრამისტი"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -51,22 +51,22 @@ msgstr ""
 "QStandardPaths -ის ტესტირების ჩართვა. ანუ unittests-ის მიერ გამოყენებული "
 "პარამეტრების ჩაწერა/წაკითხვა"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "ყველა მოდულის გამართვის ჩართვა."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "ყველა მოდულის გამართვის გამორთვა."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "გამართვის რეჟიმის კონსოლზე გადართვა (კონსოლში)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -75,43 +75,38 @@ msgstr ""
 "(კონსოლში)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
-#: src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "გამართვის რეჟიმის შეცვლა შეუძლებელია"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
-msgid "All Debug Messages"
-msgstr "ყველა გამართვის შეტყობინება"
+msgid "Full Debug"
+msgstr "სრული გამართვა"
 
-#: src/core/kdebugsettingsutil.cpp:424
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
-msgid "Info Messages"
-msgstr "საინფორმაციო შეტყობინებები"
+msgid "Info"
+msgstr "ინფორმაცია"
 
-#: src/core/kdebugsettingsutil.cpp:427
+#: src/core/kdebugsettingsutil.cpp:428
 #, kde-format
-msgid "Warning Messages"
-msgstr "გაფრთხილების შეტყობინებები"
+msgid "Warning"
+msgstr "გაფრთხილება"
 
-#: src/core/kdebugsettingsutil.cpp:430
+#: src/core/kdebugsettingsutil.cpp:431
 #, kde-format
-msgid "Debug Messages"
-msgstr "გამართვის შეტყობინებები"
+msgid "Critical"
+msgstr "კრიტიკული"
 
-#: src/core/kdebugsettingsutil.cpp:433
+#: src/core/kdebugsettingsutil.cpp:434
 #, kde-format
-msgid "Critical Messages"
-msgstr "კრიტიკული შეტყობინებები"
+msgid "Off"
+msgstr "გამორთული"
 
-#: src/core/kdebugsettingsutil.cpp:436
-#, kde-format
-msgid "No Debug Messages"
-msgstr "გამართვის შეტყობინებების გარეშე"
-
-#: src/core/kdebugsettingsutil.cpp:439
+#: src/core/kdebugsettingsutil.cpp:437 src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Undefined"
 msgstr "გაურკვეველი"
@@ -131,32 +126,37 @@ msgstr "იდენტიფიკატორი: %1"
 msgid "Default Severity: %1"
 msgstr "ნაგულისხმები სიმძიმე: %1"
 
-#: src/core/model/categorytypemodel.cpp:57
+#: src/core/loggingcategory.cpp:126
 #, kde-format
-msgid "Full Debug"
-msgstr "სრული გამართვა"
+msgid "All Debug Messages"
+msgstr "ყველა გამართვის შეტყობინება"
 
-#: src/core/model/categorytypemodel.cpp:58
+#: src/core/loggingcategory.cpp:129
 #, kde-format
-msgid "Info"
-msgstr "ინფორმაცია"
+msgid "Info Messages"
+msgstr "საინფორმაციო შეტყობინებები"
 
-#: src/core/model/categorytypemodel.cpp:59
+#: src/core/loggingcategory.cpp:132
 #, kde-format
-msgid "Warning"
-msgstr "გაფრთხილება"
+msgid "Warning Messages"
+msgstr "გაფრთხილების შეტყობინებები"
 
-#: src/core/model/categorytypemodel.cpp:60
+#: src/core/loggingcategory.cpp:135
 #, kde-format
-msgid "Critical"
-msgstr "კრიტიკული"
+msgid "Debug Messages"
+msgstr "გამართვის შეტყობინებები"
 
-#: src/core/model/categorytypemodel.cpp:61
+#: src/core/loggingcategory.cpp:138
 #, kde-format
-msgid "Off"
-msgstr "გამორთული"
+msgid "Critical Messages"
+msgstr "კრიტიკული შეტყობინებები"
 
-#: src/quickapps/main.cpp:44
+#: src/core/loggingcategory.cpp:141
+#, kde-format
+msgid "No Debug Messages"
+msgstr "გამართვის შეტყობინებების გარეშე"
+
+#: src/quickapps/main.cpp:45
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings -ის ავტორები"
@@ -197,23 +197,23 @@ msgstr "კატეგორია:"
 msgid "Type:"
 msgstr "ტიპი:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:42
 #, kde-format
 msgid "Add Rule..."
 msgstr "წესის დამატება..."
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Edit Rule"
 msgstr "წესის ჩასწორება"
 
-#: src/widgets/customdebuglistview.cpp:49
-#: src/widgets/customdebuglistview.cpp:78
+#: src/widgets/customdebuglistview.cpp:50
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Remove Rule"
 msgstr "წესის წაშლა"
 
-#: src/widgets/customdebuglistview.cpp:75
+#: src/widgets/customdebuglistview.cpp:82
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -231,7 +231,7 @@ msgid "Remove..."
 msgstr "წაშლა..."
 
 #: src/widgets/customdebugsettingspage.cpp:38
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:31
 #, kde-format
 msgid "Search..."
 msgstr "ძებნა..."
@@ -365,38 +365,38 @@ msgstr "შენახვა, როგორც..."
 msgid "Insert..."
 msgstr "ჩასმა..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:161
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1'-ის გახსნა შეუძლებელია. გადაამოწმეთ."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Insert Categories"
 msgstr "კატეგორიების ჩასმა"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "კატეგორიის ფაილები"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "ფაილიდან '%1' კატეგორიების ჩასმა წარმატებულია."
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Group Name"
 msgstr "ჯგუფის სახელი"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "სახელი:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -405,23 +405,23 @@ msgstr ""
 "<b>'%1'</b>უკვე გამოიყენება, როგორც ჯგუფის სახელი.\n"
 "შეინახეთ სხვა სახელით."
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "ცარიელი სახელით ვერ შეინახავთ.აირჩიეთ ახალისახელი."
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Save As"
 msgstr "შენახვა როგორც"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings -ის ფაილი (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "გამართვის პარამეტრების ფაილის ჩატვირთვა"

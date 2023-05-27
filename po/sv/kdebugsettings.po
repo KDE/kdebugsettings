@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:50+0000\n"
 "PO-Revision-Date: 2022-01-02 14:21+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Anpassa felsökningsinställningar"
@@ -32,17 +32,17 @@ msgstr "Anpassa felsökningsinställningar"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015-%1 Upphovsmännen till kdebugsettings"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "Underhåll"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -50,22 +50,22 @@ msgstr ""
 "Aktivera QStandardPaths testläge, dvs. läs- och skrivinställningar använda "
 "av enhetstester"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivera fullständig felsökning för alla moduler."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Inaktivera fullständig felsökning för alla moduler."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Ändra felsökningsläge som terminal (i terminal)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -73,43 +73,38 @@ msgstr ""
 "Ange loggningskategorinamn som felsökningsläge ska ändras för (i terminal)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
-#: src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Omöjligt att ändra felsökningsläge"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
-msgid "All Debug Messages"
-msgstr "Alla felsökningsmeddelanden"
+msgid "Full Debug"
+msgstr "Fullständig felsökning"
 
-#: src/core/kdebugsettingsutil.cpp:424
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
-msgid "Info Messages"
-msgstr "Informationsmeddelanden"
+msgid "Info"
+msgstr "Information"
 
-#: src/core/kdebugsettingsutil.cpp:427
+#: src/core/kdebugsettingsutil.cpp:428
 #, kde-format
-msgid "Warning Messages"
-msgstr "Varningsmeddelanden"
+msgid "Warning"
+msgstr "Varning"
 
-#: src/core/kdebugsettingsutil.cpp:430
+#: src/core/kdebugsettingsutil.cpp:431
 #, kde-format
-msgid "Debug Messages"
-msgstr "Felsökningsmeddelanden"
+msgid "Critical"
+msgstr "Kritiska fel"
 
-#: src/core/kdebugsettingsutil.cpp:433
+#: src/core/kdebugsettingsutil.cpp:434
 #, kde-format
-msgid "Critical Messages"
-msgstr "Kritiska meddelanden"
+msgid "Off"
+msgstr "Av"
 
-#: src/core/kdebugsettingsutil.cpp:436
-#, kde-format
-msgid "No Debug Messages"
-msgstr "Inga felsökningsmeddelanden"
-
-#: src/core/kdebugsettingsutil.cpp:439
+#: src/core/kdebugsettingsutil.cpp:437 src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Undefined"
 msgstr "Odefinierad"
@@ -129,32 +124,37 @@ msgstr "Identifierare: %1"
 msgid "Default Severity: %1"
 msgstr "Standardsvårighetsgrad: %1"
 
-#: src/core/model/categorytypemodel.cpp:57
+#: src/core/loggingcategory.cpp:126
 #, kde-format
-msgid "Full Debug"
-msgstr "Fullständig felsökning"
+msgid "All Debug Messages"
+msgstr "Alla felsökningsmeddelanden"
 
-#: src/core/model/categorytypemodel.cpp:58
+#: src/core/loggingcategory.cpp:129
 #, kde-format
-msgid "Info"
-msgstr "Information"
+msgid "Info Messages"
+msgstr "Informationsmeddelanden"
 
-#: src/core/model/categorytypemodel.cpp:59
+#: src/core/loggingcategory.cpp:132
 #, kde-format
-msgid "Warning"
-msgstr "Varning"
+msgid "Warning Messages"
+msgstr "Varningsmeddelanden"
 
-#: src/core/model/categorytypemodel.cpp:60
+#: src/core/loggingcategory.cpp:135
 #, kde-format
-msgid "Critical"
-msgstr "Kritiska fel"
+msgid "Debug Messages"
+msgstr "Felsökningsmeddelanden"
 
-#: src/core/model/categorytypemodel.cpp:61
+#: src/core/loggingcategory.cpp:138
 #, kde-format
-msgid "Off"
-msgstr "Av"
+msgid "Critical Messages"
+msgstr "Kritiska meddelanden"
 
-#: src/quickapps/main.cpp:44
+#: src/core/loggingcategory.cpp:141
+#, kde-format
+msgid "No Debug Messages"
+msgstr "Inga felsökningsmeddelanden"
+
+#: src/quickapps/main.cpp:45
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
@@ -196,23 +196,23 @@ msgstr "Kategori:"
 msgid "Type:"
 msgstr "Typ:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:42
 #, kde-format
 msgid "Add Rule..."
 msgstr "Lägg till regel..."
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Edit Rule"
 msgstr "Redigera regel"
 
-#: src/widgets/customdebuglistview.cpp:49
-#: src/widgets/customdebuglistview.cpp:78
+#: src/widgets/customdebuglistview.cpp:50
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Remove Rule"
 msgstr "Ta bort regel"
 
-#: src/widgets/customdebuglistview.cpp:75
+#: src/widgets/customdebuglistview.cpp:82
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -230,7 +230,7 @@ msgid "Remove..."
 msgstr "Ta bort..."
 
 #: src/widgets/customdebugsettingspage.cpp:38
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:31
 #, kde-format
 msgid "Search..."
 msgstr "Sök..."
@@ -367,38 +367,38 @@ msgstr "Spara som..."
 msgid "Insert..."
 msgstr "Infoga..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:161
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "Kan inte öppna \"%1\". Kontrollera det."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Insert Categories"
 msgstr "Infoga kategorier"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "Kategorifiler"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Kategorier från filen '%1' infogade."
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Group Name"
 msgstr "Gruppnamn"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "Namn:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, fuzzy, kde-format
 #| msgid ""
 #| "'%1' is already used as a group name.\n"
@@ -410,23 +410,23 @@ msgstr ""
 "'%1' används redan som ett gruppnamn.\n"
 "Spara med ett annat namn."
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Kan inte spara med tomt namn. Använd ett nytt."
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Save As"
 msgstr "Spara som"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Kdebugsettings-fil (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Läs in inställningsfiler för felsökning"

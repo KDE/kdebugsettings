@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:50+0000\n"
 "PO-Revision-Date: 2022-04-09 19:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Nastaviť nastavenie ladenia"
@@ -32,17 +32,17 @@ msgstr "Nastaviť nastavenie ladenia"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 autori kdebugsettings"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "Správca"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -50,22 +50,22 @@ msgstr ""
 "Povoliť testovací režim QStandardPaths, t.j. nastavenia čítania/zápisu "
 "používané unittestami"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivovať úplné ladenie pre všetky moduly."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Zakázať úplné ladenie pre všetky moduly."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Zmena režimu ladenia na konzolu (v konzole)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -74,43 +74,38 @@ msgstr ""
 "(v konzole)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
-#: src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Nie je možné zmeniť režim ladenia"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
-msgid "All Debug Messages"
-msgstr "Všetky správy ladenia"
+msgid "Full Debug"
+msgstr "Úplné ladenie"
 
-#: src/core/kdebugsettingsutil.cpp:424
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
-msgid "Info Messages"
-msgstr "Informačné správy"
+msgid "Info"
+msgstr "Info"
 
-#: src/core/kdebugsettingsutil.cpp:427
+#: src/core/kdebugsettingsutil.cpp:428
 #, kde-format
-msgid "Warning Messages"
-msgstr "Správy upozornení"
+msgid "Warning"
+msgstr "Upozornenie"
 
-#: src/core/kdebugsettingsutil.cpp:430
+#: src/core/kdebugsettingsutil.cpp:431
 #, kde-format
-msgid "Debug Messages"
-msgstr "Správy ladenia"
+msgid "Critical"
+msgstr "Kritické"
 
-#: src/core/kdebugsettingsutil.cpp:433
+#: src/core/kdebugsettingsutil.cpp:434
 #, kde-format
-msgid "Critical Messages"
-msgstr "Kritické správy"
+msgid "Off"
+msgstr "Vypnuté"
 
-#: src/core/kdebugsettingsutil.cpp:436
-#, kde-format
-msgid "No Debug Messages"
-msgstr "Žiadne správy ladenia"
-
-#: src/core/kdebugsettingsutil.cpp:439
+#: src/core/kdebugsettingsutil.cpp:437 src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Undefined"
 msgstr "Nedefinované"
@@ -130,32 +125,37 @@ msgstr "Identofikátor: %1"
 msgid "Default Severity: %1"
 msgstr "Predvolená dôležitosť: %1"
 
-#: src/core/model/categorytypemodel.cpp:57
+#: src/core/loggingcategory.cpp:126
 #, kde-format
-msgid "Full Debug"
-msgstr "Úplné ladenie"
+msgid "All Debug Messages"
+msgstr "Všetky správy ladenia"
 
-#: src/core/model/categorytypemodel.cpp:58
+#: src/core/loggingcategory.cpp:129
 #, kde-format
-msgid "Info"
-msgstr "Info"
+msgid "Info Messages"
+msgstr "Informačné správy"
 
-#: src/core/model/categorytypemodel.cpp:59
+#: src/core/loggingcategory.cpp:132
 #, kde-format
-msgid "Warning"
-msgstr "Upozornenie"
+msgid "Warning Messages"
+msgstr "Správy upozornení"
 
-#: src/core/model/categorytypemodel.cpp:60
+#: src/core/loggingcategory.cpp:135
 #, kde-format
-msgid "Critical"
-msgstr "Kritické"
+msgid "Debug Messages"
+msgstr "Správy ladenia"
 
-#: src/core/model/categorytypemodel.cpp:61
+#: src/core/loggingcategory.cpp:138
 #, kde-format
-msgid "Off"
-msgstr "Vypnuté"
+msgid "Critical Messages"
+msgstr "Kritické správy"
 
-#: src/quickapps/main.cpp:44
+#: src/core/loggingcategory.cpp:141
+#, kde-format
+msgid "No Debug Messages"
+msgstr "Žiadne správy ladenia"
+
+#: src/quickapps/main.cpp:45
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
@@ -197,23 +197,23 @@ msgstr "Kategória:"
 msgid "Type:"
 msgstr "Typ:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:42
 #, kde-format
 msgid "Add Rule..."
 msgstr "Pridať pravidlo..."
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Edit Rule"
 msgstr "Upraviť pravidlo"
 
-#: src/widgets/customdebuglistview.cpp:49
-#: src/widgets/customdebuglistview.cpp:78
+#: src/widgets/customdebuglistview.cpp:50
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Remove Rule"
 msgstr "Odstrániť pravidlo"
 
-#: src/widgets/customdebuglistview.cpp:75
+#: src/widgets/customdebuglistview.cpp:82
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -232,7 +232,7 @@ msgid "Remove..."
 msgstr "Odstrániť..."
 
 #: src/widgets/customdebugsettingspage.cpp:38
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:31
 #, kde-format
 msgid "Search..."
 msgstr "Hľadať..."
@@ -371,38 +371,38 @@ msgstr "Uložiť ako..."
 msgid "Insert..."
 msgstr "Vložiť..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:161
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' nie je možné otvoriť. Prosím, skontrolujte ho."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Insert Categories"
 msgstr "Vložiť kategórie"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "Súbory kategórií"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Kategórie zo súboru '%1' boli vložené."
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Group Name"
 msgstr "Názov skupiny"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "Názov:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, fuzzy, kde-format
 #| msgid ""
 #| "'%1' is already used as a group name.\n"
@@ -414,23 +414,23 @@ msgstr ""
 "'%1' sa už používa ako názov skupiny.\n"
 "Prosím vložte nový názov."
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Nemožno uložiť ako prázdny názov. Použite nový názov."
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Save As"
 msgstr "Uložiť ako"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Súbor KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Načítať súbor pravidiel ladenia"

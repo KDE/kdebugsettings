@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:50+0000\n"
 "PO-Revision-Date: 2023-05-07 08:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugsSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Nastavi možnosti za razhroščevanje"
@@ -35,17 +35,17 @@ msgstr "Nastavi možnosti za razhroščevanje"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 avtorji kdebugsettings"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "Vzdrževalec"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,22 +53,22 @@ msgstr ""
 "Omogoči testni način QStandardPaths, to je npr. nastavitve branja/pisanja, "
 "ki jih uporabljajo testi enot"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivirajte popolno odkrivanje napak za vse module."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Onemogočite popolno odkrivanje napak za vse module."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Spremeni način za odkrivanje napak s konzolo (v konzoli)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -77,43 +77,38 @@ msgstr ""
 "odkrivanje napak (v konzoli)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
-#: src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Ni mogoče spremeniti načina za odkrivanje napak"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
-msgid "All Debug Messages"
-msgstr "Vsa sporočila o napakah"
+msgid "Full Debug"
+msgstr "Polno odkrivanje napak"
 
-#: src/core/kdebugsettingsutil.cpp:424
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
-msgid "Info Messages"
-msgstr "Informacijska sporočila"
+msgid "Info"
+msgstr "Podrobnosti"
 
-#: src/core/kdebugsettingsutil.cpp:427
+#: src/core/kdebugsettingsutil.cpp:428
 #, kde-format
-msgid "Warning Messages"
-msgstr "Opozorila"
+msgid "Warning"
+msgstr "Opozorilo"
 
-#: src/core/kdebugsettingsutil.cpp:430
+#: src/core/kdebugsettingsutil.cpp:431
 #, kde-format
-msgid "Debug Messages"
-msgstr "Sporočila za iskanje napak"
+msgid "Critical"
+msgstr "Kritično"
 
-#: src/core/kdebugsettingsutil.cpp:433
+#: src/core/kdebugsettingsutil.cpp:434
 #, kde-format
-msgid "Critical Messages"
-msgstr "Kritična sporočila"
+msgid "Off"
+msgstr "Izključeno"
 
-#: src/core/kdebugsettingsutil.cpp:436
-#, kde-format
-msgid "No Debug Messages"
-msgstr "Brez sporočil o napakah"
-
-#: src/core/kdebugsettingsutil.cpp:439
+#: src/core/kdebugsettingsutil.cpp:437 src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Undefined"
 msgstr "Nedefinirano"
@@ -133,32 +128,37 @@ msgstr "Identifikator: %1"
 msgid "Default Severity: %1"
 msgstr "Privzeta resnost: %1"
 
-#: src/core/model/categorytypemodel.cpp:57
+#: src/core/loggingcategory.cpp:126
 #, kde-format
-msgid "Full Debug"
-msgstr "Polno odkrivanje napak"
+msgid "All Debug Messages"
+msgstr "Vsa sporočila o napakah"
 
-#: src/core/model/categorytypemodel.cpp:58
+#: src/core/loggingcategory.cpp:129
 #, kde-format
-msgid "Info"
-msgstr "Podrobnosti"
+msgid "Info Messages"
+msgstr "Informacijska sporočila"
 
-#: src/core/model/categorytypemodel.cpp:59
+#: src/core/loggingcategory.cpp:132
 #, kde-format
-msgid "Warning"
-msgstr "Opozorilo"
+msgid "Warning Messages"
+msgstr "Opozorila"
 
-#: src/core/model/categorytypemodel.cpp:60
+#: src/core/loggingcategory.cpp:135
 #, kde-format
-msgid "Critical"
-msgstr "Kritično"
+msgid "Debug Messages"
+msgstr "Sporočila za iskanje napak"
 
-#: src/core/model/categorytypemodel.cpp:61
+#: src/core/loggingcategory.cpp:138
 #, kde-format
-msgid "Off"
-msgstr "Izključeno"
+msgid "Critical Messages"
+msgstr "Kritična sporočila"
 
-#: src/quickapps/main.cpp:44
+#: src/core/loggingcategory.cpp:141
+#, kde-format
+msgid "No Debug Messages"
+msgstr "Brez sporočil o napakah"
+
+#: src/quickapps/main.cpp:45
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 avtorji kdebugsettings"
@@ -199,23 +199,23 @@ msgstr "Kategorija:"
 msgid "Type:"
 msgstr "Vrsta:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:42
 #, kde-format
 msgid "Add Rule..."
 msgstr "Dodaj pravilo..."
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Edit Rule"
 msgstr "Uredi pravilo"
 
-#: src/widgets/customdebuglistview.cpp:49
-#: src/widgets/customdebuglistview.cpp:78
+#: src/widgets/customdebuglistview.cpp:50
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Remove Rule"
 msgstr "Odstrani pravilo"
 
-#: src/widgets/customdebuglistview.cpp:75
+#: src/widgets/customdebuglistview.cpp:82
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -235,7 +235,7 @@ msgid "Remove..."
 msgstr "Odstrani..."
 
 #: src/widgets/customdebugsettingspage.cpp:38
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:31
 #, kde-format
 msgid "Search..."
 msgstr "Poišči..."
@@ -369,38 +369,38 @@ msgstr "Shrani kot..."
 msgid "Insert..."
 msgstr "Vstavi..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:161
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' ni mogoče odpreti."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Insert Categories"
 msgstr "Vstavi kategorije"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "Datoteke s kategorijami"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Kategorije iz datoteke '%1' vstavljene."
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Group Name"
 msgstr "Ime grupe"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "Ime:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -409,23 +409,23 @@ msgstr ""
 "<b>'%1'</b> je že uporabljeno kot ime grupe.\n"
 "Shranite jo pod drugim imenom."
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Ni mogoče shraniti s praznim imenom. Prosim uporabite novo ime."
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Save As"
 msgstr "Shrani kot"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings File (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Naloži datoteke z nastavitvami razhroščevanja"

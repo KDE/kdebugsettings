@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:50+0000\n"
 "PO-Revision-Date: 2015-09-11 13:17+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:40
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, fuzzy, kde-format
 #| msgid "kdebugssettings"
 msgid "KDebugSettings"
 msgstr "kdebugssettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:42
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hibakeresési beállítások módosítása"
@@ -34,83 +34,77 @@ msgstr "Hibakeresési beállítások módosítása"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© A kdebugsettings szerzői, 2015."
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:45
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:51
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:54
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr ""
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr ""
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr ""
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:78 src/quickapps/main.cpp:88
-#: src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr ""
 
-#: src/core/kdebugsettingsutil.cpp:421
-#, kde-format
-msgid "All Debug Messages"
-msgstr ""
-
-#: src/core/kdebugsettingsutil.cpp:424
-#, kde-format
-msgid "Info Messages"
-msgstr ""
-
-#: src/core/kdebugsettingsutil.cpp:427
+#: src/core/kdebugsettingsutil.cpp:422
 #, fuzzy, kde-format
-#| msgid "Warning"
-msgid "Warning Messages"
+#| msgid "Debug"
+msgid "Full Debug"
+msgstr "Hibakeresés"
+
+#: src/core/kdebugsettingsutil.cpp:425
+#, kde-format
+msgid "Info"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:428
+#, kde-format
+msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: src/core/kdebugsettingsutil.cpp:430
+#: src/core/kdebugsettingsutil.cpp:431
 #, kde-format
-msgid "Debug Messages"
-msgstr ""
-
-#: src/core/kdebugsettingsutil.cpp:433
-#, fuzzy, kde-format
-#| msgid "Critical"
-msgid "Critical Messages"
+msgid "Critical"
 msgstr "Kritikus"
 
-#: src/core/kdebugsettingsutil.cpp:436
+#: src/core/kdebugsettingsutil.cpp:434
 #, kde-format
-msgid "No Debug Messages"
+msgid "Off"
 msgstr ""
 
-#: src/core/kdebugsettingsutil.cpp:439
+#: src/core/kdebugsettingsutil.cpp:437 src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Undefined"
 msgstr ""
@@ -131,33 +125,39 @@ msgstr ""
 msgid "Default Severity: %1"
 msgstr ""
 
-#: src/core/model/categorytypemodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Debug"
-msgid "Full Debug"
-msgstr "Hibakeresés"
-
-#: src/core/model/categorytypemodel.cpp:58
+#: src/core/loggingcategory.cpp:126
 #, kde-format
-msgid "Info"
+msgid "All Debug Messages"
 msgstr ""
 
-#: src/core/model/categorytypemodel.cpp:59
+#: src/core/loggingcategory.cpp:129
 #, kde-format
-msgid "Warning"
+msgid "Info Messages"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:132
+#, fuzzy, kde-format
+#| msgid "Warning"
+msgid "Warning Messages"
 msgstr "Figyelmeztetés"
 
-#: src/core/model/categorytypemodel.cpp:60
+#: src/core/loggingcategory.cpp:135
 #, kde-format
-msgid "Critical"
-msgstr "Kritikus"
-
-#: src/core/model/categorytypemodel.cpp:61
-#, kde-format
-msgid "Off"
+msgid "Debug Messages"
 msgstr ""
 
-#: src/quickapps/main.cpp:44
+#: src/core/loggingcategory.cpp:138
+#, fuzzy, kde-format
+#| msgid "Critical"
+msgid "Critical Messages"
+msgstr "Kritikus"
+
+#: src/core/loggingcategory.cpp:141
+#, kde-format
+msgid "No Debug Messages"
+msgstr ""
+
+#: src/quickapps/main.cpp:45
 #, fuzzy, kde-format
 #| msgid "(c) 2015 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
@@ -201,25 +201,25 @@ msgstr "Kategória:"
 msgid "Type:"
 msgstr "Típus:"
 
-#: src/widgets/customdebuglistview.cpp:41
+#: src/widgets/customdebuglistview.cpp:42
 #, kde-format
 msgid "Add Rule..."
 msgstr ""
 
-#: src/widgets/customdebuglistview.cpp:43
+#: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgid "Edit Rule"
 msgstr "Saját szabály szerkesztése"
 
-#: src/widgets/customdebuglistview.cpp:49
-#: src/widgets/customdebuglistview.cpp:78
+#: src/widgets/customdebuglistview.cpp:50
+#: src/widgets/customdebuglistview.cpp:85
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgid "Remove Rule"
 msgstr "Eltávolítás…"
 
-#: src/widgets/customdebuglistview.cpp:75
+#: src/widgets/customdebuglistview.cpp:82
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule \"%1\"?"
 msgid "Do you want to remove this rule?"
@@ -238,7 +238,7 @@ msgid "Remove..."
 msgstr "Eltávolítás…"
 
 #: src/widgets/customdebugsettingspage.cpp:38
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:30
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:31
 #, kde-format
 msgid "Search..."
 msgstr "Keresés…"
@@ -374,62 +374,62 @@ msgstr "Mentés másként…"
 msgid "Insert..."
 msgstr "Beszúrás…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:161
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "A(z) „%1” nem nyitható meg. Kérjük, ellenőrizze."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Insert Categories"
 msgstr "Kategóriák beszúrása"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgid "Categories Files"
 msgstr "Kategóriák beszúrása"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Group Name"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Save As"
 msgstr "Mentés másként"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:238
 #, fuzzy, kde-format
 #| msgid "kdebugssettings"
 msgid "Load Debug Settings Files"
