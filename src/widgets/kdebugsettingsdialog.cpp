@@ -146,9 +146,8 @@ void KDebugSettingsDialog::updateLoggingCategories()
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
     }
+    LoggingManager::self().updateLoggingCategories();
     mCategoriesList = LoggingManager::self().categoriesList();
-    LoggingManager::self().customCategoryModel()->refreshModel();
-    LoggingManager::self().qtKdeCategoryModel()->refreshModel();
 }
 
 bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRules)

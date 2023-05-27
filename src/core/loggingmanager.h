@@ -42,10 +42,10 @@ public:
     Q_REQUIRED_RESULT KdeLoggingCategory::List categoriesList() const;
 
     void readQtLoggingFile();
+    void updateLoggingCategories();
 
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
-    LIBKDEBUGSETTINGSCORE_NO_EXPORT void updateLoggingCategories();
     CustomLoggingCategoryModel *const mCustomCategoryModel;
     KDEApplicationLoggingCategoryModel *const mQtKdeCategoryModel;
     CategoryTypeModel *const mCategoryTypeModel;
