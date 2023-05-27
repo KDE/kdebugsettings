@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include "kdebugsettingsdialog.h"
 #include "libkdebugsettings_export.h"
 #include <QDialog>
 
