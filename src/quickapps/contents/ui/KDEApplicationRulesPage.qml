@@ -26,6 +26,7 @@ Kirigami.ScrollablePage {
         id: listviewRules
         focus: true // keyboard navigation
         activeFocusOnTab: true // keyboard navigation
+        reuseItems: true
         clip: true
         model: KDEApplicationLoggingCategoryProxyModel {
             id: loggingDebugProxyModel
