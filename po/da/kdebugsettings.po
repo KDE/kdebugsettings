@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:50+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2020-07-21 17:54+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -374,61 +374,61 @@ msgstr "Gem som..."
 msgid "Insert..."
 msgstr "Indsæt..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:161
+#: src/widgets/kdebugsettingsdialog.cpp:160
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' kan ikke åbnes. Bekræft den venligst."
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:186
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Insert Categories"
 msgstr "Indsæt kategorier"
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:186
 #, kde-format
 msgid "Categories Files"
 msgstr "Kategorifiler"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Group Name"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Name:"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:214
+#: src/widgets/kdebugsettingsdialog.cpp:213
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:229
 #, kde-format
 msgid "Save As"
 msgstr "Gem som"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
-#: src/widgets/kdebugsettingsdialog.cpp:238
+#: src/widgets/kdebugsettingsdialog.cpp:229
+#: src/widgets/kdebugsettingsdialog.cpp:237
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings-fil (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:238
+#: src/widgets/kdebugsettingsdialog.cpp:237
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Indlæs fejlsøgningsfiler"

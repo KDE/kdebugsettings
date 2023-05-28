@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:50+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2022-01-02 14:21+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -367,38 +367,38 @@ msgstr "Spara som..."
 msgid "Insert..."
 msgstr "Infoga..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:161
+#: src/widgets/kdebugsettingsdialog.cpp:160
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "Kan inte öppna \"%1\". Kontrollera det."
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:186
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Insert Categories"
 msgstr "Infoga kategorier"
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:186
 #, kde-format
 msgid "Categories Files"
 msgstr "Kategorifiler"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Kategorier från filen '%1' infogade."
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Group Name"
 msgstr "Gruppnamn"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Name:"
 msgstr "Namn:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:214
+#: src/widgets/kdebugsettingsdialog.cpp:213
 #, fuzzy, kde-format
 #| msgid ""
 #| "'%1' is already used as a group name.\n"
@@ -410,23 +410,23 @@ msgstr ""
 "'%1' används redan som ett gruppnamn.\n"
 "Spara med ett annat namn."
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Kan inte spara med tomt namn. Använd ett nytt."
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:229
 #, kde-format
 msgid "Save As"
 msgstr "Spara som"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
-#: src/widgets/kdebugsettingsdialog.cpp:238
+#: src/widgets/kdebugsettingsdialog.cpp:229
+#: src/widgets/kdebugsettingsdialog.cpp:237
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Kdebugsettings-fil (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:238
+#: src/widgets/kdebugsettingsdialog.cpp:237
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Läs in inställningsfiler för felsökning"
