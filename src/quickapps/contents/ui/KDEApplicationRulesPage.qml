@@ -47,6 +47,9 @@ Kirigami.ScrollablePage {
                     textRole: "display"
                     valueRole: "categoryType"
                     currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(listviewRules.model.categoryType)
+                    onActivated: {
+                        // TODO
+                    }
                 }
             }
         }
