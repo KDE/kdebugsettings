@@ -8,9 +8,9 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kdebugsettingsquick
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF6::I18n
+    KF6::CoreAddons
+    KF6::DBusAddons
     libkdebugsettingscore
     Qt::Quick
     Qt::QuickControls2
