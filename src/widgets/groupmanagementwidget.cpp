@@ -67,7 +67,7 @@ void GroupManagementWidget::renameGroup(QListWidgetItem *item)
     if (!newNameTrimmed.isEmpty() && (currentName != newNameTrimmed)) {
         const QString newFullPath{KDebugSettingsUtil::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
         if (!f.rename(newFullPath)) {
-            KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'", newNameTrimmed), i18n("Rename Group"));
+            KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'.", newNameTrimmed), i18n("Rename Group"));
         } else {
             item->setText(newNameTrimmed);
             item->setData(FullPathRole, newFullPath);
