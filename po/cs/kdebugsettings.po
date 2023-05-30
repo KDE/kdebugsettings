@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 00:50+0000\n"
+"POT-Creation-Date: 2023-05-30 00:49+0000\n"
 "PO-Revision-Date: 2023-03-15 14:30+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
 msgid "KDebugSettings"
 msgstr "Nastavení KDebug"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Nastavit možnosti ladění"
@@ -33,46 +33,46 @@ msgstr "Nastavit možnosti ladění"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 autoři kdebugsettings"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
 msgstr "Správce"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivovat plné ladění pro všechny moduly."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Deaktivovat plné ladění pro všechny moduly."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Změnit režim ladění jako konzole (v konzoli)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
-#: src/quickapps/main.cpp:99
+#: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
+#: src/quickapps/main.cpp:94
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Nelze změnit režim ladění"
@@ -152,7 +152,7 @@ msgstr "Kritické zprávy"
 msgid "No Debug Messages"
 msgstr "Žádné ladicí zprávy"
 
-#: src/quickapps/main.cpp:45
+#: src/quickapps/main.cpp:40
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 00:50+0000\n"
+"POT-Creation-Date: 2023-05-30 00:49+0000\n"
 "PO-Revision-Date: 2020-05-04 11:03+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:43
+#: src/apps/main.cpp:34 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Silumisseadistuste seadistamine"
@@ -33,17 +33,17 @@ msgstr "Silumisseadistuste seadistamine"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-2020: kdebugsettingsi autorid"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
 msgstr "Hooldaja"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -51,22 +51,22 @@ msgstr ""
 "QStandardsPaths'i testrežiimi lubamine, s.t. ühiktestide seadistuste "
 "lugemine/kirjutamine"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Täieliku silumise aktiveerimine kõigis moodulites."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Täieliku silumise keelamine kõigis moodulites."
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:61
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Silumisrežiimiks määratakse konsool (konsoolis)"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -75,8 +75,8 @@ msgstr ""
 "(konsoolis)"
 
 #: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
-#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
-#: src/quickapps/main.cpp:99
+#: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
+#: src/quickapps/main.cpp:94
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Silumisrežiimi ei saa muuta"
@@ -156,7 +156,7 @@ msgstr "Kriitilised teated"
 msgid "No Debug Messages"
 msgstr "Silumisteated puuduvad"
 
-#: src/quickapps/main.cpp:45
+#: src/quickapps/main.cpp:40
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2020 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
