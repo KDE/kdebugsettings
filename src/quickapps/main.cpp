@@ -113,6 +113,7 @@ int main(int argc, char **argv)
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
+            qDebug() << " Error during loading main.qml";
             return 1;
         }
         return app.exec();
