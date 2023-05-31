@@ -60,15 +60,19 @@ configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "5")
 
-option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
-
+if (QT_MAJOR_VERSION STREQUAL "6")
+   option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
+   if (BUILD_QUICK_VERSION)
+      if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+        add_definitions(-DQT_QML_DEBUG)
+      endif()
+   endif()
+endif()
 if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
-endif()
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if (USE_UNITY_CMAKE_SUPPORT)
