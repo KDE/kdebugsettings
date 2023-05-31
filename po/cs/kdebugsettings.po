@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-30 00:49+0000\n"
+"POT-Creation-Date: 2023-05-31 00:50+0000\n"
 "PO-Revision-Date: 2023-03-15 14:30+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -290,8 +290,9 @@ msgid "New Name:"
 msgstr "Nový název:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, kde-format
-msgid "Impossible to rename group as '%1'"
+#, fuzzy, kde-format
+#| msgid "Impossible to rename group as '%1'"
+msgid "Impossible to rename group as '%1'."
 msgstr "Nelze přejmenovat skupinu jako '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:86

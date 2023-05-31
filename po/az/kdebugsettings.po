@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-30 00:49+0000\n"
+"POT-Creation-Date: 2023-05-31 00:50+0000\n"
 "PO-Revision-Date: 2023-03-12 18:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -296,8 +296,9 @@ msgid "New Name:"
 msgstr "Yeni ad:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, kde-format
-msgid "Impossible to rename group as '%1'"
+#, fuzzy, kde-format
+#| msgid "Impossible to rename group as '%1'"
+msgid "Impossible to rename group as '%1'."
 msgstr "Qrupun adını \"%1\" kimi dəyişmək mümkün deyil"
 
 #: src/widgets/groupmanagementwidget.cpp:86
