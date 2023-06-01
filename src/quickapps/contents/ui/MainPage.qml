@@ -9,7 +9,6 @@ import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 Kirigami.Page {
     id: root
-    title: i18n("Main Page")
 
     leftPadding: 20
 
