@@ -19,6 +19,7 @@ Kirigami.Page {
         goToEnviromnentCategories,
         helpAction,
         aboutAction,
+        separatorAction,
         quitAction
     ]
     ColumnLayout {
