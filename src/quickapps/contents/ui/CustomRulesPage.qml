@@ -24,35 +24,35 @@ Kirigami.ScrollablePage {
         model: LoggingManager.customCategoryModel
         delegate: Kirigami.BasicListItem {
             label: model.displayRule
-        }
-        QQC2.Menu {
-            id: contextMenu
-            QQC2.MenuItem {
-                action: Kirigami.Action {
-                    icon.name: "list-add"
-                    text: i18nc("@action add custom rule", "Add Rule...")
+            QQC2.Menu {
+                id: contextMenu
+                QQC2.MenuItem {
+                    action: Kirigami.Action {
+                        icon.name: "list-add"
+                        text: i18nc("@action add custom rule", "Add Rule...")
+                    }
+                    onTriggered: {}
                 }
-                onTriggered: {}
-            }
-            QQC2.MenuItem {
-                action: Kirigami.Action {
-                    icon.name: "document-edit" // TODO fixit
-                    text: i18nc("@action edit custom rule", "Edit Rule...")
+                QQC2.MenuItem {
+                    action: Kirigami.Action {
+                        icon.name: "document-edit" // TODO fixit
+                        text: i18nc("@action edit custom rule", "Edit Rule...")
+                    }
+                    onTriggered: {}
                 }
-                onTriggered: {}
-            }
-            QQC2.MenuSeparator { }
-            QQC2.MenuItem {
-                action: Kirigami.Action {
-                    icon.name: "edit-delete"
-                    text: i18nc("@action remove custom rule", "Remove Rule")
+                QQC2.MenuSeparator { }
+                QQC2.MenuItem {
+                    action: Kirigami.Action {
+                        icon.name: "edit-delete"
+                        text: i18nc("@action remove custom rule", "Remove Rule")
+                    }
+                    onTriggered: {}
                 }
-                onTriggered: {}
             }
-        }
-        TapHandler {
-            acceptedButtons: Qt.RightButton
-            onTapped: contextMenu.popup()
+            TapHandler {
+                acceptedButtons: Qt.RightButton
+                onTapped: contextMenu.popup()
+            }
         }
     }
 }
