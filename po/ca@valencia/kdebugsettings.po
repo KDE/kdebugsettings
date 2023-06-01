@@ -372,7 +372,7 @@ msgstr "Configura els paràmetres de la depuració"
 #: src/main.cpp:36
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1, Els autors del kdebugsettings"
+msgstr "(c) 2015-%1, Els autors de kdebugsettings"
 
 #: src/main.cpp:37
 #, kde-format
