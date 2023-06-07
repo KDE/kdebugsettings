@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 00:50+0000\n"
-"PO-Revision-Date: 2023-03-15 14:30+0100\n"
+"PO-Revision-Date: 2023-06-05 11:06+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
@@ -153,10 +153,9 @@ msgid "No Debug Messages"
 msgstr "Žádné ladicí zprávy"
 
 #: src/quickapps/main.cpp:40
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1 autoři kdebugsettings"
+msgstr "(c) %1 autoři kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -290,10 +289,9 @@ msgid "New Name:"
 msgstr "Nový název:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Nelze přejmenovat skupinu jako '%1'"
+msgstr "Skupinu nelze přejmenovat jako '%1'."
 
 #: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
@@ -450,6 +448,3 @@ msgstr "Uložit jako soubor..."
 #, kde-format
 msgid "Save As Group..."
 msgstr "Uložit jako skupinu..."
-
-#~ msgid "Rules:"
-#~ msgstr "Pravidla:"
