@@ -21,3 +21,5 @@ void LoadToolButtonTest::shouldHaveDefaultValues()
     QVERIFY(!w.text().isEmpty());
     QCOMPARE(w.popupMode(), QToolButton::InstantPopup);
 }
+
+#include "moc_loadtoolbuttontest.cpp"

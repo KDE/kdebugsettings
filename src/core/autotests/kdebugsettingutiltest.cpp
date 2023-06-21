@@ -249,3 +249,5 @@ void KDebugSettingUtilTest::shouldConvertCategoryTypeFromString()
     QFETCH(LoggingCategory::LoggingType, loggingType);
     QCOMPARE(KDebugSettingsUtil::convertCategoryTypeFromString(input), loggingType);
 }
+
+#include "moc_kdebugsettingutiltest.cpp"

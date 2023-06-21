@@ -119,3 +119,5 @@ void GroupManagementWidget::init()
         }
     }
 }
+
+#include "moc_groupmanagementwidget.cpp"

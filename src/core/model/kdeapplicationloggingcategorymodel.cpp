@@ -179,3 +179,5 @@ QHash<int, QByteArray> KDEApplicationLoggingCategoryModel::roleNames() const
 {
     return mRoleNames;
 }
+
+#include "moc_kdeapplicationloggingcategorymodel.cpp"

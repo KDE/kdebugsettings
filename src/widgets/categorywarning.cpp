@@ -18,3 +18,5 @@ CategoryWarning::CategoryWarning(QWidget *parent)
 }
 
 CategoryWarning::~CategoryWarning() = default;
+
+#include "moc_categorywarning.cpp"

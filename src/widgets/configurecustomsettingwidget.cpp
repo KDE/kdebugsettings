@@ -83,3 +83,5 @@ QString ConfigureCustomSettingWidget::rule() const
 {
     return KDebugSettingsUtil::generateDisplayRule(mCategoryLineEdit->text().trimmed(), mEnableCategory->isChecked(), mCategoryType->type());
 }
+
+#include "moc_configurecustomsettingwidget.cpp"

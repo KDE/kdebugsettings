@@ -77,3 +77,5 @@ void LoggingManager::readQtLoggingFile()
 {
     mLoggings.readQtLoggingFile();
 }
+
+#include "moc_loggingmanager.cpp"

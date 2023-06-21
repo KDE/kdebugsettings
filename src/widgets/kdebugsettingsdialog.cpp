@@ -253,3 +253,5 @@ void KDebugSettingsDialog::slotManageGroup()
     groupManagementDialog->exec();
     delete groupManagementDialog;
 }
+
+#include "moc_kdebugsettingsdialog.cpp"

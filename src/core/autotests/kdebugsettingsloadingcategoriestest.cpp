@@ -25,3 +25,5 @@ void KDebugSettingsLoadingCategoriesTest::shouldHaveDefaultValues()
     QVERIFY(w.qtKdeCategories().isEmpty());
     QVERIFY(!w.foundOverrideRule());
 }
+
+#include "moc_kdebugsettingsloadingcategoriestest.cpp"

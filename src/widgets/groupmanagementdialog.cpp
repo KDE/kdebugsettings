@@ -57,3 +57,5 @@ void GroupManagementDialog::writeConfig()
     KConfigGroup group(KSharedConfig::openStateConfig(), myGroupManagementDialogGroupName);
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
+
+#include "moc_groupmanagementdialog.cpp"

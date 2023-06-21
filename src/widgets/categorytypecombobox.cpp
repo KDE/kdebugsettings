@@ -58,3 +58,5 @@ LoggingCategory::LoggingType CategoryTypeComboBox::defaultCategories() const
 {
     return mDefaultCategories;
 }
+
+#include "moc_categorytypecombobox.cpp"

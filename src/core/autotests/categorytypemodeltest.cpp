@@ -19,3 +19,5 @@ void CategoryTypeModelTest::shouldHaveDefaultValues()
     CategoryTypeModel model;
     // TODO
 }
+
+#include "moc_categorytypemodeltest.cpp"

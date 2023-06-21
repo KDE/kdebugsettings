@@ -87,3 +87,5 @@ LoggingCategory::List CustomDebugSettingsPage::rules() const
 {
     return LoggingManager::self().customCategoryModel()->loggingCategories();
 }
+
+#include "moc_customdebugsettingspage.cpp"

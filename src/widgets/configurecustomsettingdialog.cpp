@@ -45,3 +45,5 @@ QString ConfigureCustomSettingDialog::rule() const
 {
     return mCustomSettingWidget->rule();
 }
+
+#include "moc_configurecustomsettingdialog.cpp"

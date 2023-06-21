@@ -38,3 +38,5 @@ QStringList LoadToolButton::groupNames() const
 {
     return mLoadMenu->groupNames();
 }
+
+#include "moc_loadtoolbutton.cpp"

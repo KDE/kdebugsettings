@@ -52,3 +52,5 @@ void KDEApplicationDebugSettingPageTest::shouldHaveDefaultValue()
     QVERIFY(mSearchLineEdit->text().isEmpty());
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
 }
+
+#include "moc_kdeapplicationdebugsettingpagetest.cpp"

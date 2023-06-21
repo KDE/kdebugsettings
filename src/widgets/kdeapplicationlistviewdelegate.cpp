@@ -43,3 +43,5 @@ void KDEApplicationListViewDelegate::updateEditorGeometry(QWidget *editor, const
 {
     editor->setGeometry(option.rect);
 }
+
+#include "moc_kdeapplicationlistviewdelegate.cpp"

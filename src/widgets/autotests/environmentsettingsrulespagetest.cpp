@@ -36,3 +36,5 @@ void EnvironmentSettingsRulesPageTest::shouldSetRules()
 }
 
 QTEST_MAIN(EnvironmentSettingsRulesPageTest)
+
+#include "moc_environmentsettingsrulespagetest.cpp"

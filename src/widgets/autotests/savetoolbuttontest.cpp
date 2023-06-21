@@ -21,3 +21,5 @@ void SaveToolButtonTest::shouldHaveDefaultValues()
     QVERIFY(!w.text().isEmpty());
     QCOMPARE(w.popupMode(), QToolButton::InstantPopup);
 }
+
+#include "moc_savetoolbuttontest.cpp"

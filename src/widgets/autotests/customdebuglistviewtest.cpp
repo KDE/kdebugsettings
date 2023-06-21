@@ -21,3 +21,5 @@ void CustomDebugListViewTest::shouldHaveDefaultValues()
     QCOMPARE(w.contextMenuPolicy(), Qt::CustomContextMenu);
     QCOMPARE(w.selectionMode(), QAbstractItemView::ExtendedSelection);
 }
+
+#include "moc_customdebuglistviewtest.cpp"

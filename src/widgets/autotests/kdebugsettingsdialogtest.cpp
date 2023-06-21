@@ -52,3 +52,5 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(KDebugSettingsDialogTest)
+
+#include "moc_kdebugsettingsdialogtest.cpp"

@@ -19,3 +19,5 @@ void KDEApplicationTreeViewTest::shouldHaveDefaultValues()
     KDEApplicationTreeView w;
     // TODO
 }
+
+#include "moc_kdeapplicationtreeviewtest.cpp"

@@ -39,3 +39,5 @@ void CategoryTypeProxyModel::setShowOffType(bool newShowOffType)
         Q_EMIT showOffTypeChanged();
     }
 }
+
+#include "moc_categorytypeproxymodel.cpp"

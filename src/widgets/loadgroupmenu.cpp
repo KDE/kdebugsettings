@@ -79,3 +79,5 @@ void LoadGroupMenu::setGroupNames(const QStringList &groupNames)
 {
     mGroupNames = groupNames;
 }
+
+#include "moc_loadgroupmenu.cpp"

@@ -24,3 +24,5 @@ void CategoryWarningTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CategoryWarningTest)
+
+#include "moc_categorywarningtest.cpp"

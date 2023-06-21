@@ -97,3 +97,5 @@ void CategoryTypeComboBoxTest::shouldVerifyThatDefaultCategoryIsCorrect()
 }
 
 QTEST_MAIN(CategoryTypeComboBoxTest)
+
+#include "moc_categorytypecomboboxtest.cpp"

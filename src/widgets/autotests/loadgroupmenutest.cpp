@@ -24,3 +24,5 @@ void LoadGroupMenuTest::shouldHaveDefaultValues()
     QVERIFY(!m.title().isEmpty());
     QVERIFY(m.groupNames().isEmpty());
 }
+
+#include "moc_loadgroupmenutest.cpp"

@@ -102,3 +102,5 @@ void KDEApplicationDebugSettingPage::restoreToDefault()
 {
     mKdeApplicationTreeView->restoreToDefault();
 }
+
+#include "moc_kdeapplicationdebugsettingpage.cpp"

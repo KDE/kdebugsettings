@@ -80,3 +80,5 @@ void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
 }
 
 QTEST_MAIN(ConfigureCustomSettingWidgetTest)
+
+#include "moc_configurecustomsettingwidgettest.cpp"

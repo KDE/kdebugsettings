@@ -29,3 +29,5 @@ void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ConfigureCustomSettingDialogTest)
+
+#include "moc_configurecustomsettingdialogtest.cpp"

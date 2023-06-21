@@ -72,3 +72,5 @@ void LoggingCategoryTest::shouldCreateRules()
 }
 
 QTEST_MAIN(LoggingCategoryTest)
+
+#include "moc_loggingcategorytest.cpp"

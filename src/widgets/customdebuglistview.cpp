@@ -141,3 +141,5 @@ void CustomDebugListView::setFilterRuleStr(const QString &str)
 {
     mCustomLoggingCategoryProxyModel->setFilterText(str);
 }
+
+#include "moc_customdebuglistview.cpp"

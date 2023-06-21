@@ -29,3 +29,5 @@ void EnvironmentSettingsRulesPage::setRules(const QString &rules)
     QString newRules = rules;
     mRichTextEdit->setHtml(information + i18n("Current rules:") + QStringLiteral("<br>") + newRules.replace(QLatin1Char('\n'), QLatin1String("<br>")));
 }
+
+#include "moc_environmentsettingsrulespage.cpp"

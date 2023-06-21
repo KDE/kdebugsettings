@@ -44,3 +44,5 @@ void CustomLoggingCategoryProxyModel::setFilterText(const QString &newFilterText
         Q_EMIT filterTextChanged();
     }
 }
+
+#include "moc_customloggingcategoryproxymodel.cpp"

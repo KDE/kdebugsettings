@@ -48,3 +48,5 @@ void RenameCategoryTest::shouldParseRenameLine()
 }
 
 QTEST_MAIN(RenameCategoryTest)
+
+#include "moc_renamecategorytest.cpp"

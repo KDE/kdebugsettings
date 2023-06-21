@@ -44,3 +44,5 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CustomDebugSettingsPageTest)
+
+#include "moc_customdebugsettingspagetest.cpp"

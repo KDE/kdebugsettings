@@ -59,3 +59,5 @@ void ChangeDebugModeJobTest::shouldConvertToLoggingType()
     QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Critical")), LoggingCategory::LoggingType::Critical);
     QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Off")), LoggingCategory::LoggingType::Off);
 }
+
+#include "moc_changedebugmodejobtest.cpp"

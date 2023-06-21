@@ -40,3 +40,5 @@ void KDEApplicationLoggingCategoryProxyModel::setFilterText(const QString &newFi
         Q_EMIT filterTextChanged();
     }
 }
+
+#include "moc_kdeapplicationloggingcategoryproxymodel.cpp"

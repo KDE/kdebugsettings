@@ -25,3 +25,5 @@ SaveToolButton::SaveToolButton(QWidget *parent)
 }
 
 SaveToolButton::~SaveToolButton() = default;
+
+#include "moc_savetoolbutton.cpp"

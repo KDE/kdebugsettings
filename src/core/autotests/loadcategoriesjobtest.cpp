@@ -232,3 +232,5 @@ void LoadCategoriesJobTest::shouldReadRules()
 }
 
 QTEST_MAIN(LoadCategoriesJobTest)
+
+#include "moc_loadcategoriesjobtest.cpp"

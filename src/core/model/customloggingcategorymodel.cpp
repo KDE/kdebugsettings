@@ -156,3 +156,5 @@ void CustomLoggingCategoryModel::refreshModel()
     beginResetModel();
     endResetModel();
 }
+
+#include "moc_customloggingcategorymodel.cpp"

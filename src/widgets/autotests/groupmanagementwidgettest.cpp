@@ -28,3 +28,5 @@ void GroupManagementWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mListWidget);
     QCOMPARE(mListWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
 }
+
+#include "moc_groupmanagementwidgettest.cpp"

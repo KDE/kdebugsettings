@@ -73,3 +73,5 @@ QHash<int, QByteArray> CategoryTypeModel::roleNames() const
 {
     return mRoleNames;
 }
+
+#include "moc_categorytypemodel.cpp"

@@ -32,3 +32,5 @@ void GroupManagementDialogTest::shouldHaveDefaultValues()
     auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
 }
+
+#include "moc_groupmanagementdialogtest.cpp"

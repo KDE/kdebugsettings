@@ -52,3 +52,5 @@ void EnvironmentPlainTextEdit::slotGeneralPaletteChanged()
     color.setAlpha(128);
     mTextColor = color;
 }
+
+#include "moc_environmentplaintextedit.cpp"

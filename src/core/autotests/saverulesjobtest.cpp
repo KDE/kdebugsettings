@@ -79,3 +79,5 @@ void SaveRulesJobTest::shouldSaveLoadRules()
     QVERIFY(saveJob.start());
     compareFile(filename);
 }
+
+#include "moc_saverulesjobtest.cpp"

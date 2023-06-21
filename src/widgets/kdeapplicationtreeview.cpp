@@ -125,3 +125,5 @@ LoggingCategory::List KDEApplicationTreeView::rules(bool forceSavingAllRules) co
     }
     return lst;
 }
+
+#include "moc_kdeapplicationtreeview.cpp"
