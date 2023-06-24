@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 00:50+0000\n"
-"PO-Revision-Date: 2023-05-31 09:31+0200\n"
+"PO-Revision-Date: 2023-06-23 22:29+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "Non se pode exportar o grupo «%2» en «%1»"
 #: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Rename Group"
-msgstr "Cambiar o nome do grupo"
+msgstr "Renomear o grupo"
 
 #: src/widgets/groupmanagementwidget.cpp:65
 #, kde-format
@@ -299,12 +299,12 @@ msgstr "Novo nome:"
 #: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Non se pode cambiar o nome do grupo a «%1»."
+msgstr "Non se pode renomear o grupo como «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
 msgid "Rename Group..."
-msgstr "Cambiar o nome do grupo…"
+msgstr "Renomear o grupo…"
 
 #: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
