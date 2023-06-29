@@ -38,7 +38,6 @@ else()
 endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Quick QuickControls2)
 find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons 
     Config
@@ -61,12 +60,13 @@ set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "5")
 
 if (QT_MAJOR_VERSION STREQUAL "6")
-   option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
-   if (BUILD_QUICK_VERSION)
-      if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
-        add_definitions(-DQT_QML_DEBUG)
-      endif()
-   endif()
+    option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
+    if (BUILD_QUICK_VERSION)
+        find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Quick QuickControls2)
+        if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+            add_definitions(-DQT_QML_DEBUG)
+        endif()
+    endif()
 endif()
 if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
