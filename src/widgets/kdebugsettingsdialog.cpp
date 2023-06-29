@@ -98,7 +98,6 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &KDebugSettingsDialog::slotRestoreDefault);
     mainLayout->addWidget(buttonBox);
     readConfig();
-    readQtLoggingFile();
     mKdeApplicationSettingsPage->forceFocus();
 }
 
@@ -128,12 +127,6 @@ void KDebugSettingsDialog::slotLoadGroup(const QString &fullPath)
         LoggingManager::self().readCategoriesFiles(fullPath);
         updateLoggingCategories();
     }
-}
-
-void KDebugSettingsDialog::readQtLoggingFile()
-{
-    LoggingManager::self().readQtLoggingFile();
-    updateLoggingCategories();
 }
 
 void KDebugSettingsDialog::updateLoggingCategories()

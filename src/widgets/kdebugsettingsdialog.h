@@ -35,7 +35,6 @@ private:
     LIBKDEBUGSETTINGS_NO_EXPORT void slotInsertCategories();
     LIBKDEBUGSETTINGS_NO_EXPORT void slotRestoreDefault();
 
-    LIBKDEBUGSETTINGS_NO_EXPORT void readQtLoggingFile();
     LIBKDEBUGSETTINGS_NO_EXPORT bool saveRules(const QString &path, bool forceSavingAllRules = false);
     LIBKDEBUGSETTINGS_NO_EXPORT bool saveInQtLogging();
     LIBKDEBUGSETTINGS_NO_EXPORT void saveConfig();
