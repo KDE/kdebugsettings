@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 00:50+0000\n"
+"POT-Creation-Date: 2023-06-30 00:51+0000\n"
 "PO-Revision-Date: 2023-06-17 12:09+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -206,9 +206,12 @@ msgstr "Edit Rule"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
 msgid "Remove Rule"
-msgstr "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Remove Rule"
+msgstr[1] "Remove Rule"
 
 #: src/widgets/customdebuglistview.cpp:82
 #, kde-format
@@ -363,38 +366,38 @@ msgstr "Save As..."
 msgid "Insert..."
 msgstr "Insert..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:160
+#: src/widgets/kdebugsettingsdialog.cpp:153
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' cannot be opened. Please verify it."
 
-#: src/widgets/kdebugsettingsdialog.cpp:186
-#: src/widgets/kdebugsettingsdialog.cpp:200
+#: src/widgets/kdebugsettingsdialog.cpp:179
+#: src/widgets/kdebugsettingsdialog.cpp:193
 #, kde-format
 msgid "Insert Categories"
 msgstr "Insert Categories"
 
-#: src/widgets/kdebugsettingsdialog.cpp:186
+#: src/widgets/kdebugsettingsdialog.cpp:179
 #, kde-format
 msgid "Categories Files"
 msgstr "Categories Files"
 
-#: src/widgets/kdebugsettingsdialog.cpp:200
+#: src/widgets/kdebugsettingsdialog.cpp:193
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Categories from file '%1' inserted."
 
-#: src/widgets/kdebugsettingsdialog.cpp:208
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Group Name"
 msgstr "Group Name"
 
-#: src/widgets/kdebugsettingsdialog.cpp:208
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Name:"
 msgstr "Name:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:213
+#: src/widgets/kdebugsettingsdialog.cpp:206
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -403,23 +406,23 @@ msgstr ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 
-#: src/widgets/kdebugsettingsdialog.cpp:222
+#: src/widgets/kdebugsettingsdialog.cpp:215
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Can not save as empty name. Please use a new one."
 
-#: src/widgets/kdebugsettingsdialog.cpp:229
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Save As"
 msgstr "Save As"
 
-#: src/widgets/kdebugsettingsdialog.cpp:229
-#: src/widgets/kdebugsettingsdialog.cpp:237
+#: src/widgets/kdebugsettingsdialog.cpp:222
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings File (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:237
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Load Debug Settings Files"
