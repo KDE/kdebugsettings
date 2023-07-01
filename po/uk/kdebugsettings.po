@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-30 00:51+0000\n"
-"PO-Revision-Date: 2023-05-31 09:51+0300\n"
+"PO-Revision-Date: 2023-06-30 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -211,13 +211,12 @@ msgstr "Змінити правило"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Вилучити правило"
-msgstr[1] "Вилучити правило"
-msgstr[2] "Вилучити правило"
+msgstr[0] "Вилучити правила"
+msgstr[1] "Вилучити правила"
+msgstr[2] "Вилучити правила"
 msgstr[3] "Вилучити правило"
 
 #: src/widgets/customdebuglistview.cpp:82
