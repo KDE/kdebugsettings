@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-30 00:51+0000\n"
-"PO-Revision-Date: 2023-06-02 05:45+0200\n"
+"PO-Revision-Date: 2023-07-01 08:13+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
@@ -209,8 +209,7 @@ msgstr "წესის ჩასწორება"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "წესის წაშლა"

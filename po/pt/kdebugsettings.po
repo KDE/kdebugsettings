@@ -206,12 +206,11 @@ msgstr "Editar a Regra"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Remover a Regra"
-msgstr[1] "Remover a Regra"
+msgstr[1] "Remover as Regras"
 
 #: src/widgets/customdebuglistview.cpp:82
 #, kde-format
