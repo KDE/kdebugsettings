@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 05:01+0000\n"
-"PO-Revision-Date: 2023-06-23 22:29+0200\n"
+"PO-Revision-Date: 2023-07-02 18:10+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -49,8 +49,8 @@ msgid ""
 "You have a rule as '*=true' or '*=false' which will override all your "
 "specific rule. Better to remove it."
 msgstr ""
-"Ten unha regra, como «*=true» ou «*=false», que fará que se ignore calquera "
-"das súas regras específicas. Será mellor que retire dita regra."
+"Ten unha regra, como «*=true» ou «*=false», que sobredefinirá as súas regras "
+"específicas. Será mellor que retire esa regra."
 
 #: src/configurecustomsettingdialog.cpp:21
 #, kde-format
@@ -380,7 +380,7 @@ msgstr "Laurent Montel"
 #: src/main.cpp:37
 #, kde-format
 msgid "Maintainer"
-msgstr "Mantedor."
+msgstr "Mantemento."
 
 #: src/main.cpp:43
 #, kde-format
