@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-30 00:51+0000\n"
-"PO-Revision-Date: 2023-06-11 22:12+0200\n"
+"PO-Revision-Date: 2023-07-02 21:35+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -208,12 +208,11 @@ msgstr "Modifica regula"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Remove regula"
-msgstr[1] "Remove regula"
+msgstr[1] "Remove regulas"
 
 #: src/widgets/customdebuglistview.cpp:82
 #, kde-format
