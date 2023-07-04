@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-30 00:51+0000\n"
-"PO-Revision-Date: 2023-06-23 09:38+0200\n"
+"PO-Revision-Date: 2023-06-30 21:48+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -203,13 +203,12 @@ msgstr "Upravit pravidlo"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Odstranit pravidlo"
-msgstr[1] "Odstranit pravidlo"
-msgstr[2] "Odstranit pravidlo"
+msgstr[1] "Odstranit pravidla"
+msgstr[2] "Odstranit pravidla"
 
 #: src/widgets/customdebuglistview.cpp:82
 #, kde-format
