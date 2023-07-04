@@ -79,10 +79,15 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
     if (selectedIndexes.isEmpty()) {
         return;
     }
-    const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", selectedIndexes.count());
+    const auto numberOfRules{selectedIndexes.count()};
+    const QString str = i18np("Do you want to remove this rule?", "Do you want to remove these %1 rules?", numberOfRules);
 
     if (KMessageBox::ButtonCode::SecondaryAction
-        == KMessageBox::warningTwoActions(this, str, i18n("Remove Rule"), KStandardGuiItem::remove(), KStandardGuiItem::cancel())) {
+        == KMessageBox::warningTwoActions(this,
+                                          str,
+                                          i18np("Remove Rule", "Remove Rules", numberOfRules),
+                                          KStandardGuiItem::remove(),
+                                          KStandardGuiItem::cancel())) {
         return;
     }
     LoggingCategory::List categories;
