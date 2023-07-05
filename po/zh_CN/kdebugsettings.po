@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-30 00:51+0000\n"
+"POT-Creation-Date: 2023-07-05 01:05+0000\n"
 "PO-Revision-Date: 2023-07-03 11:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -203,13 +203,13 @@ msgid "Edit Rule"
 msgstr "编辑规则"
 
 #: src/widgets/customdebuglistview.cpp:50
-#: src/widgets/customdebuglistview.cpp:85
+#: src/widgets/customdebuglistview.cpp:88
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "移除规则"
 
-#: src/widgets/customdebuglistview.cpp:82
+#: src/widgets/customdebuglistview.cpp:83
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
