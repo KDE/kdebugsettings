@@ -37,7 +37,11 @@ Kirigami.ScrollablePage {
                 QQC2.Label {
                     Layout.fillHeight: true
                     Layout.leftMargin: 4
+                    Layout.alignment: Qt.AlignLeft
                     text: model.description
+                }
+                Item {
+                    Layout.fillWidth: true
                 }
                 QQC2.ComboBox {
                     model: CategoryTypeProxyModel {
