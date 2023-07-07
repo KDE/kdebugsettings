@@ -53,7 +53,6 @@ Kirigami.ApplicationWindow {
         text: i18nc("@action", "Open Handbook")
         onTriggered: { Qt.openUrlExternally("help:/kdebugsettings") }
     }
-    // TODO fixme
     Kirigami.Action {
         id: separatorAction
         displayHint: Kirigami.DisplayHint.AlwaysHide
@@ -66,6 +65,16 @@ Kirigami.ApplicationWindow {
         icon.name: "gtk-quit"
         shortcut: StandardKey.Quit
         onTriggered: Qt.quit()
+    }
+    Kirigami.Action {
+        id: saveAction
+        displayHint: Kirigami.DisplayHint.AlwaysHide
+        text: i18nc("@menu-action", "Save")
+        icon.name: "document-save"
+        shortcut: StandardKey.Save
+        onTriggered: {
+            // TODO
+        }
     }
     GlobalMenu {}
 }

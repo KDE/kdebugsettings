@@ -17,6 +17,8 @@ Kirigami.Page {
         goToKdeApplicationCategories,
         goToCustomCategories,
         goToEnviromnentCategories,
+        saveAction,
+        separatorAction,
         helpAction,
         aboutAction,
         separatorAction,
