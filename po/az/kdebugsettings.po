@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:05+0000\n"
-"PO-Revision-Date: 2023-06-12 17:11+0400\n"
+"PO-Revision-Date: 2023-06-30 11:52+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -208,12 +208,11 @@ msgstr "Qaydanı dəyişmək"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Qaydanı silmək"
-msgstr[1] "Qaydanı silmək"
+msgstr[0] "Qaydanı silin"
+msgstr[1] "Qaydaları silin"
 
 #: src/widgets/customdebuglistview.cpp:83
 #, kde-format
