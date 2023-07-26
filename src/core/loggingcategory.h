@@ -53,6 +53,11 @@ private:
 };
 LIBKDEBUGSETTINGSCORE_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 Q_DECLARE_TYPEINFO(LoggingCategory, Q_MOVABLE_TYPE);
+#else
+Q_DECLARE_TYPEINFO(LoggingCategory, Q_RELOCATABLE_TYPE);
+#endif
+
 Q_DECLARE_METATYPE(LoggingCategory)
 Q_DECLARE_METATYPE(LoggingCategory::LoggingType)

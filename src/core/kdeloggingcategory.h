@@ -25,5 +25,9 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT KdeLoggingCategory {
     QString defaultSeverity;
 };
 LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT QDebug operator<<(QDebug debug, const KdeLoggingCategory &cat);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_MOVABLE_TYPE);
+#else
+Q_DECLARE_TYPEINFO(KdeLoggingCategory, Q_RELOCATABLE_TYPE);
+#endif
 Q_DECLARE_METATYPE(KdeLoggingCategory)

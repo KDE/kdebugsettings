@@ -21,5 +21,9 @@ public:
     QString originalName;
     QString newName;
 };
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 Q_DECLARE_TYPEINFO(RenameCategory, Q_MOVABLE_TYPE);
+#else
+Q_DECLARE_TYPEINFO(RenameCategory, Q_RELOCATABLE_TYPE);
+#endif
 Q_DECLARE_METATYPE(RenameCategory)
