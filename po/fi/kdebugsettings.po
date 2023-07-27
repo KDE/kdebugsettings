@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:05+0000\n"
-"PO-Revision-Date: 2023-06-07 21:36+0300\n"
+"PO-Revision-Date: 2023-07-25 16:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
@@ -210,12 +210,11 @@ msgstr "Muokkaa sääntöä"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Poista sääntö"
-msgstr[1] "Poista sääntö"
+msgstr[1] "Poista säännöt"
 
 #: src/widgets/customdebuglistview.cpp:83
 #, kde-format
@@ -301,10 +300,9 @@ msgid "New Name:"
 msgstr "Uusi nimi:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Ryhmän nimeksi ei voi muuttaa ”%1”"
+msgstr "Ryhmän nimeksi ei voi muuttaa ”%1”."
 
 #: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
