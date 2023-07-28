@@ -54,6 +54,11 @@ ecm_set_disabled_deprecation_versions(QT 6.5.0
     KF 5.240
 )
 
+if (OPTION_SELENIUMWEBDRIVER_SUPPORT)
+    find_package(SeleniumWebDriverATSPI)
+    set_package_properties(SeleniumWebDriverATSPI PROPERTIES PURPOSE "Needed for GUI tests" URL "https://invent.kde.org/sdk/selenium-webdriver-at-spi" TYPE OPTIONAL)
+endif()
+
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")

@@ -8,3 +8,8 @@ add_subdirectory(widgets)
 if (BUILD_QUICK_VERSION)
     add_subdirectory(quickapps)
 endif()
+
+# Selenium GUI tests
+if (SeleniumWebDriverATSPI_FOUND)
+    add_subdirectory(seleniumtests)
+endif()
