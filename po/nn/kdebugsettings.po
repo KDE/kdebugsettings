@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:05+0000\n"
-"PO-Revision-Date: 2023-03-19 14:45+0100\n"
+"PO-Revision-Date: 2023-07-29 12:32+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -161,7 +161,7 @@ msgstr "Ingen feilsøkingsmeldingar"
 #: src/quickapps/main.cpp:40
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr ""
+msgstr "© %1 kdebugsettings-utviklarane"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -211,11 +211,11 @@ msgstr "Rediger regel"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:88
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Fjern regel"
-msgstr[1] "Fjern regel"
+msgstr[1] "Fjern reglar"
 
 #: src/widgets/customdebuglistview.cpp:83
 #, kde-format
@@ -302,7 +302,7 @@ msgstr "Nytt namn:"
 #: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr ""
+msgstr "Ikkje mogleg å endra namn på gruppe til «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
