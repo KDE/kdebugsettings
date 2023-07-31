@@ -1,6 +1,5 @@
 # Translation for kdebugsettings.po to Euskara/Basque (eu).
-# Copyright (C) 2017-2018, Free Software Foundation.
-# Copyright (C) 2019-2022, This file is copyright:
+# Copyright (C) 2017-2023 This file is copyright:
 # This file is distributed under the same license as the kdebugsettings package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -11,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:05+0000\n"
-"PO-Revision-Date: 2023-04-11 00:28+0200\n"
+"PO-Revision-Date: 2023-07-30 22:00+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
@@ -160,10 +159,9 @@ msgid "No Debug Messages"
 msgstr "Arazte mezurik ez"
 
 #: src/quickapps/main.cpp:40
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1 kdebugsettings-en egileak"
+msgstr "(c) %1 «kdebugsettings»en egileak"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -213,12 +211,11 @@ msgstr "Editatu araua"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Kendu araua"
-msgstr[1] "Kendu araua"
+msgstr[1] "Kendu arauak"
 
 #: src/widgets/customdebuglistview.cpp:83
 #, kde-format
@@ -277,21 +274,19 @@ msgstr "Kudeatu taldea"
 #: src/widgets/groupmanagementwidget.cpp:47
 #: src/widgets/groupmanagementwidget.cpp:50
 #: src/widgets/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Zamatu taldea"
+msgstr "Esportatu taldea"
 
 #: src/widgets/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Taldea hona esportatu da, %1"
 
 #: src/widgets/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Taldea ezin da «%1» gisa berrizendatu"
+msgstr "Ezinezkoa da '%2' taldea '%1'(e)ra esportatzea"
 
 #: src/widgets/groupmanagementwidget.cpp:65
 #: src/widgets/groupmanagementwidget.cpp:70
@@ -305,21 +300,19 @@ msgid "New Name:"
 msgstr "Izen berria:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Taldea ezin da «%1» gisa berrizendatu"
+msgstr "Ezinezkoa da taldea '%1' gisa berrizendatzea."
 
 #: src/widgets/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Berrizendatu taldea"
+msgstr "Berrizendatu taldea..."
 
 #: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Esportatu taldea..."
 
 #: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
