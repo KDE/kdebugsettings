@@ -19,7 +19,7 @@ bool CategoryTypeProxyModel::filterAcceptsRow(int source_row, const QModelIndex 
     const QModelIndex sourceIndex = sourceModel()->index(source_row, 0, source_parent);
 
     if (!mShowOffType) {
-        const LoggingCategory::LoggingType type = sourceIndex.data(CategoryTypeModel::LoggingCategoryTypeRole).value<LoggingCategory::LoggingType>();
+        const auto type = sourceIndex.data(CategoryTypeModel::LoggingCategoryTypeRole).value<LoggingCategory::LoggingType>();
         if (type == LoggingCategory::LoggingType::Off) {
             return false;
         }
