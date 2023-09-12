@@ -1,0 +1,28 @@
+{
+    "id": "org.kde.kdebugsettings",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-22.08",
+    "sdk": "org.kde.Sdk",
+    "command": "kdebugsettings",
+    "finish-args": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11"
+    ],
+    "modules": [
+        {
+            "name": "kdebugsettings",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DINSTALL_ICONS=ON"
+            ],
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ]
+}
