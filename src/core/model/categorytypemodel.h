@@ -38,6 +38,6 @@ private:
     };
     Q_REQUIRED_RESULT CategoryTypeModel::CategoryInfo createCategoryInfo(LoggingCategory::LoggingType type);
     void fillCategoryTypes();
-    QVector<CategoryInfo> mCategoryInfoList;
+    QList<CategoryInfo> mCategoryInfoList;
     QHash<int, QByteArray> mRoleNames;
 };

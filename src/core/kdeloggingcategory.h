@@ -9,12 +9,12 @@
 
 #include "libkdebugsettingscore_private_export.h"
 #include <QDebug>
+#include <QList>
 #include <QString>
-#include <QVector>
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT KdeLoggingCategory {
     KdeLoggingCategory();
-    using List = QVector<KdeLoggingCategory>;
+    using List = QList<KdeLoggingCategory>;
     Q_REQUIRED_RESULT bool operator==(const KdeLoggingCategory &other) const;
     Q_REQUIRED_RESULT bool operator!=(const KdeLoggingCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;

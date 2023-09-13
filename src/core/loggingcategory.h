@@ -8,8 +8,8 @@
 
 #include "libkdebugsettingscore_export.h"
 #include <QDebug>
+#include <QList>
 #include <QString>
-#include <QVector>
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     enum LoggingType : char {
@@ -32,7 +32,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     {
     }
 
-    using List = QVector<LoggingCategory>;
+    using List = QList<LoggingCategory>;
     Q_REQUIRED_RESULT bool operator==(const LoggingCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
 

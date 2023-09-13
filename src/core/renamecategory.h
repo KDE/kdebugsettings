@@ -7,14 +7,14 @@
 #pragma once
 
 #include "libkdebugsettingscore_private_export.h"
+#include <QList>
 #include <QObject>
 #include <QString>
-#include <QVector>
 struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT RenameCategory {
 public:
     RenameCategory() = default;
 
-    using List = QVector<RenameCategory>;
+    using List = QList<RenameCategory>;
     Q_REQUIRED_RESULT bool operator==(const RenameCategory &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
 

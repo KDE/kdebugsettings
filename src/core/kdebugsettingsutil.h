@@ -67,7 +67,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoadLoggingCategory {
         }
     }
 
-    using List = QVector<LoadLoggingCategory>;
+    using List = QList<LoadLoggingCategory>;
 
     bool isValid() const
     {
