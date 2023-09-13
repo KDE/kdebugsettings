@@ -53,15 +53,15 @@ endif()
 generate_export_header(libkdebugsettings BASE_NAME libkdebugsettings)
 target_link_libraries(libkdebugsettings
     Qt::Core
-    KF${KF_MAJOR_VERSION}::Completion
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::I18n
+    KF6::Completion
+    KF6::ConfigCore
+    KF6::CoreAddons
+    KF6::I18n
     Qt::Widgets
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::ConfigGui
-    KF${KF_MAJOR_VERSION}::XmlGui
+    KF6::WidgetsAddons
+    KF6::ItemViews
+    KF6::ConfigGui
+    KF6::XmlGui
     libkdebugsettingscore
 )
 

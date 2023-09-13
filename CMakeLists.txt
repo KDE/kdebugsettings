@@ -8,8 +8,9 @@ set (RELEASE_SERVICE_VERSION_MICRO "70")
 set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.105.0")
+set(QT_REQUIRED_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
+set(KF_MAJOR_VERSION "6")
 
 set(ECM_VERSION ${KF_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
@@ -29,16 +30,8 @@ include(ECMQtDeclareLoggingCategory)
 include(GenerateExportHeader)
 include(ECMDeprecationSettings)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.5.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
-find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons 
     Config
     DBusAddons 
@@ -62,15 +55,13 @@ endif()
 configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
-set(KDEBUGSETTINGS_LIB_SOVERSION "5")
+set(KDEBUGSETTINGS_LIB_SOVERSION "6")
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
-    if (BUILD_QUICK_VERSION)
-        find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Quick QuickControls2)
-        if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
-            add_definitions(-DQT_QML_DEBUG)
-        endif()
+option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
+if (BUILD_QUICK_VERSION)
+    find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Quick QuickControls2)
+    if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+        add_definitions(-DQT_QML_DEBUG)
     endif()
 endif()
 if(BUILD_TESTING)
@@ -84,7 +75,7 @@ if (USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 if (BUILD_TESTING)
-    find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
+    find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 
 add_subdirectory( src )

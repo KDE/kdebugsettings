@@ -15,20 +15,7 @@ Dependencies:
     'frameworks/kxmlgui': '@latest-kf6'
     'frameworks/kcoreaddons': '@latest-kf6'
 
-- 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
-  'require':
-    'frameworks/kcoreaddons': '@latest'
-    'frameworks/kconfig': '@latest'
-    'frameworks/kdbusaddons': '@latest'
-    'frameworks/ki18n': '@latest'
-    'frameworks/extra-cmake-modules': '@latest'
-    'frameworks/kwidgetsaddons': '@latest'
-    'frameworks/kcompletion' : '@latest'
-    'frameworks/kitemviews' : '@latest'
-    'frameworks/kxmlgui': '@latest'
-    'frameworks/kcoreaddons': '@latest'
-
-- 'on': ['Linux/Qt6', 'Linux/Qt5']
+- 'on': ['Linux/Qt6']
   'require':
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
 

@@ -10,12 +10,12 @@ macro(add_kdebugsettings_unittest _source)
     ecm_mark_as_test(kdebugsettings-${_name})
     target_link_libraries( ${_name}
         Qt::Test
-        KF${KF_MAJOR_VERSION}::I18n
+        KF6::I18n
         Qt::Widgets
-        KF${KF_MAJOR_VERSION}::ConfigCore
-        KF${KF_MAJOR_VERSION}::WidgetsAddons
-        KF${KF_MAJOR_VERSION}::ItemViews
-        KF${KF_MAJOR_VERSION}::Completion
+        KF6::ConfigCore
+        KF6::WidgetsAddons
+        KF6::ItemViews
+        KF6::Completion
         libkdebugsettings
         )
 endmacro ()

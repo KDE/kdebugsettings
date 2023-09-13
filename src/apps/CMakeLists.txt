@@ -7,8 +7,8 @@ endif()
 
 target_link_libraries(kdebugsettings
     Qt::Widgets
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF6::I18n
+    KF6::DBusAddons
     libkdebugsettings
 )
 
