@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 01:05+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2020-02-20 19:09+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -19,92 +19,92 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.12.2\n"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:36
+#: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:34 src/quickapps/main.cpp:38
+#: src/apps/main.cpp:29 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
 msgstr "除錯設定"
 
-#: src/apps/main.cpp:36
+#: src/apps/main.cpp:31
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2020 kdebugsettings authors"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-2020 kdebugsettings 作者群"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:38 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr "開啟 QStandardPaths 測試模式，即讀取 / 寫入用於 unittests 的設定"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:41 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "對所有模組啟用完整偵錯。"
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "對所有模組停用完整偵錯。"
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:47 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "變更除錯模式成終端機（在終端機偵錯）"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:51 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr "指定（在終端機）要變更除錯模式的記錄分類名稱"
 
-#: src/apps/main.cpp:70 src/apps/main.cpp:80 src/apps/main.cpp:90
+#: src/apps/main.cpp:65 src/apps/main.cpp:75 src/apps/main.cpp:85
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "無法變更偵錯模式"
 
-#: src/core/kdebugsettingsutil.cpp:422
+#: src/core/kdebugsettingsutil.cpp:407
 #, kde-format
 msgid "Full Debug"
 msgstr "完整除錯"
 
-#: src/core/kdebugsettingsutil.cpp:425
+#: src/core/kdebugsettingsutil.cpp:410
 #, kde-format
 msgid "Info"
 msgstr "資訊"
 
-#: src/core/kdebugsettingsutil.cpp:428
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Warning"
 msgstr "警告"
 
-#: src/core/kdebugsettingsutil.cpp:431
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Critical"
 msgstr "嚴重錯誤"
 
-#: src/core/kdebugsettingsutil.cpp:434
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Off"
 msgstr "關"
 
-#: src/core/kdebugsettingsutil.cpp:437 src/core/loggingcategory.cpp:144
+#: src/core/kdebugsettingsutil.cpp:422 src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Undefined"
 msgstr "未定義"
