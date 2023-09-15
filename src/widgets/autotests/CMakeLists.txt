@@ -14,7 +14,6 @@ macro(add_kdebugsettings_unittest _source)
         Qt::Widgets
         KF6::ConfigCore
         KF6::WidgetsAddons
-        KF6::ItemViews
         KF6::Completion
         libkdebugsettings
         )

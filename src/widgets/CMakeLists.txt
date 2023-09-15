@@ -59,7 +59,6 @@ target_link_libraries(libkdebugsettings
     KF6::I18n
     Qt::Widgets
     KF6::WidgetsAddons
-    KF6::ItemViews
     KF6::ConfigGui
     KF6::XmlGui
     libkdebugsettingscore
