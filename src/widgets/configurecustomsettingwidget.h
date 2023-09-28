@@ -19,7 +19,7 @@ public:
     explicit ConfigureCustomSettingWidget(QWidget *parent = nullptr);
     ~ConfigureCustomSettingWidget() override;
 
-    Q_REQUIRED_RESULT QString rule() const;
+    [[nodiscard]] QString rule() const;
     void setRule(const QString &rule);
 
 Q_SIGNALS:

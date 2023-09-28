@@ -18,9 +18,9 @@ public:
 
     void refreshMenu();
 
-    Q_REQUIRED_RESULT static QString defaultWritableGroupPath();
+    [[nodiscard]] static QString defaultWritableGroupPath();
 
-    Q_REQUIRED_RESULT QStringList groupNames() const;
+    [[nodiscard]] QStringList groupNames() const;
     void setGroupNames(const QStringList &groupNames);
 
 Q_SIGNALS:
@@ -29,6 +29,6 @@ Q_SIGNALS:
 
 private:
     void init();
-    Q_REQUIRED_RESULT QStringList defaultReadableGroupPath() const;
+    [[nodiscard]] QStringList defaultReadableGroupPath() const;
     QStringList mGroupNames;
 };

@@ -18,7 +18,7 @@ public:
     explicit ConfigureCustomSettingDialog(QWidget *parent = nullptr);
     ~ConfigureCustomSettingDialog() override;
     void setRule(const QString &rule);
-    Q_REQUIRED_RESULT QString rule() const;
+    [[nodiscard]] QString rule() const;
 
 private:
     ConfigureCustomSettingWidget *const mCustomSettingWidget;

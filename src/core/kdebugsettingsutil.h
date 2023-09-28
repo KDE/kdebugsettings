@@ -28,12 +28,12 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LineLoggingQtCategory {
         All,
     };
 
-    Q_REQUIRED_RESULT bool isValid() const
+    [[nodiscard]] bool isValid() const
     {
         return !logName.isEmpty();
     }
 
-    Q_REQUIRED_RESULT bool operator==(const LineLoggingQtCategory &other) const
+    [[nodiscard]] bool operator==(const LineLoggingQtCategory &other) const
     {
         return (enabled == other.enabled) && (type == other.type) && (logName == other.logName);
     }
@@ -74,7 +74,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoadLoggingCategory {
         return !logName.isEmpty();
     }
 
-    Q_REQUIRED_RESULT bool operator==(const LoadLoggingCategory &other) const
+    [[nodiscard]] bool operator==(const LoadLoggingCategory &other) const
     {
         // qDebug() << " logname " << logName << " other.logName :" << other.logName;
         return (logName == other.logName) && (loggingTypes == other.loggingTypes);
@@ -86,22 +86,22 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoadLoggingCategory {
 
 LIBKDEBUGSETTINGSCORE_EXPORT void readLoggingCategories(const QString &filename, KdeLoggingCategory::List &categoriesList, bool checkCategoryList = false);
 
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename,
-                                                                                                          KdeLoggingCategory::List &categoriesList);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT KdeLoggingCategory parseLineKdeLoggingCategory(QString line, const QString &filename);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT KdeLoggingCategory::List readLoggingCategoriesForInserting(const QString &filename,
+                                                                                                      KdeLoggingCategory::List &categoriesList);
 
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT RenameCategory parseRenameCategory(QString line, const QString &filename);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT RenameCategory::List readRenameCategories(const QString &filename);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QString qtFileName();
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT bool hasWritableGroups();
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QString defaultWritableGroupPath();
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QStringList groupFileList();
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory convertRuleStrToLoggingCategory(const QString &ruleStr);
-Q_REQUIRED_RESULT LIBKDEBUGSETTINGSCORE_EXPORT QString generateDisplayRule(const QString &categoryName, bool state, LoggingCategory::LoggingType type);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT QList<LoadLoggingCategory> readLoggingQtCategories(const QString &filename);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT KDebugSettingsUtil::LineLoggingQtCategory parseLineLoggingQtCategory(const QString &line);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT RenameCategory parseRenameCategory(QString line, const QString &filename);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT RenameCategory::List readRenameCategories(const QString &filename);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory::LoggingType convertCategoryTypeFromString(const QString &str);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT QString convertCategoryTypeToString(LoggingCategory::LoggingType type);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT QString qtFileName();
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT bool hasWritableGroups();
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT QString defaultWritableGroupPath();
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT QStringList groupFileList();
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory convertRuleStrToLoggingCategory(const QString &ruleStr);
+[[nodiscard]] LIBKDEBUGSETTINGSCORE_EXPORT QString generateDisplayRule(const QString &categoryName, bool state, LoggingCategory::LoggingType type);
 }
 
 Q_DECLARE_METATYPE(KDebugSettingsUtil::LoadLoggingCategory::LogType)

@@ -20,12 +20,12 @@ public:
     void setCategories(const KdeLoggingCategory::List &categories);
     void setRenamedCategories(const RenameCategory::List &renameCategories);
 
-    Q_REQUIRED_RESULT LoggingCategory::List customCategories() const;
+    [[nodiscard]] LoggingCategory::List customCategories() const;
 
-    Q_REQUIRED_RESULT LoggingCategory::List qtKdeCategories() const;
+    [[nodiscard]] LoggingCategory::List qtKdeCategories() const;
 
     void setFileName(const QString &filename);
-    Q_REQUIRED_RESULT bool foundOverrideRule() const;
+    [[nodiscard]] bool foundOverrideRule() const;
 
 private:
     KdeLoggingCategory::List mCategories;

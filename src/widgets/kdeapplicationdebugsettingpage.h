@@ -19,7 +19,7 @@ class LIBKDEBUGSETTINGS_EXPORT KDEApplicationDebugSettingPage : public QWidget
 public:
     explicit KDEApplicationDebugSettingPage(QWidget *parent = nullptr);
     ~KDEApplicationDebugSettingPage() override;
-    Q_REQUIRED_RESULT LoggingCategory::List rules(bool forceSavingAllRules) const;
+    [[nodiscard]] LoggingCategory::List rules(bool forceSavingAllRules) const;
     void insertCategories(const LoggingCategory::List &list);
 
     void restoreToDefault();

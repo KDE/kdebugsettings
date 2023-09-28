@@ -24,22 +24,22 @@ public:
 
     ~LoggingManager() override;
 
-    Q_REQUIRED_RESULT CustomLoggingCategoryModel *customCategoryModel() const;
+    [[nodiscard]] CustomLoggingCategoryModel *customCategoryModel() const;
 
-    Q_REQUIRED_RESULT KDEApplicationLoggingCategoryModel *qtKdeCategoryModel() const;
+    [[nodiscard]] KDEApplicationLoggingCategoryModel *qtKdeCategoryModel() const;
 
-    Q_REQUIRED_RESULT CategoryTypeModel *categoryTypeModel() const;
+    [[nodiscard]] CategoryTypeModel *categoryTypeModel() const;
 
-    Q_INVOKABLE Q_REQUIRED_RESULT QString environmentrules() const;
+    Q_INVOKABLE [[nodiscard]] QString environmentrules() const;
 
-    Q_REQUIRED_RESULT bool foundOverrideRule() const;
+    [[nodiscard]] bool foundOverrideRule() const;
 
     // Remove it when we will port kdebugsettings to models.
-    Q_REQUIRED_RESULT KDebugSettingsLoadingCategories loggings() const;
+    [[nodiscard]] KDebugSettingsLoadingCategories loggings() const;
 
     void readCategoriesFiles(const QString &path);
 
-    Q_REQUIRED_RESULT KdeLoggingCategory::List categoriesList() const;
+    [[nodiscard]] KdeLoggingCategory::List categoriesList() const;
 
     void readQtLoggingFile();
     void updateLoggingCategories();

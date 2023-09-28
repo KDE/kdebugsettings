@@ -20,9 +20,9 @@ public:
 
     void setFileName(const QString &fileName);
 
-    Q_REQUIRED_RESULT bool start();
+    [[nodiscard]] bool start();
 
-    Q_REQUIRED_RESULT QString fileName() const;
+    [[nodiscard]] QString fileName() const;
 
 private:
     LoggingCategory::List mListKde;

@@ -18,19 +18,19 @@ public:
     ChangeDebugModeJob();
     ~ChangeDebugModeJob();
 
-    Q_REQUIRED_RESULT bool start();
+    [[nodiscard]] bool start();
 
     void setDebugMode(const QString &mode);
-    Q_REQUIRED_RESULT QString debugMode() const;
+    [[nodiscard]] QString debugMode() const;
 
-    Q_REQUIRED_RESULT QStringList loggingCategoriesName() const;
+    [[nodiscard]] QStringList loggingCategoriesName() const;
     void setLoggingCategoriesName(const QStringList &loggingCategoriesName);
 
-    Q_REQUIRED_RESULT bool canStart() const;
-    Q_REQUIRED_RESULT bool debugModeIsValid(const QString &value) const;
-    Q_REQUIRED_RESULT LoggingCategory::LoggingType convertDebugModeToLoggingType(const QString &value) const;
+    [[nodiscard]] bool canStart() const;
+    [[nodiscard]] bool debugModeIsValid(const QString &value) const;
+    [[nodiscard]] LoggingCategory::LoggingType convertDebugModeToLoggingType(const QString &value) const;
     void setWithoutArguments(bool b);
-    Q_REQUIRED_RESULT bool withoutArguments() const;
+    [[nodiscard]] bool withoutArguments() const;
 
 private:
     QString mDebugMode;

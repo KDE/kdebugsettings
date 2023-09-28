@@ -17,11 +17,11 @@ public:
     explicit CategoryTypeComboBox(bool customType, QWidget *parent = nullptr);
     ~CategoryTypeComboBox() override;
 
-    Q_REQUIRED_RESULT LoggingCategory::LoggingType type() const;
+    [[nodiscard]] LoggingCategory::LoggingType type() const;
     void setType(LoggingCategory::LoggingType type);
-    Q_REQUIRED_RESULT bool loggingCategoryIsNotDefault() const;
+    [[nodiscard]] bool loggingCategoryIsNotDefault() const;
     void setDefaultCategories(LoggingCategory::LoggingType defaultCategories);
-    Q_REQUIRED_RESULT LoggingCategory::LoggingType defaultCategories() const;
+    [[nodiscard]] LoggingCategory::LoggingType defaultCategories() const;
 
     void restoreToDefault();
 

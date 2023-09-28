@@ -21,12 +21,12 @@ public:
 
     void readQtLoggingFile();
 
-    Q_REQUIRED_RESULT QString environmentrules() const;
-    Q_REQUIRED_RESULT RenameCategory::List renameCategoriesList() const;
-    Q_REQUIRED_RESULT KdeLoggingCategory::List categoriesList() const;
-    Q_REQUIRED_RESULT LoggingCategory::List customCategories() const;
-    Q_REQUIRED_RESULT LoggingCategory::List qtKdeCategories() const;
-    Q_REQUIRED_RESULT bool foundOverrideRule() const;
+    [[nodiscard]] QString environmentrules() const;
+    [[nodiscard]] RenameCategory::List renameCategoriesList() const;
+    [[nodiscard]] KdeLoggingCategory::List categoriesList() const;
+    [[nodiscard]] LoggingCategory::List customCategories() const;
+    [[nodiscard]] LoggingCategory::List qtKdeCategories() const;
+    [[nodiscard]] bool foundOverrideRule() const;
 
     void readCategoriesFiles(const QString &path);
 

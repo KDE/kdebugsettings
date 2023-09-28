@@ -15,7 +15,7 @@ public:
     explicit KDEApplicationLoggingCategoryProxyModel(QObject *parent = nullptr);
     ~KDEApplicationLoggingCategoryProxyModel() override;
 
-    Q_REQUIRED_RESULT QString filterText() const;
+    [[nodiscard]] QString filterText() const;
     void setFilterText(const QString &newFilterText);
 
 protected:

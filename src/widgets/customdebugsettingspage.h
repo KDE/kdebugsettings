@@ -20,7 +20,7 @@ public:
     explicit CustomDebugSettingsPage(QWidget *parent = nullptr);
     ~CustomDebugSettingsPage() override;
 
-    Q_REQUIRED_RESULT LoggingCategory::List rules() const;
+    [[nodiscard]] LoggingCategory::List rules() const;
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

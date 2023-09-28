@@ -21,7 +21,7 @@ public:
     void removeRules();
     void editRule();
 
-    Q_REQUIRED_RESULT CustomLoggingCategoryModel *loggingCategoryModel() const;
+    [[nodiscard]] CustomLoggingCategoryModel *loggingCategoryModel() const;
     void setLoggingCategoryModel(CustomLoggingCategoryModel *newLoggingCategoryModel);
 
     void setFilterRuleStr(const QString &str);

@@ -29,7 +29,7 @@ public:
 
     void insertCategories(const LoggingCategory::List &list);
 
-    Q_REQUIRED_RESULT LoggingCategory::List rules(bool forceSavingAllRules) const;
+    [[nodiscard]] LoggingCategory::List rules(bool forceSavingAllRules) const;
 
 private:
     KDEApplicationLoggingCategoryModel *mKdeApplicationLoggingCategoryModel = nullptr;

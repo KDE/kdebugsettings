@@ -15,8 +15,8 @@ public:
     RenameCategory() = default;
 
     using List = QList<RenameCategory>;
-    Q_REQUIRED_RESULT bool operator==(const RenameCategory &other) const;
-    Q_REQUIRED_RESULT bool isValid() const;
+    [[nodiscard]] bool operator==(const RenameCategory &other) const;
+    [[nodiscard]] bool isValid() const;
 
     QString originalName;
     QString newName;

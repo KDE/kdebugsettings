@@ -33,13 +33,13 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     }
 
     using List = QList<LoggingCategory>;
-    Q_REQUIRED_RESULT bool operator==(const LoggingCategory &other) const;
-    Q_REQUIRED_RESULT bool isValid() const;
+    [[nodiscard]] bool operator==(const LoggingCategory &other) const;
+    [[nodiscard]] bool isValid() const;
 
-    Q_REQUIRED_RESULT QString createRule() const;
-    Q_REQUIRED_RESULT QString createCustomRule() const;
-    Q_REQUIRED_RESULT QString generateToolTip() const;
-    Q_REQUIRED_RESULT QString generateDisplayRule() const;
+    [[nodiscard]] QString createRule() const;
+    [[nodiscard]] QString createCustomRule() const;
+    [[nodiscard]] QString generateToolTip() const;
+    [[nodiscard]] QString generateDisplayRule() const;
 
     QString description;
     QString categoryName;
@@ -49,7 +49,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     bool enabled = true;
 
 private:
-    Q_REQUIRED_RESULT QString convertCategoryTypeToString(LoggingCategory::LoggingType type) const;
+    [[nodiscard]] QString convertCategoryTypeToString(LoggingCategory::LoggingType type) const;
 };
 LIBKDEBUGSETTINGSCORE_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 

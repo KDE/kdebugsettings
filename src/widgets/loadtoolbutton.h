@@ -20,7 +20,7 @@ public:
 
     void updateLoadGroupMenu();
 
-    Q_REQUIRED_RESULT QStringList groupNames() const;
+    [[nodiscard]] QStringList groupNames() const;
 
 Q_SIGNALS:
     void loadGroupRequested(const QString &fullPath);

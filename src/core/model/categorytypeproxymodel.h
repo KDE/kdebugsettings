@@ -16,7 +16,7 @@ public:
     explicit CategoryTypeProxyModel(QObject *parent = nullptr);
     ~CategoryTypeProxyModel() override;
 
-    Q_REQUIRED_RESULT bool showOffType() const;
+    [[nodiscard]] bool showOffType() const;
     void setShowOffType(bool newShowOffType);
 
 protected:
