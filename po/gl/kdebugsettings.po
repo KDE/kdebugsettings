@@ -79,7 +79,7 @@ msgstr ""
 #: src/quickapps/main.cpp:94
 #, kde-format
 msgid "Impossible to change debug mode"
-msgstr "Non se pode cambiar o modo de depuración"
+msgstr "Non é posíbel cambiar o modo de depuración"
 
 #: src/core/kdebugsettingsutil.cpp:407
 #, kde-format
@@ -285,7 +285,7 @@ msgstr "Exportouse o grupo en %1"
 #: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Non se pode exportar o grupo «%2» en «%1»"
+msgstr "Non é posíbel exportar o grupo «%2» en «%1»"
 
 #: src/widgets/groupmanagementwidget.cpp:65
 #: src/widgets/groupmanagementwidget.cpp:70
@@ -301,7 +301,7 @@ msgstr "Novo nome:"
 #: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Non se pode renomear o grupo como «%1»."
+msgstr "Non é posíbel renomear o grupo como «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
@@ -321,7 +321,7 @@ msgstr "Retirar os grupos"
 #: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Impossible to remove '%1'"
-msgstr "Non se pode retirar «%1»"
+msgstr "Non é posíbel retirar «%1»"
 
 #: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
@@ -371,7 +371,7 @@ msgstr "Inserir…"
 #: src/widgets/kdebugsettingsdialog.cpp:153
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr "Non se pode abrir «%1». Verifíqueo."
+msgstr "Non é posíbel abrir «%1». Verifíqueo."
 
 #: src/widgets/kdebugsettingsdialog.cpp:179
 #: src/widgets/kdebugsettingsdialog.cpp:193
@@ -411,7 +411,7 @@ msgstr ""
 #: src/widgets/kdebugsettingsdialog.cpp:215
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr "Non se pode gardar cun nome baleiro, use outro."
+msgstr "Non é posíbel gardar cun nome baleiro, use outro."
 
 #: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
