@@ -50,7 +50,7 @@ if (OPTION_SELENIUMWEBDRIVER_SUPPORT)
     set_package_properties(SeleniumWebDriverATSPI PROPERTIES PURPOSE "Needed for GUI tests" URL "https://invent.kde.org/sdk/selenium-webdriver-at-spi" TYPE OPTIONAL)
 endif()
 
-configure_file(config-kdebugsettings.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
+configure_file(config-kdebugsettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "6")
