@@ -13,7 +13,6 @@ Dependencies:
     'frameworks/kcompletion' : '@latest-kf6'
     'frameworks/kitemviews' : '@latest-kf6'
     'frameworks/kxmlgui': '@latest-kf6'
-    'frameworks/kcoreaddons': '@latest-kf6'
 
 - 'on': ['Linux']
   'require':
