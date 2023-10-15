@@ -80,7 +80,7 @@
   <summary xml:lang="zh-CN">设置显示哪些调试消息</summary>
   <description>
     <p>
-      KDebugSettings edits which QLoggingCategory are displayed.  QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
+      KDebugSettings edits which QLoggingCategory are displayed. QLoggingCategory prints messages on the console for applications and you can define which applications display messages for information, warning or critical errors to help debugging Qt applications.
     </p>
     <p xml:lang="az">KDebugSettings, QLoggingCategory sinfinin köməyi ilə formalaşdıraraq tətbiqlərdəki hansı kateqoriyalı sazlama ismarıclarının (xəta bildirişləri və ya xəbərdarlıq) göstəriləcəyini ayarlayır. QLoggingCategory sinfinin köməyi ilə formalaşdırılan sazlama məlumatlarının öyrənilməsi, Qt kitabxanasına əsaslanan tətbiqlərin sazlanmasını (onlardakı xətaların aradan qaldırlması) sadələşdirir.</p>
     <p xml:lang="ca">El KDebugSettings edita quina «QLoggingCategory» es mostrarà. La «QLoggingCategory» imprimeix missatges a la consola per a les aplicacions, de manera que podreu definir quines aplicacions mostraran missatges informatius, avís o errors crítics per a ajudar a depurar les aplicacions Qt.</p>

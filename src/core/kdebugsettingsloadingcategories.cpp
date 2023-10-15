@@ -67,7 +67,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
         }
     }
 
-    // Load *.categories files. in qdebug.categories for external kde apps.
+    // Load *.categories files in qdebug.categories for external KDE apps.
     for (const QString &dir : dirs2) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {

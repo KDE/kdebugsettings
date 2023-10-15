@@ -153,10 +153,10 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
                 defaultSeverity = defaultSeverityCaptured;
                 // qDebug() << " match.captured(1);" << descriptionCaptured;
                 // qDebug() << " match.captured(2);" << defaultCategoryCaptured;
-                qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
+                qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still uses the old format. We need to port it.";
             }
         } else {
-            qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still use old format. We need to port it";
+            qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still uses the old format. We need to port it.";
         }
     }
     category.categoryName = logName;
@@ -188,7 +188,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
                         break;
                     } else if (cat.categoryName == category.categoryName) {
                         qCWarning(KDEBUGSETTINGSCORE_LOG)
-                            << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
+                            << "Duplicate categories, it is a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
                         needToAppend = false;
                     }
                 }
@@ -223,7 +223,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
                             break;
                         } else if (cat.categoryName == category.categoryName) {
                             qCWarning(KDEBUGSETTINGSCORE_LOG)
-                                << "Duplicate categories, it's a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
+                                << "Duplicate categories, it is a bug. Please verify: category:" << cat.categoryName << " filename : " << filename;
                             needToAppend = false;
                         }
                     }
