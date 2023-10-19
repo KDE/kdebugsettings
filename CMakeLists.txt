@@ -41,6 +41,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
+add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.5.0
     KF 5.240
 )
