@@ -31,7 +31,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("kdebugsettings");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("kdebugsettings"));
     KAboutData aboutData(QStringLiteral("kdebugsettingsquick"),
                          i18n("KDebugSettings"),
                          QStringLiteral(KDEBUGSETTINGS_VERSION),
