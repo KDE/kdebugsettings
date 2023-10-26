@@ -43,6 +43,7 @@ GenericName[x-test]=xxDebug settingsxx
 GenericName[zh_CN]=调试设置
 GenericName[zh_TW]=除錯設定
 Name=KDebugSettings
+Name[ast]=KDebugSettings
 Name[az]=KDebugSettings
 Name[ca]=KDebugSettings
 Name[ca@valencia]=KDebugSettings
