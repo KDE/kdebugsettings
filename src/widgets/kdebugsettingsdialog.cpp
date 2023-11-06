@@ -110,14 +110,14 @@ void KDebugSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), KDebugSettingsDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(KDebugSettingsDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void KDebugSettingsDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(KDebugSettingsDialogGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(QLatin1String(KDebugSettingsDialogGroupName)));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 

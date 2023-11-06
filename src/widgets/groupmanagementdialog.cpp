@@ -47,14 +47,14 @@ void GroupManagementDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(400, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myGroupManagementDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myGroupManagementDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void GroupManagementDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myGroupManagementDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myGroupManagementDialogGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
