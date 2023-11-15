@@ -9,7 +9,7 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_REQUIRED_VERSION "6.5.0")
-set(KF_MIN_VERSION "5.240.0")
+set(KF_MIN_VERSION "5.245.0")
 
 set(ECM_VERSION ${KF_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
@@ -43,14 +43,13 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.6.0
-    KF 5.240
+    KF 5.245
 )
 
 if (OPTION_SELENIUMWEBDRIVER_SUPPORT)
     find_package(SeleniumWebDriverATSPI)
     set_package_properties(SeleniumWebDriverATSPI PROPERTIES PURPOSE "Needed for GUI tests" URL "https://invent.kde.org/sdk/selenium-webdriver-at-spi" TYPE OPTIONAL)
 endif()
-
 configure_file(config-kdebugsettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdebugsettings.h)
 
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
