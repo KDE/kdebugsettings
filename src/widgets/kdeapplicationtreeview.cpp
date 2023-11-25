@@ -28,7 +28,7 @@ KDEApplicationTreeView::~KDEApplicationTreeView() = default;
 void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCategoryModel *newLoggingCategoryModel)
 {
     mKdeApplicationLoggingCategoryModel = newLoggingCategoryModel;
-    mKdeApplicationLoggingCategoryModel->setObjectName(QStringLiteral("mKdeApplicationLoggingCategoryModel"));
+    mKdeApplicationLoggingCategoryModel->setObjectName(QLatin1StringView("mKdeApplicationLoggingCategoryModel"));
 
     mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mKdeApplicationLoggingCategoryModel);
     setModel(mKdeApplicationLoggingCategoryProxyModel);

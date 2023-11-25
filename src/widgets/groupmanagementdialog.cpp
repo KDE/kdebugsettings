@@ -26,11 +26,11 @@ GroupManagementDialog::GroupManagementDialog(QWidget *parent)
     , mGroupManagementWidget(new GroupManagementWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Manage Group"));
-    mGroupManagementWidget->setObjectName(QStringLiteral("mGroupManagementWidget"));
+    mGroupManagementWidget->setObjectName(QLatin1StringView("mGroupManagementWidget"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &GroupManagementDialog::reject);
     mainLayout->addWidget(mGroupManagementWidget);
     mainLayout->addWidget(buttonBox);

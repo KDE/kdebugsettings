@@ -23,7 +23,7 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
     , mCustomLoggingCategoryProxyModel(new CustomLoggingCategoryProxyModel(this))
 {
-    mCustomLoggingCategoryProxyModel->setObjectName(QStringLiteral("mCustomDebugProxyModel"));
+    mCustomLoggingCategoryProxyModel->setObjectName(QLatin1StringView("mCustomDebugProxyModel"));
     setContextMenuPolicy(Qt::CustomContextMenu);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
@@ -65,7 +65,7 @@ void CustomDebugListView::setLoggingCategoryModel(CustomLoggingCategoryModel *ne
         qCWarning(KDEBUGSETTINGS_LOG) << " There is a problem as there already has a model";
     }
     mCustomLoggingCategoryModel = newLoggingCategoryModel;
-    mCustomLoggingCategoryModel->setObjectName(QStringLiteral("mLoggingCategoryModel"));
+    mCustomLoggingCategoryModel->setObjectName(QLatin1StringView("mLoggingCategoryModel"));
 
     mCustomLoggingCategoryProxyModel->setSourceModel(mCustomLoggingCategoryModel);
     setModel(mCustomLoggingCategoryProxyModel);

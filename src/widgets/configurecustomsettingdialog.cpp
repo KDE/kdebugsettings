@@ -20,11 +20,11 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Add custom rule"));
 
-    mCustomSettingWidget->setObjectName(QStringLiteral("customsettingwidget"));
+    mCustomSettingWidget->setObjectName(QLatin1StringView("customsettingwidget"));
     mainLayout->addWidget(mCustomSettingWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     QPushButton *buttonOk = buttonBox->button(QDialogButtonBox::Ok);

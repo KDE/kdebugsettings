@@ -21,7 +21,7 @@ LoadToolButton::LoadToolButton(QWidget *parent)
     QAction *act = mainMenu->addAction(i18n("Load From File..."));
     connect(act, &QAction::triggered, this, &LoadToolButton::loadFromFile);
 
-    mLoadMenu->setObjectName(QStringLiteral("loadMenu"));
+    mLoadMenu->setObjectName(QLatin1StringView("loadMenu"));
     connect(mLoadMenu, &LoadGroupMenu::loadGroupRequested, this, &LoadToolButton::loadGroupRequested);
     connect(mLoadMenu, &LoadGroupMenu::manageGroupRequested, this, &LoadToolButton::manageGroupRequested);
     mainMenu->addMenu(mLoadMenu);

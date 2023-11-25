@@ -15,7 +15,7 @@ CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
     : QComboBox(parent)
 {
     auto proxy = new CategoryTypeProxyModel(this);
-    proxy->setObjectName(QStringLiteral("proxy"));
+    proxy->setObjectName(QLatin1StringView("proxy"));
     proxy->setSourceModel(LoggingManager::self().categoryTypeModel());
     proxy->setShowOffType(!customType);
     setModel(proxy);

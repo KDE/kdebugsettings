@@ -16,7 +16,7 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mRichTextEdit->setReadOnly(true);
-    mRichTextEdit->setObjectName(QStringLiteral("richtext"));
+    mRichTextEdit->setObjectName(QLatin1StringView("richtext"));
     mainLayout->addWidget(mRichTextEdit);
 }
 

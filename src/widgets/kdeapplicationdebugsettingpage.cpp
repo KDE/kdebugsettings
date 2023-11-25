@@ -24,29 +24,29 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     , mKdeApplicationTreeView(new KDEApplicationTreeView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
+    mSearchLineEdit->setObjectName(QLatin1StringView("mSearchLineEdit"));
     mainLayout->addWidget(mSearchLineEdit);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     mSearchLineEdit->setClearButtonEnabled(true);
 
-    mKdeApplicationTreeView->setObjectName(QStringLiteral("mKdeApplicationTreeView"));
+    mKdeApplicationTreeView->setObjectName(QLatin1StringView("mKdeApplicationTreeView"));
     mainLayout->addWidget(mKdeApplicationTreeView);
     mKdeApplicationTreeView->setLoggingCategoryModel(LoggingManager::self().qtKdeCategoryModel());
 
     auto buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
-    mEnableDebug->setObjectName(QStringLiteral("selectall"));
+    mEnableDebug->setObjectName(QLatin1StringView("selectall"));
     buttonLayout->addWidget(mEnableDebug);
     connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAllDebug);
 
-    mTurnOffDebug->setObjectName(QStringLiteral("deselectall"));
+    mTurnOffDebug->setObjectName(QLatin1StringView("deselectall"));
     buttonLayout->addWidget(mTurnOffDebug);
     connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllDebug);
 
-    mTurnOffAllMessages->setObjectName(QStringLiteral("deselectallmessage"));
+    mTurnOffAllMessages->setObjectName(QLatin1StringView("deselectallmessage"));
     buttonLayout->addWidget(mTurnOffAllMessages);
     connect(mTurnOffAllMessages, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllMessages);
 

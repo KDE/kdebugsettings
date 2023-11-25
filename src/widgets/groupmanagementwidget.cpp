@@ -24,9 +24,9 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mListWidget->setObjectName(QStringLiteral("mListWidget"));
+    mListWidget->setObjectName(QLatin1StringView("mListWidget"));
     mainLayout->addWidget(mListWidget);
     mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
