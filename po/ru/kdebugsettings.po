@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:05+0000\n"
-"PO-Revision-Date: 2023-04-21 15:17+0300\n"
+"PO-Revision-Date: 2023-11-29 11:14+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
 #, kde-format
@@ -159,10 +159,9 @@ msgid "No Debug Messages"
 msgstr "Без сообщений отладки"
 
 #: src/quickapps/main.cpp:40
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "© Авторы kdebugsettings, 2015–%1"
+msgstr "© Авторы kdebugsettings, %1"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -212,13 +211,12 @@ msgstr "Изменить правило"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Удалить правило"
-msgstr[1] "Удалить правило"
-msgstr[2] "Удалить правило"
+msgstr[0] "Удалить правила"
+msgstr[1] "Удалить правила"
+msgstr[2] "Удалить правила"
 msgstr[3] "Удалить правило"
 
 #: src/widgets/customdebuglistview.cpp:83
@@ -281,21 +279,19 @@ msgstr "Управление группой"
 #: src/widgets/groupmanagementwidget.cpp:47
 #: src/widgets/groupmanagementwidget.cpp:50
 #: src/widgets/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Загрузить группу"
+msgstr "Экспорт группы"
 
 #: src/widgets/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Группа экспортирована в %1"
 
 #: src/widgets/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Невозможно переименовать группу в «%1»"
+msgstr "Невозможно выполнить экспорт группы «%2» в «%1»"
 
 #: src/widgets/groupmanagementwidget.cpp:65
 #: src/widgets/groupmanagementwidget.cpp:70
@@ -309,21 +305,19 @@ msgid "New Name:"
 msgstr "Новое название:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Невозможно переименовать группу в «%1»"
+msgstr "Невозможно переименовать группу в «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Переименовать группу"
+msgstr "Переименовать группу…"
 
 #: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Экспорт группы…"
 
 #: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
