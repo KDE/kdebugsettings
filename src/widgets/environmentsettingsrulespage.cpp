@@ -15,6 +15,7 @@ EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     , mRichTextEdit(new EnvironmentPlainTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins({});
     mRichTextEdit->setReadOnly(true);
     mRichTextEdit->setObjectName(QLatin1StringView("richtext"));
     mainLayout->addWidget(mRichTextEdit);
