@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-12-07 01:43+0000\n"
 "PO-Revision-Date: 2023-06-30 11:52+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -248,7 +248,7 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "\"QT_LOGGING_RULES\" mühit dəyişənində qaydalar müəyyən edilməyib."
 
-#: src/widgets/environmentsettingsrulespage.cpp:28
+#: src/widgets/environmentsettingsrulespage.cpp:29
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -257,7 +257,7 @@ msgstr ""
 "Bu qaydalar bu tətbiq vasitəsi ilə dəyişdirilə bilməz. Siz onları "
 "QT_LOGGING_RULES mühit dəyişənində təyin etməlisiniz."
 
-#: src/widgets/environmentsettingsrulespage.cpp:30
+#: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
 msgid "Current rules:"
 msgstr "Cari qaydalar:"

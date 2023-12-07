@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-12-07 01:43+0000\n"
 "PO-Revision-Date: 2023-07-23 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -243,7 +243,7 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "\"QT_LOGGING_RULES\" 환경 변수에 규칙이 정의되지 않았습니다."
 
-#: src/widgets/environmentsettingsrulespage.cpp:28
+#: src/widgets/environmentsettingsrulespage.cpp:29
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -252,7 +252,7 @@ msgstr ""
 "이 앱으로는 해당 규칙을 편집할 수 없습니다. QT_LOGGING_RULES 환경 변수를 직"
 "접 편집하십시오."
 
-#: src/widgets/environmentsettingsrulespage.cpp:30
+#: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
 msgid "Current rules:"
 msgstr "현재 규칙:"

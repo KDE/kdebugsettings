@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-12-07 01:43+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -252,7 +252,7 @@ msgid ""
 msgstr ""
 "Δεν έχουν οριστεί κανόνες στη μεταβλητή περιβάλλοντος \"QT_LOGGING_RULES\"."
 
-#: src/widgets/environmentsettingsrulespage.cpp:28
+#: src/widgets/environmentsettingsrulespage.cpp:29
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -261,7 +261,7 @@ msgstr ""
 "Αυτοί οι κανόνες δε μπορούν να αλλαχθούν με αυτή την εφαρμογή. Πρέπει να "
 "τους θέσετε απευθείας στη μεταβλητή QT_LOGGING_RULES."
 
-#: src/widgets/environmentsettingsrulespage.cpp:30
+#: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
 msgid "Current rules:"
 msgstr "Τρέχοντες κανόνες:"

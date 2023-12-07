@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2023-12-07 01:43+0000\n"
 "PO-Revision-Date: 2023-06-30 10:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -255,7 +255,7 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "Ni določenih pravil v okoljski spremenljivki »QT_LOGGING_RULES«."
 
-#: src/widgets/environmentsettingsrulespage.cpp:28
+#: src/widgets/environmentsettingsrulespage.cpp:29
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -264,7 +264,7 @@ msgstr ""
 "Teh pravil ni mogoče urejati s tem programom. Nastaviti jih morate "
 "neposredno v spremenljivki »QT_LOGGING_RULES«."
 
-#: src/widgets/environmentsettingsrulespage.cpp:30
+#: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
 msgid "Current rules:"
 msgstr "Trenutna pravila:"
