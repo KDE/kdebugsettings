@@ -1,5 +1,5 @@
 # translation of kdebugsettings.po to Slovak
-# Roman Paholík <wizzardsk@gmail.com>, 2015, 2016, 2017, 2022.
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2022, 2023 Roman Paholík <wizzardsk@gmail.com>
 # Mthw <jari_45@hotmail.com>, 2019.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
 msgid ""
@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 01:05+0000\n"
-"PO-Revision-Date: 2022-04-09 19:24+0200\n"
+"PO-Revision-Date: 2023-12-07 17:30+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:36
@@ -156,10 +156,9 @@ msgid "No Debug Messages"
 msgstr "Žiadne správy ladenia"
 
 #: src/quickapps/main.cpp:40
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-%1 autori kdebugsettings"
+msgstr "(c) %1 autori kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -209,8 +208,7 @@ msgstr "Upraviť pravidlo"
 
 #: src/widgets/customdebuglistview.cpp:50
 #: src/widgets/customdebuglistview.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Odstrániť pravidlo"
@@ -277,21 +275,19 @@ msgstr "Spravovať skupinu"
 #: src/widgets/groupmanagementwidget.cpp:47
 #: src/widgets/groupmanagementwidget.cpp:50
 #: src/widgets/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Load Group"
+#, kde-format
 msgid "Export Group"
-msgstr "Načítať skupinu"
+msgstr "Exportovať skupinu"
 
 #: src/widgets/groupmanagementwidget.cpp:50
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Skupina exportovaná do %1"
 
 #: src/widgets/groupmanagementwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Nie je možné premenovať skupinu na '%1'"
+msgstr "Nie je možné premenovať skupinu '%2' na '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:65
 #: src/widgets/groupmanagementwidget.cpp:70
@@ -305,21 +301,19 @@ msgid "New Name:"
 msgstr "Nový názov:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
-#, fuzzy, kde-format
-#| msgid "Impossible to rename group as '%1'"
+#, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Nie je možné premenovať skupinu na '%1'"
+msgstr "Nie je možné premenovať skupinu ako '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:86
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group..."
-msgstr "Premenovať skupinu"
+msgstr "Premenovať skupinu..."
 
 #: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Exportovať skupinu..."
 
 #: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
@@ -408,15 +402,12 @@ msgid "Name:"
 msgstr "Názov:"
 
 #: src/widgets/kdebugsettingsdialog.cpp:206
-#, fuzzy, kde-format
-#| msgid ""
-#| "'%1' is already used as a group name.\n"
-#| "Please save as another name."
+#, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"'%1' sa už používa ako názov skupiny.\n"
+"<b>'%1'</b> sa už používa ako názov skupiny.\n"
 "Prosím vložte nový názov."
 
 #: src/widgets/kdebugsettingsdialog.cpp:215
