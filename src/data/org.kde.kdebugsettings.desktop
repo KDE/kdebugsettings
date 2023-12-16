@@ -151,6 +151,7 @@ Keywords[tr]=günlük;günlükleme;kategori;kategoriler;jurnal;günlükleme düz
 Keywords[uk]=log;logging;category;categories;journal;logging levels;debug;журнал;журналювання;категорія;категорії;рівні журналювання;діагностика
 Keywords[x-test]=xxlogxx;xxloggingxx;xxcategoryxx;xxcategoriesxx;xxjournalxx;xxlogging levelsxx;xxdebugxx
 Keywords[zh_CN]=log;logging;category;categories;journal;logging levels;debug;日志;记录;分类;类别;日志级别;调试;rizhi;jilu;fenlei;rizhijibie;tiaoshi
+Keywords[zh_TW]=log;logging;category;categories;journal;logging levels;debug;除錯
 Icon=debug-run
 X-DBUS-StartupType=Unique
 Categories=Qt;KDE;Development;
