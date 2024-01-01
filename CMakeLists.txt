@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 # KDE Application Version, managed by release script
 cmake_minimum_required (VERSION 3.16.0 FATAL_ERROR)
