@@ -11,6 +11,14 @@
 
     "modules": [
         {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/breeze/actions/24/",
+                "install -D /usr/app/share/icons/breeze/actions/24/debug-run.svg /app/share/icons/breeze/actions/24/"
+            ]
+        },
+        {
             "name": "kdebugsettings",
             "buildsystem": "cmake-ninja",
             "sources": [ { "type": "dir", "path": "." } ]
