@@ -15,7 +15,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "mkdir -p /app/share/icons/breeze/actions/24/",
-                "install -D /usr/app/share/icons/breeze/actions/24/debug-run.svg /app/share/icons/breeze/actions/24/"
+                "install -D /usr/share/icons/breeze/actions/24/debug-run.svg /app/share/icons/breeze/actions/24/"
             ]
         },
         {
