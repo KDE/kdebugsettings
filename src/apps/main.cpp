@@ -30,6 +30,7 @@ int main(int argc, char **argv)
                          KAboutLicense::GPL_V2,
                          i18n("(c) 2015-%1 kdebugsettings authors", QStringLiteral("2024")));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("debug-run")));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
