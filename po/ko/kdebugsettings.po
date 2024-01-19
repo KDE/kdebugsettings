@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:43+0000\n"
+"POT-Creation-Date: 2024-01-19 02:29+0000\n"
 "PO-Revision-Date: 2023-07-23 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -42,35 +42,35 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "관리자"
 
-#: src/apps/main.cpp:38 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 "QStandardPaths 테스트 모드 활성화, 유닛 테스트에서 사용하는 읽기/쓰기 설정"
 
-#: src/apps/main.cpp:41 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "모든 모듈에 전체 디버그를 활성화합니다."
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "모든 모듈에 전체 디버그를 비활성화합니다."
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "콘솔로 디버그 모드 전환(콘솔에서)"
 
-#: src/apps/main.cpp:51 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr "디버그 모드를 전환할 로그 분류 이름 지정(콘솔에서)"
 
-#: src/apps/main.cpp:65 src/apps/main.cpp:75 src/apps/main.cpp:85
+#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format

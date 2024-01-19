@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:43+0000\n"
+"POT-Creation-Date: 2024-01-19 02:29+0000\n"
 "PO-Revision-Date: 2023-06-30 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: src/apps/main.cpp:38 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,22 +53,22 @@ msgstr ""
 "Увімкнути режим перевірки QStandardPaths, тобто параметрів читання та "
 "запису, які використовуються у перевірках модулів"
 
-#: src/apps/main.cpp:41 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Увімкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Вимкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Змінити режим діагностики як консолі (у консолі)"
 
-#: src/apps/main.cpp:51 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -76,7 +76,7 @@ msgstr ""
 "Вкажіть назву категорії журналу, для якої ви хочете змінити режим "
 "діагностики (у консолі)"
 
-#: src/apps/main.cpp:65 src/apps/main.cpp:75 src/apps/main.cpp:85
+#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
