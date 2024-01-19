@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:43+0000\n"
+"POT-Creation-Date: 2024-01-19 00:39+0000\n"
 "PO-Revision-Date: 2023-10-12 11:12+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -49,7 +49,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Mainteneur"
 
-#: src/apps/main.cpp:38 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -57,22 +57,22 @@ msgstr ""
 "Activer le mode de test QStandardPaths, autrement dit lire et écrire les "
 "paramètres utilisés par les tests unitaires"
 
-#: src/apps/main.cpp:41 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Activer le débogage complet pour tous les modules."
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Désactiver le débogage complet pour tous les modules."
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Basculer en mode de débogage console (dans la console)"
 
-#: src/apps/main.cpp:51 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -80,7 +80,7 @@ msgstr ""
 "Préciser le nom de la catégorie de journal pour laquelle vous souhaitez "
 "changer de mode de débogage (dans la console)"
 
-#: src/apps/main.cpp:65 src/apps/main.cpp:75 src/apps/main.cpp:85
+#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format

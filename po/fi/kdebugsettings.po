@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:43+0000\n"
+"POT-Creation-Date: 2024-01-19 00:39+0000\n"
 "PO-Revision-Date: 2023-07-25 16:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
-#: src/apps/main.cpp:38 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -52,22 +52,22 @@ msgstr ""
 "Käytä QStandardPaths-testitilaa, ts. yksikkötestien käyttämät luku- ja "
 "kirjoitusasetukset"
 
-#: src/apps/main.cpp:41 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivoi kaikille moduuleille täysi virheenpaikannus."
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Poista virheenpaikannus käytöstä kaikilta moduuleilta."
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Vaihda virheenpaikannustilaksi konsoli (konsolissa)"
 
-#: src/apps/main.cpp:51 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -75,7 +75,7 @@ msgstr ""
 "Määritä lokiluokan nimi, jolle haluat vaihtaa virheenpaikannustilaa "
 "(konsolissa)"
 
-#: src/apps/main.cpp:65 src/apps/main.cpp:75 src/apps/main.cpp:85
+#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format

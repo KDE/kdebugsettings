@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-07 01:43+0000\n"
+"POT-Creation-Date: 2024-01-19 00:39+0000\n"
 "PO-Revision-Date: 2023-06-30 20:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -42,7 +42,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Onderhouder"
 
-#: src/apps/main.cpp:38 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -50,22 +50,22 @@ msgstr ""
 "Testmodus van QStandardPaths inschakelen, d.w.z. instellingen voor lezen/"
 "schrijven gebruikt door unittesten"
 
-#: src/apps/main.cpp:41 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Volledig debuggen voor alle modulen activeren."
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Volledig debuggen voor alle modulen uitschakelen."
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Debugmodus als console wijzigen (in console)"
 
-#: src/apps/main.cpp:51 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -73,7 +73,7 @@ msgstr ""
 "Naam van loggingcategorie specificeren die u wilt om debugmodus te wijzigen "
 "(in console)"
 
-#: src/apps/main.cpp:65 src/apps/main.cpp:75 src/apps/main.cpp:85
+#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
