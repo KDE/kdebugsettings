@@ -1,0 +1,34 @@
+{
+    "id": "org.kde.kdebugsettings",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.6-kf6preview",
+    "sdk": "org.kde.Sdk",
+    "command": "kdebugsettings",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": ["--share=ipc", "--socket=fallback-x11", "--socket=wayland" ],
+    "rename-icon": "debug-run",
+    "modules": [
+        {
+            "name": "icon",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/icons/hicolor/22x22/apps/",
+                "mkdir -p /app/share/icons/hicolor/32x32/apps/",
+                "install -D /usr/share/icons/breeze/actions/22/debug-run.svg /app/share/icons/hicolor/22x22/apps/",
+                "install -D /usr/share/icons/breeze/actions/22/debug-run.svg /app/share/icons/hicolor/32x32/apps/"
+            ]
+        },
+        {
+            "name": "kdebugsettings",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ]
+}
