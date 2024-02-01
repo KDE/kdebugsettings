@@ -203,7 +203,7 @@ void KDebugSettingUtilTest::shouldReadLoadKdeCategories()
 {
     QFETCH(QString, filename);
     QFETCH(int, numberofcategories);
-    const QString path = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
+    const QString path = QString(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
     QFile file(path);
     QVERIFY(file.exists());
     KdeLoggingCategory::List lst;
@@ -224,7 +224,7 @@ void KDebugSettingUtilTest::shouldReadRenameCategories()
 {
     QFETCH(QString, filename);
     QFETCH(int, numberofrenamecategories);
-    const QString path = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
+    const QString path = QString(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
     QFile file(path);
     QVERIFY(file.exists());
     const RenameCategory::List lst = KDebugSettingsUtil::readRenameCategories(path);

@@ -187,11 +187,11 @@ void LoadCategoriesJobTest::shouldReadRules()
     LoadCategoriesJob job;
     KdeLoggingCategory::List listKdeLoggingCategories;
     if (!filenamelistKdeLoggingCategories.isEmpty()) {
-        const QString kdeLoggingCategoriesPath = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filenamelistKdeLoggingCategories);
+        const QString kdeLoggingCategoriesPath = QString(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filenamelistKdeLoggingCategories);
         KDebugSettingsUtil::readLoggingCategories(kdeLoggingCategoriesPath, listKdeLoggingCategories, true);
     }
 
-    const QString path = QString(QLatin1String(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
+    const QString path = QString(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename);
     QFile file(path);
     QVERIFY(file.exists());
     job.setFileName(path);

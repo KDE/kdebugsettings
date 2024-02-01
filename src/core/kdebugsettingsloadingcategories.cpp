@@ -61,7 +61,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {
-            if (file != QLatin1String("kde.categories")) {
+            if (file != QLatin1StringView("kde.categories")) {
                 KDebugSettingsUtil::readLoggingCategories(dir + file, mCategoriesList, true);
             }
         }

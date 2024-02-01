@@ -25,10 +25,11 @@ EnvironmentSettingsRulesPage::~EnvironmentSettingsRulesPage() = default;
 
 void EnvironmentSettingsRulesPage::setRules(const QString &rules)
 {
-    const QString information = QLatin1String("<qt><b>")
-        + i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.") + QLatin1String("</b><qt>");
+    const QString information = QLatin1StringView("<qt><b>")
+        + i18n("These rules cannot be edited with this application. You need to set them in QT_LOGGING_RULES variable directly.")
+        + QLatin1StringView("</b><qt>");
     QString newRules = rules;
-    mRichTextEdit->setHtml(information + i18n("Current rules:") + QStringLiteral("<br>") + newRules.replace(QLatin1Char('\n'), QLatin1String("<br>")));
+    mRichTextEdit->setHtml(information + i18n("Current rules:") + QStringLiteral("<br>") + newRules.replace(QLatin1Char('\n'), QLatin1StringView("<br>")));
 }
 
 #include "moc_environmentsettingsrulespage.cpp"

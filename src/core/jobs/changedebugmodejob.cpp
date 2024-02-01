@@ -79,15 +79,15 @@ bool ChangeDebugModeJob::start()
 
 LoggingCategory::LoggingType ChangeDebugModeJob::convertDebugModeToLoggingType(const QString &value) const
 {
-    if (value == QLatin1String("Full")) {
+    if (value == QLatin1StringView("Full")) {
         return LoggingCategory::LoggingType::All;
-    } else if (value == QLatin1String("Info")) {
+    } else if (value == QLatin1StringView("Info")) {
         return LoggingCategory::LoggingType::Info;
-    } else if (value == QLatin1String("Warning")) {
+    } else if (value == QLatin1StringView("Warning")) {
         return LoggingCategory::LoggingType::Warning;
-    } else if (value == QLatin1String("Critical")) {
+    } else if (value == QLatin1StringView("Critical")) {
         return LoggingCategory::LoggingType::Critical;
-    } else if (value == QLatin1String("Off")) {
+    } else if (value == QLatin1StringView("Off")) {
         return LoggingCategory::LoggingType::Off;
     }
     return LoggingCategory::LoggingType::Undefined;

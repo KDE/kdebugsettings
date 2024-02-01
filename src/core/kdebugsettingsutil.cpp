@@ -245,25 +245,25 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
     if ((equalPos != -1) && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
-        if (valueStr == QLatin1String("true")) {
+        if (valueStr == QLatin1StringView("true")) {
             lineCategory.enabled = true;
         } else {
             lineCategory.enabled = false;
         }
         QString p;
-        if (pattern.endsWith(QLatin1String(".debug"))) {
+        if (pattern.endsWith(QLatin1StringView(".debug"))) {
             p = pattern.left(pattern.length() - 6); // strlen(".debug")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Debug;
-        } else if (pattern.endsWith(QLatin1String(".warning"))) {
+        } else if (pattern.endsWith(QLatin1StringView(".warning"))) {
             p = pattern.left(pattern.length() - 8); // strlen(".warning")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Warning;
-        } else if (pattern.endsWith(QLatin1String(".critical"))) {
+        } else if (pattern.endsWith(QLatin1StringView(".critical"))) {
             p = pattern.left(pattern.length() - 9); // strlen(".critical")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Critical;
-        } else if (pattern.endsWith(QLatin1String(".info"))) {
+        } else if (pattern.endsWith(QLatin1StringView(".info"))) {
             p = pattern.left(pattern.length() - 5); // strlen(".info")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Info;
@@ -306,7 +306,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
             if (line.startsWith(QLatin1Char('[')) && line.endsWith(QLatin1Char(']'))) {
                 // new section
                 _section = line.mid(1, line.size() - 2);
-                rulesSections = (_section == QLatin1String("Rules"));
+                rulesSections = (_section == QLatin1StringView("Rules"));
                 continue;
             }
             if (rulesSections) {
@@ -385,13 +385,13 @@ LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(c
 {
     if (str.isEmpty()) {
         return LoggingCategory::Info; // Default
-    } else if (str == QLatin1String("DEBUG")) {
+    } else if (str == QLatin1StringView("DEBUG")) {
         return LoggingCategory::Debug;
-    } else if (str == QLatin1String("INFO")) {
+    } else if (str == QLatin1StringView("INFO")) {
         return LoggingCategory::Info;
-    } else if (str == QLatin1String("WARNING")) {
+    } else if (str == QLatin1StringView("WARNING")) {
         return LoggingCategory::Warning;
-    } else if (str == QLatin1String("CRITICAL")) {
+    } else if (str == QLatin1StringView("CRITICAL")) {
         return LoggingCategory::Critical;
     }
     qCWarning(KDEBUGSETTINGSCORE_LOG) << "Default category is unknown: " << str;
@@ -427,7 +427,7 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
 
 QString KDebugSettingsUtil::qtFileName()
 {
-    const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/QtProject");
+    const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1StringView("/QtProject");
     QDir().mkpath(envPath);
     const QString qtloggingFileName = envPath + QStringLiteral("/qtlogging.ini");
     return qtloggingFileName;
@@ -435,7 +435,7 @@ QString KDebugSettingsUtil::qtFileName()
 
 QString KDebugSettingsUtil::defaultWritableGroupPath()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/groups");
+    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1StringView("/groups");
 }
 
 QStringList KDebugSettingsUtil::groupFileList()

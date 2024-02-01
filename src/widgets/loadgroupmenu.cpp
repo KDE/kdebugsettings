@@ -30,7 +30,7 @@ void LoadGroupMenu::refreshMenu()
 
 QString LoadGroupMenu::defaultWritableGroupPath()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/groups");
+    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1StringView("/groups");
 }
 
 QStringList LoadGroupMenu::defaultReadableGroupPath() const

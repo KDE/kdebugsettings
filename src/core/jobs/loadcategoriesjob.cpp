@@ -110,7 +110,7 @@ void LoadCategoriesJob::start()
                     break;
                 }
             }
-            if (cat.logName == QLatin1String("*")) {
+            if (cat.logName == QLatin1StringView("*")) {
                 mFoundOverrideRule = true;
             }
         }

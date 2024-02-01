@@ -61,37 +61,37 @@ QString LoggingCategory::createRule() const
     case Undefined:
         break;
     case All:
-        str = categoryName + QLatin1String("=true\n");
+        str = categoryName + QLatin1StringView("=true\n");
         break;
     case Info:
-        str = categoryName + QLatin1String(".info=true\n");
-        str += categoryName + QLatin1String(".warning=true\n");
-        str += categoryName + QLatin1String(".critical=true\n");
-        str += categoryName + QLatin1String(".debug=false\n");
+        str = categoryName + QLatin1StringView(".info=true\n");
+        str += categoryName + QLatin1StringView(".warning=true\n");
+        str += categoryName + QLatin1StringView(".critical=true\n");
+        str += categoryName + QLatin1StringView(".debug=false\n");
         break;
     case Warning:
-        str = categoryName + QLatin1String(".info=false\n");
-        str += categoryName + QLatin1String(".debug=false\n");
-        str += categoryName + QLatin1String(".warning=true\n");
-        str += categoryName + QLatin1String(".critical=true\n");
+        str = categoryName + QLatin1StringView(".info=false\n");
+        str += categoryName + QLatin1StringView(".debug=false\n");
+        str += categoryName + QLatin1StringView(".warning=true\n");
+        str += categoryName + QLatin1StringView(".critical=true\n");
         break;
     case Debug:
-        str = categoryName + QLatin1String(".info=false\n");
-        str += categoryName + QLatin1String(".debug=true\n");
-        str += categoryName + QLatin1String(".warning=true\n");
-        str += categoryName + QLatin1String(".critical=true\n");
+        str = categoryName + QLatin1StringView(".info=false\n");
+        str += categoryName + QLatin1StringView(".debug=true\n");
+        str += categoryName + QLatin1StringView(".warning=true\n");
+        str += categoryName + QLatin1StringView(".critical=true\n");
         break;
     case Critical:
-        str = categoryName + QLatin1String(".info=false\n");
-        str += categoryName + QLatin1String(".debug=false\n");
-        str += categoryName + QLatin1String(".warning=false\n");
-        str += categoryName + QLatin1String(".critical=true\n");
+        str = categoryName + QLatin1StringView(".info=false\n");
+        str += categoryName + QLatin1StringView(".debug=false\n");
+        str += categoryName + QLatin1StringView(".warning=false\n");
+        str += categoryName + QLatin1StringView(".critical=true\n");
         break;
     case Off:
-        str = categoryName + QLatin1String(".info=false\n");
-        str += categoryName + QLatin1String(".debug=false\n");
-        str += categoryName + QLatin1String(".warning=false\n");
-        str += categoryName + QLatin1String(".critical=false\n");
+        str = categoryName + QLatin1StringView(".info=false\n");
+        str += categoryName + QLatin1StringView(".debug=false\n");
+        str += categoryName + QLatin1StringView(".warning=false\n");
+        str += categoryName + QLatin1StringView(".critical=false\n");
         break;
     }
     return str;
