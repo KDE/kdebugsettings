@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:39+0000\n"
+"POT-Creation-Date: 2024-02-02 00:40+0000\n"
 "PO-Revision-Date: 2023-06-30 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -264,7 +264,7 @@ msgstr ""
 "Ці правила не можна редагувати за допомогою цієї програми. Вам слід "
 "встановити їх безпосередньо за допомогою змінної середовища QT_LOGGING_RULES."
 
-#: src/widgets/environmentsettingsrulespage.cpp:31
+#: src/widgets/environmentsettingsrulespage.cpp:32
 #, kde-format
 msgid "Current rules:"
 msgstr "Поточні правила:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:39+0000\n"
+"POT-Creation-Date: 2024-02-02 00:40+0000\n"
 "PO-Revision-Date: 2023-07-25 16:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -260,7 +260,7 @@ msgstr ""
 "Näitä sääntöjä ei voi muokata tällä ohjelmalla. Ne tarvitsee asettaa suoraan "
 "QT_LOGGING_RULES-muuttujaan."
 
-#: src/widgets/environmentsettingsrulespage.cpp:31
+#: src/widgets/environmentsettingsrulespage.cpp:32
 #, kde-format
 msgid "Current rules:"
 msgstr "Nykyiset säännöt:"

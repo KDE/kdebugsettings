@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 00:39+0000\n"
+"POT-Creation-Date: 2024-02-02 00:40+0000\n"
 "PO-Revision-Date: 2023-06-17 12:09+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -257,7 +257,7 @@ msgstr ""
 "These rules cannot be edited with this application. You need to set them in "
 "QT_LOGGING_RULES variable directly."
 
-#: src/widgets/environmentsettingsrulespage.cpp:31
+#: src/widgets/environmentsettingsrulespage.cpp:32
 #, kde-format
 msgid "Current rules:"
 msgstr "Current rules:"
