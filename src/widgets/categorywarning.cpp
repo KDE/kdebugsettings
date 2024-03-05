@@ -13,7 +13,7 @@ CategoryWarning::CategoryWarning(QWidget *parent)
 {
     setVisible(false);
     setMessageType(KMessageWidget::Warning);
-    setText(i18n("You have a rule as \'*=true\' or \'*=false\' which will override all your specific rule. Better to remove it."));
+    setText(i18n("A custom rule \'*=true\' or \'*=false\' is present, which may override more specific rules. It is better to remove it."));
     setWordWrap(true);
 }
 
