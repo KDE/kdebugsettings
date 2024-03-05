@@ -23,12 +23,12 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     };
 
     LoggingCategory();
-    explicit LoggingCategory(const QString &description, const QString &logName, LoggingType loggingType, const QString &identifier, bool enabled)
-        : description(description)
+    explicit LoggingCategory(const QString &desc, const QString &logName, LoggingType type, const QString &identifier, bool enable)
+        : description(desc)
         , categoryName(logName)
         , identifierName(identifier)
-        , loggingType(loggingType)
-        , enabled(enabled)
+        , loggingType(type)
+        , enabled(enable)
     {
     }
 
