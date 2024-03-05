@@ -36,11 +36,32 @@ bool SaveRulesJob::start()
     // Save Rules
     QTextStream out(&qtlogging);
     out << QLatin1StringView("[Rules]\n");
+
+    // Universal custom rules (with a category of "*" and no specific
+    // type) are dangerous because they will override all other rules.
+    // The user is warned in the GUI, but they are output here first so
+    // that they do not override all others.  If the user really does
+    // want to create a universal rule that overrides all others then
+    // they can set a custom rule "*.*=true" or "*.*=false".
+    for (const LoggingCategory &cat : std::as_const(mListCustom)) {
+        const QString rule = cat.createCustomRule();
+        if (rule.startsWith(QLatin1String("*="))) {
+            out << rule + QLatin1Char('\n');
+        }
+    }
+
+    // Then the configured KDE rules.
     for (const LoggingCategory &cat : std::as_const(mListKde)) {
         out << cat.createRule() + QLatin1Char('\n');
     }
+
+    // Finally the user's custome rules which will not override
+    // all others.
     for (const LoggingCategory &cat : std::as_const(mListCustom)) {
-        out << cat.createCustomRule() + QLatin1Char('\n');
+        const QString rule = cat.createCustomRule();
+        if (!rule.startsWith(QLatin1String("*="))) {
+            out << rule + QLatin1Char('\n');
+        }
     }
     return true;
 }
