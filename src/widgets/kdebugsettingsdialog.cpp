@@ -98,6 +98,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &KDebugSettingsDialog::slotRestoreDefault);
     mainLayout->addWidget(buttonBox);
     readConfig();
+    updateLoggingCategories();
     mKdeApplicationSettingsPage->forceFocus();
 }
 
