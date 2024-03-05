@@ -122,6 +122,7 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
   <url type="help">https://doc.qt.io/qt-5/qloggingcategory.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=kdebugsettings&amp;source=appdata</url>
+  <url type="homepage">https://apps.kde.org/kdebugsettings/</url>
   <launchable type="desktop-id">org.kde.kdebugsettings.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <screenshots>
