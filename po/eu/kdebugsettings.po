@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:40+0000\n"
+"POT-Creation-Date: 2024-03-06 00:40+0000\n"
 "PO-Revision-Date: 2023-07-30 22:00+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -164,10 +164,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 «kdebugsettings»en egileak"
 
 #: src/widgets/categorywarning.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You have a rule as '*=true' or '*=false' which will override all your "
+#| "specific rule. Better to remove it."
 msgid ""
-"You have a rule as '*=true' or '*=false' which will override all your "
-"specific rule. Better to remove it."
+"A custom rule '*=true' or '*=false' is present, which may override more "
+"specific rules. It is better to remove it."
 msgstr ""
 "Arau bat duzu '*=true' edo '*=false' gisa, zure berariazko arau guztiak "
 "indargabetuko dituena. Hobe duzu arau hori ezabatzea."
@@ -369,38 +372,38 @@ msgstr "Gorde honela..."
 msgid "Insert..."
 msgstr "Txertatu..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:153
+#: src/widgets/kdebugsettingsdialog.cpp:154
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' ezin da ireki. Egiaztatu ezazu."
 
-#: src/widgets/kdebugsettingsdialog.cpp:179
-#: src/widgets/kdebugsettingsdialog.cpp:193
+#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:194
 #, kde-format
 msgid "Insert Categories"
 msgstr "Txertatu kategoriak"
 
-#: src/widgets/kdebugsettingsdialog.cpp:179
+#: src/widgets/kdebugsettingsdialog.cpp:180
 #, kde-format
 msgid "Categories Files"
 msgstr "Kategoria fitxategiak"
 
-#: src/widgets/kdebugsettingsdialog.cpp:193
+#: src/widgets/kdebugsettingsdialog.cpp:194
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "'%1' fitxategiko kategoriak sartu dira."
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Group Name"
 msgstr "Taldearen izena"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Name:"
 msgstr "Izena:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:206
+#: src/widgets/kdebugsettingsdialog.cpp:207
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -409,23 +412,23 @@ msgstr ""
 "<b>%1</b> talde-izen gisa erabilita dago.\n"
 "Mesedez, gorde beste izen batekin."
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:216
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Ezin da gorde izen huts gisa. Mesedez, erabili izen berri bat."
 
-#: src/widgets/kdebugsettingsdialog.cpp:222
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Save As"
 msgstr "Gorde honela"
 
-#: src/widgets/kdebugsettingsdialog.cpp:222
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings fitxategia (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Kargatu arazteko ezarpenen fitxategiak"

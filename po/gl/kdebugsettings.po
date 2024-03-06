@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:40+0000\n"
+"POT-Creation-Date: 2024-03-06 00:40+0000\n"
 "PO-Revision-Date: 2023-07-02 18:10+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -162,10 +162,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "© %1 Persoas autoras de kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You have a rule as '*=true' or '*=false' which will override all your "
+#| "specific rule. Better to remove it."
 msgid ""
-"You have a rule as '*=true' or '*=false' which will override all your "
-"specific rule. Better to remove it."
+"A custom rule '*=true' or '*=false' is present, which may override more "
+"specific rules. It is better to remove it."
 msgstr ""
 "Ten unha regra, como «*=true» ou «*=false», que sobredefinirá as súas regras "
 "específicas. Será mellor que retire esa regra."
@@ -368,38 +371,38 @@ msgstr "Gardar como…"
 msgid "Insert..."
 msgstr "Inserir…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:153
+#: src/widgets/kdebugsettingsdialog.cpp:154
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "Non é posíbel abrir «%1». Verifíqueo."
 
-#: src/widgets/kdebugsettingsdialog.cpp:179
-#: src/widgets/kdebugsettingsdialog.cpp:193
+#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:194
 #, kde-format
 msgid "Insert Categories"
 msgstr "Inserir categorías"
 
-#: src/widgets/kdebugsettingsdialog.cpp:179
+#: src/widgets/kdebugsettingsdialog.cpp:180
 #, kde-format
 msgid "Categories Files"
 msgstr "Ficheiros de categorías"
 
-#: src/widgets/kdebugsettingsdialog.cpp:193
+#: src/widgets/kdebugsettingsdialog.cpp:194
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Inseríronse as categorías do ficheiro «%1»."
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Group Name"
 msgstr "Nome do grupo"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Name:"
 msgstr "Nome:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:206
+#: src/widgets/kdebugsettingsdialog.cpp:207
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -408,23 +411,23 @@ msgstr ""
 "Xa hai un grupo chamado «<b>%1</b>».\n"
 "Use outro nome."
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:216
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Non é posíbel gardar cun nome baleiro, use outro."
 
-#: src/widgets/kdebugsettingsdialog.cpp:222
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Save As"
 msgstr "Gardar como"
 
-#: src/widgets/kdebugsettingsdialog.cpp:222
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Ficheiro de KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Cargar os ficheiros de configuración da depuración"
