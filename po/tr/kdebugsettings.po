@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-06 00:40+0000\n"
-"PO-Revision-Date: 2023-06-30 12:13+0300\n"
+"PO-Revision-Date: 2024-03-06 11:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "Hata ayıklama ayarlarını yapılandır"
 #: src/apps/main.cpp:31
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1 K Hata Ayıklama Ayarları yazarları"
+msgstr "(c) 2015–%1 K Hata Ayıklama Ayarları yazarları"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:41
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Tanımlayıcı: %1"
 #: src/core/loggingcategory.cpp:117
 #, kde-format
 msgid "Default Severity: %1"
-msgstr "Öntanımlı Ciddiyet: %1"
+msgstr "Öntanımlı ciddiyet: %1"
 
 #: src/core/loggingcategory.cpp:126
 #, kde-format
@@ -161,16 +161,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 K Hata Ayıklama Ayarları yazarları"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Tüm özel kurallarınızı geçersiz kılmak için, '*=true' ya da '*=false' "
-"şeklinde kurallarınız olmalıdır. Kaldırmaktan daha iyidir."
+"‘*=true’ veya ‘*=false’ şeklinde bir özel kural var; bu özel kural, bazı "
+"belirli kuralları geçersiz kılabilir. Onu kaldırmak en iyisidir."
 
 #: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format
@@ -202,7 +199,7 @@ msgstr "Tür:"
 #: src/widgets/customdebuglistview.cpp:42
 #, kde-format
 msgid "Add Rule..."
-msgstr "Kural Ekle..."
+msgstr "Kural Ekle…"
 
 #: src/widgets/customdebuglistview.cpp:44
 #, kde-format
@@ -227,29 +224,29 @@ msgstr[1] "Bu %1 kuralı kaldırmak istiyor musunuz?"
 #: src/widgets/customdebugsettingspage.cpp:21
 #, kde-format
 msgid "Edit..."
-msgstr "Düzenle..."
+msgstr "Düzenle…"
 
 #: src/widgets/customdebugsettingspage.cpp:22
 #, kde-format
 msgid "Remove..."
-msgstr "Sil..."
+msgstr "Sil…"
 
 #: src/widgets/customdebugsettingspage.cpp:38
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:31
 #, kde-format
 msgid "Search..."
-msgstr "Ara..."
+msgstr "Ara…"
 
 #: src/widgets/customdebugsettingspage.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr "\"QT_LOGGING_RULES\" çevre değişkeninde tanımlı bir kural yok."
+msgstr "‘QT_LOGGING_RULES’ çevre değişkeninde tanımlı bir kural yok."
 
 #: src/widgets/environmentsettingsrulespage.cpp:29
 #, kde-format
@@ -286,7 +283,7 @@ msgstr "Grup, %1 konumuna dışa aktarıldı"
 #: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "'%2' grubu, '%1' konumuna dışa aktarılamıyor"
+msgstr "‘%2’ grubu, ‘%1’ konumuna dışa aktarılamıyor"
 
 #: src/widgets/groupmanagementwidget.cpp:65
 #: src/widgets/groupmanagementwidget.cpp:70
@@ -297,22 +294,22 @@ msgstr "Grubu Yeniden Adlandır"
 #: src/widgets/groupmanagementwidget.cpp:65
 #, kde-format
 msgid "New Name:"
-msgstr "Yeni Ad:"
+msgstr "Yeni ad:"
 
 #: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Grup, '%1' olarak yeniden adlandırılamıyor."
+msgstr "Grup, ‘%1’ olarak yeniden adlandırılamıyor."
 
 #: src/widgets/groupmanagementwidget.cpp:86
 #, kde-format
 msgid "Rename Group..."
-msgstr "Grubu Yeniden Adlandır..."
+msgstr "Grubu Yeniden Adlandır…"
 
 #: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgid "Export Group..."
-msgstr "Grubu Dışa Aktar..."
+msgstr "Grubu Dışa Aktar…"
 
 #: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
@@ -322,7 +319,7 @@ msgstr "Grupları Kaldır"
 #: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
 msgid "Impossible to remove '%1'"
-msgstr "'%1' kaldırılamıyor"
+msgstr "‘%1’ kaldırılamıyor"
 
 #: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
@@ -362,17 +359,17 @@ msgstr "Çevre Değişkeni İle Kural Ayarları"
 #: src/widgets/kdebugsettingsdialog.cpp:74 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
-msgstr "Farklı Kaydet..."
+msgstr "Farklı Kaydet…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:87
 #, kde-format
 msgid "Insert..."
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:154
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr "'%1' açılamıyor. Lütfen doğrulayın."
+msgstr "‘%1’ açılamıyor. Lütfen doğrulayın."
 
 #: src/widgets/kdebugsettingsdialog.cpp:180
 #: src/widgets/kdebugsettingsdialog.cpp:194
@@ -388,7 +385,7 @@ msgstr "Kategoriler Dosyaları"
 #: src/widgets/kdebugsettingsdialog.cpp:194
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr "'%1' dosyasından kategoriler eklendi."
+msgstr "‘%1’ dosyasından kategoriler eklendi."
 
 #: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
@@ -406,7 +403,7 @@ msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"<b>'%1'</b>, grup adı olarak halihazırda kullanılıyor.\n"
+"<b>‘%1’</b>, grup adı olarak halihazırda kullanılıyor.\n"
 "Lütfen başka bir adla kaydedin."
 
 #: src/widgets/kdebugsettingsdialog.cpp:216
@@ -443,22 +440,22 @@ msgstr "Grubu Yönet"
 #: src/widgets/loadtoolbutton.cpp:17
 #, kde-format
 msgid "Load..."
-msgstr "Yükle..."
+msgstr "Yükle…"
 
 #: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load From File..."
-msgstr "Dosyadan Yükle..."
+msgstr "Dosyadan Yükle…"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, kde-format
 msgid "Save As File..."
-msgstr "Dosya Olarak Farklı Kaydet..."
+msgstr "Dosya Olarak Farklı Kaydet…"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, kde-format
 msgid "Save As Group..."
-msgstr "Grup Olarak Farklı Kaydet..."
+msgstr "Grup Olarak Farklı Kaydet…"
 
 #~ msgid "Rules:"
 #~ msgstr "Kurallar:"

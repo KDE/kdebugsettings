@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-06 00:40+0000\n"
-"PO-Revision-Date: 2023-07-01 08:13+0200\n"
+"PO-Revision-Date: 2024-03-06 05:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -162,16 +162,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings -ის ავტორები"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
 "გაქვთ წესი '*=true' ან '*=false', რომელიც ყველა დანარჩენ მითითებულ წესს "
-"გადაფარავს. წაშალეთ ის."
+"გადაფარავს. უმჯობესია, თუ მას წაშლით."
 
 #: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format
