@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# giovanni <g.sora@tiscali.it>, 2017, 2018, 2021, 2022, 2023.
+# giovanni <g.sora@tiscali.it>, 2017, 2018, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-06 00:40+0000\n"
-"PO-Revision-Date: 2023-07-02 21:35+0200\n"
+"PO-Revision-Date: 2024-03-07 10:56+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -161,16 +161,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 autores de  kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Tu ha un regula como '*=true' o '*=false' le qual ultrapassara omne tu "
-"specific regulas. Il es melior remover lo."
+"Un regula personalisate  '*=true' o '*=false' es presente, le qual pote "
+"ultrapassar regulas plus specific. Il es melior remover lo."
 
 #: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format

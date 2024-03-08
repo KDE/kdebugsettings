@@ -4,13 +4,13 @@
 # Franklin, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-06 00:40+0000\n"
-"PO-Revision-Date: 2023-12-15 20:03+0900\n"
+"PO-Revision-Date: 2024-03-08 03:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "KDebugSettings"
 #: src/apps/main.cpp:29 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
-msgstr "除錯設定"
+msgstr "調整除錯設定"
 
 #: src/apps/main.cpp:31
 #, kde-format
@@ -160,16 +160,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings 作者群"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"您的規則中有 '*=true' 或 '*=false' 這樣的規則，這樣會覆寫所有您指定的規則。最"
-"好將它移除。"
+"有自訂規則 '*=true' 或 '*=false' 存在，它可能會覆寫更詳細的規則。將它移除會比"
+"較好。"
 
 #: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format

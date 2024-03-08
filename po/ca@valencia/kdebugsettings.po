@@ -1,16 +1,16 @@
 # Translation of kdebugsettings.po to Catalan (Valencian)
-# Copyright (C) 2015-2023 This_file_is_part_of_KDE
+# Copyright (C) 2015-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-06 00:40+0000\n"
-"PO-Revision-Date: 2023-08-07 17:41+0200\n"
+"PO-Revision-Date: 2024-03-06 10:15+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -165,16 +165,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1, els autors de «kdebugsettings»"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Hi ha una regla com «*=true» o «*=false», la qual substituirà totes les "
-"altres regles específiques. És millor eliminar-la."
+"Hi ha una regla personalitzada com «*=true» o «*=false», la qual substituirà "
+"més regles específiques. És millor eliminar-la."
 
 #: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format
