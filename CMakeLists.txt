@@ -29,7 +29,7 @@ include(ECMQtDeclareLoggingCategory)
 include(GenerateExportHeader)
 include(ECMDeprecationSettings)
 
-find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
+find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons 
     Config
