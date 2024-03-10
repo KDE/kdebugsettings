@@ -43,10 +43,13 @@ bool SaveRulesJob::start()
     // that they do not override all others.  If the user really does
     // want to create a universal rule that overrides all others then
     // they can set a custom rule "*.*=true" or "*.*=false".
+    QStringList listExcludeRules;
     for (const LoggingCategory &cat : std::as_const(mListCustom)) {
         const QString rule = cat.createCustomRule();
         if (rule.startsWith(QLatin1String("*="))) {
             out << rule + QLatin1Char('\n');
+        } else {
+            listExcludeRules << rule + QLatin1Char('\n');
         }
     }
 
@@ -57,11 +60,8 @@ bool SaveRulesJob::start()
 
     // Finally the user's custom rules which will not override
     // all others.
-    for (const LoggingCategory &cat : std::as_const(mListCustom)) {
-        const QString rule = cat.createCustomRule();
-        if (!rule.startsWith(QLatin1String("*="))) {
-            out << rule + QLatin1Char('\n');
-        }
+    for (const QString &str : std::as_const(listExcludeRules)) {
+        out << str;
     }
     return true;
 }
