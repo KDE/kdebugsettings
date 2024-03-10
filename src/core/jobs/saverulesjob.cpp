@@ -55,7 +55,7 @@ bool SaveRulesJob::start()
         out << cat.createRule() + QLatin1Char('\n');
     }
 
-    // Finally the user's custome rules which will not override
+    // Finally the user's custom rules which will not override
     // all others.
     for (const LoggingCategory &cat : std::as_const(mListCustom)) {
         const QString rule = cat.createCustomRule();
