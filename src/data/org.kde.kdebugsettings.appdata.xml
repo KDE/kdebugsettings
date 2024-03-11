@@ -120,7 +120,7 @@
     <p xml:lang="zh-TW">KDebugSettings 編輯哪些 QLoggingCategory 紀錄分類要被顯示。QLoggingCategory 為應用程式在主控台顯示訊息，而您可以定義應用程式是否顯示資訊、警告或嚴重錯誤，來幫助除錯 Qt 應用程式。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
-  <url type="help">https://doc.qt.io/qt-5/qloggingcategory.html</url>
+  <url type="help">https://doc.qt.io/qt-6/qloggingcategory.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=kdebugsettings&amp;source=appdata</url>
   <url type="homepage">https://apps.kde.org/kdebugsettings/</url>
   <launchable type="desktop-id">org.kde.kdebugsettings.desktop</launchable>
