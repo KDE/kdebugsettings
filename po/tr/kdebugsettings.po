@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 02:29+0000\n"
-"PO-Revision-Date: 2024-03-06 11:32+0300\n"
+"PO-Revision-Date: 2024-03-17 02:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -229,7 +229,7 @@ msgstr "Düzenle…"
 #: src/widgets/customdebugsettingspage.cpp:22
 #, kde-format
 msgid "Remove..."
-msgstr "Sil…"
+msgstr "Kaldır…"
 
 #: src/widgets/customdebugsettingspage.cpp:38
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:31
