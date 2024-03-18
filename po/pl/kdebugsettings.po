@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-06 00:40+0000\n"
-"PO-Revision-Date: 2023-08-20 10:49+0200\n"
+"PO-Revision-Date: 2024-03-17 11:00+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -162,16 +162,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 Autorzy kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Ustawiono warunek jako '*=true' lub '*=false' co zastąpi wszystkie twoje "
-"warunki. Lepiej go usunąć."
+"Wykryto obecność zasady '*=true' lub '*=false', która może zastąpić bardziej "
+"szczegółowe zasady. Lepiej ją usunąć."
 
 #: src/widgets/configurecustomsettingdialog.cpp:21
 #, kde-format
@@ -183,7 +180,7 @@ msgstr "Dodaj własną zasadę"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit custom rule"
-msgstr "Zmień własną zasadę"
+msgstr "Dostosuj własną zasadę"
 
 #: src/widgets/configurecustomsettingwidget.cpp:21
 #, kde-format
