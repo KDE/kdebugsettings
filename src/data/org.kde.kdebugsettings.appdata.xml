@@ -123,6 +123,7 @@
   <url type="help">https://doc.qt.io/qt-6/qloggingcategory.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=kdebugsettings&amp;source=appdata</url>
   <url type="homepage">https://apps.kde.org/kdebugsettings/</url>
+  <url type="vcs-browser">https://invent.kde.org/utilities/kdebugsettings</url>
   <launchable type="desktop-id">org.kde.kdebugsettings.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <screenshots>
