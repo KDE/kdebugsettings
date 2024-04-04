@@ -6,6 +6,8 @@
 */
 
 #include "kdebugsettingsutil.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdebugsettingscore_debug.h"
 #include <KLocalizedString>
 #include <QDir>
@@ -245,25 +247,25 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
     if ((equalPos != -1) && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
-        if (valueStr == QLatin1StringView("true")) {
+        if (valueStr == "true"_L1) {
             lineCategory.enabled = true;
         } else {
             lineCategory.enabled = false;
         }
         QString p;
-        if (pattern.endsWith(QLatin1StringView(".debug"))) {
+        if (pattern.endsWith(".debug"_L1)) {
             p = pattern.left(pattern.length() - 6); // strlen(".debug")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Debug;
-        } else if (pattern.endsWith(QLatin1StringView(".warning"))) {
+        } else if (pattern.endsWith(".warning"_L1)) {
             p = pattern.left(pattern.length() - 8); // strlen(".warning")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Warning;
-        } else if (pattern.endsWith(QLatin1StringView(".critical"))) {
+        } else if (pattern.endsWith(".critical"_L1)) {
             p = pattern.left(pattern.length() - 9); // strlen(".critical")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Critical;
-        } else if (pattern.endsWith(QLatin1StringView(".info"))) {
+        } else if (pattern.endsWith(".info"_L1)) {
             p = pattern.left(pattern.length() - 5); // strlen(".info")
             lineCategory.logName = p;
             lineCategory.type = LineLoggingQtCategory::Info;
@@ -306,7 +308,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
             if (line.startsWith(QLatin1Char('[')) && line.endsWith(QLatin1Char(']'))) {
                 // new section
                 _section = line.mid(1, line.size() - 2);
-                rulesSections = (_section == QLatin1StringView("Rules"));
+                rulesSections = (_section == "Rules"_L1);
                 continue;
             }
             if (rulesSections) {
@@ -385,13 +387,13 @@ LoggingCategory::LoggingType KDebugSettingsUtil::convertCategoryTypeFromString(c
 {
     if (str.isEmpty()) {
         return LoggingCategory::Info; // Default
-    } else if (str == QLatin1StringView("DEBUG")) {
+    } else if (str == "DEBUG"_L1) {
         return LoggingCategory::Debug;
-    } else if (str == QLatin1StringView("INFO")) {
+    } else if (str == "INFO"_L1) {
         return LoggingCategory::Info;
-    } else if (str == QLatin1StringView("WARNING")) {
+    } else if (str == "WARNING"_L1) {
         return LoggingCategory::Warning;
-    } else if (str == QLatin1StringView("CRITICAL")) {
+    } else if (str == "CRITICAL"_L1) {
         return LoggingCategory::Critical;
     }
     qCWarning(KDEBUGSETTINGSCORE_LOG) << "Default category is unknown: " << str;
@@ -427,7 +429,7 @@ QString KDebugSettingsUtil::convertCategoryTypeToString(LoggingCategory::Logging
 
 QString KDebugSettingsUtil::qtFileName()
 {
-    const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1StringView("/QtProject");
+    const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/QtProject"_L1;
     QDir().mkpath(envPath);
     const QString qtloggingFileName = envPath + QStringLiteral("/qtlogging.ini");
     return qtloggingFileName;
@@ -435,7 +437,7 @@ QString KDebugSettingsUtil::qtFileName()
 
 QString KDebugSettingsUtil::defaultWritableGroupPath()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1StringView("/groups");
+    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + "/groups"_L1;
 }
 
 QStringList KDebugSettingsUtil::groupFileList()

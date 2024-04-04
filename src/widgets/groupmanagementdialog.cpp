@@ -6,6 +6,8 @@
 */
 
 #include "groupmanagementdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "groupmanagementwidget.h"
 
 #include <KConfigGroup>
@@ -26,11 +28,11 @@ GroupManagementDialog::GroupManagementDialog(QWidget *parent)
     , mGroupManagementWidget(new GroupManagementWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Manage Group"));
-    mGroupManagementWidget->setObjectName(QLatin1StringView("mGroupManagementWidget"));
+    mGroupManagementWidget->setObjectName("mGroupManagementWidget"_L1);
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &GroupManagementDialog::reject);
     mainLayout->addWidget(mGroupManagementWidget);
     mainLayout->addWidget(buttonBox);

@@ -6,6 +6,8 @@
 */
 
 #include "categorytypecombobox.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "loggingmanager.h"
 #include "model/categorytypemodel.h"
 #include "model/categorytypeproxymodel.h"
@@ -15,7 +17,7 @@ CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)
     : QComboBox(parent)
 {
     auto proxy = new CategoryTypeProxyModel(this);
-    proxy->setObjectName(QLatin1StringView("proxy"));
+    proxy->setObjectName("proxy"_L1);
     proxy->setSourceModel(LoggingManager::self().categoryTypeModel());
     proxy->setShowOffType(!customType);
     setModel(proxy);

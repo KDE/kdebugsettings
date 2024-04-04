@@ -6,6 +6,8 @@
 */
 
 #include "loadcategoriesjob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdebugsettingsutil.h"
 
 LoadCategoriesJob::LoadCategoriesJob() = default;
@@ -110,7 +112,7 @@ void LoadCategoriesJob::start()
                     break;
                 }
             }
-            if (cat.logName == QLatin1StringView("*")) {
+            if (cat.logName == "*"_L1) {
                 mFoundOverrideRule = true;
             }
         }

@@ -6,6 +6,8 @@
 */
 
 #include "configurecustomsettingwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "categorytypecombobox.h"
 #include "kdebugsettingsutil.h"
 #include <KLineEdit>
@@ -24,10 +26,10 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     auto vbox = new QVBoxLayout(this);
 
     auto lab = new QLabel(i18n("Category:"), this);
-    lab->setObjectName(QLatin1StringView("category_label"));
+    lab->setObjectName("category_label"_L1);
     mCategoryLineEdit->setTrapReturnKey(true);
     mCategoryLineEdit->setClearButtonEnabled(true);
-    mCategoryLineEdit->setObjectName(QLatin1StringView("category_lineedit"));
+    mCategoryLineEdit->setObjectName("category_lineedit"_L1);
     connect(mCategoryLineEdit, &KLineEdit::textChanged, this, &ConfigureCustomSettingWidget::slotTextChanged);
     auto categoryLayout = new QHBoxLayout;
     vbox->addLayout(categoryLayout);
@@ -35,13 +37,13 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     categoryLayout->addWidget(mCategoryLineEdit);
 
     lab = new QLabel(i18n("Type:"), this);
-    lab->setObjectName(QLatin1StringView("categorytype_label"));
+    lab->setObjectName("categorytype_label"_L1);
     categoryLayout->addWidget(lab);
 
-    mCategoryType->setObjectName(QLatin1StringView("categorytype_combobox"));
+    mCategoryType->setObjectName("categorytype_combobox"_L1);
     categoryLayout->addWidget(mCategoryType);
 
-    mEnableCategory->setObjectName(QLatin1StringView("enable_category"));
+    mEnableCategory->setObjectName("enable_category"_L1);
     categoryLayout->addWidget(mEnableCategory);
 }
 

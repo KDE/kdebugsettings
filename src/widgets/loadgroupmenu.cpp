@@ -6,6 +6,8 @@
 */
 
 #include "loadgroupmenu.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdebugsettingsutil.h"
 
 #include <KLocalizedString>
@@ -30,7 +32,7 @@ void LoadGroupMenu::refreshMenu()
 
 QString LoadGroupMenu::defaultWritableGroupPath()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1StringView("/groups");
+    return QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + "/groups"_L1;
 }
 
 QStringList LoadGroupMenu::defaultReadableGroupPath() const

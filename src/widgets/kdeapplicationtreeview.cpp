@@ -5,6 +5,8 @@
 */
 
 #include "kdeapplicationtreeview.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdeapplicationlistviewdelegate.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
 #include "model/kdeapplicationloggingcategoryproxymodel.h"
@@ -28,7 +30,7 @@ KDEApplicationTreeView::~KDEApplicationTreeView() = default;
 void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCategoryModel *newLoggingCategoryModel)
 {
     mKdeApplicationLoggingCategoryModel = newLoggingCategoryModel;
-    mKdeApplicationLoggingCategoryModel->setObjectName(QLatin1StringView("mKdeApplicationLoggingCategoryModel"));
+    mKdeApplicationLoggingCategoryModel->setObjectName("mKdeApplicationLoggingCategoryModel"_L1);
 
     mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mKdeApplicationLoggingCategoryModel);
     setModel(mKdeApplicationLoggingCategoryProxyModel);

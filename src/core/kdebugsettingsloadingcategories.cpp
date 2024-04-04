@@ -6,6 +6,8 @@
 */
 
 #include "kdebugsettingsloadingcategories.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "jobs/loadcategoriesjob.h"
 #include "kdebugsettingsutil.h"
 #include <QDir>
@@ -61,7 +63,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.categories"));
         for (const QString &file : fileNames) {
-            if (file != QLatin1StringView("kde.categories")) {
+            if (file != "kde.categories"_L1) {
                 KDebugSettingsUtil::readLoggingCategories(dir + file, mCategoriesList, true);
             }
         }

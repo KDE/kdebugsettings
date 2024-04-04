@@ -6,6 +6,8 @@
 */
 
 #include "customdebugsettingspage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "customdebuglistview.h"
 #include "loggingmanager.h"
 
@@ -34,25 +36,25 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
 
     vbox->addWidget(mSearchLineEdit);
     mSearchLineEdit->setClearButtonEnabled(true);
-    mSearchLineEdit->setObjectName(QLatin1StringView("mSearchLineEdit"));
+    mSearchLineEdit->setObjectName("mSearchLineEdit"_L1);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     vbox->addWidget(mCustomDebugListView);
-    mCustomDebugListView->setObjectName(QLatin1StringView("mCustomDebugListView"));
+    mCustomDebugListView->setObjectName("mCustomDebugListView"_L1);
 
     mCustomDebugListView->setLoggingCategoryModel(LoggingManager::self().customCategoryModel());
     auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
     auto addRulePushButton = new QPushButton(i18n("Add..."), this);
-    addRulePushButton->setObjectName(QLatin1StringView("add_rule"));
+    addRulePushButton->setObjectName("add_rule"_L1);
     buttonLayout->addWidget(addRulePushButton);
     connect(addRulePushButton, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::slotAddRule);
 
-    mEditRule->setObjectName(QLatin1StringView("edit_rule"));
+    mEditRule->setObjectName("edit_rule"_L1);
     buttonLayout->addWidget(mEditRule);
     connect(mEditRule, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::editRule);
 
-    mRemoveRule->setObjectName(QLatin1StringView("remove_rule"));
+    mRemoveRule->setObjectName("remove_rule"_L1);
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch();
     connect(mRemoveRule, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::removeRules);

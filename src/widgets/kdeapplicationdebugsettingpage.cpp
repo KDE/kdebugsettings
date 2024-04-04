@@ -6,6 +6,8 @@
 */
 
 #include "kdeapplicationdebugsettingpage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdeapplicationtreeview.h"
 #include "loggingmanager.h"
 #include <KLocalizedString>
@@ -24,29 +26,29 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     , mKdeApplicationTreeView(new KDEApplicationTreeView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mSearchLineEdit->setObjectName(QLatin1StringView("mSearchLineEdit"));
+    mSearchLineEdit->setObjectName("mSearchLineEdit"_L1);
     mainLayout->addWidget(mSearchLineEdit);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     mSearchLineEdit->setClearButtonEnabled(true);
 
-    mKdeApplicationTreeView->setObjectName(QLatin1StringView("mKdeApplicationTreeView"));
+    mKdeApplicationTreeView->setObjectName("mKdeApplicationTreeView"_L1);
     mainLayout->addWidget(mKdeApplicationTreeView);
     mKdeApplicationTreeView->setLoggingCategoryModel(LoggingManager::self().qtKdeCategoryModel());
 
     auto buttonLayout = new QHBoxLayout;
     mainLayout->addLayout(buttonLayout);
 
-    mEnableDebug->setObjectName(QLatin1StringView("selectall"));
+    mEnableDebug->setObjectName("selectall"_L1);
     buttonLayout->addWidget(mEnableDebug);
     connect(mEnableDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotSelectAllDebug);
 
-    mTurnOffDebug->setObjectName(QLatin1StringView("deselectall"));
+    mTurnOffDebug->setObjectName("deselectall"_L1);
     buttonLayout->addWidget(mTurnOffDebug);
     connect(mTurnOffDebug, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllDebug);
 
-    mTurnOffAllMessages->setObjectName(QLatin1StringView("deselectallmessage"));
+    mTurnOffAllMessages->setObjectName("deselectallmessage"_L1);
     buttonLayout->addWidget(mTurnOffAllMessages);
     connect(mTurnOffAllMessages, &QAbstractButton::clicked, this, &KDEApplicationDebugSettingPage::slotDeselectAllMessages);
 

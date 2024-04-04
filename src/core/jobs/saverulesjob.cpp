@@ -6,6 +6,7 @@
 */
 
 #include "saverulesjob.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QFile>
 #include <QTextStream>
@@ -35,7 +36,7 @@ bool SaveRulesJob::start()
     }
     // Save Rules
     QTextStream out(&qtlogging);
-    out << QLatin1StringView("[Rules]\n");
+    out << "[Rules]\n"_L1;
 
     // Universal custom rules (with a category of "*" and no specific
     // type) are dangerous because they will override all other rules.

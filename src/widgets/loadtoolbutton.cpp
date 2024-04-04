@@ -6,6 +6,8 @@
 */
 
 #include "loadtoolbutton.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "loadgroupmenu.h"
 #include <KLocalizedString>
 
@@ -21,7 +23,7 @@ LoadToolButton::LoadToolButton(QWidget *parent)
     QAction *act = mainMenu->addAction(i18n("Load From File..."));
     connect(act, &QAction::triggered, this, &LoadToolButton::loadFromFile);
 
-    mLoadMenu->setObjectName(QLatin1StringView("loadMenu"));
+    mLoadMenu->setObjectName("loadMenu"_L1);
     connect(mLoadMenu, &LoadGroupMenu::loadGroupRequested, this, &LoadToolButton::loadGroupRequested);
     connect(mLoadMenu, &LoadGroupMenu::manageGroupRequested, this, &LoadToolButton::manageGroupRequested);
     mainMenu->addMenu(mLoadMenu);

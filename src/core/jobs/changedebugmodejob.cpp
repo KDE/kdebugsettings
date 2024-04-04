@@ -6,6 +6,8 @@
 */
 
 #include "changedebugmodejob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsloadingcategories.h"
 #include "kdebugsettingsutil.h"
@@ -79,15 +81,15 @@ bool ChangeDebugModeJob::start()
 
 LoggingCategory::LoggingType ChangeDebugModeJob::convertDebugModeToLoggingType(const QString &value) const
 {
-    if (value == QLatin1StringView("Full")) {
+    if (value == "Full"_L1) {
         return LoggingCategory::LoggingType::All;
-    } else if (value == QLatin1StringView("Info")) {
+    } else if (value == "Info"_L1) {
         return LoggingCategory::LoggingType::Info;
-    } else if (value == QLatin1StringView("Warning")) {
+    } else if (value == "Warning"_L1) {
         return LoggingCategory::LoggingType::Warning;
-    } else if (value == QLatin1StringView("Critical")) {
+    } else if (value == "Critical"_L1) {
         return LoggingCategory::LoggingType::Critical;
-    } else if (value == QLatin1StringView("Off")) {
+    } else if (value == "Off"_L1) {
         return LoggingCategory::LoggingType::Off;
     }
     return LoggingCategory::LoggingType::Undefined;

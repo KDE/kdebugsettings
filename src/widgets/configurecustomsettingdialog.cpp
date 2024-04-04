@@ -6,6 +6,8 @@
 */
 
 #include "configurecustomsettingdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "configurecustomsettingwidget.h"
 
 #include <KLocalizedString>
@@ -20,11 +22,11 @@ ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Add custom rule"));
 
-    mCustomSettingWidget->setObjectName(QLatin1StringView("customsettingwidget"));
+    mCustomSettingWidget->setObjectName("customsettingwidget"_L1);
     mainLayout->addWidget(mCustomSettingWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     QPushButton *buttonOk = buttonBox->button(QDialogButtonBox::Ok);

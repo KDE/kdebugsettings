@@ -6,6 +6,8 @@
 */
 
 #include "groupmanagementwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdebugsettingsutil.h"
 
 #include <KLocalizedString>
@@ -24,9 +26,9 @@ GroupManagementWidget::GroupManagementWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mListWidget->setObjectName(QLatin1StringView("mListWidget"));
+    mListWidget->setObjectName("mListWidget"_L1);
     mainLayout->addWidget(mListWidget);
     mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
