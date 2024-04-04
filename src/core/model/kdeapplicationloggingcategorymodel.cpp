@@ -28,7 +28,8 @@ int KDEApplicationLoggingCategoryModel::rowCount(const QModelIndex &parent) cons
 int KDEApplicationLoggingCategoryModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return static_cast<int>(KDEApplicationLoggingCategoryModel::LastColumn) + 1;
+    constexpr int nbCol = static_cast<int>(KDEApplicationLoggingCategoryModel::LastColumn) + 1;
+    return nbCol;
 }
 
 Qt::ItemFlags KDEApplicationLoggingCategoryModel::flags(const QModelIndex &index) const
