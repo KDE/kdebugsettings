@@ -7,7 +7,7 @@ import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 
 import org.kde.kdebugsettings 1.0
-
+import org.kde.kirigamiaddons.delegates as Delegates
 Kirigami.ScrollablePage {
     id: page
     title: i18nc("@title", "KDE Application Rules")
@@ -31,7 +31,7 @@ Kirigami.ScrollablePage {
             id: loggingDebugProxyModel
             sourceModel: LoggingManager.qtKdeCategoryModel
         }
-        delegate: Kirigami.BasicListItem {
+        delegate:  Delegates.RoundedItemDelegate {
             RowLayout {
                 QQC2.Label {
                     Layout.fillHeight: true
