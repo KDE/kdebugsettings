@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-06 00:40+0000\n"
+"POT-Creation-Date: 2024-04-05 00:40+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -81,77 +81,77 @@ msgstr ""
 msgid "Impossible to change debug mode"
 msgstr "Αδυναμία αλλαγής της λειτουργίας αποσφαλμάτωσης"
 
-#: src/core/kdebugsettingsutil.cpp:407
+#: src/core/kdebugsettingsutil.cpp:409
 #, kde-format
 msgid "Full Debug"
 msgstr "Πλήρης αποσφαλμάτωση"
 
-#: src/core/kdebugsettingsutil.cpp:410
+#: src/core/kdebugsettingsutil.cpp:412
 #, kde-format
 msgid "Info"
 msgstr "Πληροφορίες"
 
-#: src/core/kdebugsettingsutil.cpp:413
+#: src/core/kdebugsettingsutil.cpp:415
 #, kde-format
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
-#: src/core/kdebugsettingsutil.cpp:416
+#: src/core/kdebugsettingsutil.cpp:418
 #, kde-format
 msgid "Critical"
 msgstr "Κρίσιμη"
 
-#: src/core/kdebugsettingsutil.cpp:419
+#: src/core/kdebugsettingsutil.cpp:421
 #, kde-format
 msgid "Off"
 msgstr "Ανενεργό"
 
-#: src/core/kdebugsettingsutil.cpp:422 src/core/loggingcategory.cpp:144
+#: src/core/kdebugsettingsutil.cpp:424 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Αόριστο"
 
-#: src/core/loggingcategory.cpp:113
+#: src/core/loggingcategory.cpp:115
 #, kde-format
 msgid "Category name: %1"
 msgstr "Όνομα κατηγορίας: %1"
 
-#: src/core/loggingcategory.cpp:115
+#: src/core/loggingcategory.cpp:117
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Αναγνωριστικό: %1"
 
-#: src/core/loggingcategory.cpp:117
+#: src/core/loggingcategory.cpp:119
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Προκαθορισμένη αυστηρότητα: %1"
 
-#: src/core/loggingcategory.cpp:126
+#: src/core/loggingcategory.cpp:128
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Όλα τα μηνύματα αποσφαλμάτωσης"
 
-#: src/core/loggingcategory.cpp:129
+#: src/core/loggingcategory.cpp:131
 #, kde-format
 msgid "Info Messages"
 msgstr "Μηνύματα πληροφοριών"
 
-#: src/core/loggingcategory.cpp:132
+#: src/core/loggingcategory.cpp:134
 #, kde-format
 msgid "Warning Messages"
 msgstr "Προειδοποιητικά μηνύματα"
 
-#: src/core/loggingcategory.cpp:135
+#: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Debug Messages"
 msgstr "Μηνύματα αποσφαλμάτωσης"
 
-#: src/core/loggingcategory.cpp:138
+#: src/core/loggingcategory.cpp:140
 #, kde-format
 msgid "Critical Messages"
 msgstr "Κρίσιμα μηνύματα"
 
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Χωρίς μηνύματα αποσφαλμάτωσης"
@@ -174,45 +174,45 @@ msgstr ""
 "Έχετε θέσει ένα κανόνα σαν *=true' ή '*=false' το οποίο θα παρακάμψει όλους "
 "τους υπόλοιπους κανόνες. Καλύτερα αφαιρέστε το."
 
-#: src/widgets/configurecustomsettingdialog.cpp:21
+#: src/widgets/configurecustomsettingdialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Add custom rule"
 msgstr "Προσθήκη προσαρμοσμένου κανόνα"
 
-#: src/widgets/configurecustomsettingdialog.cpp:40
+#: src/widgets/configurecustomsettingdialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit custom rule"
 msgstr "Επεξεργασία προσαρμοσμένου κανόνα"
 
-#: src/widgets/configurecustomsettingwidget.cpp:21
+#: src/widgets/configurecustomsettingwidget.cpp:23
 #, kde-format
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: src/widgets/configurecustomsettingwidget.cpp:26
+#: src/widgets/configurecustomsettingwidget.cpp:28
 #, kde-format
 msgid "Category:"
 msgstr "Κατηγορία:"
 
-#: src/widgets/configurecustomsettingwidget.cpp:37
+#: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
 msgid "Type:"
 msgstr "Τύπος:"
 
-#: src/widgets/customdebuglistview.cpp:42
+#: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Add Rule..."
 msgstr "Προσθήκη κανόνα..."
 
-#: src/widgets/customdebuglistview.cpp:44
+#: src/widgets/customdebuglistview.cpp:46
 #, kde-format
 msgid "Edit Rule"
 msgstr "Επεξεργασία κανόνα"
 
-#: src/widgets/customdebuglistview.cpp:50
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:52
+#: src/widgets/customdebuglistview.cpp:90
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 msgid "Remove Rule"
@@ -220,30 +220,30 @@ msgid_plural "Remove Rules"
 msgstr[0] "Αφαίρεση κανόνα"
 msgstr[1] "Αφαίρεση κανόνα"
 
-#: src/widgets/customdebuglistview.cpp:83
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "Επιθυμείτε την αφαίρεση αυτού του κανόνα;"
 msgstr[1] "Επιθυμείτε πραγματικά την αφαίρεση του κανόνα \"%1\";"
 
-#: src/widgets/customdebugsettingspage.cpp:21
+#: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit..."
 msgstr "Επεξεργασία..."
 
-#: src/widgets/customdebugsettingspage.cpp:22
+#: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
 msgid "Remove..."
 msgstr "Αφαίρεση..."
 
-#: src/widgets/customdebugsettingspage.cpp:38
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:31
+#: src/widgets/customdebugsettingspage.cpp:40
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:33
 #, kde-format
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-#: src/widgets/customdebugsettingspage.cpp:46
+#: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add..."
 msgstr "Προσθήκη..."
@@ -255,7 +255,7 @@ msgid ""
 msgstr ""
 "Δεν έχουν οριστεί κανόνες στη μεταβλητή περιβάλλοντος \"QT_LOGGING_RULES\"."
 
-#: src/widgets/environmentsettingsrulespage.cpp:29
+#: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
 msgid ""
 "These rules cannot be edited with this application. You need to set them in "
@@ -264,151 +264,151 @@ msgstr ""
 "Αυτοί οι κανόνες δε μπορούν να αλλαχθούν με αυτή την εφαρμογή. Πρέπει να "
 "τους θέσετε απευθείας στη μεταβλητή QT_LOGGING_RULES."
 
-#: src/widgets/environmentsettingsrulespage.cpp:32
+#: src/widgets/environmentsettingsrulespage.cpp:33
 #, kde-format
 msgid "Current rules:"
 msgstr "Τρέχοντες κανόνες:"
 
-#: src/widgets/groupmanagementdialog.cpp:28
+#: src/widgets/groupmanagementdialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Διαχείριση ομάδας"
 
-#: src/widgets/groupmanagementwidget.cpp:47
-#: src/widgets/groupmanagementwidget.cpp:50
+#: src/widgets/groupmanagementwidget.cpp:49
 #: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
 #, fuzzy, kde-format
 #| msgid "Load Group"
 msgid "Export Group"
 msgstr "Φόρτωση ομάδας"
 
-#: src/widgets/groupmanagementwidget.cpp:50
+#: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Group exported to %1"
 msgstr ""
 
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
 #, fuzzy, kde-format
 #| msgid "Impossible to rename group as '%1'"
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:65
-#: src/widgets/groupmanagementwidget.cpp:70
+#: src/widgets/groupmanagementwidget.cpp:67
+#: src/widgets/groupmanagementwidget.cpp:72
 #, kde-format
 msgid "Rename Group"
 msgstr "Μετονομασία ομάδας"
 
-#: src/widgets/groupmanagementwidget.cpp:65
+#: src/widgets/groupmanagementwidget.cpp:67
 #, kde-format
 msgid "New Name:"
 msgstr "Νέο όνομα:"
 
-#: src/widgets/groupmanagementwidget.cpp:70
+#: src/widgets/groupmanagementwidget.cpp:72
 #, fuzzy, kde-format
 #| msgid "Impossible to rename group as '%1'"
 msgid "Impossible to rename group as '%1'."
 msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:86
+#: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Rename Group"
 msgid "Rename Group..."
 msgstr "Μετονομασία ομάδας"
 
-#: src/widgets/groupmanagementwidget.cpp:90
+#: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgid "Export Group..."
 msgstr ""
 
-#: src/widgets/groupmanagementwidget.cpp:95
+#: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
 msgid "Remove Groups"
 msgstr "Αφαίρεση ομάδων"
 
-#: src/widgets/groupmanagementwidget.cpp:100
+#: src/widgets/groupmanagementwidget.cpp:102
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Αδυναμία αφαίρεσης του '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:100
+#: src/widgets/groupmanagementwidget.cpp:102
 #, kde-format
 msgid "Remove Group"
 msgstr "Αφαίρεση ομάδας"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:21
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
 msgid "Enable All Debug"
 msgstr "Ενεργοποίηση όλης της αποσφαλμάτωσης"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:22
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
 msgid "Turn Off Debug"
 msgstr "Απενεργοποίηση αποσφαλμάτωσης"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:25
 #, kde-format
 msgid "Turn Off All Messages"
 msgstr "Απενεργοποίηση όλων των μηνυμάτων"
 
-#: src/widgets/kdebugsettingsdialog.cpp:63
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "KDE Application"
 msgstr "Εφαρμογή του KDE"
 
-#: src/widgets/kdebugsettingsdialog.cpp:64
+#: src/widgets/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Custom Rules"
 msgstr "Προσαρμοσμένο κανόνες"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:67
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Ρυθμίσεις κανόνων με Μεταβλητή Περιβάλλοντος"
 
-#: src/widgets/kdebugsettingsdialog.cpp:74 src/widgets/savetoolbutton.cpp:15
+#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
 msgstr "Αποθήκευση ως..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:87
+#: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert..."
 msgstr "Εισαγωγή..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:154
+#: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' δεν μπορεί να ανοιχτεί.Παρακαλώ επαληθεύστε το."
 
-#: src/widgets/kdebugsettingsdialog.cpp:180
-#: src/widgets/kdebugsettingsdialog.cpp:194
+#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "Εισαγωγή Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:182
 #, kde-format
 msgid "Categories Files"
 msgstr "Αρχεία Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:194
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Οι κατηγορίες από το αρχείο '%1' εισήχθησαν."
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Group Name"
 msgstr "Όνομα ομάδας"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Name:"
 msgstr "Όνομα:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:207
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, fuzzy, kde-format
 #| msgid ""
 #| "'%1' is already used as a group name.\n"
@@ -420,43 +420,43 @@ msgstr ""
 "Το '%1' χρησιμοποιείται ήδη ως όνομα ομάδας.\n"
 "Αποθηκεύστε με άλλο όνομα."
 
-#: src/widgets/kdebugsettingsdialog.cpp:216
+#: src/widgets/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Αδυναμία αποθήκευσης με κενό όνομα. Χρησιμοποιήστε ένα νέο."
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:225
 #, kde-format
 msgid "Save As"
 msgstr "Αποθήκευση ως"
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:233
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Αρχείο KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:233
 #, kde-format
 msgid "Load Debug Settings Files"
 msgstr "Φόρτωση αρχείων ρύθμισης αποσφαλμάτωσης"
 
-#: src/widgets/loadgroupmenu.cpp:19
+#: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
 msgid "Load Group"
 msgstr "Φόρτωση ομάδας"
 
-#: src/widgets/loadgroupmenu.cpp:68
+#: src/widgets/loadgroupmenu.cpp:70
 #, kde-format
 msgid "Manage Group"
 msgstr "Διαχείριση ομάδας"
 
-#: src/widgets/loadtoolbutton.cpp:17
+#: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load..."
 msgstr "Φόρτωση..."
 
-#: src/widgets/loadtoolbutton.cpp:21
+#: src/widgets/loadtoolbutton.cpp:23
 #, kde-format
 msgid "Load From File..."
 msgstr "Φόρτωση από αρχείο..."
