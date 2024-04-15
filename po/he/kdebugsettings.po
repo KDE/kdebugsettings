@@ -1,0 +1,452 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kdebugsettings package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebugsettings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-04-05 00:40+0000\n"
+"PO-Revision-Date: 2024-04-14 17:48+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: src/apps/main.cpp:27 src/quickapps/main.cpp:36
+#, kde-format
+msgid "KDebugSettings"
+msgstr ""
+
+#: src/apps/main.cpp:29 src/quickapps/main.cpp:38
+#, kde-format
+msgid "Configure debug settings"
+msgstr ""
+
+#: src/apps/main.cpp:31
+#, kde-format
+msgid "(c) 2015-%1 kdebugsettings authors"
+msgstr ""
+
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
+#, kde-format
+msgid "Laurent Montel"
+msgstr ""
+
+#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
+#, kde-format
+msgid ""
+"Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
+msgstr ""
+
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
+#, kde-format
+msgid "Activate full debug for all modules."
+msgstr ""
+
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
+#, kde-format
+msgid "Disable full debug for all modules."
+msgstr ""
+
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#, kde-format
+msgid "Change debug mode as console (in console)"
+msgstr ""
+
+#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#, kde-format
+msgid ""
+"Specify logging category name that you want to change debug mode (in console)"
+msgstr ""
+
+#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
+#: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
+#: src/quickapps/main.cpp:94
+#, kde-format
+msgid "Impossible to change debug mode"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:409
+#, kde-format
+msgid "Full Debug"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:412
+#, kde-format
+msgid "Info"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:415
+#, kde-format
+msgid "Warning"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:418
+#, kde-format
+msgid "Critical"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:421
+#, kde-format
+msgid "Off"
+msgstr ""
+
+#: src/core/kdebugsettingsutil.cpp:424 src/core/loggingcategory.cpp:146
+#, kde-format
+msgid "Undefined"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:115
+#, kde-format
+msgid "Category name: %1"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:117
+#, kde-format
+msgid "Identifier: %1"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:119
+#, kde-format
+msgid "Default Severity: %1"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:128
+#, kde-format
+msgid "All Debug Messages"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:131
+#, kde-format
+msgid "Info Messages"
+msgstr "הודעות פירוט"
+
+#: src/core/loggingcategory.cpp:134
+#, kde-format
+msgid "Warning Messages"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:137
+#, kde-format
+msgid "Debug Messages"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:140
+#, kde-format
+msgid "Critical Messages"
+msgstr ""
+
+#: src/core/loggingcategory.cpp:143
+#, kde-format
+msgid "No Debug Messages"
+msgstr ""
+
+#: src/quickapps/main.cpp:40
+#, kde-format
+msgid "(c) %1 kdebugsettings authors"
+msgstr "(c) %1 יוצרי kdebugsettings"
+
+#: src/widgets/categorywarning.cpp:16
+#, kde-format
+msgid ""
+"A custom rule '*=true' or '*=false' is present, which may override more "
+"specific rules. It is better to remove it."
+msgstr ""
+
+#: src/widgets/configurecustomsettingdialog.cpp:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Add custom rule"
+msgstr "הוספת כלל מותאם אישית"
+
+#: src/widgets/configurecustomsettingdialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit custom rule"
+msgstr "עריכת כלל מותאם אישית"
+
+#: src/widgets/configurecustomsettingwidget.cpp:23
+#, kde-format
+msgid "Enable"
+msgstr "הפעלה"
+
+#: src/widgets/configurecustomsettingwidget.cpp:28
+#, kde-format
+msgid "Category:"
+msgstr "קטגוריה:"
+
+#: src/widgets/configurecustomsettingwidget.cpp:39
+#, kde-format
+msgid "Type:"
+msgstr "סוג:"
+
+#: src/widgets/customdebuglistview.cpp:44
+#, kde-format
+msgid "Add Rule..."
+msgstr "הוספת כלל…"
+
+#: src/widgets/customdebuglistview.cpp:46
+#, kde-format
+msgid "Edit Rule"
+msgstr "עריכת כלל"
+
+#: src/widgets/customdebuglistview.cpp:52
+#: src/widgets/customdebuglistview.cpp:90
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/widgets/customdebuglistview.cpp:85
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these %1 rules?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/widgets/customdebugsettingspage.cpp:23
+#, kde-format
+msgid "Edit..."
+msgstr "עריכה…"
+
+#: src/widgets/customdebugsettingspage.cpp:24
+#, kde-format
+msgid "Remove..."
+msgstr "הסרה…"
+
+#: src/widgets/customdebugsettingspage.cpp:40
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:33
+#, kde-format
+msgid "Search..."
+msgstr "חיפוש…"
+
+#: src/widgets/customdebugsettingspage.cpp:48
+#, kde-format
+msgid "Add..."
+msgstr "הוספה…"
+
+#: src/widgets/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr "לא הוגדרו כללים במשתנה הסביבתי „QT_LOGGING_RULES”."
+
+#: src/widgets/environmentsettingsrulespage.cpp:31
+#, kde-format
+msgid ""
+"These rules cannot be edited with this application. You need to set them in "
+"QT_LOGGING_RULES variable directly."
+msgstr ""
+"אי אפשר לערוך את הכללים האלה עם היישום הזה. צריך להגדיר אותם במשתנה "
+"QT_LOGGING_RULES ישירות."
+
+#: src/widgets/environmentsettingsrulespage.cpp:33
+#, kde-format
+msgid "Current rules:"
+msgstr "כללים נוכחיים:"
+
+#: src/widgets/groupmanagementdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Group"
+msgstr "ניהול קבוצה"
+
+#: src/widgets/groupmanagementwidget.cpp:49
+#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
+#, kde-format
+msgid "Export Group"
+msgstr "ייצוא קבוצה"
+
+#: src/widgets/groupmanagementwidget.cpp:52
+#, kde-format
+msgid "Group exported to %1"
+msgstr "הקבוצה יוצאה אל %1"
+
+#: src/widgets/groupmanagementwidget.cpp:54
+#, kde-format
+msgid "Impossible to export group '%2' to '%1'"
+msgstr "אי אפשר לייצא את הקבוצה ‚%2’ אל ‚%1’."
+
+#: src/widgets/groupmanagementwidget.cpp:67
+#: src/widgets/groupmanagementwidget.cpp:72
+#, kde-format
+msgid "Rename Group"
+msgstr "שינוי שם הקבוצה"
+
+#: src/widgets/groupmanagementwidget.cpp:67
+#, kde-format
+msgid "New Name:"
+msgstr "שם חדש:"
+
+#: src/widgets/groupmanagementwidget.cpp:72
+#, kde-format
+msgid "Impossible to rename group as '%1'."
+msgstr "אי אפשר לשנות את השם הקבוצה לשם ‚%1’."
+
+#: src/widgets/groupmanagementwidget.cpp:88
+#, kde-format
+msgid "Rename Group..."
+msgstr "שינוי שם קבוצה…"
+
+#: src/widgets/groupmanagementwidget.cpp:92
+#, kde-format
+msgid "Export Group..."
+msgstr "ייצוא קבוצה…"
+
+#: src/widgets/groupmanagementwidget.cpp:97
+#, kde-format
+msgid "Remove Groups"
+msgstr "הסרת קבוצות"
+
+#: src/widgets/groupmanagementwidget.cpp:102
+#, kde-format
+msgid "Impossible to remove '%1'"
+msgstr "אי אפשר להסיר את ‚%1’"
+
+#: src/widgets/groupmanagementwidget.cpp:102
+#, kde-format
+msgid "Remove Group"
+msgstr "הסרת קבוצה"
+
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
+#, kde-format
+msgid "Enable All Debug"
+msgstr "הפעלת כל ניפוי השגיאות"
+
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:24
+#, kde-format
+msgid "Turn Off Debug"
+msgstr "כיבוי ניפוי השגיאות"
+
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:25
+#, kde-format
+msgid "Turn Off All Messages"
+msgstr "כיבוי כל ההודעות"
+
+#: src/widgets/kdebugsettingsdialog.cpp:65
+#, kde-format
+msgid "KDE Application"
+msgstr "יישום KDE"
+
+#: src/widgets/kdebugsettingsdialog.cpp:66
+#, kde-format
+msgid "Custom Rules"
+msgstr "כללים מותאמים אישית"
+
+#: src/widgets/kdebugsettingsdialog.cpp:67
+#, kde-format
+msgid "Rules Settings With Environment Variable"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
+#, kde-format
+msgid "Save As..."
+msgstr "שמירה בשם…"
+
+#: src/widgets/kdebugsettingsdialog.cpp:89
+#, kde-format
+msgid "Insert..."
+msgstr "הוספה…"
+
+#: src/widgets/kdebugsettingsdialog.cpp:156
+#, kde-format
+msgid "'%1' cannot be opened. Please verify it."
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, kde-format
+msgid "Insert Categories"
+msgstr "הוספת קטגוריות"
+
+#: src/widgets/kdebugsettingsdialog.cpp:182
+#, kde-format
+msgid "Categories Files"
+msgstr "קובצי קטגוריות"
+
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, kde-format
+msgid "Categories from file '%1' inserted."
+msgstr "נוספו קטגוריות מהקובץ ‚%1’."
+
+#: src/widgets/kdebugsettingsdialog.cpp:204
+#, kde-format
+msgid "Group Name"
+msgstr "שם הקבוצה"
+
+#: src/widgets/kdebugsettingsdialog.cpp:204
+#, kde-format
+msgid "Name:"
+msgstr "שם:"
+
+#: src/widgets/kdebugsettingsdialog.cpp:209
+#, kde-format
+msgid ""
+"<b>'%1'</b> is already used as a group name.\n"
+"Please save as another name."
+msgstr ""
+"<b>‚%1’</b> כבר מכהן כשם של קבוצה.\n"
+"נא לשמור בשם אחר."
+
+#: src/widgets/kdebugsettingsdialog.cpp:218
+#, kde-format
+msgid "Can not save as empty name. Please use a new one."
+msgstr "אי אפשר לשמור כשם ריק. נא להשתמש בשם חדש."
+
+#: src/widgets/kdebugsettingsdialog.cpp:225
+#, kde-format
+msgid "Save As"
+msgstr "שמירה בשם"
+
+#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:233
+#, kde-format
+msgid "KDebugSettings File (*.kdebugsettingsrules)"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:233
+#, kde-format
+msgid "Load Debug Settings Files"
+msgstr "טעינת קובצי הגדרות ניפוי שגיאות"
+
+#: src/widgets/loadgroupmenu.cpp:21
+#, kde-format
+msgid "Load Group"
+msgstr "טעינת קבוצה"
+
+#: src/widgets/loadgroupmenu.cpp:70
+#, kde-format
+msgid "Manage Group"
+msgstr "ניהול קבוצה"
+
+#: src/widgets/loadtoolbutton.cpp:19
+#, kde-format
+msgid "Load..."
+msgstr "טעינה…"
+
+#: src/widgets/loadtoolbutton.cpp:23
+#, kde-format
+msgid "Load From File..."
+msgstr "טעינה מקובץ…"
+
+#: src/widgets/savetoolbutton.cpp:20
+#, kde-format
+msgid "Save As File..."
+msgstr "שמירת כקובץ…"
+
+#: src/widgets/savetoolbutton.cpp:23
+#, kde-format
+msgid "Save As Group..."
+msgstr "שמירה כקבוצה…"
