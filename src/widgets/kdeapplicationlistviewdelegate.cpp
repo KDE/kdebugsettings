@@ -19,7 +19,7 @@ QWidget *KDEApplicationListViewDelegate::createEditor(QWidget *parent, const QSt
 {
     auto *comboBox = new CategoryTypeComboBox(false, parent);
     auto *that = const_cast<KDEApplicationListViewDelegate *>(this);
-    connect(comboBox, &CategoryTypeComboBox::activated, this, [=]() {
+    connect(comboBox, &CategoryTypeComboBox::activated, this, [this, that]() {
         Q_EMIT that->commitData(mComboBox);
         Q_EMIT that->closeEditor(mComboBox);
     });
