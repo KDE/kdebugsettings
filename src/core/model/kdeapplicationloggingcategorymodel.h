@@ -44,7 +44,7 @@ public:
 
     [[nodiscard]] LoggingCategory::List loggingCategories() const;
 
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     void replaceCategories(const LoggingCategory::List &categories);
 
