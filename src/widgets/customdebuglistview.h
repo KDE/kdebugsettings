@@ -30,9 +30,9 @@ Q_SIGNALS:
     void updateButtonsRequested();
 
 private:
-    void slotEditRule(const QModelIndex &index);
-    void slotRemoveRules(const QModelIndexList &selectedIndexes);
-    void slotCustomContextMenuRequested(const QPoint &pos);
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotEditRule(const QModelIndex &index);
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotRemoveRules(const QModelIndexList &selectedIndexes);
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &pos);
     CustomLoggingCategoryModel *mCustomLoggingCategoryModel = nullptr;
     CustomLoggingCategoryProxyModel *const mCustomLoggingCategoryProxyModel;
 };

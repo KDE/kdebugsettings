@@ -26,7 +26,7 @@ Q_SIGNALS:
     void enableButton(bool state);
 
 private:
-    void slotTextChanged(const QString &);
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotTextChanged(const QString &);
 
     KLineEdit *const mCategoryLineEdit;
     QCheckBox *const mEnableCategory;

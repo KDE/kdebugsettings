@@ -28,7 +28,7 @@ Q_SIGNALS:
     void manageGroupRequested();
 
 private:
-    void init();
-    [[nodiscard]] QStringList defaultReadableGroupPath() const;
+    LIBKDEBUGSETTINGS_NO_EXPORT void init();
+    [[nodiscard]] LIBKDEBUGSETTINGS_NO_EXPORT QStringList defaultReadableGroupPath() const;
     QStringList mGroupNames;
 };

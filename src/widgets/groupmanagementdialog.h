@@ -22,7 +22,7 @@ Q_SIGNALS:
     void groupsChanged();
 
 private:
-    void writeConfig();
-    void readConfig();
+    LIBKDEBUGSETTINGS_NO_EXPORT void writeConfig();
+    LIBKDEBUGSETTINGS_NO_EXPORT void readConfig();
     GroupManagementWidget *const mGroupManagementWidget;
 };
