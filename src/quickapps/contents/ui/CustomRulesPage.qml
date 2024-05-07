@@ -33,12 +33,12 @@ Kirigami.ScrollablePage {
             id: contextMenu
             QQC2.MenuItem {
                 icon.name: "list-add"
-                text: i18nc("@action add custom rule", "Add Rule...")
+                text: i18nc("@action add custom rule", "Add Rule…")
                 onTriggered: {}
             }
             QQC2.MenuItem {
                 icon.name: "document-edit" // TODO fixit
-                text: i18nc("@action edit custom rule", "Edit Rule...")
+                text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {}
             }
             QQC2.MenuSeparator {}

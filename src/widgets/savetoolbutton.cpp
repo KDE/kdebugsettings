@@ -12,15 +12,15 @@
 SaveToolButton::SaveToolButton(QWidget *parent)
     : QToolButton(parent)
 {
-    setText(i18n("Save As..."));
+    setText(i18n("Save As…"));
     setPopupMode(QToolButton::InstantPopup);
     auto mainMenu = new QMenu(this);
     setMenu(mainMenu);
 
-    QAction *act = mainMenu->addAction(i18n("Save As File..."));
+    QAction *act = mainMenu->addAction(i18n("Save As File…"));
     connect(act, &QAction::triggered, this, &SaveToolButton::saveAsFile);
 
-    QAction *actGroup = mainMenu->addAction(i18n("Save As Group..."));
+    QAction *actGroup = mainMenu->addAction(i18n("Save As Group…"));
     connect(actGroup, &QAction::triggered, this, &SaveToolButton::saveAsGroup);
 }
 

@@ -16,11 +16,11 @@ LoadToolButton::LoadToolButton(QWidget *parent)
     , mLoadMenu(new LoadGroupMenu(this))
 {
     setPopupMode(QToolButton::InstantPopup);
-    setText(i18n("Load..."));
+    setText(i18n("Load…"));
     auto mainMenu = new QMenu(this);
     setMenu(mainMenu);
 
-    QAction *act = mainMenu->addAction(i18n("Load From File..."));
+    QAction *act = mainMenu->addAction(i18n("Load From File…"));
     connect(act, &QAction::triggered, this, &LoadToolButton::loadFromFile);
 
     mLoadMenu->setObjectName("loadMenu"_L1);
