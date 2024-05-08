@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:40+0000\n"
+"POT-Creation-Date: 2024-05-08 00:41+0000\n"
 "PO-Revision-Date: 2024-04-04 14:44+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -202,9 +202,10 @@ msgid "Type:"
 msgstr "Típus:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, kde-format
-msgid "Add Rule..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Edit custom rule"
+msgid "Add Rule…"
+msgstr "Saját szabály szerkesztése"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, fuzzy, kde-format
@@ -231,24 +232,26 @@ msgstr[1] "Szeretné eltávolítani ezt a szabályt: „%1”?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
-msgid "Edit..."
-msgstr "Szerkesztés…"
+msgid "Edit…"
+msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, kde-format
-msgid "Remove..."
+#, fuzzy, kde-format
+#| msgid "Remove..."
+msgid "Remove…"
 msgstr "Eltávolítás…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Keresés…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
-msgid "Add..."
-msgstr "Hozzáadás…"
+msgid "Add…"
+msgstr ""
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -313,12 +316,12 @@ msgstr ""
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Save As..."
-msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr "Mentés másként…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
-msgid "Export Group..."
+msgid "Export Group…"
 msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:97
@@ -367,13 +370,15 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Szabálybeállítások környezeti változóval"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, kde-format
-msgid "Save As..."
-msgstr "Mentés másként…"
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgid "Save As…"
+msgstr "Mentés másként"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, kde-format
-msgid "Insert..."
+#, fuzzy, kde-format
+#| msgid "Insert..."
+msgid "Insert…"
 msgstr "Beszúrás…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
@@ -447,33 +452,46 @@ msgid "Manage Group"
 msgstr "Csoport kezelése"
 
 #: src/widgets/loadtoolbutton.cpp:19
-#, kde-format
-msgid "Load..."
-msgstr "Betöltés…"
+#, fuzzy, kde-format
+#| msgid "Load"
+msgid "Load…"
+msgstr "Betöltés"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, kde-format
-msgid "Load From File..."
+#, fuzzy, kde-format
+#| msgid "Load From File..."
+msgid "Load From File…"
 msgstr "Betöltés fájlból…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, kde-format
-msgid "Save As File..."
+#, fuzzy, kde-format
+#| msgid "Save As File..."
+msgid "Save As File…"
 msgstr "Mentés fájlként…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, kde-format
-msgid "Save As Group..."
+#, fuzzy, kde-format
+#| msgid "Save As Group..."
+msgid "Save As Group…"
 msgstr "Mentés csoportként…"
+
+#~ msgid "Edit..."
+#~ msgstr "Szerkesztés…"
+
+#~ msgid "Add..."
+#~ msgstr "Hozzáadás…"
+
+#~ msgid "Save As..."
+#~ msgstr "Mentés másként…"
+
+#~ msgid "Load..."
+#~ msgstr "Betöltés…"
 
 #~ msgid "Rules:"
 #~ msgstr "Szabályok:"
 
 #~ msgid "All"
 #~ msgstr "Mind"
-
-#~ msgid "Load"
-#~ msgstr "Betöltés"
 
 #~ msgid "Select All"
 #~ msgstr "Összes kijelölése"

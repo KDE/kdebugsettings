@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:40+0000\n"
+"POT-Creation-Date: 2024-05-08 00:41+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -202,8 +202,9 @@ msgid "Type:"
 msgstr "Τύπος:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Προσθήκη κανόνα..."
 
 #: src/widgets/customdebuglistview.cpp:46
@@ -229,24 +230,26 @@ msgstr[1] "Επιθυμείτε πραγματικά την αφαίρεση τ�
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
-msgid "Edit..."
-msgstr "Επεξεργασία..."
+msgid "Edit…"
+msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, kde-format
-msgid "Remove..."
+#, fuzzy, kde-format
+#| msgid "Remove..."
+msgid "Remove…"
 msgstr "Αφαίρεση..."
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Αναζήτηση..."
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
-msgid "Add..."
-msgstr "Προσθήκη..."
+msgid "Add…"
+msgstr ""
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -314,13 +317,14 @@ msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Rename Group"
-msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr "Μετονομασία ομάδας"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, kde-format
-msgid "Export Group..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Load Group"
+msgid "Export Group…"
+msgstr "Φόρτωση ομάδας"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -368,13 +372,15 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Ρυθμίσεις κανόνων με Μεταβλητή Περιβάλλοντος"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, kde-format
-msgid "Save As..."
-msgstr "Αποθήκευση ως..."
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgid "Save As…"
+msgstr "Αποθήκευση ως"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, kde-format
-msgid "Insert..."
+#, fuzzy, kde-format
+#| msgid "Insert..."
+msgid "Insert…"
 msgstr "Εισαγωγή..."
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
@@ -453,23 +459,43 @@ msgstr "Διαχείριση ομάδας"
 
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
-msgid "Load..."
-msgstr "Φόρτωση..."
+msgid "Load…"
+msgstr ""
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, kde-format
-msgid "Load From File..."
+#, fuzzy, kde-format
+#| msgid "Load From File..."
+msgid "Load From File…"
 msgstr "Φόρτωση από αρχείο..."
 
 #: src/widgets/savetoolbutton.cpp:20
-#, kde-format
-msgid "Save As File..."
+#, fuzzy, kde-format
+#| msgid "Save As File..."
+msgid "Save As File…"
 msgstr "Αποθήκευση ως αρχείο..."
 
 #: src/widgets/savetoolbutton.cpp:23
-#, kde-format
-msgid "Save As Group..."
+#, fuzzy, kde-format
+#| msgid "Save As Group..."
+msgid "Save As Group…"
 msgstr "Αποθήκευση ως ομάδα..."
+
+#~ msgid "Edit..."
+#~ msgstr "Επεξεργασία..."
+
+#~ msgid "Add..."
+#~ msgstr "Προσθήκη..."
+
+#, fuzzy
+#~| msgid "Rename Group"
+#~ msgid "Rename Group..."
+#~ msgstr "Μετονομασία ομάδας"
+
+#~ msgid "Save As..."
+#~ msgstr "Αποθήκευση ως..."
+
+#~ msgid "Load..."
+#~ msgstr "Φόρτωση..."
 
 #~ msgid "Rules:"
 #~ msgstr "Κανόνες:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:40+0000\n"
+"POT-Creation-Date: 2024-05-08 00:41+0000\n"
 "PO-Revision-Date: 2024-05-05 12:03+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -196,8 +196,9 @@ msgid "Type:"
 msgstr "סוג:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "הוספת כלל…"
 
 #: src/widgets/customdebuglistview.cpp:46
@@ -226,24 +227,26 @@ msgstr[3] "להסיר את %1 הכללים האלה?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
-msgid "Edit..."
-msgstr "עריכה…"
+msgid "Edit…"
+msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, kde-format
-msgid "Remove..."
+#, fuzzy, kde-format
+#| msgid "Remove..."
+msgid "Remove…"
 msgstr "הסרה…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "חיפוש…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
-msgid "Add..."
-msgstr "הוספה…"
+msgid "Add…"
+msgstr ""
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -305,14 +308,16 @@ msgid "Impossible to rename group as '%1'."
 msgstr "אי אפשר לשנות את השם הקבוצה לשם ‚%1’."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, kde-format
-msgid "Rename Group..."
-msgstr "שינוי שם קבוצה…"
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgid "Rename Group…"
+msgstr "שינוי שם הקבוצה"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, kde-format
-msgid "Export Group..."
-msgstr "ייצוא קבוצה…"
+#, fuzzy, kde-format
+#| msgid "Export Group"
+msgid "Export Group…"
+msgstr "ייצוא קבוצה"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -360,13 +365,15 @@ msgid "Rules Settings With Environment Variable"
 msgstr "הגדרות כללים עם משתנה סביבה"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, kde-format
-msgid "Save As..."
-msgstr "שמירה בשם…"
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgid "Save As…"
+msgstr "שמירה בשם"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, kde-format
-msgid "Insert..."
+#, fuzzy, kde-format
+#| msgid "Insert..."
+msgid "Insert…"
 msgstr "הוספה…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
@@ -442,20 +449,41 @@ msgstr "ניהול קבוצה"
 
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
-msgid "Load..."
-msgstr "טעינה…"
+msgid "Load…"
+msgstr ""
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, kde-format
-msgid "Load From File..."
+#, fuzzy, kde-format
+#| msgid "Load From File..."
+msgid "Load From File…"
 msgstr "טעינה מקובץ…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, kde-format
-msgid "Save As File..."
+#, fuzzy, kde-format
+#| msgid "Save As File..."
+msgid "Save As File…"
 msgstr "שמירת כקובץ…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, kde-format
-msgid "Save As Group..."
+#, fuzzy, kde-format
+#| msgid "Save As Group..."
+msgid "Save As Group…"
 msgstr "שמירה כקבוצה…"
+
+#~ msgid "Edit..."
+#~ msgstr "עריכה…"
+
+#~ msgid "Add..."
+#~ msgstr "הוספה…"
+
+#~ msgid "Rename Group..."
+#~ msgstr "שינוי שם קבוצה…"
+
+#~ msgid "Export Group..."
+#~ msgstr "ייצוא קבוצה…"
+
+#~ msgid "Save As..."
+#~ msgstr "שמירה בשם…"
+
+#~ msgid "Load..."
+#~ msgstr "טעינה…"
