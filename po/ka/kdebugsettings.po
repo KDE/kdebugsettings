@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:41+0000\n"
-"PO-Revision-Date: 2024-03-06 05:49+0100\n"
+"PO-Revision-Date: 2024-05-08 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -198,10 +198,9 @@ msgid "Type:"
 msgstr "ტიპი:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "წესის დამატება..."
+msgstr "წესის დამატება…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -226,25 +225,23 @@ msgstr[1] "გსურთ %1 წესის წაშლა?"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "ჩასწორება…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "წაშლა..."
+msgstr "წაშლა…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "ძებნა..."
+msgstr "ძებნა…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "დამატება…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -306,16 +303,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "ჯგუფის სახელის '%1'-ზე გადარქმევის შეცდომა."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "ჯგუფის სახელის გადარქემვა"
+msgstr "ჯგუფის სახელის გადარქმევა…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "ჯგუფის გატანა"
+msgstr "ჯგუფის გატანა…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -363,16 +358,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr "წესების დაყენება გარემოს ცვლადით"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "შენახვა როგორც"
+msgstr "შენახვა, როგორც…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "ჩასმა..."
+msgstr "ჩასმა…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -448,25 +441,22 @@ msgstr "ჯგუფის მართვა"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "ჩატვირთვა…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "ფაილიდან ჩატვირთვა..."
+msgstr "ფაილიდან ჩატვირთვა…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "ფაილად შენახვა..."
+msgstr "ფაილად შენახვა…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "ჯგუფად შენახვა..."
+msgstr "ჯგუფად შენახვა…"
 
 #~ msgid "Edit..."
 #~ msgstr "ჩასწორება..."

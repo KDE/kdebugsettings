@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:41+0000\n"
-"PO-Revision-Date: 2024-03-08 03:31+0900\n"
+"PO-Revision-Date: 2024-05-09 07:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -196,10 +196,9 @@ msgid "Type:"
 msgstr "型態："
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "新增規則..."
+msgstr "新增規則…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -222,25 +221,23 @@ msgstr[0] "您確定要移除規則「%1」嗎？"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "編輯…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "移除..."
+msgstr "移除…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "搜尋..."
+msgstr "搜尋…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "新增…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -300,16 +297,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "無法重新命名群組為 '%1'。"
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "重新命名群組"
+msgstr "重新命名群組…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "匯出群組"
+msgstr "匯出群組…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -357,16 +352,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr "用環境變數設定的規則"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "另存為"
+msgstr "另存為…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "插入..."
+msgstr "插入…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -442,25 +435,22 @@ msgstr "管理群組"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "載入…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "從檔案載入..."
+msgstr "從檔案載入…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "另存為檔案..."
+msgstr "另存為檔案…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "另存為群組..."
+msgstr "另存為群組…"
 
 #~ msgid "Edit..."
 #~ msgstr "編輯..."

@@ -193,10 +193,9 @@ msgid "Type:"
 msgstr "类型："
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "添加规则..."
+msgstr ""
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -222,17 +221,15 @@ msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "删除..."
+msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "搜索..."
+msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
@@ -299,16 +296,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "无法将分组重命名为“%1”。"
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "重命名分组"
+msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "导出分组"
+msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -356,16 +351,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr "环境变量和规则设置"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "另存为"
+msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "插入..."
+msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -444,37 +437,16 @@ msgid "Load…"
 msgstr ""
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "从文件加载…"
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "保存为文件…"
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "保存到分组…"
-
-#~ msgid "Edit..."
-#~ msgstr "编辑..."
-
-#~ msgid "Add..."
-#~ msgstr "添加..."
-
-#~ msgid "Rename Group..."
-#~ msgstr "重命名分组..."
-
-#~ msgid "Export Group..."
-#~ msgstr "导出分组..."
-
-#~ msgid "Save As..."
-#~ msgstr "另存为..."
-
-#~ msgid "Load..."
-#~ msgstr "加载..."
+msgstr ""

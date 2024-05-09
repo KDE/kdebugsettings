@@ -472,21 +472,3 @@ msgstr "Lagra som fil …"
 #| msgid "Save As Group..."
 msgid "Save As Group…"
 msgstr "Lagra som gruppe …"
-
-#~ msgid "Edit..."
-#~ msgstr "Rediger …"
-
-#~ msgid "Add..."
-#~ msgstr "Legg til …"
-
-#~ msgid "Rename Group..."
-#~ msgstr "Endra namn på gruppe …"
-
-#~ msgid "Export Group..."
-#~ msgstr "Eksporter gruppe …"
-
-#~ msgid "Save As..."
-#~ msgstr "Lagra som …"
-
-#~ msgid "Load..."
-#~ msgstr "Last inn …"
