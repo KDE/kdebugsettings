@@ -195,7 +195,7 @@ msgstr "类型："
 #: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Add Rule…"
-msgstr ""
+msgstr "新建规则…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -218,23 +218,23 @@ msgstr[0] "您是否要删除这%1条规则？"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "编辑…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
 msgid "Remove…"
-msgstr ""
+msgstr "移除…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "搜索…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "添加…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -298,12 +298,12 @@ msgstr "无法将分组重命名为“%1”。"
 #: src/widgets/groupmanagementwidget.cpp:88
 #, kde-format
 msgid "Rename Group…"
-msgstr ""
+msgstr "重命名分组…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgid "Export Group…"
-msgstr ""
+msgstr "导出分组…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -353,12 +353,12 @@ msgstr "环境变量和规则设置"
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As…"
-msgstr ""
+msgstr "另存为…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert…"
-msgstr ""
+msgstr "插入…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -434,19 +434,19 @@ msgstr "管理分组"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "加载…"
 
 #: src/widgets/loadtoolbutton.cpp:23
 #, kde-format
 msgid "Load From File…"
-msgstr ""
+msgstr "加载文件…"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, kde-format
 msgid "Save As File…"
-msgstr ""
+msgstr "另存为文件…"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, kde-format
 msgid "Save As Group…"
-msgstr ""
+msgstr "另存为分组…"

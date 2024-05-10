@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:41+0000\n"
-"PO-Revision-Date: 2024-03-09 09:22+0100\n"
+"PO-Revision-Date: 2024-05-09 22:01+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -198,10 +198,9 @@ msgid "Type:"
 msgstr "Tipo:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Aldoni regulon..."
+msgstr "Aldoni regulon…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -226,25 +225,23 @@ msgstr[1] "Ĉu vi volas forigi ĉi %1 regulojn?"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Redakti…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "Forigi..."
+msgstr "Forigi…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Serĉi..."
+msgstr "Serĉi…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -307,16 +304,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Neeble renomi grupon kiel '%1'."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "Alinomigi Grupon"
+msgstr "Alinomi Grupon…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "Eksporta Grupo"
+msgstr "Elporti Grupon…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -364,16 +359,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Reguloj Agordoj Kun Media Variablo"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Konservi kiel"
+msgstr "Konservi kiel…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "Enigi..."
+msgstr "Enmeti…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -449,40 +442,19 @@ msgstr "Administri Grupon"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "Ŝargi…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "Ŝargi el dosiero..."
+msgstr "Ŝargi El Dosiero…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "Konservi kiel dosiero..."
+msgstr "Konservi Kiel Dosiero…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "Konservi kiel grupo..."
-
-#~ msgid "Edit..."
-#~ msgstr "Redakti..."
-
-#~ msgid "Add..."
-#~ msgstr "Aldoni..."
-
-#~ msgid "Rename Group..."
-#~ msgstr "Alinomi grupon..."
-
-#~ msgid "Export Group..."
-#~ msgstr "Eksporta Grupo..."
-
-#~ msgid "Save As..."
-#~ msgstr "Konservi kiel..."
-
-#~ msgid "Load..."
-#~ msgstr "Ŝargi..."
+msgstr "Konservi kiel grupo…"

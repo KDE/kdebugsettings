@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:41+0000\n"
-"PO-Revision-Date: 2024-03-06 10:15+0100\n"
+"PO-Revision-Date: 2024-05-08 16:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -201,10 +201,9 @@ msgid "Type:"
 msgstr "Tipus:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Afig una regla..."
+msgstr "Afig una regla…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -229,25 +228,23 @@ msgstr[1] "Voleu eliminar estes %1 regles?"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Edita…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "Elimina..."
+msgstr "Elimina…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Afig…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -309,16 +306,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Impossible canviar el nom del grup com a «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "Canvia el nom del grup"
+msgstr "Canvia el nom del grup…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "Exporta un grup"
+msgstr "Exporta un grup…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -366,16 +361,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Paràmetres de regles amb variables d'entorn"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Anomena i guarda"
+msgstr "Anomena i guarda…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "Inserix..."
+msgstr "Inserix…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -451,40 +444,19 @@ msgstr "Gestiona el grup"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "Carrega…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "Carrega des d'un fitxer..."
+msgstr "Carrega des d'un fitxer…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "Anomena i guarda fitxer..."
+msgstr "Anomena i guarda com a fitxer…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "Anomena i guarda grup..."
-
-#~ msgid "Edit..."
-#~ msgstr "Edita..."
-
-#~ msgid "Add..."
-#~ msgstr "Afig..."
-
-#~ msgid "Rename Group..."
-#~ msgstr "Canvia el nom del grup..."
-
-#~ msgid "Export Group..."
-#~ msgstr "Exporta un grup..."
-
-#~ msgid "Save As..."
-#~ msgstr "Anomena i guarda..."
-
-#~ msgid "Load..."
-#~ msgstr "Carrega..."
+msgstr "Anomena i guarda com a grup…"
