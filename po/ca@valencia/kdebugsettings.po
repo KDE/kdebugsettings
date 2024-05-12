@@ -203,7 +203,7 @@ msgstr "Tipus:"
 #: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Add Rule..."
-msgstr "Afig una regla..."
+msgstr "Afig una regla…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -228,23 +228,23 @@ msgstr[1] "Voleu eliminar estes %1 regles?"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit..."
-msgstr "Edita..."
+msgstr "Edita…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
 msgid "Remove..."
-msgstr "Elimina..."
+msgstr "Elimina…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
 #, kde-format
 msgid "Search..."
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add..."
-msgstr "Afig..."
+msgstr "Afig…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -308,12 +308,12 @@ msgstr "Impossible canviar el nom del grup com a «%1»."
 #: src/widgets/groupmanagementwidget.cpp:88
 #, kde-format
 msgid "Rename Group..."
-msgstr "Canvia el nom del grup..."
+msgstr "Canvia el nom del grup…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgid "Export Group..."
-msgstr "Exporta un grup..."
+msgstr "Exporta un grup…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -363,12 +363,12 @@ msgstr "Paràmetres de regles amb variables d'entorn"
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As..."
-msgstr "Anomena i guarda..."
+msgstr "Anomena i guarda…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert..."
-msgstr "Inserix..."
+msgstr "Inserix…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -444,19 +444,19 @@ msgstr "Gestiona el grup"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load..."
-msgstr "Carrega..."
+msgstr "Carrega…"
 
 #: src/widgets/loadtoolbutton.cpp:23
 #, kde-format
 msgid "Load From File..."
-msgstr "Carrega des d'un fitxer..."
+msgstr "Carrega des d'un fitxer…"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, kde-format
 msgid "Save As File..."
-msgstr "Anomena i guarda fitxer..."
+msgstr "Anomena i guarda com a fitxer…"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, kde-format
 msgid "Save As Group..."
-msgstr "Anomena i guarda grup..."
+msgstr "Anomena i guarda com a grup…"
