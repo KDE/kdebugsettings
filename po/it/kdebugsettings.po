@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:41+0000\n"
-"PO-Revision-Date: 2024-03-07 12:01+0100\n"
+"PO-Revision-Date: 2024-05-09 10:08+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -198,10 +198,9 @@ msgid "Type:"
 msgstr "Tipo:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Aggiungi regola..."
+msgstr "Aggiungi regola…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -226,25 +225,23 @@ msgstr[1] "Vuoi rimuovere queste %1 regole?"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Modifica…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "Rimuovi..."
+msgstr "Rimuovi…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Cerca..."
+msgstr "Cerca…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Aggiungi…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -308,16 +305,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Impossible rinominare il gruppo come «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "Rinomina gruppo"
+msgstr "Rinomina gruppo…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "Esporta gruppo"
+msgstr "Esporta gruppo…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -365,16 +360,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Impostazioni regole con variabile d'ambiente"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Salva come"
+msgstr "Salva come…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "Inserisci..."
+msgstr "Inserisci…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -448,28 +441,24 @@ msgid "Manage Group"
 msgstr "Gestisci gruppo"
 
 #: src/widgets/loadtoolbutton.cpp:19
-#, fuzzy, kde-format
-#| msgid "Load"
+#, kde-format
 msgid "Load…"
-msgstr "Carica"
+msgstr "Carica…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "Carica da file..."
+msgstr "Carica da file…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "Salva come file..."
+msgstr "Salva come file…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "Salva come gruppo..."
+msgstr "Salva come gruppo…"
 
 #~ msgid "Edit..."
 #~ msgstr "Modifica..."
