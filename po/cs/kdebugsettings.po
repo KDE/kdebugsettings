@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:41+0000\n"
+"POT-Creation-Date: 2024-05-16 00:41+0000\n"
 "PO-Revision-Date: 2023-06-30 21:48+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,9 @@ msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 autoři kdebugsettings"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -192,10 +194,9 @@ msgid "Type:"
 msgstr "Typ:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Přidat pravidlo..."
+msgstr ""
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -222,25 +223,23 @@ msgstr[2] "Chcete odstranit těchto %1 pravidel?"
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Upravit…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove…"
-msgstr "Odstranit..."
+msgstr "Odstranit…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Hledat..."
+msgstr "Hledat…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -300,16 +299,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Skupinu nelze přejmenovat jako '%1'."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "Přejmenovat skupinu"
+msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "Exportovat skupinu"
+msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -357,16 +354,14 @@ msgid "Rules Settings With Environment Variable"
 msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Uložit jako"
+msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgid "Insert…"
-msgstr "Vložit..."
+msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -445,37 +440,16 @@ msgid "Load…"
 msgstr ""
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
-msgstr "Načíst ze souboru..."
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "Uložit jako soubor..."
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "Uložit jako skupinu..."
-
-#~ msgid "Edit..."
-#~ msgstr "Upravit..."
-
-#~ msgid "Add..."
-#~ msgstr "Přidat..."
-
-#~ msgid "Rename Group..."
-#~ msgstr "Přejmenovat skupinu..."
-
-#~ msgid "Export Group..."
-#~ msgstr "Exportovat skupinu..."
-
-#~ msgid "Save As..."
-#~ msgstr "Uložit jako..."
-
-#~ msgid "Load..."
-#~ msgstr "Načíst..."
+msgstr ""
