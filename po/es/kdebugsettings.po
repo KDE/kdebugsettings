@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:40+0000\n"
-"PO-Revision-Date: 2024-03-06 17:44+0100\n"
+"PO-Revision-Date: 2024-05-16 12:20+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -372,7 +372,7 @@ msgstr "Insertar..."
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr "No se puede abrir «%1». Por favor, compruébelo."
+msgstr "No se puede abrir «%1». Compruébelo."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
 #: src/widgets/kdebugsettingsdialog.cpp:196
