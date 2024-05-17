@@ -33,8 +33,7 @@ msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings authors"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:41
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"

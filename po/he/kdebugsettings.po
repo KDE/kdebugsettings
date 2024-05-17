@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:41+0000\n"
-"PO-Revision-Date: 2024-05-08 09:20+0300\n"
+"PO-Revision-Date: 2024-05-16 06:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -34,8 +34,7 @@ msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015‏-%1 יוצרי kdebugsettings"
 
 #: src/apps/main.cpp:32 src/quickapps/main.cpp:41
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
