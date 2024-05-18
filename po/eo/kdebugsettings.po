@@ -1,15 +1,15 @@
-# translation of kdebugsettings._desktop_.pot to esperanto
+# translation of kdebugsettings.pot to esperanto
 # Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kdebugsettings package.
-# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:40+0000\n"
-"PO-Revision-Date: 2024-03-09 09:22+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -371,7 +371,7 @@ msgstr "Enigi..."
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr "'%1' ne povas esti malfermita. Bonvolu kontroli ĝin."
+msgstr "'%1' ne povas esti malfermita. Bonvolu konfirmi ĝin."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
 #: src/widgets/kdebugsettingsdialog.cpp:196
@@ -432,7 +432,7 @@ msgstr "Ŝargi Dosierojn pri Sencimigaj Agordoj"
 #: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
 msgid "Load Group"
-msgstr "Ŝarĝo Grupo"
+msgstr "Ŝargi Grupon"
 
 #: src/widgets/loadgroupmenu.cpp:70
 #, kde-format
