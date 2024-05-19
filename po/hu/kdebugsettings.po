@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:40+0000\n"
-"PO-Revision-Date: 2024-04-04 14:44+0200\n"
+"PO-Revision-Date: 2024-05-18 21:06+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -48,34 +48,38 @@ msgstr "Karbantartó"
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
+"A QStandardPaths teszt mód bekapcsolása, például az egységtesztek olvasási/"
+"írási beállításaihoz"
 
 #: src/apps/main.cpp:42 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
-msgstr ""
+msgstr "Teljes hibakeresés aktiválása minden modulban."
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
-msgstr ""
+msgstr "Teljes hibakeresés kikapcsolása minden modulban."
 
 #: src/apps/main.cpp:48 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
-msgstr ""
+msgstr "Hibakeresési mód megváltoztatása konzolként (konzolban)"
 
 #: src/apps/main.cpp:52 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
+"Adja meg a naplózási kategória nevét, amelynek a hibakeresési módját "
+"módosítani szeretné (konzolban)"
 
 #: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
 msgid "Impossible to change debug mode"
-msgstr ""
+msgstr "Lehetetlen módosítani a hibakeresési módot"
 
 #: src/core/kdebugsettingsutil.cpp:409
 #, kde-format
@@ -120,71 +124,63 @@ msgstr "Azonosító: %1"
 #: src/core/loggingcategory.cpp:119
 #, kde-format
 msgid "Default Severity: %1"
-msgstr ""
+msgstr "Alapértelmezett súlyosság: %1"
 
 #: src/core/loggingcategory.cpp:128
 #, kde-format
 msgid "All Debug Messages"
-msgstr ""
+msgstr "Minden hibakeresési üzenet"
 
 #: src/core/loggingcategory.cpp:131
 #, kde-format
 msgid "Info Messages"
-msgstr ""
+msgstr "Információs üzenetek"
 
 #: src/core/loggingcategory.cpp:134
-#, fuzzy, kde-format
-#| msgid "Warning"
+#, kde-format
 msgid "Warning Messages"
-msgstr "Figyelmeztetés"
+msgstr "Figyelmeztető üzenetek"
 
 #: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Debug Messages"
-msgstr ""
+msgstr "Hibakeresési üzenetek"
 
 #: src/core/loggingcategory.cpp:140
-#, fuzzy, kde-format
-#| msgid "Critical"
+#, kde-format
 msgid "Critical Messages"
-msgstr "Kritikus"
+msgstr "Kritikus üzenetek"
 
 #: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "No Debug Messages"
-msgstr ""
+msgstr "Nincsenek hibakeresési üzenetek"
 
 #: src/quickapps/main.cpp:40
-#, fuzzy, kde-format
-#| msgid "(c) 2015 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "© A kdebugsettings szerzői, 2015."
+msgstr "© A kdebugsettings szerzői, %1."
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Van egy '*=true' vagy '*=false' szabálya, amely minden más szabályt "
-"felülbírál. Jobb, ha eltávolítja ezt."
+"Van egy '*=true' vagy '*=false' szabálya, amely felülbírálhat más specifikus "
+"szabályokat. Jobb, ha eltávolítja ezt."
 
 #: src/widgets/configurecustomsettingdialog.cpp:23
-#, fuzzy, kde-format
-#| msgid "Add custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add custom rule"
-msgstr "Saját szabály hozzáadása"
+msgstr "Egyéni szabály hozzáadása"
 
 #: src/widgets/configurecustomsettingdialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit custom rule"
-msgstr "Saját szabály szerkesztése"
+msgstr "Egyéni szabály szerkesztése"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
 #, kde-format
@@ -204,30 +200,27 @@ msgstr "Típus:"
 #: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Add Rule..."
-msgstr ""
+msgstr "Szabály hozzáadása…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgid "Edit Rule"
-msgstr "Saját szabály szerkesztése"
+msgstr "Szabály szerkesztése"
 
 #: src/widgets/customdebuglistview.cpp:52
 #: src/widgets/customdebuglistview.cpp:90
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Eltávolítás…"
-msgstr[1] "Eltávolítás…"
+msgstr[0] "Szabály eltávolítása"
+msgstr[1] "Szabályok eltávolítása"
 
 #: src/widgets/customdebuglistview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this rule \"%1\"?"
+#, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
-msgstr[0] "Szeretné eltávolítani ezt a szabályt: „%1”?"
-msgstr[1] "Szeretné eltávolítani ezt a szabályt: „%1”?"
+msgstr[0] "Szeretné eltávolítani ezt a szabályt?"
+msgstr[1] "Szeretné eltávolítani ezt a(z) %1 szabályt?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
@@ -266,90 +259,88 @@ msgstr ""
 "QT_LOGGING_RULES változóban kell megadnia ezeket."
 
 #: src/widgets/environmentsettingsrulespage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#, kde-format
 msgid "Current rules:"
-msgstr "Saját szabályok"
+msgstr "Jelenlegi szabályok:"
 
 #: src/widgets/groupmanagementdialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
-msgstr ""
+msgstr "Csoport kezelése"
 
 #: src/widgets/groupmanagementwidget.cpp:49
 #: src/widgets/groupmanagementwidget.cpp:52
 #: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Export Group"
-msgstr ""
+msgstr "Csoport exportálása"
 
 #: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Csoport exportálva mint: %1"
 
 #: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr ""
+msgstr "Lehetetlen exportálni a(z) „%2” csoportot ide: „%1”"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
 #, kde-format
 msgid "Rename Group"
-msgstr ""
+msgstr "Csoport átnevezése"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #, kde-format
 msgid "New Name:"
-msgstr ""
+msgstr "Új név:"
 
 #: src/widgets/groupmanagementwidget.cpp:72
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr ""
+msgstr "Lehetetlen átnevezni a csoportot mint „%1”."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgid "Rename Group..."
-msgstr "Mentés másként…"
+msgstr "Csoport átnevezése…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgid "Export Group..."
-msgstr ""
+msgstr "Csoport exportálása…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
 msgid "Remove Groups"
-msgstr ""
+msgstr "Csoportok eltávolítása"
 
 #: src/widgets/groupmanagementwidget.cpp:102
 #, kde-format
 msgid "Impossible to remove '%1'"
-msgstr ""
+msgstr "Lehetetlen eltávolítani ezt: „%1”."
 
 #: src/widgets/groupmanagementwidget.cpp:102
 #, kde-format
 msgid "Remove Group"
-msgstr ""
+msgstr "Csoport eltávolítása"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
 msgid "Enable All Debug"
-msgstr ""
+msgstr "Minden hibakeresés engedélyezése"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
 msgid "Turn Off Debug"
-msgstr ""
+msgstr "Hibakeresés kikapcsolása"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
 #, kde-format
 msgid "Turn Off All Messages"
-msgstr ""
+msgstr "Minden üzenet kikapcsolása"
 
 #: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
@@ -388,15 +379,14 @@ msgid "Insert Categories"
 msgstr "Kategóriák beszúrása"
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "Categories Files"
-msgstr "Kategóriák beszúrása"
+msgstr "Kategóriafájlok"
 
 #: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr ""
+msgstr "Kategóriák a(z) „%1” fájlból beszúrva."
 
 #: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
@@ -414,11 +404,13 @@ msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
+"A(z) <b>„%1”</b> csoportnév már foglalt.\n"
+"Kérjük, használjon másikat."
 
 #: src/widgets/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr ""
+msgstr "Nem lehet menteni üres névvel. Kérjük, adjon meg másikat."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
 #, kde-format
