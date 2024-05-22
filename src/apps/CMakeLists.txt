@@ -11,5 +11,7 @@ target_link_libraries(kdebugsettings
     KF6::DBusAddons
     libkdebugsettings
 )
-
+if(TARGET KF6::IconThemes)
+    target_link_libraries(kdebugsettings KF6::IconThemes)
+endif ()
 install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
