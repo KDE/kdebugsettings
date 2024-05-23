@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:41+0000\n"
+"POT-Creation-Date: 2024-05-23 00:41+0000\n"
 "PO-Revision-Date: 2024-05-18 21:06+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: src/apps/main.cpp:27 src/quickapps/main.cpp:36
+#: src/apps/main.cpp:40 src/quickapps/main.cpp:36
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:29 src/quickapps/main.cpp:38
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hibakeresési beállítások módosítása"
 
-#: src/apps/main.cpp:31
+#: src/apps/main.cpp:44
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© A kdebugsettings szerzői, 2015-%1."
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:41
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:32 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: src/apps/main.cpp:39 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:59 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,22 +53,22 @@ msgstr ""
 "A QStandardPaths teszt mód bekapcsolása, például az egységtesztek olvasási/"
 "írási beállításaihoz"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:62 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Teljes hibakeresés aktiválása minden modulban."
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:64 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Teljes hibakeresés kikapcsolása minden modulban."
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:68 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Hibakeresési mód megváltoztatása konzolként (konzolban)"
 
-#: src/apps/main.cpp:52 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:72 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -76,7 +76,7 @@ msgstr ""
 "Adja meg a naplózási kategória nevét, amelynek a hibakeresési módját "
 "módosítani szeretné (konzolban)"
 
-#: src/apps/main.cpp:66 src/apps/main.cpp:76 src/apps/main.cpp:86
+#: src/apps/main.cpp:86 src/apps/main.cpp:96 src/apps/main.cpp:106
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
