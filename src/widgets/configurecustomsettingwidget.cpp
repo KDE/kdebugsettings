@@ -25,7 +25,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
 {
     auto vbox = new QVBoxLayout(this);
 
-    auto lab = new QLabel(i18n("Category:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Category:"), this);
     lab->setObjectName("category_label"_L1);
     mCategoryLineEdit->setTrapReturnKey(true);
     mCategoryLineEdit->setClearButtonEnabled(true);
@@ -36,7 +36,7 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     categoryLayout->addWidget(lab);
     categoryLayout->addWidget(mCategoryLineEdit);
 
-    lab = new QLabel(i18n("Type:"), this);
+    lab = new QLabel(i18nc("@label:textbox", "Type:"), this);
     lab->setObjectName("categorytype_label"_L1);
     categoryLayout->addWidget(lab);
 
