@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2015, 2016, 2017, 2018, 2019, 2020.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:40+0000\n"
-"PO-Revision-Date: 2023-06-30 21:48+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-29 11:38+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/apps/main.cpp:40 src/quickapps/main.cpp:36
 #, kde-format
@@ -183,15 +183,13 @@ msgid "Enable"
 msgstr "Povolit"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategorie:"
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Typ:"
@@ -199,7 +197,7 @@ msgstr "Typ:"
 #: src/widgets/customdebuglistview.cpp:44
 #, kde-format
 msgid "Add Rule…"
-msgstr ""
+msgstr "Přidat pravidlo…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -304,12 +302,12 @@ msgstr "Skupinu nelze přejmenovat jako '%1'."
 #: src/widgets/groupmanagementwidget.cpp:88
 #, kde-format
 msgid "Rename Group…"
-msgstr ""
+msgstr "Přejmenovat skupinu…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgid "Export Group…"
-msgstr ""
+msgstr "Exportovat skupinu…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -359,12 +357,12 @@ msgstr ""
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As…"
-msgstr ""
+msgstr "Uložit jako…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgid "Insert…"
-msgstr ""
+msgstr "Vložit…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -440,19 +438,19 @@ msgstr "Spravovat skupinu"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "Načíst…"
 
 #: src/widgets/loadtoolbutton.cpp:23
 #, kde-format
 msgid "Load From File…"
-msgstr ""
+msgstr "Načíst ze souboru…"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, kde-format
 msgid "Save As File…"
-msgstr ""
+msgstr "Uložit jako soubor…"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, kde-format
 msgid "Save As Group…"
-msgstr ""
+msgstr "Uložit jako skupinu…"
