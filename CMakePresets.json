@@ -120,6 +120,24 @@
             ]
         },
         {
+            "name": "ftime-trace",
+            "displayName": "ftime-trace",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "USE_DEVELOPER_MODE": "ON",
+                "CMAKE_C_FLAGS_INIT": "-ftime-trace",
+                "CMAKE_CXX_FLAGS_INIT": "-ftime-trace"
+            },
+            "environment": {
+                "CC": "/usr/bin/clang",
+                "CXX": "/usr/bin/clang++",
+                "CCACHE_DISABLE": "ON"
+            },
+            "inherits": [
+                "base"
+            ]
+        },
+        {
             "name": "pch",
             "displayName": "pch",
             "cacheVariables": {
@@ -136,6 +154,10 @@
         {
             "name": "dev",
             "configurePreset": "dev"
+        },
+        {
+            "name": "ftime-trace",
+            "configurePreset": "ftime-trace"
         },
         {
             "name": "dev-mold",
