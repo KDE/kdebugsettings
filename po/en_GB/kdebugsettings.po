@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:40+0000\n"
-"PO-Revision-Date: 2023-06-17 12:09+0100\n"
+"PO-Revision-Date: 2024-06-02 11:46+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/apps/main.cpp:27 src/quickapps/main.cpp:36
 #, kde-format
@@ -159,16 +159,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings authors"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"You have a rule as '*=true' or '*=false' which will override all your "
-"specific rule. Better to remove it."
+"A custom rule '*=true' or '*=false' is present, which may override more "
+"specific rules. It is better to remove it."
 
 #: src/widgets/configurecustomsettingdialog.cpp:23
 #, kde-format
@@ -209,12 +206,11 @@ msgstr "Edit Rule"
 
 #: src/widgets/customdebuglistview.cpp:52
 #: src/widgets/customdebuglistview.cpp:90
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Remove Rule"
-msgstr[1] "Remove Rule"
+msgstr[1] "Remove Rules"
 
 #: src/widgets/customdebuglistview.cpp:85
 #, kde-format
