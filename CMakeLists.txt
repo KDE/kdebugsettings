@@ -33,12 +33,16 @@ find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons 
     Config
-    DBusAddons 
     I18n 
     WidgetsAddons
     Completion
     XmlGui
 )
+
+if (NOT WIN32 AND NOT APPLE)
+    find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+    set(HAVE_KDBUSADDONS true)
+endif()
 
 find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
 

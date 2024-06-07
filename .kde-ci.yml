@@ -6,7 +6,6 @@ Dependencies:
   'require':
     'frameworks/kcoreaddons': '@latest-kf6'
     'frameworks/kconfig': '@latest-kf6'
-    'frameworks/kdbusaddons': '@latest-kf6'
     'frameworks/ki18n': '@latest-kf6'
     'frameworks/extra-cmake-modules': '@latest-kf6'
     'frameworks/kwidgetsaddons': '@latest-kf6'
@@ -18,6 +17,9 @@ Dependencies:
 - 'on': ['Linux']
   'require':
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+
+- 'on': ['Linux', 'FreeBSD']
+    'frameworks/kdbusaddons': '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]

@@ -107,7 +107,9 @@ int main(int argc, char **argv)
         }
         return 1;
     } else {
+#if HAVE_KDBUSADDONS
         KDBusService service(KDBusService::Unique);
+#endif
         auto dialog = new KDebugSettingsDialog;
         const int ret = dialog->exec();
         delete dialog;

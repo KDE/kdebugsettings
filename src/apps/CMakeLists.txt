@@ -8,9 +8,13 @@ endif()
 target_link_libraries(kdebugsettings
     Qt::Widgets
     KF6::I18n
-    KF6::DBusAddons
     libkdebugsettings
 )
+
+if(TARGET KF6::DBusAddons)
+    target_link_libraries(kdebugsettings KF6::DBusAddons)
+endif()
+
 if(TARGET KF6::IconThemes)
     target_link_libraries(kdebugsettings KF6::IconThemes)
 endif ()
