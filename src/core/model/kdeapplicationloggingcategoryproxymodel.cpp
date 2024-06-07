@@ -21,7 +21,8 @@ bool KDEApplicationLoggingCategoryProxyModel::filterAcceptsRow(int source_row, c
     }
     const QModelIndex sourceIndex = sourceModel()->index(source_row, KDEApplicationLoggingCategoryModel::CategoryRole, source_parent);
     const auto category = sourceIndex.data().value<LoggingCategory>();
-    if (category.description.contains(mFilterText) || category.categoryName.contains(mFilterText) || category.identifierName.contains(mFilterText)) {
+    if (category.description.contains(mFilterText, Qt::CaseInsensitive) || category.categoryName.contains(mFilterText, Qt::CaseInsensitive)
+        || category.identifierName.contains(mFilterText, Qt::CaseInsensitive)) {
         return true;
     }
     return false;
