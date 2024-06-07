@@ -12,7 +12,9 @@
 #include <config-kdebugsettings.h>
 
 #include <KAboutData>
+#if HAVE_KDBUSADDONS
 #include <KDBusService>
+#endif
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QStandardPaths>
