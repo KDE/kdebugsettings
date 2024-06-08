@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:40+0000\n"
-"PO-Revision-Date: 2023-07-25 16:30+0300\n"
+"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"PO-Revision-Date: 2024-03-11 15:18+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,34 +19,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/apps/main.cpp:40 src/quickapps/main.cpp:36
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:36
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:38
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Muokkaa virheenpaikannusasetuksia"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015–%1 kdebugsettingsin tekijät"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:47 src/quickapps/main.cpp:41
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:47 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:61 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,22 +54,22 @@ msgstr ""
 "Käytä QStandardPaths-testitilaa, ts. yksikkötestien käyttämät luku- ja "
 "kirjoitusasetukset"
 
-#: src/apps/main.cpp:62 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:64 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivoi kaikille moduuleille täysi virheenpaikannus."
 
-#: src/apps/main.cpp:64 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Poista virheenpaikannus käytöstä kaikilta moduuleilta."
 
-#: src/apps/main.cpp:68 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:70 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Vaihda virheenpaikannustilaksi konsoli (konsolissa)"
 
-#: src/apps/main.cpp:72 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:74 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -77,7 +77,7 @@ msgstr ""
 "Määritä lokiluokan nimi, jolle haluat vaihtaa virheenpaikannustilaa "
 "(konsolissa)"
 
-#: src/apps/main.cpp:86 src/apps/main.cpp:96 src/apps/main.cpp:106
+#: src/apps/main.cpp:88 src/apps/main.cpp:98 src/apps/main.cpp:108
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
@@ -165,16 +165,13 @@ msgid "(c) %1 kdebugsettings authors"
 msgstr "© %1 kdebugsettingsin tekijät"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Sääntö ”*=true” tai ”*=false” on määritettynä. Se syrjäyttää kaikki "
-"tarkemmat säännöt ja kannattaa poistaa."
+"Määritetty mukautettu sääntö ”*=true” tai ”*=false” voi syrjäyttää kaikki "
+"tarkemmat säännöt. Se kannattaa poistaa."
 
 #: src/widgets/configurecustomsettingdialog.cpp:23
 #, kde-format
