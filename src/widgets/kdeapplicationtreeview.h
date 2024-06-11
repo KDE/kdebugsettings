@@ -32,6 +32,7 @@ public:
     [[nodiscard]] LoggingCategory::List rules(bool forceSavingAllRules) const;
 
 private:
+    LIBKDEBUGSETTINGS_NO_EXPORT void changeCategoryType(LoggingCategory::LoggingType type);
     KDEApplicationLoggingCategoryModel *mKdeApplicationLoggingCategoryModel = nullptr;
     KDEApplicationLoggingCategoryProxyModel *const mKdeApplicationLoggingCategoryProxyModel;
 };
