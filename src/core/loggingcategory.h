@@ -49,7 +49,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     bool enabled = true;
 
 private:
-    [[nodiscard]] QString convertCategoryTypeToString(LoggingCategory::LoggingType type) const;
+    [[nodiscard]] LIBKDEBUGSETTINGSCORE_NO_EXPORT QString convertCategoryTypeToString(LoggingCategory::LoggingType type) const;
 };
 LIBKDEBUGSETTINGSCORE_EXPORT QDebug operator<<(QDebug debug, const LoggingCategory &cat);
 
