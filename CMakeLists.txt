@@ -51,7 +51,7 @@ find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.7.0
-    KF 6.2.0
+    KF 6.4.0
 )
 
 if (OPTION_SELENIUMWEBDRIVER_SUPPORT)
