@@ -30,7 +30,7 @@ public:
 
     [[nodiscard]] CategoryTypeModel *categoryTypeModel() const;
 
-    Q_INVOKABLE [[nodiscard]] QString environmentrules() const;
+    [[nodiscard]] Q_INVOKABLE QString environmentrules() const;
 
     [[nodiscard]] bool foundOverrideRule() const;
 
