@@ -20,8 +20,8 @@ using namespace Qt::Literals::StringLiterals;
 
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
-    , mEditRule(new QPushButton(i18n("Edit…"), this))
-    , mRemoveRule(new QPushButton(i18n("Remove…"), this))
+    , mEditRule(new QPushButton(i18nc("@action:button", "Edit…"), this))
+    , mRemoveRule(new QPushButton(i18nc("@action:button", "Remove…"), this))
     , mSearchLineEdit(new QLineEdit(this))
     , mCustomDebugListView(new CustomDebugListView(this))
 {
@@ -45,7 +45,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     auto buttonLayout = new QVBoxLayout;
     horizontalLayout->addLayout(buttonLayout);
 
-    auto addRulePushButton = new QPushButton(i18n("Add…"), this);
+    auto addRulePushButton = new QPushButton(i18nc("@action:button", "Add…"), this);
     addRulePushButton->setObjectName("add_rule"_L1);
     buttonLayout->addWidget(addRulePushButton);
     connect(addRulePushButton, &QAbstractButton::clicked, mCustomDebugListView, &CustomDebugListView::slotAddRule);

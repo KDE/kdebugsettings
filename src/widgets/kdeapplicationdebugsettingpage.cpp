@@ -20,9 +20,9 @@ using namespace Qt::Literals::StringLiterals;
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
     , mSearchLineEdit(new QLineEdit(this))
-    , mEnableDebug(new QPushButton(i18n("Enable All Debug"), this))
-    , mTurnOffDebug(new QPushButton(i18n("Turn Off Debug"), this))
-    , mTurnOffAllMessages(new QPushButton(i18n("Turn Off All Messages"), this))
+    , mEnableDebug(new QPushButton(i18nc("@action:button", "Enable All Debug"), this))
+    , mTurnOffDebug(new QPushButton(i18nc("@action:button", "Turn Off Debug"), this))
+    , mTurnOffAllMessages(new QPushButton(i18nc("@action:button", "Turn Off All Messages"), this))
     , mKdeApplicationTreeView(new KDEApplicationTreeView(this))
 {
     auto mainLayout = new QVBoxLayout(this);

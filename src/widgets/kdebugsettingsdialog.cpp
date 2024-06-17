@@ -86,7 +86,7 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(mLoadToolButton, &LoadToolButton::manageGroupRequested, this, &KDebugSettingsDialog::slotManageGroup);
     connect(this, &KDebugSettingsDialog::updateLoadGroupMenu, mLoadToolButton, &LoadToolButton::updateLoadGroupMenu);
 
-    auto insertCategories = new QPushButton(i18n("Insert…"), this);
+    auto insertCategories = new QPushButton(i18nc("@action:button", "Insert…"), this);
     insertCategories->setObjectName("insert_button"_L1);
     buttonBox->addButton(insertCategories, QDialogButtonBox::ActionRole);
     connect(insertCategories, &QPushButton::clicked, this, &KDebugSettingsDialog::slotInsertCategories);
