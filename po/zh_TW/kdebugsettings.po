@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2024-05-30 03:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -222,12 +222,16 @@ msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "您確定要移除規則「%1」嗎？"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit…"
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr "編輯…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove…"
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "移除…"
 
@@ -238,7 +242,9 @@ msgid "Search…"
 msgstr "搜尋…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
 msgid "Add…"
 msgstr "新增…"
 
@@ -325,17 +331,23 @@ msgid "Remove Group"
 msgstr "移除群組"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable All Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "啟用所有除錯"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "關閉除錯"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off All Messages"
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "關閉所有訊息"
 
@@ -360,7 +372,9 @@ msgid "Save As…"
 msgstr "另存為…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert…"
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "插入…"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2024-04-07 12:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -237,12 +237,14 @@ msgstr[5] "أتريد إزالة القاعدة \"%1\" هذه؟"
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, fuzzy, kde-format
 #| msgid "Remove..."
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "أزل..."
 
@@ -255,6 +257,7 @@ msgstr "ابحث..."
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
+msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
@@ -343,17 +346,21 @@ msgid "Remove Group"
 msgstr "أزل المجموعة"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
-msgstr ""
+msgstr "التّنقيح"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
 #, kde-format
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr ""
 
@@ -381,6 +388,7 @@ msgstr "احفظ ك‍"
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid "Insert..."
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "أدرج..."
 

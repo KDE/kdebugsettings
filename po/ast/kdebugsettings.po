@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -220,11 +220,13 @@ msgstr[1] ""
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr ""
 
@@ -236,6 +238,7 @@ msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
+msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
@@ -323,16 +326,19 @@ msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
 #, kde-format
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr ""
 
@@ -358,6 +364,7 @@ msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr ""
 

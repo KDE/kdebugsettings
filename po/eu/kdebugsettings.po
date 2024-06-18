@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2024-03-06 22:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -233,12 +233,14 @@ msgstr[1] "%1 arau hauek kendu nahi dituzu?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, fuzzy, kde-format
 #| msgid "Remove..."
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Kendu..."
 
@@ -251,6 +253,7 @@ msgstr "Bilatu..."
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
+msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
@@ -341,17 +344,23 @@ msgid "Remove Group"
 msgstr "Kendu taldea"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable All Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Gaitu arazketa guztiak"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Itzali araztea"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off All Messages"
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Itzali mezu guztiak"
 
@@ -379,6 +388,7 @@ msgstr "Gorde honela"
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid "Insert..."
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Txertatu..."
 

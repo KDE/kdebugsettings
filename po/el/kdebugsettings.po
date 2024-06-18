@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -236,12 +236,14 @@ msgstr[1] "Επιθυμείτε πραγματικά την αφαίρεση τ�
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, fuzzy, kde-format
 #| msgid "Remove..."
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Αφαίρεση..."
 
@@ -254,6 +256,7 @@ msgstr "Αναζήτηση..."
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
+msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
@@ -348,17 +351,23 @@ msgid "Remove Group"
 msgstr "Αφαίρεση ομάδας"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable All Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Ενεργοποίηση όλης της αποσφαλμάτωσης"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Απενεργοποίηση αποσφαλμάτωσης"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off All Messages"
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Απενεργοποίηση όλων των μηνυμάτων"
 
@@ -386,6 +395,7 @@ msgstr "Αποθήκευση ως"
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid "Insert..."
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Εισαγωγή..."
 

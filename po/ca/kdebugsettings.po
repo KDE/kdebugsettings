@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2024-05-28 13:04+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -229,12 +229,16 @@ msgstr[0] "Voleu eliminar aquesta regla?"
 msgstr[1] "Voleu eliminar aquestes %1 regles?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit…"
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Edita…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove…"
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Elimina…"
 
@@ -245,7 +249,9 @@ msgid "Search…"
 msgstr "Cerca…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
 msgid "Add…"
 msgstr "Afegeix…"
 
@@ -334,17 +340,23 @@ msgid "Remove Group"
 msgstr "Elimina el grup"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable All Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Activa tota la depuració"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Inactiva la depuració"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off All Messages"
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Desactiva tots els missatges"
 
@@ -369,7 +381,9 @@ msgid "Save As…"
 msgstr "Desa com a…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert…"
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Insereix…"
 

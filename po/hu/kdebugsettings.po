@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2024-05-18 21:06+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -231,12 +231,14 @@ msgstr[1] "Szeretné eltávolítani ezt a(z) %1 szabályt?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, fuzzy, kde-format
 #| msgid "Remove..."
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Eltávolítás…"
 
@@ -249,6 +251,7 @@ msgstr "Keresés…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
+msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
@@ -338,17 +341,23 @@ msgid "Remove Group"
 msgstr "Csoport eltávolítása"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable All Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Minden hibakeresés engedélyezése"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Hibakeresés kikapcsolása"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off All Messages"
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Minden üzenet kikapcsolása"
 
@@ -376,6 +385,7 @@ msgstr "Mentés másként"
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid "Insert..."
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Beszúrás…"
 

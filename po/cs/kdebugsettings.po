@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2024-05-29 11:38+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -222,12 +222,16 @@ msgstr[1] "Chcete odstranit tato %1 pravidla?"
 msgstr[2] "Chcete odstranit těchto %1 pravidel?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit…"
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Upravit…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove…"
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Odstranit…"
 
@@ -238,7 +242,9 @@ msgid "Search…"
 msgstr "Hledat…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add…"
+msgctxt "@action:button"
 msgid "Add…"
 msgstr "Přidat…"
 
@@ -325,17 +331,23 @@ msgid "Remove Group"
 msgstr "Odstranit skupinu"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable All Debug"
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Povolit všechno ladění"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off Debug"
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Vypnout všechno ladění"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Turn Off All Messages"
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Vypnout všechny zprávy"
 
@@ -360,7 +372,9 @@ msgid "Save As…"
 msgstr "Uložit jako…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert…"
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Vložit…"
 

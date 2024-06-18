@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-08 00:41+0000\n"
+"POT-Creation-Date: 2024-06-18 00:42+0000\n"
 "PO-Revision-Date: 2015-03-08 20:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -215,11 +215,13 @@ msgstr[0] ""
 
 #: src/widgets/customdebugsettingspage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Edit…"
 msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
+msgctxt "@action:button"
 msgid "Remove…"
 msgstr ""
 
@@ -231,6 +233,7 @@ msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
+msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
 
@@ -318,16 +321,19 @@ msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
+msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
+msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr ""
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
 #, kde-format
+msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr ""
 
@@ -353,6 +359,7 @@ msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
+msgctxt "@action:button"
 msgid "Insert…"
 msgstr ""
 
