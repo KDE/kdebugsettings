@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# giovanni <g.sora@tiscali.it>, 2017, 2018, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2017, 2018, 2021, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:42+0000\n"
-"PO-Revision-Date: 2024-05-29 12:16+0200\n"
+"PO-Revision-Date: 2024-06-18 14:49+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/apps/main.cpp:42 src/quickapps/main.cpp:36
 #, kde-format
@@ -225,15 +225,13 @@ msgstr[0] "Tu vole remover iste regula?"
 msgstr[1] "Tu vole remover iste %1 regulas?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Edit…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr "Edita ..."
+msgstr "Modifica…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Remove…"
@@ -245,11 +243,10 @@ msgid "Search…"
 msgstr "Cerca..."
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr "Adde..."
+msgstr "Adde…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -338,22 +335,19 @@ msgid "Remove Group"
 msgstr "Remove Gruppo"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Habilita omne debug"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Claude Debug"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Claude Omne Messages"
@@ -379,11 +373,10 @@ msgid "Save As…"
 msgstr "Salveguarda como…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
-msgstr "Inserta..."
+msgstr "Inserta…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format

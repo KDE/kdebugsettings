@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:42+0000\n"
-"PO-Revision-Date: 2024-06-18 00:23+0200\n"
+"PO-Revision-Date: 2024-06-18 17:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -224,14 +224,14 @@ msgstr[0] "Vill du ta bort den här regeln?"
 msgstr[1] "Vill du ta bort de här %1 reglerna?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Edit…"
 msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Redigera…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Remove…"
 msgctxt "@action:button"
 msgid "Remove…"
@@ -244,7 +244,7 @@ msgid "Search…"
 msgstr "Sök…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Add…"
 msgctxt "@action:button"
 msgid "Add…"
@@ -335,21 +335,21 @@ msgid "Remove Group"
 msgstr "Ta bort grupp"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Enable All Debug"
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Aktivera all felsökning"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Turn Off Debug"
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Stäng av felsökning"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Turn Off All Messages"
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
@@ -376,7 +376,7 @@ msgid "Save As…"
 msgstr "Spara som…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Insert…"
 msgctxt "@action:button"
 msgid "Insert…"
@@ -505,3 +505,4 @@ msgstr "Spara som grupp…"
 
 #~ msgid "Deselect All"
 #~ msgstr "Avmarkera alla"
+
