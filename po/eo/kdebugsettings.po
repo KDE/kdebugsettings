@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:42+0000\n"
-"PO-Revision-Date: 2024-05-29 22:04+0200\n"
+"PO-Revision-Date: 2024-06-19 22:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -226,15 +226,13 @@ msgstr[0] "Ĉu vi volas forigi ĉi tiun regulon?"
 msgstr[1] "Ĉu vi volas forigi ĉi %1 regulojn?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Edit…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Redakti…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Forigi…"
@@ -246,8 +244,7 @@ msgid "Search…"
 msgstr "Serĉi…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Aldoni…"
@@ -338,22 +335,19 @@ msgid "Remove Group"
 msgstr "Forigi Grupon"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Ebligi Ĉian Sencimigon"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Malŝalti Sencimigon"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Malŝalti Ĉiujn Mesaĝojn"
@@ -379,8 +373,7 @@ msgid "Save As…"
 msgstr "Konservi kiel…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Enmeti…"
