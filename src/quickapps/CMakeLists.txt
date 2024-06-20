@@ -3,7 +3,7 @@
 
 add_executable(kdebugsettingsquick)
 target_sources(kdebugsettingsquick PRIVATE main.cpp resources.qrc)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kdebugsettingsquick PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -18,5 +18,5 @@ target_link_libraries(kdebugsettingsquick
 
 )
 
-install(TARGETS kdebugsettingsquick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kdebugsettingsquick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

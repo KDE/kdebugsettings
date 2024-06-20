@@ -48,7 +48,7 @@ target_sources(libkdebugsettingscore PRIVATE
     loggingmanager.h loggingmanager.cpp
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libkdebugsettingscore PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(libkdebugsettingscore BASE_NAME libkdebugsettingscore)
@@ -63,7 +63,7 @@ set_target_properties(libkdebugsettingscore
 
 install(TARGETS libkdebugsettingscore ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory( autotests )
 endif()
 
