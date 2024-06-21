@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:42+0000\n"
-"PO-Revision-Date: 2024-05-28 09:49+0200\n"
+"PO-Revision-Date: 2024-06-19 10:56+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: src/apps/main.cpp:42 src/quickapps/main.cpp:36
 #, kde-format
@@ -225,15 +225,13 @@ msgstr[0] "Wilt u deze regel verwijderen?"
 msgstr[1] "Wilt u deze %1 regels verwijderen?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Edit…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Bewerken…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Verwijderen…"
@@ -245,8 +243,7 @@ msgid "Search…"
 msgstr "Zoeken…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Toevoegen…"
@@ -337,22 +334,19 @@ msgid "Remove Group"
 msgstr "Groep verwijderen"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Alle debugging inschakelen"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Debugging uitschakelen"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Alle berichten uitschakelen"
@@ -378,8 +372,7 @@ msgid "Save As…"
 msgstr "Opslaan als…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Invoegen…"
