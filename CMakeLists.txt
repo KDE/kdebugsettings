@@ -37,16 +37,13 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
     Completion
     XmlGui
+    IconThemes
 )
 
 if(NOT WIN32 AND NOT APPLE)
     find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
     set(HAVE_KDBUSADDONS true)
 endif()
-
-find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
-
-
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
