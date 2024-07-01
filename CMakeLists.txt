@@ -9,7 +9,7 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_REQUIRED_VERSION "6.6.0")
-set(KF_MIN_VERSION "6.1.0")
+set(KF_MIN_VERSION "6.3.0")
 
 set(ECM_VERSION ${KF_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
@@ -47,7 +47,7 @@ endif()
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.7.0
+ecm_set_disabled_deprecation_versions(QT 6.7.2
     KF 6.4.0
 )
 
