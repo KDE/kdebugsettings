@@ -232,11 +232,10 @@ msgstr "移除…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "搜索…"
+msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
