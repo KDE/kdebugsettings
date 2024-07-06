@@ -235,7 +235,7 @@ msgstr "移除…"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "搜索…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
