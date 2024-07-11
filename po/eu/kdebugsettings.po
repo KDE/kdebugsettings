@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:41+0000\n"
-"PO-Revision-Date: 2024-03-06 22:06+0100\n"
+"PO-Revision-Date: 2024-07-10 21:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: src/apps/main.cpp:42 src/quickapps/main.cpp:36
 #, kde-format
@@ -36,8 +36,7 @@ msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings-en egileak"
 
 #: src/apps/main.cpp:47 src/quickapps/main.cpp:41
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -192,22 +191,19 @@ msgid "Enable"
 msgstr "Gaitu"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategoria:"
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Mota:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
 msgstr "Gehitu araua..."
 
@@ -235,19 +231,17 @@ msgstr[1] "%1 arau hauek kendu nahi dituzu?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr ""
+msgstr "Editatu..."
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Kendu..."
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Bilatu..."
@@ -256,7 +250,7 @@ msgstr "Bilatu..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Gehitu…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -318,16 +312,14 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Ezinezkoa da taldea '%1' gisa berrizendatzea."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgid "Rename Group…"
-msgstr "Berrizendatu taldea"
+msgstr "Berrizendatu taldea..."
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgid "Export Group…"
-msgstr "Esportatu taldea"
+msgstr "Esportatu taldea..."
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -345,22 +337,19 @@ msgid "Remove Group"
 msgstr "Kendu taldea"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Gaitu arazketa guztiak"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Itzali araztea"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Itzali mezu guztiak"
@@ -381,14 +370,12 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Arau ezarpenak ingurune-aldagaiekin"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Gorde honela"
+msgstr "Gorde honela..."
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Txertatu..."
@@ -467,25 +454,22 @@ msgstr "Kudeatu taldea"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "Zamatu…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgid "Load From File…"
 msgstr "Zamatu fitxategitik..."
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgid "Save As File…"
-msgstr "Gorde ... fitxategi gisa"
+msgstr "Gorde ...fitxategi gisa"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgid "Save As Group…"
-msgstr "Gorde ... talde gisa"
+msgstr "Gorde ...talde gisa"
 
 #~ msgid "Edit..."
 #~ msgstr "Editatu..."
