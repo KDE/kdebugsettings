@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 11:21+0200\n"
+"PO-Revision-Date: 2024-07-14 13:34+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -228,30 +228,26 @@ msgstr[1] "Czy chcesz usunąć te %1 zasady?"
 msgstr[2] "Czy chcesz usunąć te %1 zasad?"
 
 #: src/widgets/customdebugsettingspage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Edit…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Edytuj…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Usuń…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Poszukaj…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
-#, fuzzy, kde-format
-#| msgid "Add…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Dodaj…"
@@ -341,22 +337,19 @@ msgid "Remove Group"
 msgstr "Usuń grupę"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Włącz pełną diagnostykę"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Wyłącz diagnostykę"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Wyłącz wszystkie wiadomości"
@@ -382,8 +375,7 @@ msgid "Save As…"
 msgstr "Zapisz jako…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Wstaw…"
