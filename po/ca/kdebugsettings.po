@@ -471,21 +471,3 @@ msgstr "Desa com a fitxer…"
 #, kde-format
 msgid "Save As Group…"
 msgstr "Desa com a grup…"
-
-#~ msgid "Edit..."
-#~ msgstr "Edita..."
-
-#~ msgid "Add..."
-#~ msgstr "Afegeix..."
-
-#~ msgid "Rename Group..."
-#~ msgstr "Reanomena un grup..."
-
-#~ msgid "Export Group..."
-#~ msgstr "Exporta un grup..."
-
-#~ msgid "Save As..."
-#~ msgstr "Desa com a..."
-
-#~ msgid "Load..."
-#~ msgstr "Carrega..."
