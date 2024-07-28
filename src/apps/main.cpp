@@ -21,10 +21,7 @@
 
 #include <iostream>
 
-#define HAVE_KICONTHEME __has_include(<KIconTheme>)
-#if HAVE_KICONTHEME
 #include <KIconTheme>
-#endif
 
 #define HAVE_STYLE_MANAGER __has_include(<KStyleManager>)
 #if HAVE_STYLE_MANAGER
@@ -33,9 +30,7 @@
 
 int main(int argc, char **argv)
 {
-#if HAVE_KICONTHEME && (KICONTHEMES_VERSION >= QT_VERSION_CHECK(6, 3, 0))
     KIconTheme::initTheme();
-#endif
     QApplication app(argc, argv);
 
     KAboutData aboutData(QStringLiteral("kdebugsettings"),
