@@ -64,12 +64,12 @@ void GroupManagementWidget::renameGroup(QListWidgetItem *item)
     const QString fullPath = item->data(FullPathRole).toString();
     const QString currentName = item->text();
     QFile f(fullPath);
-    const QString newName = QInputDialog::getText(this, i18n("Rename Group"), i18n("New Name:"));
+    const QString newName = QInputDialog::getText(this, i18nc("@title:window", "Rename Group"), i18n("New Name:"));
     const QString newNameTrimmed = newName.trimmed();
     if (!newNameTrimmed.isEmpty() && (currentName != newNameTrimmed)) {
         const QString newFullPath{KDebugSettingsUtil::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
         if (!f.rename(newFullPath)) {
-            KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'.", newNameTrimmed), i18n("Rename Group"));
+            KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'.", newNameTrimmed), i18nc("@title:window", "Rename Group"));
         } else {
             item->setText(newNameTrimmed);
             item->setData(FullPathRole, newFullPath);
@@ -85,21 +85,21 @@ void GroupManagementWidget::slotCustomContextMenu()
         QMenu menu(this);
         if (mListWidget->selectedItems().count() == 1) {
             const auto item = items.at(0);
-            menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18n("Rename Group…"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18nc("@action", "Rename Group…"), this, [this, item]() {
                 renameGroup(item);
             });
             menu.addSeparator();
-            menu.addAction(QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Group…"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(QStringLiteral("document-export")), i18nc("@action", "Export Group…"), this, [this, item]() {
                 exportGroup(item);
             });
             menu.addSeparator();
         }
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Groups"), this, [this, items]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18nc("@action", "Remove Groups"), this, [this, items]() {
             for (auto item : items) {
                 const QString fullPath = item->data(FullPathRole).toString();
                 QFile f(fullPath);
                 if (!f.remove()) {
-                    KMessageBox::error(this, i18n("Impossible to remove \'%1\'", fullPath), i18n("Remove Group"));
+                    KMessageBox::error(this, i18n("Impossible to remove \'%1\'", fullPath), i18nc("@title:window", "Remove Group"));
                 }
                 delete item;
             }

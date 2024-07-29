@@ -41,9 +41,9 @@ void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
     QMenu menu(this);
     const QModelIndexList selectedIndexes = selectionModel()->selectedRows();
     const auto selectedItemCount{selectedIndexes.count()};
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule…"), this, &CustomDebugListView::slotAddRule);
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action", "Add Rule…"), this, &CustomDebugListView::slotAddRule);
     if (index.isValid() && selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule"), this, [this, index]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action", "Edit Rule"), this, [this, index]() {
             slotEditRule(index);
         });
     }

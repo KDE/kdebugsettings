@@ -17,10 +17,10 @@ SaveToolButton::SaveToolButton(QWidget *parent)
     auto mainMenu = new QMenu(this);
     setMenu(mainMenu);
 
-    QAction *act = mainMenu->addAction(i18n("Save As File…"));
+    QAction *act = mainMenu->addAction(i18nc("@action", "Save As File…"));
     connect(act, &QAction::triggered, this, &SaveToolButton::saveAsFile);
 
-    QAction *actGroup = mainMenu->addAction(i18n("Save As Group…"));
+    QAction *actGroup = mainMenu->addAction(i18nc("@action", "Save As Group…"));
     connect(actGroup, &QAction::triggered, this, &SaveToolButton::saveAsGroup);
 }
 
