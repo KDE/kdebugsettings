@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:41+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-07-04 21:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -20,33 +20,33 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:36
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:36
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:38
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:38
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Налаштовування параметрів діагностики"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:41
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© Автори kdebugsettings, 2015–%1"
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:41
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:41
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: src/apps/main.cpp:61 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,22 +54,22 @@ msgstr ""
 "Увімкнути режим перевірки QStandardPaths, тобто параметрів читання та "
 "запису, які використовуються у перевірках модулів"
 
-#: src/apps/main.cpp:64 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:59 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Увімкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:61 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Вимкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:70 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:65 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Змінити режим діагностики як консолі (у консолі)"
 
-#: src/apps/main.cpp:74 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:69 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -77,7 +77,7 @@ msgstr ""
 "Вкажіть назву категорії журналу, для якої ви хочете змінити режим "
 "діагностики (у консолі)"
 
-#: src/apps/main.cpp:88 src/apps/main.cpp:98 src/apps/main.cpp:108
+#: src/apps/main.cpp:83 src/apps/main.cpp:93 src/apps/main.cpp:103
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
@@ -186,7 +186,9 @@ msgid "Edit custom rule"
 msgstr "Зміна нетипового правила"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Увімкнути"
 
@@ -203,12 +205,16 @@ msgid "Type:"
 msgstr "Тип:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Rule…"
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Додати правило…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Змінити правило"
 
@@ -301,7 +307,9 @@ msgstr "Неможливо експортувати групу «%2» до «%1�
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Перейменувати групу"
 
@@ -316,17 +324,23 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Неможливо перейменувати групу на «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group…"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Перейменувати групу…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Group…"
+msgctxt "@action"
 msgid "Export Group…"
 msgstr "Експортувати групу…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Groups"
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Вилучити групи"
 
@@ -336,7 +350,9 @@ msgid "Impossible to remove '%1'"
 msgstr "Не вдалося вилучити «%1»"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Вилучення групи"
 
@@ -390,7 +406,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "Не вдалося відкрити «%1». Будь ласка, перевірте."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "Вставити категорії"
@@ -405,8 +420,17 @@ msgstr "Файли категорій"
 msgid "Categories from file '%1' inserted."
 msgstr "Вставлено категорії з файла «%1»."
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr "Вставити категорії"
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Name"
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Назва групи"
 
@@ -430,18 +454,22 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Неможливо зберегти з порожньою назвою. Будь ласка, вкажіть нову назву."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "Зберегти як"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "файл KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "Load Debug Settings Files"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Завантажити файли параметрів діагностики"
 
@@ -451,7 +479,9 @@ msgid "Load Group"
 msgstr "Завантажити групу"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Group"
+msgctxt "@action"
 msgid "Manage Group"
 msgstr "Керувати групою"
 
@@ -461,17 +491,23 @@ msgid "Load…"
 msgstr "Завантажити…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load From File…"
+msgctxt "@action"
 msgid "Load From File…"
 msgstr "Завантажити з файла…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As File…"
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "Зберегти як файл…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As Group…"
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Зберегти як групу…"
 

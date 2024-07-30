@@ -193,7 +193,7 @@ void KDebugSettingsDialog::slotInsertCategories()
             }
         }
         mKdeApplicationSettingsPage->insertCategories(newCategories);
-        KMessageBox::information(this, i18n("Categories from file \'%1\' inserted.", path), i18n("Insert Categories"));
+        KMessageBox::information(this, i18n("Categories from file \'%1\' inserted.", path), i18nc("@title:window", "Insert Categories"));
     }
 }
 
@@ -201,7 +201,7 @@ void KDebugSettingsDialog::slotSaveAsGroup()
 {
     const QString groupPath = KDebugSettingsUtil::defaultWritableGroupPath();
     bool ok = false;
-    const QString name = QInputDialog::getText(this, i18n("Group Name"), i18n("Name:"), QLineEdit::Normal, QString(), &ok);
+    const QString name = QInputDialog::getText(this, i18nc("@title:window", "Group Name"), i18n("Name:"), QLineEdit::Normal, QString(), &ok);
     if (ok) {
         const QString trimmedName = name.trimmed();
         if (!trimmedName.isEmpty()) {
@@ -222,7 +222,7 @@ void KDebugSettingsDialog::slotSaveAsGroup()
 
 void KDebugSettingsDialog::slotSaveAs()
 {
-    const QString path = QFileDialog::getSaveFileName(this, i18n("Save As"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
+    const QString path = QFileDialog::getSaveFileName(this, i18nc("@title:window", "Save As"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
     if (!path.isEmpty()) {
         saveRules(path, true);
     }
@@ -230,7 +230,8 @@ void KDebugSettingsDialog::slotSaveAs()
 
 void KDebugSettingsDialog::slotLoad()
 {
-    const QString path = QFileDialog::getOpenFileName(this, i18n("Load Debug Settings Files"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
+    const QString path =
+        QFileDialog::getOpenFileName(this, i18nc("@title:window", "Load Debug Settings Files"), QString(), i18n("KDebugSettings File (*.kdebugsettingsrules)"));
     if (!path.isEmpty()) {
         LoggingManager::self().readCategoriesFiles(path);
         updateLoggingCategories();

@@ -20,7 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)
     , mCategoryLineEdit(new KLineEdit(this))
-    , mEnableCategory(new QCheckBox(i18n("Enable"), this))
+    , mEnableCategory(new QCheckBox(i18nc("@option:check", "Enable"), this))
     , mCategoryType(new CategoryTypeComboBox(true, this))
 {
     auto vbox = new QVBoxLayout(this);
