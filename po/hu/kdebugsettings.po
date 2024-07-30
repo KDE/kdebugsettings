@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-05-18 21:06+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -185,7 +185,9 @@ msgid "Edit custom rule"
 msgstr "Egyéni szabály szerkesztése"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Engedélyezés"
 
@@ -206,11 +208,14 @@ msgstr "Típus:"
 #: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Saját szabály szerkesztése"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Szabály szerkesztése"
 
@@ -301,7 +306,9 @@ msgstr "Lehetetlen exportálni a(z) „%2” csoportot ide: „%1”"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Csoport átnevezése"
 
@@ -318,16 +325,21 @@ msgstr "Lehetetlen átnevezni a csoportot mint „%1”."
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Save As..."
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Mentés másként…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Group"
+msgctxt "@action"
 msgid "Export Group…"
-msgstr ""
+msgstr "Csoport exportálása"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Groups"
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Csoportok eltávolítása"
 
@@ -337,7 +349,9 @@ msgid "Impossible to remove '%1'"
 msgstr "Lehetetlen eltávolítani ezt: „%1”."
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Csoport eltávolítása"
 
@@ -396,7 +410,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "A(z) „%1” nem nyitható meg. Kérjük, ellenőrizze."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "Kategóriák beszúrása"
@@ -411,8 +424,17 @@ msgstr "Kategóriafájlok"
 msgid "Categories from file '%1' inserted."
 msgstr "Kategóriák a(z) „%1” fájlból beszúrva."
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr "Kategóriák beszúrása"
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Name"
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Csoportnév"
 
@@ -436,18 +458,22 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Nem lehet menteni üres névvel. Kérjük, adjon meg másikat."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "Mentés másként"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings fájl (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "Load Debug Settings Files"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Hibakeresési beállítófájlok betöltése"
 
@@ -457,7 +483,9 @@ msgid "Load Group"
 msgstr "Csoport betöltése"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Group"
+msgctxt "@action"
 msgid "Manage Group"
 msgstr "Csoport kezelése"
 
@@ -470,18 +498,21 @@ msgstr "Betöltés"
 #: src/widgets/loadtoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Load From File..."
+msgctxt "@action"
 msgid "Load From File…"
 msgstr "Betöltés fájlból…"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save As File..."
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "Mentés fájlként…"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Save As Group..."
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Mentés csoportként…"
 

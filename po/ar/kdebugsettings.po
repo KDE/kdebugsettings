@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-04-07 12:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -183,7 +183,9 @@ msgid "Edit custom rule"
 msgstr "حرّر القاعدة المخصّصة"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "فعّل"
 
@@ -204,11 +206,14 @@ msgstr "النّوع:"
 #: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
 #| msgid "Add Rule..."
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "أضِف قاعدة..."
 
 #: src/widgets/customdebuglistview.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "حرر القاعدة"
 
@@ -305,7 +310,9 @@ msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "أعد تسمية المجموعة"
 
@@ -322,17 +329,21 @@ msgstr ""
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Rename Group"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "أعد تسمية المجموعة"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, fuzzy, kde-format
 #| msgid "Export Group"
+msgctxt "@action"
 msgid "Export Group…"
 msgstr "صدر المجموعة"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Groups"
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr "أزل المجموعات"
 
@@ -342,7 +353,9 @@ msgid "Impossible to remove '%1'"
 msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "أزل المجموعة"
 
@@ -399,7 +412,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "تعذّر فتح '%1'. فضلًا تحقّق منه."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr ""
@@ -414,8 +426,16 @@ msgstr ""
 msgid "Categories from file '%1' inserted."
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:204
+#, fuzzy, kde-format
+#| msgid "Group Name"
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr "اسم المجموعة"
 
@@ -437,18 +457,21 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "احفظ ك‍"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr ""
 
@@ -458,9 +481,12 @@ msgid "Load Group"
 msgstr ""
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Manage Group"
+msgctxt "@action"
 msgid "Manage Group"
-msgstr ""
+msgstr "أدر المجموعة"
 
 #: src/widgets/loadtoolbutton.cpp:19
 #, fuzzy, kde-format
@@ -471,18 +497,21 @@ msgstr "حمّل"
 #: src/widgets/loadtoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Load From File..."
+msgctxt "@action"
 msgid "Load From File…"
 msgstr "حمّل من ملفّ..."
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save As File..."
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "احفظ كملفّ..."
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Save As Group..."
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "احفظ ك‍مجموعة..."
 

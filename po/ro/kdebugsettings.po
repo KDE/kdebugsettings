@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -190,7 +190,9 @@ msgid "Edit custom rule"
 msgstr "Modifică regula personalizată"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Activează"
 
@@ -212,6 +214,7 @@ msgstr "Tip:"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Modifică regula personalizată"
 
@@ -219,6 +222,7 @@ msgstr "Modifică regula personalizată"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Modifică regula personalizată"
 
@@ -314,9 +318,11 @@ msgstr "Nu se poate schimba regimul de depanare"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "@title:window"
 msgid "Rename Group"
-msgstr ""
+msgstr "Salvează ca..."
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #, kde-format
@@ -332,18 +338,23 @@ msgstr "Nu se poate schimba regimul de depanare"
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Save As..."
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Salvează ca..."
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "@action"
 msgid "Export Group…"
-msgstr ""
+msgstr "Salvează ca..."
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "@action"
 msgid "Remove Groups"
-msgstr ""
+msgstr "Salvează ca..."
 
 #: src/widgets/groupmanagementwidget.cpp:102
 #, fuzzy, kde-format
@@ -352,9 +363,11 @@ msgid "Impossible to remove '%1'"
 msgstr "Nu se poate schimba regimul de depanare"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "@title:window"
 msgid "Remove Group"
-msgstr ""
+msgstr "Salvează ca..."
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, fuzzy, kde-format
@@ -411,7 +424,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "„%1” nu poate fi deschis. Verificați-l."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "Inserează categorii"
@@ -426,8 +438,16 @@ msgstr "Fișiere cu categorii"
 msgid "Categories from file '%1' inserted."
 msgstr ""
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr "Inserează categorii"
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr ""
 
@@ -449,18 +469,22 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "Salvează ca"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Fișier KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "Load Debug Settings Files"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Încarcă fișiere cu reguli de depanare"
 
@@ -470,9 +494,11 @@ msgid "Load Group"
 msgstr ""
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "@action"
 msgid "Manage Group"
-msgstr ""
+msgstr "Salvează ca..."
 
 #: src/widgets/loadtoolbutton.cpp:19
 #, fuzzy, kde-format
@@ -481,19 +507,23 @@ msgid "Load…"
 msgstr "Încarcă"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "@action"
 msgid "Load From File…"
-msgstr ""
+msgstr "Salvează ca..."
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save As..."
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "Salvează ca..."
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Save As..."
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Salvează ca..."
 

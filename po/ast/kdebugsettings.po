@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -178,6 +178,7 @@ msgstr ""
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable"
 msgstr ""
 
@@ -195,11 +196,13 @@ msgstr ""
 
 #: src/widgets/customdebuglistview.cpp:44
 #, kde-format
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr ""
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr ""
 
@@ -287,6 +290,7 @@ msgstr ""
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
 #, kde-format
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr ""
 
@@ -302,16 +306,19 @@ msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:88
 #, kde-format
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
+msgctxt "@action"
 msgid "Export Group…"
 msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr ""
 
@@ -322,6 +329,7 @@ msgstr ""
 
 #: src/widgets/groupmanagementwidget.cpp:102
 #, kde-format
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr ""
 
@@ -375,7 +383,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr ""
@@ -390,8 +397,15 @@ msgstr ""
 msgid "Categories from file '%1' inserted."
 msgstr ""
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, kde-format
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr ""
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr ""
 
@@ -414,19 +428,22 @@ msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
 #, kde-format
+msgctxt "@title:window"
 msgid "Save As"
 msgstr ""
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr ""
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "KDebugSettings"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
-msgstr ""
+msgstr "KDebugSettings"
 
 #: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
@@ -435,6 +452,7 @@ msgstr ""
 
 #: src/widgets/loadgroupmenu.cpp:70
 #, kde-format
+msgctxt "@action"
 msgid "Manage Group"
 msgstr ""
 
@@ -445,15 +463,18 @@ msgstr ""
 
 #: src/widgets/loadtoolbutton.cpp:23
 #, kde-format
+msgctxt "@action"
 msgid "Load From File…"
 msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:20
 #, kde-format
+msgctxt "@action"
 msgid "Save As File…"
 msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:23
 #, kde-format
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr ""

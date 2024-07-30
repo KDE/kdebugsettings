@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2023-07-23 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -184,7 +184,9 @@ msgid "Edit custom rule"
 msgstr "사용자 정의 규칙 편집"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "사용함"
 
@@ -205,11 +207,14 @@ msgstr "종류:"
 #: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
 #| msgid "Add Rule..."
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "규칙 추가..."
 
 #: src/widgets/customdebuglistview.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "규칙 편집"
 
@@ -298,7 +303,9 @@ msgstr "'%2' 그룹을 '%1'(으)로 내보낼 수 없음"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "그룹 이름 바꾸기"
 
@@ -315,17 +322,21 @@ msgstr "그룹 이름을 '%1'(으)로 바꿀 수 없습니다."
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Rename Group"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "그룹 이름 바꾸기"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, fuzzy, kde-format
 #| msgid "Export Group"
+msgctxt "@action"
 msgid "Export Group…"
 msgstr "그룹 내보내기"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Groups"
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr "그룹 삭제"
 
@@ -335,7 +346,9 @@ msgid "Impossible to remove '%1'"
 msgstr "'%1'을(를) 삭제할 수 없음"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "그룹 삭제"
 
@@ -394,7 +407,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1'을(를) 열 수 없습니다. 확인하십시오."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "분류 삽입"
@@ -409,8 +421,17 @@ msgstr "분류 파일"
 msgid "Categories from file '%1' inserted."
 msgstr "'%1' 파일의 분류를 삽입했습니다."
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr "분류 삽입"
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Name"
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr "그룹 이름"
 
@@ -434,18 +455,22 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "빈 이름으로 저장할 수 없습니다. 다른 이름을 지정하십시오."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings 파일 (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "Load Debug Settings Files"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "디버그 설정 파일 불러오기"
 
@@ -455,7 +480,9 @@ msgid "Load Group"
 msgstr "그룹 불러오기"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Group"
+msgctxt "@action"
 msgid "Manage Group"
 msgstr "그룹 관리"
 
@@ -468,18 +495,21 @@ msgstr "불러오기"
 #: src/widgets/loadtoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Load From File..."
+msgctxt "@action"
 msgid "Load From File…"
 msgstr "파일에서 불러오기..."
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save As File..."
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "파일로 저장..."
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Save As Group..."
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "그룹으로 저장..."
 

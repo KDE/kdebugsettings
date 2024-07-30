@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -189,7 +189,9 @@ msgid "Edit custom rule"
 msgstr "Επεξεργασία προσαρμοσμένου κανόνα"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
@@ -210,11 +212,14 @@ msgstr "Τύπος:"
 #: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
 #| msgid "Add Rule..."
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Προσθήκη κανόνα..."
 
 #: src/widgets/customdebuglistview.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Επεξεργασία κανόνα"
 
@@ -309,7 +314,9 @@ msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Μετονομασία ομάδας"
 
@@ -327,17 +334,21 @@ msgstr "Αδυναμία μετονομασίας της ομάδας ως '%1'"
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Rename Group"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Μετονομασία ομάδας"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, fuzzy, kde-format
 #| msgid "Load Group"
+msgctxt "@action"
 msgid "Export Group…"
 msgstr "Φόρτωση ομάδας"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Groups"
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Αφαίρεση ομάδων"
 
@@ -347,7 +358,9 @@ msgid "Impossible to remove '%1'"
 msgstr "Αδυναμία αφαίρεσης του '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Αφαίρεση ομάδας"
 
@@ -406,7 +419,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' δεν μπορεί να ανοιχτεί.Παρακαλώ επαληθεύστε το."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "Εισαγωγή Κατηγοριών"
@@ -421,8 +433,17 @@ msgstr "Αρχεία Κατηγοριών"
 msgid "Categories from file '%1' inserted."
 msgstr "Οι κατηγορίες από το αρχείο '%1' εισήχθησαν."
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr "Εισαγωγή Κατηγοριών"
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Name"
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Όνομα ομάδας"
 
@@ -449,18 +470,22 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Αδυναμία αποθήκευσης με κενό όνομα. Χρησιμοποιήστε ένα νέο."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "Αποθήκευση ως"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Αρχείο KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "Load Debug Settings Files"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Φόρτωση αρχείων ρύθμισης αποσφαλμάτωσης"
 
@@ -470,7 +495,9 @@ msgid "Load Group"
 msgstr "Φόρτωση ομάδας"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Group"
+msgctxt "@action"
 msgid "Manage Group"
 msgstr "Διαχείριση ομάδας"
 
@@ -482,18 +509,21 @@ msgstr ""
 #: src/widgets/loadtoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Load From File..."
+msgctxt "@action"
 msgid "Load From File…"
 msgstr "Φόρτωση από αρχείο..."
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save As File..."
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "Αποθήκευση ως αρχείο..."
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Save As Group..."
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Αποθήκευση ως ομάδα..."
 

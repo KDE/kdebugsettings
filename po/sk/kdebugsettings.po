@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2022-04-09 19:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -188,7 +188,9 @@ msgid "Edit custom rule"
 msgstr "Upraviť vlastné pravidlo"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Povoliť"
 
@@ -209,11 +211,14 @@ msgstr "Typ:"
 #: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
 #| msgid "Add Rule..."
+msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Pridať pravidlo..."
 
 #: src/widgets/customdebuglistview.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Rule"
+msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Upraviť pravidlo"
 
@@ -311,7 +316,9 @@ msgstr "Nie je možné premenovať skupinu na '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group"
+msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Premenovať skupinu"
 
@@ -329,17 +336,21 @@ msgstr "Nie je možné premenovať skupinu na '%1'"
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
 #| msgid "Rename Group"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Premenovať skupinu"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, fuzzy, kde-format
 #| msgid "Load Group"
+msgctxt "@action"
 msgid "Export Group…"
 msgstr "Načítať skupinu"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Groups"
+msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Odstrániť skupiny"
 
@@ -349,7 +360,9 @@ msgid "Impossible to remove '%1'"
 msgstr "Nie je možné odstrániť '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Odstrániť skupiny"
 
@@ -408,7 +421,6 @@ msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' nie je možné otvoriť. Prosím, skontrolujte ho."
 
 #: src/widgets/kdebugsettingsdialog.cpp:182
-#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Insert Categories"
 msgstr "Vložiť kategórie"
@@ -423,8 +435,17 @@ msgstr "Súbory kategórií"
 msgid "Categories from file '%1' inserted."
 msgstr "Kategórie zo súboru '%1' boli vložené."
 
+#: src/widgets/kdebugsettingsdialog.cpp:196
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@title:window"
+msgid "Insert Categories"
+msgstr "Vložiť kategórie"
+
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group Name"
+msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Názov skupiny"
 
@@ -451,18 +472,22 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Nemožno uložiť ako prázdny názov. Použite nový názov."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@title:window"
 msgid "Save As"
 msgstr "Uložiť ako"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:233
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Súbor KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:233
-#, kde-format
+#: src/widgets/kdebugsettingsdialog.cpp:234
+#, fuzzy, kde-format
+#| msgid "Load Debug Settings Files"
+msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Načítať súbor pravidiel ladenia"
 
@@ -472,7 +497,9 @@ msgid "Load Group"
 msgstr "Načítať skupinu"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Group"
+msgctxt "@action"
 msgid "Manage Group"
 msgstr "Spravovať skupinu"
 
@@ -485,18 +512,21 @@ msgstr "Načítať"
 #: src/widgets/loadtoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Load From File..."
+msgctxt "@action"
 msgid "Load From File…"
 msgstr "Načítať zo súboru..."
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save As File..."
+msgctxt "@action"
 msgid "Save As File…"
 msgstr "Uložiť ako súbor..."
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
 #| msgid "Save As Group..."
+msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Uložiť ako skupinu..."
 
