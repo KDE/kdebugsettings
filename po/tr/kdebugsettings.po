@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2024-07-04 13:47+0300\n"
+"PO-Revision-Date: 2024-07-30 17:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -183,8 +183,7 @@ msgid "Edit custom rule"
 msgstr "Özel kuralı düzenle"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Etkinleştir"
@@ -202,18 +201,16 @@ msgid "Type:"
 msgstr "Tür:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Kural Ekle…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
-msgstr "Kuralı düzenle"
+msgstr "Kuralı Düzenle"
 
 #: src/widgets/customdebuglistview.cpp:52
 #: src/widgets/customdebuglistview.cpp:90
@@ -300,8 +297,7 @@ msgstr "“%2” grubu, “%1” konumuna dışa aktarılamıyor"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Grubu Yeniden Adlandır"
@@ -317,22 +313,19 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Grup, “%1” olarak yeniden adlandırılamıyor."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Grubu Yeniden Adlandır…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Grubu Dışa Aktar…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Remove Groups"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Grupları Kaldır"
@@ -343,8 +336,7 @@ msgid "Impossible to remove '%1'"
 msgstr "“%1” kaldırılamıyor"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Grubu Kaldır"
@@ -414,15 +406,13 @@ msgid "Categories from file '%1' inserted."
 msgstr "“%1” dosyasından kategoriler eklendi."
 
 #: src/widgets/kdebugsettingsdialog.cpp:196
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Kategoriler Ekle"
 
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, fuzzy, kde-format
-#| msgid "Group Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Grup Adı"
@@ -447,8 +437,7 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Boş adla kaydedilemiyor. Lütfen yeni bir tane girin."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Farklı Kaydet"
@@ -460,11 +449,10 @@ msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "K Hata Ayıklama Ayarları Dosyası (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:234
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
-msgstr "Hata Ayıklama Ayarları Dosyasını Yükle"
+msgstr "Hata Ayıklama Ayarları Dosyası Yükle"
 
 #: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
@@ -472,8 +460,7 @@ msgid "Load Group"
 msgstr "Grubu Yükle"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, fuzzy, kde-format
-#| msgid "Manage Group"
+#, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Grubu Yönet"
@@ -484,22 +471,19 @@ msgid "Load…"
 msgstr "Yükle…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File…"
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "Dosyadan Yükle…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "Dosya Olarak Farklı Kaydet…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Grup Olarak Farklı Kaydet…"
