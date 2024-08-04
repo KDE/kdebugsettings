@@ -22,6 +22,11 @@ slots:
     interface: dbus
     name: org.kde.kdebugsettings
     bus: session
+plugs:
+  dot-config-qtproject-qtlogging-ini:
+    interface: personal-files
+    write:
+      - $HOME/.config/QtProject/qtlogging.ini
 package-repositories:
   - type: apt
     components:
