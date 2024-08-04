@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:41+0000\n"
-"PO-Revision-Date: 2024-07-14 13:34+0200\n"
+"PO-Revision-Date: 2024-08-03 11:49+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -314,7 +314,7 @@ msgstr "Nie można zmienić nazwy grupy na '%1'."
 #: src/widgets/groupmanagementwidget.cpp:88
 #, kde-format
 msgid "Rename Group…"
-msgstr "Zmień nazwę grupy…"
+msgstr "Przemianuj grupę…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
