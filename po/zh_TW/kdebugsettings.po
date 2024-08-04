@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2024-07-05 15:34+0900\n"
+"PO-Revision-Date: 2024-08-03 14:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -182,11 +182,10 @@ msgid "Edit custom rule"
 msgstr "編輯自訂規則"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
-msgstr "開啟"
+msgstr "啟用"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, kde-format
@@ -201,15 +200,13 @@ msgid "Type:"
 msgstr "型態："
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "新增規則…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "編輯規則"
@@ -295,8 +292,7 @@ msgstr "無法匯出群組 '%2' 至 '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "重新命名群組"
@@ -312,22 +308,19 @@ msgid "Impossible to rename group as '%1'."
 msgstr "無法重新命名群組為 '%1'。"
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "重新命名群組…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "匯出群組…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Remove Groups"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "移除群組"
@@ -338,8 +331,7 @@ msgid "Impossible to remove '%1'"
 msgstr "無法移除 '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "移除群組"
@@ -409,15 +401,13 @@ msgid "Categories from file '%1' inserted."
 msgstr "已插入來自檔案 '%1' 的分類。"
 
 #: src/widgets/kdebugsettingsdialog.cpp:196
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "插入類別"
 
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, fuzzy, kde-format
-#| msgid "Group Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "群組名稱"
@@ -442,8 +432,7 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "無法另存為空白名稱。請選擇一個新的。"
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "另存為"
@@ -455,8 +444,7 @@ msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings 檔案 (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:234
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "載入除錯設定檔"
@@ -467,8 +455,7 @@ msgid "Load Group"
 msgstr "載入群組"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, fuzzy, kde-format
-#| msgid "Manage Group"
+#, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "管理群組"
@@ -479,22 +466,19 @@ msgid "Load…"
 msgstr "載入…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File…"
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "從檔案載入…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "另存為檔案…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "另存為群組…"

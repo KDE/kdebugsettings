@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2024-07-14 13:34+0200\n"
+"PO-Revision-Date: 2024-08-03 11:49+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -184,8 +184,7 @@ msgid "Edit custom rule"
 msgstr "Dostosuj własną zasadę"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Włącz"
@@ -203,15 +202,13 @@ msgid "Type:"
 msgstr "Rodzaj:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Dodaj zasadę…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Zmień zasadę"
@@ -303,8 +300,7 @@ msgstr "Nie można wyeksportować grupy '%2' na '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Przemianuj grupę"
@@ -320,22 +316,19 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Nie można zmienić nazwy grupy na '%1'."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Zmień nazwę grupy…"
+msgstr "Przemianuj grupę…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Wyeksportuj grupę…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Remove Groups"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Usuń grupy"
@@ -346,8 +339,7 @@ msgid "Impossible to remove '%1'"
 msgstr "Nie można usunąć '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Usuń grupę"
@@ -417,15 +409,13 @@ msgid "Categories from file '%1' inserted."
 msgstr "Wstawiono kategorie z pliku '%1'."
 
 #: src/widgets/kdebugsettingsdialog.cpp:196
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Wstaw kategorie"
 
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, fuzzy, kde-format
-#| msgid "Group Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Nazwa grupy"
@@ -450,8 +440,7 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Nie można zapisać bez nazwy. Wpisz jakąś nazwę."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Zapisz jako"
@@ -463,8 +452,7 @@ msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Plik KDebugSettings (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:234
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Wczytaj pliki ustawień programu diagnostycznego"
@@ -475,8 +463,7 @@ msgid "Load Group"
 msgstr "Wczytaj grupę"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, fuzzy, kde-format
-#| msgid "Manage Group"
+#, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Zarządzaj grupą"
@@ -487,22 +474,19 @@ msgid "Load…"
 msgstr "Wczytaj…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File…"
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "Wczytaj z pliku…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "Zapisz jako plik…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Zapisz jako grupę…"
