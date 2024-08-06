@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2024-07-10 21:35+0200\n"
+"PO-Revision-Date: 2024-08-06 01:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -186,8 +186,7 @@ msgid "Edit custom rule"
 msgstr "Editatu norberak finkatutako araua"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Gaitu"
@@ -205,15 +204,13 @@ msgid "Type:"
 msgstr "Mota:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Gehitu araua..."
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Editatu araua"
@@ -303,8 +300,7 @@ msgstr "Ezinezkoa da '%2' taldea '%1'(e)ra esportatzea"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Berrizendatu taldea"
@@ -320,22 +316,19 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Ezinezkoa da taldea '%1' gisa berrizendatzea."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Berrizendatu taldea..."
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Esportatu taldea..."
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Remove Groups"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Kendu taldeak"
@@ -346,8 +339,7 @@ msgid "Impossible to remove '%1'"
 msgstr "Ezin da «%1» kendu"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Kendu taldea"
@@ -417,15 +409,13 @@ msgid "Categories from file '%1' inserted."
 msgstr "'%1' fitxategiko kategoriak sartu dira."
 
 #: src/widgets/kdebugsettingsdialog.cpp:196
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Txertatu kategoriak"
 
 #: src/widgets/kdebugsettingsdialog.cpp:204
-#, fuzzy, kde-format
-#| msgid "Group Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Taldearen izena"
@@ -450,8 +440,7 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Ezin da gorde izen huts gisa. Mesedez, erabili izen berri bat."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Gorde honela"
@@ -463,11 +452,10 @@ msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings fitxategia (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:234
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
-msgstr "Kargatu arazteko ezarpenen fitxategiak"
+msgstr "Zamatu arazteko ezarpenen fitxategiak"
 
 #: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
@@ -475,8 +463,7 @@ msgid "Load Group"
 msgstr "Zamatu taldea"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, fuzzy, kde-format
-#| msgid "Manage Group"
+#, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Kudeatu taldea"
@@ -487,25 +474,22 @@ msgid "Load…"
 msgstr "Zamatu…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File…"
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "Zamatu fitxategitik..."
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
-msgstr "Gorde ...fitxategi gisa"
+msgstr "Gorde ... fitxategi gisa"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
-msgstr "Gorde ...talde gisa"
+msgstr "Gorde ... talde gisa"
 
 #~ msgid "Edit..."
 #~ msgstr "Editatu..."
