@@ -10,6 +10,7 @@ target_link_libraries(kdebugsettings
     KF6::I18n
     libkdebugsettings
     KF6::IconThemes
+    KF6::Crash
 )
 
 if(TARGET KF6::DBusAddons)

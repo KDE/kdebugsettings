@@ -38,6 +38,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     XmlGui
     IconThemes
+    Crash
 )
 
 if(NOT WIN32 AND NOT APPLE)

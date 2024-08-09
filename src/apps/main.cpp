@@ -9,9 +9,9 @@
 
 #include "jobs/changedebugmodejob.h"
 #include "kdebugsettingsdialog.h"
-#include <config-kdebugsettings.h>
-
 #include <KAboutData>
+#include <KCrash>
+#include <config-kdebugsettings.h>
 #if HAVE_KDBUSADDONS
 #include <KDBusService>
 #endif
@@ -49,6 +49,7 @@ int main(int argc, char **argv)
 #endif
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("debug-run")));
     KAboutData::setApplicationData(aboutData);
+    KCrash::initialize();
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
