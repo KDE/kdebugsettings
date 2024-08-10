@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:43+0000\n"
+"POT-Creation-Date: 2024-08-10 00:45+0000\n"
 "PO-Revision-Date: 2024-07-30 10:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:57 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -55,22 +55,22 @@ msgstr ""
 "Activa el mode de prova «QStandardPaths», és a dir, la configuració de "
 "lectura/escriptura utilitzada per a les proves unitàries"
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Activa la depuració completa per a tots els mòduls."
 
-#: src/apps/main.cpp:61 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:62 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Desactiva la depuració completa per a tots els mòduls."
 
-#: src/apps/main.cpp:65 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Canvia el mode de depuració com a consola (en la consola)"
 
-#: src/apps/main.cpp:69 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:70 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -78,7 +78,7 @@ msgstr ""
 "Especifica el nom de la categoria de registre que es vol canviar en el mode "
 "depuració (en la consola)"
 
-#: src/apps/main.cpp:83 src/apps/main.cpp:93 src/apps/main.cpp:103
+#: src/apps/main.cpp:84 src/apps/main.cpp:94 src/apps/main.cpp:104
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format

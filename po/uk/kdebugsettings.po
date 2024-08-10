@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:43+0000\n"
+"POT-Creation-Date: 2024-08-10 00:45+0000\n"
 "PO-Revision-Date: 2024-07-30 09:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -46,7 +46,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:57 src/quickapps/main.cpp:47
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,22 +54,22 @@ msgstr ""
 "Увімкнути режим перевірки QStandardPaths, тобто параметрів читання та "
 "запису, які використовуються у перевірках модулів"
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:50
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Увімкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:61 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:62 src/quickapps/main.cpp:52
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Вимкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:65 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:56
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Змінити режим діагностики як консолі (у консолі)"
 
-#: src/apps/main.cpp:69 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:70 src/quickapps/main.cpp:60
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -77,7 +77,7 @@ msgstr ""
 "Вкажіть назву категорії журналу, для якої ви хочете змінити режим "
 "діагностики (у консолі)"
 
-#: src/apps/main.cpp:83 src/apps/main.cpp:93 src/apps/main.cpp:103
+#: src/apps/main.cpp:84 src/apps/main.cpp:94 src/apps/main.cpp:104
 #: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
 #: src/quickapps/main.cpp:94
 #, kde-format
