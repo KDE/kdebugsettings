@@ -37,7 +37,6 @@ msgstr "© 2015–%1 kdebugsettings-utviklarane"
 
 #: src/apps/main.cpp:47 src/quickapps/main.cpp:41
 #, fuzzy, kde-format
-#| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -167,9 +166,6 @@ msgstr "© %1 kdebugsettings-utviklarane"
 
 #: src/widgets/categorywarning.cpp:16
 #, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
@@ -196,21 +192,18 @@ msgstr "Slå på"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, fuzzy, kde-format
-#| msgid "Category:"
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategori:"
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, fuzzy, kde-format
-#| msgid "Type:"
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Type:"
 
 #: src/widgets/customdebuglistview.cpp:44
 #, fuzzy, kde-format
-#| msgid "Add Rule..."
 msgid "Add Rule…"
 msgstr "Legg til regel …"
 
@@ -242,7 +235,6 @@ msgstr ""
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, fuzzy, kde-format
-#| msgid "Remove..."
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Fjern …"
@@ -250,7 +242,6 @@ msgstr "Fjern …"
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Søk …"
@@ -322,13 +313,11 @@ msgstr "Ikkje mogleg å endra namn på gruppe til «%1»."
 
 #: src/widgets/groupmanagementwidget.cpp:88
 #, fuzzy, kde-format
-#| msgid "Rename Group"
 msgid "Rename Group…"
 msgstr "Endra namn på gruppe"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, fuzzy, kde-format
-#| msgid "Export Group"
 msgid "Export Group…"
 msgstr "Eksporter gruppe"
 
@@ -349,21 +338,18 @@ msgstr "Fjern gruppe"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, fuzzy, kde-format
-#| msgid "Enable All Debug"
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Slå på all feilsøking"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, fuzzy, kde-format
-#| msgid "Turn Off Debug"
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Slå av feilsøking"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
 #, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Slå av alle meldingar"
@@ -385,13 +371,11 @@ msgstr "Regeldefinisjonar med miljøvariabel"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, fuzzy, kde-format
-#| msgid "Save As"
 msgid "Save As…"
 msgstr "Lagra som"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, fuzzy, kde-format
-#| msgid "Insert..."
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Set inn …"
@@ -474,18 +458,15 @@ msgstr ""
 
 #: src/widgets/loadtoolbutton.cpp:23
 #, fuzzy, kde-format
-#| msgid "Load From File..."
 msgid "Load From File…"
 msgstr "Hent frå fil …"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, fuzzy, kde-format
-#| msgid "Save As File..."
 msgid "Save As File…"
 msgstr "Lagra som fil …"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, fuzzy, kde-format
-#| msgid "Save As Group..."
 msgid "Save As Group…"
 msgstr "Lagra som gruppe …"
