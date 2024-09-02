@@ -49,9 +49,12 @@ void CustomDebugListView::slotCustomContextMenuRequested(const QPoint &pos)
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18np("Remove Rule", "Remove Rules", selectedItemCount), this, [this, selectedIndexes]() {
-            slotRemoveRules(selectedIndexes);
-        });
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")),
+                       i18np("Remove Rule", "Remove Rules", selectedItemCount),
+                       this,
+                       [this, selectedIndexes]() {
+                           slotRemoveRules(selectedIndexes);
+                       });
     }
     menu.exec(viewport()->mapToGlobal(pos));
 }
