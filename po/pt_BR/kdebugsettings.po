@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:45+0000\n"
+"POT-Creation-Date: 2024-09-03 00:41+0000\n"
 "PO-Revision-Date: 2023-07-04 14:24-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -223,15 +223,15 @@ msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Editar regra"
 
-#: src/widgets/customdebuglistview.cpp:52
-#: src/widgets/customdebuglistview.cpp:90
+#: src/widgets/customdebuglistview.cpp:53
+#: src/widgets/customdebuglistview.cpp:93
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Remover regra"
 msgstr[1] "Remover regras"
 
-#: src/widgets/customdebuglistview.cpp:85
+#: src/widgets/customdebuglistview.cpp:88
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
