@@ -219,12 +219,11 @@ msgstr "Επεξεργασία κανόνα"
 
 #: src/widgets/customdebuglistview.cpp:53
 #: src/widgets/customdebuglistview.cpp:93
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Αφαίρεση κανόνα"
-msgstr[1] "Αφαίρεση κανόνα"
+msgstr[1] "Αφαίρεση κανόνων"
 
 #: src/widgets/customdebuglistview.cpp:88
 #, kde-format
