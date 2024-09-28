@@ -28,6 +28,7 @@ include(ECMAddTests)
 include(ECMQtDeclareLoggingCategory)
 include(GenerateExportHeader)
 include(ECMDeprecationSettings)
+include(ECMCheckOutboundLicense)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
@@ -91,3 +92,8 @@ install(FILES data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGOR
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+
+file(GLOB_RECURSE ALL_SOURCE_FILES srx/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
+ecm_check_outbound_license(LICENSES BSD-3-Clause  CC0-1.0  LGPL-2.0-or-later  FILES ${ALL_SOURCE_FILES})
+
