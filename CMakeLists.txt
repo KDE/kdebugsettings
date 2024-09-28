@@ -95,5 +95,5 @@ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAG
 
 
 file(GLOB_RECURSE ALL_SOURCE_FILES srx/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
-ecm_check_outbound_license(LICENSES BSD-3-Clause  CC0-1.0  LGPL-2.0-or-later  FILES ${ALL_SOURCE_FILES})
+ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
