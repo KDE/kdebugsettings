@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2024 Laurent Mont./resources/imap/akonadi_imap_resource.notifyrcel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 # KDE Application Version, managed by release script
 cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
@@ -94,6 +94,6 @@ ki18n_install(po)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 
-file(GLOB_RECURSE ALL_SOURCE_FILES srx/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
+file(GLOB_RECURSE ALL_SOURCE_FILES src/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
