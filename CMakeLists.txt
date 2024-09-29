@@ -94,6 +94,6 @@ ki18n_install(po)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 
-file(GLOB_RECURSE ALL_SOURCE_FILES src/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
+file(GLOB_RECURSE ALL_SOURCE_FILES src/quickapps/*.cpp src/quickapps/*.h src/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
