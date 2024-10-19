@@ -15,8 +15,10 @@ target_link_libraries(kdebugsettingsquick
     Qt::Quick
     Qt::QuickControls2
     Qt::Widgets
-
 )
+if(TARGET KF6::I18nQml)
+    target_link_libraries(kdebugsettingsquick KF6::I18nQml)
+endif()
 
 install(TARGETS kdebugsettingsquick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

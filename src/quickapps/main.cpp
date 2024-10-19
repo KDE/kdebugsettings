@@ -8,6 +8,7 @@
 #include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
+#include "ki18n_version.h"
 #include "loggingmanager.h"
 #include "model/categorytypeproxymodel.h"
 #include "model/customloggingcategorymodel.h"
@@ -21,6 +22,10 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QStandardPaths>
+
+#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+#include <KLocalizedQmlContext>
+#endif
 
 #include <QQmlApplicationEngine>
 #include <QUrl>
@@ -108,8 +113,11 @@ int main(int argc, char **argv)
         qmlRegisterSingletonType("org.kde.kdebugsettings", 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
             return engine->toScriptValue(KAboutData::applicationData());
         });
-
+#if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
         engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+#else
+        engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
+#endif
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
