@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-31 01:26+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:36
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:39 src/quickapps/main.cpp:38
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Configura le impostazioni di debug"
@@ -33,18 +33,18 @@ msgstr "Configura le impostazioni di debug"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015-%1 Gli autori di kdebugsettings"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabile"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:57 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -52,22 +52,22 @@ msgstr ""
 "Abilita modalità di prova QStandardPaths, cioè impostazioni di lettura/"
 "scrittura utilizzate da unittests"
 
-#: src/apps/main.cpp:60 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Attiva il debug completo per tutti i moduli."
 
-#: src/apps/main.cpp:62 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:62 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Disabilita il debug completo per tutti i moduli."
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Cambia la modalità di debug come console (in console)"
 
-#: src/apps/main.cpp:70 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:70 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -76,8 +76,8 @@ msgstr ""
 "desideri cambiare la modalità di debug (in console)"
 
 #: src/apps/main.cpp:84 src/apps/main.cpp:94 src/apps/main.cpp:104
-#: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
-#: src/quickapps/main.cpp:94
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Impossibile cambiare la modalità di debug"
@@ -157,7 +157,7 @@ msgstr "Messaggi critici"
 msgid "No Debug Messages"
 msgstr "Nessun messaggio di debug"
 
-#: src/quickapps/main.cpp:40
+#: src/quickapps/main.cpp:45
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "© %1 Gli autori di kdebugsettings"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 10:05+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,12 +18,12 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:36
+#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:39 src/quickapps/main.cpp:38
+#: src/apps/main.cpp:39 src/quickapps/main.cpp:43
 #, kde-format
 msgid "Configure debug settings"
 msgstr "הגדרת תצורת ניפוי שגיאות"
@@ -33,18 +33,18 @@ msgstr "הגדרת תצורת ניפוי שגיאות"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015‏-%1 יוצרי kdebugsettings"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
 #, kde-format
 msgid "Maintainer"
 msgstr "מתחזק"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:47
+#: src/apps/main.cpp:57 src/quickapps/main.cpp:52
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -52,30 +52,30 @@ msgstr ""
 "הפעלת מצב בדיקה של QStandardPaths, כלומר: הגדרות קריאה/כתיבה שמשמשות את "
 "בדיקות היחידה"
 
-#: src/apps/main.cpp:60 src/quickapps/main.cpp:50
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:55
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "הפעלת ניפוי שגיאות מלא לכל המודולים."
 
-#: src/apps/main.cpp:62 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:62 src/quickapps/main.cpp:57
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "השבתת ניפוי שגיאות מלא לכל המודולים."
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:56
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:61
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "שינוי מצב ניפוי שגיאות כמסוף (במסוף)"
 
-#: src/apps/main.cpp:70 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:70 src/quickapps/main.cpp:65
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr "נא לציין שם קטגוריית תיעוד לשינוי מצב ניפוי השגיאות שלה (במסוף)"
 
 #: src/apps/main.cpp:84 src/apps/main.cpp:94 src/apps/main.cpp:104
-#: src/quickapps/main.cpp:74 src/quickapps/main.cpp:84
-#: src/quickapps/main.cpp:94
+#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
+#: src/quickapps/main.cpp:99
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "אי אפשר לשנות את מצב ניפוי השגיאות"
@@ -155,7 +155,7 @@ msgstr "הודעות משמעותיות"
 msgid "No Debug Messages"
 msgstr "ללא הודעות ניפוי שגיאות"
 
-#: src/quickapps/main.cpp:40
+#: src/quickapps/main.cpp:45
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 יוצרי kdebugsettings"
