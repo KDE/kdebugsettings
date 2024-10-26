@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-20 00:42+0000\n"
-"PO-Revision-Date: 2024-09-23 15:20+0300\n"
+"PO-Revision-Date: 2024-10-25 19:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
@@ -167,7 +167,7 @@ msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"‘*=true’ veya ‘*=false’ şeklinde bir özel kural var; bu özel kural, bazı "
+"“*=true” veya “*=false” şeklinde bir özel kural var; bu özel kural, bazı "
 "belirli kuralları geçersiz kılabilir. Onu kaldırmak en iyisidir."
 
 #: src/widgets/configurecustomsettingdialog.cpp:23
@@ -256,7 +256,7 @@ msgstr "Ekle…"
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr "‘QT_LOGGING_RULES’ çevre değişkeninde tanımlı bir kural yok."
+msgstr "“QT_LOGGING_RULES” çevre değişkeninde tanımlı bir kural yok."
 
 #: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
