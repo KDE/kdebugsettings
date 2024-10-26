@@ -26,7 +26,9 @@ Q_SIGNALS:
     void groupsChanged();
 
 private:
-    enum { FullPathRole = Qt::UserRole + 1 };
+    enum {
+        FullPathRole = Qt::UserRole + 1
+    };
     LIBKDEBUGSETTINGS_NO_EXPORT void init();
     LIBKDEBUGSETTINGS_NO_EXPORT void renameGroup(QListWidgetItem *item);
     LIBKDEBUGSETTINGS_NO_EXPORT void exportGroup(QListWidgetItem *item);
