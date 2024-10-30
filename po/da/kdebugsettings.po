@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Martin Schlander <mschlander@opensuse.org>, 2015, 2017, 2020.
 # scootergrisen, 2017-2018.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-20 00:42+0000\n"
-"PO-Revision-Date: 2020-07-21 17:54+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-10-29 10:41+0100\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: src/apps/main.cpp:37 src/quickapps/main.cpp:41
 #, kde-format
@@ -28,14 +29,12 @@ msgid "Configure debug settings"
 msgstr "Indstil fejlsøgningsindstillinger"
 
 #: src/apps/main.cpp:41
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2020 kdebugsettings authors"
+#, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "(c) 2015-2020 kdebugsettings authors"
+msgstr "(c) 2015-%1 kdebugsettings-forfattere"
 
 #: src/apps/main.cpp:42 src/quickapps/main.cpp:46
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -159,22 +158,18 @@ msgid "No Debug Messages"
 msgstr "Ingen fejlsøgningsmeddelelser"
 
 #: src/quickapps/main.cpp:45
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2020 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) 2015-2020 kdebugsettings authors"
+msgstr "(c) %1 kdebugsettings-forfattere"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Du har en regel som '*=true' eller '*=false' hvilket vil tilsidesætte alle "
-"dine bestemte regler. Det er bedre at fjerne den."
+"En tilpasset regel '*=true' eller '*=false' er til stede, hvilket kan "
+"tilsidesætte mere specifikke regler. Det er bedst at fjerne den."
 
 #: src/widgets/configurecustomsettingdialog.cpp:23
 #, kde-format
@@ -189,50 +184,42 @@ msgid "Edit custom rule"
 msgstr "Redigér tilpasset regel"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Aktivér"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategori:"
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Type:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
-msgstr "Redigér tilpasset regel"
+msgstr "Tilføj regel…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
-msgstr "Redigér tilpasset regel"
+msgstr "Redigér regel"
 
 #: src/widgets/customdebuglistview.cpp:53
 #: src/widgets/customdebuglistview.cpp:93
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Fjern..."
-msgstr[1] "Fjern..."
+msgstr[0] "Fjern regel"
+msgstr[1] "Fjern regler"
 
 #: src/widgets/customdebuglistview.cpp:88
 #, kde-format
@@ -245,28 +232,26 @@ msgstr[1] "Vil du fjerne disse %1 regler?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr ""
+msgstr "Redigér…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
-msgstr "Fjern..."
+msgstr "Fjern…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Søg..."
+msgstr "Søg…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Tilføj…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -293,96 +278,85 @@ msgstr "Nuværende regler:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
-msgstr ""
+msgstr "Håndtér gruppe"
 
 #: src/widgets/groupmanagementwidget.cpp:49
 #: src/widgets/groupmanagementwidget.cpp:52
 #: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Export Group"
-msgstr ""
+msgstr "Eksportér gruppe"
 
 #: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Gruppe eksporteret til %1"
 
 #: src/widgets/groupmanagementwidget.cpp:54
-#, fuzzy, kde-format
-#| msgid "Impossible to change debug mode"
+#, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr "Kan ikke skifte fejlsøgningstilstand"
+msgstr "Kan ikke eksportere gruppe '%2' til '%1'."
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
-msgstr "Gem som..."
+msgstr "Omdøb gruppe"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #, kde-format
 msgid "New Name:"
-msgstr ""
+msgstr "Nyt navn:"
 
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Impossible to change debug mode"
+#, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr "Kan ikke skifte fejlsøgningstilstand"
+msgstr "Kan ikke omdøbe gruppe som '%1'."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Gem som..."
+msgstr "Omdøb gruppe…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Export Group…"
-msgstr "Gem som..."
+msgstr "Eksportér gruppe…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
-msgstr "Gem som..."
+msgstr "Fjern grupper"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Impossible to change debug mode"
+#, kde-format
 msgid "Impossible to remove '%1'"
-msgstr "Kan ikke skifte fejlsøgningstilstand"
+msgstr "Kan ikke fjerne '%1'"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
-msgstr "Gem som..."
+msgstr "Fjern gruppe"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Aktivér all fejlsøgning"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Sluk fejlsøgning"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Slå alle meddelelser fra"
@@ -403,17 +377,15 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Regelindstillinger med miljøvariabel"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Gem som"
+msgstr "Gem som…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
-msgstr "Indsæt..."
+msgstr "Indsæt…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:156
 #, kde-format
@@ -433,11 +405,10 @@ msgstr "Kategorifiler"
 #: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr ""
+msgstr "Kategorier fra fil '%1' indsat."
 
 #: src/widgets/kdebugsettingsdialog.cpp:196
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Indsæt kategorier"
@@ -446,12 +417,12 @@ msgstr "Indsæt kategorier"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
-msgstr ""
+msgstr "Gruppenavn"
 
 #: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Navn:"
 
 #: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
@@ -459,15 +430,16 @@ msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
+"<b>'%1'</b> bruges allerede som et gruppenavn.\n"
+"Gem venligst som et andet navn."
 
 #: src/widgets/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr ""
+msgstr "Kan ikke gemme som tomt navn. Brug venligst et nyt et."
 
 #: src/widgets/kdebugsettingsdialog.cpp:225
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Gem som"
@@ -479,8 +451,7 @@ msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings-fil (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:234
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Indlæs fejlsøgningsfiler"
@@ -488,41 +459,36 @@ msgstr "Indlæs fejlsøgningsfiler"
 #: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
 msgid "Load Group"
-msgstr ""
+msgstr "Indlæs gruppe"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Manage Group"
-msgstr "Gem som..."
+msgstr "Håndtér gruppe"
 
 #: src/widgets/loadtoolbutton.cpp:19
-#, fuzzy, kde-format
-#| msgid "Load"
+#, kde-format
 msgid "Load…"
-msgstr "Indlæs"
+msgstr "Indlæs…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
-msgstr "Gem som..."
+msgstr "Indlæs fra fil…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
-msgstr "Gem som..."
+msgstr "Gem som fil…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
-msgstr "Gem som..."
+msgstr "Gem som gruppe…"
 
 #~ msgid "Edit..."
 #~ msgstr "Redigér..."
