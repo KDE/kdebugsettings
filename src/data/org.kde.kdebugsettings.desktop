@@ -130,6 +130,7 @@ Keywords=log;logging;category;categories;journal;logging levels;debug
 Keywords[az]=log;logging;category;categories;journal;logging levels;debug;jurnal;jurnalllama;kateqoriyalar;jurnallama səviyyələri;sazlama
 Keywords[ca]=registre;enregistrament;categoria;categories;diari;nivells de registre;depuració
 Keywords[ca@valencia]=registre;gravació;categoria;categories;diari;nivells de registre;depuració
+Keywords[da]=log;logning;kategori;kategorier;journal;logningsniveauer;debug
 Keywords[de]=protokoll;fehlersuche
 Keywords[el]=log;καταγραφή;κατηγορία;κατηγορίες;χρονικό;επίπεδο καταγραφής;αποσφαλμάτωση
 Keywords[en_GB]=log;logging;category;categories;journal;logging levels;debug
