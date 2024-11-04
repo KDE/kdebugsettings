@@ -91,7 +91,7 @@ add_subdirectory(data/groups)
 install(FILES data/kde.renamecategories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
-feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 
 file(GLOB_RECURSE ALL_SOURCE_FILES src/quickapps/*.cpp src/quickapps/*.h src/core/*.cpp src/core/*.h src/apps/*.h src/apps/*.cpp src/widgets/*.cpp src/widgets/*.h)
