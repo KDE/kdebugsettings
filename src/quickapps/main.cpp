@@ -5,7 +5,11 @@
 
 */
 
+#include "ki18n_version.h"
 #include <QApplication>
+#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+#include <KLocalizedQmlContext>
+#endif
 
 #include "jobs/changedebugmodejob.h"
 #include "ki18n_version.h"
@@ -18,14 +22,14 @@
 #include <config-kdebugsettings.h>
 
 #include <KAboutData>
+#if WITH_DBUS
 #include <KDBusService>
+#else
+#include <kdsingleapplication.h>
+#endif
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QStandardPaths>
-
-#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-#include <KLocalizedQmlContext>
-#endif
 
 #include <QQmlApplicationEngine>
 #include <QUrl>
@@ -36,6 +40,9 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+#if !WITH_DBUS
+    KDSingleApplication sapp;
+#endif
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("kdebugsettings"));
     KAboutData aboutData(QStringLiteral("kdebugsettingsquick"),
                          i18n("KDebugSettings"),
@@ -100,7 +107,13 @@ int main(int argc, char **argv)
         }
         return 1;
     } else {
+#if WITH_DBUS
         KDBusService service(KDBusService::Unique);
+#else
+        if (!sapp.isPrimaryInstance()) {
+            return 0;
+        }
+#endif
         QQmlApplicationEngine engine;
 
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &LoggingManager::self());

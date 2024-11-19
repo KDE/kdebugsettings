@@ -15,6 +15,8 @@ target_link_libraries(kdebugsettings
 
 if(TARGET KF6::DBusAddons)
     target_link_libraries(kdebugsettings KF6::DBusAddons)
+else()
+    target_link_libraries(kdebugsettings KDAB::kdsingleapplication)
 endif()
 
 install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

@@ -5,6 +5,7 @@
 
 */
 
+#include "config-kdebugsettings.h"
 #include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
@@ -12,8 +13,10 @@
 #include <KAboutData>
 #include <KCrash>
 #include <config-kdebugsettings.h>
-#if HAVE_KDBUSADDONS
+#if WITH_DBUS
 #include <KDBusService>
+#else
+#include <kdsingleapplication.h>
 #endif
 #include <KLocalizedString>
 #include <QCommandLineParser>
@@ -32,6 +35,9 @@ int main(int argc, char **argv)
 {
     KIconTheme::initTheme();
     QApplication app(argc, argv);
+#if !WITH_DBUS
+    KDSingleApplication sapp;
+#endif
 
     KAboutData aboutData(QStringLiteral("kdebugsettings"),
                          i18n("KDebugSettings"),
@@ -105,8 +111,12 @@ int main(int argc, char **argv)
         }
         return 1;
     } else {
-#if HAVE_KDBUSADDONS
+#if WITH_DBUS
         KDBusService service(KDBusService::Unique);
+#else
+        if (!sapp.isPrimaryInstance()) {
+            return 0;
+        }
 #endif
         auto dialog = new KDebugSettingsDialog;
         const int ret = dialog->exec();

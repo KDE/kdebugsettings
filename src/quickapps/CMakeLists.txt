@@ -10,12 +10,16 @@ endif()
 target_link_libraries(kdebugsettingsquick
     KF6::I18n
     KF6::CoreAddons
-    KF6::DBusAddons
     libkdebugsettingscore
     Qt::Quick
     Qt::QuickControls2
     Qt::Widgets
 )
+if(TARGET KF6::DBusAddons)
+    target_link_libraries(kdebugsettingsquick KF6::DBusAddons)
+else()
+    target_link_libraries(kdebugsettingsquick KDAB::kdsingleapplication)
+endif()
 if(TARGET KF6::I18nQml)
     target_link_libraries(kdebugsettingsquick KF6::I18nQml)
 endif()
