@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-20 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:42+0000\n"
 "PO-Revision-Date: 2023-07-29 12:32+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:76
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:39 src/quickapps/main.cpp:43
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:78
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Set opp feilsøkingsinnstillingar"
 
-#: src/apps/main.cpp:41
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015–%1 kdebugsettings-utviklarane"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
 #, fuzzy, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
 #, kde-format
 msgid "Maintainer"
 msgstr "Vedlikehaldar"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:87
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,32 +54,32 @@ msgstr ""
 "Slå på QStandardPaths-testmodus, dvs. lese- og skriveinnstillingane brukt av "
 "einingstestar."
 
-#: src/apps/main.cpp:60 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:90
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Slå på full feilsøking for alle modular."
 
-#: src/apps/main.cpp:62 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:68 src/quickapps/main.cpp:92
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Slå av full feilsøking for alle modular."
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:61
+#: src/apps/main.cpp:72 src/quickapps/main.cpp:96
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Byt feilsøkingsmodus som konsoll (i konsoll)."
 
 # Dårleg engelsk grammatikk, men det ser ut til at det er dette som er meint.
-#: src/apps/main.cpp:70 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:76 src/quickapps/main.cpp:100
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 "Vel namn på loggkategorien som du vil endra feilsøkingsmodus for (i konsoll)."
 
-#: src/apps/main.cpp:84 src/apps/main.cpp:94 src/apps/main.cpp:104
-#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
-#: src/quickapps/main.cpp:99
+#: src/apps/main.cpp:90 src/apps/main.cpp:100 src/apps/main.cpp:110
+#: src/quickapps/main.cpp:114 src/quickapps/main.cpp:124
+#: src/quickapps/main.cpp:134
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Kan ikkje endra feilsøkingsmodus"
@@ -159,7 +159,7 @@ msgstr "Kritiske meldingar"
 msgid "No Debug Messages"
 msgstr "Ingen feilsøkingsmeldingar"
 
-#: src/quickapps/main.cpp:45
+#: src/quickapps/main.cpp:80
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "© %1 kdebugsettings-utviklarane"

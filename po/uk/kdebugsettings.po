@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-20 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 09:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: src/apps/main.cpp:37 src/quickapps/main.cpp:41
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:76
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:39 src/quickapps/main.cpp:43
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:78
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Налаштовування параметрів діагностики"
 
-#: src/apps/main.cpp:41
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© Автори kdebugsettings, 2015–%1"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:46
+#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:52
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:87
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,22 +54,22 @@ msgstr ""
 "Увімкнути режим перевірки QStandardPaths, тобто параметрів читання та "
 "запису, які використовуються у перевірках модулів"
 
-#: src/apps/main.cpp:60 src/quickapps/main.cpp:55
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:90
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Увімкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:62 src/quickapps/main.cpp:57
+#: src/apps/main.cpp:68 src/quickapps/main.cpp:92
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Вимкнути повну діагностику для усіх модулів."
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:61
+#: src/apps/main.cpp:72 src/quickapps/main.cpp:96
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Змінити режим діагностики як консолі (у консолі)"
 
-#: src/apps/main.cpp:70 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:76 src/quickapps/main.cpp:100
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -77,9 +77,9 @@ msgstr ""
 "Вкажіть назву категорії журналу, для якої ви хочете змінити режим "
 "діагностики (у консолі)"
 
-#: src/apps/main.cpp:84 src/apps/main.cpp:94 src/apps/main.cpp:104
-#: src/quickapps/main.cpp:79 src/quickapps/main.cpp:89
-#: src/quickapps/main.cpp:99
+#: src/apps/main.cpp:90 src/apps/main.cpp:100 src/apps/main.cpp:110
+#: src/quickapps/main.cpp:114 src/quickapps/main.cpp:124
+#: src/quickapps/main.cpp:134
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Неможливо змінити режим діагностики"
@@ -159,7 +159,7 @@ msgstr "Критичні повідомлення"
 msgid "No Debug Messages"
 msgstr "Без діагностичних повідомлень"
 
-#: src/quickapps/main.cpp:45
+#: src/quickapps/main.cpp:80
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "© Автори kdebugsettings, %1"
