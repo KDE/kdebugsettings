@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:42+0000\n"
+"POT-Creation-Date: 2024-11-23 00:43+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -394,44 +394,44 @@ msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Εισαγωγή…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:156
+#: src/widgets/kdebugsettingsdialog.cpp:162
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' δεν μπορεί να ανοιχτεί.Παρακαλώ επαληθεύστε το."
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:188
 #, kde-format
 msgid "Insert Categories"
 msgstr "Εισαγωγή Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:188
 #, kde-format
 msgid "Categories Files"
 msgstr "Αρχεία Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Οι κατηγορίες από το αρχείο '%1' εισήχθησαν."
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Εισαγωγή Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Όνομα ομάδας"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgid "Name:"
 msgstr "Όνομα:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:215
 #, fuzzy, kde-format
 #| msgid ""
 #| "'%1' is already used as a group name.\n"
@@ -443,24 +443,24 @@ msgstr ""
 "Το '%1' χρησιμοποιείται ήδη ως όνομα ομάδας.\n"
 "Αποθηκεύστε με άλλο όνομα."
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:224
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Αδυναμία αποθήκευσης με κενό όνομα. Χρησιμοποιήστε ένα νέο."
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Αποθήκευση ως"
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:240
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Αρχείο KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:240
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"

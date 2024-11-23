@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:42+0000\n"
+"POT-Creation-Date: 2024-11-23 00:43+0000\n"
 "PO-Revision-Date: 2023-06-30 11:52+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -406,46 +406,46 @@ msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Daxil etmək..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:156
+#: src/widgets/kdebugsettingsdialog.cpp:162
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "\"%1\" açıla bilmir. Lütfən, icazə verin."
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:188
 #, kde-format
 msgid "Insert Categories"
 msgstr "Kateqoriyalar daxil etmək"
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:188
 #, kde-format
 msgid "Categories Files"
 msgstr "Kateqoriya faylları"
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "\"%1\" faylından kateqoriyalar əlavə edildi."
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:202
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Kateqoriyalar daxil etmək"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, fuzzy, kde-format
 #| msgid "Group Name"
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Qrup adı"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgid "Name:"
 msgstr "Adı:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:215
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -454,25 +454,25 @@ msgstr ""
 "<b>\"%1\"</b> artıq qrup adı kimi istifadə olunur.\n"
 "Lütfən başqa adla saxlayın."
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:224
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Ad boş saxlanıla bilməz. Yenisini istifadə edin."
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:231
 #, fuzzy, kde-format
 #| msgid "Save As"
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Belə Saxlayın"
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:240
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings tətbiqi faylı (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:240
 #, fuzzy, kde-format
 #| msgid "Load Debug Settings Files"
 msgctxt "@title:window"
