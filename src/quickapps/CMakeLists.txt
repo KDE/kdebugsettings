@@ -14,15 +14,15 @@ target_link_libraries(kdebugsettingsquick
     Qt::Quick
     Qt::QuickControls2
     Qt::Widgets
+    KF6::IconThemes
+    KF6::ConfigWidgets
 )
 if(TARGET KF6::DBusAddons)
     target_link_libraries(kdebugsettingsquick KF6::DBusAddons)
 else()
     target_link_libraries(kdebugsettingsquick KDAB::kdsingleapplication)
 endif()
-if(TARGET KF6::I18nQml)
-    target_link_libraries(kdebugsettingsquick KF6::I18nQml)
-endif()
+target_link_libraries(kdebugsettingsquick KF6::I18nQml)
 
 install(TARGETS kdebugsettingsquick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

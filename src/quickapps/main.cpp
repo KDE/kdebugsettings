@@ -6,10 +6,8 @@
 */
 
 #include "ki18n_version.h"
-#include <QApplication>
-#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
 #include <KLocalizedQmlContext>
-#endif
+#include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
 #include "ki18n_version.h"
@@ -38,21 +36,13 @@
 
 #include <iostream>
 
-#define HAVE_KICONTHEME __has_include(<KIconTheme>)
-#if HAVE_KICONTHEME
 #include <KIconTheme>
-#endif
 
-#define HAVE_STYLE_MANAGER __has_include(<KStyleManager>)
-#if HAVE_STYLE_MANAGER
 #include <KStyleManager>
-#endif
 
 int main(int argc, char **argv)
 {
-#if HAVE_KICONTHEME
     KIconTheme::initTheme();
-#endif
 
     QApplication app(argc, argv);
 #if !WITH_DBUS
@@ -63,13 +53,7 @@ int main(int argc, char **argv)
         QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
     }
 
-#if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
-#else // !HAVE_STYLE_MANAGER
-#if defined(Q_OS_MACOS) || defined(Q_OS_WIN)
-    QApplication::setStyle(QStringLiteral("breeze"));
-#endif // defined(Q_OS_MACOS) || defined(Q_OS_WIN)
-#endif // HAVE_STYLE_MANAGER
 
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("kdebugsettings"));
     KAboutData aboutData(QStringLiteral("kdebugsettingsquick"),
@@ -154,11 +138,7 @@ int main(int argc, char **argv)
         qmlRegisterSingletonType("org.kde.kdebugsettings", 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
             return engine->toScriptValue(KAboutData::applicationData());
         });
-#if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
-        engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-#else
         engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
-#endif
         engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {

@@ -26,10 +26,7 @@
 
 #include <KIconTheme>
 
-#define HAVE_STYLE_MANAGER __has_include(<KStyleManager>)
-#if HAVE_STYLE_MANAGER
 #include <KStyleManager>
-#endif
 
 int main(int argc, char **argv)
 {
@@ -46,13 +43,7 @@ int main(int argc, char **argv)
                          KAboutLicense::GPL_V2,
                          i18n("(c) 2015-%1 kdebugsettings authors", QStringLiteral("2024")));
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
-#if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
-#else // !HAVE_STYLE_MANAGER
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-    QApplication::setStyle(QStringLiteral("breeze"));
-#endif
-#endif
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("debug-run")));
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
