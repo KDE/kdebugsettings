@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:43+0000\n"
+"POT-Creation-Date: 2024-11-27 00:43+0000\n"
 "PO-Revision-Date: 2024-07-30 09:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:40 src/quickapps/main.cpp:60
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugsSettings"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:78
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:62
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Nastavi možnosti za razhroščevanje"
 
-#: src/apps/main.cpp:47
+#: src/apps/main.cpp:44
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 avtorji kdebugsettings"
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Vzdrževalec"
 
-#: src/apps/main.cpp:63 src/quickapps/main.cpp:87
+#: src/apps/main.cpp:54 src/quickapps/main.cpp:71
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -54,22 +54,22 @@ msgstr ""
 "Omogoči testni način QStandardPaths, to je npr. nastavitve branja/pisanja, "
 "ki jih uporabljajo testi enot"
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:90
+#: src/apps/main.cpp:57 src/quickapps/main.cpp:74
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivirajte popolno odkrivanje napak za vse module."
 
-#: src/apps/main.cpp:68 src/quickapps/main.cpp:92
+#: src/apps/main.cpp:59 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Onemogočite popolno odkrivanje napak za vse module."
 
-#: src/apps/main.cpp:72 src/quickapps/main.cpp:96
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:80
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Spremeni način za odkrivanje napak s konzolo (v konzoli)"
 
-#: src/apps/main.cpp:76 src/quickapps/main.cpp:100
+#: src/apps/main.cpp:67 src/quickapps/main.cpp:84
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -77,9 +77,9 @@ msgstr ""
 "Določite ime kategorije beleženja, ki ga želite spremeniti v načinu za "
 "odkrivanje napak (v konzoli)"
 
-#: src/apps/main.cpp:90 src/apps/main.cpp:100 src/apps/main.cpp:110
-#: src/quickapps/main.cpp:114 src/quickapps/main.cpp:124
-#: src/quickapps/main.cpp:134
+#: src/apps/main.cpp:81 src/apps/main.cpp:91 src/apps/main.cpp:101
+#: src/quickapps/main.cpp:98 src/quickapps/main.cpp:108
+#: src/quickapps/main.cpp:118
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Ni mogoče spremeniti načina za odkrivanje napak"
@@ -159,7 +159,7 @@ msgstr "Kritična sporočila"
 msgid "No Debug Messages"
 msgstr "Brez sporočil o napakah"
 
-#: src/quickapps/main.cpp:80
+#: src/quickapps/main.cpp:64
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 avtorji kdebugsettings"

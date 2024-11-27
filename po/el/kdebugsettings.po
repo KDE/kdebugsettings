@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:43+0000\n"
+"POT-Creation-Date: 2024-11-27 00:43+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/apps/main.cpp:43 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:40 src/quickapps/main.cpp:60
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KdebugSettings"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:78
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:62
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Διαμόρφωση ρυθμίσεων αποσφαλμάτωσης"
 
-#: src/apps/main.cpp:47
+#: src/apps/main.cpp:44
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 οι συγγραφείς του kdebugsettings"
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:48 src/quickapps/main.cpp:81
+#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Συντηρητής"
 
-#: src/apps/main.cpp:63 src/quickapps/main.cpp:87
+#: src/apps/main.cpp:54 src/quickapps/main.cpp:71
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -52,22 +52,22 @@ msgstr ""
 "Ενεργοποίηση δοκιμαστικής λειτουργίας QStandardPaths, δηλ. ρυθμίσεις "
 "ανάγνωσης/εγγραφής σε unittests"
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:90
+#: src/apps/main.cpp:57 src/quickapps/main.cpp:74
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Να ενεργοποιηθεί η πλήρης αποσφαλμάτωση για όλα τα αρθρώματα."
 
-#: src/apps/main.cpp:68 src/quickapps/main.cpp:92
+#: src/apps/main.cpp:59 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Να απενεργοποιηθεί η πλήρης αποσφαλμάτωση για όλα τα αρθρώματα."
 
-#: src/apps/main.cpp:72 src/quickapps/main.cpp:96
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:80
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Αλλαγή λειτουργίας αποσφαλμάτωσης από την κονσόλα (στην κονσόλα)"
 
-#: src/apps/main.cpp:76 src/quickapps/main.cpp:100
+#: src/apps/main.cpp:67 src/quickapps/main.cpp:84
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -75,9 +75,9 @@ msgstr ""
 "Καθορισμός ονόματος κατηγορίας καταγραφής για το οποίο θέλετε να αλλάξετε τη "
 "λειτουργία αποσφαλμάτωσης (στην κονσόλα)"
 
-#: src/apps/main.cpp:90 src/apps/main.cpp:100 src/apps/main.cpp:110
-#: src/quickapps/main.cpp:114 src/quickapps/main.cpp:124
-#: src/quickapps/main.cpp:134
+#: src/apps/main.cpp:81 src/apps/main.cpp:91 src/apps/main.cpp:101
+#: src/quickapps/main.cpp:98 src/quickapps/main.cpp:108
+#: src/quickapps/main.cpp:118
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Αδυναμία αλλαγής της λειτουργίας αποσφαλμάτωσης"
@@ -157,7 +157,7 @@ msgstr "Κρίσιμα μηνύματα"
 msgid "No Debug Messages"
 msgstr "Χωρίς μηνύματα αποσφαλμάτωσης"
 
-#: src/quickapps/main.cpp:80
+#: src/quickapps/main.cpp:64
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
 msgid "(c) %1 kdebugsettings authors"
