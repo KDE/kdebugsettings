@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:43+0000\n"
-"PO-Revision-Date: 2024-03-11 15:18+0200\n"
+"PO-Revision-Date: 2024-10-28 20:43+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/apps/main.cpp:40 src/quickapps/main.cpp:60
 #, kde-format
@@ -35,8 +35,7 @@ msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015–%1 kdebugsettingsin tekijät"
 
 #: src/apps/main.cpp:45 src/quickapps/main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -186,36 +185,31 @@ msgid "Edit custom rule"
 msgstr "Muokkaa omaa sääntöä"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
-msgstr "Käytössä"
+msgstr "Käytä"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Luokka:"
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Tyyppi:"
 
 #: src/widgets/customdebuglistview.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Lisää sääntö…"
 
 #: src/widgets/customdebuglistview.cpp:46
-#, fuzzy, kde-format
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Muokkaa sääntöä"
@@ -239,19 +233,17 @@ msgstr[1] "Haluatko poistaa nämä %1 sääntöä?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr ""
+msgstr "Muokkaa…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Poista…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Etsi…"
@@ -260,7 +252,7 @@ msgstr "Etsi…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Lisää…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -308,8 +300,7 @@ msgstr "Ryhmää ”%2” on mahdotonta viedä kohteeseen ”%1”"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Muuta ryhmän nimeä"
@@ -325,22 +316,19 @@ msgid "Impossible to rename group as '%1'."
 msgstr "Ryhmän nimeksi ei voi muuttaa ”%1”."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Rename Group"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Muuta ryhmän nimeä"
+msgstr "Muuta ryhmän nimeä…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Export Group"
+#, kde-format
 msgctxt "@action"
 msgid "Export Group…"
-msgstr "Vie ryhmä"
+msgstr "Vie ryhmä…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Remove Groups"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Poista ryhmät"
@@ -351,29 +339,25 @@ msgid "Impossible to remove '%1'"
 msgstr "Ei voida poistaa: ”%1”"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Poista ryhmä"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Käytä kaikkea vianpaikannusta"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Poista vianpaikannus käytöstä"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Poista kaikki viestit käytöstä"
@@ -394,14 +378,12 @@ msgid "Rules Settings With Environment Variable"
 msgstr "Ympäristömuuttujassa määritetyt säännöt"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Tallenna nimellä"
+msgstr "Tallenna nimellä…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Lisää…"
@@ -427,15 +409,13 @@ msgid "Categories from file '%1' inserted."
 msgstr "Tiedoston ”%1” luokat lisätty."
 
 #: src/widgets/kdebugsettingsdialog.cpp:202
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Lisää luokkia"
 
 #: src/widgets/kdebugsettingsdialog.cpp:210
-#, fuzzy, kde-format
-#| msgid "Group Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Ryhmän nimi"
@@ -460,8 +440,7 @@ msgid "Can not save as empty name. Please use a new one."
 msgstr "Tyhjälle nimelle ei voi tallentaa. Käytä uutta nimeä."
 
 #: src/widgets/kdebugsettingsdialog.cpp:231
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Tallenna nimellä"
@@ -473,8 +452,7 @@ msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings-tiedosto (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:240
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Lataa vianpaikannuksen asetustiedostoja"
@@ -485,38 +463,33 @@ msgid "Load Group"
 msgstr "Lataa ryhmä"
 
 #: src/widgets/loadgroupmenu.cpp:70
-#, fuzzy, kde-format
-#| msgid "Manage Group"
+#, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Hallitse ryhmää"
 
 #: src/widgets/loadtoolbutton.cpp:19
-#, fuzzy, kde-format
-#| msgid "Load"
+#, kde-format
 msgid "Load…"
-msgstr "Lataa"
+msgstr "Lataa…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "Lataa tiedostosta…"
 
 #: src/widgets/savetoolbutton.cpp:20
-#, fuzzy, kde-format
-#| msgid "Save As File..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "Tallenna tiedostoksi…"
 
 #: src/widgets/savetoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
-msgstr "Tallenna ryhmänä…"
+msgstr "Tallenna ryhmäksi…"
 
 #~ msgid "Edit..."
 #~ msgstr "Muokkaa…"
