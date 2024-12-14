@@ -41,6 +41,7 @@
   <name xml:lang="pt-BR">KDebugSettings</name>
   <name xml:lang="ro">KDebugSettings</name>
   <name xml:lang="ru">KDebugSettings</name>
+  <name xml:lang="sa">KDebugSettings इति</name>
   <name xml:lang="sk">KDebugSettings</name>
   <name xml:lang="sl">KDebugSettings</name>
   <name xml:lang="sv">KDebugSettings</name>
@@ -79,6 +80,7 @@
   <summary xml:lang="pt-BR">Definir quais mensagens de depuração são mostradas</summary>
   <summary xml:lang="ro">Stabilește ce mesaje de depanare sunt arătate</summary>
   <summary xml:lang="ru">Настройка отображаемых сообщений отладки</summary>
+  <summary xml:lang="sa">के दोषनिवारणसन्देशाः दर्शिताः इति सेट् कुर्वन्तु</summary>
   <summary xml:lang="sk">Nastaviť, ktoré ladiace správy sa zobrazujú</summary>
   <summary xml:lang="sl">Nastavite, katera sporočila za odkrivanje napak so prikazana</summary>
   <summary xml:lang="sv">Ställ in vilka felsökningsmeddelanden som visas</summary>
@@ -119,6 +121,7 @@
     <p xml:lang="pt-BR">O KDebugSettings edita qual QLoggingCategory será mostrada. O QLoggingCategory mostra as mensagens no console para os aplicativos e você pode definir quais aplicativos mostram mensagens para informação, aviso ou erros críticos para ajudar a depurar aplicativos Qt.</p>
     <p xml:lang="ro">KDebugSettings modifică ce QLoggingCategory sunt afișate. QLoggingCategory tipărește mesaje pe consolă pentru aplicații și puteți defini care aplicații afișează mesaje pentru erori informative, de avertizare și critice, pentru a ajuta la depanarea aplicațiilor Qt.</p>
     <p xml:lang="ru">Приложение KDebugSettings позволяет настроить отображаемые заданными приложениями категории отладочных сообщений (информационные, предупреждающие или сообщения об ошибках), формируемых при помощи класса QLoggingCategory. Изучение отладочных сообщений, формируемых при помощи класса QLoggingCategory, упрощает отладку приложений, основанных на наборе библиотек Qt.</p>
+    <p xml:lang="sa">KDebugSettings सम्पादयति यत् कोऽपि QLoggingCategory प्रदर्शितः अस्ति । QLoggingCategory अनुप्रयोगानाम् कृते कन्सोल् मध्ये सन्देशान् मुद्रयति तथा च भवान् परिभाषितुं शक्नोति यत् के अनुप्रयोगाः Qt अनुप्रयोगानाम् त्रुटिनिवारणे सहायतार्थं सूचना, चेतावनी अथवा महत्त्वपूर्णदोषाणां कृते सन्देशान् प्रदर्शयन्ति।</p>
     <p xml:lang="sk">KDebugSettings upravuje, ktoré QLoggingCategory sú zobrazené. QLoggingCategory tlačí správy na konzole pre aplikácie a môžete definovať, ktoré aplikácie zobrazujú správy pre informácie, varovania alebo kritické chyby, aby pomohli ladiť aplikácie Qt.</p>
     <p xml:lang="sl">KDebugSettings ureja, katere kategorije QLoggingCategory so prikazane. QLoggingCategory tiska sporočila na konzolo za aplikacije in določite lahko, katere aplikacije prikazujejo sporočila za informacije, opozorila ali kritične napake, tako da pomagajo odpravljati napake aplikacij Qt.</p>
     <p xml:lang="sv">KDebugSettings redigerar vilka kategorier i QLoggingCategory som visas. QLoggingCategory skriver ut meddelanden på terminalen åt program, och du kan definiera vilka program som visar meddelanden såsom information, varningar eller kritiska fel för att hjälpa till att felsöka Qt-program.</p>
@@ -165,6 +168,7 @@
       <caption xml:lang="pt">A janela principal do KDebugSettings.</caption>
       <caption xml:lang="pt-BR">A janela principal do KDebugSettings.</caption>
       <caption xml:lang="ru">Главное окно KDebugSettings.</caption>
+      <caption xml:lang="sa">KDebugSettings इत्यस्य मुख्यविण्डो ।</caption>
       <caption xml:lang="sk">Hlavné okno KDebugSettings.</caption>
       <caption xml:lang="sl">Glavno okno KDebugSettings.</caption>
       <caption xml:lang="sv">KDebugSettings huvudfönster</caption>
