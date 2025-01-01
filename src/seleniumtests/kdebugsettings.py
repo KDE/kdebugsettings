@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: LGPL-2.0-or-later
-# SPDX-FileCopyrightText: 2023-2024 Laurent Montel <montel.org>
+# SPDX-FileCopyrightText: 2023-2025 Laurent Montel <montel@kde.org>
 
 import unittest
 
