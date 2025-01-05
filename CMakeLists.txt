@@ -84,15 +84,6 @@ if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif()
 
-# -fhardened increase compilation time and produce a lot of warning
-option(OPTION_DISABLE_HARDENED_OPTIMIZATION "Disable -fhardened" OFF)
-
-if(OPTION_DISABLE_HARDENED_OPTIMIZATION)
-   string(REPLACE "-fhardened" "" CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
-   string(REPLACE "-fhardened" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ")
-endif()
-
-
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
