@@ -14,7 +14,7 @@
 
 QTEST_GUILESS_MAIN(SaveRulesJobTest)
 
-void compareFile(const QString &name)
+static void compareFile(const QString &name)
 {
     const QString refFile = QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ref");
     const QString generatedFile = QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");

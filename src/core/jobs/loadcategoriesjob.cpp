@@ -22,15 +22,7 @@ bool LoadCategoriesJob::foundOverrideRule() const
     return mFoundOverrideRule;
 }
 
-LoggingCategory::LoggingType updateLoggingType(const LoggingCategory &cat)
-{
-    if (!cat.enabled) {
-        return LoggingCategory::Off;
-    }
-    return cat.loggingType;
-}
-
-LoggingCategory::LoggingType
+static LoggingCategory::LoggingType
 canDisplayType(const QMap<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> &types)
 {
     KDebugSettingsUtil::LoadLoggingCategory::Status warning = types.value(KDebugSettingsUtil::LoadLoggingCategory::Warning);
