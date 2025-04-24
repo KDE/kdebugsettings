@@ -22,3 +22,4 @@ Dependencies:
 Options:
  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
  cppcheck-arguments: '--enable=warning,style,performance --inline-suppr --suppress=passedByValue --suppress=nullPointer'
+ tests-run-in-parallel: True
