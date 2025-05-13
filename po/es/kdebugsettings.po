@@ -1,15 +1,15 @@
 # Spanish translations for kdebugsettings.po package.
-# Copyright (C) 2015 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2015-2025 This file is copyright:
+# This file is distributed under the same license as the kdebugsettings package.
 # Automatically generated, 2015.
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-30 16:27+0200\n"
+"PO-Revision-Date: 2025-05-12 14:09+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -206,7 +206,7 @@ msgstr "Tipo:"
 #, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
-msgstr "Añadir regla..."
+msgstr "Añadir regla…"
 
 #: src/widgets/customdebuglistview.cpp:46
 #, kde-format
@@ -233,26 +233,26 @@ msgstr[1] "¿Desea eliminar estas %1 reglas?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr "Editar..."
+msgstr "Editar…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
-msgstr "Eliminar..."
+msgstr "Eliminar…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -319,13 +319,13 @@ msgstr "No se ha podido cambiar el nombre del grupo a «%1»."
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Cambiar nombre del grupo..."
+msgstr "Cambiar nombre del grupo…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
-msgstr "Exportar grupo..."
+msgstr "Exportar grupo…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
 #, kde-format
@@ -380,13 +380,13 @@ msgstr "Preferencias de las reglas con variables de entorno"
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
 #, kde-format
 msgid "Save As…"
-msgstr "Guardar como..."
+msgstr "Guardar como…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
-msgstr "Insertar..."
+msgstr "Insertar…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:162
 #, kde-format
@@ -471,55 +471,22 @@ msgstr "Gestión del grupo"
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr "Cargar..."
+msgstr "Cargar…"
 
 #: src/widgets/loadtoolbutton.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Load From File…"
-msgstr "Cargar de archivo..."
+msgstr "Cargar de archivo…"
 
 #: src/widgets/savetoolbutton.cpp:20
 #, kde-format
 msgctxt "@action"
 msgid "Save As File…"
-msgstr "Guardar como archivo..."
+msgstr "Guardar como archivo…"
 
 #: src/widgets/savetoolbutton.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
-msgstr "Guardar como grupo..."
-
-#~ msgid "Edit..."
-#~ msgstr "Editar..."
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
-
-#~ msgid "Rename Group..."
-#~ msgstr "Cambiar nombre del grupo..."
-
-#~ msgid "Export Group..."
-#~ msgstr "Exportar grupo..."
-
-#~ msgid "Save As..."
-#~ msgstr "Guardar como..."
-
-#~ msgid "Load..."
-#~ msgstr "Cargar..."
-
-#~ msgid "Rules:"
-#~ msgstr "Reglas:"
-
-#~ msgid "Rename Groups"
-#~ msgstr "Cambiar nombre de los grupos"
-
-#~ msgid "All"
-#~ msgstr "Todo"
-
-#~ msgid "Select All"
-#~ msgstr "Seleccionar todo"
-
-#~ msgid "Deselect All"
-#~ msgstr "Desmarcar todo"
+msgstr "Guardar como grupo…"
