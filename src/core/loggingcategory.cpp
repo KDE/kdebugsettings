@@ -112,12 +112,12 @@ QDebug operator<<(QDebug d, const LoggingCategory &cat)
 
 QString LoggingCategory::generateToolTip() const
 {
-    QString toopTip = i18n("Category name: %1", categoryName);
+    QString tooltip = i18n("Category name: %1", categoryName);
     if (!identifierName.isEmpty()) {
-        toopTip += QLatin1Char('\n') + i18n("Identifier: %1", identifierName);
+        tooltip += QLatin1Char('\n') + i18n("Identifier: %1", identifierName);
     }
-    toopTip += QLatin1Char('\n') + i18n("Default Severity: %1", convertCategoryTypeToString(defaultSeverityType));
-    return toopTip;
+    tooltip += QLatin1Char('\n') + i18n("Default Severity: %1", convertCategoryTypeToString(defaultSeverityType));
+    return tooltip;
 }
 
 QString LoggingCategory::convertCategoryTypeToString(LoggingCategory::LoggingType type) const

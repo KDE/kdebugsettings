@@ -10,12 +10,13 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 
 class SmokeTests(unittest.TestCase):
-
     @classmethod
     def setUpClass(cls):
         options = AppiumOptions()
         options.set_capability("app", "org.kde.kdebugsettings.desktop")
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        cls.driver = webdriver.Remote(
+            command_executor="http://127.0.0.1:4723", options=options
+        )
 
     @classmethod
     def tearDownClass(self):
@@ -25,8 +26,11 @@ class SmokeTests(unittest.TestCase):
         pass
 
     def test_addTrainTrip(self):
-        self.driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="QApplication.KDebugSettingsDialog.buttonbox.insert_button").click()
+        self.driver.find_element(
+            by=AppiumBy.ACCESSIBILITY_ID,
+            value="QApplication.KDebugSettingsDialog.buttonbox.insert_button",
+        ).click()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

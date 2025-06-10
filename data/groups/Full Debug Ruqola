@@ -3236,4 +3236,3 @@ kwin_wayland_hwcomposer.debug=false
 kwin_wayland_hwcomposer.critical=true
 
 quantitative.qitissue.crashreport=true
-

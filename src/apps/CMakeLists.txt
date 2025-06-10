@@ -5,7 +5,8 @@ if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kdebugsettings PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(kdebugsettings
+target_link_libraries(
+    kdebugsettings
     Qt::Widgets
     KF6::I18n
     libkdebugsettings
@@ -20,15 +21,19 @@ else()
 endif()
 
 if(APPLE)
-    set_target_properties(kdebugsettings PROPERTIES
-        MACOSX_BUNDLE_DISPLAY_NAME "KDebugsettings"
-        MACOSX_BUNDLE_BUNDLE_NAME "KDebugsettings"
-        MACOSX_BUNDLE_LONG_VERSION_STRING "KDebugsettings ${RELEASE_SERVICE_VERSION}"
-        MACOSX_BUNDLE_SHORT_VERSION_STRING "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}"
-        MACOSX_BUNDLE_BUNDLE_VERSION "${RELEASE_SERVICE_VERSION}"
-        MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kdebugsettings"
-        MACOSX_BUNDLE_COPYRIGHT "2020-2024 The KDebugsettings Developers")
+    set_target_properties(
+        kdebugsettings
+        PROPERTIES
+            MACOSX_BUNDLE_DISPLAY_NAME "KDebugsettings"
+            MACOSX_BUNDLE_BUNDLE_NAME "KDebugsettings"
+            MACOSX_BUNDLE_LONG_VERSION_STRING
+                "KDebugsettings ${RELEASE_SERVICE_VERSION}"
+            MACOSX_BUNDLE_SHORT_VERSION_STRING
+                "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}"
+            MACOSX_BUNDLE_BUNDLE_VERSION "${RELEASE_SERVICE_VERSION}"
+            MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kdebugsettings"
+            MACOSX_BUNDLE_COPYRIGHT "2020-2024 The KDebugsettings Developers"
+    )
 endif()
 
-
-install(TARGETS kdebugsettings  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kdebugsettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

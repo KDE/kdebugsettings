@@ -23,4 +23,3 @@ Kirigami.Page {
         }
     }
 }
-

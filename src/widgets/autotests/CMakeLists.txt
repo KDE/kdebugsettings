@@ -8,7 +8,8 @@ macro(add_kdebugsettings_unittest _source)
     add_executable(${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name})
     ecm_mark_as_test(kdebugsettings-${_name})
-    target_link_libraries( ${_name}
+    target_link_libraries(
+        ${_name}
         Qt::Test
         KF6::I18n
         Qt::Widgets
@@ -16,7 +17,7 @@ macro(add_kdebugsettings_unittest _source)
         KF6::WidgetsAddons
         KF6::Completion
         libkdebugsettings
-        )
+    )
 endmacro()
 
 add_kdebugsettings_unittest(kdebugsettingsdialogtest.cpp)

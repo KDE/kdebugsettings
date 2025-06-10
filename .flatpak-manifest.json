@@ -5,9 +5,15 @@
     "runtime-version": "6.9",
     "sdk": "org.kde.Sdk",
     "command": "kdebugsettings",
-    "tags": ["nightly"],
+    "tags": [
+        "nightly"
+    ],
     "desktop-file-name-suffix": " (Nightly)",
-    "finish-args": ["--share=ipc", "--socket=fallback-x11", "--socket=wayland" ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+    ],
     "rename-icon": "debug-run",
     "modules": [
         {
