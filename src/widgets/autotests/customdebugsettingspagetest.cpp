@@ -6,6 +6,8 @@
 */
 
 #include "customdebugsettingspagetest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "customdebuglistview.h"
 #include "customdebugsettingspage.h"
 #include <QLineEdit>
@@ -23,22 +25,22 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
 {
     CustomDebugSettingsPage page;
 
-    auto mCustomDebugListView = page.findChild<CustomDebugListView *>(QStringLiteral("mCustomDebugListView"));
+    auto mCustomDebugListView = page.findChild<CustomDebugListView *>(u"mCustomDebugListView"_s);
     QVERIFY(mCustomDebugListView);
 
-    auto mSearchLineEdit = page.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    auto mSearchLineEdit = page.findChild<QLineEdit *>(u"mSearchLineEdit"_s);
     QVERIFY(mSearchLineEdit);
     QVERIFY(!mSearchLineEdit->placeholderText().isEmpty());
 
-    auto addButton = page.findChild<QPushButton *>(QStringLiteral("add_rule"));
+    auto addButton = page.findChild<QPushButton *>(u"add_rule"_s);
     QVERIFY(addButton);
     QVERIFY(addButton->isEnabled());
 
-    auto editButton = page.findChild<QPushButton *>(QStringLiteral("edit_rule"));
+    auto editButton = page.findChild<QPushButton *>(u"edit_rule"_s);
     QVERIFY(editButton);
     QVERIFY(!editButton->isEnabled());
 
-    auto removeButton = page.findChild<QPushButton *>(QStringLiteral("remove_rule"));
+    auto removeButton = page.findChild<QPushButton *>(u"remove_rule"_s);
     QVERIFY(removeButton);
     QVERIFY(!removeButton->isEnabled());
 }

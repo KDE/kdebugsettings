@@ -6,6 +6,7 @@
 */
 
 #include "config-kdebugsettings.h"
+
 #include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
@@ -27,7 +28,7 @@
 #include <KIconTheme>
 
 #include <KStyleManager>
-
+using namespace Qt::Literals::StringLiterals;
 int main(int argc, char **argv)
 {
     KIconTheme::initTheme();
@@ -36,35 +37,32 @@ int main(int argc, char **argv)
     KDSingleApplication sapp;
 #endif
 
-    KAboutData aboutData(QStringLiteral("kdebugsettings"),
+    KAboutData aboutData(u"kdebugsettings"_s,
                          i18n("KDebugSettings"),
                          QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"),
                          KAboutLicense::GPL_V2,
-                         i18n("(c) 2015-%1 kdebugsettings authors", QStringLiteral("2025")));
-    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
+                         i18n("(c) 2015-%1 kdebugsettings authors", u"2025"_s));
+    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), u"montel@kde.org"_s);
     KStyleManager::initStyle();
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("debug-run")));
+    QApplication::setWindowIcon(QIcon::fromTheme(u"debug-run"_s));
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 
-    const QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
+    const QCommandLineOption testModeOption(u"test-mode"_s, i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
     parser.addOption(testModeOption);
 
-    const QCommandLineOption switchFullDebugOption(QStringLiteral("enable-full-debug"), i18n("Activate full debug for all modules."));
+    const QCommandLineOption switchFullDebugOption(u"enable-full-debug"_s, i18n("Activate full debug for all modules."));
     parser.addOption(switchFullDebugOption);
-    const QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
+    const QCommandLineOption switchOffDebugOption(u"disable-full-debug"_s, i18n("Disable full debug for all modules."));
     parser.addOption(switchOffDebugOption);
 
-    const QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"),
-                                                      i18n("Change debug mode as console (in console)"),
-                                                      QStringLiteral("Full|Info|Warning|Critical|Off"));
+    const QCommandLineOption changeDebugSettingOption(u"debug-mode"_s, i18n("Change debug mode as console (in console)"), u"Full|Info|Warning|Critical|Off"_s);
     parser.addOption(changeDebugSettingOption);
-    parser.addPositionalArgument(QStringLiteral("logging category name"),
-                                 i18n("Specify logging category name that you want to change debug mode (in console)"));
+    parser.addPositionalArgument(u"logging category name"_s, i18n("Specify logging category name that you want to change debug mode (in console)"));
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -75,7 +73,7 @@ int main(int argc, char **argv)
 
     if (parser.isSet(switchFullDebugOption)) {
         ChangeDebugModeJob job;
-        job.setDebugMode(QStringLiteral("Full"));
+        job.setDebugMode(u"Full"_s);
         job.setWithoutArguments(true);
         if (!job.start()) {
             std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
@@ -85,7 +83,7 @@ int main(int argc, char **argv)
     }
     if (parser.isSet(switchOffDebugOption)) {
         ChangeDebugModeJob job;
-        job.setDebugMode(QStringLiteral("Off"));
+        job.setDebugMode(u"Off"_s);
         job.setWithoutArguments(true);
         if (!job.start()) {
             std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;

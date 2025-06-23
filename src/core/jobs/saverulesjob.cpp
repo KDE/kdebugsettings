@@ -48,15 +48,15 @@ bool SaveRulesJob::start()
     for (const LoggingCategory &cat : std::as_const(mListCustom)) {
         const QString rule = cat.createCustomRule();
         if (rule.startsWith(QLatin1StringView("*="))) {
-            out << rule + QLatin1Char('\n');
+            out << rule + u'\n';
         } else {
-            listExcludeRules << rule + QLatin1Char('\n');
+            listExcludeRules << rule + u'\n';
         }
     }
 
     // Then the configured KDE rules.
     for (const LoggingCategory &cat : std::as_const(mListKde)) {
-        out << cat.createRule() + QLatin1Char('\n');
+        out << cat.createRule() + u'\n';
     }
 
     // Finally the user's custom rules which will not override

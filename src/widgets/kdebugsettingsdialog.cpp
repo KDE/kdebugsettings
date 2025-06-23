@@ -184,8 +184,7 @@ void KDebugSettingsDialog::slotApply()
 
 void KDebugSettingsDialog::slotInsertCategories()
 {
-    const QString path =
-        QFileDialog::getOpenFileName(this, i18n("Insert Categories"), QString(), QStringLiteral("%1 (*.categories)").arg(i18n("Categories Files")));
+    const QString path = QFileDialog::getOpenFileName(this, i18n("Insert Categories"), QString(), u"%1 (*.categories)"_s.arg(i18n("Categories Files")));
     if (!path.isEmpty()) {
         const KdeLoggingCategory::List insertCategoriesList = KDebugSettingsUtil::readLoggingCategoriesForInserting(path, mCategoriesList);
         LoggingCategory::List newCategories;
@@ -217,7 +216,7 @@ void KDebugSettingsDialog::slotSaveAsGroup()
                 if (!QDir().mkpath(groupPath)) {
                     qCWarning(KDEBUGSETTINGS_LOG) << "Unable to create folder: " << groupPath;
                 }
-                saveRules(groupPath + QLatin1Char('/') + trimmedName, true);
+                saveRules(groupPath + u'/' + trimmedName, true);
                 Q_EMIT updateLoadGroupMenu();
             }
         } else {

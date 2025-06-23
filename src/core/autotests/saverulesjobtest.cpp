@@ -6,6 +6,8 @@
 */
 
 #include "saverulesjobtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "jobs/loadcategoriesjob.h"
 #include "jobs/saverulesjob.h"
 
@@ -16,15 +18,14 @@ QTEST_GUILESS_MAIN(SaveRulesJobTest)
 
 static void compareFile(const QString &name)
 {
-    const QString refFile = QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral(".ref");
-    const QString generatedFile = QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + name + QStringLiteral("-generated.ref");
+    const QString refFile = QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + u'/' + name + u".ref"_s;
+    const QString generatedFile = QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + name + u"-generated.ref"_s;
     QProcess proc;
 
 #ifdef _WIN32
-    QStringList args = QStringList() << QStringLiteral("Compare-Object") << QString(QStringLiteral("(Get-Content %1)")).arg(refFile)
-                                     << QString(QStringLiteral("(Get-Content %1)")).arg(generatedFile);
+    QStringList args = QStringList() << u"Compare-Object"_s << QString(u"(Get-Content %1)"_s).arg(refFile) << QString(u"(Get-Content %1)"_s).arg(generatedFile);
 
-    proc.start(QStringLiteral("powershell"), args);
+    proc.start(u"powershell"_s, args);
     QVERIFY(proc.waitForFinished());
 
     auto pStdOut = proc.readAllStandardOutput();
@@ -35,10 +36,10 @@ static void compareFile(const QString &name)
     QCOMPARE(pStdOut.size(), 0);
 #else
     // compare to reference file
-    const QStringList args = QStringList() << QStringLiteral("-u") << refFile << generatedFile;
+    const QStringList args = QStringList() << u"-u"_s << refFile << generatedFile;
 
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
-    proc.start(QStringLiteral("diff"), args);
+    proc.start(u"diff"_s, args);
     QVERIFY(proc.waitForFinished());
     QCOMPARE(proc.exitCode(), 0);
 #endif
@@ -52,18 +53,18 @@ SaveRulesJobTest::SaveRulesJobTest(QObject *parent)
 void SaveRulesJobTest::shouldSaveLoadRules_data()
 {
     QTest::addColumn<QString>("filename");
-    QTest::newRow("oneelementwarning.ini") << QStringLiteral("oneelementwarning");
-    QTest::newRow("oneelementall.ini") << QStringLiteral("oneelementall");
-    QTest::newRow("oneelementinfo.ini") << QStringLiteral("oneelementinfo");
-    QTest::newRow("oneelementonelineoff.ini") << QStringLiteral("oneelementonelineoff");
-    QTest::newRow("oneelementonelinecritical.ini") << QStringLiteral("oneelementonelinecritical");
+    QTest::newRow("oneelementwarning.ini") << u"oneelementwarning"_s;
+    QTest::newRow("oneelementall.ini") << u"oneelementall"_s;
+    QTest::newRow("oneelementinfo.ini") << u"oneelementinfo"_s;
+    QTest::newRow("oneelementonelineoff.ini") << u"oneelementonelineoff"_s;
+    QTest::newRow("oneelementonelinecritical.ini") << u"oneelementonelinecritical"_s;
 }
 
 void SaveRulesJobTest::shouldSaveLoadRules()
 {
     QFETCH(QString, filename);
     LoadCategoriesJob job;
-    job.setFileName(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral(".ini"));
+    job.setFileName(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + u'/' + filename + u".ini"_s);
     job.start();
 
     const LoggingCategory::List customCategories = job.customCategories();
@@ -72,7 +73,7 @@ void SaveRulesJobTest::shouldSaveLoadRules()
 
     SaveRulesJob saveJob;
     QDir().mkpath(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR));
-    saveJob.setFileName(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.ref"));
+    saveJob.setFileName(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + filename + u"-generated.ref"_s);
     qDebug() << " save " << saveJob.fileName();
     saveJob.setListCustom(customCategories);
     saveJob.setListKde(qtKdeCategories);

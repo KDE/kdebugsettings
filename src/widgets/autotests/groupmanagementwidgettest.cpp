@@ -6,6 +6,8 @@
 */
 
 #include "groupmanagementwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "groupmanagementwidget.h"
 #include <QListWidget>
 #include <QTest>
@@ -20,11 +22,11 @@ GroupManagementWidgetTest::GroupManagementWidgetTest(QObject *parent)
 void GroupManagementWidgetTest::shouldHaveDefaultValues()
 {
     GroupManagementWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("mListWidget"));
+    auto mListWidget = w.findChild<QListWidget *>(u"mListWidget"_s);
     QVERIFY(mListWidget);
     QCOMPARE(mListWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
 }

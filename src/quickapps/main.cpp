@@ -6,6 +6,8 @@
 */
 
 #include "ki18n_version.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedQmlContext>
 #include <QApplication>
 
@@ -50,38 +52,35 @@ int main(int argc, char **argv)
 #endif
     // Default to org.kde.desktop style unless the user forces another style
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
-        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+        QQuickStyle::setStyle(u"org.kde.desktop"_s);
     }
 
     KStyleManager::initStyle();
 
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("kdebugsettings"));
-    KAboutData aboutData(QStringLiteral("kdebugsettingsquick"),
+    KAboutData aboutData(u"kdebugsettingsquick"_s,
                          i18n("KDebugSettings"),
                          QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"),
                          KAboutLicense::GPL_V2,
-                         i18n("(c) %1 kdebugsettings authors", QStringLiteral("2023")));
-    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
+                         i18n("(c) %1 kdebugsettings authors", u"2023"_s));
+    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), u"montel@kde.org"_s);
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 
-    const QCommandLineOption testModeOption(QStringLiteral("test-mode"), i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
+    const QCommandLineOption testModeOption(u"test-mode"_s, i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
     parser.addOption(testModeOption);
 
-    const QCommandLineOption switchFullDebugOption(QStringLiteral("enable-full-debug"), i18n("Activate full debug for all modules."));
+    const QCommandLineOption switchFullDebugOption(u"enable-full-debug"_s, i18n("Activate full debug for all modules."));
     parser.addOption(switchFullDebugOption);
-    const QCommandLineOption switchOffDebugOption(QStringLiteral("disable-full-debug"), i18n("Disable full debug for all modules."));
+    const QCommandLineOption switchOffDebugOption(u"disable-full-debug"_s, i18n("Disable full debug for all modules."));
     parser.addOption(switchOffDebugOption);
 
-    const QCommandLineOption changeDebugSettingOption(QStringLiteral("debug-mode"),
-                                                      i18n("Change debug mode as console (in console)"),
-                                                      QStringLiteral("Full|Info|Warning|Critical|Off"));
+    const QCommandLineOption changeDebugSettingOption(u"debug-mode"_s, i18n("Change debug mode as console (in console)"), u"Full|Info|Warning|Critical|Off"_s);
     parser.addOption(changeDebugSettingOption);
-    parser.addPositionalArgument(QStringLiteral("logging category name"),
-                                 i18n("Specify logging category name that you want to change debug mode (in console)"));
+    parser.addPositionalArgument(u"logging category name"_s, i18n("Specify logging category name that you want to change debug mode (in console)"));
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -92,7 +91,7 @@ int main(int argc, char **argv)
 
     if (parser.isSet(switchFullDebugOption)) {
         ChangeDebugModeJob job;
-        job.setDebugMode(QStringLiteral("Full"));
+        job.setDebugMode(u"Full"_s);
         job.setWithoutArguments(true);
         if (!job.start()) {
             std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
@@ -102,7 +101,7 @@ int main(int argc, char **argv)
     }
     if (parser.isSet(switchOffDebugOption)) {
         ChangeDebugModeJob job;
-        job.setDebugMode(QStringLiteral("Off"));
+        job.setDebugMode(u"Off"_s);
         job.setWithoutArguments(true);
         if (!job.start()) {
             std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
@@ -139,7 +138,7 @@ int main(int argc, char **argv)
             return engine->toScriptValue(KAboutData::applicationData());
         });
         engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
-        engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+        engine.load(QUrl(u"qrc:///main.qml"_s));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
             qDebug() << " Error during loading main.qml";

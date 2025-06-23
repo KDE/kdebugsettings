@@ -5,6 +5,8 @@
 
 */
 #include "renamecategorytest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kdebugsettingsutil.h"
 #include "renamecategory.h"
 #include <QTest>
@@ -23,14 +25,14 @@ void RenameCategoryTest::shouldParseRenameLine_data()
     QTest::addColumn<QString>("original");
     QTest::addColumn<bool>("valid");
     QTest::newRow("empty") << QString() << QString() << QString() << false;
-    QTest::newRow("validLine") << QStringLiteral("log linux") << QStringLiteral("linux") << QStringLiteral("log") << true;
-    QTest::newRow("validLinewithspace") << QStringLiteral(" log linux  ") << QStringLiteral("linux") << QStringLiteral("log") << true;
-    QTest::newRow("comment") << QStringLiteral("#log linux  ") << QString() << QString() << false;
-    QTest::newRow("commentWithSpace") << QStringLiteral("   #log linux  ") << QString() << QString() << false;
-    QTest::newRow("badline") << QStringLiteral("log") << QString() << QString() << false;
-    QTest::newRow("comment-2") << QStringLiteral("#log linux") << QString() << QString() << false;
+    QTest::newRow("validLine") << u"log linux"_s << u"linux"_s << QStringLiteral("log") << true;
+    QTest::newRow("validLinewithspace") << u" log linux  "_s << u"linux"_s << QStringLiteral("log") << true;
+    QTest::newRow("comment") << u"#log linux  "_s << QString() << QString() << false;
+    QTest::newRow("commentWithSpace") << u"   #log linux  "_s << QString() << QString() << false;
+    QTest::newRow("badline") << u"log"_s << QString() << QString() << false;
+    QTest::newRow("comment-2") << u"#log linux"_s << QString() << QString() << false;
 
-    QTest::newRow("linewithcomment") << QStringLiteral("log linux#comment about linux") << QStringLiteral("linux") << QStringLiteral("log") << true;
+    QTest::newRow("linewithcomment") << u"log linux#comment about linux"_s << u"linux"_s << QStringLiteral("log") << true;
 }
 
 void RenameCategoryTest::shouldParseRenameLine()

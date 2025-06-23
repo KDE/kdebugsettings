@@ -6,6 +6,8 @@
 */
 
 #include "loggingcategorytest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "loggingcategory.h"
 #include <QTest>
 
@@ -31,9 +33,9 @@ void LoggingCategoryTest::shouldBeEqual()
 {
     LoggingCategory log;
     log.enabled = false;
-    log.description = QStringLiteral("foo");
-    log.categoryName = QStringLiteral("bla");
-    log.identifierName = QStringLiteral("blu");
+    log.description = u"foo"_s;
+    log.categoryName = u"bla"_s;
+    log.identifierName = u"blu"_s;
     log.loggingType = LoggingCategory::All;
     LoggingCategory log2;
     log2 = log;
@@ -46,17 +48,12 @@ void LoggingCategoryTest::shouldCreateRules_data()
     QTest::addColumn<LoggingCategory::LoggingType>("loggingType");
     QTest::addColumn<QString>("result");
 
-    QTest::newRow("all") << QStringLiteral("foo") << LoggingCategory::All << QStringLiteral("foo=true\n");
-    QTest::newRow("debug") << QStringLiteral("foo") << LoggingCategory::Debug
-                           << QStringLiteral("foo.info=false\nfoo.debug=true\nfoo.warning=true\nfoo.critical=true\n");
-    QTest::newRow("info") << QStringLiteral("foo") << LoggingCategory::Info
-                          << QStringLiteral("foo.info=true\nfoo.warning=true\nfoo.critical=true\nfoo.debug=false\n");
-    QTest::newRow("critical") << QStringLiteral("foo") << LoggingCategory::Critical
-                              << QStringLiteral("foo.info=false\nfoo.debug=false\nfoo.warning=false\nfoo.critical=true\n");
-    QTest::newRow("warning") << QStringLiteral("foo") << LoggingCategory::Warning
-                             << QStringLiteral("foo.info=false\nfoo.debug=false\nfoo.warning=true\nfoo.critical=true\n");
-    QTest::newRow("off") << QStringLiteral("foo") << LoggingCategory::Off
-                         << QStringLiteral("foo.info=false\nfoo.debug=false\nfoo.warning=false\nfoo.critical=false\n");
+    QTest::newRow("all") << u"foo"_s << LoggingCategory::All << u"foo=true\n"_s;
+    QTest::newRow("debug") << u"foo"_s << LoggingCategory::Debug << u"foo.info=false\nfoo.debug=true\nfoo.warning=true\nfoo.critical=true\n"_s;
+    QTest::newRow("info") << u"foo"_s << LoggingCategory::Info << u"foo.info=true\nfoo.warning=true\nfoo.critical=true\nfoo.debug=false\n"_s;
+    QTest::newRow("critical") << u"foo"_s << LoggingCategory::Critical << u"foo.info=false\nfoo.debug=false\nfoo.warning=false\nfoo.critical=true\n"_s;
+    QTest::newRow("warning") << u"foo"_s << LoggingCategory::Warning << u"foo.info=false\nfoo.debug=false\nfoo.warning=true\nfoo.critical=true\n"_s;
+    QTest::newRow("off") << u"foo"_s << LoggingCategory::Off << u"foo.info=false\nfoo.debug=false\nfoo.warning=false\nfoo.critical=false\n"_s;
 }
 
 void LoggingCategoryTest::shouldCreateRules()

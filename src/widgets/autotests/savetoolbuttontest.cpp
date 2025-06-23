@@ -6,6 +6,8 @@
 */
 
 #include "savetoolbuttontest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "savetoolbutton.h"
 #include <QTest>
 QTEST_MAIN(SaveToolButtonTest)

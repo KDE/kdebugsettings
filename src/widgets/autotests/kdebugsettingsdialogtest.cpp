@@ -6,6 +6,8 @@
 */
 
 #include "kdebugsettingsdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "categorywarning.h"
 #include "kdebugsettingsdialog.h"
 #include "loadtoolbutton.h"
@@ -27,11 +29,11 @@ KDebugSettingsDialogTest::~KDebugSettingsDialogTest() = default;
 void KDebugSettingsDialogTest::shouldHaveDefaultValue()
 {
     KDebugSettingsDialog dlg;
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(),
              QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help | QDialogButtonBox::Apply);
-    auto tab = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto tab = dlg.findChild<QTabWidget *>(u"tabwidget"_s);
     QVERIFY(tab);
     for (int i = 0; i < tab->count(); ++i) {
         const QString objName = tab->widget(i)->objectName();
@@ -39,14 +41,14 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
             || (objName == QLatin1StringView("environmentsettingsrulespage"));
         QVERIFY(hasCorrectName);
     }
-    auto saveAs = buttonBox->findChild<SaveToolButton *>(QStringLiteral("saveas_button"));
+    auto saveAs = buttonBox->findChild<SaveToolButton *>(u"saveas_button"_s);
     QVERIFY(saveAs);
-    auto load = buttonBox->findChild<LoadToolButton *>(QStringLiteral("load_button"));
+    auto load = buttonBox->findChild<LoadToolButton *>(u"load_button"_s);
     QVERIFY(load);
     QVERIFY(load->menu());
-    auto insertCategories = buttonBox->findChild<QPushButton *>(QStringLiteral("insert_button"));
+    auto insertCategories = buttonBox->findChild<QPushButton *>(u"insert_button"_s);
     QVERIFY(insertCategories);
-    auto categoryWarning = dlg.findChild<CategoryWarning *>(QStringLiteral("categorywarning"));
+    auto categoryWarning = dlg.findChild<CategoryWarning *>(u"categorywarning"_s);
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());
 }

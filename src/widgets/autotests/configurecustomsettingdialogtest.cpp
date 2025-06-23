@@ -6,6 +6,8 @@
 */
 
 #include "configurecustomsettingdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "configurecustomsettingdialog.h"
 #include "configurecustomsettingwidget.h"
 #include <QDialogButtonBox>
@@ -21,10 +23,10 @@ ConfigureCustomSettingDialogTest::~ConfigureCustomSettingDialogTest() = default;
 void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
 {
     ConfigureCustomSettingDialog dlg;
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
     QVERIFY(!buttonBox->button(QDialogButtonBox::Ok)->isEnabled());
-    auto widget = dlg.findChild<ConfigureCustomSettingWidget *>(QStringLiteral("customsettingwidget"));
+    auto widget = dlg.findChild<ConfigureCustomSettingWidget *>(u"customsettingwidget"_s);
     QVERIFY(widget);
 }
 

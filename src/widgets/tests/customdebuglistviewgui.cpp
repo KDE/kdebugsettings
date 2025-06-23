@@ -6,6 +6,8 @@
 */
 
 #include "customdebuglistviewgui.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "customdebuglistview.h"
 #include "model/customloggingcategorymodel.h"
 
@@ -21,9 +23,9 @@ CustomDebugListViewGui::CustomDebugListViewGui(QWidget *parent)
     LoggingCategory::List lst;
     for (int i = 0; i < 5; ++i) {
         LoggingCategory cat;
-        cat.categoryName = QStringLiteral("foo-%1").arg(i);
-        cat.identifierName = QStringLiteral("ident-%1").arg(i);
-        cat.description = QStringLiteral("desc-%1").arg(i);
+        cat.categoryName = u"foo-%1"_s.arg(i);
+        cat.identifierName = u"ident-%1"_s.arg(i);
+        cat.description = u"desc-%1"_s.arg(i);
         cat.enabled = (i % 2);
         lst.append(cat);
     }

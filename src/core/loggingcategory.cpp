@@ -29,19 +29,19 @@ QString LoggingCategory::createCustomRule() const
     QString str;
     switch (loggingType) {
     case All:
-        str = categoryName + (enabled ? QStringLiteral("=true\n") : QStringLiteral("=false\n"));
+        str = categoryName + (enabled ? u"=true\n"_s : u"=false\n"_s);
         break;
     case Info:
-        str = categoryName + QStringLiteral(".info=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        str = categoryName + u".info=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
         break;
     case Warning:
-        str = categoryName + QStringLiteral(".warning=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        str = categoryName + u".warning=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
         break;
     case Debug:
-        str = categoryName + QStringLiteral(".debug=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        str = categoryName + u".debug=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
         break;
     case Critical:
-        str = categoryName + QStringLiteral(".critical=%1\n").arg(enabled ? QStringLiteral("true") : QStringLiteral("false"));
+        str = categoryName + u".critical=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
         break;
     case Undefined:
     case Off:
@@ -114,9 +114,9 @@ QString LoggingCategory::generateToolTip() const
 {
     QString tooltip = i18n("Category name: %1", categoryName);
     if (!identifierName.isEmpty()) {
-        tooltip += QLatin1Char('\n') + i18n("Identifier: %1", identifierName);
+        tooltip += u'\n' + i18n("Identifier: %1", identifierName);
     }
-    tooltip += QLatin1Char('\n') + i18n("Default Severity: %1", convertCategoryTypeToString(defaultSeverityType));
+    tooltip += u'\n' + i18n("Default Severity: %1", convertCategoryTypeToString(defaultSeverityType));
     return tooltip;
 }
 

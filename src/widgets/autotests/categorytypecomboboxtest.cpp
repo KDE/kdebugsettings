@@ -6,6 +6,8 @@
 */
 
 #include "categorytypecomboboxtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "categorytypecombobox.h"
 #include <QTest>
 
@@ -25,7 +27,7 @@ void CategoryTypeComboBoxTest::shouldHaveDefaultValue()
     QCOMPARE(w2.count(), 5);
 
     auto proxy = w.model();
-    QCOMPARE(proxy->objectName(), QStringLiteral("proxy"));
+    QCOMPARE(proxy->objectName(), u"proxy"_s);
 
     QCOMPARE(w.defaultCategories(), LoggingCategory::Info);
 }

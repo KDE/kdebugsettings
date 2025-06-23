@@ -18,7 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QString &filename)
 {
     RenameCategory category;
-    int pos = line.indexOf(QLatin1Char('#'));
+    int pos = line.indexOf(u'#');
     if (pos != -1) {
         line.truncate(pos);
         line = line.simplified();
@@ -28,7 +28,7 @@ RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QStri
         return category;
     }
     line = line.simplified();
-    const int space = line.indexOf(QLatin1Char(' '));
+    const int space = line.indexOf(u' ');
     if (space == -1) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
                                           << " from file:" << filename << Qt::endl;
@@ -68,7 +68,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
 KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line, const QString &filename)
 {
     KdeLoggingCategory category;
-    const int pos = line.indexOf(QLatin1Char('#'));
+    const int pos = line.indexOf(u'#');
     if (pos != -1) {
         line.truncate(pos);
         line = line.simplified();
@@ -78,7 +78,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
         return category;
     }
     line = line.simplified();
-    const int space = line.indexOf(QLatin1Char(' '));
+    const int space = line.indexOf(u' ');
     if (space == -1) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Invalid categories file. Missing space. Syntax is logname<space>description + optional element. Line: " << line
                                           << " from file:" << filename << Qt::endl;
@@ -91,7 +91,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
 
     // TODO create an unique regularexpression
 
-    static const QRegularExpression regularExpressionUser(QStringLiteral("^([\\w._-]+)\\s*(.*)$"));
+    static const QRegularExpression regularExpressionUser(u"^([\\w._-]+)\\s*(.*)$"_s);
     QRegularExpressionMatch match = regularExpressionUser.match(line);
     if (match.hasMatch()) {
         logName = match.captured(1);
@@ -100,7 +100,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
 
     bool newFormatFound = false;
     static const QRegularExpression regularExpressionDefaultSeverityNewFormat(
-        QStringLiteral("^(.*)\\s+DEFAULT_SEVERITY\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\](?:\\s+(.*))?"));
+        u"^(.*)\\s+DEFAULT_SEVERITY\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\](?:\\s+(.*))?"_s);
     QRegularExpressionMatch match3 = regularExpressionDefaultSeverityNewFormat.match(description);
     QString defaultSeverityCaptured;
     QString potentialIdentifier;
@@ -118,7 +118,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
     }
 
     if (potentialIdentifier.isEmpty()) {
-        static const QRegularExpression regularExpressionDefaultIdentifierNewFormat(QStringLiteral("^(.*)\\s+IDENTIFIER\\s+\\[(.*)\\]"));
+        static const QRegularExpression regularExpressionDefaultIdentifierNewFormat(u"^(.*)\\s+IDENTIFIER\\s+\\[(.*)\\]"_s);
         QRegularExpressionMatch match4 = regularExpressionDefaultIdentifierNewFormat.match(description);
         if (match4.hasMatch()) {
             newFormatFound = true;
@@ -132,7 +132,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
             }
         }
     } else {
-        static const QRegularExpression regularExpressionDefaultIdentifierNewFormat2(QStringLiteral("IDENTIFIER\\s+\\[(.*)\\]"));
+        static const QRegularExpression regularExpressionDefaultIdentifierNewFormat2(u"IDENTIFIER\\s+\\[(.*)\\]"_s);
         QRegularExpressionMatch match4 = regularExpressionDefaultIdentifierNewFormat2.match(potentialIdentifier);
         if (match4.hasMatch()) {
             newFormatFound = true;
@@ -145,7 +145,7 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
 
     if (!newFormatFound) {
         // Old format.
-        static const QRegularExpression regularExpressionDefaultSeverityOldFormat(QStringLiteral("^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]"));
+        static const QRegularExpression regularExpressionDefaultSeverityOldFormat(u"^(.*)\\s+\\[(DEBUG|INFO|WARNING|CRITICAL)\\]"_s);
         QRegularExpressionMatch match2 = regularExpressionDefaultSeverityOldFormat.match(description);
         if (match2.hasMatch()) {
             const QString descriptionCaptured = match2.captured(1);
@@ -243,8 +243,8 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
 KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQtCategory(const QString &line)
 {
     LineLoggingQtCategory lineCategory;
-    int equalPos = line.indexOf(QLatin1Char('='));
-    if ((equalPos != -1) && (line.lastIndexOf(QLatin1Char('=')) == equalPos)) {
+    int equalPos = line.indexOf(u'=');
+    if ((equalPos != -1) && (line.lastIndexOf(u'=') == equalPos)) {
         const QString pattern = line.left(equalPos);
         const QString valueStr = line.mid(equalPos + 1);
         if (valueStr == "true"_L1) {
@@ -298,14 +298,14 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
 
             // Remove all whitespace from line
             line = line.simplified();
-            line.remove(QLatin1Char(' '));
+            line.remove(u' ');
 
             // comment
-            if (line.startsWith(QLatin1Char(';'))) {
+            if (line.startsWith(u';')) {
                 continue;
             }
 
-            if (line.startsWith(QLatin1Char('[')) && line.endsWith(QLatin1Char(']'))) {
+            if (line.startsWith(u'[') && line.endsWith(u']')) {
                 // new section
                 _section = line.mid(1, line.size() - 2);
                 rulesSections = (_section == "Rules"_L1);
@@ -431,7 +431,7 @@ QString KDebugSettingsUtil::qtFileName()
 {
     const QString envPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/QtProject"_L1;
     QDir().mkpath(envPath);
-    const QString qtloggingFileName = envPath + QStringLiteral("/qtlogging.ini");
+    const QString qtloggingFileName = envPath + u"/qtlogging.ini"_s;
     return qtloggingFileName;
 }
 
@@ -495,24 +495,24 @@ QString KDebugSettingsUtil::generateDisplayRule(const QString &categoryName, boo
         case LoggingCategory::All:
             break;
         case LoggingCategory::Info:
-            ruleStr += QStringLiteral(".info");
+            ruleStr += u".info"_s;
             break;
         case LoggingCategory::Warning:
-            ruleStr += QStringLiteral(".warning");
+            ruleStr += u".warning"_s;
             break;
         case LoggingCategory::Debug:
-            ruleStr += QStringLiteral(".debug");
+            ruleStr += u".debug"_s;
             break;
         case LoggingCategory::Critical:
-            ruleStr += QStringLiteral(".critical");
+            ruleStr += u".critical"_s;
             break;
         case LoggingCategory::Off:
             break;
         }
         if (state) {
-            ruleStr += QStringLiteral("=true");
+            ruleStr += u"=true"_s;
         } else {
-            ruleStr += QStringLiteral("=false");
+            ruleStr += u"=false"_s;
         }
     }
     return ruleStr;

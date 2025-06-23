@@ -6,6 +6,8 @@
 */
 
 #include "changedebugmodejobtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "jobs/changedebugmodejob.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(ChangeDebugModeJobTest)
@@ -27,11 +29,11 @@ void ChangeDebugModeJobTest::shouldHaveDefaultValue()
 void ChangeDebugModeJobTest::shouldBeAbleToStart()
 {
     ChangeDebugModeJob job;
-    job.setDebugMode(QStringLiteral("foo"));
+    job.setDebugMode(u"foo"_s);
     QVERIFY(!job.debugMode().isEmpty());
     QVERIFY(job.loggingCategoriesName().isEmpty());
     QVERIFY(!job.canStart());
-    job.setLoggingCategoriesName({QStringLiteral("foo")});
+    job.setLoggingCategoriesName({u"foo"_s});
     QVERIFY(!job.debugMode().isEmpty());
     QVERIFY(!job.loggingCategoriesName().isEmpty());
     QVERIFY(job.canStart());
@@ -43,21 +45,21 @@ void ChangeDebugModeJobTest::shouldBeAbleToStartWithoutArgument()
     QVERIFY(!job.canStart());
     job.setWithoutArguments(true);
     QVERIFY(job.canStart());
-    job.setDebugMode(QStringLiteral("foo"));
+    job.setDebugMode(u"foo"_s);
     QVERIFY(job.canStart());
 }
 
 void ChangeDebugModeJobTest::shouldConvertToLoggingType()
 {
     ChangeDebugModeJob job;
-    QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("bla")), LoggingCategory::LoggingType::Undefined);
+    QCOMPARE(job.convertDebugModeToLoggingType(u"bla"_s), LoggingCategory::LoggingType::Undefined);
     QCOMPARE(job.convertDebugModeToLoggingType(QString()), LoggingCategory::LoggingType::Undefined);
 
-    QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Full")), LoggingCategory::LoggingType::All);
-    QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Info")), LoggingCategory::LoggingType::Info);
-    QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Warning")), LoggingCategory::LoggingType::Warning);
-    QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Critical")), LoggingCategory::LoggingType::Critical);
-    QCOMPARE(job.convertDebugModeToLoggingType(QStringLiteral("Off")), LoggingCategory::LoggingType::Off);
+    QCOMPARE(job.convertDebugModeToLoggingType(u"Full"_s), LoggingCategory::LoggingType::All);
+    QCOMPARE(job.convertDebugModeToLoggingType(u"Info"_s), LoggingCategory::LoggingType::Info);
+    QCOMPARE(job.convertDebugModeToLoggingType(u"Warning"_s), LoggingCategory::LoggingType::Warning);
+    QCOMPARE(job.convertDebugModeToLoggingType(u"Critical"_s), LoggingCategory::LoggingType::Critical);
+    QCOMPARE(job.convertDebugModeToLoggingType(u"Off"_s), LoggingCategory::LoggingType::Off);
 }
 
 #include "moc_changedebugmodejobtest.cpp"

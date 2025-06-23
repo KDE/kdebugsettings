@@ -6,6 +6,8 @@
 */
 
 #include "environmentsettingsrulespagetest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "environmentplaintextedit.h"
 #include "environmentsettingsrulespage.h"
 #include <QTest>
@@ -20,7 +22,7 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 {
     EnvironmentSettingsRulesPage w;
 
-    auto plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("richtext"));
+    auto plainText = w.findChild<EnvironmentPlainTextEdit *>(u"richtext"_s);
     QVERIFY(plainText);
     QVERIFY(plainText->toPlainText().isEmpty());
     QVERIFY(plainText->isReadOnly());
@@ -29,8 +31,8 @@ void EnvironmentSettingsRulesPageTest::shouldHaveDefaultValue()
 void EnvironmentSettingsRulesPageTest::shouldSetRules()
 {
     EnvironmentSettingsRulesPage w;
-    auto plainText = w.findChild<EnvironmentPlainTextEdit *>(QStringLiteral("richtext"));
-    QString rules = QStringLiteral("Rules for qt\ntest");
+    auto plainText = w.findChild<EnvironmentPlainTextEdit *>(u"richtext"_s);
+    QString rules = u"Rules for qt\ntest"_s;
     w.setRules(rules);
     QVERIFY(plainText->toPlainText().endsWith(rules));
 }

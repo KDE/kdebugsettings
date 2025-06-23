@@ -37,7 +37,7 @@ QString LoadGroupMenu::defaultWritableGroupPath()
 
 QStringList LoadGroupMenu::defaultReadableGroupPath() const
 {
-    return QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, QStringLiteral("/groups/"), QStandardPaths::LocateDirectory);
+    return QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, u"/groups/"_s, QStandardPaths::LocateDirectory);
 }
 
 void LoadGroupMenu::init()
@@ -55,7 +55,7 @@ void LoadGroupMenu::init()
         mGroupNames += dirNameList;
         for (const QString &file : dirNameList) {
             QAction *act = addAction(file);
-            const QString fullPath = dirName + QLatin1Char('/') + file;
+            const QString fullPath = dirName + u'/' + file;
             connect(act, &QAction::triggered, this, [this, fullPath] {
                 Q_EMIT loadGroupRequested(fullPath);
             });

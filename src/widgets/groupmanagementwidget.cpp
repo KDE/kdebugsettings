@@ -46,7 +46,7 @@ void GroupManagementWidget::exportGroup(QListWidgetItem *item)
     }
     const QString fullPath = item->data(FullPathRole).toString();
     QFile f(fullPath);
-    const QString newPath = QFileDialog::getSaveFileName(this, i18n("Export Group"), QDir::homePath() + QStringLiteral("/%1").arg(item->text()));
+    const QString newPath = QFileDialog::getSaveFileName(this, i18n("Export Group"), QDir::homePath() + u"/%1"_s.arg(item->text()));
     if (!newPath.isEmpty()) {
         if (f.copy(newPath)) {
             KMessageBox::information(this, i18n("Group exported to %1", newPath), i18n("Export Group"));
@@ -67,7 +67,7 @@ void GroupManagementWidget::renameGroup(QListWidgetItem *item)
     const QString newName = QInputDialog::getText(this, i18nc("@title:window", "Rename Group"), i18n("New Name:"));
     const QString newNameTrimmed = newName.trimmed();
     if (!newNameTrimmed.isEmpty() && (currentName != newNameTrimmed)) {
-        const QString newFullPath{KDebugSettingsUtil::defaultWritableGroupPath() + QLatin1Char('/') + newNameTrimmed};
+        const QString newFullPath{KDebugSettingsUtil::defaultWritableGroupPath() + u'/' + newNameTrimmed};
         if (!f.rename(newFullPath)) {
             KMessageBox::error(this, i18n("Impossible to rename group as \'%1\'.", newNameTrimmed), i18nc("@title:window", "Rename Group"));
         } else {
@@ -85,16 +85,16 @@ void GroupManagementWidget::slotCustomContextMenu()
         QMenu menu(this);
         if (mListWidget->selectedItems().count() == 1) {
             const auto item = items.at(0);
-            menu.addAction(QIcon::fromTheme(QStringLiteral("edit")), i18nc("@action", "Rename Group…"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(u"edit"_s), i18nc("@action", "Rename Group…"), this, [this, item]() {
                 renameGroup(item);
             });
             menu.addSeparator();
-            menu.addAction(QIcon::fromTheme(QStringLiteral("document-export")), i18nc("@action", "Export Group…"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(u"document-export"_s), i18nc("@action", "Export Group…"), this, [this, item]() {
                 exportGroup(item);
             });
             menu.addSeparator();
         }
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18nc("@action", "Remove Groups"), this, [this, items]() {
+        menu.addAction(QIcon::fromTheme(u"edit-delete"_s), i18nc("@action", "Remove Groups"), this, [this, items]() {
             for (auto item : items) {
                 const QString fullPath = item->data(FullPathRole).toString();
                 QFile f(fullPath);
@@ -116,7 +116,7 @@ void GroupManagementWidget::init()
         const QString groupPath = KDebugSettingsUtil::defaultWritableGroupPath();
         for (const QString &file : groups) {
             auto item = new QListWidgetItem(file, mListWidget);
-            const QString fullPath = groupPath + QLatin1Char('/') + file;
+            const QString fullPath = groupPath + u'/' + file;
             item->setData(FullPathRole, fullPath);
         }
     }
