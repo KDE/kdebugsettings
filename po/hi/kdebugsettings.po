@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:43+0000\n"
+"POT-Creation-Date: 2025-06-24 00:45+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: src/apps/main.cpp:40 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:41 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "केडीबगसेटिंग्स"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "डिबग सेटिंग्स कॉन्फ़िगर करें"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings लेखक"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "लॉरेंट मोंटेल"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "मेंटेनर"
 
-#: src/apps/main.cpp:54 src/quickapps/main.cpp:71
+#: src/apps/main.cpp:55 src/quickapps/main.cpp:73
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,31 +53,31 @@ msgstr ""
 "QStandardPaths परीक्षण मोड सक्षम करें, अर्थात यूनिट टेस्ट द्वारा उपयोग की जाने वाली "
 "पठन/लेखन सेटिंग्स"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:74
+#: src/apps/main.cpp:58 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "सभी मॉड्यूल के लिए पूर्ण डिबग सक्रिय करें।"
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:78
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "सभी मॉड्यूल के लिए पूर्ण डिबग अक्षम करें."
 
-#: src/apps/main.cpp:63 src/quickapps/main.cpp:80
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:81
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "कंसोल के रूप में डिबग मोड बदलें (कंसोल में)"
 
-#: src/apps/main.cpp:67 src/quickapps/main.cpp:84
+#: src/apps/main.cpp:65 src/quickapps/main.cpp:83
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 "उस लॉगिंग श्रेणी का नाम निर्दिष्ट करें जिसे आप डिबग मोड में बदलना चाहते हैं (कंसोल में)"
 
-#: src/apps/main.cpp:81 src/apps/main.cpp:91 src/apps/main.cpp:101
-#: src/quickapps/main.cpp:98 src/quickapps/main.cpp:108
-#: src/quickapps/main.cpp:118
+#: src/apps/main.cpp:79 src/apps/main.cpp:89 src/apps/main.cpp:99
+#: src/quickapps/main.cpp:97 src/quickapps/main.cpp:107
+#: src/quickapps/main.cpp:117
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "डिबग मोड को बदलना असंभव"
@@ -157,7 +157,7 @@ msgstr "महत्वपूर्ण संदेश"
 msgid "No Debug Messages"
 msgstr "कोई डीबग संदेश नहीं"
 
-#: src/quickapps/main.cpp:64
+#: src/quickapps/main.cpp:66
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings लेखक"
@@ -213,15 +213,15 @@ msgctxt "@action"
 msgid "Edit Rule"
 msgstr "नियम संपादित करें"
 
-#: src/widgets/customdebuglistview.cpp:53
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:52
+#: src/widgets/customdebuglistview.cpp:90
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "नियम हटाएँ"
 msgstr[1] "नियम हटाएँ"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -375,7 +375,7 @@ msgstr "कस्टम नियम"
 msgid "Rules Settings With Environment Variable"
 msgstr "पर्यावरण चर के साथ नियम सेटिंग"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
+#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "के रूप रक्षित करें…"
@@ -391,39 +391,39 @@ msgstr "डालना…"
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' खोला नहीं जा सकता। कृपया इसे सत्यापित करें।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Insert Categories"
 msgstr "श्रेणियाँ डालें"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "श्रेणियाँ फ़ाइलें"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "फ़ाइल '%1' से श्रेणियाँ सम्मिलित की गईं."
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "श्रेणियाँ डालें"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "समूह नाम"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "नाम:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -432,24 +432,24 @@ msgstr ""
 "<b>&#39;%1&#39;</b> पहले से ही समूह नाम के रूप में उपयोग किया जा रहा है। कृपया इसे "
 "किसी अन्य नाम के रूप में सहेजें।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "खाली नाम के रूप में सहेजा नहीं जा सकता। कृपया नया नाम इस्तेमाल करें।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "के रूप रक्षित करें"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:240
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings फ़ाइल (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:240
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -477,13 +477,13 @@ msgctxt "@action"
 msgid "Load From File…"
 msgstr "फ़ाइल से लोड करें…"
 
-#: src/widgets/savetoolbutton.cpp:20
+#: src/widgets/savetoolbutton.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "फ़ाइल के रूप में सहेजें…"
 
-#: src/widgets/savetoolbutton.cpp:23
+#: src/widgets/savetoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Save As Group…"

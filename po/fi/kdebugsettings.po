@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:43+0000\n"
+"POT-Creation-Date: 2025-06-24 00:45+0000\n"
 "PO-Revision-Date: 2024-10-28 20:43+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/apps/main.cpp:40 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:41 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Muokkaa virheenpaikannusasetuksia"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015–%1 kdebugsettingsin tekijät"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
-#: src/apps/main.cpp:54 src/quickapps/main.cpp:71
+#: src/apps/main.cpp:55 src/quickapps/main.cpp:73
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,22 +53,22 @@ msgstr ""
 "Käytä QStandardPaths-testitilaa, ts. yksikkötestien käyttämät luku- ja "
 "kirjoitusasetukset"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:74
+#: src/apps/main.cpp:58 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivoi kaikille moduuleille täysi virheenpaikannus."
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:78
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Poista virheenpaikannus käytöstä kaikilta moduuleilta."
 
-#: src/apps/main.cpp:63 src/quickapps/main.cpp:80
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:81
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Vaihda virheenpaikannustilaksi konsoli (konsolissa)"
 
-#: src/apps/main.cpp:67 src/quickapps/main.cpp:84
+#: src/apps/main.cpp:65 src/quickapps/main.cpp:83
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -76,9 +76,9 @@ msgstr ""
 "Määritä lokiluokan nimi, jolle haluat vaihtaa virheenpaikannustilaa "
 "(konsolissa)"
 
-#: src/apps/main.cpp:81 src/apps/main.cpp:91 src/apps/main.cpp:101
-#: src/quickapps/main.cpp:98 src/quickapps/main.cpp:108
-#: src/quickapps/main.cpp:118
+#: src/apps/main.cpp:79 src/apps/main.cpp:89 src/apps/main.cpp:99
+#: src/quickapps/main.cpp:97 src/quickapps/main.cpp:107
+#: src/quickapps/main.cpp:117
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Mahdotonta vaihtaa virheenpaikannustilaa"
@@ -158,7 +158,7 @@ msgstr "Kriittiset viestit"
 msgid "No Debug Messages"
 msgstr "Ei virheenpaikannusviestejä"
 
-#: src/quickapps/main.cpp:64
+#: src/quickapps/main.cpp:66
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "© %1 kdebugsettingsin tekijät"
@@ -214,15 +214,15 @@ msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Muokkaa sääntöä"
 
-#: src/widgets/customdebuglistview.cpp:53
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:52
+#: src/widgets/customdebuglistview.cpp:90
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Poista sääntö"
 msgstr[1] "Poista säännöt"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -377,7 +377,7 @@ msgstr "Omat säännöt"
 msgid "Rules Settings With Environment Variable"
 msgstr "Ympäristömuuttujassa määritetyt säännöt"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
+#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "Tallenna nimellä…"
@@ -393,39 +393,39 @@ msgstr "Lisää…"
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "”%1” ei voitu avata. Tarkista se."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Insert Categories"
 msgstr "Lisää luokkia"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "Luokkatiedostot"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Tiedoston ”%1” luokat lisätty."
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Lisää luokkia"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Ryhmän nimi"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "Nimi:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -434,24 +434,24 @@ msgstr ""
 "<b>%1</b> on jo käytössä ryhmän nimenä.\n"
 "Tallenna toisella nimellä."
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Tyhjälle nimelle ei voi tallentaa. Käytä uutta nimeä."
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Tallenna nimellä"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:240
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings-tiedosto (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:240
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -479,13 +479,13 @@ msgctxt "@action"
 msgid "Load From File…"
 msgstr "Lataa tiedostosta…"
 
-#: src/widgets/savetoolbutton.cpp:20
+#: src/widgets/savetoolbutton.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "Tallenna tiedostoksi…"
 
-#: src/widgets/savetoolbutton.cpp:23
+#: src/widgets/savetoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Save As Group…"

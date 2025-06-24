@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:43+0000\n"
+"POT-Creation-Date: 2025-06-24 00:45+0000\n"
 "PO-Revision-Date: 2024-08-20 23:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/apps/main.cpp:40 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:41 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:43 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "디버그 설정"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings authors"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:45 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: src/apps/main.cpp:54 src/quickapps/main.cpp:71
+#: src/apps/main.cpp:55 src/quickapps/main.cpp:73
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 "QStandardPaths 테스트 모드 활성화, 유닛 테스트에서 사용하는 읽기/쓰기 설정"
 
-#: src/apps/main.cpp:57 src/quickapps/main.cpp:74
+#: src/apps/main.cpp:58 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "모든 모듈에 전체 디버그를 활성화합니다."
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:60 src/quickapps/main.cpp:78
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "모든 모듈에 전체 디버그를 비활성화합니다."
 
-#: src/apps/main.cpp:63 src/quickapps/main.cpp:80
+#: src/apps/main.cpp:63 src/quickapps/main.cpp:81
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "콘솔로 디버그 모드 전환(콘솔에서)"
 
-#: src/apps/main.cpp:67 src/quickapps/main.cpp:84
+#: src/apps/main.cpp:65 src/quickapps/main.cpp:83
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr "디버그 모드를 전환할 로그 분류 이름 지정(콘솔에서)"
 
-#: src/apps/main.cpp:81 src/apps/main.cpp:91 src/apps/main.cpp:101
-#: src/quickapps/main.cpp:98 src/quickapps/main.cpp:108
-#: src/quickapps/main.cpp:118
+#: src/apps/main.cpp:79 src/apps/main.cpp:89 src/apps/main.cpp:99
+#: src/quickapps/main.cpp:97 src/quickapps/main.cpp:107
+#: src/quickapps/main.cpp:117
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "디버그 모드를 변경할 수 없음"
@@ -153,7 +153,7 @@ msgstr "치명적 메시지"
 msgid "No Debug Messages"
 msgstr "디버그 메시지 없음"
 
-#: src/quickapps/main.cpp:64
+#: src/quickapps/main.cpp:66
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(c) %1 kdebugsettings authors"
@@ -209,14 +209,14 @@ msgctxt "@action"
 msgid "Edit Rule"
 msgstr "규칙 편집"
 
-#: src/widgets/customdebuglistview.cpp:53
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:52
+#: src/widgets/customdebuglistview.cpp:90
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "규칙 삭제"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:85
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -369,7 +369,7 @@ msgstr "사용자 정의 규칙"
 msgid "Rules Settings With Environment Variable"
 msgstr "환경 변수를 통한 규칙 설정"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:15
+#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "다른 이름으로 저장…"
@@ -385,39 +385,39 @@ msgstr "삽입…"
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1'을(를) 열 수 없습니다. 확인하십시오."
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Insert Categories"
 msgstr "분류 삽입"
 
-#: src/widgets/kdebugsettingsdialog.cpp:188
+#: src/widgets/kdebugsettingsdialog.cpp:187
 #, kde-format
 msgid "Categories Files"
 msgstr "분류 파일"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "'%1' 파일의 분류를 삽입했습니다."
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:201
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "분류 삽입"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "그룹 이름"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid "Name:"
 msgstr "이름:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:215
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -426,24 +426,24 @@ msgstr ""
 "이름이 <b>'%1'</b>인 그룹이 이미 있습니다.\n"
 "다른 이름으로 저장하십시오."
 
-#: src/widgets/kdebugsettingsdialog.cpp:224
+#: src/widgets/kdebugsettingsdialog.cpp:223
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "빈 이름으로 저장할 수 없습니다. 다른 이름을 지정하십시오."
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
-#: src/widgets/kdebugsettingsdialog.cpp:231
-#: src/widgets/kdebugsettingsdialog.cpp:240
+#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings 파일 (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:240
+#: src/widgets/kdebugsettingsdialog.cpp:239
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -471,13 +471,13 @@ msgctxt "@action"
 msgid "Load From File…"
 msgstr "파일에서 불러오기…"
 
-#: src/widgets/savetoolbutton.cpp:20
+#: src/widgets/savetoolbutton.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "파일로 저장…"
 
-#: src/widgets/savetoolbutton.cpp:23
+#: src/widgets/savetoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
