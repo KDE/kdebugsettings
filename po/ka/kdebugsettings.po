@@ -125,7 +125,7 @@ msgstr "იდენტიფიკატორი: %1"
 #: src/core/loggingcategory.cpp:119
 #, kde-format
 msgid "Default Severity: %1"
-msgstr "ნაგულისხმები სიმძიმე: %1"
+msgstr "ნაგულისხმევი სიმძიმე: %1"
 
 #: src/core/loggingcategory.cpp:128
 #, kde-format
