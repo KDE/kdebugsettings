@@ -18,6 +18,7 @@ Dependencies:
  - 'on': ['Linux', 'FreeBSD']
    'require':
     'frameworks/kdbusaddons': '@latest-kf6'
+    'frameworks/kwindowsystem': '@latest-kf6'
 
 Options:
  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']

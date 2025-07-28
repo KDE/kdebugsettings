@@ -15,7 +15,7 @@ target_link_libraries(
 )
 
 if(TARGET KF6::DBusAddons)
-    target_link_libraries(kdebugsettings KF6::DBusAddons)
+    target_link_libraries(kdebugsettings KF6::DBusAddons KF6::WindowSystem)
 else()
     target_link_libraries(kdebugsettings KDAB::kdsingleapplication)
 endif()
