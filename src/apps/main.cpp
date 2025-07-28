@@ -16,6 +16,7 @@
 #include <config-kdebugsettings.h>
 #if WITH_DBUS
 #include <KDBusService>
+#include <KWindowSystem>
 #else
 #include <kdsingleapplication.h>
 #endif
@@ -108,6 +109,13 @@ int main(int argc, char **argv)
         }
 #endif
         auto dialog = new KDebugSettingsDialog;
+
+#if WITH_DBUS
+        QObject::connect(&service, &KDBusService::activateRequested, dialog, [dialog] {
+            KWindowSystem::updateStartupId(dialog->windowHandle());
+            KWindowSystem::activateWindow(dialog->windowHandle());
+        });
+#endif
         const int ret = dialog->exec();
         delete dialog;
         return ret;
