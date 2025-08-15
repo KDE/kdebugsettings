@@ -436,7 +436,7 @@ msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
-"استُخدم <b>'%1'</b> بالفعل كاسم للمجموعة.\n"
+"استُخدم <b>'%1'</b> فعلًا كاسم للمجموعة.\n"
 "يرجى الحفظ باسم آخر."
 
 #: src/widgets/kdebugsettingsdialog.cpp:223
