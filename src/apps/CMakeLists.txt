@@ -32,7 +32,7 @@ if(APPLE)
                 "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}"
             MACOSX_BUNDLE_BUNDLE_VERSION "${RELEASE_SERVICE_VERSION}"
             MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kdebugsettings"
-            MACOSX_BUNDLE_COPYRIGHT "2020-2024 The KDebugsettings Developers"
+            MACOSX_BUNDLE_COPYRIGHT "2020-2025 The KDebugsettings Developers"
     )
 endif()
 
