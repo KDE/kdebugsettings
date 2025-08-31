@@ -39,7 +39,7 @@ void LoggingCategoryTest::shouldBeEqual()
     log.loggingType = LoggingCategory::All;
     LoggingCategory log2;
     log2 = log;
-    QVERIFY(log2 == log);
+    QCOMPARE(log2, log);
 }
 
 void LoggingCategoryTest::shouldCreateRules_data()
