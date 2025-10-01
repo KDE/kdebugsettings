@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 
     KStyleManager::initStyle();
 
-    KLocalizedString::setApplicationDomain(QByteArrayLiteral("kdebugsettings"));
+    KLocalizedString::setApplicationDomain("kdebugsettings"_ba);
     KAboutData aboutData(u"kdebugsettingsquick"_s,
                          i18n("KDebugSettings"),
                          QStringLiteral(KDEBUGSETTINGS_VERSION),

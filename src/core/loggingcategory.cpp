@@ -32,16 +32,16 @@ QString LoggingCategory::createCustomRule() const
         str = categoryName + (enabled ? u"=true\n"_s : u"=false\n"_s);
         break;
     case Info:
-        str = categoryName + u".info=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
+        str = categoryName + u".info=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
         break;
     case Warning:
-        str = categoryName + u".warning=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
+        str = categoryName + u".warning=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
         break;
     case Debug:
-        str = categoryName + u".debug=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
+        str = categoryName + u".debug=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
         break;
     case Critical:
-        str = categoryName + u".critical=%1\n"_s.arg(enabled ? u"true"_s : QStringLiteral("false"));
+        str = categoryName + u".critical=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
         break;
     case Undefined:
     case Off:

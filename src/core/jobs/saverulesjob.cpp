@@ -47,7 +47,7 @@ bool SaveRulesJob::start()
     QStringList listExcludeRules;
     for (const LoggingCategory &cat : std::as_const(mListCustom)) {
         const QString rule = cat.createCustomRule();
-        if (rule.startsWith(QLatin1StringView("*="))) {
+        if (rule.startsWith("*="_L1)) {
             out << rule + u'\n';
         } else {
             listExcludeRules << rule + u'\n';

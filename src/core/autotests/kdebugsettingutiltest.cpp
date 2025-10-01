@@ -32,36 +32,34 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
     // Old format
     QTest::newRow("empty") << QString() << QString() << QString() << QString() << QString() << false;
 
-    QTest::newRow("validLine") << u"log linux"_s << u"linux"_s << QStringLiteral("log") << QString() << QString() << true;
-    QTest::newRow("validLinewithspace") << u" log linux  "_s << u"linux"_s << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("validLine") << u"log linux"_s << u"linux"_s << u"log"_s << QString() << QString() << true;
+    QTest::newRow("validLinewithspace") << u" log linux  "_s << u"linux"_s << u"log"_s << QString() << QString() << true;
     QTest::newRow("comment") << u"#log linux  "_s << QString() << QString() << QString() << QString() << false;
     QTest::newRow("commentWithSpace") << u"   #log linux  "_s << QString() << QString() << QString() << QString() << false;
     QTest::newRow("badline") << u"log"_s << QString() << QString() << QString() << QString() << false;
     QTest::newRow("comment-2") << u"#log linux"_s << QString() << QString() << QString() << QString() << false;
-    QTest::newRow("validLineWithParentheses") << u"log linux (foo)"_s << u"linux (foo)"_s << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("validLineWithParentheses") << u"log linux (foo)"_s << u"linux (foo)"_s << u"log"_s << QString() << QString() << true;
 
     QTest::newRow("validLineWithParenthesesAndCategories")
         << u"log linux (foo) [WARNING]"_s << u"linux (foo)"_s << u"log"_s << u"WARNING"_s << QString() << true;
 
-    QTest::newRow("validLineCategoriesWarning") << u"log linux [WARNING]"_s << u"linux"_s << QStringLiteral("log") << u"WARNING"_s << QString() << true;
-    QTest::newRow("validLineCategoriesWarning2") << u"log linux [WARNING]    "_s << u"linux"_s << QStringLiteral("log") << u"WARNING"_s << QString() << true;
-    QTest::newRow("validLineCategoriesWarning3") << u"log linux      [WARNING]    "_s << u"linux"_s << QStringLiteral("log") << u"WARNING"_s << QString()
-                                                 << true;
-    QTest::newRow("validLineBadCategories") << u"log linux      [FOO]    "_s << u"linux [FOO]"_s << QStringLiteral("log") << QString() << QString() << true;
-    QTest::newRow("linewithcomment") << u"log linux#comment about linux"_s << u"linux"_s << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("validLineCategoriesWarning") << u"log linux [WARNING]"_s << u"linux"_s << u"log"_s << u"WARNING"_s << QString() << true;
+    QTest::newRow("validLineCategoriesWarning2") << u"log linux [WARNING]    "_s << u"linux"_s << u"log"_s << u"WARNING"_s << QString() << true;
+    QTest::newRow("validLineCategoriesWarning3") << u"log linux      [WARNING]    "_s << u"linux"_s << u"log"_s << u"WARNING"_s << QString() << true;
+    QTest::newRow("validLineBadCategories") << u"log linux      [FOO]    "_s << u"linux [FOO]"_s << u"log"_s << QString() << QString() << true;
+    QTest::newRow("linewithcomment") << u"log linux#comment about linux"_s << u"linux"_s << u"log"_s << QString() << QString() << true;
 
-    QTest::newRow("validLineCategoriesInfo") << u"log linux [INFO]"_s << u"linux"_s << QStringLiteral("log") << QStringLiteral("INFO") << QString() << true;
-    QTest::newRow("validLineCategoriesInfo2") << u"log linux [INFO]    "_s << u"linux"_s << QStringLiteral("log") << u"INFO"_s << QString() << true;
-    QTest::newRow("validLineCategoriesInfo3") << u"log linux      [INFO]    "_s << u"linux"_s << QStringLiteral("log") << u"INFO"_s << QString() << true;
+    QTest::newRow("validLineCategoriesInfo") << u"log linux [INFO]"_s << u"linux"_s << u"log"_s << u"INFO"_s << QString() << true;
+    QTest::newRow("validLineCategoriesInfo2") << u"log linux [INFO]    "_s << u"linux"_s << u"log"_s << u"INFO"_s << QString() << true;
+    QTest::newRow("validLineCategoriesInfo3") << u"log linux      [INFO]    "_s << u"linux"_s << u"log"_s << u"INFO"_s << QString() << true;
 
-    QTest::newRow("validLineCategoriesDEBUG") << u"log linux [DEBUG]"_s << u"linux"_s << QStringLiteral("log") << u"DEBUG"_s << QString() << true;
-    QTest::newRow("validLineCategoriesDEBUG2") << u"log linux [DEBUG]    "_s << u"linux"_s << QStringLiteral("log") << u"DEBUG"_s << QString() << true;
-    QTest::newRow("validLineCategoriesDEBUG3") << u"log linux      [DEBUG]    "_s << u"linux"_s << QStringLiteral("log") << u"DEBUG"_s << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG") << u"log linux [DEBUG]"_s << u"linux"_s << u"log"_s << u"DEBUG"_s << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG2") << u"log linux [DEBUG]    "_s << u"linux"_s << u"log"_s << u"DEBUG"_s << QString() << true;
+    QTest::newRow("validLineCategoriesDEBUG3") << u"log linux      [DEBUG]    "_s << u"linux"_s << u"log"_s << u"DEBUG"_s << QString() << true;
 
-    QTest::newRow("validLineCategoriesCRITICAL") << u"log linux [CRITICAL]"_s << u"linux"_s << QStringLiteral("log") << u"CRITICAL"_s << QString() << true;
-    QTest::newRow("validLineCategoriesCRITICAL2") << u"log linux [CRITICAL]    "_s << u"linux"_s << QStringLiteral("log") << u"CRITICAL"_s << QString() << true;
-    QTest::newRow("validLineCategoriesCRITICAL3") << u"log linux      [CRITICAL]    "_s << u"linux"_s << QStringLiteral("log") << u"CRITICAL"_s << QString()
-                                                  << true;
+    QTest::newRow("validLineCategoriesCRITICAL") << u"log linux [CRITICAL]"_s << u"linux"_s << u"log"_s << u"CRITICAL"_s << QString() << true;
+    QTest::newRow("validLineCategoriesCRITICAL2") << u"log linux [CRITICAL]    "_s << u"linux"_s << u"log"_s << u"CRITICAL"_s << QString() << true;
+    QTest::newRow("validLineCategoriesCRITICAL3") << u"log linux      [CRITICAL]    "_s << u"linux"_s << u"log"_s << u"CRITICAL"_s << QString() << true;
 
     // New Format
     QTest::newRow("validLineCategoriesWarning-newformat")
@@ -72,7 +70,7 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
         << u"log linux  DEFAULT_SEVERITY     [WARNING]    "_s << u"linux"_s << u"log"_s << u"WARNING"_s << QString() << true;
     QTest::newRow("validLineBadCategories-newformat") << u"log linux   DEFAULT_SEVERITY    [FOO]    "_s << u"linux DEFAULT_SEVERITY [FOO]"_s << u"log"_s
                                                       << QString() << QString() << true;
-    QTest::newRow("linewithcomment-newformat") << u"log linux#comment about linux"_s << u"linux"_s << QStringLiteral("log") << QString() << QString() << true;
+    QTest::newRow("linewithcomment-newformat") << u"log linux#comment about linux"_s << u"linux"_s << u"log"_s << QString() << QString() << true;
 
     QTest::newRow("validLineCategoriesInfo-newformat") << u"log linux DEFAULT_SEVERITY [INFO]"_s << u"linux"_s << u"log"_s << u"INFO"_s << QString() << true;
     QTest::newRow("validLineCategoriesInfo-newformat2")
@@ -94,13 +92,13 @@ void KDebugSettingUtilTest::shouldParseKdeLoggingLine_data()
         << u"log linux  DEFAULT_SEVERITY     [CRITICAL]    "_s << u"linux"_s << u"log"_s << u"CRITICAL"_s << QString() << true;
 
     // Identifier
-    QTest::newRow("validLineIdentifier1") << u"log linux IDENTIFIER [foo]"_s << u"linux"_s << QStringLiteral("log") << QString() << u"foo"_s << true;
+    QTest::newRow("validLineIdentifier1") << u"log linux IDENTIFIER [foo]"_s << u"linux"_s << u"log"_s << QString() << u"foo"_s << true;
     QTest::newRow("validLineIdentifier2") << u"log linux DEFAULT_SEVERITY     [CRITICAL] IDENTIFIER [foo]"_s << u"linux"_s << u"log"_s << u"CRITICAL"_s
-                                          << QStringLiteral("foo") << true;
+                                          << u"foo"_s << true;
     QTest::newRow("validLineIdentifier3") << u"log linux fli DEFAULT_SEVERITY     [INFO] IDENTIFIER [bla;bli;ss]"_s << u"linux fli"_s << u"log"_s << u"INFO"_s
-                                          << QStringLiteral("bla;bli;ss") << true;
+                                          << u"bla;bli;ss"_s << true;
     QTest::newRow("validLineIdentifier4") << u"log linux (fli) DEFAULT_SEVERITY     [INFO] IDENTIFIER [bla;bli;ss]"_s << u"linux (fli)"_s << u"log"_s
-                                          << QStringLiteral("INFO") << QStringLiteral("bla;bli;ss") << true;
+                                          << u"INFO"_s << u"bla;bli;ss"_s << true;
 }
 
 void KDebugSettingUtilTest::shouldParseKdeLoggingLine()
