@@ -94,12 +94,8 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &KDebugSettingsDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-#if KXMLGUI_VERSION >= QT_VERSION_CHECK(6, 9, 0)
     auto helpMenu = new KHelpMenu(this, KAboutData::applicationData());
     helpMenu->setShowWhatsThis(false);
-#else
-    auto helpMenu = new KHelpMenu(this, KAboutData::applicationData(), false);
-#endif
     buttonBox->button(QDialogButtonBox::Help)->setMenu(helpMenu->menu());
 
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &KDebugSettingsDialog::slotApply);
