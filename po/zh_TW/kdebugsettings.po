@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-26 00:45+0000\n"
+"POT-Creation-Date: 2025-10-18 00:45+0000\n"
 "PO-Revision-Date: 2024-08-03 14:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -380,44 +380,44 @@ msgctxt "@action:button"
 msgid "Insert…"
 msgstr "插入…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:158
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "無法開啟  %1。請檢查。"
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "Insert Categories"
 msgstr "插入類別"
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "Categories Files"
 msgstr "類別檔案"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "已插入來自檔案 '%1' 的分類。"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "插入類別"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "群組名稱"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Name:"
 msgstr "名稱："
 
-#: src/widgets/kdebugsettingsdialog.cpp:214
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -426,24 +426,24 @@ msgstr ""
 "<b>'%1'</b> 與既存的群組名稱衝突。\n"
 "請另存為其他名稱。"
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:219
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "無法另存為空白名稱。請選擇一個新的。"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:226
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "另存為"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:226
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings 檔案 (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"

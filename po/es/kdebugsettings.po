@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-26 00:45+0000\n"
+"POT-Creation-Date: 2025-10-18 00:45+0000\n"
 "PO-Revision-Date: 2025-05-12 14:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -388,44 +388,44 @@ msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Insertar…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:162
+#: src/widgets/kdebugsettingsdialog.cpp:158
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "No se puede abrir «%1». Compruébelo."
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "Insert Categories"
 msgstr "Insertar categorías"
 
-#: src/widgets/kdebugsettingsdialog.cpp:187
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "Categories Files"
 msgstr "Archivos de categorías"
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Categorías del archivo «%1» insertadas."
 
-#: src/widgets/kdebugsettingsdialog.cpp:201
+#: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Insertar categorías"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Nombre del grupo"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Name:"
 msgstr "Nombre:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:214
+#: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -434,24 +434,24 @@ msgstr ""
 "<b>«%1»</b> ya se está usando como nombre de grupo.\n"
 "Escoja otro nombre."
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:219
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "No se puede guardar con un nombre vacío. Use uno nuevo."
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
+#: src/widgets/kdebugsettingsdialog.cpp:226
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Guardar como"
 
-#: src/widgets/kdebugsettingsdialog.cpp:230
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:226
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Archivo de KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:239
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
