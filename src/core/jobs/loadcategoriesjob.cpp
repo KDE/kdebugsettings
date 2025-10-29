@@ -121,13 +121,11 @@ void LoadCategoriesJob::start()
 
     // qDebug()<<" KEEP "<< qtCategories.count();
     for (const KDebugSettingsUtil::LoadLoggingCategory &cat : std::as_const(qtCategories)) {
-        QMapIterator<KDebugSettingsUtil::LoadLoggingCategory::LogType, KDebugSettingsUtil::LoadLoggingCategory::Status> i(cat.loggingTypes);
-        while (i.hasNext()) {
-            i.next();
-            if (i.value() != KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
+        for (const auto &[key, value] : cat.loggingTypes.asKeyValueRange()) {
+            if (value != KDebugSettingsUtil::LoadLoggingCategory::UnknownStatus) {
                 LoggingCategory tmp;
                 tmp.categoryName = cat.logName;
-                switch (i.key()) {
+                switch (key) {
                 case KDebugSettingsUtil::LoadLoggingCategory::Unknown:
                     tmp.loggingType = LoggingCategory::Undefined;
                     break;
@@ -150,7 +148,7 @@ void LoadCategoriesJob::start()
                     tmp.loggingType = LoggingCategory::All;
                     break;
                 }
-                tmp.enabled = (i.value() == KDebugSettingsUtil::LoadLoggingCategory::Enabled);
+                tmp.enabled = (value == KDebugSettingsUtil::LoadLoggingCategory::Enabled);
                 mCustomCategories.append(tmp);
             }
         }
