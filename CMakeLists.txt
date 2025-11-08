@@ -103,7 +103,7 @@ configure_file(
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "6")
 
-option(BUILD_QUICK_VERSION "Experimental (in progress)" FALSE)
+option(BUILD_QUICK_VERSION "Experimental (in progress)" OFF)
 if(BUILD_QUICK_VERSION)
     find_package(
         Qt6
