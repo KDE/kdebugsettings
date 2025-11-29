@@ -64,7 +64,7 @@ void SaveRulesJobTest::shouldSaveLoadRules()
 {
     QFETCH(QString, filename);
     LoadCategoriesJob job;
-    job.setFileName(QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + u'/' + filename + u".ini"_s);
+    job.setFileName(QStringLiteral(KDEBUGSETTINGS_DATA_DIR) + u'/' + filename + u".ini"_s);
     job.start();
 
     const LoggingCategory::List customCategories = job.customCategories();
@@ -72,7 +72,7 @@ void SaveRulesJobTest::shouldSaveLoadRules()
     const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
 
     SaveRulesJob saveJob;
-    QDir().mkpath(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR));
+    QDir().mkpath(QStringLiteral(KDEBUGSETTINGS_BINARY_DATA_DIR));
     saveJob.setFileName(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + filename + u"-generated.ref"_s);
     qDebug() << " save " << saveJob.fileName();
     saveJob.setListCustom(customCategories);

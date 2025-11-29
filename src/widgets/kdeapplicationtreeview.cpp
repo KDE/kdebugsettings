@@ -95,6 +95,7 @@ void KDEApplicationTreeView::insertCategories(const LoggingCategory::List &list)
 void KDEApplicationTreeView::restoreToDefault()
 {
     LoggingCategory::List lst;
+    lst.reserve(mKdeApplicationLoggingCategoryProxyModel->rowCount());
     for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
         const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
             mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
