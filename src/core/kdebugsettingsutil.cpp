@@ -286,6 +286,10 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Empty file name";
         return {};
     }
+    if (!QFileInfo::exists(filename)) {
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << u"filename %1 does not exist"_s.arg(filename);
+        return {};
+    }
     // Code based on src/corelib/io/qloggingregistry.cpp
     QFile file(filename);
     QMap<QString, KDebugSettingsUtil::LoadLoggingCategory> hashLoadLoggingCategories;
