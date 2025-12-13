@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-13 00:47+0000\n"
 "PO-Revision-Date: 2024-08-20 23:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -78,32 +78,32 @@ msgstr "디버그 모드를 전환할 로그 분류 이름 지정(콘솔에서)"
 msgid "Impossible to change debug mode"
 msgstr "디버그 모드를 변경할 수 없음"
 
-#: src/core/kdebugsettingsutil.cpp:409
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Full Debug"
 msgstr "전체 디버그"
 
-#: src/core/kdebugsettingsutil.cpp:412
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Info"
 msgstr "정보"
 
-#: src/core/kdebugsettingsutil.cpp:415
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Warning"
 msgstr "경고"
 
-#: src/core/kdebugsettingsutil.cpp:418
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "Critical"
 msgstr "치명적"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Off"
 msgstr "끔"
 
-#: src/core/kdebugsettingsutil.cpp:424 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "정의되지 않음"

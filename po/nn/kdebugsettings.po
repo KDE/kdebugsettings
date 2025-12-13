@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-13 00:47+0000\n"
 "PO-Revision-Date: 2023-07-29 12:32+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -84,32 +84,32 @@ msgstr ""
 msgid "Impossible to change debug mode"
 msgstr "Kan ikkje endra feilsøkingsmodus"
 
-#: src/core/kdebugsettingsutil.cpp:409
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Full Debug"
 msgstr "Full feilsøking"
 
-#: src/core/kdebugsettingsutil.cpp:412
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Info"
 msgstr "Info"
 
-#: src/core/kdebugsettingsutil.cpp:415
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Warning"
 msgstr "Åtvaring"
 
-#: src/core/kdebugsettingsutil.cpp:418
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "Critical"
 msgstr "Kritisk"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Off"
 msgstr "Av"
 
-#: src/core/kdebugsettingsutil.cpp:424 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Udefinert"

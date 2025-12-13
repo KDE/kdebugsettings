@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-13 00:47+0000\n"
 "PO-Revision-Date: 2024-10-28 20:43+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -83,32 +83,32 @@ msgstr ""
 msgid "Impossible to change debug mode"
 msgstr "Mahdotonta vaihtaa virheenpaikannustilaa"
 
-#: src/core/kdebugsettingsutil.cpp:409
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Full Debug"
 msgstr "Täysi virheenpaikannus"
 
-#: src/core/kdebugsettingsutil.cpp:412
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Info"
 msgstr "Tietoja"
 
-#: src/core/kdebugsettingsutil.cpp:415
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Warning"
 msgstr "Varoitus"
 
-#: src/core/kdebugsettingsutil.cpp:418
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "Critical"
 msgstr "Kriittinen"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Off"
 msgstr "Ei käytössä"
 
-#: src/core/kdebugsettingsutil.cpp:424 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Määrittämätön"

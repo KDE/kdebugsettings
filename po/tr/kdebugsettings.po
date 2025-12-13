@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2025-12-13 00:47+0000\n"
 "PO-Revision-Date: 2024-12-19 16:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -81,32 +81,32 @@ msgstr ""
 msgid "Impossible to change debug mode"
 msgstr "Hata ayıklama kipi değiştirilemiyor"
 
-#: src/core/kdebugsettingsutil.cpp:409
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Full Debug"
 msgstr "Tam Hata Ayıklama"
 
-#: src/core/kdebugsettingsutil.cpp:412
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Info"
 msgstr "Bilgi"
 
-#: src/core/kdebugsettingsutil.cpp:415
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Warning"
 msgstr "Uyarı"
 
-#: src/core/kdebugsettingsutil.cpp:418
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "Critical"
 msgstr "Kritik"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Off"
 msgstr "Kapalı"
 
-#: src/core/kdebugsettingsutil.cpp:424 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Tanımlanmamış"
