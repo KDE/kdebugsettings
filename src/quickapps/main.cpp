@@ -5,14 +5,12 @@
 
 */
 
-#include "ki18n_version.h"
 using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedQmlContext>
 #include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
-#include "ki18n_version.h"
 #include "loggingmanager.h"
 #include "model/categorytypeproxymodel.h"
 #include "model/customloggingcategorymodel.h"
