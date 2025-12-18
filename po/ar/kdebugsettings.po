@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 00:47+0000\n"
+"POT-Creation-Date: 2025-12-18 00:46+0000\n"
 "PO-Revision-Date: 2025-08-03 23:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,12 +19,12 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:42 src/quickapps/main.cpp:60
 #, kde-format
 msgid "KDebugSettings"
 msgstr "إعدادات تنقيح ك"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
 msgid "Configure debug settings"
 msgstr "اضبط إعدادات التّنقيح"
@@ -34,18 +34,18 @@ msgstr "اضبط إعدادات التّنقيح"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(ج) 2015-%1 مؤلفو إعدادات تنقيح ك"
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:67
+#: src/apps/main.cpp:47 src/quickapps/main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "لوران مونتال"
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:67
+#: src/apps/main.cpp:47 src/quickapps/main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "الصائن"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:73
+#: src/apps/main.cpp:56 src/quickapps/main.cpp:71
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,30 +53,30 @@ msgstr ""
 "مكّن وضع اختبار QStandardPaths، أي إعدادات القراءة/الكتابة المستخدمة بواسطة "
 "اختبارات الوحدات"
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:76
+#: src/apps/main.cpp:59 src/quickapps/main.cpp:74
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "فعّل التنقيح الكامل لجميع الوحدات."
 
-#: src/apps/main.cpp:61 src/quickapps/main.cpp:78
+#: src/apps/main.cpp:61 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "عطّل التنقيح الكامل لجميع الوحدات النمطية."
 
-#: src/apps/main.cpp:64 src/quickapps/main.cpp:81
+#: src/apps/main.cpp:64 src/quickapps/main.cpp:79
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "غيّر وضع التنقيح كوحدة تحكم (في وحدة التحكم)"
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:83
+#: src/apps/main.cpp:66 src/quickapps/main.cpp:81
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr "حدد اسم فئة التسجيل التي تريد تغيير وضع التنقيح فيها (في وحدة التحكم)"
 
 #: src/apps/main.cpp:80 src/apps/main.cpp:90 src/apps/main.cpp:100
-#: src/quickapps/main.cpp:97 src/quickapps/main.cpp:107
-#: src/quickapps/main.cpp:117
+#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
+#: src/quickapps/main.cpp:115
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "من المستحيل تغيير وضع التنقيح"
@@ -156,7 +156,7 @@ msgstr "رسائل الحرج"
 msgid "No Debug Messages"
 msgstr "لا رسائل تنقيح"
 
-#: src/quickapps/main.cpp:66
+#: src/quickapps/main.cpp:64
 #, kde-format
 msgid "(c) %1 kdebugsettings authors"
 msgstr "(ج) %1 مؤلفو إعدادات تنقيح ك"
