@@ -6,7 +6,6 @@
 */
 
 #include "groupmanagementdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "groupmanagementwidget.h"
 
@@ -23,6 +22,7 @@ namespace
 static const char myGroupManagementDialogGroupName[] = "GroupManagementDialog";
 }
 
+using namespace Qt::Literals::StringLiterals;
 GroupManagementDialog::GroupManagementDialog(QWidget *parent)
     : QDialog(parent)
     , mGroupManagementWidget(new GroupManagementWidget(this))

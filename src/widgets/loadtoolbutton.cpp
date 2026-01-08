@@ -6,11 +6,11 @@
 */
 
 #include "loadtoolbutton.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "loadgroupmenu.h"
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 LoadToolButton::LoadToolButton(QWidget *parent)
     : QToolButton(parent)
     , mLoadMenu(new LoadGroupMenu(this))
