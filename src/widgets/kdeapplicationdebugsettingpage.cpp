@@ -6,7 +6,6 @@
 */
 
 #include "kdeapplicationdebugsettingpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdeapplicationtreeview.h"
 #include "loggingmanager.h"
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     : QWidget(parent)
     , mSearchLineEdit(new QLineEdit(this))

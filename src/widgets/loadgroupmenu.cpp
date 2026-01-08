@@ -6,7 +6,6 @@
 */
 
 #include "loadgroupmenu.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingsutil.h"
 
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDir>
 #include <QStandardPaths>
 
+using namespace Qt::Literals::StringLiterals;
 LoadGroupMenu::LoadGroupMenu(QWidget *parent)
     : QMenu(parent)
 {

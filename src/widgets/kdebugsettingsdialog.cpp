@@ -6,7 +6,6 @@
 */
 
 #include "kdebugsettingsdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "categorywarning.h"
 #include "customdebugsettingspage.h"
@@ -42,6 +41,7 @@ namespace
 {
 constexpr char KDebugSettingsDialogGroupName[] = "KDebugSettingsDialog";
 }
+using namespace Qt::Literals::StringLiterals;
 KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     : QDialog(parent)
     , mTabWidget(new QTabWidget(this))

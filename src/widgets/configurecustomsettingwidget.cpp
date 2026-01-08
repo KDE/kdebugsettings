@@ -6,7 +6,6 @@
 */
 
 #include "configurecustomsettingwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "categorytypecombobox.h"
 #include "kdebugsettingsutil.h"
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLabel>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     : QWidget(parent)
     , mCategoryLineEdit(new KLineEdit(this))

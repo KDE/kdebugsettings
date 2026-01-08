@@ -6,7 +6,6 @@
 */
 
 #include "configurecustomsettingdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "configurecustomsettingwidget.h"
 
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 ConfigureCustomSettingDialog::ConfigureCustomSettingDialog(QWidget *parent)
     : QDialog(parent)
     , mCustomSettingWidget(new ConfigureCustomSettingWidget(this))

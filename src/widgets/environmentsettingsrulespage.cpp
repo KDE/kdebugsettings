@@ -6,12 +6,12 @@
 */
 
 #include "environmentsettingsrulespage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "environmentplaintextedit.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 EnvironmentSettingsRulesPage::EnvironmentSettingsRulesPage(QWidget *parent)
     : QWidget(parent)
     , mRichTextEdit(new EnvironmentPlainTextEdit(this))

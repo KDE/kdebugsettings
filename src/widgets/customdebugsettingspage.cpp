@@ -6,7 +6,6 @@
 */
 
 #include "customdebugsettingspage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "customdebuglistview.h"
 #include "loggingmanager.h"
@@ -18,6 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     : QWidget(parent)
     , mEditRule(new QPushButton(i18nc("@action:button", "Edit…"), this))

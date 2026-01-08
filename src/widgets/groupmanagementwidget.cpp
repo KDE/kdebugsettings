@@ -6,7 +6,6 @@
 */
 
 #include "groupmanagementwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingsutil.h"
 
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QMenu>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 GroupManagementWidget::GroupManagementWidget(QWidget *parent)
     : QWidget(parent)
     , mListWidget(new QListWidget(this))

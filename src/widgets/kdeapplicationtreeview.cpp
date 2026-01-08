@@ -5,13 +5,13 @@
 */
 
 #include "kdeapplicationtreeview.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdeapplicationlistviewdelegate.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
 #include "model/kdeapplicationloggingcategoryproxymodel.h"
 #include <QHeaderView>
 
+using namespace Qt::Literals::StringLiterals;
 KDEApplicationTreeView::KDEApplicationTreeView(QWidget *parent)
     : QTreeView(parent)
     , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))

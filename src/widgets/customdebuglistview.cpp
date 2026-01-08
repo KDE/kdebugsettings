@@ -6,7 +6,6 @@
 */
 
 #include "customdebuglistview.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "configurecustomsettingdialog.h"
 #include "kdebugsettings_debug.h"
@@ -21,6 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QMenu>
 #include <QPointer>
 
+using namespace Qt::Literals::StringLiterals;
 CustomDebugListView::CustomDebugListView(QWidget *parent)
     : QListView(parent)
     , mCustomLoggingCategoryProxyModel(new CustomLoggingCategoryProxyModel(this))
