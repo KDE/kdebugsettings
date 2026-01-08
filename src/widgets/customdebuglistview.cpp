@@ -29,7 +29,10 @@ CustomDebugListView::CustomDebugListView(QWidget *parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     connect(this, &CustomDebugListView::customContextMenuRequested, this, &CustomDebugListView::slotCustomContextMenuRequested);
-    connect(this, &CustomDebugListView::doubleClicked, this, &CustomDebugListView::slotEditRule);
+    connect(this, &CustomDebugListView::doubleClicked, this, [this](const QModelIndex &index) {
+        const QModelIndex originalModelIndex = mCustomLoggingCategoryProxyModel->mapToSource(index);
+        slotEditRule(originalModelIndex);
+    });
 }
 
 CustomDebugListView::~CustomDebugListView() = default;
@@ -94,7 +97,8 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
     }
     LoggingCategory::List categories;
     for (const auto &index : selectedIndexes) {
-        const auto cat = mCustomLoggingCategoryModel->index(index.row()).data(CustomLoggingCategoryModel::CategoryRole).value<LoggingCategory>();
+        const QModelIndex originalModelIndex = mCustomLoggingCategoryProxyModel->mapToSource(index);
+        const auto cat = mCustomLoggingCategoryModel->index(originalModelIndex.row()).data(CustomLoggingCategoryModel::CategoryRole).value<LoggingCategory>();
         categories.append(cat);
     }
     mCustomLoggingCategoryModel->removeCategory(categories);
@@ -141,7 +145,8 @@ void CustomDebugListView::removeRules()
 
 void CustomDebugListView::editRule()
 {
-    slotEditRule(selectionModel()->currentIndex());
+    const QModelIndex originalModelIndex = mCustomLoggingCategoryProxyModel->mapToSource(selectionModel()->currentIndex());
+    slotEditRule(originalModelIndex);
 }
 
 void CustomDebugListView::setFilterRuleStr(const QString &str)
