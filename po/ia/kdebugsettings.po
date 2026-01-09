@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:46+0000\n"
+"POT-Creation-Date: 2026-01-09 00:46+0000\n"
 "PO-Revision-Date: 2024-07-31 10:12+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -200,27 +200,27 @@ msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Typo:"
 
-#: src/widgets/customdebuglistview.cpp:44
+#: src/widgets/customdebuglistview.cpp:47
 #, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Adde regula…"
 
-#: src/widgets/customdebuglistview.cpp:46
+#: src/widgets/customdebuglistview.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Modifica regula"
 
-#: src/widgets/customdebuglistview.cpp:52
-#: src/widgets/customdebuglistview.cpp:90
+#: src/widgets/customdebuglistview.cpp:55
+#: src/widgets/customdebuglistview.cpp:93
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Remove regula"
 msgstr[1] "Remove regulas"
 
-#: src/widgets/customdebuglistview.cpp:85
+#: src/widgets/customdebuglistview.cpp:88
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
