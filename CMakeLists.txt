@@ -11,7 +11,7 @@ set(RELEASE_SERVICE_VERSION
 project(kdebugsettings VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_REQUIRED_VERSION "6.9.0")
-set(KF_MIN_VERSION "6.20.0")
+set(KF_MIN_VERSION "6.21.0")
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
 set(ECM_VERSION ${KF_MIN_VERSION})
@@ -110,7 +110,7 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.11.0
-    KF 6.21.0
+    KF 6.22.0
 )
 
 if(OPTION_SELENIUMWEBDRIVER_SUPPORT)
