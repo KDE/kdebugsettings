@@ -162,6 +162,17 @@ if(BUILD_TESTING)
     find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 
+option(WARNINGS_AS_ERRORS "Warnings are errors -Werror" OFF)
+if(WARNINGS_AS_ERRORS)
+    if(MSVC)
+        add_compile_options(/WX)
+        add_compile_options(/wd4996)
+    else()
+        add_compile_options(-Werror)
+        add_compile_options(-Wno-error=deprecated-declarations)
+    endif()
+endif()
+
 add_subdirectory(src)
 
 ecm_qt_install_logging_categories(EXPORT KDEBUGSETTINGS FILE kdebugsettings.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
