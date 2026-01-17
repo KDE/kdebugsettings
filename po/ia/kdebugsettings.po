@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2017, 2018, 2021, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2017, 2018, 2021, 2022, 2023, 2024, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-09 02:40+0000\n"
-"PO-Revision-Date: 2024-07-31 10:12+0200\n"
+"PO-Revision-Date: 2026-01-16 11:45+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -436,7 +436,8 @@ msgstr ""
 #: src/widgets/kdebugsettingsdialog.cpp:219
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr "Non pote  salveguardar como nmine vacue. Pro favor usa un nove nomine."
+msgstr ""
+"Non pote  salveguardar como nomine vacue. Pro favor usa un nove nomine."
 
 #: src/widgets/kdebugsettingsdialog.cpp:226
 #, kde-format
