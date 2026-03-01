@@ -3,7 +3,9 @@
 add_executable(customdebuglistviewgui)
 target_sources(
     customdebuglistviewgui
-    PRIVATE customdebuglistviewgui.h customdebuglistviewgui.cpp
+    PRIVATE
+        customdebuglistviewgui.h
+        customdebuglistviewgui.cpp
 )
 
 target_link_libraries(customdebuglistviewgui libkdebugsettings)
@@ -12,7 +14,9 @@ target_link_libraries(customdebuglistviewgui libkdebugsettings)
 add_executable(kdeapplicationtreeviewgui)
 target_sources(
     kdeapplicationtreeviewgui
-    PRIVATE kdeapplicationtreeviewgui.h kdeapplicationtreeviewgui.cpp
+    PRIVATE
+        kdeapplicationtreeviewgui.h
+        kdeapplicationtreeviewgui.cpp
 )
 
 target_link_libraries(kdeapplicationtreeviewgui libkdebugsettings)

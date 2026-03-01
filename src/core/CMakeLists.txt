@@ -42,22 +42,37 @@ target_sources(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(libkdebugsettingscore PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        libkdebugsettingscore
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 generate_export_header(libkdebugsettingscore BASE_NAME libkdebugsettingscore)
-target_link_libraries(libkdebugsettingscore Qt::Core KF6::I18n)
+target_link_libraries(
+    libkdebugsettingscore
+    Qt::Core
+    KF6::I18n
+)
 
 set_target_properties(
     libkdebugsettingscore
     PROPERTIES
-        OUTPUT_NAME kdebugsettingscore
-        VERSION ${KDEBUGSETTINGS_LIB_VERSION}
-        SOVERSION ${KDEBUGSETTINGS_LIB_SOVERSION}
+        OUTPUT_NAME
+            kdebugsettingscore
+        VERSION
+            ${KDEBUGSETTINGS_LIB_VERSION}
+        SOVERSION
+            ${KDEBUGSETTINGS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS libkdebugsettingscore ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        libkdebugsettingscore
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 if(BUILD_TESTING)

@@ -47,7 +47,12 @@ target_sources(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(libkdebugsettings PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        libkdebugsettings
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 generate_export_header(libkdebugsettings BASE_NAME libkdebugsettings)
 target_link_libraries(
@@ -67,14 +72,20 @@ target_link_libraries(
 set_target_properties(
     libkdebugsettings
     PROPERTIES
-        OUTPUT_NAME kdebugsettings
-        VERSION ${KDEBUGSETTINGS_LIB_VERSION}
-        SOVERSION ${KDEBUGSETTINGS_LIB_SOVERSION}
+        OUTPUT_NAME
+            kdebugsettings
+        VERSION
+            ${KDEBUGSETTINGS_LIB_VERSION}
+        SOVERSION
+            ${KDEBUGSETTINGS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS libkdebugsettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        libkdebugsettings
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 if(BUILD_TESTING)

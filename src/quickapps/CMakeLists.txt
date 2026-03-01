@@ -2,9 +2,19 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 add_executable(kdebugsettingsquick)
-target_sources(kdebugsettingsquick PRIVATE main.cpp resources.qrc)
+target_sources(
+    kdebugsettingsquick
+    PRIVATE
+        main.cpp
+        resources.qrc
+)
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(kdebugsettingsquick PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        kdebugsettingsquick
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(
@@ -25,4 +35,8 @@ else()
 endif()
 target_link_libraries(kdebugsettingsquick KF6::I18nQml)
 
-install(TARGETS kdebugsettingsquick ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(
+    TARGETS
+        kdebugsettingsquick
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+)
