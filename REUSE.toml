@@ -10,3 +10,16 @@ path = ["src/core/autotests/data/**.ini", "src/core/autotests/data/**.ref", "src
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = [".gersemirc"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["po/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "LGPL-2.0-or-later"
+
