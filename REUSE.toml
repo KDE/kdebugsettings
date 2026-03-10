@@ -23,3 +23,8 @@ precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "LGPL-2.0-or-later"
 
+[[annotations]]
+path = ["CMakePresets.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "BSD-3-Clause"
