@@ -16,10 +16,7 @@ set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
 set(ECM_VERSION ${KF_MIN_VERSION})
 find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}
-    ${ECM_MODULE_PATH}
-)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(FeatureSummary)
 file(
     GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
@@ -160,7 +157,7 @@ option(BUILD_QUICK_VERSION "Experimental (in progress)" OFF)
 if(BUILD_QUICK_VERSION)
     find_package(
         Qt6
-        ${QT_MIN_VERSION}
+        ${QT_REQUIRED_VERSION}
         REQUIRED
         NO_MODULE
         COMPONENTS
@@ -182,7 +179,7 @@ if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 if(BUILD_TESTING)
-    find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
+    find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 
 option(WARNINGS_AS_ERRORS "Warnings are errors -Werror" OFF)
