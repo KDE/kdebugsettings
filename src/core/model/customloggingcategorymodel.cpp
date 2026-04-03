@@ -140,7 +140,7 @@ LoggingCategory::List CustomLoggingCategoryModel::loggingCategories() const
 void CustomLoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {
-        beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count() + categories.count() - 1);
+        beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count() + categories.count() - 1);
         mLoggingCategories.append(categories);
         endInsertRows();
     }

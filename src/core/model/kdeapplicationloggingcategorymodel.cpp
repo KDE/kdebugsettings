@@ -152,7 +152,7 @@ bool KDEApplicationLoggingCategoryModel::addCategory(const LoggingCategory &cate
             return cat == category;
         });
         if (it == mLoggingCategories.cend()) {
-            beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count());
+            beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count());
             mLoggingCategories.append(category);
             endInsertRows();
         } else {
@@ -170,7 +170,7 @@ LoggingCategory::List KDEApplicationLoggingCategoryModel::loggingCategories() co
 void KDEApplicationLoggingCategoryModel::insertCategories(const LoggingCategory::List &categories)
 {
     if (!categories.isEmpty()) {
-        beginInsertRows(QModelIndex(), mLoggingCategories.count() - 1, mLoggingCategories.count() + categories.count() - 1);
+        beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count() + categories.count() - 1);
         mLoggingCategories.append(categories);
         endInsertRows();
     }
