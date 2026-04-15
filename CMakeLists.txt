@@ -131,7 +131,7 @@ endif()
 
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.11.0
+ecm_set_disabled_deprecation_versions(QT 6.12.0
     KF 6.25.0
 )
 
