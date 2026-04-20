@@ -9,7 +9,7 @@
 
 #include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
-#include <QString>
+
 #include <QStringList>
 
 class LIBKDEBUGSETTINGSCORE_EXPORT ChangeDebugModeJob
