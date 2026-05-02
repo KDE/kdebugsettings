@@ -28,3 +28,4 @@ CMakeLists.txt.user*
 /cmake-build*
 /Testing/
 /.vscode/
+/.qtcreator/
