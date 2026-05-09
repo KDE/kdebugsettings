@@ -77,8 +77,9 @@ bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, 
     switch (static_cast<CategoryRoles>(modelIndex.column())) {
     case LoggingTypeRole: {
         cat.loggingType = value.value<LoggingCategory::LoggingType>();
-        const QModelIndex newIndex = index(modelIndex.row(), LoggingTypeRole);
-        Q_EMIT dataChanged(newIndex, newIndex);
+        const QModelIndex topLeft = index(modelIndex.row(), LoggingTypeRole);
+        const QModelIndex bottomRight = index(modelIndex.row(), LoggingTypeStrRole);
+        Q_EMIT dataChanged(topLeft, bottomRight);
         return true;
     }
     default:
