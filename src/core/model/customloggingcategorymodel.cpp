@@ -46,7 +46,7 @@ bool CustomLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QV
     switch (role) {
     case CategoryRole: {
         cat = value.value<LoggingCategory>();
-        const QModelIndex newIndex = index(modelIndex.row(), CategoryRole);
+        const QModelIndex newIndex = index(modelIndex.row(), 0);
         Q_EMIT dataChanged(newIndex, newIndex);
         return true;
     }
