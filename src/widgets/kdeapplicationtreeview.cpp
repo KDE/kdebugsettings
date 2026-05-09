@@ -60,6 +60,9 @@ void KDEApplicationTreeView::changeCategoryType(LoggingCategory::LoggingType typ
         }
     } else {
         for (const auto &indexSelected : selected) {
+            if (indexSelected.column() != KDEApplicationLoggingCategoryModel::DescriptionRole) {
+                continue;
+            }
             const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
                 mKdeApplicationLoggingCategoryProxyModel->index(indexSelected.row(), KDEApplicationLoggingCategoryModel::CategoryRole));
             auto cat = index.data().value<LoggingCategory>();
