@@ -22,10 +22,10 @@ bool CustomLoggingCategoryProxyModel::filterAcceptsRow(int source_row, const QMo
     const QModelIndex sourceIndex = sourceModel()->index(source_row, 0, source_parent);
 
     const QString categoryName = sourceIndex.data(CustomLoggingCategoryModel::CategoryNameRole).toString();
-    if (sourceIndex.data(CustomLoggingCategoryModel::CategoryNameRole).toString().contains(mFilterText)
-        || sourceIndex.data(CustomLoggingCategoryModel::DescriptionRole).toString().contains(mFilterText)
-        || sourceIndex.data(CustomLoggingCategoryModel::IdentifierNameRole).toString().contains(mFilterText)
-        || sourceIndex.data(CustomLoggingCategoryModel::DisplayRuleRole).toString().contains(mFilterText)) {
+    if (categoryName.contains(mFilterText, Qt::CaseInsensitive)
+        || sourceIndex.data(CustomLoggingCategoryModel::DescriptionRole).toString().contains(mFilterText, Qt::CaseInsensitive)
+        || sourceIndex.data(CustomLoggingCategoryModel::IdentifierNameRole).toString().contains(mFilterText, Qt::CaseInsensitive)
+        || sourceIndex.data(CustomLoggingCategoryModel::DisplayRuleRole).toString().contains(mFilterText, Qt::CaseInsensitive)) {
         return true;
     }
     return false;
