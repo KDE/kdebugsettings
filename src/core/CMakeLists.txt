@@ -39,6 +39,8 @@ target_sources(
         libkdebugsettingscore_private_export.h
         loggingmanager.h
         loggingmanager.cpp
+        kdebugsettingscommandlineparser.cpp
+        kdebugsettingscommandlineparser.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
