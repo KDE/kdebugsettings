@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-09 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:48+0000\n"
 "PO-Revision-Date: 2024-12-20 21:51+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,33 +19,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: src/apps/main.cpp:42 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings इति"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
 #, kde-format
 msgid "Configure debug settings"
 msgstr "त्रुटिनिवारणसेटिंग्स् विन्यस्यताम्"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:48
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(ग) 2015-%1 kdebugsettings लेखक"
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "लॉरेण्ट् मोंटेल्"
 
-#: src/apps/main.cpp:47 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "परिपालकः"
 
-#: src/apps/main.cpp:56 src/quickapps/main.cpp:71
+#: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
+#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
+#: src/quickapps/main.cpp:115
+#, kde-format
+msgid "Impossible to change debug mode"
+msgstr "त्रुटिनिवारणविधिं परिवर्तयितुं असम्भवम्"
+
+#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -53,34 +60,27 @@ msgstr ""
 "QStandardPaths परीक्षणविधिं सक्षमं कुर्वन्तु, अर्थात् unittests द्वारा उपयुज्यमानाः पठन/"
 "लेखनसेटिंग्स्"
 
-#: src/apps/main.cpp:59 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "सर्वेषां मॉड्यूलानां कृते पूर्णं त्रुटिनिवारणं सक्रियं कुर्वन्तु ।"
 
-#: src/apps/main.cpp:61 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "सर्वेषां मॉड्यूलानां कृते पूर्णं त्रुटिनिवारणं निष्क्रियं कुर्वन्तु ।"
 
-#: src/apps/main.cpp:64 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "console (console मध्ये) इति रूपेण debug mode परिवर्तयन्तु ।"
 
-#: src/apps/main.cpp:66 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
 "लॉगिंग् श्रेणीनाम निर्दिशतु यत् भवान् त्रुटिनिवारणविधिं परिवर्तयितुम् इच्छति (कन्सोल् मध्ये) ।"
-
-#: src/apps/main.cpp:80 src/apps/main.cpp:90 src/apps/main.cpp:100
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
-#, kde-format
-msgid "Impossible to change debug mode"
-msgstr "त्रुटिनिवारणविधिं परिवर्तयितुं असम्भवम्"
 
 #: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
