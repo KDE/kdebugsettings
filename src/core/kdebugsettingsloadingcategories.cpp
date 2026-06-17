@@ -45,7 +45,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << u"*.renamecategories"_s);
         for (const QString &file : fileNames) {
-            mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
+            mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(QDir(dir).filePath(file)));
         }
     }
     // TODO add load rename file from external kde apps.
@@ -54,7 +54,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
     for (const QString &dir : dirs2) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << u"*.renamecategories"_s);
         for (const QString &file : fileNames) {
-            mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(dir + file));
+            mRenameCategoriesList.append(KDebugSettingsUtil::readRenameCategories(QDir(dir).filePath(file)));
         }
     }
 
@@ -63,7 +63,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
         const QStringList fileNames = QDir(dir).entryList(QStringList() << u"*.categories"_s);
         for (const QString &file : fileNames) {
             if (file != "kde.categories"_L1) {
-                KDebugSettingsUtil::readLoggingCategories(dir + file, mCategoriesList, true);
+                KDebugSettingsUtil::readLoggingCategories(QDir(dir).filePath(file), mCategoriesList, true);
             }
         }
     }
@@ -72,7 +72,7 @@ void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
     for (const QString &dir : dirs2) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << u"*.categories"_s);
         for (const QString &file : fileNames) {
-            KDebugSettingsUtil::readLoggingCategories(dir + u'/' + file, mCategoriesList, true);
+            KDebugSettingsUtil::readLoggingCategories(QDir(dir).filePath(file), mCategoriesList, true);
         }
     }
 
