@@ -19,7 +19,14 @@ bool CustomLoggingCategoryProxyModel::filterAcceptsRow(int source_row, const QMo
     if (mFilterText.isEmpty()) {
         return true;
     }
-    const QModelIndex sourceIndex = sourceModel()->index(source_row, 0, source_parent);
+    const auto *model = sourceModel();
+    if (!model) {
+        return false;
+    }
+    const QModelIndex sourceIndex = model->index(source_row, 0, source_parent);
+    if (!sourceIndex.isValid()) {
+        return false;
+    }
 
     const QString categoryName = sourceIndex.data(CustomLoggingCategoryModel::CategoryNameRole).toString();
     if (categoryName.contains(mFilterText, Qt::CaseInsensitive)

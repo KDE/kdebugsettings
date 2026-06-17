@@ -42,6 +42,10 @@ bool CustomLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QV
         return false;
     }
     const int idx = modelIndex.row();
+    if (idx < 0 || idx >= mLoggingCategories.count()) {
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: out-of-range index" << idx;
+        return false;
+    }
     LoggingCategory &cat = mLoggingCategories[idx];
     switch (role) {
     case CategoryRole: {
