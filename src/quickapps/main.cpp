@@ -5,8 +5,6 @@
 
 */
 
-using namespace Qt::Literals::StringLiterals;
-
 #include <KLocalizedQmlContext>
 #include <QApplication>
 
@@ -39,6 +37,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KIconTheme>
 
 #include <KStyleManager>
+
+using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char **argv)
 {
