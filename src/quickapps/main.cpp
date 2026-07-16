@@ -30,9 +30,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include <QQuickStyle>
 #include <QUrl>
-#include <QtQml>
 
 #include <iostream>
 
