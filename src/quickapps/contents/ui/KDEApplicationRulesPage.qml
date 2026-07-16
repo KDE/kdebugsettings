@@ -33,6 +33,8 @@ Kirigami.ScrollablePage {
         }
         delegate:  Delegates.RoundedItemDelegate {
             RowLayout {
+                width: parent.width
+
                 QQC2.Label {
                     Layout.fillHeight: true
                     Layout.leftMargin: 4
@@ -43,6 +45,8 @@ Kirigami.ScrollablePage {
                     Layout.fillWidth: true
                 }
                 QQC2.ComboBox {
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+
                     model: CategoryTypeProxyModel {
                         sourceModel: LoggingManager.categoryTypeModel
                         showOffType: true
