@@ -35,7 +35,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Menu {
             id: contextMenu
-            enabled: listviewRules.currentIndex !== -1
+            enabled: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
             QQC2.MenuItem {
                 icon.name: "list-add"
                 text: i18nc("@action add custom rule", "Add Rule…")
