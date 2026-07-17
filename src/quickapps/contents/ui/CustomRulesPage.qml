@@ -35,21 +35,28 @@ Kirigami.ScrollablePage {
 
         QQC2.Menu {
             id: contextMenu
+            enabled: listviewRules.currentIndex !== -1
             QQC2.MenuItem {
                 icon.name: "list-add"
                 text: i18nc("@action add custom rule", "Add Rule…")
-                onTriggered: {}
+                onTriggered: {
+                    // TODO
+                }
             }
             QQC2.MenuItem {
-                icon.name: "document-edit" // TODO fixit
+                icon.name: "document-edit"
                 text: i18nc("@action edit custom rule", "Edit Rule…")
-                onTriggered: {}
+                onTriggered: {
+                    // TODO
+                }
             }
             QQC2.MenuSeparator {}
             QQC2.MenuItem {
                 icon.name: "edit-delete"
                 text: i18nc("@action remove custom rule", "Remove Rule")
-                onTriggered: {}
+                onTriggered: {
+                    // TODO
+                }
             }
         }
     }
