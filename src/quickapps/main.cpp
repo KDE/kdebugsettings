@@ -9,6 +9,7 @@
 #include <QApplication>
 
 #include "jobs/changedebugmodejob.h"
+#include "kdebugsettingscommandlineparser.h"
 #include "loggingmanager.h"
 #include "model/categorytypeproxymodel.h"
 #include "model/customloggingcategorymodel.h"
@@ -68,28 +69,18 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
+    KDebugSettingsCommandLineParser commandLineParser(&parser);
+
     aboutData.setupCommandLine(&parser);
-
-    const QCommandLineOption testModeOption(u"test-mode"_s, i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
-    parser.addOption(testModeOption);
-
-    const QCommandLineOption switchFullDebugOption(u"enable-full-debug"_s, i18n("Activate full debug for all modules."));
-    parser.addOption(switchFullDebugOption);
-    const QCommandLineOption switchOffDebugOption(u"disable-full-debug"_s, i18n("Disable full debug for all modules."));
-    parser.addOption(switchOffDebugOption);
-
-    const QCommandLineOption changeDebugSettingOption(u"debug-mode"_s, i18n("Change debug mode as console (in console)"), u"Full|Info|Warning|Critical|Off"_s);
-    parser.addOption(changeDebugSettingOption);
-    parser.addPositionalArgument(u"logging category name"_s, i18n("Specify logging category name that you want to change debug mode (in console)"));
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    if (parser.isSet(testModeOption)) {
+    if (parser.isSet(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::TestMode))) {
         QStandardPaths::setTestModeEnabled(true);
     }
 
-    if (parser.isSet(switchFullDebugOption)) {
+    if (parser.isSet(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::EnableFullDebug))) {
         ChangeDebugModeJob job;
         job.setDebugMode(u"Full"_s);
         job.setWithoutArguments(true);
@@ -99,7 +90,7 @@ int main(int argc, char **argv)
 
         return 1;
     }
-    if (parser.isSet(switchOffDebugOption)) {
+    if (parser.isSet(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DisableFullDebug))) {
         ChangeDebugModeJob job;
         job.setDebugMode(u"Off"_s);
         job.setWithoutArguments(true);
@@ -108,7 +99,8 @@ int main(int argc, char **argv)
         }
         return 1;
     }
-    const QString changeModeValue = parser.value(changeDebugSettingOption);
+    const QString changeModeValue =
+        parser.value(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DebugMode));
     if (!changeModeValue.isEmpty() && !parser.positionalArguments().isEmpty()) {
         ChangeDebugModeJob job;
         job.setDebugMode(changeModeValue);
@@ -125,6 +117,7 @@ int main(int argc, char **argv)
             return 0;
         }
 #endif
+
         QQmlApplicationEngine engine;
 
         qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &LoggingManager::self());
