@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 # KDE Application Version, managed by release script
-cmake_minimum_required(VERSION 3.29.0)
+cmake_minimum_required(VERSION 3.28.0)
 set(RELEASE_SERVICE_VERSION_MAJOR "26")
 set(RELEASE_SERVICE_VERSION_MINOR "11")
 set(RELEASE_SERVICE_VERSION_MICRO "70")
