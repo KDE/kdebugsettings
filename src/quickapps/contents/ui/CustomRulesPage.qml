@@ -16,12 +16,16 @@ Kirigami.ScrollablePage {
     ListView {
         id: listviewRules
         reuseItems: true
+        activeFocusOnTab: true // keyboard navigation
         focus: true // keyboard navigation
         model: LoggingManager.customCategoryModel
         delegate: Delegates.RoundedItemDelegate {
             required property string displayRule
+            required property int index
 
             text: displayRule
+            highlighted: ListView.isCurrentItem
+            onClicked: listviewRules.currentIndex = index
 
             TapHandler {
                 acceptedButtons: Qt.RightButton

@@ -32,6 +32,9 @@ Kirigami.ScrollablePage {
             sourceModel: LoggingManager.qtKdeCategoryModel
         }
         delegate:  Delegates.RoundedItemDelegate {
+            highlighted: ListView.isCurrentItem
+            onClicked: listviewRules.currentIndex = index
+
             RowLayout {
                 width: parent.width
 
