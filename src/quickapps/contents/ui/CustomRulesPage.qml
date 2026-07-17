@@ -28,6 +28,7 @@ Kirigami.ScrollablePage {
             onClicked: listviewRules.currentIndex = index
 
             TapHandler {
+                enabled: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
                 acceptedButtons: Qt.RightButton
                 onTapped: contextMenu.popup()
             }
@@ -35,7 +36,6 @@ Kirigami.ScrollablePage {
 
         QQC2.Menu {
             id: contextMenu
-            enabled: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
             QQC2.MenuItem {
                 icon.name: "list-add"
                 text: i18nc("@action add custom rule", "Add Rule…")
