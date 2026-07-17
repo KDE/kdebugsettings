@@ -27,6 +27,7 @@
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
+#include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
@@ -61,8 +62,9 @@ int main(int argc, char **argv)
                          QStringLiteral(KDEBUGSETTINGS_VERSION),
                          i18n("Configure debug settings"),
                          KAboutLicense::GPL_V2,
-                         i18n("(c) %1 kdebugsettings authors", u"2023"_s));
+                         i18n("(c) 2023-%1 kdebugsettings authors", u"2026"_s));
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), u"montel@kde.org"_s);
+    QApplication::setWindowIcon(QIcon::fromTheme(u"debug-run"_s));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
