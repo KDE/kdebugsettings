@@ -11,7 +11,6 @@
 #include "customdebugsettingspage.h"
 #include "environmentsettingsrulespage.h"
 #include "groupmanagementdialog.h"
-#include "jobs/saverulesjob.h"
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdebugsettings_debug.h"
 #include "kdebugsettingsutil.h"
@@ -150,11 +149,7 @@ void KDebugSettingsDialog::updateLoggingCategories()
 
 bool KDebugSettingsDialog::saveRules(const QString &path, bool forceSavingAllRules)
 {
-    SaveRulesJob job;
-    job.setFileName(path);
-    job.setListCustom(mCustomSettingsPage->rules());
-    job.setListKde(mKdeApplicationSettingsPage->rules(forceSavingAllRules));
-    if (!job.start()) {
+    if (!LoggingManager::self().saveRules(path, forceSavingAllRules)) {
         KMessageBox::error(this, i18n("\'%1\' cannot be opened. Please verify it.", path));
         return false;
     }
