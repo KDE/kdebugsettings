@@ -1,0 +1,12 @@
+# KDE Config File
+[Desktop Entry]
+Type=Application
+Exec=kdebugsettingsquick
+GenericName=Debug settings
+Name=KDebugSettings
+Comment=Configure debug output from Qt applications
+Keywords=log;logging;category;categories;journal;logging levels;debug
+Icon=debug-run
+Categories=Qt;KDE;Development;
+SingleMainWindow=true
+Version=1.5
