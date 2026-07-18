@@ -27,11 +27,10 @@ Kirigami.ScrollablePage {
             highlighted: ListView.isCurrentItem
             onClicked: listviewRules.currentIndex = index
 
-            TapHandler {
-                enabled: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
-                acceptedButtons: Qt.RightButton
-                onTapped: contextMenu.popup()
-            }
+        }
+        TapHandler {
+            acceptedButtons: Qt.RightButton
+            onTapped: contextMenu.popup()
         }
 
         QQC2.Menu {
@@ -40,21 +39,29 @@ Kirigami.ScrollablePage {
                 icon.name: "list-add"
                 text: i18nc("@action add custom rule", "Add Rule…")
                 onTriggered: {
+                    console.debug("Not implemented yet")
+
                     // TODO
                 }
             }
             QQC2.MenuItem {
+                visible: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
                 icon.name: "document-edit"
                 text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {
+                    console.debug("Not implemented yet")
                     // TODO
                 }
             }
-            QQC2.MenuSeparator {}
+            QQC2.MenuSeparator {
+            visible: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
+            }
             QQC2.MenuItem {
+                visible: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
                 icon.name: "edit-delete"
                 text: i18nc("@action remove custom rule", "Remove Rule")
                 onTriggered: {
+                    console.debug("Not implemented yet")
                     // TODO
                 }
             }
