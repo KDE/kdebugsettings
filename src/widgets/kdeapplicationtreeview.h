@@ -15,7 +15,7 @@ class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT KDEApplicationTreeView : public QTree
 {
     Q_OBJECT
 public:
-    explicit KDEApplicationTreeView(QWidget *parent = nullptr);
+    explicit KDEApplicationTreeView(KDEApplicationLoggingCategoryProxyModel *proxyModel, QWidget *parent = nullptr);
     ~KDEApplicationTreeView() override;
 
     void setLoggingCategoryModel(KDEApplicationLoggingCategoryModel *newLoggingCategoryModel);

@@ -13,9 +13,15 @@ LoggingManager::LoggingManager(QObject *parent)
     , mCustomCategoryModel(new CustomLoggingCategoryModel(this))
     , mQtKdeCategoryModel(new KDEApplicationLoggingCategoryModel(this))
     , mCategoryTypeModel(new CategoryTypeModel(this))
+    , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))
 {
     mLoggings.readQtLoggingFile();
     updateLoggingCategories();
+}
+
+KDEApplicationLoggingCategoryProxyModel *LoggingManager::kdeApplicationLoggingCategoryProxyModel() const
+{
+    return mKdeApplicationLoggingCategoryProxyModel;
 }
 
 LoggingManager &LoggingManager::self()
@@ -61,19 +67,14 @@ void LoggingManager::updateLoggingCategories()
 
 bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules)
 {
-#if 0 /// TODO
     SaveRulesJob job;
     job.setFileName(path);
     job.setListCustom(customCategoryModel()->loggingCategories());
-    job.setListKde(mKdeApplicationSettingsPage->rules(forceSavingAllRules));
+    job.setListKde(kdeApplicationLoggingCategoryProxyModel()->rules(forceSavingAllRules));
     if (!job.start()) {
-        KMessageBox::error(this, i18n("\'%1\' cannot be opened. Please verify it.", path));
         return false;
     }
     return true;
-#endif
-    // TODO
-    return false;
 }
 
 KDebugSettingsLoadingCategories LoggingManager::loggings() const

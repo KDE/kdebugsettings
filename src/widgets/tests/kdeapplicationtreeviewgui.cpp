@@ -6,6 +6,7 @@
 */
 
 #include "kdeapplicationtreeviewgui.h"
+#include "model/kdeapplicationloggingcategoryproxymodel.h"
 using namespace Qt::Literals::StringLiterals;
 
 #include "kdeapplicationtreeview.h"
@@ -18,7 +19,7 @@ KDEApplicationTreeViewGui::KDEApplicationTreeViewGui(QWidget *parent)
     : QWidget{parent}
 {
     auto vboxLayout = new QVBoxLayout(this);
-    auto view = new KDEApplicationTreeView(this);
+    auto view = new KDEApplicationTreeView(new KDEApplicationLoggingCategoryProxyModel(this), this);
 
     LoggingCategory::List lst;
     for (int i = 0; i < 5; ++i) {

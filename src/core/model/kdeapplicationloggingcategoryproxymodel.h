@@ -5,6 +5,7 @@
 */
 #pragma once
 #include "libkdebugsettingscore_export.h"
+#include "loggingcategory.h"
 #include <QSortFilterProxyModel>
 
 class LIBKDEBUGSETTINGSCORE_EXPORT KDEApplicationLoggingCategoryProxyModel : public QSortFilterProxyModel
@@ -19,6 +20,8 @@ public:
 
     [[nodiscard]] QString filterText() const;
     void setFilterText(const QString &newFilterText);
+
+    [[nodiscard]] LoggingCategory::List rules(bool forceSavingAllRules) const;
 
 protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;

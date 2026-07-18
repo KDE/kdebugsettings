@@ -62,4 +62,20 @@ void KDEApplicationLoggingCategoryProxyModel::setFilterText(const QString &newFi
     }
 }
 
+LoggingCategory::List KDEApplicationLoggingCategoryProxyModel::rules(bool forceSavingAllRules) const
+{
+    LoggingCategory::List lst;
+    for (int i = 0; i < rowCount(); ++i) {
+        const QModelIndex newModelIndex = mapToSource(index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
+        auto cat = newModelIndex.data().value<LoggingCategory>();
+        if (forceSavingAllRules || (cat.loggingType != cat.defaultSeverityType)) {
+            cat.enabled = false;
+            if (cat.isValid()) {
+                lst.append(cat);
+            }
+        }
+    }
+    return lst;
+}
+
 #include "moc_kdeapplicationloggingcategoryproxymodel.cpp"

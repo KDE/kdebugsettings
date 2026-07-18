@@ -10,12 +10,14 @@
 #include "model/categorytypemodel.h"
 #include "model/customloggingcategorymodel.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
+#include "model/kdeapplicationloggingcategoryproxymodel.h"
 #include <QObject>
 class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(CustomLoggingCategoryModel *customCategoryModel READ customCategoryModel CONSTANT)
     Q_PROPERTY(KDEApplicationLoggingCategoryModel *qtKdeCategoryModel READ qtKdeCategoryModel CONSTANT)
+    Q_PROPERTY(KDEApplicationLoggingCategoryProxyModel *kdeApplicationLoggingCategoryProxyModel READ kdeApplicationLoggingCategoryProxyModel CONSTANT)
     Q_PROPERTY(CategoryTypeModel *categoryTypeModel READ categoryTypeModel CONSTANT)
     Q_PROPERTY(bool foundOverrideRule READ foundOverrideRule CONSTANT)
 
@@ -46,10 +48,13 @@ public:
 
     [[nodiscard]] bool saveRules(const QString &path, bool forceSavingAllRules);
 
+    [[nodiscard]] KDEApplicationLoggingCategoryProxyModel *kdeApplicationLoggingCategoryProxyModel() const;
+
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
     CustomLoggingCategoryModel *const mCustomCategoryModel;
     KDEApplicationLoggingCategoryModel *const mQtKdeCategoryModel;
     CategoryTypeModel *const mCategoryTypeModel;
+    KDEApplicationLoggingCategoryProxyModel *const mKdeApplicationLoggingCategoryProxyModel;
     KDebugSettingsLoadingCategories mLoggings;
 };

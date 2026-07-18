@@ -16,7 +16,7 @@ KDEApplicationTreeViewTest::KDEApplicationTreeViewTest(QObject *parent)
 
 void KDEApplicationTreeViewTest::shouldHaveDefaultValues()
 {
-    KDEApplicationTreeView w;
+    KDEApplicationTreeView w(nullptr);
     // TODO
 }
 

@@ -23,7 +23,7 @@ KDEApplicationDebugSettingPage::KDEApplicationDebugSettingPage(QWidget *parent)
     , mEnableDebug(new QPushButton(i18nc("@action:button", "Enable All Debug"), this))
     , mTurnOffDebug(new QPushButton(i18nc("@action:button", "Turn Off Debug"), this))
     , mTurnOffAllMessages(new QPushButton(i18nc("@action:button", "Turn Off All Messages"), this))
-    , mKdeApplicationTreeView(new KDEApplicationTreeView(this))
+    , mKdeApplicationTreeView(new KDEApplicationTreeView(LoggingManager::self().kdeApplicationLoggingCategoryProxyModel(), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainLayout"_L1);

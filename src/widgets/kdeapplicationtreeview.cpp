@@ -12,9 +12,9 @@
 #include <QHeaderView>
 
 using namespace Qt::Literals::StringLiterals;
-KDEApplicationTreeView::KDEApplicationTreeView(QWidget *parent)
+KDEApplicationTreeView::KDEApplicationTreeView(KDEApplicationLoggingCategoryProxyModel *proxyModel, QWidget *parent)
     : QTreeView(parent)
-    , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))
+    , mKdeApplicationLoggingCategoryProxyModel(proxyModel)
 {
     header()->hide();
     setRootIsDecorated(false);
@@ -113,19 +113,7 @@ void KDEApplicationTreeView::restoreToDefault()
 
 LoggingCategory::List KDEApplicationTreeView::rules(bool forceSavingAllRules) const
 {
-    LoggingCategory::List lst;
-    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
-        const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
-            mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
-        auto cat = index.data().value<LoggingCategory>();
-        if (forceSavingAllRules || (cat.loggingType != cat.defaultSeverityType)) {
-            cat.enabled = false;
-            if (cat.isValid()) {
-                lst.append(cat);
-            }
-        }
-    }
-    return lst;
+    return mKdeApplicationLoggingCategoryProxyModel->rules(forceSavingAllRules);
 }
 
 #include "moc_kdeapplicationtreeview.cpp"
