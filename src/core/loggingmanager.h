@@ -43,7 +43,9 @@ public:
     void readQtLoggingFile();
     void updateLoggingCategories();
 
-    [[nodiscard]] Q_INVOKABLE bool saveRules(const QString &path, bool forceSavingAllRules);
+    [[nodiscard]] Q_INVOKABLE bool saveInQtLogging();
+
+    [[nodiscard]] Q_INVOKABLE bool saveRules(const QString &path, bool forceSavingAllRules = false);
 
     [[nodiscard]] KDEApplicationLoggingCategoryProxyModel *kdeApplicationLoggingCategoryProxyModel() const;
 

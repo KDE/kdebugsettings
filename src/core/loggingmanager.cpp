@@ -7,6 +7,7 @@
 
 #include "loggingmanager.h"
 #include "jobs/saverulesjob.h"
+#include "kdebugsettingsutil.h"
 
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
@@ -64,6 +65,11 @@ void LoggingManager::updateLoggingCategories()
     const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
     mCustomCategoryModel->setLoggingCategories(customCategories);
     mQtKdeCategoryModel->setLoggingCategories(qtKdeCategories);
+}
+
+bool LoggingManager::saveInQtLogging()
+{
+    return saveRules(KDebugSettingsUtil::qtFileName());
 }
 
 bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules)

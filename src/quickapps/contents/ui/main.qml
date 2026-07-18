@@ -73,9 +73,7 @@ Kirigami.ApplicationWindow {
         icon.name: "document-save"
         shortcut: StandardKey.Save
         onTriggered: {
-            LoggingManager.saveRules("ddd", false);
-            console.debug("Not implemented yet")
-            // TODO
+            LoggingManager.saveInQtLogging();
         }
     }
     GlobalMenu {}
