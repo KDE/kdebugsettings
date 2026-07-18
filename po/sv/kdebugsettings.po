@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:48+0000\n"
+"POT-Creation-Date: 2026-07-18 00:48+0000\n"
 "PO-Revision-Date: 2024-07-30 06:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Anpassa felsökningsinställningar"
@@ -32,25 +32,25 @@ msgstr "Anpassa felsökningsinställningar"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015-%1 Upphovsmännen till kdebugsettings"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Underhåll"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Omöjligt att ändra felsökningsläge"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
+#: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -58,22 +58,22 @@ msgstr ""
 "Aktivera QStandardPaths testläge, dvs. läs- och skrivinställningar använda "
 "av enhetstester"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivera fullständig felsökning för alla moduler."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Inaktivera fullständig felsökning för alla moduler."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Ändra felsökningsläge som terminal (i terminal)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -155,10 +155,11 @@ msgstr "Kritiska meddelanden"
 msgid "No Debug Messages"
 msgstr "Inga felsökningsmeddelanden"
 
-#: src/quickapps/main.cpp:64
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr "© %1 Upphovsmännen till kdebugsettings"
+#: src/quickapps/main.cpp:66
+#, fuzzy, kde-format
+#| msgid "(c) 2015-%1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "© 2015-%1 Upphovsmännen till kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -486,6 +487,9 @@ msgstr "Spara som fil…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Spara som grupp…"
+
+#~ msgid "(c) %1 kdebugsettings authors"
+#~ msgstr "© %1 Upphovsmännen till kdebugsettings"
 
 #~ msgid "Edit..."
 #~ msgstr "Redigera..."

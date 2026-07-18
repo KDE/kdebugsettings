@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:48+0000\n"
+"POT-Creation-Date: 2026-07-18 00:48+0000\n"
 "PO-Revision-Date: 2022-04-09 19:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Nastaviť nastavenie ladenia"
@@ -32,25 +32,25 @@ msgstr "Nastaviť nastavenie ladenia"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 autori kdebugsettings"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Správca"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Nie je možné zmeniť režim ladenia"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
+#: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -58,22 +58,22 @@ msgstr ""
 "Povoliť testovací režim QStandardPaths, t.j. nastavenia čítania/zápisu "
 "používané unittestami"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Aktivovať úplné ladenie pre všetky moduly."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Zakázať úplné ladenie pre všetky moduly."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Zmena režimu ladenia na konzolu (v konzole)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -156,9 +156,10 @@ msgstr "Kritické správy"
 msgid "No Debug Messages"
 msgstr "Žiadne správy ladenia"
 
-#: src/quickapps/main.cpp:64
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
+#: src/quickapps/main.cpp:66
+#, fuzzy, kde-format
+#| msgid "(c) 2015-%1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 autori kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
@@ -491,6 +492,9 @@ msgstr "Uložiť ako súbor..."
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Uložiť ako skupinu..."
+
+#~ msgid "(c) %1 kdebugsettings authors"
+#~ msgstr "(c) 2015-%1 autori kdebugsettings"
 
 #~ msgid "Edit..."
 #~ msgstr "Upraviť..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:48+0000\n"
+"POT-Creation-Date: 2026-07-18 00:48+0000\n"
 "PO-Revision-Date: 2024-07-30 13:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Debug-instellingen configureren"
@@ -32,25 +32,25 @@ msgstr "Debug-instellingen configureren"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 auteurs van kdebugsettings"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Onderhouder"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Debugmodus wijzigen is onmogelijk"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
+#: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -58,22 +58,22 @@ msgstr ""
 "Testmodus van QStandardPaths inschakelen, d.w.z. instellingen voor lezen/"
 "schrijven gebruikt door unittesten"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Volledig debuggen voor alle modulen activeren."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Volledig debuggen voor alle modulen uitschakelen."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Debugmodus als console wijzigen (in console)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -156,10 +156,11 @@ msgstr "Kritiekeberichten"
 msgid "No Debug Messages"
 msgstr "Geen debugberichten"
 
-#: src/quickapps/main.cpp:64
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) %1 auteurs van kdebugsettings"
+#: src/quickapps/main.cpp:66
+#, fuzzy, kde-format
+#| msgid "(c) 2015-%1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "(c) 2015-%1 auteurs van kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -488,6 +489,9 @@ msgstr "Naar bestand opslaan…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Als groep opslaan…"
+
+#~ msgid "(c) %1 kdebugsettings authors"
+#~ msgstr "(c) %1 auteurs van kdebugsettings"
 
 #~ msgid "Edit..."
 #~ msgstr "Bewerken..."

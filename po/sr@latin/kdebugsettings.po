@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:48+0000\n"
+"POT-Creation-Date: 2026-07-18 00:48+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, fuzzy, kde-format
 #| msgid "kdebugssettings"
 msgid "KDebugSettings"
 msgstr "K‑ispravljačke-postavke"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Podesite ispravljačke postavke"
@@ -35,47 +35,47 @@ msgstr "Podesite ispravljačke postavke"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015–2017, autori K‑ispravljačkih-postavki"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Loren Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Održavalac"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr ""
 
-#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
+#: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr ""
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr ""
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr ""
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -167,10 +167,10 @@ msgstr "kritično"
 msgid "No Debug Messages"
 msgstr ""
 
-#: src/quickapps/main.cpp:64
+#: src/quickapps/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2017 kdebugsettings authors"
-msgid "(c) %1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
 msgstr "© 2015–2017, autori K‑ispravljačkih-postavki"
 
 #: src/widgets/categorywarning.cpp:16
@@ -543,6 +543,11 @@ msgstr "Sačuvaj kao..."
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Sačuvaj kao..."
+
+#, fuzzy
+#~| msgid "(c) 2015-2017 kdebugsettings authors"
+#~ msgid "(c) %1 kdebugsettings authors"
+#~ msgstr "© 2015–2017, autori K‑ispravljačkih-postavki"
 
 #~ msgid "Edit..."
 #~ msgstr "Uredi..."

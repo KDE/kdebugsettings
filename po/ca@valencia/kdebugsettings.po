@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:48+0000\n"
+"POT-Creation-Date: 2026-07-18 00:48+0000\n"
 "PO-Revision-Date: 2024-07-30 10:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Configura els paràmetres de la depuració"
@@ -36,25 +36,25 @@ msgstr "Configura els paràmetres de la depuració"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1, Els autors de kdebugsettings"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Impossible canviar el mode de depuració"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
+#: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -62,22 +62,22 @@ msgstr ""
 "Activa el mode de prova «QStandardPaths», és a dir, la configuració de "
 "lectura/escriptura utilitzada per a les proves unitàries"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Activa la depuració completa per a tots els mòduls."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Desactiva la depuració completa per a tots els mòduls."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Canvia el mode de depuració com a consola (en la consola)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -160,10 +160,11 @@ msgstr "Missatges crítics"
 msgid "No Debug Messages"
 msgstr "No missatges de depuració"
 
-#: src/quickapps/main.cpp:64
-#, kde-format
-msgid "(c) %1 kdebugsettings authors"
-msgstr "(c) %1, els autors de «kdebugsettings»"
+#: src/quickapps/main.cpp:66
+#, fuzzy, kde-format
+#| msgid "(c) 2015-%1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "(c) 2015-%1, Els autors de kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -491,3 +492,6 @@ msgstr "Anomena i guarda com a fitxer…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Anomena i guarda com a grup…"
+
+#~ msgid "(c) %1 kdebugsettings authors"
+#~ msgstr "(c) %1, els autors de «kdebugsettings»"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:48+0000\n"
+"POT-Creation-Date: 2026-07-18 00:48+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -18,12 +18,12 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:60
+#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Configurează opțiuni de depanare"
@@ -34,26 +34,26 @@ msgstr "Configurează opțiuni de depanare"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-2020 Autorii kdebugsettings"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:65
+#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabil"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:95 src/quickapps/main.cpp:105
-#: src/quickapps/main.cpp:115
+#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
+#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Nu se poate schimba regimul de depanare"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
+#: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
@@ -61,22 +61,22 @@ msgstr ""
 "Activează regimul de testare QStandardPaths, adică citește/scrie configurări "
 "folosite în testele de unitate"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
+#: src/core/kdebugsettingscommandlineparser.cpp:27
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Activează depanarea completă pentru toate modulele."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Dezactivează depanarea completă pentru toate modulele."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
+#: src/core/kdebugsettingscommandlineparser.cpp:36
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Schimbă regimul de depanare ca consolă (în consolă)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
+#: src/core/kdebugsettingscommandlineparser.cpp:39
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -159,10 +159,10 @@ msgstr "Mesaje critice"
 msgid "No Debug Messages"
 msgstr "Fără mesaje de depanare"
 
-#: src/quickapps/main.cpp:64
+#: src/quickapps/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2020 kdebugsettings authors"
-msgid "(c) %1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
 msgstr "(c) 2015-2020 Autorii kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
@@ -526,6 +526,11 @@ msgstr "Salvează ca..."
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Salvează ca..."
+
+#, fuzzy
+#~| msgid "(c) 2015-2020 kdebugsettings authors"
+#~ msgid "(c) %1 kdebugsettings authors"
+#~ msgstr "(c) 2015-2020 Autorii kdebugsettings"
 
 #~ msgid "Edit..."
 #~ msgstr "Modifică..."
