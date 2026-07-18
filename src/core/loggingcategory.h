@@ -12,7 +12,7 @@
 #include <QString>
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
-    enum LoggingType : char {
+    enum LoggingType : uint8_t {
         All = 0,
         Info,
         Warning,
