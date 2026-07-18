@@ -6,6 +6,7 @@
 */
 
 #include "loggingmanager.h"
+#include "jobs/saverulesjob.h"
 
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
@@ -56,6 +57,23 @@ void LoggingManager::updateLoggingCategories()
     const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
     mCustomCategoryModel->setLoggingCategories(customCategories);
     mQtKdeCategoryModel->setLoggingCategories(qtKdeCategories);
+}
+
+bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules)
+{
+#if 0 /// TODO
+    SaveRulesJob job;
+    job.setFileName(path);
+    job.setListCustom(customCategoryModel()->loggingCategories());
+    job.setListKde(mKdeApplicationSettingsPage->rules(forceSavingAllRules));
+    if (!job.start()) {
+        KMessageBox::error(this, i18n("\'%1\' cannot be opened. Please verify it.", path));
+        return false;
+    }
+    return true;
+#endif
+    // TODO
+    return false;
 }
 
 KDebugSettingsLoadingCategories LoggingManager::loggings() const

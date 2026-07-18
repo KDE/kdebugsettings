@@ -44,6 +44,8 @@ public:
     void readQtLoggingFile();
     void updateLoggingCategories();
 
+    [[nodiscard]] bool saveRules(const QString &path, bool forceSavingAllRules);
+
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
     CustomLoggingCategoryModel *const mCustomCategoryModel;

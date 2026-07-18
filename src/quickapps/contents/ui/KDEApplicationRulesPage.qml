@@ -50,6 +50,9 @@ Kirigami.ScrollablePage {
                 QQC2.ComboBox {
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
 
+                    // Keep the delegate row index distinct from ComboBox activation index.
+                    property int rowIndex: index
+
                     model: CategoryTypeProxyModel {
                         sourceModel: LoggingManager.categoryTypeModel
                         showOffType: true
@@ -57,10 +60,8 @@ Kirigami.ScrollablePage {
                     textRole: "display"
                     valueRole: "categoryType"
                     currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(listviewRules.model.categoryType)
-                    onActivated: {
-                        console.debug("Not implemented yet")
-
-                        // TODO
+                    onActivated: () => {
+                        listviewRules.model.setCategoryType(rowIndex, currentValue)
                     }
                 }
             }

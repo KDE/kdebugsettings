@@ -15,6 +15,8 @@ public:
     explicit KDEApplicationLoggingCategoryProxyModel(QObject *parent = nullptr);
     ~KDEApplicationLoggingCategoryProxyModel() override;
 
+    Q_INVOKABLE bool setCategoryType(int proxyRow, int type);
+
     [[nodiscard]] QString filterText() const;
     void setFilterText(const QString &newFilterText);
 

@@ -14,6 +14,25 @@ KDEApplicationLoggingCategoryProxyModel::KDEApplicationLoggingCategoryProxyModel
 
 KDEApplicationLoggingCategoryProxyModel::~KDEApplicationLoggingCategoryProxyModel() = default;
 
+bool KDEApplicationLoggingCategoryProxyModel::setCategoryType(int proxyRow, int type)
+{
+    if (proxyRow < 0 || proxyRow >= rowCount()) {
+        return false;
+    }
+
+    const QModelIndex proxyIndex = index(proxyRow, KDEApplicationLoggingCategoryModel::LoggingTypeRole);
+    if (!proxyIndex.isValid()) {
+        return false;
+    }
+
+    const QModelIndex sourceIndex = mapToSource(proxyIndex);
+    if (!sourceIndex.isValid() || !sourceModel()) {
+        return false;
+    }
+
+    return sourceModel()->setData(sourceIndex, QVariant::fromValue(static_cast<LoggingCategory::LoggingType>(type)), Qt::EditRole);
+}
+
 bool KDEApplicationLoggingCategoryProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (mFilterText.isEmpty()) {
