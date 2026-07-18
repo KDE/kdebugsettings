@@ -19,6 +19,8 @@ Kirigami.Page {
         anchors.centerIn: parent
         TextEdit {
             text: LoggingManager.environmentrules().length === 0 ? i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\".") : LoggingManager.environmentrules()
+            readOnly: true;
+            horizontalAlignment: Qt.AlignHCenter
         }
     }
 }
