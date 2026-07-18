@@ -16,7 +16,7 @@ Kirigami.ScrollablePage {
     actions: [
         Kirigami.Action {
             displayComponent: Kirigami.SearchField {
-                onAccepted: loggingDebugProxyModel.filterText = text
+                onAccepted: LoggingManager.kdeApplicationLoggingCategoryProxyModel.filterText = text
             }
         }
     ]
@@ -27,10 +27,7 @@ Kirigami.ScrollablePage {
         activeFocusOnTab: true // keyboard navigation
         reuseItems: true
         clip: true
-        model: KDEApplicationLoggingCategoryProxyModel {
-            id: loggingDebugProxyModel
-            sourceModel: LoggingManager.qtKdeCategoryModel
-        }
+        model: LoggingManager.kdeApplicationLoggingCategoryProxyModel;
         delegate:  Delegates.RoundedItemDelegate {
             highlighted: ListView.isCurrentItem
             onClicked: listviewRules.currentIndex = index

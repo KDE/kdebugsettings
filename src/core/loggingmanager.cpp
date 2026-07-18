@@ -15,6 +15,7 @@ LoggingManager::LoggingManager(QObject *parent)
     , mCategoryTypeModel(new CategoryTypeModel(this))
     , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))
 {
+    mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mQtKdeCategoryModel);
     mLoggings.readQtLoggingFile();
     updateLoggingCategories();
 }
