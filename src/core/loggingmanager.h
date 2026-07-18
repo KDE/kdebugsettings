@@ -36,9 +36,6 @@ public:
 
     [[nodiscard]] bool foundOverrideRule() const;
 
-    // Remove it when we will port kdebugsettings to models.
-    [[nodiscard]] KDebugSettingsLoadingCategories loggings() const;
-
     void readCategoriesFiles(const QString &path);
 
     [[nodiscard]] KdeLoggingCategory::List categoriesList() const;

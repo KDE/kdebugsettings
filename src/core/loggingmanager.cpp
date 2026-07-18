@@ -77,11 +77,6 @@ bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules)
     return true;
 }
 
-KDebugSettingsLoadingCategories LoggingManager::loggings() const
-{
-    return mLoggings;
-}
-
 void LoggingManager::readCategoriesFiles(const QString &path)
 {
     mLoggings.readCategoriesFiles(path);
