@@ -54,7 +54,7 @@ Kirigami.ScrollablePage {
                 }
             }
             QQC2.MenuSeparator {
-            visible: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
+                visible: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
             }
             QQC2.MenuItem {
                 visible: listviewRules.currentIndex !== -1 && listviewRules.count !== 0
