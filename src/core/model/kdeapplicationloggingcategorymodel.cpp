@@ -8,11 +8,22 @@
 #include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsutil.h"
 
+namespace
+{
+constexpr int qmlRole(KDEApplicationLoggingCategoryModel::CategoryRoles role)
+{
+    return static_cast<int>(Qt::UserRole) + static_cast<int>(role) + 1;
+}
+}
+
 KDEApplicationLoggingCategoryModel::KDEApplicationLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
-    mRoleNames.insert(DescriptionRole, "description");
-    mRoleNames.insert(LoggingTypeRole, "loggingType");
+    // Expose QML roles in the user-role range to avoid collisions with Qt built-in roles.
+    mRoleNames.insert(qmlRole(DescriptionRole), "description");
+    mRoleNames.insert(qmlRole(LoggingTypeRole), "loggingType");
+    mRoleNames.insert(qmlRole(CategoryRole), "category");
+    mRoleNames.insert(qmlRole(LoggingTypeStrRole), "loggingTypeStr");
 }
 
 KDEApplicationLoggingCategoryModel::~KDEApplicationLoggingCategoryModel() = default;
@@ -101,19 +112,31 @@ QVariant KDEApplicationLoggingCategoryModel::data(const QModelIndex &index, int 
     if (role == Qt::ToolTipRole) {
         return category.generateToolTip();
     }
-    if (role != Qt::DisplayRole) {
+
+    // Keep widgets behavior (column-based access through DisplayRole).
+    if (role == Qt::DisplayRole) {
+        switch (static_cast<CategoryRoles>(index.column())) {
+        case DescriptionRole:
+            return category.description;
+        case LoggingTypeStrRole:
+            return KDebugSettingsUtil::convertCategoryTypeToString(category.loggingType);
+        case LoggingTypeRole:
+            return category.loggingType;
+        case CategoryRole:
+            return QVariant::fromValue(category);
+        }
         return {};
     }
 
-    switch (static_cast<CategoryRoles>(index.column())) {
-    case DescriptionRole: {
+    // QML asks data by role id; use dedicated user-role values.
+    switch (role) {
+    case qmlRole(DescriptionRole):
         return category.description;
-    }
-    case LoggingTypeStrRole:
+    case qmlRole(LoggingTypeStrRole):
         return KDebugSettingsUtil::convertCategoryTypeToString(category.loggingType);
-    case LoggingTypeRole:
+    case qmlRole(LoggingTypeRole):
         return category.loggingType;
-    case CategoryRole:
+    case qmlRole(CategoryRole):
         return QVariant::fromValue(category);
     }
     return {};

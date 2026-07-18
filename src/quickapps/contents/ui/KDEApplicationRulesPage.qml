@@ -56,7 +56,8 @@ Kirigami.ScrollablePage {
                     }
                     textRole: "display"
                     valueRole: "categoryType"
-                    currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(listviewRules.model.categoryType)
+                    // Re-evaluate once the ComboBox model is populated on startup.
+                    currentIndex: count > 0 ? indexOfValue(loggingType) : -1
                     onActivated: () => {
                         listviewRules.model.setCategoryType(rowIndex, currentValue)
                     }
