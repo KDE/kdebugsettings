@@ -73,6 +73,7 @@ Kirigami.ApplicationWindow {
         icon.name: "document-save"
         shortcut: StandardKey.Save
         onTriggered: {
+            console.debug("Not implemented yet")
             // TODO
         }
     }

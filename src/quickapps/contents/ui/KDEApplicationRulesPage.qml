@@ -58,6 +58,8 @@ Kirigami.ScrollablePage {
                     valueRole: "categoryType"
                     currentIndex: LoggingManager.categoryTypeModel.indexOfCategory(listviewRules.model.categoryType)
                     onActivated: {
+                        console.debug("Not implemented yet")
+
                         // TODO
                     }
                 }
