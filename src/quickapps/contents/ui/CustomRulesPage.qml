@@ -12,7 +12,14 @@ import org.kde.kdebugsettings 1.0
 Kirigami.ScrollablePage {
     id: page2
     title: i18nc("@title", "Custom Rules")
-
+    leftPadding: 20
+    actions: [
+        Kirigami.Action {
+            displayComponent: Kirigami.SearchField {
+                // TODO onAccepted: LoggingManager.kdeApplicationLoggingCategoryProxyModel.filterText = text
+            }
+        }
+    ]
     ListView {
         id: listviewRules
         reuseItems: true
