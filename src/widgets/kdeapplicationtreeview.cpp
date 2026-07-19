@@ -37,6 +37,7 @@ void KDEApplicationTreeView::setLoggingCategoryModel(KDEApplicationLoggingCatego
     // Hide column when we have model.
     hideColumn(KDEApplicationLoggingCategoryModel::LoggingTypeRole);
     hideColumn(KDEApplicationLoggingCategoryModel::CategoryRole);
+    hideColumn(KDEApplicationLoggingCategoryModel::GeneratedToolTipRole);
     setItemDelegateForColumn(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole, new KDEApplicationListViewDelegate(this));
     resizeColumnToContents(KDEApplicationLoggingCategoryModel::DescriptionRole);
 }

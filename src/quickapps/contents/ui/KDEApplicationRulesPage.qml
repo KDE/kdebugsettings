@@ -40,6 +40,9 @@ Kirigami.ScrollablePage {
                     Layout.leftMargin: 4
                     Layout.alignment: Qt.AlignLeft
                     text: model.description
+
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.text: model.generatedToolTip
                 }
                 Item {
                     Layout.fillWidth: true
@@ -56,6 +59,7 @@ Kirigami.ScrollablePage {
                     }
                     textRole: "display"
                     valueRole: "categoryType"
+
                     // Re-evaluate once the ComboBox model is populated on startup.
                     currentIndex: count > 0 ? indexOfValue(loggingType) : -1
                     onActivated: () => {

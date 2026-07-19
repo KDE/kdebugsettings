@@ -24,6 +24,7 @@ KDEApplicationLoggingCategoryModel::KDEApplicationLoggingCategoryModel(QObject *
     mRoleNames.insert(qmlRole(LoggingTypeRole), "loggingType");
     mRoleNames.insert(qmlRole(CategoryRole), "category");
     mRoleNames.insert(qmlRole(LoggingTypeStrRole), "loggingTypeStr");
+    mRoleNames.insert(qmlRole(GeneratedToolTipRole), "generatedToolTip");
 }
 
 KDEApplicationLoggingCategoryModel::~KDEApplicationLoggingCategoryModel() = default;
@@ -122,6 +123,8 @@ QVariant KDEApplicationLoggingCategoryModel::data(const QModelIndex &index, int 
             return KDebugSettingsUtil::convertCategoryTypeToString(category.loggingType);
         case LoggingTypeRole:
             return category.loggingType;
+        case GeneratedToolTipRole:
+            return category.generateToolTip();
         case CategoryRole:
             return QVariant::fromValue(category);
         }
@@ -138,6 +141,8 @@ QVariant KDEApplicationLoggingCategoryModel::data(const QModelIndex &index, int 
         return category.loggingType;
     case qmlRole(CategoryRole):
         return QVariant::fromValue(category);
+    case qmlRole(GeneratedToolTipRole):
+        return category.generateToolTip();
     }
     return {};
 }

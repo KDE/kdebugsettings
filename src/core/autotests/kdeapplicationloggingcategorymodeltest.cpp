@@ -36,6 +36,7 @@ void KDEApplicationLoggingCategoryModelTest::shouldExposeUserRolesForQml()
     QCOMPARE(roles.value(qmlRole(KDEApplicationLoggingCategoryModel::LoggingTypeRole)), QByteArray("loggingType"));
     QCOMPARE(roles.value(qmlRole(KDEApplicationLoggingCategoryModel::CategoryRole)), QByteArray("category"));
     QCOMPARE(roles.value(qmlRole(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole)), QByteArray("loggingTypeStr"));
+    QCOMPARE(roles.value(qmlRole(KDEApplicationLoggingCategoryModel::GeneratedToolTipRole)), QByteArray("generatedToolTip"));
 }
 
 void KDEApplicationLoggingCategoryModelTest::shouldReturnExpectedDataForWidgetsAndQml()
@@ -53,12 +54,16 @@ void KDEApplicationLoggingCategoryModelTest::shouldReturnExpectedDataForWidgetsA
     const QModelIndex typeIndex = model.index(0, KDEApplicationLoggingCategoryModel::LoggingTypeRole);
     const QModelIndex categoryIndex = model.index(0, KDEApplicationLoggingCategoryModel::CategoryRole);
     const QModelIndex typeStrIndex = model.index(0, KDEApplicationLoggingCategoryModel::LoggingTypeStrRole);
+    const QModelIndex generatedToolTipIndex = model.index(0, KDEApplicationLoggingCategoryModel::GeneratedToolTipRole);
 
     QCOMPARE(model.data(descriptionIndex, Qt::DisplayRole).toString(), QStringLiteral("desc"));
     QCOMPARE(model.data(typeIndex, Qt::DisplayRole).value<LoggingCategory::LoggingType>(), LoggingCategory::Warning);
     QCOMPARE(model.data(categoryIndex, Qt::DisplayRole).value<LoggingCategory>(), cat);
     QCOMPARE(model.data(typeStrIndex, Qt::DisplayRole).toString(),
              model.data(descriptionIndex, qmlRole(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole)).toString());
+
+    QCOMPARE(model.data(generatedToolTipIndex, Qt::DisplayRole).toString(),
+             model.data(descriptionIndex, qmlRole(KDEApplicationLoggingCategoryModel::GeneratedToolTipRole)).toString());
 
     // QML uses role-based lookup on any column index.
     QCOMPARE(model.data(descriptionIndex, qmlRole(KDEApplicationLoggingCategoryModel::DescriptionRole)).toString(), QStringLiteral("desc"));

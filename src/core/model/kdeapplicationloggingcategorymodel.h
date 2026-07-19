@@ -17,6 +17,7 @@ public:
         DescriptionRole,
         LoggingTypeRole,
         CategoryRole,
+        GeneratedToolTipRole,
         LoggingTypeStrRole,
         LastColumn = LoggingTypeStrRole,
     };
