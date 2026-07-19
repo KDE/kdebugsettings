@@ -12,13 +12,20 @@
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
     , mCustomCategoryModel(new CustomLoggingCategoryModel(this))
+    , mCustomLoggingCategoryProxyModel(new CustomLoggingCategoryProxyModel(this))
     , mQtKdeCategoryModel(new KDEApplicationLoggingCategoryModel(this))
     , mCategoryTypeModel(new CategoryTypeModel(this))
     , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))
 {
     mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mQtKdeCategoryModel);
+    mCustomLoggingCategoryProxyModel->setSourceModel(mCustomCategoryModel);
     mLoggings.readQtLoggingFile();
     updateLoggingCategories();
+}
+
+CustomLoggingCategoryProxyModel *LoggingManager::customLoggingCategoryProxyModel() const
+{
+    return mCustomLoggingCategoryProxyModel;
 }
 
 KDEApplicationLoggingCategoryProxyModel *LoggingManager::kdeApplicationLoggingCategoryProxyModel() const
