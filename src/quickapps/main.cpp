@@ -134,7 +134,7 @@ int main(int argc, char **argv)
         engine.load(QUrl(u"qrc:///main.qml"_s));
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
-            qDebug() << " Error during loading main.qml";
+            qWarning() << " Error during loading main.qml";
             return 1;
         }
         return app.exec();
