@@ -23,7 +23,7 @@ CustomDebugSettingsPage::CustomDebugSettingsPage(QWidget *parent)
     , mEditRule(new QPushButton(i18nc("@action:button", "Edit…"), this))
     , mRemoveRule(new QPushButton(i18nc("@action:button", "Remove…"), this))
     , mSearchLineEdit(new QLineEdit(this))
-    , mCustomDebugListView(new CustomDebugListView(this))
+    , mCustomDebugListView(new CustomDebugListView(LoggingManager::self().customLoggingCategoryProxyModel(), this))
 {
     auto mainLayout = new QVBoxLayout(this);
 

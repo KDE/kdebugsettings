@@ -6,6 +6,7 @@
 
 #include "customdebuglistviewtest.h"
 #include "customdebuglistview.h"
+#include "model/customloggingcategoryproxymodel.h"
 #include <QTest>
 
 QTEST_MAIN(CustomDebugListViewTest)
@@ -17,7 +18,7 @@ CustomDebugListViewTest::CustomDebugListViewTest(QObject *parent)
 
 void CustomDebugListViewTest::shouldHaveDefaultValues()
 {
-    CustomDebugListView w;
+    const CustomDebugListView w(new CustomLoggingCategoryProxyModel(this));
     QCOMPARE(w.contextMenuPolicy(), Qt::CustomContextMenu);
     QCOMPARE(w.selectionMode(), QAbstractItemView::ExtendedSelection);
 }

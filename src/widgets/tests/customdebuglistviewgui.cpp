@@ -6,6 +6,7 @@
 */
 
 #include "customdebuglistviewgui.h"
+#include "model/customloggingcategoryproxymodel.h"
 using namespace Qt::Literals::StringLiterals;
 
 #include "customdebuglistview.h"
@@ -18,7 +19,7 @@ CustomDebugListViewGui::CustomDebugListViewGui(QWidget *parent)
     : QWidget{parent}
 {
     auto vboxLayout = new QVBoxLayout(this);
-    auto view = new CustomDebugListView(this);
+    auto view = new CustomDebugListView(new CustomLoggingCategoryProxyModel(this), this);
 
     LoggingCategory::List lst;
     for (int i = 0; i < 5; ++i) {

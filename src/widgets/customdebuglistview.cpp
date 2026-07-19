@@ -21,9 +21,9 @@
 #include <QPointer>
 
 using namespace Qt::Literals::StringLiterals;
-CustomDebugListView::CustomDebugListView(QWidget *parent)
+CustomDebugListView::CustomDebugListView(CustomLoggingCategoryProxyModel *proxyModel, QWidget *parent)
     : QListView(parent)
-    , mCustomLoggingCategoryProxyModel(new CustomLoggingCategoryProxyModel(this))
+    , mCustomLoggingCategoryProxyModel(proxyModel)
 {
     mCustomLoggingCategoryProxyModel->setObjectName("mCustomDebugProxyModel"_L1);
     setContextMenuPolicy(Qt::CustomContextMenu);

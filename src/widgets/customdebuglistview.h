@@ -14,7 +14,7 @@ class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT CustomDebugListView : public QListVie
 {
     Q_OBJECT
 public:
-    explicit CustomDebugListView(QWidget *parent = nullptr);
+    explicit CustomDebugListView(CustomLoggingCategoryProxyModel *proxyModel, QWidget *parent = nullptr);
     ~CustomDebugListView() override;
 
     void slotAddRule();
