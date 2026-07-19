@@ -8,6 +8,7 @@
 #include <KLocalizedQmlContext>
 #include <QApplication>
 
+#include "config-kdebugsettings.h"
 #include "jobs/changedebugmodejob.h"
 #include "kdebugsettingscommandlineparser.h"
 #include "loggingmanager.h"
@@ -16,7 +17,6 @@
 #include "model/customloggingcategoryproxymodel.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
 #include "model/kdeapplicationloggingcategoryproxymodel.h"
-#include <config-kdebugsettings.h>
 
 #include <KAboutData>
 #if WITH_DBUS
