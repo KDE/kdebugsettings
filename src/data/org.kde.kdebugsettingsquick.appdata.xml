@@ -35,6 +35,5 @@
     <binary>kdebugsettingsquick</binary>
   </provides>
   <releases>
-    <release version="26.04.3" date="2026-07-02"/>
   </releases>
 </component>
