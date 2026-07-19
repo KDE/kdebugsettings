@@ -16,7 +16,7 @@ Kirigami.ScrollablePage {
     actions: [
         Kirigami.Action {
             displayComponent: Kirigami.SearchField {
-                // TODO onAccepted: LoggingManager.kdeApplicationLoggingCategoryProxyModel.filterText = text
+                onAccepted: LoggingManager.customLoggingCategoryProxyModel.filterText = text
             }
         }
     ]
@@ -25,7 +25,7 @@ Kirigami.ScrollablePage {
         reuseItems: true
         activeFocusOnTab: true // keyboard navigation
         focus: true // keyboard navigation
-        model: LoggingManager.customCategoryModel
+        model: LoggingManager.customLoggingCategoryProxyModel
         delegate: Delegates.RoundedItemDelegate {
             required property string displayRule
             required property int index
