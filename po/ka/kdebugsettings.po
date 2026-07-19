@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:48+0000\n"
-"PO-Revision-Date: 2024-07-30 06:34+0200\n"
+"POT-Creation-Date: 2026-07-19 00:48+0000\n"
+"PO-Revision-Date: 2026-07-18 06:10+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
@@ -158,10 +158,9 @@ msgid "No Debug Messages"
 msgstr "გამართვის შეტყობინებების გარეშე"
 
 #: src/quickapps/main.cpp:66
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1 kdebugsettings -ის ავტორები"
+msgstr "(c) 2023-%1 kdebugsettings -ის ავტორები"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -361,70 +360,70 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "ყველა შეტყობინების გამორთვა"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:64
 #, kde-format
 msgid "KDE Application"
 msgstr "KDE-ის აპლიკაცია"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "Custom Rules"
 msgstr "ხელით მითითებული წესები"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "წესების დაყენება გარემოს ცვლადით"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:75 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "შენახვა, როგორც…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "ჩასმა…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:158
+#: src/widgets/kdebugsettingsdialog.cpp:153
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1'-ის გახსნა შეუძლებელია. გადაამოწმეთ."
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Insert Categories"
 msgstr "კატეგორიების ჩასმა"
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Categories Files"
 msgstr "კატეგორიის ფაილები"
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "ფაილიდან '%1' კატეგორიების ჩასმა წარმატებულია."
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "კატეგორიების ჩასმა"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "ჯგუფის სახელი"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Name:"
 msgstr "სახელი:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -433,24 +432,24 @@ msgstr ""
 "<b>'%1'</b>უკვე გამოიყენება, როგორც ჯგუფის სახელი.\n"
 "შეინახეთ სხვა სახელით."
 
-#: src/widgets/kdebugsettingsdialog.cpp:219
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "ცარიელი სახელით ვერ შეინახავთ.აირჩიეთ ახალისახელი."
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
+#: src/widgets/kdebugsettingsdialog.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "შენახვა როგორც"
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:221
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings -ის ფაილი (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"

@@ -1,16 +1,16 @@
 # Translation of kdebugsettings.po to Catalan (Valencian)
-# Copyright (C) 2015-2024 This_file_is_part_of_KDE
+# Copyright (C) 2015-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2015-2020, 2023-2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:48+0000\n"
-"PO-Revision-Date: 2024-07-30 10:06+0200\n"
+"POT-Creation-Date: 2026-07-19 00:48+0000\n"
+"PO-Revision-Date: 2026-07-18 09:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:62
 #, kde-format
@@ -161,10 +161,9 @@ msgid "No Debug Messages"
 msgstr "No missatges de depuració"
 
 #: src/quickapps/main.cpp:66
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
+#, kde-format
 msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1, Els autors de kdebugsettings"
+msgstr "(c) 2023-%1, Els autors de kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -364,70 +363,70 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Desactiva tots els missatges"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:64
 #, kde-format
 msgid "KDE Application"
 msgstr "Aplicació de KDE"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "Custom Rules"
 msgstr "Regles personalitzades"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Paràmetres de regles amb variables d'entorn"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:75 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "Anomena i guarda…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Inserix…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:158
+#: src/widgets/kdebugsettingsdialog.cpp:153
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "No s'ha pogut obrir «%1». Verifiqueu-ho."
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Insert Categories"
 msgstr "Inserix categories"
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Categories Files"
 msgstr "Fitxers de categories"
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Categories des del fitxer inserit «%1»."
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Inserció de categories"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Nom del grup"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Name:"
 msgstr "Nom:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -436,24 +435,24 @@ msgstr ""
 "<b>«%1»</b> ja s'està emprant com a un nom de grup.\n"
 "Guardeu-lo amb un altre nom."
 
-#: src/widgets/kdebugsettingsdialog.cpp:219
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "No es pot guardar com a nom buit. Utilitzeu-ne un de nou."
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
+#: src/widgets/kdebugsettingsdialog.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Anomena i guarda"
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:221
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Fitxer de KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -492,6 +491,3 @@ msgstr "Anomena i guarda com a fitxer…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Anomena i guarda com a grup…"
-
-#~ msgid "(c) %1 kdebugsettings authors"
-#~ msgstr "(c) %1, els autors de «kdebugsettings»"

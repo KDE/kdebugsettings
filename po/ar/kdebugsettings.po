@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:48+0000\n"
+"POT-Creation-Date: 2026-07-19 00:48+0000\n"
 "PO-Revision-Date: 2025-08-03 23:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -368,70 +368,70 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "أوقف تشغيل كل الرسائل"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:64
 #, kde-format
 msgid "KDE Application"
 msgstr "تطبيق كِيدِي"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "Custom Rules"
 msgstr "قواعد مخصّصة"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "إعدادات القواعد مع متغير البيئة"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:75 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "احفظ ك‍…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "أدرج…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:158
+#: src/widgets/kdebugsettingsdialog.cpp:153
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "تعذّر فتح '%1'. فضلًا تحقّق منه."
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Insert Categories"
 msgstr "أدرج فئات"
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Categories Files"
 msgstr "فئات الملفات"
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "أدرجت الفئات من الملف '%1'."
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "أدرج فئات"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "اسم المجموعة"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Name:"
 msgstr "الاسم:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -440,24 +440,24 @@ msgstr ""
 "استُخدم <b>'%1'</b> فعلًا كاسم للمجموعة.\n"
 "يرجى الحفظ باسم آخر."
 
-#: src/widgets/kdebugsettingsdialog.cpp:219
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "لا يمكن الحفظ باسم فارغ. يرجى استخدام اسم جديد."
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
+#: src/widgets/kdebugsettingsdialog.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "احفظ ك‍"
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:221
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "ملف إعدادات تنقيح ك (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"

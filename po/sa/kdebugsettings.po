@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:48+0000\n"
+"POT-Creation-Date: 2026-07-19 00:48+0000\n"
 "PO-Revision-Date: 2024-12-20 21:51+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -361,94 +361,94 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "सर्वान् सन्देशान् अवरम्भयन्तु"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:64
 #, kde-format
 msgid "KDE Application"
 msgstr "KDE अनुप्रयोगाः"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:65
 #, kde-format
 msgid "Custom Rules"
 msgstr "कस्टम नियम"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:66
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "पर्यावरणचरसहितं नियमसेटिंग्स्"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:75 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "Save As…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "युज्…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:158
+#: src/widgets/kdebugsettingsdialog.cpp:153
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' उद्घाटयितुं न शक्यते। कृपया सत्यापित करें।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Insert Categories"
 msgstr "श्रेणियाँ सम्मिलित करें"
 
-#: src/widgets/kdebugsettingsdialog.cpp:183
+#: src/widgets/kdebugsettingsdialog.cpp:178
 #, kde-format
 msgid "Categories Files"
 msgstr "श्रेणयः सञ्चिकाः"
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "'%1' सञ्चिकातः श्रेणयः सम्मिलिताः ।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:197
+#: src/widgets/kdebugsettingsdialog.cpp:192
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "श्रेणियाँ सम्मिलित करें"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "समूहनाम"
 
-#: src/widgets/kdebugsettingsdialog.cpp:205
+#: src/widgets/kdebugsettingsdialog.cpp:200
 #, kde-format
 msgid "Name:"
 msgstr "नामः:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:210
+#: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr "<b>&#39;%1&#39;</b> पूर्वमेव समूहनामरूपेण उपयुज्यते । अन्यनामरूपेण रक्षन्तु ।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:219
+#: src/widgets/kdebugsettingsdialog.cpp:214
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "रिक्तनामरूपेण रक्षितुं न शक्यते। कृपया नूतनस्य उपयोगं कुर्वन्तु।"
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
+#: src/widgets/kdebugsettingsdialog.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "यथा रक्षतु"
 
-#: src/widgets/kdebugsettingsdialog.cpp:226
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:221
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings सञ्चिका (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:235
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
