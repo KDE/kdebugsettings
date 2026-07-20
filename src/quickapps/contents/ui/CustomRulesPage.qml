@@ -20,6 +20,10 @@ Kirigami.ScrollablePage {
             }
         }
     ]
+    EditCustomRuleDialog {
+        id: editCustomRuleDialog
+    }
+
     ListView {
         id: listviewRules
         reuseItems: true
@@ -47,7 +51,7 @@ Kirigami.ScrollablePage {
                 text: i18nc("@action add custom rule", "Add Rule…")
                 onTriggered: {
                     console.debug("Not implemented yet")
-
+                    editCustomRuleDialog.open();
                     // TODO
                 }
             }
