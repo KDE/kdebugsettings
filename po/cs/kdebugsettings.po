@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2024 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-21 00:48+0000\n"
-"PO-Revision-Date: 2024-08-08 10:08+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-07-19 11:00+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:60
 #, kde-format
@@ -56,6 +57,8 @@ msgstr "Nelze změnit režim ladění"
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
+"Zapnout testovací režim QStandardPaths, tj. nastavení pro čtení a zápis "
+"používané v jednotkových testech"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
 #, kde-format
@@ -77,6 +80,8 @@ msgstr "Změnit režim ladění jako konzole (v konzoli)"
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
+"Zadejte název kategorie protokolování, u které chcete změnit režim ladění (v "
+"konzoli)"
 
 #: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
@@ -164,6 +169,8 @@ msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
+"Je zde definováno vlastní pravidlo '*=true' nebo '*=false', které může "
+"přepsat konkrétnější pravidla. Je lepší jej odstranit."
 
 #: src/widgets/configurecustomsettingdialog.cpp:23
 #, kde-format
@@ -254,6 +261,7 @@ msgstr "Přidat…"
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr ""
+"V proměnné prostředí \"QT_LOGGING_RULES\" nebyla definována žádná pravidla."
 
 #: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
@@ -261,6 +269,8 @@ msgid ""
 "These rules cannot be edited with this application. You need to set them in "
 "QT_LOGGING_RULES variable directly."
 msgstr ""
+"Tato pravidla nelze v této aplikaci upravovat. Je třeba je nastavit přímo v "
+"proměnné QT_LOGGING_RULES."
 
 #: src/widgets/environmentsettingsrulespage.cpp:33
 #, kde-format
@@ -367,7 +377,7 @@ msgstr "Vlastní pravidla"
 #: src/widgets/kdebugsettingsdialog.cpp:67
 #, kde-format
 msgid "Rules Settings With Environment Variable"
-msgstr ""
+msgstr "Nastavení pravidel pomocí proměnných prostředí"
 
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -383,7 +393,7 @@ msgstr "Vložit…"
 #: src/widgets/kdebugsettingsdialog.cpp:158
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr ""
+msgstr "'%1' nelze otevřít. Zkontrolujte jej, prosím."
 
 #: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
@@ -398,7 +408,7 @@ msgstr "Soubory kategorií "
 #: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr ""
+msgstr "Byly vloženy kategorie ze souboru '%1'."
 
 #: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
@@ -441,7 +451,7 @@ msgstr "Uložit jako"
 #: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
-msgstr ""
+msgstr "Soubor KDebugSettings (*.kdebugsettingsrules)"
 
 #: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
