@@ -149,7 +149,7 @@ configure_file(config-kdebugsettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kde
 set(KDEBUGSETTINGS_LIB_VERSION "${RELEASE_SERVICE_VERSION}")
 set(KDEBUGSETTINGS_LIB_SOVERSION "6")
 
-option(BUILD_QUICK_VERSION "Experimental (in progress)" OFF)
+option(BUILD_QUICK_VERSION "Experimental (in progress)" ON)
 if(BUILD_QUICK_VERSION)
     find_package(
         Qt6
