@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:48+0000\n"
+"POT-Creation-Date: 2026-07-20 00:47+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -157,6 +157,125 @@ msgstr "महत्वपूर्ण संदेश"
 msgid "No Debug Messages"
 msgstr "कोई डीबग संदेश नहीं"
 
+#: src/quickapps/contents/ui/CustomRulesPage.qml:14
+#, fuzzy, kde-format
+#| msgid "Custom Rules"
+msgctxt "@title"
+msgid "Custom Rules"
+msgstr "कस्टम नियम"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Add Rule…"
+msgctxt "@action add custom rule"
+msgid "Add Rule…"
+msgstr "नियम जोड़ें…"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:57
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Edit Rule"
+msgctxt "@action edit custom rule"
+msgid "Edit Rule…"
+msgstr "नियम संपादित करें"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
+#| msgid_plural "Remove Rules"
+msgctxt "@action remove custom rule"
+msgid "Remove Rule"
+msgstr "नियम हटाएँ"
+
+#: src/quickapps/contents/ui/EditCustomRuleDialog.qml:9
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit custom rule"
+msgid "Edit Custom Dialog"
+msgstr "कस्टम नियम संपादित करें"
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:12
+#, fuzzy, kde-format
+#| msgid "Rules Settings With Environment Variable"
+msgctxt "@title"
+msgid "Rules Settings with Environment Variable"
+msgstr "पर्यावरण चर के साथ नियम सेटिंग"
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:21
+#: src/widgets/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr "पर्यावरण चर \"QT_LOGGING_RULES\" में कोई नियम परिभाषित नहीं किया गया है।"
+
+#: src/quickapps/contents/ui/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr ""
+
+#: src/quickapps/contents/ui/KDEApplicationRulesPage.qml:13
+#, fuzzy, kde-format
+#| msgid "KDE Application"
+msgctxt "@title"
+msgid "KDE Application Rules"
+msgstr "केडीई अनुप्रयोग"
+
+#: src/quickapps/contents/ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "KDE Application"
+msgctxt "@action"
+msgid "Show KDE Application Categories"
+msgstr "केडीई अनुप्रयोग"
+
+#: src/quickapps/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@action"
+msgid "Show Custom Categories"
+msgstr "श्रेणियाँ डालें"
+
+#: src/quickapps/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@action"
+msgid "Show Environment Categories"
+msgstr "श्रेणियाँ डालें"
+
+#: src/quickapps/contents/ui/main.qml:45
+#, kde-format
+msgctxt "@action opens about app page"
+msgid "About"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:53
+#, kde-format
+msgctxt "@action"
+msgid "Open Handbook"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:64
+#, kde-format
+msgctxt "@menu-action"
+msgid "Quit"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Save As"
+msgctxt "@menu-action"
+msgid "Save"
+msgstr "के रूप रक्षित करें"
+
+#: src/quickapps/contents/ui/MainPage.qml:38
+#, fuzzy, kde-format
+#| msgid "Configure debug settings"
+msgctxt "@title"
+msgid "Welcome to kdebugsettings"
+msgstr "डिबग सेटिंग्स कॉन्फ़िगर करें"
+
 #: src/quickapps/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
@@ -253,12 +372,6 @@ msgstr "खोजना…"
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "जोड़ना…"
-
-#: src/widgets/environmentplaintextedit.cpp:42
-#, kde-format
-msgid ""
-"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr "पर्यावरण चर \"QT_LOGGING_RULES\" में कोई नियम परिभाषित नहीं किया गया है।"
 
 #: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format

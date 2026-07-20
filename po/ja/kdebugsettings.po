@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:48+0000\n"
+"POT-Creation-Date: 2026-07-20 00:47+0000\n"
 "PO-Revision-Date: 2015-03-08 20:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -149,6 +149,108 @@ msgstr ""
 msgid "No Debug Messages"
 msgstr ""
 
+#: src/quickapps/contents/ui/CustomRulesPage.qml:14
+#, kde-format
+msgctxt "@title"
+msgid "Custom Rules"
+msgstr ""
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:47
+#, kde-format
+msgctxt "@action add custom rule"
+msgid "Add Rule…"
+msgstr ""
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:57
+#, kde-format
+msgctxt "@action edit custom rule"
+msgid "Edit Rule…"
+msgstr ""
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:69
+#, kde-format
+msgctxt "@action remove custom rule"
+msgid "Remove Rule"
+msgstr ""
+
+#: src/quickapps/contents/ui/EditCustomRuleDialog.qml:9
+#, kde-format
+msgid "Edit Custom Dialog"
+msgstr ""
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:12
+#, kde-format
+msgctxt "@title"
+msgid "Rules Settings with Environment Variable"
+msgstr ""
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:21
+#: src/widgets/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr ""
+
+#: src/quickapps/contents/ui/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr ""
+
+#: src/quickapps/contents/ui/KDEApplicationRulesPage.qml:13
+#, kde-format
+msgctxt "@title"
+msgid "KDE Application Rules"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:28
+#, kde-format
+msgctxt "@action"
+msgid "Show KDE Application Categories"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:33
+#, kde-format
+msgctxt "@action"
+msgid "Show Custom Categories"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:38
+#, kde-format
+msgctxt "@action"
+msgid "Show Environment Categories"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:45
+#, kde-format
+msgctxt "@action opens about app page"
+msgid "About"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:53
+#, kde-format
+msgctxt "@action"
+msgid "Open Handbook"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:64
+#, kde-format
+msgctxt "@menu-action"
+msgid "Quit"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:72
+#, kde-format
+msgctxt "@menu-action"
+msgid "Save"
+msgstr ""
+
+#: src/quickapps/contents/ui/MainPage.qml:38
+#, kde-format
+msgctxt "@title"
+msgid "Welcome to kdebugsettings"
+msgstr ""
+
 #: src/quickapps/main.cpp:66
 #, kde-format
 msgid "(c) 2023-%1 kdebugsettings authors"
@@ -239,12 +341,6 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
-
-#: src/widgets/environmentplaintextedit.cpp:42
-#, kde-format
-msgid ""
-"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr ""
 
 #: src/widgets/environmentsettingsrulespage.cpp:31

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:48+0000\n"
+"POT-Creation-Date: 2026-07-20 00:47+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -159,6 +159,124 @@ msgstr "Mesaje critice"
 msgid "No Debug Messages"
 msgstr "Fără mesaje de depanare"
 
+#: src/quickapps/contents/ui/CustomRulesPage.qml:14
+#, fuzzy, kde-format
+#| msgid "Custom Rules"
+msgctxt "@title"
+msgid "Custom Rules"
+msgstr "Reguli personalizate"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit custom rule"
+msgctxt "@action add custom rule"
+msgid "Add Rule…"
+msgstr "Modifică regula personalizată"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:57
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit custom rule"
+msgctxt "@action edit custom rule"
+msgid "Edit Rule…"
+msgstr "Modifică regula personalizată"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Remove..."
+msgctxt "@action remove custom rule"
+msgid "Remove Rule"
+msgstr "Elimină..."
+
+#: src/quickapps/contents/ui/EditCustomRuleDialog.qml:9
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit custom rule"
+msgid "Edit Custom Dialog"
+msgstr "Modifică regula personalizată"
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:12
+#, fuzzy, kde-format
+#| msgid "Rules Settings With Environment Variable"
+msgctxt "@title"
+msgid "Rules Settings with Environment Variable"
+msgstr "Configurări reguli cu variabilă de mediu"
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:21
+#: src/widgets/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr ""
+"Nu a fost definită nicio regulă în variabila de mediu „QT_LOGGING_RULES”."
+
+#: src/quickapps/contents/ui/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr ""
+
+#: src/quickapps/contents/ui/KDEApplicationRulesPage.qml:13
+#, fuzzy, kde-format
+#| msgid "KDE Application"
+msgctxt "@title"
+msgid "KDE Application Rules"
+msgstr "Aplicație KDE"
+
+#: src/quickapps/contents/ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "KDE Application"
+msgctxt "@action"
+msgid "Show KDE Application Categories"
+msgstr "Aplicație KDE"
+
+#: src/quickapps/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@action"
+msgid "Show Custom Categories"
+msgstr "Inserează categorii"
+
+#: src/quickapps/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@action"
+msgid "Show Environment Categories"
+msgstr "Inserează categorii"
+
+#: src/quickapps/contents/ui/main.qml:45
+#, kde-format
+msgctxt "@action opens about app page"
+msgid "About"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:53
+#, kde-format
+msgctxt "@action"
+msgid "Open Handbook"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:64
+#, kde-format
+msgctxt "@menu-action"
+msgid "Quit"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Save As"
+msgctxt "@menu-action"
+msgid "Save"
+msgstr "Salvează ca"
+
+#: src/quickapps/contents/ui/MainPage.qml:38
+#, fuzzy, kde-format
+#| msgid "Configure debug settings"
+msgctxt "@title"
+msgid "Welcome to kdebugsettings"
+msgstr "Configurează opțiuni de depanare"
+
 #: src/quickapps/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "(c) 2015-2020 kdebugsettings authors"
@@ -270,13 +388,6 @@ msgstr "Caută..."
 msgctxt "@action:button"
 msgid "Add…"
 msgstr ""
-
-#: src/widgets/environmentplaintextedit.cpp:42
-#, kde-format
-msgid ""
-"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr ""
-"Nu a fost definită nicio regulă în variabila de mediu „QT_LOGGING_RULES”."
 
 #: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format

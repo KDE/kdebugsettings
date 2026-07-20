@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-19 00:48+0000\n"
+"POT-Creation-Date: 2026-07-20 00:47+0000\n"
 "PO-Revision-Date: 2026-01-16 11:48+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -156,6 +156,127 @@ msgstr "Messages Critic"
 msgid "No Debug Messages"
 msgstr "Nulle messages de debug"
 
+#: src/quickapps/contents/ui/CustomRulesPage.qml:14
+#, fuzzy, kde-format
+#| msgid "Custom Rules"
+msgctxt "@title"
+msgid "Custom Rules"
+msgstr "Regulas personalisate"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Add Rule…"
+msgctxt "@action add custom rule"
+msgid "Add Rule…"
+msgstr "Adde regula…"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:57
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Edit Rule"
+msgctxt "@action edit custom rule"
+msgid "Edit Rule…"
+msgstr "Modifica regula"
+
+#: src/quickapps/contents/ui/CustomRulesPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
+#| msgid_plural "Remove Rules"
+msgctxt "@action remove custom rule"
+msgid "Remove Rule"
+msgstr "Remove regula"
+
+#: src/quickapps/contents/ui/EditCustomRuleDialog.qml:9
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit custom rule"
+msgid "Edit Custom Dialog"
+msgstr "Modifica regula personalisate"
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:12
+#, fuzzy, kde-format
+#| msgid "Rules Settings With Environment Variable"
+msgctxt "@title"
+msgid "Rules Settings with Environment Variable"
+msgstr "Preferentias de regulas con variabile de ambiente"
+
+#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:21
+#: src/widgets/environmentplaintextedit.cpp:42
+#, kde-format
+msgid ""
+"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
+msgstr ""
+"necun regula ha essite definite in le variabile de ambiente "
+"\"QT_LOGGING_RULES\"."
+
+#: src/quickapps/contents/ui/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr ""
+
+#: src/quickapps/contents/ui/KDEApplicationRulesPage.qml:13
+#, fuzzy, kde-format
+#| msgid "KDE Application"
+msgctxt "@title"
+msgid "KDE Application Rules"
+msgstr "Application KDE"
+
+#: src/quickapps/contents/ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "KDE Application"
+msgctxt "@action"
+msgid "Show KDE Application Categories"
+msgstr "Application KDE"
+
+#: src/quickapps/contents/ui/main.qml:33
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@action"
+msgid "Show Custom Categories"
+msgstr "Inserta categorias"
+
+#: src/quickapps/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgctxt "@action"
+msgid "Show Environment Categories"
+msgstr "Inserta categorias"
+
+#: src/quickapps/contents/ui/main.qml:45
+#, kde-format
+msgctxt "@action opens about app page"
+msgid "About"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:53
+#, kde-format
+msgctxt "@action"
+msgid "Open Handbook"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:64
+#, kde-format
+msgctxt "@menu-action"
+msgid "Quit"
+msgstr ""
+
+#: src/quickapps/contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Save As"
+msgctxt "@menu-action"
+msgid "Save"
+msgstr "Salveguarda como"
+
+#: src/quickapps/contents/ui/MainPage.qml:38
+#, fuzzy, kde-format
+#| msgid "Configure debug settings"
+msgctxt "@title"
+msgid "Welcome to kdebugsettings"
+msgstr "Configura preferentias de debug"
+
 #: src/quickapps/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "(c) 2015-%1 kdebugsettings authors"
@@ -252,14 +373,6 @@ msgstr "Cerca..."
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Adde…"
-
-#: src/widgets/environmentplaintextedit.cpp:42
-#, kde-format
-msgid ""
-"No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr ""
-"necun regula ha essite definite in le variabile de ambiente "
-"\"QT_LOGGING_RULES\"."
 
 #: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
