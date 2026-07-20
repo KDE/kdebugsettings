@@ -36,10 +36,10 @@ Kirigami.ScrollablePage {
                 width: parent.width
 
                 QQC2.Label {
-                    Layout.fillHeight: true
                     Layout.leftMargin: 4
-                    Layout.alignment: Qt.AlignLeft
                     text: model.description
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    verticalAlignment: Text.AlignVCenter
 
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.text: model.generatedToolTip
@@ -49,7 +49,6 @@ Kirigami.ScrollablePage {
                 }
                 QQC2.ComboBox {
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-
                     // Keep the delegate row index distinct from ComboBox activation index.
                     property int rowIndex: index
 
