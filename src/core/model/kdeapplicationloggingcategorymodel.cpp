@@ -46,8 +46,9 @@ int KDEApplicationLoggingCategoryModel::columnCount(const QModelIndex &parent) c
 
 Qt::ItemFlags KDEApplicationLoggingCategoryModel::flags(const QModelIndex &index) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return Qt::NoItemFlags;
+    }
 
     if (static_cast<CategoryRoles>(index.column()) == LoggingTypeStrRole) {
         return Qt::ItemIsEditable | QAbstractItemModel::flags(index);
