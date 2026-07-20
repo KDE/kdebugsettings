@@ -5,7 +5,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
-import org.kde.kdebugsettings 1.0
+import org.kde.kdebugsettings
 
 Kirigami.Page {
     id: root

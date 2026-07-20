@@ -3,7 +3,7 @@
 
 import QtQuick
 import org.kde.kirigami as Kirigami
-import org.kde.kdebugsettings 1.0
+import org.kde.kdebugsettings
 import org.kde.kirigamiaddons.formcard 1.0 as FormCard
 
 FormCard.AboutPage {

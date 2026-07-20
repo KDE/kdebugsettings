@@ -160,6 +160,8 @@ if(BUILD_QUICK_VERSION)
             Quick
             QuickControls2
     )
+    include(ECMQmlModule)
+
     if("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
         add_definitions(-DQT_QML_DEBUG)
     endif()

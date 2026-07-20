@@ -6,8 +6,27 @@ target_sources(
     kdebugsettingsquick
     PRIVATE
         main.cpp
-        resources.qrc
+    #resources.qrc
 )
+
+ecm_add_qml_module(kdebugsettingsquick
+    URI "org.kde.kdebugsettings" GENERATE_PLUGIN_SOURCE DEPENDENCIES QtQuick
+)
+
+ecm_target_qml_sources(kdebugsettingsquick SOURCES
+    qml/AboutPage.qml
+    qml/ActionMenuItem.qml
+    qml/CustomRulesPage.qml
+    qml/EditCustomRuleDialog.qml
+    qml/EnvironmentVariableRulesPage.qml
+    qml/GlobalMenu.qml
+    qml/KDEApplicationRulesPage.qml
+    qml/MainPage.qml
+    qml/Main.qml
+)
+
+ecm_finalize_qml_module(kdebugsettingsquick)
+
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         kdebugsettingsquick
@@ -19,21 +38,22 @@ endif()
 
 target_link_libraries(
     kdebugsettingsquick
-    KF6::I18n
-    KF6::CoreAddons
-    libkdebugsettingscore
-    Qt::Quick
-    Qt::QuickControls2
-    Qt::Widgets
-    KF6::IconThemes
-    KF6::ConfigWidgets
+    PRIVATE
+        KF6::I18n
+        KF6::CoreAddons
+        libkdebugsettingscore
+        Qt::Quick
+        Qt::QuickControls2
+        Qt::Widgets
+        KF6::IconThemes
+        KF6::ConfigWidgets
 )
 if(TARGET KF6::DBusAddons)
-    target_link_libraries(kdebugsettingsquick KF6::DBusAddons)
+    target_link_libraries(kdebugsettingsquick PRIVATE KF6::DBusAddons)
 else()
-    target_link_libraries(kdebugsettingsquick KDAB::kdsingleapplication)
+    target_link_libraries(kdebugsettingsquick PRIVATE KDAB::kdsingleapplication)
 endif()
-target_link_libraries(kdebugsettingsquick KF6::I18nQml)
+target_link_libraries(kdebugsettingsquick PRIVATE KF6::I18nQml)
 
 install(
     TARGETS

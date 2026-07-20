@@ -4,7 +4,7 @@ import QtQuick
 import org.kde.kirigami as Kirigami
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import org.kde.kdebugsettings 1.0
+import org.kde.kdebugsettings
 Kirigami.Dialog {
     id: dialog
     title: i18n("Edit Custom Rule")

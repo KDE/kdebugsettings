@@ -7,7 +7,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates 1.0 as Delegates
 
-import org.kde.kdebugsettings 1.0
+import org.kde.kdebugsettings
 
 Kirigami.ScrollablePage {
     id: page2

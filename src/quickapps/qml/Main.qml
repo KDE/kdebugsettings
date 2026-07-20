@@ -5,7 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 
-import org.kde.kdebugsettings 1.0
+import org.kde.kdebugsettings
 
 Kirigami.ApplicationWindow {
     id: root
@@ -26,24 +26,24 @@ Kirigami.ApplicationWindow {
     Kirigami.Action {
         id: goToKdeApplicationCategories
         text: i18nc("@action", "Show KDE Application Categories")
-        onTriggered: { pageStack.layers.push("qrc:/KDEApplicationRulesPage.qml") }
+        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("KDEApplicationRulesPage.qml")) }
     }
     Kirigami.Action {
         id: goToCustomCategories
         text: i18nc("@action", "Show Custom Categories")
-        onTriggered: { pageStack.layers.push("qrc:/CustomRulesPage.qml") }
+        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("CustomRulesPage.qml")) }
     }
     Kirigami.Action {
         id: goToEnviromnentCategories
         text: i18nc("@action", "Show Environment Categories")
-        onTriggered: { pageStack.layers.push("qrc:/EnvironmentVariableRulesPage.qml") }
+        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("EnvironmentVariableRulesPage.qml")) }
     }
     Kirigami.Action {
         id: aboutAction
         displayHint: Kirigami.DisplayHint.AlwaysHide
         icon.name: "debug-run"
         text: i18nc("@action opens about app page", "About")
-        onTriggered: { pageStack.layers.push("qrc:/AboutPage.qml") }
+        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("AboutPage.qml")) }
     }
 
     Kirigami.Action {

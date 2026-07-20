@@ -131,10 +131,11 @@ int main(int argc, char **argv)
             return engine->toScriptValue(KAboutData::applicationData());
         });
         engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
-        engine.load(QUrl(u"qrc:///main.qml"_s));
+        engine.loadFromModule("org.kde.kdebugsettings", "Main");
+
         // Exit on QML load error.
         if (engine.rootObjects().isEmpty()) {
-            qWarning() << " Error during loading main.qml";
+            qWarning() << " Error during loading Main.qml";
             return 1;
         }
         return app.exec();
