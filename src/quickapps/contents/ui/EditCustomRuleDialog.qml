@@ -16,18 +16,18 @@ Kirigami.Dialog {
         spacing: Kirigami.Units.smallSpacing
 
         QQC2.Label {
-            Layout.fillHeight: true
             Layout.leftMargin: 4
-            Layout.alignment: Qt.AlignLeft
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            verticalAlignment: Text.AlignVCenter
             text: i18n("Category:")
         }
         QQC2.TextField {
             id: categoryName
         }
         QQC2.Label {
-            Layout.fillHeight: true
             Layout.leftMargin: 4
-            Layout.alignment: Qt.AlignLeft
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            verticalAlignment: Text.AlignVCenter
             text: i18n("Type:")
         }
         QQC2.ComboBox {
