@@ -6,7 +6,7 @@ import QtQuick.Controls as Controls
 
 Kirigami.Dialog {
     id: dialog
-    title: i18n("Edit Custom Dialog")
+    title: i18n("Edit Custom Rule")
     clip: true
 
     standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
