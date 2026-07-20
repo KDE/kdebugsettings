@@ -31,6 +31,7 @@ Kirigami.Dialog {
             text: i18n("Type:")
         }
         QQC2.ComboBox {
+            id: categoryType
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
 
             model: CategoryTypeProxyModel {
@@ -39,6 +40,11 @@ Kirigami.Dialog {
             }
             textRole: "display"
             valueRole: "categoryType"
+        }
+        QQC2.CheckBox {
+            id: categoryEnabled
+            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+            text: i18n("Enabled");
         }
     }
 }
