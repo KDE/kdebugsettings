@@ -1,8 +1,8 @@
-// SPDX-FileCopyrightText: 2023-2026 Laurent Montel <montel@kde.org>
+// SPDX-FileCopyrightText: 2026 Laurent Montel <montel@kde.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 import QtQuick
-import org.kde.kirigami 2.19 as Kirigami
-import QtQuick.Controls 2.12 as Controls
+import org.kde.kirigami as Kirigami
+import QtQuick.Controls as Controls
 
 Kirigami.Dialog {
     id: dialog
