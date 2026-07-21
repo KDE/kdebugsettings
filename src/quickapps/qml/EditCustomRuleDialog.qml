@@ -9,6 +9,7 @@ Kirigami.Dialog {
     id: dialog
     title: i18n("Edit Custom Rule")
     clip: true
+    showCloseButton: false
 
     standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
     RowLayout {
