@@ -61,6 +61,7 @@ Kirigami.ScrollablePage {
                 text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {
                     console.debug("Not implemented yet")
+                    editCustomRuleDialog.open();
                     // TODO
                 }
             }
