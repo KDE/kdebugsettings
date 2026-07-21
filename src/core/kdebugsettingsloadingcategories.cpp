@@ -6,7 +6,6 @@
 */
 
 #include "kdebugsettingsloadingcategories.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobs/loadcategoriesjob.h"
 #include "kdebugsettingsutil.h"
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLibraryInfo>
 #include <QStandardPaths>
 
+using namespace Qt::Literals::StringLiterals;
 KDebugSettingsLoadingCategories::KDebugSettingsLoadingCategories() = default;
 
 KDebugSettingsLoadingCategories::~KDebugSettingsLoadingCategories() = default;

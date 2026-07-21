@@ -6,13 +6,13 @@
 */
 
 #include "groupmanagementwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "groupmanagementwidget.h"
 #include <QListWidget>
 #include <QTest>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(GroupManagementWidgetTest)
 GroupManagementWidgetTest::GroupManagementWidgetTest(QObject *parent)
     : QObject(parent)

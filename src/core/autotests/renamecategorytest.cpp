@@ -5,12 +5,14 @@
 
 */
 #include "renamecategorytest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingsutil.h"
 #include "renamecategory.h"
 #include <QTest>
 
+QTEST_MAIN(RenameCategoryTest)
+
+using namespace Qt::Literals::StringLiterals;
 RenameCategoryTest::RenameCategoryTest(QObject *parent)
     : QObject(parent)
 {
@@ -48,7 +50,5 @@ void RenameCategoryTest::shouldParseRenameLine()
     QCOMPARE(cat, result);
     QCOMPARE(cat.isValid(), valid);
 }
-
-QTEST_MAIN(RenameCategoryTest)
 
 #include "moc_renamecategorytest.cpp"

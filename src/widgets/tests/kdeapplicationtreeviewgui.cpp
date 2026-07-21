@@ -7,13 +7,13 @@
 
 #include "kdeapplicationtreeviewgui.h"
 #include "model/kdeapplicationloggingcategoryproxymodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdeapplicationtreeview.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
 
 #include <QApplication>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 KDEApplicationTreeViewGui::KDEApplicationTreeViewGui(QWidget *parent)
     : QWidget{parent}

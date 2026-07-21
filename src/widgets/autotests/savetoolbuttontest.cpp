@@ -6,10 +6,10 @@
 */
 
 #include "savetoolbuttontest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "savetoolbutton.h"
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(SaveToolButtonTest)
 SaveToolButtonTest::SaveToolButtonTest(QObject *parent)
     : QObject(parent)

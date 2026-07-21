@@ -6,7 +6,6 @@
 */
 
 #include "kdebugsettingutiltest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingsutil.h"
 #include <QDebug>
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 
 QTEST_GUILESS_MAIN(KDebugSettingUtilTest)
 
+using namespace Qt::Literals::StringLiterals;
 KDebugSettingUtilTest::KDebugSettingUtilTest(QObject *parent)
     : QObject(parent)
 {

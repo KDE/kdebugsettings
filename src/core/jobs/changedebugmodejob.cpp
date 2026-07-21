@@ -6,13 +6,13 @@
 */
 
 #include "changedebugmodejob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsloadingcategories.h"
 #include "kdebugsettingsutil.h"
 #include "saverulesjob.h"
 
+using namespace Qt::Literals::StringLiterals;
 ChangeDebugModeJob::ChangeDebugModeJob() = default;
 
 ChangeDebugModeJob::~ChangeDebugModeJob() = default;

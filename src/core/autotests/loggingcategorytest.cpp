@@ -6,10 +6,12 @@
 */
 
 #include "loggingcategorytest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "loggingcategory.h"
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+QTEST_MAIN(LoggingCategoryTest)
 
 LoggingCategoryTest::LoggingCategoryTest(QObject *parent)
     : QObject(parent)
@@ -67,7 +69,5 @@ void LoggingCategoryTest::shouldCreateRules()
     QCOMPARE(log.createRule(), result);
     QVERIFY(log.isValid());
 }
-
-QTEST_MAIN(LoggingCategoryTest)
 
 #include "moc_loggingcategorytest.cpp"

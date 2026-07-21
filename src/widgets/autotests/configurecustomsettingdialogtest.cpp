@@ -6,13 +6,16 @@
 */
 
 #include "configurecustomsettingdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "configurecustomsettingdialog.h"
 #include "configurecustomsettingwidget.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTest>
+
+QTEST_MAIN(ConfigureCustomSettingDialogTest)
+
+using namespace Qt::Literals::StringLiterals;
 ConfigureCustomSettingDialogTest::ConfigureCustomSettingDialogTest(QObject *parent)
     : QObject(parent)
 {
@@ -29,7 +32,5 @@ void ConfigureCustomSettingDialogTest::shouldHaveDefaultValue()
     auto widget = dlg.findChild<ConfigureCustomSettingWidget *>(u"customsettingwidget"_s);
     QVERIFY(widget);
 }
-
-QTEST_MAIN(ConfigureCustomSettingDialogTest)
 
 #include "moc_configurecustomsettingdialogtest.cpp"

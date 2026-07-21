@@ -6,7 +6,6 @@
 */
 
 #include "kdebugsettingsutil.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingscore_debug.h"
 #include <KLocalizedString>
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QRegularExpression>
 #include <QStandardPaths>
 
+using namespace Qt::Literals::StringLiterals;
 RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QString &filename)
 {
     RenameCategory category;

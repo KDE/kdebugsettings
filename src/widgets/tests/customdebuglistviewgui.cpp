@@ -7,7 +7,6 @@
 
 #include "customdebuglistviewgui.h"
 #include "model/customloggingcategoryproxymodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "customdebuglistview.h"
 #include "model/customloggingcategorymodel.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QApplication>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 CustomDebugListViewGui::CustomDebugListViewGui(QWidget *parent)
     : QWidget{parent}
 {

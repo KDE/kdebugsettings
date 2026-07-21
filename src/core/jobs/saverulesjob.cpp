@@ -6,11 +6,11 @@
 */
 
 #include "saverulesjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QFile>
 #include <QTextStream>
 
+using namespace Qt::Literals::StringLiterals;
 SaveRulesJob::SaveRulesJob() = default;
 
 void SaveRulesJob::setListKde(const LoggingCategory::List &listKde)

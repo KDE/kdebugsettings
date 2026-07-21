@@ -6,10 +6,10 @@
 */
 
 #include "loadcategoriesjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingsutil.h"
 
+using namespace Qt::Literals::StringLiterals;
 LoadCategoriesJob::LoadCategoriesJob() = default;
 
 void LoadCategoriesJob::setFileName(const QString &filename)

@@ -6,7 +6,6 @@
 */
 
 #include "kdeapplicationdebugsettingpagetest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdeapplicationdebugsettingpage.h"
 #include "kdeapplicationtreeview.h"
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTest>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(KDEApplicationDebugSettingPageTest)
 
 KDEApplicationDebugSettingPageTest::KDEApplicationDebugSettingPageTest(QObject *parent)

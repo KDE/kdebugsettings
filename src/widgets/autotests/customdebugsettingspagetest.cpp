@@ -6,7 +6,6 @@
 */
 
 #include "customdebugsettingspagetest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "customdebuglistview.h"
 #include "customdebugsettingspage.h"
@@ -14,6 +13,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QTest>
 
+QTEST_MAIN(CustomDebugSettingsPageTest)
+
+using namespace Qt::Literals::StringLiterals;
 CustomDebugSettingsPageTest::CustomDebugSettingsPageTest(QObject *parent)
     : QObject(parent)
 {
@@ -44,7 +46,5 @@ void CustomDebugSettingsPageTest::shouldHaveDefaultValue()
     QVERIFY(removeButton);
     QVERIFY(!removeButton->isEnabled());
 }
-
-QTEST_MAIN(CustomDebugSettingsPageTest)
 
 #include "moc_customdebugsettingspagetest.cpp"

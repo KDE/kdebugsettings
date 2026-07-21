@@ -6,12 +6,12 @@
 */
 
 #include "changedebugmodejobtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobs/changedebugmodejob.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(ChangeDebugModeJobTest)
 
+using namespace Qt::Literals::StringLiterals;
 ChangeDebugModeJobTest::ChangeDebugModeJobTest(QObject *parent)
     : QObject(parent)
 {

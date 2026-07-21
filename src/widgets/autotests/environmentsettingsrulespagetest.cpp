@@ -6,11 +6,13 @@
 */
 
 #include "environmentsettingsrulespagetest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "environmentplaintextedit.h"
 #include "environmentsettingsrulespage.h"
 #include <QTest>
+QTEST_MAIN(EnvironmentSettingsRulesPageTest)
+
+using namespace Qt::Literals::StringLiterals;
 EnvironmentSettingsRulesPageTest::EnvironmentSettingsRulesPageTest(QObject *parent)
     : QObject(parent)
 {
@@ -36,7 +38,5 @@ void EnvironmentSettingsRulesPageTest::shouldSetRules()
     w.setRules(rules);
     QVERIFY(plainText->toPlainText().endsWith(rules));
 }
-
-QTEST_MAIN(EnvironmentSettingsRulesPageTest)
 
 #include "moc_environmentsettingsrulespagetest.cpp"

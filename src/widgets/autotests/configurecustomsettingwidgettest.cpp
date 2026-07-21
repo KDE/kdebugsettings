@@ -6,7 +6,6 @@
 */
 
 #include "configurecustomsettingwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "configurecustomsettingwidget.h"
 #include <KLineEdit>
@@ -16,6 +15,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSignalSpy>
 #include <QTest>
 
+QTEST_MAIN(ConfigureCustomSettingWidgetTest)
+
+using namespace Qt::Literals::StringLiterals;
 ConfigureCustomSettingWidgetTest::ConfigureCustomSettingWidgetTest(QObject *parent)
     : QObject(parent)
 {
@@ -80,7 +82,5 @@ void ConfigureCustomSettingWidgetTest::shouldEmitSignalWhenWeChangeLogName()
     QCOMPARE(spy.count(), 3);
     QCOMPARE(spy.at(2).at(0).toBool(), false);
 }
-
-QTEST_MAIN(ConfigureCustomSettingWidgetTest)
 
 #include "moc_configurecustomsettingwidgettest.cpp"

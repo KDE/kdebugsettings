@@ -6,7 +6,6 @@
 */
 
 #include "saverulesjobtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobs/loadcategoriesjob.h"
 #include "jobs/saverulesjob.h"
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 
 QTEST_GUILESS_MAIN(SaveRulesJobTest)
 
+using namespace Qt::Literals::StringLiterals;
 static void compareFile(const QString &name)
 {
     const QString refFile = QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + u'/' + name + u".ref"_s;

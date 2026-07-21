@@ -6,11 +6,11 @@
 */
 
 #include "loggingcategory.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kdebugsettingsutil.h"
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 LoggingCategory::LoggingCategory() = default;
 
 bool LoggingCategory::operator==(const LoggingCategory &other) const

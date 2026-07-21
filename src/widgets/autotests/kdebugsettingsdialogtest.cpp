@@ -6,7 +6,6 @@
 */
 
 #include "kdebugsettingsdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "categorywarning.h"
 #include "kdebugsettingsdialog.h"
@@ -17,6 +16,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTabWidget>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
+
+QTEST_MAIN(KDebugSettingsDialogTest)
 
 KDebugSettingsDialogTest::KDebugSettingsDialogTest(QObject *parent)
     : QObject(parent)
@@ -52,7 +54,5 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());
 }
-
-QTEST_MAIN(KDebugSettingsDialogTest)
 
 #include "moc_kdebugsettingsdialogtest.cpp"

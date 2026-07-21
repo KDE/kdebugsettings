@@ -6,11 +6,13 @@
 */
 
 #include "categorytypecomboboxtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "categorytypecombobox.h"
 #include <QTest>
 
+QTEST_MAIN(CategoryTypeComboBoxTest)
+
+using namespace Qt::Literals::StringLiterals;
 CategoryTypeComboBoxTest::CategoryTypeComboBoxTest(QObject *parent)
     : QObject(parent)
 {
@@ -97,7 +99,5 @@ void CategoryTypeComboBoxTest::shouldVerifyThatDefaultCategoryIsCorrect()
     w.setDefaultCategories(LoggingCategory::Debug);
     QCOMPARE(w.defaultCategories(), LoggingCategory::Debug);
 }
-
-QTEST_MAIN(CategoryTypeComboBoxTest)
 
 #include "moc_categorytypecomboboxtest.cpp"

@@ -6,7 +6,6 @@
 */
 
 #include "loadcategoriesjobtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobs/loadcategoriesjob.h"
 #include "kdebugsettingsutil.h"
@@ -15,6 +14,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QFile>
 #include <QTest>
 
+QTEST_MAIN(LoadCategoriesJobTest)
+
+using namespace Qt::Literals::StringLiterals;
 LoadCategoriesJobTest::LoadCategoriesJobTest(QObject *parent)
     : QObject(parent)
 {
@@ -205,7 +207,5 @@ void LoadCategoriesJobTest::shouldReadRules()
     QCOMPARE(job.qtKdeCategories().count(), qtkdecategories.count());
     QCOMPARE(job.qtKdeCategories(), qtkdecategories);
 }
-
-QTEST_MAIN(LoadCategoriesJobTest)
 
 #include "moc_loadcategoriesjobtest.cpp"

@@ -6,7 +6,6 @@
 */
 
 #include "groupmanagementdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "groupmanagementdialog.h"
 #include "groupmanagementwidget.h"
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(GroupManagementDialogTest)
 GroupManagementDialogTest::GroupManagementDialogTest(QObject *parent)
     : QObject(parent)
