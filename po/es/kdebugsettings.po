@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-19 00:00+0100\n"
+"POT-Creation-Date: 2026-07-21 00:47+0000\n"
+"PO-Revision-Date: 2026-07-20 13:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -158,52 +158,70 @@ msgstr "Mensajes de errores críticos"
 msgid "No Debug Messages"
 msgstr "Sin mensajes de depuración"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#: src/quickapps/main.cpp:66
+#, kde-format
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "© 2023-%1 los autores de kdebugsettings"
+
+#: src/quickapps/qml/CustomRulesPage.qml:14
+#, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Reglas personalizadas"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add Rule…"
+#: src/quickapps/qml/CustomRulesPage.qml:51
+#, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Añadir regla…"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Edit Rule"
+#: src/quickapps/qml/CustomRulesPage.qml:61
+#, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Editar regla"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:69
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#: src/quickapps/qml/CustomRulesPage.qml:73
+#, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Eliminar regla"
 
-#: src/quickapps/contents/ui/EditCustomRuleDialog.qml:9
+#: src/quickapps/qml/EditCustomRuleDialog.qml:10
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
-msgid "Edit Custom Dialog"
+msgid "Edit Custom Rule"
 msgstr "Editar regla personalizada"
 
-#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:12
+#: src/quickapps/qml/EditCustomRuleDialog.qml:22
 #, fuzzy, kde-format
-#| msgid "Rules Settings With Environment Variable"
+#| msgctxt "@label:textbox"
+#| msgid "Category:"
+msgid "Category:"
+msgstr "Categoría:"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Type:"
+msgid "Type:"
+msgstr "Tipo:"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enable"
+msgid "Enabled"
+msgstr "Activar"
+
+#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
+#, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "Preferencias de las reglas con variables de entorno"
 
-#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:21
+#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
 msgid ""
@@ -211,77 +229,65 @@ msgid ""
 msgstr ""
 "No se han definido reglas en la variable de entorno «QT_LOGGING_RULES»."
 
-#: src/quickapps/contents/ui/GlobalMenu.qml:10
+#: src/quickapps/qml/GlobalMenu.qml:10
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Help"
-msgstr ""
+msgstr "Ayuda"
 
-#: src/quickapps/contents/ui/KDEApplicationRulesPage.qml:13
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#: src/quickapps/qml/KDEApplicationRulesPage.qml:13
+#, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
-msgstr "Aplicación de KDE"
+msgstr "Reglas de aplicaciones de KDE"
 
-#: src/quickapps/contents/ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#: src/quickapps/qml/Main.qml:28
+#, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
-msgstr "Aplicación de KDE"
+msgstr "Mostrar las categorías de aplicaciones de KDE"
 
-#: src/quickapps/contents/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#: src/quickapps/qml/Main.qml:33
+#, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
-msgstr "Insertar categorías"
+msgstr "Mostrar categorías personalizadas"
 
-#: src/quickapps/contents/ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#: src/quickapps/qml/Main.qml:38
+#, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
-msgstr "Insertar categorías"
+msgstr "Insertar categorías del entorno"
 
-#: src/quickapps/contents/ui/main.qml:45
+#: src/quickapps/qml/Main.qml:45
 #, kde-format
 msgctxt "@action opens about app page"
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
-#: src/quickapps/contents/ui/main.qml:53
+#: src/quickapps/qml/Main.qml:53
 #, kde-format
 msgctxt "@action"
 msgid "Open Handbook"
-msgstr ""
+msgstr "Abrir el manual"
 
-#: src/quickapps/contents/ui/main.qml:64
+#: src/quickapps/qml/Main.qml:64
 #, kde-format
 msgctxt "@menu-action"
 msgid "Quit"
-msgstr ""
+msgstr "Salir"
 
-#: src/quickapps/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Save As"
+#: src/quickapps/qml/Main.qml:72
+#, kde-format
 msgctxt "@menu-action"
 msgid "Save"
-msgstr "Guardar como"
+msgstr "Guardar"
 
-#: src/quickapps/contents/ui/MainPage.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure debug settings"
+#: src/quickapps/qml/MainPage.qml:38
+#, kde-format
 msgctxt "@title"
 msgid "Welcome to kdebugsettings"
-msgstr "Configurar las preferencias de depuración"
-
-#: src/quickapps/main.cpp:66
-#, kde-format
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "© 2023-%1 los autores de kdebugsettings"
+msgstr "Bienvenido a kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -603,3 +609,8 @@ msgstr "Guardar como archivo…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Guardar como grupo…"
+
+#~| msgctxt "@title:window"
+#~| msgid "Edit custom rule"
+#~ msgid "Edit Custom Dialog"
+#~ msgstr "Editar diálogo personalizado"

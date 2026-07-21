@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-20 00:47+0000\n"
+"POT-Creation-Date: 2026-07-21 00:47+0000\n"
 "PO-Revision-Date: 2024-08-20 23:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -153,14 +153,20 @@ msgstr "치명적 메시지"
 msgid "No Debug Messages"
 msgstr "디버그 메시지 없음"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:14
+#: src/quickapps/main.cpp:66
+#, fuzzy, kde-format
+#| msgid "(c) 2015-%1 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "(c) 2015-%1 kdebugsettings authors"
+
+#: src/quickapps/qml/CustomRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "Custom Rules"
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "사용자 정의 규칙"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:47
+#: src/quickapps/qml/CustomRulesPage.qml:51
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Add Rule…"
@@ -168,7 +174,7 @@ msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "규칙 추가…"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:57
+#: src/quickapps/qml/CustomRulesPage.qml:61
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Edit Rule"
@@ -176,7 +182,7 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "규칙 편집"
 
-#: src/quickapps/contents/ui/CustomRulesPage.qml:69
+#: src/quickapps/qml/CustomRulesPage.qml:73
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -184,80 +190,101 @@ msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "규칙 삭제"
 
-#: src/quickapps/contents/ui/EditCustomRuleDialog.qml:9
+#: src/quickapps/qml/EditCustomRuleDialog.qml:10
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
-msgid "Edit Custom Dialog"
+msgid "Edit Custom Rule"
 msgstr "사용자 정의 규칙 편집"
 
-#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:12
+#: src/quickapps/qml/EditCustomRuleDialog.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Category:"
+msgid "Category:"
+msgstr "분류:"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Type:"
+msgid "Type:"
+msgstr "종류:"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enable"
+msgid "Enabled"
+msgstr "활성화"
+
+#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, fuzzy, kde-format
 #| msgid "Rules Settings With Environment Variable"
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "환경 변수를 통한 규칙 설정"
 
-#: src/quickapps/contents/ui/EnvironmentVariableRulesPage.qml:21
+#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "\"QT_LOGGING_RULES\" 환경 변수에 규칙이 정의되지 않았습니다."
 
-#: src/quickapps/contents/ui/GlobalMenu.qml:10
+#: src/quickapps/qml/GlobalMenu.qml:10
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Help"
 msgstr ""
 
-#: src/quickapps/contents/ui/KDEApplicationRulesPage.qml:13
+#: src/quickapps/qml/KDEApplicationRulesPage.qml:13
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "KDE 앱"
 
-#: src/quickapps/contents/ui/main.qml:28
+#: src/quickapps/qml/Main.qml:28
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "KDE 앱"
 
-#: src/quickapps/contents/ui/main.qml:33
+#: src/quickapps/qml/Main.qml:33
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "분류 삽입"
 
-#: src/quickapps/contents/ui/main.qml:38
+#: src/quickapps/qml/Main.qml:38
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "분류 삽입"
 
-#: src/quickapps/contents/ui/main.qml:45
+#: src/quickapps/qml/Main.qml:45
 #, kde-format
 msgctxt "@action opens about app page"
 msgid "About"
 msgstr ""
 
-#: src/quickapps/contents/ui/main.qml:53
+#: src/quickapps/qml/Main.qml:53
 #, kde-format
 msgctxt "@action"
 msgid "Open Handbook"
 msgstr ""
 
-#: src/quickapps/contents/ui/main.qml:64
+#: src/quickapps/qml/Main.qml:64
 #, kde-format
 msgctxt "@menu-action"
 msgid "Quit"
 msgstr ""
 
-#: src/quickapps/contents/ui/main.qml:72
+#: src/quickapps/qml/Main.qml:72
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Save As"
@@ -265,18 +292,12 @@ msgctxt "@menu-action"
 msgid "Save"
 msgstr "다른 이름으로 저장"
 
-#: src/quickapps/contents/ui/MainPage.qml:38
+#: src/quickapps/qml/MainPage.qml:38
 #, fuzzy, kde-format
 #| msgid "Configure debug settings"
 msgctxt "@title"
 msgid "Welcome to kdebugsettings"
 msgstr "디버그 설정"
-
-#: src/quickapps/main.cpp:66
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "(c) 2015-%1 kdebugsettings authors"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -596,6 +617,12 @@ msgstr "파일로 저장…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "그룹으로 저장…"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Edit custom rule"
+#~ msgid "Edit Custom Dialog"
+#~ msgstr "사용자 정의 규칙 편집"
 
 #~ msgid "(c) %1 kdebugsettings authors"
 #~ msgstr "(c) %1 kdebugsettings authors"
