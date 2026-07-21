@@ -48,6 +48,8 @@ public:
 
     void refreshModel();
 
+    void removeCategory(int row);
+
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;

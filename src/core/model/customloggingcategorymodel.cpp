@@ -104,6 +104,17 @@ void CustomLoggingCategoryModel::clear()
     }
 }
 
+void CustomLoggingCategoryModel::removeCategory(int row)
+{
+    if (row < 0 || row >= mLoggingCategories.count()) {
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "invalid row: " << row;
+        return;
+    }
+    beginRemoveRows(QModelIndex(), row, row);
+    mLoggingCategories.removeAt(row);
+    endRemoveRows();
+}
+
 void CustomLoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
 {
     beginResetModel();

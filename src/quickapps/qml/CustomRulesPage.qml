@@ -79,7 +79,6 @@ Kirigami.ScrollablePage {
                 }
                 Kirigami.PromptDialog {
                      id: removeRulePrompt
-
                      parent: QQC2.Overlay.overlay
 
                      title: i18nc("@title:window", "Remove Rule")
@@ -87,7 +86,7 @@ Kirigami.ScrollablePage {
                      standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
 
                      onAccepted: {
-                         // TODO
+                         LoggingManager.customLoggingCategoryProxyModel.removeCategory(listviewRules.currentIndex)
                      }
                  }
 

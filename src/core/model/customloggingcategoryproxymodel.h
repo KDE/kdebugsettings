@@ -18,6 +18,8 @@ public:
     [[nodiscard]] QString filterText() const;
     void setFilterText(const QString &newFilterText);
 
+    Q_INVOKABLE void removeCategory(int proxyRow);
+
 protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 

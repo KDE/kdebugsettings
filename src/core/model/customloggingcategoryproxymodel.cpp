@@ -14,6 +14,24 @@ CustomLoggingCategoryProxyModel::CustomLoggingCategoryProxyModel(QObject *parent
 
 CustomLoggingCategoryProxyModel::~CustomLoggingCategoryProxyModel() = default;
 
+void CustomLoggingCategoryProxyModel::removeCategory(int proxyRow)
+{
+    if (proxyRow < 0 || proxyRow >= rowCount()) {
+        return;
+    }
+
+    const QModelIndex proxyIndex = index(proxyRow, 0);
+    if (!proxyIndex.isValid()) {
+        return;
+    }
+
+    const QModelIndex sourceIndex = mapToSource(proxyIndex);
+    if (!sourceIndex.isValid() || !sourceModel()) {
+        return;
+    }
+    return static_cast<CustomLoggingCategoryModel *>(sourceModel())->removeCategory(sourceIndex.row());
+}
+
 bool CustomLoggingCategoryProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (mFilterText.isEmpty()) {
