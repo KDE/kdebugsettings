@@ -73,9 +73,24 @@ Kirigami.ScrollablePage {
                 icon.name: "edit-delete"
                 text: i18nc("@action remove custom rule", "Remove Rule")
                 onTriggered: {
+                    removeRulePrompt.open()
                     console.debug("Not implemented yet")
                     // TODO
                 }
+                Kirigami.PromptDialog {
+                     id: removeRulePrompt
+
+                     parent: QQC2.Overlay.overlay
+
+                     title: i18nc("@title:window", "Remove Rule")
+                     subtitle: i18n("Are you sure you want to remove rule ?")
+                     standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+
+                     onAccepted: {
+                         // TODO
+                     }
+                 }
+
             }
         }
     }
