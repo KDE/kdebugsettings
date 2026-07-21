@@ -2,12 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 add_executable(kdebugsettingsquick)
-target_sources(
-    kdebugsettingsquick
-    PRIVATE
-        main.cpp
-    #resources.qrc
-)
+target_sources(kdebugsettingsquick PRIVATE main.cpp)
 
 ecm_add_qml_module(kdebugsettingsquick
     URI "org.kde.kdebugsettings" GENERATE_PLUGIN_SOURCE DEPENDENCIES QtQuick
