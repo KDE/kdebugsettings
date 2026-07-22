@@ -17,6 +17,7 @@
   <name xml:lang="he">KDebugSettings</name>
   <name xml:lang="nl">KDebugSettings</name>
   <name xml:lang="pt-BR">KDebugSettings</name>
+  <name xml:lang="sl">KDebugSettings</name>
   <name xml:lang="tr">K Hata Ayıklama Ayarları</name>
   <name xml:lang="uk">KDebugSettings</name>
   <summary>Set which debug messages are shown</summary>
@@ -26,6 +27,7 @@
   <summary xml:lang="he">הגדרת אילו הודעות ניפוי שגיאות תוצגנה</summary>
   <summary xml:lang="nl">Stelt in welke debugberichten getoond worden</summary>
   <summary xml:lang="pt-BR">Define quais mensagens de depuração são exibidas</summary>
+  <summary xml:lang="sl">Nastavi, katera sporočila o napakah so prikazana</summary>
   <summary xml:lang="tr">Hangi hata ayıklama ayarlarının görüntüleneceğini ayarlayın</summary>
   <summary xml:lang="uk">Визначення того, які з діагностичних повідомлень буде показано</summary>
   <description>
@@ -38,6 +40,7 @@
     <p xml:lang="he">KDebugSettings עורך אילו קטגוריות QLoggingCategory תוצגנה. QLoggingCategory מדפיסה הודעות במסוף ליישומים ואפשר להגדיר אילו יישומים יציגו הודעות לקבלת פרטים, אזהרה או שגיאות משמעותיות כדי לסייע בניפוי שגיאות ביישומי Qt.</p>
     <p xml:lang="nl">KDebugSettings bewerkt welke QLoggingCategory worden getoond. QLoggingCategory toont meldingen op de console voor toepassingen en u kunt definiëren welke toepassingen berichten voor informatie tonen, waarschuwing of kritische fouten om Qt toepassingen te helpen bij debuggen.</p>
     <p xml:lang="pt-BR">O KDebugSettings permite definir quais QLoggingCategory são exibidas. As categorias de log exibem mensagens no console para as aplicações, e você pode determinar quais delas mostram mensagens informativas, de aviso ou de erro crítico, auxiliando assim na depuração de aplicações Qt.</p>
+    <p xml:lang="sl">KDebugSettings ureja, katere kategorije QLoggingCategory so prikazane. QLoggingCategory izpisuje sporočila v konzoli za aplikacije in določite lahko, katere aplikacije prikazujejo sporočila z informacijami, opozorili ali kritičnimi napakami, kar pomaga pri odpravljanju napak v aplikacijah Qt.</p>
     <p xml:lang="tr">K Hata Ayıklama Ayarları, hangi QLoggingCategory’lerin görüntüleneceğini düzenler. QLoggingCategory, uygulamalar için konsola iletiler yazdırır ve Qt uygulamalarında hata ayıklamaya yardımcı olmak için hangi uygulamaların bilgi, uyarı veya kritik hatalar için ileti göstereceğini tanımlayabilirsiniz.</p>
     <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
   </description>
@@ -57,6 +60,7 @@
       <caption xml:lang="he">החלון הראשי של KDebugSettings.</caption>
       <caption xml:lang="nl">Het hoofdvenster van KDebugSettings.</caption>
       <caption xml:lang="pt-BR">A janela principal do KDebugSettings.</caption>
+      <caption xml:lang="sl">Glavno okno KDebugSettings.</caption>
       <caption xml:lang="tr">K Hata Ayıklama Ayarları ana penceresi</caption>
       <caption xml:lang="uk">Головне вікно KDebugSettings.</caption>
       <image>https://cdn.kde.org/screenshots/kdebugsettings/kdebugsettings.png</image>
