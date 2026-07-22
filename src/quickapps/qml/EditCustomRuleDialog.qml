@@ -5,6 +5,7 @@ import org.kde.kirigami as Kirigami
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.kdebugsettings
+
 Kirigami.Dialog {
     id: dialog
     title: i18n("Edit Custom Rule")
@@ -45,10 +46,10 @@ Kirigami.Dialog {
         QQC2.CheckBox {
             id: categoryEnabled
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            text: i18n("Enabled");
+            text: i18n("Enabled")
         }
     }
     onAccepted: {
-        console.debug("Edit custom Not implemented yet")
+        console.debug("Edit custom Not implemented yet");
     }
 }

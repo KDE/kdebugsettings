@@ -9,6 +9,8 @@ Platform.MenuBar {
     Platform.Menu {
         title: i18nc("@item:inmenu", "Help")
 
-        ActionMenuItem { action: aboutAction }
+        ActionMenuItem {
+            action: aboutAction
+        }
     }
 }

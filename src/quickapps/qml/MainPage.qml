@@ -11,18 +11,7 @@ Kirigami.Page {
 
     leftPadding: 20
 
-
-    actions: [
-        goToKdeApplicationCategories,
-        goToCustomCategories,
-        goToEnviromnentCategories,
-        saveAction,
-        separatorAction,
-        helpAction,
-        aboutAction,
-        separatorAction,
-        quitAction
-    ]
+    actions: [goToKdeApplicationCategories, goToCustomCategories, goToEnviromnentCategories, saveAction, separatorAction, helpAction, aboutAction, separatorAction, quitAction]
     ColumnLayout {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

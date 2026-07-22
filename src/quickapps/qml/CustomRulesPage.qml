@@ -37,7 +37,6 @@ Kirigami.ScrollablePage {
             text: displayRule
             highlighted: ListView.isCurrentItem
             onClicked: listviewRules.currentIndex = index
-
         }
         TapHandler {
             acceptedButtons: Qt.RightButton
@@ -50,7 +49,7 @@ Kirigami.ScrollablePage {
                 icon.name: "list-add"
                 text: i18nc("@action add custom rule", "Add Rule…")
                 onTriggered: {
-                    console.debug("Not implemented yet")
+                    console.debug("Not implemented yet");
                     editCustomRuleDialog.open();
                     // TODO
                 }
@@ -60,7 +59,7 @@ Kirigami.ScrollablePage {
                 icon.name: "document-edit"
                 text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {
-                    console.debug("Not implemented yet")
+                    console.debug("Not implemented yet");
                     editCustomRuleDialog.open();
                     // TODO
                 }
@@ -73,23 +72,22 @@ Kirigami.ScrollablePage {
                 icon.name: "edit-delete"
                 text: i18nc("@action remove custom rule", "Remove Rule")
                 onTriggered: {
-                    removeRulePrompt.open()
-                    console.debug("Not implemented yet")
+                    removeRulePrompt.open();
+                    console.debug("Not implemented yet");
                     // TODO
                 }
                 Kirigami.PromptDialog {
-                     id: removeRulePrompt
-                     parent: QQC2.Overlay.overlay
+                    id: removeRulePrompt
+                    parent: QQC2.Overlay.overlay
 
-                     title: i18nc("@title:window", "Remove Rule")
-                     subtitle: i18n("Are you sure you want to remove rule ?")
-                     standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+                    title: i18nc("@title:window", "Remove Rule")
+                    subtitle: i18n("Are you sure you want to remove rule ?")
+                    standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
 
-                     onAccepted: {
-                         LoggingManager.customLoggingCategoryProxyModel.removeCategory(listviewRules.currentIndex)
-                     }
-                 }
-
+                    onAccepted: {
+                        LoggingManager.customLoggingCategoryProxyModel.removeCategory(listviewRules.currentIndex);
+                    }
+                }
             }
         }
     }

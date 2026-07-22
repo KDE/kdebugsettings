@@ -8,6 +8,7 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.kdebugsettings
 import org.kde.kirigamiaddons.delegates as Delegates
+
 Kirigami.ScrollablePage {
     id: page
     title: i18nc("@title", "KDE Application Rules")
@@ -27,8 +28,8 @@ Kirigami.ScrollablePage {
         activeFocusOnTab: true // keyboard navigation
         reuseItems: true
         clip: true
-        model: LoggingManager.kdeApplicationLoggingCategoryProxyModel;
-        delegate:  Delegates.RoundedItemDelegate {
+        model: LoggingManager.kdeApplicationLoggingCategoryProxyModel
+        delegate: Delegates.RoundedItemDelegate {
             highlighted: ListView.isCurrentItem
             onClicked: listviewRules.currentIndex = index
 
@@ -62,7 +63,7 @@ Kirigami.ScrollablePage {
                     // Re-evaluate once the ComboBox model is populated on startup.
                     currentIndex: count > 0 ? indexOfValue(loggingType) : -1
                     onActivated: () => {
-                        listviewRules.model.setCategoryType(rowIndex, currentValue)
+                        listviewRules.model.setCategoryType(rowIndex, currentValue);
                     }
                 }
             }

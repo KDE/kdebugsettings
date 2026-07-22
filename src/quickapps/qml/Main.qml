@@ -17,33 +17,41 @@ Kirigami.ApplicationWindow {
         globalToolBar {
             style: Kirigami.ApplicationHeaderStyle.ToolBar
             showNavigationButtons: if (applicationWindow().pageStack.currentIndex > 0) {
-                Kirigami.ApplicationHeaderStyle.ShowBackButton
+                Kirigami.ApplicationHeaderStyle.ShowBackButton;
             } else {
-                0
+                0;
             }
         }
     }
     Kirigami.Action {
         id: goToKdeApplicationCategories
         text: i18nc("@action", "Show KDE Application Categories")
-        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("KDEApplicationRulesPage.qml")) }
+        onTriggered: {
+            pageStack.layers.push(Qt.resolvedUrl("KDEApplicationRulesPage.qml"));
+        }
     }
     Kirigami.Action {
         id: goToCustomCategories
         text: i18nc("@action", "Show Custom Categories")
-        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("CustomRulesPage.qml")) }
+        onTriggered: {
+            pageStack.layers.push(Qt.resolvedUrl("CustomRulesPage.qml"));
+        }
     }
     Kirigami.Action {
         id: goToEnviromnentCategories
         text: i18nc("@action", "Show Environment Categories")
-        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("EnvironmentVariableRulesPage.qml")) }
+        onTriggered: {
+            pageStack.layers.push(Qt.resolvedUrl("EnvironmentVariableRulesPage.qml"));
+        }
     }
     Kirigami.Action {
         id: aboutAction
         displayHint: Kirigami.DisplayHint.AlwaysHide
         icon.name: "debug-run"
         text: i18nc("@action opens about app page", "About")
-        onTriggered: { pageStack.layers.push(Qt.resolvedUrl("AboutPage.qml")) }
+        onTriggered: {
+            pageStack.layers.push(Qt.resolvedUrl("AboutPage.qml"));
+        }
     }
 
     Kirigami.Action {
@@ -51,7 +59,9 @@ Kirigami.ApplicationWindow {
         displayHint: Kirigami.DisplayHint.AlwaysHide
         icon.name: "help-browser"
         text: i18nc("@action", "Open Handbook")
-        onTriggered: { Qt.openUrlExternally("help:/kdebugsettings") }
+        onTriggered: {
+            Qt.openUrlExternally("help:/kdebugsettings");
+        }
     }
     Kirigami.Action {
         id: separatorAction
