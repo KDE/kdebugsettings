@@ -6,6 +6,19 @@ import org.kde.kdebugsettings
 
 QQC2.ComboBox {
     id: categoryType
+
+    property int loggingType: -1
+
+    onLoggingTypeChanged: {
+        currentIndex = count > 0 ? indexOfValue(loggingType) : -1
+    }
+
+    onCurrentIndexChanged: {
+        if (currentIndex >= 0 && currentValue !== undefined) {
+            loggingType = currentValue
+        }
+    }
+
     model: CategoryTypeProxyModel {
         sourceModel: LoggingManager.categoryTypeModel
         showOffType: true

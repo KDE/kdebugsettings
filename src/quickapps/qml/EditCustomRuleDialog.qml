@@ -13,8 +13,8 @@ Kirigami.Dialog {
     showCloseButton: false
     property alias categoryName: categoryNameField.text
     property alias categoryEnabled: categoryEnabled.checked
+    property alias categoryType: categoryType.loggingType
     property bool editMode: false
-
 
     standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
     RowLayout {
