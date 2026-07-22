@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:47+0000\n"
-"PO-Revision-Date: 2026-07-20 06:56+0200\n"
+"POT-Creation-Date: 2026-07-22 00:48+0000\n"
+"PO-Revision-Date: 2026-07-21 06:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -182,39 +182,46 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Uredi pravilo…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:73
+#: src/quickapps/qml/CustomRulesPage.qml:74
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Odstrani pravilo"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:10
+#: src/quickapps/qml/CustomRulesPage.qml:84
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#| msgid "Remove Rule"
+#| msgid_plural "Remove Rules"
+msgctxt "@title:window"
+msgid "Remove Rule"
+msgstr "Odstrani pravilo"
+
+#: src/quickapps/qml/CustomRulesPage.qml:85
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these %1 rules?"
+msgid "Are you sure you want to remove rule ?"
+msgstr "Ali želite odstraniti to %1 pravilo?"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:10
+#, kde-format
 msgid "Edit Custom Rule"
 msgstr "Uredi pravilo po meri"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Category:"
+#: src/quickapps/qml/EditCustomRuleDialog.qml:23
+#, kde-format
 msgid "Category:"
 msgstr "Kategorija:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Type:"
+#: src/quickapps/qml/EditCustomRuleDialog.qml:32
+#, kde-format
 msgid "Type:"
 msgstr "Vrsta:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enable"
+#: src/quickapps/qml/EditCustomRuleDialog.qml:48
+#, kde-format
 msgid "Enabled"
-msgstr "Omogoči"
+msgstr "Omogočeno"
 
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, kde-format

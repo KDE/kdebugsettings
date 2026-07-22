@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-22 00:48+0000\n"
 "PO-Revision-Date: 2024-08-06 01:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -188,13 +188,28 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Editatu araua"
 
-#: src/quickapps/qml/CustomRulesPage.qml:73
+#: src/quickapps/qml/CustomRulesPage.qml:74
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Kendu araua"
+
+#: src/quickapps/qml/CustomRulesPage.qml:84
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
+#| msgid_plural "Remove Rules"
+msgctxt "@title:window"
+msgid "Remove Rule"
+msgstr "Kendu araua"
+
+#: src/quickapps/qml/CustomRulesPage.qml:85
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these %1 rules?"
+msgid "Are you sure you want to remove rule ?"
+msgstr "Arau hau kendu nahi duzu?"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:10
 #, fuzzy, kde-format
@@ -203,21 +218,21 @@ msgstr "Kendu araua"
 msgid "Edit Custom Rule"
 msgstr "Editatu norberak finkatutako araua"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:22
+#: src/quickapps/qml/EditCustomRuleDialog.qml:23
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox"
 #| msgid "Category:"
 msgid "Category:"
 msgstr "Kategoria:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:31
+#: src/quickapps/qml/EditCustomRuleDialog.qml:32
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox"
 #| msgid "Type:"
 msgid "Type:"
 msgstr "Mota:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:47
+#: src/quickapps/qml/EditCustomRuleDialog.qml:48
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enable"

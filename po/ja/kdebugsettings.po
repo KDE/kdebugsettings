@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-22 00:48+0000\n"
 "PO-Revision-Date: 2015-03-08 20:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -172,10 +172,21 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:73
+#: src/quickapps/qml/CustomRulesPage.qml:74
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
+msgstr ""
+
+#: src/quickapps/qml/CustomRulesPage.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Rule"
+msgstr ""
+
+#: src/quickapps/qml/CustomRulesPage.qml:85
+#, kde-format
+msgid "Are you sure you want to remove rule ?"
 msgstr ""
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:10
@@ -183,17 +194,17 @@ msgstr ""
 msgid "Edit Custom Rule"
 msgstr ""
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:22
+#: src/quickapps/qml/EditCustomRuleDialog.qml:23
 #, kde-format
 msgid "Category:"
 msgstr ""
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:31
+#: src/quickapps/qml/EditCustomRuleDialog.qml:32
 #, kde-format
 msgid "Type:"
 msgstr ""
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:47
+#: src/quickapps/qml/EditCustomRuleDialog.qml:48
 #, kde-format
 msgid "Enabled"
 msgstr ""
