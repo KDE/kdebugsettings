@@ -19,6 +19,7 @@ public:
     void setFilterText(const QString &newFilterText);
 
     Q_INVOKABLE void removeCategory(int proxyRow);
+    Q_INVOKABLE void addCategory();
 
 protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;

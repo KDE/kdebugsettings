@@ -32,6 +32,11 @@ void CustomLoggingCategoryProxyModel::removeCategory(int proxyRow)
     return static_cast<CustomLoggingCategoryModel *>(sourceModel())->removeCategory(sourceIndex.row());
 }
 
+void CustomLoggingCategoryProxyModel::addCategory()
+{
+    // TODO
+}
+
 bool CustomLoggingCategoryProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (mFilterText.isEmpty()) {
