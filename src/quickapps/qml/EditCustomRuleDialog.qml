@@ -47,10 +47,10 @@ Kirigami.Dialog {
         }
     }
     onAccepted: {
-        if (!editMode) {
-            LoggingManager.customCategoryModel.addCategory(categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
-        } else {
+        if (editMode) {
             console.debug("Edit custom Not implemented yet");
+        } else {
+            LoggingManager.customCategoryModel.addCategory(categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
         }
     }
 }

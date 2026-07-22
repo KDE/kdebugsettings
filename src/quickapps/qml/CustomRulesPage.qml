@@ -52,7 +52,7 @@ Kirigami.ScrollablePage {
                 onTriggered: {
                     editCustomRuleDialog.editMode = false;
                     editCustomRuleDialog.categoryName = "";
-
+                    editCustomRuleDialog.categoryEnabled = false;
                     editCustomRuleDialog.open();
                 }
             }
@@ -62,8 +62,11 @@ Kirigami.ScrollablePage {
                 text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {
                     const categoryName = listviewRules.currentItem ? listviewRules.currentItem.categoryName : "";
+                    const categoryEnabled = listviewRules.currentItem ? listviewRules.currentItem.enabled : false;
+                    const categoryLoggingType = listviewRules.currentItem ? listviewRules.currentItem.loggingType : LoggingCategory.LoggingType.Debug;
                     editCustomRuleDialog.editMode = true;
                     editCustomRuleDialog.categoryName = categoryName;
+                    editCustomRuleDialog.categoryEnabled = categoryEnabled;
                     editCustomRuleDialog.open();
                 }
             }
