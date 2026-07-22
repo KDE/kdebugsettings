@@ -32,6 +32,7 @@ Kirigami.ScrollablePage {
         model: LoggingManager.customLoggingCategoryProxyModel
         delegate: Delegates.RoundedItemDelegate {
             required property string displayRule
+            required property string categoryName
             required property int index
 
             text: displayRule
@@ -49,9 +50,10 @@ Kirigami.ScrollablePage {
                 icon.name: "list-add"
                 text: i18nc("@action add custom rule", "Add Rule…")
                 onTriggered: {
-                    console.debug("Not implemented yet");
+                    editCustomRuleDialog.editMode = false;
+                    editCustomRuleDialog.categoryName = "";
+
                     editCustomRuleDialog.open();
-                    // TODO
                 }
             }
             QQC2.MenuItem {
@@ -59,9 +61,10 @@ Kirigami.ScrollablePage {
                 icon.name: "document-edit"
                 text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {
-                    console.debug("Not implemented yet");
+                    const categoryName = listviewRules.currentItem ? listviewRules.currentItem.categoryName : "";
+                    editCustomRuleDialog.editMode = true;
+                    editCustomRuleDialog.categoryName = categoryName;
                     editCustomRuleDialog.open();
-                    // TODO
                 }
             }
             QQC2.MenuSeparator {

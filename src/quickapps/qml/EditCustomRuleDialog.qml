@@ -11,6 +11,10 @@ Kirigami.Dialog {
     title: i18n("Edit Custom Rule")
     clip: true
     showCloseButton: false
+    property alias categoryName: categoryNameField.text
+    property alias categoryEnabled: categoryEnabled.checked
+    property bool editMode: false
+
 
     standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
     RowLayout {
@@ -24,7 +28,7 @@ Kirigami.Dialog {
             text: i18n("Category:")
         }
         QQC2.TextField {
-            id: categoryName
+            id: categoryNameField
         }
         QQC2.Label {
             Layout.leftMargin: 4
@@ -43,6 +47,10 @@ Kirigami.Dialog {
         }
     }
     onAccepted: {
-        console.debug("Edit custom Not implemented yet");
+        if (!editMode) {
+            LoggingManager.customCategoryModel.addCategory(categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
+        } else {
+            console.debug("Edit custom Not implemented yet");
+        }
     }
 }
