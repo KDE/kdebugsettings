@@ -39,6 +39,7 @@ Kirigami.Dialog {
         }
         CategoryComboBox {
             id: categoryType
+            showOffTypeValue: false
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
         }
         QQC2.CheckBox {

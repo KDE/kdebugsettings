@@ -8,6 +8,7 @@ QQC2.ComboBox {
     id: categoryType
 
     property int loggingType: -1
+    property bool showOffTypeValue: true
 
     onLoggingTypeChanged: {
         currentIndex = count > 0 ? indexOfValue(loggingType) : -1
@@ -21,7 +22,7 @@ QQC2.ComboBox {
 
     model: CategoryTypeProxyModel {
         sourceModel: LoggingManager.categoryTypeModel
-        showOffType: true
+        showOffType: showOffTypeValue
     }
     textRole: "display"
     valueRole: "categoryType"
