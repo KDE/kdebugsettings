@@ -129,6 +129,15 @@ void CustomLoggingCategoryModel::removeCategory(const LoggingCategory::List &cat
     endResetModel();
 }
 
+void CustomLoggingCategoryModel::addCategory(const QString &categoryName, bool enabled, LoggingCategory::LoggingType type)
+{
+    LoggingCategory category;
+    category.categoryName = categoryName;
+    category.enabled = enabled;
+    category.loggingType = type;
+    if (!addCategory(category)) { }
+}
+
 bool CustomLoggingCategoryModel::addCategory(const LoggingCategory &category)
 {
     bool found = false;

@@ -50,6 +50,8 @@ public:
 
     void removeCategory(int row);
 
+    Q_INVOKABLE void addCategory(const QString &categoryName, bool enabled, LoggingCategory::LoggingType type);
+
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;
