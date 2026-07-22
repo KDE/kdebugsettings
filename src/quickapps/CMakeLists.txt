@@ -18,6 +18,7 @@ ecm_target_qml_sources(kdebugsettingsquick SOURCES
     qml/KDEApplicationRulesPage.qml
     qml/MainPage.qml
     qml/Main.qml
+    qml/CategoryComboBox.qml
 )
 
 ecm_finalize_qml_module(kdebugsettingsquick)

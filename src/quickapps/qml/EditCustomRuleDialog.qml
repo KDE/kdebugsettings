@@ -32,16 +32,9 @@ Kirigami.Dialog {
             verticalAlignment: Text.AlignVCenter
             text: i18n("Type:")
         }
-        QQC2.ComboBox {
+        CategoryComboBox {
             id: categoryType
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-
-            model: CategoryTypeProxyModel {
-                sourceModel: LoggingManager.categoryTypeModel
-                showOffType: true
-            }
-            textRole: "display"
-            valueRole: "categoryType"
         }
         QQC2.CheckBox {
             id: categoryEnabled

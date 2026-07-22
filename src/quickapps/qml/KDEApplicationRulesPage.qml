@@ -48,17 +48,10 @@ Kirigami.ScrollablePage {
                 Item {
                     Layout.fillWidth: true
                 }
-                QQC2.ComboBox {
+                CategoryComboBox {
+                    id: categoryType
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    // Keep the delegate row index distinct from ComboBox activation index.
                     property int rowIndex: index
-
-                    model: CategoryTypeProxyModel {
-                        sourceModel: LoggingManager.categoryTypeModel
-                        showOffType: true
-                    }
-                    textRole: "display"
-                    valueRole: "categoryType"
 
                     // Re-evaluate once the ComboBox model is populated on startup.
                     currentIndex: count > 0 ? indexOfValue(loggingType) : -1
