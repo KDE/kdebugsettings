@@ -73,8 +73,6 @@ Kirigami.ScrollablePage {
                 text: i18nc("@action remove custom rule", "Remove Rule")
                 onTriggered: {
                     removeRulePrompt.open();
-                    console.debug("Not implemented yet");
-                    // TODO
                 }
                 Kirigami.PromptDialog {
                     id: removeRulePrompt
