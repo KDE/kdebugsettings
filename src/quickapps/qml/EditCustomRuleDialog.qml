@@ -48,4 +48,7 @@ Kirigami.Dialog {
             text: i18n("Enabled");
         }
     }
+    onAccepted: {
+        console.debug("Edit custom Not implemented yet")
+    }
 }
