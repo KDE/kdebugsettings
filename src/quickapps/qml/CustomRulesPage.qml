@@ -34,6 +34,8 @@ Kirigami.ScrollablePage {
             required property string displayRule
             required property string categoryName
             required property int index
+            required property bool enabled
+            required property int loggingType
 
             text: displayRule
             highlighted: ListView.isCurrentItem
@@ -65,8 +67,10 @@ Kirigami.ScrollablePage {
                     const categoryEnabled = listviewRules.currentItem ? listviewRules.currentItem.enabled : false;
                     const categoryLoggingType = listviewRules.currentItem ? listviewRules.currentItem.loggingType : LoggingCategory.LoggingType.Debug;
                     editCustomRuleDialog.editMode = true;
+                    editCustomRuleDialog.editRowIndex = listviewRules.currentIndex;
                     editCustomRuleDialog.categoryName = categoryName;
                     editCustomRuleDialog.categoryEnabled = categoryEnabled;
+                    editCustomRuleDialog.categoryType = categoryLoggingType;
                     editCustomRuleDialog.open();
                 }
             }

@@ -21,6 +21,7 @@ public:
         DisplayRuleRole,
         LoggingTypeRole,
         CategoryRole,
+        EnabledRole,
     };
 
     explicit CustomLoggingCategoryModel(QObject *parent = nullptr);
@@ -51,6 +52,7 @@ public:
     void removeCategory(int row);
 
     Q_INVOKABLE void addCategory(const QString &categoryName, bool enabled, LoggingCategory::LoggingType type);
+    Q_INVOKABLE void updateCategory(int row, const QString &categoryName, bool enabled, LoggingCategory::LoggingType type);
 
 private:
     LoggingCategory::List mLoggingCategories;

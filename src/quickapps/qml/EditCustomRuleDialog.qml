@@ -15,6 +15,7 @@ Kirigami.Dialog {
     property alias categoryEnabled: categoryEnabled.checked
     property alias categoryType: categoryType.loggingType
     property bool editMode: false
+    property int editRowIndex: -1
 
     standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
     RowLayout {
@@ -48,7 +49,7 @@ Kirigami.Dialog {
     }
     onAccepted: {
         if (editMode) {
-            console.debug("Edit custom Not implemented yet");
+            LoggingManager.customCategoryModel.updateCategory(editRowIndex, categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
         } else {
             LoggingManager.customCategoryModel.addCategory(categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
         }

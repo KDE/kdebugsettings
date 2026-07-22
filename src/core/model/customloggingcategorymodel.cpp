@@ -17,6 +17,7 @@ CustomLoggingCategoryModel::CustomLoggingCategoryModel(QObject *parent)
     mRoleNames.insert(DefaultCategoryRole, "defaultCategory");
     mRoleNames.insert(DisplayRuleRole, "displayRule");
     mRoleNames.insert(LoggingTypeRole, "loggingType");
+    mRoleNames.insert(EnabledRole, "enabled");
 }
 
 CustomLoggingCategoryModel::~CustomLoggingCategoryModel() = default;
@@ -60,6 +61,20 @@ bool CustomLoggingCategoryModel::setData(const QModelIndex &modelIndex, const QV
     return false;
 }
 
+void CustomLoggingCategoryModel::updateCategory(int row, const QString &categoryName, bool enabled, LoggingCategory::LoggingType type)
+{
+    if (row < 0 || row >= mLoggingCategories.count()) {
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "invalid row: " << row;
+        return;
+    }
+    LoggingCategory &cat = mLoggingCategories[row];
+    cat.categoryName = categoryName;
+    cat.enabled = enabled;
+    cat.loggingType = type;
+    const QModelIndex modelIndex = index(row, 0);
+    Q_EMIT dataChanged(modelIndex, modelIndex);
+}
+
 QVariant CustomLoggingCategoryModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() >= mLoggingCategories.count()) {
@@ -82,6 +97,8 @@ QVariant CustomLoggingCategoryModel::data(const QModelIndex &index, int role) co
         return category.generateDisplayRule();
     case LoggingTypeRole:
         return category.loggingType;
+    case EnabledRole:
+        return category.enabled;
     case CategoryRole:
         return QVariant::fromValue(category);
     }
