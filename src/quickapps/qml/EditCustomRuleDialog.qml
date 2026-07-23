@@ -8,7 +8,7 @@ import org.kde.kdebugsettings
 
 Kirigami.Dialog {
     id: dialog
-    title: i18nc("@title:window", "Edit Custom Rule")
+    title: editMode ? i18nc("@title:window", "Edit Custom Rule") : i18nc("@title:window", "Create Custom Rule")
     clip: true
     showCloseButton: false
     property alias categoryName: categoryNameField.text
