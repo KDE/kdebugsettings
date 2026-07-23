@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:48+0000\n"
-"PO-Revision-Date: 2026-07-19 09:37+0200\n"
+"POT-Creation-Date: 2026-07-23 00:47+0000\n"
+"PO-Revision-Date: 2026-07-21 08:44+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -19,9 +19,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.3\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 26.04.3\n"
 "X-Text-Markup: kde4\n"
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:62
@@ -169,37 +169,30 @@ msgid "(c) 2023-%1 kdebugsettings authors"
 msgstr "(c) 2023 - %1 Les auteurs de KDebugSettings"
 
 #: src/quickapps/qml/CustomRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Règles personnalisées"
 
-#: src/quickapps/qml/CustomRulesPage.qml:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add Rule…"
+#: src/quickapps/qml/CustomRulesPage.qml:53
+#, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Ajouter une règle..."
 
-#: src/quickapps/qml/CustomRulesPage.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Edit Rule"
+#: src/quickapps/qml/CustomRulesPage.qml:64
+#, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
-msgstr "Modifier une règle"
+msgstr "Modifier une règle..."
 
-#: src/quickapps/qml/CustomRulesPage.qml:74
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#: src/quickapps/qml/CustomRulesPage.qml:83
+#, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
-msgstr "Supprimer une règle..."
+msgstr "Supprimer une règle"
 
-#: src/quickapps/qml/CustomRulesPage.qml:84
+#: src/quickapps/qml/CustomRulesPage.qml:91
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -207,31 +200,27 @@ msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Supprimer une règle..."
 
-#: src/quickapps/qml/CustomRulesPage.qml:85
+#: src/quickapps/qml/CustomRulesPage.qml:92
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these %1 rules?"
 msgid "Are you sure you want to remove rule ?"
 msgstr "Voulez-vous supprimer cette règle ?"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:10
+#: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
 msgid "Edit Custom Rule"
 msgstr "Modifier une règle spécifique"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Category:"
+#: src/quickapps/qml/EditCustomRuleDialog.qml:29
+#, kde-format
 msgid "Category:"
 msgstr "Catégorie :"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Type:"
+#: src/quickapps/qml/EditCustomRuleDialog.qml:38
+#, kde-format
 msgid "Type:"
 msgstr "Type :"
 
@@ -243,8 +232,7 @@ msgid "Enabled"
 msgstr "Activer"
 
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
-#, fuzzy, kde-format
-#| msgid "Rules Settings With Environment Variable"
+#, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "Configuration des règles par variable d'environnement"
@@ -261,68 +249,61 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Help"
-msgstr ""
+msgstr "Aide"
 
-#: src/quickapps/qml/KDEApplicationRulesPage.qml:13
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#: src/quickapps/qml/KDEApplicationRulesPage.qml:14
+#, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
-msgstr "Application KDE"
+msgstr "Règles pour les applications de KDE"
 
 #: src/quickapps/qml/Main.qml:28
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
-msgstr "Application KDE"
+msgstr "Afficher les catégories des applications de KDE"
 
-#: src/quickapps/qml/Main.qml:33
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#: src/quickapps/qml/Main.qml:35
+#, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
-msgstr "Insérer des catégories"
+msgstr "Afficher les catégories personnalisées"
 
-#: src/quickapps/qml/Main.qml:38
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#: src/quickapps/qml/Main.qml:42
+#, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
-msgstr "Insérer des catégories"
+msgstr "Afficher les catégories d'environnement"
 
-#: src/quickapps/qml/Main.qml:45
+#: src/quickapps/qml/Main.qml:51
 #, kde-format
 msgctxt "@action opens about app page"
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
-#: src/quickapps/qml/Main.qml:53
+#: src/quickapps/qml/Main.qml:61
 #, kde-format
 msgctxt "@action"
 msgid "Open Handbook"
-msgstr ""
+msgstr "Ouvrir le manuel utilisateur"
 
-#: src/quickapps/qml/Main.qml:64
+#: src/quickapps/qml/Main.qml:74
 #, kde-format
 msgctxt "@menu-action"
 msgid "Quit"
-msgstr ""
+msgstr "Quitter"
 
-#: src/quickapps/qml/Main.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Save As"
+#: src/quickapps/qml/Main.qml:82
+#, kde-format
 msgctxt "@menu-action"
 msgid "Save"
-msgstr "Enregistrer sous"
+msgstr "Enregistrer"
 
-#: src/quickapps/qml/MainPage.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure debug settings"
+#: src/quickapps/qml/MainPage.qml:27
+#, kde-format
 msgctxt "@title"
 msgid "Welcome to kdebugsettings"
-msgstr "Configurer les paramètres de débogage"
+msgstr "Bienvenue dans Kdebugsettings"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format

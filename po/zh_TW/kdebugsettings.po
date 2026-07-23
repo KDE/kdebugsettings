@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:48+0000\n"
+"POT-Creation-Date: 2026-07-23 00:47+0000\n"
 "PO-Revision-Date: 2026-07-22 01:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -166,25 +166,25 @@ msgctxt "@title"
 msgid "Custom Rules"
 msgstr "自訂規則"
 
-#: src/quickapps/qml/CustomRulesPage.qml:51
+#: src/quickapps/qml/CustomRulesPage.qml:53
 #, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "新增規則…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:61
+#: src/quickapps/qml/CustomRulesPage.qml:64
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "編輯規則…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:74
+#: src/quickapps/qml/CustomRulesPage.qml:83
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "移除規則"
 
-#: src/quickapps/qml/CustomRulesPage.qml:84
+#: src/quickapps/qml/CustomRulesPage.qml:91
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -192,24 +192,24 @@ msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "移除規則"
 
-#: src/quickapps/qml/CustomRulesPage.qml:85
+#: src/quickapps/qml/CustomRulesPage.qml:92
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these %1 rules?"
 msgid "Are you sure you want to remove rule ?"
 msgstr "您確定要移除規則「%1」嗎？"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:10
+#: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgid "Edit Custom Rule"
 msgstr "編輯自訂規則"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:23
+#: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, kde-format
 msgid "Category:"
 msgstr "分類："
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:32
+#: src/quickapps/qml/EditCustomRuleDialog.qml:38
 #, kde-format
 msgid "Type:"
 msgstr "型態："
@@ -238,7 +238,7 @@ msgctxt "@item:inmenu"
 msgid "Help"
 msgstr "說明"
 
-#: src/quickapps/qml/KDEApplicationRulesPage.qml:13
+#: src/quickapps/qml/KDEApplicationRulesPage.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
@@ -250,43 +250,43 @@ msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "顯示 KDE 應用程式類別"
 
-#: src/quickapps/qml/Main.qml:33
+#: src/quickapps/qml/Main.qml:35
 #, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "顯示自訂類別"
 
-#: src/quickapps/qml/Main.qml:38
+#: src/quickapps/qml/Main.qml:42
 #, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "顯示環境類別"
 
-#: src/quickapps/qml/Main.qml:45
+#: src/quickapps/qml/Main.qml:51
 #, kde-format
 msgctxt "@action opens about app page"
 msgid "About"
 msgstr "關於"
 
-#: src/quickapps/qml/Main.qml:53
+#: src/quickapps/qml/Main.qml:61
 #, kde-format
 msgctxt "@action"
 msgid "Open Handbook"
 msgstr "開啟手冊"
 
-#: src/quickapps/qml/Main.qml:64
+#: src/quickapps/qml/Main.qml:74
 #, kde-format
 msgctxt "@menu-action"
 msgid "Quit"
 msgstr "離開"
 
-#: src/quickapps/qml/Main.qml:72
+#: src/quickapps/qml/Main.qml:82
 #, kde-format
 msgctxt "@menu-action"
 msgid "Save"
 msgstr "儲存"
 
-#: src/quickapps/qml/MainPage.qml:38
+#: src/quickapps/qml/MainPage.qml:27
 #, kde-format
 msgctxt "@title"
 msgid "Welcome to kdebugsettings"
