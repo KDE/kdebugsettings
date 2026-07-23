@@ -8,7 +8,7 @@ import org.kde.kdebugsettings
 
 Kirigami.Dialog {
     id: dialog
-    title: i18n("Edit Custom Rule")
+    title: i18nc("@title:window", "Edit Custom Rule")
     clip: true
     showCloseButton: false
     property alias categoryName: categoryNameField.text
@@ -39,7 +39,7 @@ Kirigami.Dialog {
             Layout.leftMargin: 4
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("Category:")
+            text: i18nc("@label:textbox", "Category:")
         }
         QQC2.TextField {
             id: categoryNameField
@@ -48,7 +48,7 @@ Kirigami.Dialog {
             Layout.leftMargin: 4
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("Type:")
+            text: i18nc("@label:textbox", "Type:")
         }
         CategoryComboBox {
             id: categoryType
@@ -58,7 +58,7 @@ Kirigami.Dialog {
         QQC2.CheckBox {
             id: categoryEnabled
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            text: i18n("Enabled")
+            text: i18nc("@label:textbox", "Enabled")
         }
     }
     onAccepted: {
