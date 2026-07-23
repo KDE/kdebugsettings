@@ -27,7 +27,9 @@
                 "dev-mold"
             ],
             "errors": {
-                "dev": true
+                "dev": true,
+                "deprecated": true
+
             },
             "warnings": {
                 "uninitialized": true
