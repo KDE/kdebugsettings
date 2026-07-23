@@ -24,6 +24,20 @@ Kirigami.ScrollablePage {
         id: editCustomRuleDialog
     }
 
+    function editCustomRule(item, currentIndex) {
+        if (item) {
+            const categoryName = item.categoryName;
+            const categoryEnabled = item.enabled;
+            const categoryLoggingType = item.loggingType;
+            editCustomRuleDialog.editMode = true;
+            editCustomRuleDialog.editRowIndex = currentIndex;
+            editCustomRuleDialog.categoryName = categoryName;
+            editCustomRuleDialog.categoryEnabled = categoryEnabled;
+            editCustomRuleDialog.categoryType = categoryLoggingType;
+            editCustomRuleDialog.open();
+        }
+    }
+
     ListView {
         id: listviewRules
         reuseItems: true
@@ -40,6 +54,9 @@ Kirigami.ScrollablePage {
             text: displayRule
             highlighted: ListView.isCurrentItem
             onClicked: listviewRules.currentIndex = index
+            onDoubleClicked: {
+                editCustomRule(listviewRules.currentItem, listviewRules.currentIndex)
+            }
         }
         TapHandler {
             acceptedButtons: Qt.RightButton
@@ -63,15 +80,7 @@ Kirigami.ScrollablePage {
                 icon.name: "document-edit"
                 text: i18nc("@action edit custom rule", "Edit Rule…")
                 onTriggered: {
-                    const categoryName = listviewRules.currentItem ? listviewRules.currentItem.categoryName : "";
-                    const categoryEnabled = listviewRules.currentItem ? listviewRules.currentItem.enabled : false;
-                    const categoryLoggingType = listviewRules.currentItem ? listviewRules.currentItem.loggingType : LoggingCategory.LoggingType.Debug;
-                    editCustomRuleDialog.editMode = true;
-                    editCustomRuleDialog.editRowIndex = listviewRules.currentIndex;
-                    editCustomRuleDialog.categoryName = categoryName;
-                    editCustomRuleDialog.categoryEnabled = categoryEnabled;
-                    editCustomRuleDialog.categoryType = categoryLoggingType;
-                    editCustomRuleDialog.open();
+                    editCustomRule(listviewRules.currentItem, listviewRules.currentIndex)
                 }
             }
             QQC2.MenuSeparator {
