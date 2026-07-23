@@ -17,7 +17,20 @@ Kirigami.Dialog {
     property bool editMode: false
     property int editRowIndex: -1
 
-    standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
+    footer: QQC2.DialogButtonBox {
+        standardButtons: saveButton | QQC2.DialogButtonBox.Cancel
+        onAccepted: {
+            editUserModal.saveUser();
+        }
+        QQC2.Button {
+            id: saveButton
+            icon.name: "document-save"
+            enabled: categoryNameField.text !== ""
+            text: i18nc("@label:button", "Save")
+            QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.AcceptRole
+        }
+    }
+
     RowLayout {
         id: mainColumn
         spacing: Kirigami.Units.smallSpacing
