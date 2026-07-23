@@ -6,7 +6,5 @@
 install(PROGRAMS org.kde.kdebugsettings.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.kdebugsettings.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-if(BUILD_QUICK_VERSION)
-    install(PROGRAMS org.kde.kdebugsettingsquick.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-    install(FILES org.kde.kdebugsettingsquick.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-endif()
+install(PROGRAMS org.kde.kdebugsettingsquick.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.kdebugsettingsquick.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})

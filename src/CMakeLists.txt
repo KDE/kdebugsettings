@@ -5,9 +5,7 @@ add_subdirectory(core)
 add_subdirectory(apps)
 add_subdirectory(data)
 add_subdirectory(widgets)
-if(BUILD_QUICK_VERSION)
-    add_subdirectory(quickapps)
-endif()
+add_subdirectory(quickapps)
 
 # Selenium GUI tests
 if(SeleniumWebDriverATSPI_FOUND)
