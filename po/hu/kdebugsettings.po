@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:47+0000\n"
 "PO-Revision-Date: 2024-10-03 21:39+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -170,7 +170,7 @@ msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Saját szabályok"
 
-#: src/quickapps/qml/CustomRulesPage.qml:53
+#: src/quickapps/qml/CustomRulesPage.qml:70
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Add Rule…"
@@ -178,7 +178,7 @@ msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Szabály hozzáadása…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:64
+#: src/quickapps/qml/CustomRulesPage.qml:81
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Edit Rule"
@@ -186,7 +186,7 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Szabály szerkesztése"
 
-#: src/quickapps/qml/CustomRulesPage.qml:83
+#: src/quickapps/qml/CustomRulesPage.qml:92
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -194,7 +194,7 @@ msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Szabály eltávolítása"
 
-#: src/quickapps/qml/CustomRulesPage.qml:91
+#: src/quickapps/qml/CustomRulesPage.qml:100
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -202,7 +202,7 @@ msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Szabály eltávolítása"
 
-#: src/quickapps/qml/CustomRulesPage.qml:92
+#: src/quickapps/qml/CustomRulesPage.qml:101
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these %1 rules?"
@@ -213,27 +213,45 @@ msgstr "Szeretné eltávolítani ezt a szabályt?"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
+msgctxt "@title:window"
 msgid "Edit Custom Rule"
+msgstr "Egyéni szabály szerkesztése"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:11
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit custom rule"
+msgctxt "@title:window"
+msgid "Create Custom Rule"
 msgstr "Egyéni szabály szerkesztése"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Category:"
+#| msgctxt "@title:window"
+#| msgid "Save As"
+msgctxt "@label:button"
+msgid "Save"
+msgstr "Mentés másként"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:42
+#: src/widgets/configurecustomsettingwidget.cpp:28
+#, kde-format
+msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategória:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Type:"
+#: src/quickapps/qml/EditCustomRuleDialog.qml:51
+#: src/widgets/configurecustomsettingwidget.cpp:39
+#, kde-format
+msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Típus:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:48
+#: src/quickapps/qml/EditCustomRuleDialog.qml:61
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enable"
+msgctxt "@label:textbox"
 msgid "Enabled"
 msgstr "Engedélyezés"
 
@@ -344,18 +362,6 @@ msgstr "Egyéni szabály szerkesztése"
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Engedélyezés"
-
-#: src/widgets/configurecustomsettingwidget.cpp:28
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Category:"
-msgstr "Kategória:"
-
-#: src/widgets/configurecustomsettingwidget.cpp:39
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Type:"
-msgstr "Típus:"
 
 #: src/widgets/customdebuglistview.cpp:47
 #, kde-format
@@ -638,6 +644,18 @@ msgstr "Mentés fájlként…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Mentés csoportként…"
+
+#, fuzzy
+#~| msgctxt "@label:textbox"
+#~| msgid "Category:"
+#~ msgid "Category:"
+#~ msgstr "Kategória:"
+
+#, fuzzy
+#~| msgctxt "@label:textbox"
+#~| msgid "Type:"
+#~ msgid "Type:"
+#~ msgstr "Típus:"
 
 #, fuzzy
 #~| msgctxt "@title:window"

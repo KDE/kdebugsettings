@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:47+0000\n"
 "PO-Revision-Date: 2015-07-30 08:57+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -164,52 +164,70 @@ msgctxt "@title"
 msgid "Custom Rules"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:53
+#: src/quickapps/qml/CustomRulesPage.qml:70
 #, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:64
+#: src/quickapps/qml/CustomRulesPage.qml:81
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:83
+#: src/quickapps/qml/CustomRulesPage.qml:92
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:91
+#: src/quickapps/qml/CustomRulesPage.qml:100
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:92
+#: src/quickapps/qml/CustomRulesPage.qml:101
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr ""
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
+msgctxt "@title:window"
 msgid "Edit Custom Rule"
+msgstr ""
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:11
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Custom Rule"
 msgstr ""
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, kde-format
+msgctxt "@label:button"
+msgid "Save"
+msgstr ""
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:42
+#: src/widgets/configurecustomsettingwidget.cpp:28
+#, kde-format
+msgctxt "@label:textbox"
 msgid "Category:"
 msgstr ""
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:38
+#: src/quickapps/qml/EditCustomRuleDialog.qml:51
+#: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Type:"
 msgstr ""
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:48
+#: src/quickapps/qml/EditCustomRuleDialog.qml:61
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Enabled"
 msgstr ""
 
@@ -309,18 +327,6 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable"
-msgstr ""
-
-#: src/widgets/configurecustomsettingwidget.cpp:28
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Category:"
-msgstr ""
-
-#: src/widgets/configurecustomsettingwidget.cpp:39
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Type:"
 msgstr ""
 
 #: src/widgets/customdebuglistview.cpp:47

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:47+0000\n"
 "PO-Revision-Date: 2026-07-22 07:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -170,52 +170,75 @@ msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Pravila po meri"
 
-#: src/quickapps/qml/CustomRulesPage.qml:53
+#: src/quickapps/qml/CustomRulesPage.qml:70
 #, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Dodaj pravilo…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:64
+#: src/quickapps/qml/CustomRulesPage.qml:81
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Uredi pravilo…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:83
+#: src/quickapps/qml/CustomRulesPage.qml:92
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Odstrani pravilo"
 
-#: src/quickapps/qml/CustomRulesPage.qml:91
+#: src/quickapps/qml/CustomRulesPage.qml:100
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Odstrani pravilo"
 
-#: src/quickapps/qml/CustomRulesPage.qml:92
+#: src/quickapps/qml/CustomRulesPage.qml:101
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr "Ali ste prepričani, da želite odstraniti pravilo?"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Custom Rule"
+msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "Uredi pravilo po meri"
 
+#: src/quickapps/qml/EditCustomRuleDialog.qml:11
+#, fuzzy, kde-format
+#| msgid "Edit Custom Rule"
+msgctxt "@title:window"
+msgid "Create Custom Rule"
+msgstr "Uredi pravilo po meri"
+
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
+#, fuzzy, kde-format
+#| msgctxt "@menu-action"
+#| msgid "Save"
+msgctxt "@label:button"
+msgid "Save"
+msgstr "Shrani"
+
+#: src/quickapps/qml/EditCustomRuleDialog.qml:42
+#: src/widgets/configurecustomsettingwidget.cpp:28
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategorija:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:38
+#: src/quickapps/qml/EditCustomRuleDialog.qml:51
+#: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Vrsta:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:48
-#, kde-format
+#: src/quickapps/qml/EditCustomRuleDialog.qml:61
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@label:textbox"
 msgid "Enabled"
 msgstr "Omogočeno"
 
@@ -318,18 +341,6 @@ msgstr "Uredi pravilo po meri"
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Omogoči"
-
-#: src/widgets/configurecustomsettingwidget.cpp:28
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Category:"
-msgstr "Kategorija:"
-
-#: src/widgets/configurecustomsettingwidget.cpp:39
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Type:"
-msgstr "Vrsta:"
 
 #: src/widgets/customdebuglistview.cpp:47
 #, kde-format
@@ -616,6 +627,12 @@ msgstr "Shrani kot datoteko…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Shrani kot grupo…"
+
+#~ msgid "Category:"
+#~ msgstr "Kategorija:"
+
+#~ msgid "Type:"
+#~ msgstr "Vrsta:"
 
 #~ msgid "Edit Custom Dialog"
 #~ msgstr "Uredi pogovorno okno po meri"
