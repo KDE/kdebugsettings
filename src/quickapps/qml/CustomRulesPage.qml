@@ -72,6 +72,7 @@ Kirigami.ScrollablePage {
                     editCustomRuleDialog.editMode = false;
                     editCustomRuleDialog.categoryName = "";
                     editCustomRuleDialog.categoryEnabled = false;
+                    editCustomRuleDialog.categoryType = 0;
                     editCustomRuleDialog.open();
                 }
             }
