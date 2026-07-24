@@ -9,13 +9,21 @@ QQC2.ComboBox {
 
     property int loggingType: -1
     property bool showOffTypeValue: true
+    property bool syncLoggingTypeFromSelection: true
 
     onLoggingTypeChanged: {
         currentIndex = count > 0 ? indexOfValue(loggingType) : -1
     }
 
+    onCountChanged: {
+        // Resolve initial selection once the proxy model is populated.
+        if (count > 0 && currentIndex < 0) {
+            currentIndex = indexOfValue(loggingType)
+        }
+    }
+
     onCurrentIndexChanged: {
-        if (currentIndex >= 0 && currentValue !== undefined) {
+        if (syncLoggingTypeFromSelection && currentIndex >= 0 && currentValue !== undefined) {
             loggingType = currentValue
         }
     }

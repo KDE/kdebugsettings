@@ -20,7 +20,7 @@ Kirigami.Dialog {
     footer: QQC2.DialogButtonBox {
         standardButtons: saveButton | QQC2.DialogButtonBox.Cancel
         onAccepted: {
-            editUserModal.saveUser();
+            dialog.accept();
         }
         QQC2.Button {
             id: saveButton
@@ -53,6 +53,7 @@ Kirigami.Dialog {
         CategoryComboBox {
             id: categoryType
             showOffTypeValue: false
+            syncLoggingTypeFromSelection: true
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
         }
         QQC2.CheckBox {
@@ -63,9 +64,9 @@ Kirigami.Dialog {
     }
     onAccepted: {
         if (editMode) {
-            LoggingManager.customCategoryModel.updateCategory(editRowIndex, categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
+            LoggingManager.customCategoryModel.updateCategory(editRowIndex, categoryNameField.text, categoryEnabled.checked, categoryType.loggingType);
         } else {
-            LoggingManager.customCategoryModel.addCategory(categoryNameField.text, categoryEnabled.checked, categoryType.currentValue);
+            LoggingManager.customCategoryModel.addCategory(categoryNameField.text, categoryEnabled.checked, categoryType.loggingType);
         }
     }
 }

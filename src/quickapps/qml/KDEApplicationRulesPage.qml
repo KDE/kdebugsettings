@@ -30,6 +30,12 @@ Kirigami.ScrollablePage {
         clip: true
         model: LoggingManager.kdeApplicationLoggingCategoryProxyModel
         delegate: Delegates.RoundedItemDelegate {
+            id: ruleDelegate
+            required property int index
+            required property string description
+            required property string generatedToolTip
+            required property int loggingType
+
             highlighted: ListView.isCurrentItem
             onClicked: listviewRules.currentIndex = index
 
@@ -38,12 +44,12 @@ Kirigami.ScrollablePage {
 
                 QQC2.Label {
                     Layout.leftMargin: 4
-                    text: model.description
+                    text: ruleDelegate.description
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                     verticalAlignment: Text.AlignVCenter
 
                     QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: model.generatedToolTip
+                    QQC2.ToolTip.text: ruleDelegate.generatedToolTip
                 }
                 Item {
                     Layout.fillWidth: true
@@ -51,12 +57,10 @@ Kirigami.ScrollablePage {
                 CategoryComboBox {
                     id: categoryType
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    property int rowIndex: index
-
-                    // Re-evaluate once the ComboBox model is populated on startup.
-                    currentIndex: count > 0 ? indexOfValue(loggingType) : -1
+                    syncLoggingTypeFromSelection: false
+                    loggingType: ruleDelegate.loggingType
                     onActivated: () => {
-                        listviewRules.model.setCategoryType(rowIndex, currentValue);
+                        listviewRules.model.setCategoryType(index, currentValue);
                     }
                 }
             }
