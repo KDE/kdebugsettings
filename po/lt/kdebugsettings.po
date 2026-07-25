@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:47+0000\n"
+"POT-Creation-Date: 2026-07-25 00:48+0000\n"
 "PO-Revision-Date: 2015-07-30 08:57+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -170,25 +170,25 @@ msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:81
+#: src/quickapps/qml/CustomRulesPage.qml:82
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:92
+#: src/quickapps/qml/CustomRulesPage.qml:93
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:100
+#: src/quickapps/qml/CustomRulesPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr ""
 
-#: src/quickapps/qml/CustomRulesPage.qml:101
+#: src/quickapps/qml/CustomRulesPage.qml:102
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr ""
@@ -225,7 +225,7 @@ msgctxt "@label:textbox"
 msgid "Type:"
 msgstr ""
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:61
+#: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"

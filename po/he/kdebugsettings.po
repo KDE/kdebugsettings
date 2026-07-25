@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:47+0000\n"
+"POT-Creation-Date: 2026-07-25 00:48+0000\n"
 "PO-Revision-Date: 2026-07-23 08:52+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -172,25 +172,25 @@ msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "הוספת כלל…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:81
+#: src/quickapps/qml/CustomRulesPage.qml:82
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "עריכת כלל"
 
-#: src/quickapps/qml/CustomRulesPage.qml:92
+#: src/quickapps/qml/CustomRulesPage.qml:93
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "הסרת כלל"
 
-#: src/quickapps/qml/CustomRulesPage.qml:100
+#: src/quickapps/qml/CustomRulesPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "הסרת כלל"
 
-#: src/quickapps/qml/CustomRulesPage.qml:101
+#: src/quickapps/qml/CustomRulesPage.qml:102
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr "להסיר את הכלל?"
@@ -231,7 +231,7 @@ msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "סוג:"
 
-#: src/quickapps/qml/EditCustomRuleDialog.qml:61
+#: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgctxt "@label:textbox"
