@@ -185,30 +185,30 @@ msgstr "移除规则"
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
-msgstr ""
+msgstr "移除规则"
 
 #: src/quickapps/qml/CustomRulesPage.qml:102
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
-msgstr ""
+msgstr "您确定要移除规则吗？"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
-msgstr ""
+msgstr "编辑自定义规则"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
-msgstr ""
+msgstr "创建自定义规则"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, kde-format
 msgctxt "@label:button"
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/quickapps/qml/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
@@ -228,7 +228,7 @@ msgstr "类型："
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, kde-format
