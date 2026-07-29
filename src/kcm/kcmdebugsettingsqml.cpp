@@ -5,12 +5,24 @@
 */
 
 #include "kcmdebugsettingsqml.h"
-
+#include "loggingmanager.h"
+#include "model/categorytypeproxymodel.h"
+#include "model/customloggingcategorymodel.h"
+#include "model/customloggingcategoryproxymodel.h"
+#include "model/kdeapplicationloggingcategorymodel.h"
+#include "model/kdeapplicationloggingcategoryproxymodel.h"
+#include <qqml.h>
 K_PLUGIN_CLASS_WITH_JSON(KCMDebugSettingsQml, "kcm_debugsettings.json")
 
 KCMDebugSettingsQml::KCMDebugSettingsQml(QObject *parent, const KPluginMetaData &metaData)
     : KQuickConfigModule(parent, metaData)
 {
+    qmlRegisterSingletonInstance("org.kde.kdebugsettings", 1, 0, "LoggingManager", &LoggingManager::self());
+    qRegisterMetaType<CustomLoggingCategoryModel *>("CustomLoggingCategoryModel *");
+    qRegisterMetaType<KDEApplicationLoggingCategoryModel *>("KDEApplicationLoggingCategoryModel *");
+    qmlRegisterType<CategoryTypeProxyModel>("org.kde.kdebugsettings", 1, 0, "CategoryTypeProxyModel");
+    qmlRegisterType<CustomLoggingCategoryProxyModel>("org.kde.kdebugsettings", 1, 0, "CustomLoggingCategoryProxyModel");
+    qmlRegisterType<KDEApplicationLoggingCategoryProxyModel>("org.kde.kdebugsettings", 1, 0, "KDEApplicationLoggingCategoryProxyModel");
 }
 
 KCMDebugSettingsQml::~KCMDebugSettingsQml() = default;

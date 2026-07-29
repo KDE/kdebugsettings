@@ -17,4 +17,5 @@ target_link_libraries(
         Qt::Qml
         KF6::I18n
         KF6::KCMUtilsQuick
+        libkdebugsettingscore
 )
