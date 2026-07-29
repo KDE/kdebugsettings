@@ -27,4 +27,14 @@ KCMDebugSettingsQml::KCMDebugSettingsQml(QObject *parent, const KPluginMetaData 
 
 KCMDebugSettingsQml::~KCMDebugSettingsQml() = default;
 
+void KCMDebugSettingsQml::load()
+{
+    // TODO
+}
+
+void KCMDebugSettingsQml::save()
+{
+    // TODO
+}
+
 #include "kcmdebugsettingsqml.moc"
