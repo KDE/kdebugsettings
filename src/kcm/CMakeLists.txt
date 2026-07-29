@@ -2,7 +2,13 @@
 # SPDX-License-Identifier: BSD-3-Clause
 kcmutils_add_qml_kcm(kcm_debugsettings)
 
-target_sources(kcm_debugsettings PRIVATE cellularnetworksettings.cpp)
+target_sources(
+    kcm_debugsettings
+    PRIVATE
+        kcmdebugsettingsqml.h
+        kcmdebugsettingsqml.cpp
+)
+
 target_link_libraries(
     kcm_debugsettings
     PRIVATE
