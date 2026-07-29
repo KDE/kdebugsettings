@@ -1,0 +1,11 @@
+{
+    "Categories": "Qt;KDE;X-KDE-settings-system;",
+    "KPlugin": {
+        "Description": "Configure Debug Categories Settings",
+        "Icon": "debug-run",
+        "Name": "Debug Settings"
+    },
+    "X-KDE-Keywords": "debug,categories",
+    "X-KDE-System-Settings-Parent-Category": "network",
+    "X-KDE-Weight": 70
+}

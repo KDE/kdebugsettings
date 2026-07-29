@@ -107,6 +107,7 @@ find_package(
         XmlGui
         IconThemes
         Crash
+        KCMUtils
 )
 
 # shall we use DBus?
