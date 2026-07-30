@@ -18,21 +18,21 @@ KCM.ScrollViewKCM {
             id: goToKdeApplicationCategories
             text: i18nc("@action", "Show KDE Application Categories")
             onTriggered: {
-                pageStack.layers.push(Qt.resolvedUrl("KDEApplicationRulesPage.qml"));
+                kcm.push("KDEApplicationRulesPage.qml");
             }
         },
         Kirigami.Action {
             id: goToCustomCategories
             text: i18nc("@action", "Show Custom Categories")
             onTriggered: {
-                pageStack.layers.push(Qt.resolvedUrl("CustomRulesPage.qml"));
+                kcm.push("CustomRulesPage.qml");
             }
         },
         Kirigami.Action {
             id: goToEnviromnentCategories
             text: i18nc("@action", "Show Environment Categories")
             onTriggered: {
-                pageStack.layers.push(Qt.resolvedUrl("EnvironmentVariableRulesPage.qml"));
+                kcm.push("EnvironmentVariableRulesPage.qml");
             }
         }
     ]
