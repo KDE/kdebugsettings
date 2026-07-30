@@ -53,6 +53,9 @@ public:
 
     [[nodiscard]] CustomLoggingCategoryProxyModel *customLoggingCategoryProxyModel() const;
 
+Q_SIGNALS:
+    void customLoggingChanged();
+
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
     CustomLoggingCategoryModel *const mCustomCategoryModel;

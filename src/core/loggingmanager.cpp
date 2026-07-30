@@ -21,6 +21,7 @@ LoggingManager::LoggingManager(QObject *parent)
     mCustomLoggingCategoryProxyModel->setSourceModel(mCustomCategoryModel);
     mLoggings.readQtLoggingFile();
     updateLoggingCategories();
+    connect(mCustomCategoryModel, &CustomLoggingCategoryModel::customLoggingChanged, this, &LoggingManager::customLoggingChanged);
 }
 
 CustomLoggingCategoryProxyModel *LoggingManager::customLoggingCategoryProxyModel() const

@@ -24,6 +24,10 @@ KCMDebugSettingsQml::KCMDebugSettingsQml(QObject *parent, const KPluginMetaData 
     qmlRegisterType<CategoryTypeProxyModel>("org.kde.kdebugsettings", 1, 0, "CategoryTypeProxyModel");
     qmlRegisterType<CustomLoggingCategoryProxyModel>("org.kde.kdebugsettings", 1, 0, "CustomLoggingCategoryProxyModel");
     qmlRegisterType<KDEApplicationLoggingCategoryProxyModel>("org.kde.kdebugsettings", 1, 0, "KDEApplicationLoggingCategoryProxyModel");
+
+    connect(&LoggingManager::self(), &LoggingManager::customLoggingChanged, this, [this]() {
+        setNeedsSave(true);
+    });
 }
 
 KCMDebugSettingsQml::~KCMDebugSettingsQml() = default;
