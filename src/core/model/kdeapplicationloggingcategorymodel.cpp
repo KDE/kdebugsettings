@@ -90,9 +90,9 @@ bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, 
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "ERROR: out-of-range index" << idx;
         return false;
     }
-    LoggingCategory &cat = mLoggingCategories[idx];
     switch (static_cast<CategoryRoles>(modelIndex.column())) {
     case LoggingTypeRole: {
+        LoggingCategory &cat = mLoggingCategories[idx];
         cat.loggingType = value.value<LoggingCategory::LoggingType>();
         const QModelIndex topLeft = index(modelIndex.row(), LoggingTypeRole);
         const QModelIndex bottomRight = index(modelIndex.row(), LoggingTypeStrRole);
