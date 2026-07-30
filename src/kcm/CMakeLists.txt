@@ -2,6 +2,10 @@
 # SPDX-License-Identifier: BSD-3-Clause
 kcmutils_add_qml_kcm(kcm_debugsettings)
 
+ecm_qt_declare_logging_category(kcm_debugsettings HEADER kcm_debugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_KCM_LOG
+    CATEGORY_NAME log_kdebugsettings_kcm DESCRIPTION "kdebugsettings kcm" EXPORT KDEBUGSETTINGS
+)
+
 target_sources(
     kcm_debugsettings
     PRIVATE

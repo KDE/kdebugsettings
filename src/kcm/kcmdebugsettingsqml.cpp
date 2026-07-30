@@ -5,6 +5,7 @@
 */
 
 #include "kcmdebugsettingsqml.h"
+#include "kcm_debugsettings_debug.h"
 #include "loggingmanager.h"
 #include "model/categorytypeproxymodel.h"
 #include "model/customloggingcategorymodel.h"
@@ -34,6 +35,9 @@ void KCMDebugSettingsQml::load()
 
 void KCMDebugSettingsQml::save()
 {
+    if (!LoggingManager::self().saveInQtLogging()) {
+        qCWarning(KDEBUGSETTINGS_KCM_LOG) << "Impossible to save file";
+    }
     // TODO
 }
 
