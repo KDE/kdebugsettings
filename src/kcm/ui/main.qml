@@ -7,12 +7,33 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 
-Kirigami.Page {
-    id: root
-
-    focus: true
-
-    Kirigami.Theme.colorSet: Kirigami.Theme.Window
+KCM.ScrollViewKCM {
+    implicitHeight: Kirigami.Units.gridUnit * 28
+    implicitWidth: Kirigami.Units.gridUnit * 28
+    actions: [
+        Kirigami.Action {
+            id: goToKdeApplicationCategories
+            text: i18nc("@action", "Show KDE Application Categories")
+            onTriggered: {
+                pageStack.layers.push(Qt.resolvedUrl("KDEApplicationRulesPage.qml"));
+            }
+        },
+        Kirigami.Action {
+            id: goToCustomCategories
+            text: i18nc("@action", "Show Custom Categories")
+            onTriggered: {
+                pageStack.layers.push(Qt.resolvedUrl("CustomRulesPage.qml"));
+            }
+        },
+        Kirigami.Action {
+            id: goToEnviromnentCategories
+            text: i18nc("@action", "Show Environment Categories")
+            onTriggered: {
+                pageStack.layers.push(Qt.resolvedUrl("EnvironmentVariableRulesPage.qml"));
+            }
+        }
+    ]
 }

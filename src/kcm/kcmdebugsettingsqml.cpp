@@ -30,7 +30,7 @@ KCMDebugSettingsQml::~KCMDebugSettingsQml() = default;
 
 void KCMDebugSettingsQml::load()
 {
-    // TODO
+    // Nothing, it loads from LoggingManager
 }
 
 void KCMDebugSettingsQml::save()
@@ -38,7 +38,6 @@ void KCMDebugSettingsQml::save()
     if (!LoggingManager::self().saveInQtLogging()) {
         qCWarning(KDEBUGSETTINGS_KCM_LOG) << "Impossible to save file";
     }
-    // TODO
 }
 
 #include "kcmdebugsettingsqml.moc"
