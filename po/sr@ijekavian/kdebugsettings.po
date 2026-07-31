@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-25 00:48+0000\n"
+"POT-Creation-Date: 2026-07-31 00:50+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -167,14 +167,8 @@ msgstr "критично"
 msgid "No Debug Messages"
 msgstr ""
 
-#: src/quickapps/main.cpp:66
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2017 kdebugsettings authors"
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "© 2015–2017, аутори К‑исправљачких-поставки"
-
 # @title:tab
-#: src/quickapps/qml/CustomRulesPage.qml:14
+#: src/kcm/ui/CustomRulesPage.qml:14 src/quickapps/qml/CustomRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "Custom Rules"
 msgctxt "@title"
@@ -182,7 +176,7 @@ msgid "Custom Rules"
 msgstr "Посебна правила"
 
 # >> @title:window
-#: src/quickapps/qml/CustomRulesPage.qml:70
+#: src/kcm/ui/CustomRulesPage.qml:70 src/quickapps/qml/CustomRulesPage.qml:70
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgctxt "@action add custom rule"
@@ -190,28 +184,28 @@ msgid "Add Rule…"
 msgstr "Уређивање посебног правила"
 
 # >> @title:window
-#: src/quickapps/qml/CustomRulesPage.qml:82
+#: src/kcm/ui/CustomRulesPage.qml:82 src/quickapps/qml/CustomRulesPage.qml:82
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Уређивање посебног правила"
 
-#: src/quickapps/qml/CustomRulesPage.qml:93
+#: src/kcm/ui/CustomRulesPage.qml:93 src/quickapps/qml/CustomRulesPage.qml:93
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Уклони..."
 
-#: src/quickapps/qml/CustomRulesPage.qml:101
+#: src/kcm/ui/CustomRulesPage.qml:101 src/quickapps/qml/CustomRulesPage.qml:101
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Уклони..."
 
-#: src/quickapps/qml/CustomRulesPage.qml:102
+#: src/kcm/ui/CustomRulesPage.qml:102 src/quickapps/qml/CustomRulesPage.qml:102
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these %1 rules?"
@@ -219,6 +213,7 @@ msgid "Are you sure you want to remove rule ?"
 msgstr "Желите ли да уклоните ово %1 правило?"
 
 # >> @title:window
+#: src/kcm/ui/EditCustomRuleDialog.qml:11
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
@@ -227,6 +222,7 @@ msgid "Edit Custom Rule"
 msgstr "Уређивање посебног правила"
 
 # >> @title:window
+#: src/kcm/ui/EditCustomRuleDialog.qml:11
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgid "Edit custom rule"
@@ -235,6 +231,7 @@ msgid "Create Custom Rule"
 msgstr "Уређивање посебног правила"
 
 # >> @title:window
+#: src/kcm/ui/EditCustomRuleDialog.qml:29
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, fuzzy, kde-format
 #| msgid "Save As"
@@ -242,6 +239,7 @@ msgctxt "@label:button"
 msgid "Save"
 msgstr "Уписивање као"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/quickapps/qml/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, fuzzy, kde-format
@@ -250,6 +248,7 @@ msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Категорија:"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:51
 #: src/quickapps/qml/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, fuzzy, kde-format
@@ -258,6 +257,7 @@ msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Тип:"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:62
 #: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, fuzzy, kde-format
 #| msgid "Enable"
@@ -267,6 +267,7 @@ msgstr "Укључи"
 
 # @title:tab
 # rewrite-msgid: /Settings/Set/
+#: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, fuzzy, kde-format
 #| msgid "Rules Settings With Environment Variable"
@@ -274,6 +275,7 @@ msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "Правила задата променљивом окружења"
 
+#: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -281,13 +283,8 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "Ниједно правило није дефинисано променљивом окружења QT_LOGGING_RULES."
 
-#: src/quickapps/qml/GlobalMenu.qml:10
-#, kde-format
-msgctxt "@item:inmenu"
-msgid "Help"
-msgstr ""
-
 # @title:tab
+#: src/kcm/ui/KDEApplicationRulesPage.qml:14
 #: src/quickapps/qml/KDEApplicationRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "KDE Application"
@@ -296,7 +293,7 @@ msgid "KDE Application Rules"
 msgstr "КДЕ програм"
 
 # @title:tab
-#: src/quickapps/qml/Main.qml:28
+#: src/kcm/ui/main.qml:19 src/quickapps/qml/Main.qml:28
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@action"
@@ -304,7 +301,7 @@ msgid "Show KDE Application Categories"
 msgstr "КДЕ програм"
 
 # >> @title:window
-#: src/quickapps/qml/Main.qml:35
+#: src/kcm/ui/main.qml:26 src/quickapps/qml/Main.qml:35
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
@@ -312,12 +309,24 @@ msgid "Show Custom Categories"
 msgstr "Уметање категорија"
 
 # >> @title:window
-#: src/quickapps/qml/Main.qml:42
+#: src/kcm/ui/main.qml:33 src/quickapps/qml/Main.qml:42
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "Уметање категорија"
+
+#: src/quickapps/main.cpp:66
+#, fuzzy, kde-format
+#| msgid "(c) 2015-2017 kdebugsettings authors"
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "© 2015–2017, аутори К‑исправљачких-поставки"
+
+#: src/quickapps/qml/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr ""
 
 #: src/quickapps/qml/Main.qml:51
 #, kde-format

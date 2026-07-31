@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-25 00:48+0000\n"
+"POT-Creation-Date: 2026-07-31 00:50+0000\n"
 "PO-Revision-Date: 2026-07-24 10:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -156,64 +156,63 @@ msgstr "Kritiekeberichten"
 msgid "No Debug Messages"
 msgstr "Geen debugberichten"
 
-#: src/quickapps/main.cpp:66
-#, kde-format
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "(c) 2023-%1 auteurs van kdebugsettings"
-
-#: src/quickapps/qml/CustomRulesPage.qml:14
+#: src/kcm/ui/CustomRulesPage.qml:14 src/quickapps/qml/CustomRulesPage.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Aangepaste regels"
 
-#: src/quickapps/qml/CustomRulesPage.qml:70
+#: src/kcm/ui/CustomRulesPage.qml:70 src/quickapps/qml/CustomRulesPage.qml:70
 #, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Regel toevoegen…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:82
+#: src/kcm/ui/CustomRulesPage.qml:82 src/quickapps/qml/CustomRulesPage.qml:82
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Regel bewerken…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:93
+#: src/kcm/ui/CustomRulesPage.qml:93 src/quickapps/qml/CustomRulesPage.qml:93
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Regel verwijderen"
 
-#: src/quickapps/qml/CustomRulesPage.qml:101
+#: src/kcm/ui/CustomRulesPage.qml:101 src/quickapps/qml/CustomRulesPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Regel verwijderen"
 
-#: src/quickapps/qml/CustomRulesPage.qml:102
+#: src/kcm/ui/CustomRulesPage.qml:102 src/quickapps/qml/CustomRulesPage.qml:102
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr "Wilt u de regel verwijderen?"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:11
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "Aangepaste regel bewerken"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:11
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
 msgstr "Aangepaste regel aanmaken"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:29
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, kde-format
 msgctxt "@label:button"
 msgid "Save"
 msgstr "Opslaan"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/quickapps/qml/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, kde-format
@@ -221,6 +220,7 @@ msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Categorie:"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:51
 #: src/quickapps/qml/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
@@ -228,18 +228,21 @@ msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Type:"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:62
 #: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
+#: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "Instellen van regels met omgevingsvariabele"
 
+#: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -248,35 +251,41 @@ msgid ""
 msgstr ""
 "In de omgevingsvariabele \"QT_LOGGING_RULES\" zijn geen regels gedefinieerd."
 
-#: src/quickapps/qml/GlobalMenu.qml:10
-#, kde-format
-msgctxt "@item:inmenu"
-msgid "Help"
-msgstr "Help"
-
+#: src/kcm/ui/KDEApplicationRulesPage.qml:14
 #: src/quickapps/qml/KDEApplicationRulesPage.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "KDE regels voor toepassingen"
 
-#: src/quickapps/qml/Main.qml:28
+#: src/kcm/ui/main.qml:19 src/quickapps/qml/Main.qml:28
 #, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "KDE categorieën voor toepassingen tonen"
 
-#: src/quickapps/qml/Main.qml:35
+#: src/kcm/ui/main.qml:26 src/quickapps/qml/Main.qml:35
 #, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "Aangepaste categorieën tonen"
 
-#: src/quickapps/qml/Main.qml:42
+#: src/kcm/ui/main.qml:33 src/quickapps/qml/Main.qml:42
 #, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "Omgevingscategorieën tonen"
+
+#: src/quickapps/main.cpp:66
+#, kde-format
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "(c) 2023-%1 auteurs van kdebugsettings"
+
+#: src/quickapps/qml/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr "Help"
 
 #: src/quickapps/qml/Main.qml:51
 #, kde-format

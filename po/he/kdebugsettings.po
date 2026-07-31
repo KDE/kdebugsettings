@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-25 00:48+0000\n"
+"POT-Creation-Date: 2026-07-31 00:50+0000\n"
 "PO-Revision-Date: 2026-07-28 08:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -155,64 +155,63 @@ msgstr "הודעות משמעותיות"
 msgid "No Debug Messages"
 msgstr "ללא הודעות ניפוי שגיאות"
 
-#: src/quickapps/main.cpp:66
-#, kde-format
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "(c) 2023‏-%1 יוצרי kdebugsettings"
-
-#: src/quickapps/qml/CustomRulesPage.qml:14
+#: src/kcm/ui/CustomRulesPage.qml:14 src/quickapps/qml/CustomRulesPage.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "כללים מותאמים אישית"
 
-#: src/quickapps/qml/CustomRulesPage.qml:70
+#: src/kcm/ui/CustomRulesPage.qml:70 src/quickapps/qml/CustomRulesPage.qml:70
 #, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "הוספת כלל…"
 
-#: src/quickapps/qml/CustomRulesPage.qml:82
+#: src/kcm/ui/CustomRulesPage.qml:82 src/quickapps/qml/CustomRulesPage.qml:82
 #, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "עריכת כלל"
 
-#: src/quickapps/qml/CustomRulesPage.qml:93
+#: src/kcm/ui/CustomRulesPage.qml:93 src/quickapps/qml/CustomRulesPage.qml:93
 #, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "הסרת כלל"
 
-#: src/quickapps/qml/CustomRulesPage.qml:101
+#: src/kcm/ui/CustomRulesPage.qml:101 src/quickapps/qml/CustomRulesPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "הסרת כלל"
 
-#: src/quickapps/qml/CustomRulesPage.qml:102
+#: src/kcm/ui/CustomRulesPage.qml:102 src/quickapps/qml/CustomRulesPage.qml:102
 #, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr "להסיר את הכלל?"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:11
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "עריכת כלל מותאם אישית"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:11
 #: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
 msgstr "יצירת כלל מותאם אישית"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:29
 #: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, kde-format
 msgctxt "@label:button"
 msgid "Save"
 msgstr "שמירה"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/quickapps/qml/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, kde-format
@@ -220,6 +219,7 @@ msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "קטגוריה:"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:51
 #: src/quickapps/qml/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
@@ -227,18 +227,21 @@ msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "סוג:"
 
+#: src/kcm/ui/EditCustomRuleDialog.qml:62
 #: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
 msgstr "פעיל"
 
+#: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "הגדרות כללים עם משתנה סביבה"
 
+#: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
 #: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -246,35 +249,41 @@ msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
 msgstr "לא הוגדרו כללים במשתנה הסביבתי „QT_LOGGING_RULES”."
 
-#: src/quickapps/qml/GlobalMenu.qml:10
-#, kde-format
-msgctxt "@item:inmenu"
-msgid "Help"
-msgstr "עזרה"
-
+#: src/kcm/ui/KDEApplicationRulesPage.qml:14
 #: src/quickapps/qml/KDEApplicationRulesPage.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "כללי יישומי KDE"
 
-#: src/quickapps/qml/Main.qml:28
+#: src/kcm/ui/main.qml:19 src/quickapps/qml/Main.qml:28
 #, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "הצגת קטגוריות יישומי KDE"
 
-#: src/quickapps/qml/Main.qml:35
+#: src/kcm/ui/main.qml:26 src/quickapps/qml/Main.qml:35
 #, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "הצגת קטגוריות מותאמות אישית"
 
-#: src/quickapps/qml/Main.qml:42
+#: src/kcm/ui/main.qml:33 src/quickapps/qml/Main.qml:42
 #, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "הוספת קטגוריות סביבה"
+
+#: src/quickapps/main.cpp:66
+#, kde-format
+msgid "(c) 2023-%1 kdebugsettings authors"
+msgstr "(c) 2023‏-%1 יוצרי kdebugsettings"
+
+#: src/quickapps/qml/GlobalMenu.qml:10
+#, kde-format
+msgctxt "@item:inmenu"
+msgid "Help"
+msgstr "עזרה"
 
 #: src/quickapps/qml/Main.qml:51
 #, kde-format
