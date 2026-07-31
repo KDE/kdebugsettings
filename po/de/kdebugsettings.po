@@ -54,7 +54,7 @@ msgstr "Debug-Modus kann nicht geändert werden"
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
-"Aktiviert den QStandardPaths-Testmodus, d. h. Einstellungen für Lesen/"
+"Aktiviert den QStandardPaths-Testmodus, d. h. Einstellungen für Lesen/"
 "Schreiben die von Unittests verwendet werden"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
