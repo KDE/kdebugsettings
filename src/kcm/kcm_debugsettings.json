@@ -1,4 +1,5 @@
 {
+    "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=kdebugsettings",
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Configure Debug Categories Settings",
