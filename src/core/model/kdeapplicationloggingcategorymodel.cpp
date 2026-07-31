@@ -96,7 +96,7 @@ bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, 
         cat.loggingType = value.value<LoggingCategory::LoggingType>();
         const QModelIndex topLeft = index(modelIndex.row(), LoggingTypeRole);
         const QModelIndex bottomRight = index(modelIndex.row(), LoggingTypeStrRole);
-        Q_EMIT dataChanged(topLeft, bottomRight);
+        Q_EMIT dataChanged(topLeft, bottomRight, {LoggingTypeRole});
         return true;
     }
     default:

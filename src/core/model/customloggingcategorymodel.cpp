@@ -73,7 +73,6 @@ void CustomLoggingCategoryModel::updateCategory(int row, const QString &category
     cat.loggingType = type;
     const QModelIndex modelIndex = index(row, 0);
     Q_EMIT dataChanged(modelIndex, modelIndex);
-    Q_EMIT customLoggingChanged();
 }
 
 QVariant CustomLoggingCategoryModel::data(const QModelIndex &index, int role) const
@@ -131,7 +130,6 @@ void CustomLoggingCategoryModel::removeCategory(int row)
     beginRemoveRows(QModelIndex(), row, row);
     mLoggingCategories.removeAt(row);
     endRemoveRows();
-    Q_EMIT customLoggingChanged();
 }
 
 void CustomLoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
@@ -146,7 +144,6 @@ void CustomLoggingCategoryModel::removeCategory(const LoggingCategory::List &cat
         }
     }
     endResetModel();
-    Q_EMIT customLoggingChanged();
 }
 
 void CustomLoggingCategoryModel::addCategory(const QString &categoryName, bool enabled, LoggingCategory::LoggingType type)
@@ -155,9 +152,7 @@ void CustomLoggingCategoryModel::addCategory(const QString &categoryName, bool e
     category.categoryName = categoryName;
     category.enabled = enabled;
     category.loggingType = type;
-    if (addCategory(category)) {
-        Q_EMIT customLoggingChanged();
-    }
+    if (addCategory(category)) { }
 }
 
 bool CustomLoggingCategoryModel::addCategory(const LoggingCategory &category)
@@ -189,7 +184,6 @@ void CustomLoggingCategoryModel::insertCategories(const LoggingCategory::List &c
         beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count() + categories.count() - 1);
         mLoggingCategories.append(categories);
         endInsertRows();
-        Q_EMIT customLoggingChanged();
     }
 }
 

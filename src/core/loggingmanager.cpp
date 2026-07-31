@@ -21,7 +21,19 @@ LoggingManager::LoggingManager(QObject *parent)
     mCustomLoggingCategoryProxyModel->setSourceModel(mCustomCategoryModel);
     mLoggings.readQtLoggingFile();
     updateLoggingCategories();
-    connect(mCustomCategoryModel, &CustomLoggingCategoryModel::customLoggingChanged, this, &LoggingManager::customLoggingChanged);
+
+    connect(mCustomCategoryModel, &QAbstractItemModel::rowsInserted, this, &LoggingManager::customLoggingChanged);
+    connect(mCustomCategoryModel, &QAbstractItemModel::rowsRemoved, this, &LoggingManager::customLoggingChanged);
+    connect(mCustomCategoryModel, &QAbstractItemModel::dataChanged, this, &LoggingManager::customLoggingChanged);
+
+    connect(mQtKdeCategoryModel,
+            &QAbstractItemModel::dataChanged,
+            this,
+            [this]([[maybe_unused]] const QModelIndex &topLeft, [[maybe_unused]] const QModelIndex &, const QList<int> &roles) {
+                if (roles.contains(KDEApplicationLoggingCategoryModel::LoggingTypeRole)) {
+                    Q_EMIT customLoggingChanged();
+                }
+            });
 }
 
 CustomLoggingCategoryProxyModel *LoggingManager::customLoggingCategoryProxyModel() const

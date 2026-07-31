@@ -54,9 +54,6 @@ public:
     Q_INVOKABLE void addCategory(const QString &categoryName, bool enabled, LoggingCategory::LoggingType type);
     Q_INVOKABLE void updateCategory(int row, const QString &categoryName, bool enabled, LoggingCategory::LoggingType type);
 
-Q_SIGNALS:
-    void customLoggingChanged();
-
 private:
     LoggingCategory::List mLoggingCategories;
     QHash<int, QByteArray> mRoleNames;
