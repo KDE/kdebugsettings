@@ -35,6 +35,7 @@
 
 #include <KAboutData>
 #include <KHelpMenu>
+#include <QScreen>
 
 namespace
 {
@@ -113,7 +114,8 @@ KDebugSettingsDialog::~KDebugSettingsDialog()
 void KDebugSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(600, 300));
+    const qreal scaleFactor = windowHandle()->screen()->devicePixelRatio();
+    windowHandle()->resize(QSize(600 * scaleFactor, 300 * scaleFactor));
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(KDebugSettingsDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
