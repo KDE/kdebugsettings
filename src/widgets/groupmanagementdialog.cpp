@@ -14,6 +14,7 @@
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QDialogButtonBox>
+#include <QScreen>
 #include <QVBoxLayout>
 #include <QWindow>
 
@@ -48,7 +49,8 @@ GroupManagementDialog::~GroupManagementDialog()
 void GroupManagementDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(400, 300));
+    const qreal scaleFactor = windowHandle()->screen()->devicePixelRatio();
+    windowHandle()->resize(QSize(400 * scaleFactor, 300 * scaleFactor));
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myGroupManagementDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
