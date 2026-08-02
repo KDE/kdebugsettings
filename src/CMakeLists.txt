@@ -5,7 +5,6 @@ add_subdirectory(core)
 add_subdirectory(apps)
 add_subdirectory(data)
 add_subdirectory(widgets)
-add_subdirectory(quickapps)
 add_subdirectory(kcm)
 
 # Selenium GUI tests
