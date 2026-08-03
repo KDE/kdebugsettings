@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-01 00:52+0000\n"
+"POT-Creation-Date: 2026-08-03 00:46+0000\n"
 "PO-Revision-Date: 2020-05-04 11:03+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:44
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Silumisseadistuste seadistamine"
@@ -33,21 +33,19 @@ msgstr "Silumisseadistuste seadistamine"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-2020: kdebugsettingsi autorid"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
+#: src/apps/main.cpp:49
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "Hooldaja"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
-#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Silumisrežiimi ei saa muuta"
@@ -158,14 +156,14 @@ msgstr "Kriitilised teated"
 msgid "No Debug Messages"
 msgstr "Silumisteated puuduvad"
 
-#: src/kcm/ui/CustomRulesPage.qml:14 src/quickapps/qml/CustomRulesPage.qml:14
+#: src/kcm/ui/CustomRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "Custom Rules"
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Kohandatud reeglid"
 
-#: src/kcm/ui/CustomRulesPage.qml:70 src/quickapps/qml/CustomRulesPage.qml:70
+#: src/kcm/ui/CustomRulesPage.qml:70
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
@@ -173,7 +171,7 @@ msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Kohandatud reegli muutmine"
 
-#: src/kcm/ui/CustomRulesPage.qml:82 src/quickapps/qml/CustomRulesPage.qml:82
+#: src/kcm/ui/CustomRulesPage.qml:82
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
@@ -181,21 +179,21 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Kohandatud reegli muutmine"
 
-#: src/kcm/ui/CustomRulesPage.qml:93 src/quickapps/qml/CustomRulesPage.qml:93
+#: src/kcm/ui/CustomRulesPage.qml:93
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Eemalda..."
 
-#: src/kcm/ui/CustomRulesPage.qml:101 src/quickapps/qml/CustomRulesPage.qml:101
+#: src/kcm/ui/CustomRulesPage.qml:101
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Eemalda..."
 
-#: src/kcm/ui/CustomRulesPage.qml:102 src/quickapps/qml/CustomRulesPage.qml:102
+#: src/kcm/ui/CustomRulesPage.qml:102
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these %1 rules?"
@@ -203,7 +201,6 @@ msgid "Are you sure you want to remove rule ?"
 msgstr "Kas eemaldada see reegel?"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
@@ -212,7 +209,6 @@ msgid "Edit Custom Rule"
 msgstr "Kohandatud reegli muutmine"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
@@ -221,7 +217,6 @@ msgid "Create Custom Rule"
 msgstr "Kohandatud reegli muutmine"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:29
-#: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, fuzzy, kde-format
 #| msgid "Save As"
 msgctxt "@label:button"
@@ -229,7 +224,6 @@ msgid "Save"
 msgstr "Salvestamine"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
-#: src/quickapps/qml/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, fuzzy, kde-format
 #| msgid "Category:"
@@ -238,7 +232,6 @@ msgid "Category:"
 msgstr "Kategooria:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:51
-#: src/quickapps/qml/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, fuzzy, kde-format
 #| msgid "Type:"
@@ -247,7 +240,6 @@ msgid "Type:"
 msgstr "Tüüp:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:62
-#: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, fuzzy, kde-format
 #| msgid "Enable"
 msgctxt "@label:textbox"
@@ -255,7 +247,6 @@ msgid "Enabled"
 msgstr "Lubatud"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
-#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, fuzzy, kde-format
 #| msgid "Rules Settings With Environment Variable"
 msgctxt "@title"
@@ -263,7 +254,6 @@ msgid "Rules Settings with Environment Variable"
 msgstr "Reeglite seadistused keskkonnamuutujaga"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
-#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
 msgid ""
@@ -272,77 +262,32 @@ msgstr ""
 "Keskkonnamuutujas \"QT_LOGGING_RULES\" pole defineeritud ühtegi reeglit."
 
 #: src/kcm/ui/KDEApplicationRulesPage.qml:14
-#: src/quickapps/qml/KDEApplicationRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "KDE rakendus"
 
-#: src/kcm/ui/main.qml:19 src/quickapps/qml/Main.qml:28
+#: src/kcm/ui/main.qml:19
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "KDE rakendus"
 
-#: src/kcm/ui/main.qml:26 src/quickapps/qml/Main.qml:35
+#: src/kcm/ui/main.qml:26
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "Kategooriate lisamine"
 
-#: src/kcm/ui/main.qml:33 src/quickapps/qml/Main.qml:42
+#: src/kcm/ui/main.qml:33
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "Kategooriate lisamine"
-
-#: src/quickapps/main.cpp:66
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2020 kdebugsettings authors"
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "(c) 2015-2020: kdebugsettingsi autorid"
-
-#: src/quickapps/qml/GlobalMenu.qml:10
-#, kde-format
-msgctxt "@item:inmenu"
-msgid "Help"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:51
-#, kde-format
-msgctxt "@action opens about app page"
-msgid "About"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:61
-#, kde-format
-msgctxt "@action"
-msgid "Open Handbook"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:74
-#, kde-format
-msgctxt "@menu-action"
-msgid "Quit"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:82
-#, fuzzy, kde-format
-#| msgid "Save As"
-msgctxt "@menu-action"
-msgid "Save"
-msgstr "Salvestamine"
-
-#: src/quickapps/qml/MainPage.qml:27
-#, fuzzy, kde-format
-#| msgid "Configure debug settings"
-msgctxt "@title"
-msgid "Welcome to kdebugsettings"
-msgstr "Silumisseadistuste seadistamine"
 
 #: src/widgets/categorywarning.cpp:16
 #, fuzzy, kde-format
@@ -682,6 +627,23 @@ msgstr "Salvesta kui..."
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Salvesta kui..."
+
+#, fuzzy
+#~| msgid "(c) 2015-2020 kdebugsettings authors"
+#~ msgid "(c) 2023-%1 kdebugsettings authors"
+#~ msgstr "(c) 2015-2020: kdebugsettingsi autorid"
+
+#, fuzzy
+#~| msgid "Save As"
+#~ msgctxt "@menu-action"
+#~ msgid "Save"
+#~ msgstr "Salvestamine"
+
+#, fuzzy
+#~| msgid "Configure debug settings"
+#~ msgctxt "@title"
+#~ msgid "Welcome to kdebugsettings"
+#~ msgstr "Silumisseadistuste seadistamine"
 
 #, fuzzy
 #~| msgid "Category:"

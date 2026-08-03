@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-01 00:52+0000\n"
+"POT-Creation-Date: 2026-08-03 00:46+0000\n"
 "PO-Revision-Date: 2024-10-03 21:39+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: src/apps/main.cpp:44 src/quickapps/main.cpp:62
+#: src/apps/main.cpp:44
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46 src/quickapps/main.cpp:64
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hibakeresési beállítások módosítása"
@@ -33,20 +33,18 @@ msgstr "Hibakeresési beállítások módosítása"
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© A kdebugsettings szerzői, 2015-%1."
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
+#: src/apps/main.cpp:49
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49 src/quickapps/main.cpp:67
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
 #: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
-#: src/quickapps/main.cpp:88 src/quickapps/main.cpp:98
-#: src/quickapps/main.cpp:109
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Lehetetlen módosítani a hibakeresési módot"
@@ -157,14 +155,14 @@ msgstr "Kritikus üzenetek"
 msgid "No Debug Messages"
 msgstr "Nincsenek hibakeresési üzenetek"
 
-#: src/kcm/ui/CustomRulesPage.qml:14 src/quickapps/qml/CustomRulesPage.qml:14
+#: src/kcm/ui/CustomRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "Custom Rules"
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Saját szabályok"
 
-#: src/kcm/ui/CustomRulesPage.qml:70 src/quickapps/qml/CustomRulesPage.qml:70
+#: src/kcm/ui/CustomRulesPage.qml:70
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Add Rule…"
@@ -172,7 +170,7 @@ msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Szabály hozzáadása…"
 
-#: src/kcm/ui/CustomRulesPage.qml:82 src/quickapps/qml/CustomRulesPage.qml:82
+#: src/kcm/ui/CustomRulesPage.qml:82
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Edit Rule"
@@ -180,7 +178,7 @@ msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
 msgstr "Szabály szerkesztése"
 
-#: src/kcm/ui/CustomRulesPage.qml:93 src/quickapps/qml/CustomRulesPage.qml:93
+#: src/kcm/ui/CustomRulesPage.qml:93
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -188,7 +186,7 @@ msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Szabály eltávolítása"
 
-#: src/kcm/ui/CustomRulesPage.qml:101 src/quickapps/qml/CustomRulesPage.qml:101
+#: src/kcm/ui/CustomRulesPage.qml:101
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 #| msgid_plural "Remove Rules"
@@ -196,7 +194,7 @@ msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Szabály eltávolítása"
 
-#: src/kcm/ui/CustomRulesPage.qml:102 src/quickapps/qml/CustomRulesPage.qml:102
+#: src/kcm/ui/CustomRulesPage.qml:102
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these %1 rules?"
@@ -204,7 +202,6 @@ msgid "Are you sure you want to remove rule ?"
 msgstr "Szeretné eltávolítani ezt a szabályt?"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
@@ -213,7 +210,6 @@ msgid "Edit Custom Rule"
 msgstr "Egyéni szabály szerkesztése"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#: src/quickapps/qml/EditCustomRuleDialog.qml:11
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Edit custom rule"
@@ -222,7 +218,6 @@ msgid "Create Custom Rule"
 msgstr "Egyéni szabály szerkesztése"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:29
-#: src/quickapps/qml/EditCustomRuleDialog.qml:29
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Save As"
@@ -231,7 +226,6 @@ msgid "Save"
 msgstr "Mentés másként"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
-#: src/quickapps/qml/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
@@ -239,7 +233,6 @@ msgid "Category:"
 msgstr "Kategória:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:51
-#: src/quickapps/qml/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
 msgctxt "@label:textbox"
@@ -247,7 +240,6 @@ msgid "Type:"
 msgstr "Típus:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:62
-#: src/quickapps/qml/EditCustomRuleDialog.qml:62
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enable"
@@ -256,7 +248,6 @@ msgid "Enabled"
 msgstr "Engedélyezés"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
-#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:12
 #, fuzzy, kde-format
 #| msgid "Rules Settings With Environment Variable"
 msgctxt "@title"
@@ -264,7 +255,6 @@ msgid "Rules Settings with Environment Variable"
 msgstr "Szabálybeállítások környezeti változóval"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
-#: src/quickapps/qml/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
 msgid ""
@@ -272,78 +262,32 @@ msgid ""
 msgstr "Nincs szabály definiálva a „QT_LOGGING_RULES” környezeti változóban."
 
 #: src/kcm/ui/KDEApplicationRulesPage.qml:14
-#: src/quickapps/qml/KDEApplicationRulesPage.qml:14
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "KDE alkalmazás"
 
-#: src/kcm/ui/main.qml:19 src/quickapps/qml/Main.qml:28
+#: src/kcm/ui/main.qml:19
 #, fuzzy, kde-format
 #| msgid "KDE Application"
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "KDE alkalmazás"
 
-#: src/kcm/ui/main.qml:26 src/quickapps/qml/Main.qml:35
+#: src/kcm/ui/main.qml:26
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "Kategóriák beszúrása"
 
-#: src/kcm/ui/main.qml:33 src/quickapps/qml/Main.qml:42
+#: src/kcm/ui/main.qml:33
 #, fuzzy, kde-format
 #| msgid "Insert Categories"
 msgctxt "@action"
 msgid "Show Environment Categories"
 msgstr "Kategóriák beszúrása"
-
-#: src/quickapps/main.cpp:66
-#, fuzzy, kde-format
-#| msgid "(c) 2015-%1 kdebugsettings authors"
-msgid "(c) 2023-%1 kdebugsettings authors"
-msgstr "© A kdebugsettings szerzői, 2015-%1."
-
-#: src/quickapps/qml/GlobalMenu.qml:10
-#, kde-format
-msgctxt "@item:inmenu"
-msgid "Help"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:51
-#, kde-format
-msgctxt "@action opens about app page"
-msgid "About"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:61
-#, kde-format
-msgctxt "@action"
-msgid "Open Handbook"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:74
-#, kde-format
-msgctxt "@menu-action"
-msgid "Quit"
-msgstr ""
-
-#: src/quickapps/qml/Main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Save As"
-msgctxt "@menu-action"
-msgid "Save"
-msgstr "Mentés másként"
-
-#: src/quickapps/qml/MainPage.qml:27
-#, fuzzy, kde-format
-#| msgid "Configure debug settings"
-msgctxt "@title"
-msgid "Welcome to kdebugsettings"
-msgstr "Hibakeresési beállítások módosítása"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -653,6 +597,24 @@ msgstr "Mentés fájlként…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Mentés csoportként…"
+
+#, fuzzy
+#~| msgid "(c) 2015-%1 kdebugsettings authors"
+#~ msgid "(c) 2023-%1 kdebugsettings authors"
+#~ msgstr "© A kdebugsettings szerzői, 2015-%1."
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Save As"
+#~ msgctxt "@menu-action"
+#~ msgid "Save"
+#~ msgstr "Mentés másként"
+
+#, fuzzy
+#~| msgid "Configure debug settings"
+#~ msgctxt "@title"
+#~ msgid "Welcome to kdebugsettings"
+#~ msgstr "Hibakeresési beállítások módosítása"
 
 #, fuzzy
 #~| msgctxt "@label:textbox"
