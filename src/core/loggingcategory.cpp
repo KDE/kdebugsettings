@@ -101,12 +101,12 @@ QString LoggingCategory::createRule() const
 
 QDebug operator<<(QDebug d, const LoggingCategory &cat)
 {
-    d << "customcategories cat: " << cat.description;
-    d << "logname: " << cat.categoryName;
-    d << "enabled: " << cat.enabled;
-    d << "type: " << cat.loggingType;
-    d << "identifier: " << cat.identifierName;
-    d << "default category: " << cat.defaultSeverityType;
+    d.space() << "customcategories cat: " << cat.description;
+    d.space() << "logname: " << cat.categoryName;
+    d.space() << "enabled: " << cat.enabled;
+    d.space() << "type: " << cat.loggingType;
+    d.space() << "identifier: " << cat.identifierName;
+    d.space() << "default category: " << cat.defaultSeverityType;
     return d;
 }
 
