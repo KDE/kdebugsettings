@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-03 00:46+0000\n"
-"PO-Revision-Date: 2026-06-22 18:49+0200\n"
+"PO-Revision-Date: 2026-08-03 19:42+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -158,74 +158,57 @@ msgid "No Debug Messages"
 msgstr "Ingen feilsøkingsmeldingar"
 
 #: src/kcm/ui/CustomRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Tilpassa reglar"
 
 #: src/kcm/ui/CustomRulesPage.qml:70
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "Legg til regel …"
 
 #: src/kcm/ui/CustomRulesPage.qml:82
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
-msgstr "Rediger regel"
+msgstr "Rediger regel …"
 
 #: src/kcm/ui/CustomRulesPage.qml:93
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "Fjern regel"
 
 #: src/kcm/ui/CustomRulesPage.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "Fjern regel"
 
 #: src/kcm/ui/CustomRulesPage.qml:102
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this rule?"
-#| msgid_plural "Do you want to remove these %1 rules?"
+#, kde-format
 msgid "Are you sure you want to remove rule ?"
-msgstr "Er du sikker på du vil fjerna denne regelen?"
+msgstr "Er du sikker på du vil fjerna regelen?"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "Rediger tilpassa regel"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
-msgstr "Rediger tilpassa regel"
+msgstr "Lag tilpassa regel"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Save As"
+#, kde-format
 msgctxt "@label:button"
 msgid "Save"
-msgstr "Lagra som"
+msgstr "Lagra"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
@@ -242,16 +225,13 @@ msgid "Type:"
 msgstr "Type:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
-msgstr "Slå på"
+msgstr "Slått på"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
-#, fuzzy, kde-format
-#| msgid "Rules Settings With Environment Variable"
+#, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "Regeldefinisjonar med miljøvariabel"
@@ -264,32 +244,28 @@ msgid ""
 msgstr "Ingen reglar er definerte i miljøvariabelen QT_LOGGING_RULES."
 
 #: src/kcm/ui/KDEApplicationRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
-msgstr "KDE-program"
+msgstr "KDE-programreglar"
 
 #: src/kcm/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
-msgstr "KDE-program"
+msgstr "Vis KDE-programkategoriar"
 
 #: src/kcm/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
-msgstr "Set inn kategoriar"
+msgstr "Vis tilpassa kategoriar"
 
 #: src/kcm/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
-msgstr "Set inn kategoriar"
+msgstr "Vis miljøkategoriar"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -599,21 +575,3 @@ msgstr "Lagra som fil …"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Lagra som gruppe …"
-
-#, fuzzy
-#~| msgid "(c) 2015-%1 kdebugsettings authors"
-#~ msgid "(c) 2023-%1 kdebugsettings authors"
-#~ msgstr "© 2015–%1 kdebugsettings-utviklarane"
-
-#, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Save As"
-#~ msgctxt "@menu-action"
-#~ msgid "Save"
-#~ msgstr "Lagra som"
-
-#, fuzzy
-#~| msgid "Configure debug settings"
-#~ msgctxt "@title"
-#~ msgid "Welcome to kdebugsettings"
-#~ msgstr "Set opp feilsøkingsinnstillingar"
