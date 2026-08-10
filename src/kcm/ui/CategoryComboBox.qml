@@ -22,8 +22,8 @@ QQC2.ComboBox {
         }
     }
 
-    onCurrentIndexChanged: {
-        if (syncLoggingTypeFromSelection && currentIndex >= 0 && currentValue !== undefined) {
+    onActivated: {
+        if (syncLoggingTypeFromSelection) {
             loggingType = currentValue
         }
     }
