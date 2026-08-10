@@ -15,6 +15,5 @@ public:
     explicit KCMDebugSettingsQml(QObject *parent, const KPluginMetaData &metaData);
     ~KCMDebugSettingsQml() override;
 
-    void load() override;
     void save() override;
 };

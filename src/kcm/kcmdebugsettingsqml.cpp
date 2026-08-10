@@ -28,15 +28,12 @@ KCMDebugSettingsQml::KCMDebugSettingsQml(QObject *parent, const KPluginMetaData 
     connect(&LoggingManager::self(), &LoggingManager::customLoggingChanged, this, [this]() {
         setNeedsSave(true);
     });
+    setButtons(Apply);
 }
 
 KCMDebugSettingsQml::~KCMDebugSettingsQml() = default;
 
-void KCMDebugSettingsQml::load()
-{
-    // Nothing, it loads from LoggingManager
-}
-
+// For info loading is done in LoggingManager
 void KCMDebugSettingsQml::save()
 {
     if (!LoggingManager::self().saveInQtLogging()) {
