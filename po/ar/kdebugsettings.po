@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-03 00:46+0000\n"
-"PO-Revision-Date: 2025-08-03 23:13+0400\n"
+"PO-Revision-Date: 2026-08-10 15:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: src/apps/main.cpp:44
 #, kde-format
@@ -155,74 +155,57 @@ msgid "No Debug Messages"
 msgstr "لا رسائل تنقيح"
 
 #: src/kcm/ui/CustomRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "قواعد مخصّصة"
 
 #: src/kcm/ui/CustomRulesPage.qml:70
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "أضِف قاعدة..."
 
 #: src/kcm/ui/CustomRulesPage.qml:82
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
-msgstr "حرر القاعدة"
+msgstr "حرر القاعدة…"
 
 #: src/kcm/ui/CustomRulesPage.qml:93
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "أزِل القاعدة"
 
 #: src/kcm/ui/CustomRulesPage.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "أزِل القاعدة"
 
 #: src/kcm/ui/CustomRulesPage.qml:102
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this rule?"
-#| msgid_plural "Do you want to remove these %1 rules?"
+#, kde-format
 msgid "Are you sure you want to remove rule ?"
 msgstr "أتريد إزالة هذه القاعدة؟"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "حرّر القاعدة المخصّصة"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
-msgstr "حرّر القاعدة المخصّصة"
+msgstr "أنشئ قاعدة مخصصة"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Save As"
+#, kde-format
 msgctxt "@label:button"
 msgid "Save"
-msgstr "احفظ ك‍"
+msgstr "احفظ"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:28
@@ -239,16 +222,13 @@ msgid "Type:"
 msgstr "النّوع:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
-msgstr "مكّن"
+msgstr "ممكّن"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
-#, fuzzy, kde-format
-#| msgid "Rules Settings With Environment Variable"
+#, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "إعدادات القواعد مع متغير البيئة"
@@ -261,32 +241,28 @@ msgid ""
 msgstr "لم تُعرّف أي قواعد في متغير البيئة \"QT_LOGGING_RULES\"."
 
 #: src/kcm/ui/KDEApplicationRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
-msgstr "تطبيق كِيدِي"
+msgstr "قواعد تطبيق كِيدِي"
 
 #: src/kcm/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
-msgstr "تطبيق كِيدِي"
+msgstr "اعرض فئات تطبيق كيدي"
 
 #: src/kcm/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
-msgstr "أدرج فئات"
+msgstr "اعرض الفئات المخصصة"
 
 #: src/kcm/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
-msgstr "أدرج فئات"
+msgstr "اعرض الفئات البيئة"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
