@@ -176,11 +176,10 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
     if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
-        QString data;
         QTextStream ts(&file);
         ts.setEncoding(QStringConverter::Encoding::Latin1);
         while (!ts.atEnd()) {
-            data = ts.readLine().simplified();
+            const QString data = ts.readLine().simplified();
             const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
             if (category.isValid()) {
                 bool needToAppend = true;
@@ -210,11 +209,10 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
     if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
-        QString data;
         QTextStream ts(&file);
         ts.setEncoding(QStringConverter::Encoding::Latin1);
         while (!ts.atEnd()) {
-            data = ts.readLine().simplified();
+            const QString data = ts.readLine().simplified();
             const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
             if (category.isValid()) {
                 if (checkCategoryList) {
