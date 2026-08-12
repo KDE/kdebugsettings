@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:46+0000\n"
+"POT-Creation-Date: 2026-08-12 00:51+0000\n"
 "PO-Revision-Date: 2023-05-31 10:59+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -78,32 +78,32 @@ msgstr ""
 "Indique o nome da categoria de registo onde deseja mudar o modo de depuração "
 "(na consola)"
 
-#: src/core/kdebugsettingsutil.cpp:413
+#: src/core/kdebugsettingsutil.cpp:411
 #, kde-format
 msgid "Full Debug"
 msgstr "Depuração Completa"
 
-#: src/core/kdebugsettingsutil.cpp:416
+#: src/core/kdebugsettingsutil.cpp:414
 #, kde-format
 msgid "Info"
 msgstr "Informação"
 
-#: src/core/kdebugsettingsutil.cpp:419
+#: src/core/kdebugsettingsutil.cpp:417
 #, kde-format
 msgid "Warning"
 msgstr "Aviso"
 
-#: src/core/kdebugsettingsutil.cpp:422
+#: src/core/kdebugsettingsutil.cpp:420
 #, kde-format
 msgid "Critical"
 msgstr "Crítico"
 
-#: src/core/kdebugsettingsutil.cpp:425
+#: src/core/kdebugsettingsutil.cpp:423
 #, kde-format
 msgid "Off"
 msgstr "Desligado"
 
-#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:426 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Indefinido"

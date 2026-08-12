@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:46+0000\n"
+"POT-Creation-Date: 2026-08-12 00:51+0000\n"
 "PO-Revision-Date: 2024-10-03 21:39+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -80,32 +80,32 @@ msgstr ""
 "Adja meg a naplózási kategória nevét, amelynek a hibakeresési módját "
 "módosítani szeretné (konzolban)"
 
-#: src/core/kdebugsettingsutil.cpp:413
+#: src/core/kdebugsettingsutil.cpp:411
 #, kde-format
 msgid "Full Debug"
 msgstr "Teljes hibakeresés"
 
-#: src/core/kdebugsettingsutil.cpp:416
+#: src/core/kdebugsettingsutil.cpp:414
 #, kde-format
 msgid "Info"
 msgstr "Információ"
 
-#: src/core/kdebugsettingsutil.cpp:419
+#: src/core/kdebugsettingsutil.cpp:417
 #, kde-format
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: src/core/kdebugsettingsutil.cpp:422
+#: src/core/kdebugsettingsutil.cpp:420
 #, kde-format
 msgid "Critical"
 msgstr "Kritikus"
 
-#: src/core/kdebugsettingsutil.cpp:425
+#: src/core/kdebugsettingsutil.cpp:423
 #, kde-format
 msgid "Off"
 msgstr "Ki"
 
-#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:426 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Nem definiált"
