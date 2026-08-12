@@ -3,6 +3,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Configure Debug Categories Settings",
+        "Description[ar]": "اضبط إعدادات فئات التّنقيح",
         "Description[ca@valencia]": "Configura els paràmetres de les categories de depuració",
         "Description[ca]": "Configura els paràmetres de les categories de depuració",
         "Description[es]": "Configurar las preferencias de categorías de depuración",
@@ -19,6 +20,7 @@
         "Description[zh_TW]": "調整除錯分類設定",
         "Icon": "debug-run",
         "Name": "Debug Settings",
+        "Name[ar]": "إعدادات التنقّيح",
         "Name[ca@valencia]": "Configureu la depuració",
         "Name[ca]": "Configuració de la depuració",
         "Name[es]": "Preferencias de depuración",
@@ -35,6 +37,7 @@
         "Name[zh_TW]": "除錯設定"
     },
     "X-KDE-Keywords": "debug,categories",
+    "X-KDE-Keywords[ar]": "تنقيح,فئات",
     "X-KDE-Keywords[ca@valencia]": "depuració,categories",
     "X-KDE-Keywords[ca]": "depuració,categories",
     "X-KDE-Keywords[es]": "depuración,categorías",
