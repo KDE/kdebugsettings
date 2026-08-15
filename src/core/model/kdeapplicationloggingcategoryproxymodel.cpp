@@ -65,9 +65,17 @@ void KDEApplicationLoggingCategoryProxyModel::setFilterText(const QString &newFi
 LoggingCategory::List KDEApplicationLoggingCategoryProxyModel::rules(bool forceSavingAllRules) const
 {
     LoggingCategory::List lst;
-    for (int i = 0; i < rowCount(); ++i) {
-        const QModelIndex newModelIndex = mapToSource(index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
-        auto cat = newModelIndex.data().value<LoggingCategory>();
+    const QAbstractItemModel *model = sourceModel();
+    if (!model) {
+        return lst;
+    }
+    // Iterate over the source model and not over the proxy: the rules of the
+    // categories currently hidden by the filter must be saved too, otherwise
+    // saving while a search is in progress would drop all of them.
+    const int rows = model->rowCount();
+    lst.reserve(rows);
+    for (int i = 0; i < rows; ++i) {
+        auto cat = model->index(i, KDEApplicationLoggingCategoryModel::CategoryRole).data().value<LoggingCategory>();
         if (forceSavingAllRules || (cat.loggingType != cat.defaultSeverityType)) {
             cat.enabled = false;
             if (cat.isValid()) {
