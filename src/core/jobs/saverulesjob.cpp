@@ -47,16 +47,23 @@ bool SaveRulesJob::start()
     QStringList listExcludeRules;
     for (const LoggingCategory &cat : std::as_const(mListCustom)) {
         const QString rule = cat.createCustomRule();
+        if (rule.isEmpty()) {
+            continue;
+        }
         if (rule.startsWith("*="_L1)) {
-            out << rule + u'\n';
+            out << rule;
         } else {
-            listExcludeRules << rule + u'\n';
+            listExcludeRules << rule;
         }
     }
 
     // Then the configured KDE rules.
     for (const LoggingCategory &cat : std::as_const(mListKde)) {
-        out << cat.createRule() + u'\n';
+        const QString rule = cat.createCustomRule();
+        if (rule.isEmpty()) {
+            continue;
+        }
+        out << rule;
     }
 
     // Finally the user's custom rules which will not override
