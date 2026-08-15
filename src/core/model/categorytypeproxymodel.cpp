@@ -35,8 +35,10 @@ bool CategoryTypeProxyModel::showOffType() const
 void CategoryTypeProxyModel::setShowOffType(bool newShowOffType)
 {
     if (mShowOffType != newShowOffType) {
+        beginFilterChange();
         mShowOffType = newShowOffType;
         Q_EMIT showOffTypeChanged();
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
     }
 }
 
