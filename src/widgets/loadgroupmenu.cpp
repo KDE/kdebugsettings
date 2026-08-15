@@ -65,6 +65,7 @@ void LoadGroupMenu::init()
         setEnabled(false);
         return;
     }
+    setEnabled(true);
     if (KDebugSettingsUtil::hasWritableGroups()) {
         addSeparator();
         QAction *manageGroup = addAction(i18nc("@action", "Manage Group"));
