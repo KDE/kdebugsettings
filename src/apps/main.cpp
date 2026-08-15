@@ -69,19 +69,21 @@ int main(int argc, char **argv)
         job.setDebugMode(u"Full"_s);
         job.setWithoutArguments(true);
         if (!job.start()) {
-            std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+            std::cerr << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+            return 1;
         }
 
-        return 1;
+        return 0;
     }
     if (parser.isSet(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DisableFullDebug))) {
         ChangeDebugModeJob job;
         job.setDebugMode(u"Off"_s);
         job.setWithoutArguments(true);
         if (!job.start()) {
-            std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+            std::cerr << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+            return 1;
         }
-        return 1;
+        return 0;
     }
     const QString changeModeValue =
         parser.value(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DebugMode));
@@ -90,9 +92,10 @@ int main(int argc, char **argv)
         job.setDebugMode(changeModeValue);
         job.setLoggingCategoriesName(parser.positionalArguments());
         if (!job.start()) {
-            std::cout << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+            std::cerr << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+            return 1;
         }
-        return 1;
+        return 0;
     } else {
 #if WITH_DBUS
         KDBusService service(KDBusService::Unique);
@@ -113,7 +116,7 @@ int main(int argc, char **argv)
             QTimer::singleShot(std::chrono::milliseconds(250), &app, &QCoreApplication::quit);
         }
         dialog->show();
-        int result = app.exec();
+        const int result = app.exec();
         delete dialog;
         return result;
     }
