@@ -20,7 +20,6 @@ KDebugSettingsLoadingCategories::~KDebugSettingsLoadingCategories() = default;
 
 void KDebugSettingsLoadingCategories::readQtLoggingFile()
 {
-    mCategoriesList.clear();
     const QString envPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, u"QtProject/qtlogging.ini"_s);
     if (!envPath.isEmpty()) {
         readCategoriesFiles(envPath);
@@ -32,6 +31,11 @@ void KDebugSettingsLoadingCategories::readQtLoggingFile()
 
 void KDebugSettingsLoadingCategories::readCategoriesFiles(const QString &path)
 {
+    // Clear here and not in readQtLoggingFile(): this method is also called
+    // directly each time a group or a rules file is loaded, otherwise the
+    // categories would be appended again at each load.
+    mCategoriesList.clear();
+
     // KDE debug categories area
     const QString confAreasFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"qlogging-categories6/kde.categories"_s);
     if (!confAreasFile.isEmpty()) {
