@@ -22,6 +22,15 @@ public:
         LastColumn = LoggingTypeStrRole,
     };
 
+    // The enum above is used as a column index by the widgets views, so the QML
+    // roles are exposed in the user-role range to avoid colliding with the Qt
+    // built-in roles. Use it whenever a role id is expected (roleNames(), data()
+    // or the dataChanged() roles) and never the raw enum value.
+    [[nodiscard]] static constexpr int qmlRole(CategoryRoles role)
+    {
+        return static_cast<int>(Qt::UserRole) + static_cast<int>(role) + 1;
+    }
+
     explicit KDEApplicationLoggingCategoryModel(QObject *parent = nullptr);
     ~KDEApplicationLoggingCategoryModel() override;
 

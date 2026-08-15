@@ -7,13 +7,15 @@
 #include "kdeapplicationloggingcategorymodeltest.h"
 #include "model/kdeapplicationloggingcategorymodel.h"
 
+#include <QSignalSpy>
 #include <QTest>
 
 namespace
 {
+// Short alias for the call sites below, the value itself comes from the model.
 constexpr int qmlRole(KDEApplicationLoggingCategoryModel::CategoryRoles role)
 {
-    return static_cast<int>(Qt::UserRole) + static_cast<int>(role) + 1;
+    return KDEApplicationLoggingCategoryModel::qmlRole(role);
 }
 }
 
@@ -75,6 +77,35 @@ void KDEApplicationLoggingCategoryModelTest::shouldReturnExpectedDataForWidgetsA
 
     // Role value 0 is Qt::DisplayRole, not the QML "description" role.
     QCOMPARE(model.data(descriptionIndex, KDEApplicationLoggingCategoryModel::DescriptionRole).toString(), QStringLiteral("desc"));
+}
+
+void KDEApplicationLoggingCategoryModelTest::shouldNotifyTheWholeRowOnTypeChange()
+{
+    KDEApplicationLoggingCategoryModel model;
+    LoggingCategory cat(QStringLiteral("desc"), QStringLiteral("org.kde.test"), LoggingCategory::Warning, QStringLiteral("ident"), true);
+    model.setLoggingCategories({cat});
+
+    QSignalSpy spy(&model, &QAbstractItemModel::dataChanged);
+    const QModelIndex typeIndex = model.index(0, KDEApplicationLoggingCategoryModel::LoggingTypeRole);
+    QVERIFY(model.setData(typeIndex, QVariant::fromValue(LoggingCategory::Critical), Qt::EditRole));
+    QCOMPARE(spy.count(), 1);
+
+    const QModelIndex topLeft = spy.at(0).at(0).toModelIndex();
+    const QModelIndex bottomRight = spy.at(0).at(1).toModelIndex();
+    const QList<int> roles = spy.at(0).at(2).value<QList<int>>();
+
+    // The first column must be included: QML delegates only read column 0.
+    QCOMPARE(topLeft.column(), static_cast<int>(KDEApplicationLoggingCategoryModel::DescriptionRole));
+    QCOMPARE(bottomRight.column(), static_cast<int>(KDEApplicationLoggingCategoryModel::LastColumn));
+    QCOMPARE(topLeft.row(), 0);
+    QCOMPARE(bottomRight.row(), 0);
+
+    // Real role ids must be advertised and not the column enum values, otherwise
+    // the views are told that unrelated roles changed.
+    QVERIFY(roles.contains(Qt::DisplayRole));
+    QVERIFY(roles.contains(qmlRole(KDEApplicationLoggingCategoryModel::LoggingTypeRole)));
+    QVERIFY(roles.contains(qmlRole(KDEApplicationLoggingCategoryModel::LoggingTypeStrRole)));
+    QVERIFY(!roles.contains(Qt::DecorationRole));
 }
 
 #include "moc_kdeapplicationloggingcategorymodeltest.cpp"

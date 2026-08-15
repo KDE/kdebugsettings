@@ -8,14 +8,6 @@
 #include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsutil.h"
 
-namespace
-{
-constexpr int qmlRole(KDEApplicationLoggingCategoryModel::CategoryRoles role)
-{
-    return static_cast<int>(Qt::UserRole) + static_cast<int>(role) + 1;
-}
-}
-
 KDEApplicationLoggingCategoryModel::KDEApplicationLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
@@ -94,9 +86,12 @@ bool KDEApplicationLoggingCategoryModel::setData(const QModelIndex &modelIndex, 
     case LoggingTypeRole: {
         LoggingCategory &cat = mLoggingCategories[idx];
         cat.loggingType = value.value<LoggingCategory::LoggingType>();
-        const QModelIndex topLeft = index(modelIndex.row(), LoggingTypeRole);
-        const QModelIndex bottomRight = index(modelIndex.row(), LoggingTypeStrRole);
-        Q_EMIT dataChanged(topLeft, bottomRight, {LoggingTypeRole});
+        // Notify the whole row: the widgets views read the text through
+        // Qt::DisplayRole on the LoggingTypeStrRole column, while QML reads the
+        // dedicated user roles on the first column only.
+        const QModelIndex topLeft = index(modelIndex.row(), DescriptionRole);
+        const QModelIndex bottomRight = index(modelIndex.row(), LastColumn);
+        Q_EMIT dataChanged(topLeft, bottomRight, {Qt::DisplayRole, qmlRole(LoggingTypeRole), qmlRole(LoggingTypeStrRole)});
         return true;
     }
     default:

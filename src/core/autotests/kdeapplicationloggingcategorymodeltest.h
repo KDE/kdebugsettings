@@ -18,4 +18,5 @@ public:
 private Q_SLOTS:
     void shouldExposeUserRolesForQml();
     void shouldReturnExpectedDataForWidgetsAndQml();
+    void shouldNotifyTheWholeRowOnTypeChange();
 };

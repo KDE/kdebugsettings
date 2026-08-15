@@ -30,7 +30,7 @@ LoggingManager::LoggingManager(QObject *parent)
             &QAbstractItemModel::dataChanged,
             this,
             [this]([[maybe_unused]] const QModelIndex &topLeft, [[maybe_unused]] const QModelIndex &, const QList<int> &roles) {
-                if (roles.contains(KDEApplicationLoggingCategoryModel::LoggingTypeRole)) {
+                if (roles.isEmpty() || roles.contains(KDEApplicationLoggingCategoryModel::qmlRole(KDEApplicationLoggingCategoryModel::LoggingTypeRole))) {
                     Q_EMIT customLoggingChanged();
                 }
             });
