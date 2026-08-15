@@ -36,6 +36,9 @@ void ChangeDebugModeJobTest::shouldBeAbleToStart()
     job.setLoggingCategoriesName({u"foo"_s});
     QVERIFY(!job.debugMode().isEmpty());
     QVERIFY(!job.loggingCategoriesName().isEmpty());
+    QVERIFY(!job.canStart());
+
+    job.setDebugMode(u"Full"_s);
     QVERIFY(job.canStart());
 }
 
@@ -44,8 +47,10 @@ void ChangeDebugModeJobTest::shouldBeAbleToStartWithoutArgument()
     ChangeDebugModeJob job;
     QVERIFY(!job.canStart());
     job.setWithoutArguments(true);
-    QVERIFY(job.canStart());
+    QVERIFY(!job.canStart());
     job.setDebugMode(u"foo"_s);
+    QVERIFY(!job.canStart());
+    job.setDebugMode(u"Full"_s);
     QVERIFY(job.canStart());
 }
 
