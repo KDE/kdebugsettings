@@ -19,8 +19,8 @@ ChangeDebugModeJob::~ChangeDebugModeJob() = default;
 
 bool ChangeDebugModeJob::canStart() const
 {
-    if (debugModeIsValid(mDebugMode)) {
-        return true;
+    if (!debugModeIsValid(mDebugMode)) {
+        return false;
     }
     if (mWithoutArguments) {
         return true;
