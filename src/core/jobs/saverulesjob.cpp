@@ -57,9 +57,11 @@ bool SaveRulesJob::start()
         }
     }
 
-    // Then the configured KDE rules.
+    // Then the configured KDE rules. They must use createRule() and not
+    // createCustomRule(): a KDE category defines a severity threshold, so all
+    // the severities have to be written explicitly.
     for (const LoggingCategory &cat : std::as_const(mListKde)) {
-        const QString rule = cat.createCustomRule();
+        const QString rule = cat.createRule();
         if (rule.isEmpty()) {
             continue;
         }
