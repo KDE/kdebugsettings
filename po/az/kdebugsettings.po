@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:51+0000\n"
+"POT-Creation-Date: 2026-08-16 00:48+0000\n"
 "PO-Revision-Date: 2025-09-28 22:51+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Müşayətçi"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
+#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Sazlama rejimini dəyişdirmək mümkün deyil"
@@ -568,7 +568,7 @@ msgstr "Sazlama ayarları fayllarını yükləmək"
 msgid "Load Group"
 msgstr "Qrupu yükləmək"
 
-#: src/widgets/loadgroupmenu.cpp:70
+#: src/widgets/loadgroupmenu.cpp:71
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:51+0000\n"
+"POT-Creation-Date: 2026-08-16 00:48+0000\n"
 "PO-Revision-Date: 2024-07-30 17:32+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -44,7 +44,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Mantemento."
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
+#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Non é posíbel cambiar o modo de depuración"
@@ -570,7 +570,7 @@ msgstr "Cargar os ficheiros de configuración da depuración"
 msgid "Load Group"
 msgstr "Cargar un grupo"
 
-#: src/widgets/loadgroupmenu.cpp:70
+#: src/widgets/loadgroupmenu.cpp:71
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"

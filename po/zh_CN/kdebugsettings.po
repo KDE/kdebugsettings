@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:51+0000\n"
+"POT-Creation-Date: 2026-08-16 00:48+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -43,7 +43,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "维护者"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
+#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "无法更改调试模式"
@@ -538,7 +538,7 @@ msgstr "加载调试设置文件"
 msgid "Load Group"
 msgstr "加载分组"
 
-#: src/widgets/loadgroupmenu.cpp:70
+#: src/widgets/loadgroupmenu.cpp:71
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"

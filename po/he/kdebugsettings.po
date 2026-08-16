@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:51+0000\n"
+"POT-Creation-Date: 2026-08-16 00:48+0000\n"
 "PO-Revision-Date: 2026-07-28 08:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -44,7 +44,7 @@ msgstr "לורנט מונטל"
 msgid "Maintainer"
 msgstr "מתחזק"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:82 src/apps/main.cpp:93
+#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "אי אפשר לשנות את מצב ניפוי השגיאות"
@@ -547,7 +547,7 @@ msgstr "טעינת קובצי הגדרות ניפוי שגיאות"
 msgid "Load Group"
 msgstr "טעינת קבוצה"
 
-#: src/widgets/loadgroupmenu.cpp:70
+#: src/widgets/loadgroupmenu.cpp:71
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
