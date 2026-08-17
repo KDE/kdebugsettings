@@ -152,12 +152,14 @@ void CustomLoggingCategoryModel::addCategory(const QString &categoryName, bool e
     category.categoryName = categoryName;
     category.enabled = enabled;
     category.loggingType = type;
-    if (addCategory(category)) { }
+    if (!addCategory(category)) {
+        qCDebug(KDEBUGSETTINGSCORE_LOG) << " categorie already exist";
+    }
 }
 
 bool CustomLoggingCategoryModel::addCategory(const LoggingCategory &category)
 {
-    bool found = false;
+    bool added = false;
     if (category.isValid()) {
         auto it = std::find_if(mLoggingCategories.cbegin(), mLoggingCategories.cend(), [category](const LoggingCategory &cat) {
             return cat == category;
@@ -166,11 +168,10 @@ bool CustomLoggingCategoryModel::addCategory(const LoggingCategory &category)
             beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count());
             mLoggingCategories.append(category);
             endInsertRows();
-        } else {
-            found = true;
+            added = true;
         }
     }
-    return found;
+    return added;
 }
 
 LoggingCategory::List CustomLoggingCategoryModel::loggingCategories() const

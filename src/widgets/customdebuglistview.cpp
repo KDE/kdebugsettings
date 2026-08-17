@@ -129,7 +129,7 @@ void CustomDebugListView::slotAddRule()
     if (dlg->exec()) {
         const QString ruleStr = dlg->rule();
         const LoggingCategory cat = KDebugSettingsUtil::convertRuleStrToLoggingCategory(ruleStr);
-        if (mCustomLoggingCategoryModel->addCategory(cat)) {
+        if (!mCustomLoggingCategoryModel->addCategory(cat)) {
             qCDebug(KDEBUGSETTINGS_LOG) << " categorie already exist";
         }
     }
