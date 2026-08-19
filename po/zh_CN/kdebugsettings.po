@@ -566,30 +566,3 @@ msgstr "另存为文件…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "另存为分组…"
-
-#~ msgid "(c) 2023-%1 kdebugsettings authors"
-#~ msgstr "(c) 2023-%1 kdebugsettings authors"
-
-#~ msgctxt "@item:inmenu"
-#~ msgid "Help"
-#~ msgstr "帮助"
-
-#~ msgctxt "@action opens about app page"
-#~ msgid "About"
-#~ msgstr "关于"
-
-#~ msgctxt "@action"
-#~ msgid "Open Handbook"
-#~ msgstr "打开使用手册"
-
-#~ msgctxt "@menu-action"
-#~ msgid "Quit"
-#~ msgstr "退出"
-
-#~ msgctxt "@menu-action"
-#~ msgid "Save"
-#~ msgstr "保存"
-
-#~ msgctxt "@title"
-#~ msgid "Welcome to kdebugsettings"
-#~ msgstr "欢迎使用 kdebugsettings"
