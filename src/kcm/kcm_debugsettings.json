@@ -18,6 +18,7 @@
         "Description[sl]": "Konfiguriraj nastavitve kategorij razhroščevanja",
         "Description[tr]": "Hata ayıklama kategorisi ayarlarını yapılandırın",
         "Description[uk]": "Налаштовування параметрів категорій діагностики",
+        "Description[zh_CN]": "配置调试类别设置",
         "Description[zh_TW]": "調整除錯分類設定",
         "Icon": "debug-run",
         "Name": "Debug Settings",
@@ -36,6 +37,7 @@
         "Name[sl]": "Debug Settings",
         "Name[tr]": "Hata Ayıklama Ayarları",
         "Name[uk]": "Параметри діагностики",
+        "Name[zh_CN]": "调试设置",
         "Name[zh_TW]": "除錯設定"
     },
     "X-KDE-Keywords": "debug,categories",
@@ -54,6 +56,7 @@
     "X-KDE-Keywords[sl]": "razhroščevanje,kategorije",
     "X-KDE-Keywords[tr]": "hata ayıkla,kategoriler,debug,categories",
     "X-KDE-Keywords[uk]": "debug,categories,діагностика,категорії",
+    "X-KDE-Keywords[zh_CN]": "debug,categories,tiaoshi,leibie,调试,类别",
     "X-KDE-Keywords[zh_TW]": "除錯,偵錯,分類",
     "X-KDE-System-Settings-Parent-Category": "system-administration",
     "X-KDE-Weight": 70
