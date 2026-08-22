@@ -87,12 +87,12 @@ void LoggingManager::updateLoggingCategories()
     mQtKdeCategoryModel->setLoggingCategories(qtKdeCategories);
 }
 
-bool LoggingManager::saveInQtLogging()
+bool LoggingManager::saveInQtLogging() const
 {
     return saveRules(KDebugSettingsUtil::qtFileName());
 }
 
-bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules)
+bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules) const
 {
     SaveRulesJob job;
     job.setFileName(path);

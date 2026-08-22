@@ -28,7 +28,7 @@ void SaveRulesJob::setFileName(const QString &fileName)
     mFileName = fileName;
 }
 
-bool SaveRulesJob::start()
+bool SaveRulesJob::start() const
 {
     QFile qtlogging(mFileName);
     if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {

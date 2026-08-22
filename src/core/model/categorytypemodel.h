@@ -36,7 +36,7 @@ private:
         QString displayText;
         LoggingCategory::LoggingType type;
     };
-    [[nodiscard]] LIBKDEBUGSETTINGSCORE_NO_EXPORT CategoryTypeModel::CategoryInfo createCategoryInfo(LoggingCategory::LoggingType type);
+    [[nodiscard]] LIBKDEBUGSETTINGSCORE_NO_EXPORT CategoryTypeModel::CategoryInfo createCategoryInfo(LoggingCategory::LoggingType type) const;
     LIBKDEBUGSETTINGSCORE_NO_EXPORT void fillCategoryTypes();
     QList<CategoryInfo> mCategoryInfoList;
     QHash<int, QByteArray> mRoleNames;

@@ -52,7 +52,7 @@ QVariant CategoryTypeModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
-CategoryTypeModel::CategoryInfo CategoryTypeModel::createCategoryInfo(LoggingCategory::LoggingType type)
+CategoryTypeModel::CategoryInfo CategoryTypeModel::createCategoryInfo(LoggingCategory::LoggingType type) const
 {
     const CategoryTypeModel::CategoryInfo cat(KDebugSettingsUtil::convertCategoryTypeToString(type), type);
     return cat;

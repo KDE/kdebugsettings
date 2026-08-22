@@ -18,7 +18,7 @@ public:
     ChangeDebugModeJob();
     ~ChangeDebugModeJob();
 
-    [[nodiscard]] bool start();
+    [[nodiscard]] bool start() const;
 
     void setDebugMode(const QString &mode);
     [[nodiscard]] QString debugMode() const;

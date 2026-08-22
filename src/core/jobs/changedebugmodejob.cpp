@@ -31,7 +31,7 @@ bool ChangeDebugModeJob::canStart() const
     return true;
 }
 
-bool ChangeDebugModeJob::start()
+bool ChangeDebugModeJob::start() const
 {
     if (!canStart()) {
         return false;

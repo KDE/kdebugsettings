@@ -23,5 +23,5 @@ public:
     [[nodiscard]] static QString optionParserFromEnum(OptionParser e);
 
 private:
-    LIBKDEBUGSETTINGSCORE_NO_EXPORT void initializeCommandLine(QCommandLineParser *parser);
+    LIBKDEBUGSETTINGSCORE_NO_EXPORT void initializeCommandLine(QCommandLineParser *parser) const;
 };

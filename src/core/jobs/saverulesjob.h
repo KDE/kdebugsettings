@@ -20,7 +20,7 @@ public:
 
     void setFileName(const QString &fileName);
 
-    [[nodiscard]] bool start();
+    [[nodiscard]] bool start() const;
 
     [[nodiscard]] QString fileName() const;
 

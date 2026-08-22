@@ -16,7 +16,7 @@ KDebugSettingsCommandLineParser::KDebugSettingsCommandLineParser(QCommandLinePar
 
 KDebugSettingsCommandLineParser::~KDebugSettingsCommandLineParser() = default;
 
-void KDebugSettingsCommandLineParser::initializeCommandLine(QCommandLineParser *parser)
+void KDebugSettingsCommandLineParser::initializeCommandLine(QCommandLineParser *parser) const
 {
     const QCommandLineOption testModeOption(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::TestMode),
                                             i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
