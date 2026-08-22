@@ -79,7 +79,7 @@ LoggingCategory::List KDEApplicationLoggingCategoryProxyModel::rules(bool forceS
         if (forceSavingAllRules || (cat.loggingType != cat.defaultSeverityType)) {
             cat.enabled = false;
             if (cat.isValid()) {
-                lst.append(cat);
+                lst.append(std::move(cat));
             }
         }
     }

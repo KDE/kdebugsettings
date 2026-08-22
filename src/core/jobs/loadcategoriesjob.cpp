@@ -77,7 +77,7 @@ void LoadCategoriesJob::start()
                 break;
             }
         }
-        qtCategories.append(cat);
+        qtCategories.append(std::move(cat));
     }
 
     for (int i = 0; i < number; ++i) {
@@ -98,7 +98,7 @@ void LoadCategoriesJob::start()
                     tmp.defaultSeverityType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultSeverity);
                     tmp.identifierName = kdeCat.identifierName;
 
-                    mQtKdeCategories.append(tmp);
+                    mQtKdeCategories.append(std::move(tmp));
                     foundInConfigFile = true;
                     qtCategories.removeAll(cat);
                     break;
@@ -115,7 +115,7 @@ void LoadCategoriesJob::start()
             tmp.loggingType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultSeverity);
             tmp.defaultSeverityType = KDebugSettingsUtil::convertCategoryTypeFromString(kdeCat.defaultSeverity);
             tmp.identifierName = kdeCat.identifierName;
-            mQtKdeCategories.append(tmp);
+            mQtKdeCategories.append(std::move(tmp));
         }
     }
 
@@ -149,7 +149,7 @@ void LoadCategoriesJob::start()
                     break;
                 }
                 tmp.enabled = (value == KDebugSettingsUtil::LoadLoggingCategory::Enabled);
-                mCustomCategories.append(tmp);
+                mCustomCategories.append(std::move(tmp));
             }
         }
     }

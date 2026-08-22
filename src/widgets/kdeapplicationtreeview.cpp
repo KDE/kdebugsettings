@@ -57,7 +57,7 @@ void KDEApplicationTreeView::changeCategoryType(LoggingCategory::LoggingType typ
                 mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
             auto cat = index.data().value<LoggingCategory>();
             cat.loggingType = type;
-            lst.append(cat);
+            lst.append(std::move(cat));
         }
     } else {
         for (const auto &indexSelected : selected) {
@@ -68,7 +68,7 @@ void KDEApplicationTreeView::changeCategoryType(LoggingCategory::LoggingType typ
                 mKdeApplicationLoggingCategoryProxyModel->index(indexSelected.row(), KDEApplicationLoggingCategoryModel::CategoryRole));
             auto cat = index.data().value<LoggingCategory>();
             cat.loggingType = type;
-            lst.append(cat);
+            lst.append(std::move(cat));
         }
     }
     if (!lst.isEmpty()) {
@@ -105,7 +105,7 @@ void KDEApplicationTreeView::restoreToDefault()
             mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
         auto cat = index.data().value<LoggingCategory>();
         cat.loggingType = cat.defaultSeverityType;
-        lst.append(cat);
+        lst.append(std::move(cat));
     }
     if (!lst.isEmpty()) {
         mKdeApplicationLoggingCategoryModel->replaceCategories(lst);

@@ -187,7 +187,7 @@ void KDebugSettingsDialog::slotInsertCategories()
             loggingCat.categoryName = cat.categoryName;
             loggingCat.defaultSeverityType = KDebugSettingsUtil::convertCategoryTypeFromString(cat.defaultSeverity);
             if (loggingCat.isValid()) {
-                newCategories.append(loggingCat);
+                newCategories.append(std::move(loggingCat));
             }
         }
         mKdeApplicationSettingsPage->insertCategories(newCategories);

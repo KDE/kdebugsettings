@@ -55,8 +55,8 @@ void LoadGroupMenu::init()
         mGroupNames += dirNameList;
         for (const QString &file : dirNameList) {
             QAction *act = addAction(file);
-            const QString fullPath = dirName + u'/' + file;
-            connect(act, &QAction::triggered, this, [this, fullPath] {
+            QString fullPath = dirName + u'/' + file;
+            connect(act, &QAction::triggered, this, [this, fullPath = std::move(fullPath)] {
                 Q_EMIT loadGroupRequested(fullPath);
             });
         }

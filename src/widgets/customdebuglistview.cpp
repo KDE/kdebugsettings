@@ -98,8 +98,8 @@ void CustomDebugListView::slotRemoveRules(const QModelIndexList &selectedIndexes
     LoggingCategory::List categories;
     for (const auto &index : selectedIndexes) {
         const QModelIndex originalModelIndex = mCustomLoggingCategoryProxyModel->mapToSource(index);
-        const auto cat = mCustomLoggingCategoryModel->index(originalModelIndex.row()).data(CustomLoggingCategoryModel::CategoryRole).value<LoggingCategory>();
-        categories.append(cat);
+        auto cat = mCustomLoggingCategoryModel->index(originalModelIndex.row()).data(CustomLoggingCategoryModel::CategoryRole).value<LoggingCategory>();
+        categories.append(std::move(cat));
     }
     mCustomLoggingCategoryModel->removeCategory(categories);
 }

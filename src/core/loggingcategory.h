@@ -10,6 +10,7 @@
 #include <QDebug>
 #include <QList>
 #include <QString>
+#include <utility>
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     enum LoggingType : uint8_t {
@@ -23,10 +24,10 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     };
 
     LoggingCategory();
-    explicit LoggingCategory(const QString &desc, const QString &logName, LoggingType type, const QString &identifier, bool enable)
-        : description(desc)
-        , categoryName(logName)
-        , identifierName(identifier)
+    explicit LoggingCategory(QString desc, QString logName, LoggingType type, QString identifier, bool enable)
+        : description(std::move(desc))
+        , categoryName(std::move(logName))
+        , identifierName(std::move(identifier))
         , loggingType(type)
         , enabled(enable)
     {

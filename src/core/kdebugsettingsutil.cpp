@@ -35,11 +35,11 @@ RenameCategory KDebugSettingsUtil::parseRenameCategory(QString line, const QStri
         return category;
     }
 
-    const QString originalName = line.left(space);
+    QString originalName = line.left(space);
 
-    const QString newName = line.mid(space).simplified();
-    category.originalName = originalName;
-    category.newName = newName;
+    QString newName = line.mid(space).simplified();
+    category.originalName = std::move(originalName);
+    category.newName = std::move(newName);
     return category;
 }
 
@@ -56,9 +56,9 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
         ts.setEncoding(QStringConverter::Encoding::Latin1);
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
-            const RenameCategory category = parseRenameCategory(data, filename);
+            RenameCategory category = parseRenameCategory(data, filename);
             if (category.isValid()) {
-                insertCategories.append(category);
+                insertCategories.append(std::move(category));
             }
         }
     }
@@ -161,10 +161,10 @@ KdeLoggingCategory KDebugSettingsUtil::parseLineKdeLoggingCategory(QString line,
             qCWarning(KDEBUGSETTINGSCORE_LOG) << "In this file: " << filename << " this line " << line << " still uses the old format. We need to port it.";
         }
     }
-    category.categoryName = logName;
-    category.description = description;
-    category.defaultSeverity = defaultSeverity;
-    category.identifierName = identifier;
+    category.categoryName = std::move(logName);
+    category.description = std::move(description);
+    category.defaultSeverity = std::move(defaultSeverity);
+    category.identifierName = std::move(identifier);
     return category;
 }
 
@@ -180,7 +180,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
         ts.setEncoding(QStringConverter::Encoding::Latin1);
         while (!ts.atEnd()) {
             const QString data = ts.readLine().simplified();
-            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
+            KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
             if (category.isValid()) {
                 bool needToAppend = true;
                 for (const KdeLoggingCategory &cat : std::as_const(categoriesList)) {
@@ -195,7 +195,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
                 }
                 if (needToAppend) {
                     categoriesList.append(category);
-                    insertCategories.append(category);
+                    insertCategories.append(std::move(category));
                 }
             }
         }
@@ -213,7 +213,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
         ts.setEncoding(QStringConverter::Encoding::Latin1);
         while (!ts.atEnd()) {
             const QString data = ts.readLine().simplified();
-            const KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
+            KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
             if (category.isValid()) {
                 if (checkCategoryList) {
                     bool needToAppend = true;
@@ -228,10 +228,10 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
                         }
                     }
                     if (needToAppend) {
-                        categoriesList.append(category);
+                        categoriesList.append(std::move(category));
                     }
                 } else {
-                    categoriesList.append(category);
+                    categoriesList.append(std::move(category));
                 }
             }
         }
@@ -253,23 +253,23 @@ KDebugSettingsUtil::LineLoggingQtCategory KDebugSettingsUtil::parseLineLoggingQt
         QString p;
         if (pattern.endsWith(".debug"_L1)) {
             p = pattern.left(pattern.length() - 6); // strlen(".debug")
-            lineCategory.logName = p;
+            lineCategory.logName = std::move(p);
             lineCategory.type = LineLoggingQtCategory::Debug;
         } else if (pattern.endsWith(".warning"_L1)) {
             p = pattern.left(pattern.length() - 8); // strlen(".warning")
-            lineCategory.logName = p;
+            lineCategory.logName = std::move(p);
             lineCategory.type = LineLoggingQtCategory::Warning;
         } else if (pattern.endsWith(".critical"_L1)) {
             p = pattern.left(pattern.length() - 9); // strlen(".critical")
-            lineCategory.logName = p;
+            lineCategory.logName = std::move(p);
             lineCategory.type = LineLoggingQtCategory::Critical;
         } else if (pattern.endsWith(".info"_L1)) {
             p = pattern.left(pattern.length() - 5); // strlen(".info")
-            lineCategory.logName = p;
+            lineCategory.logName = std::move(p);
             lineCategory.type = LineLoggingQtCategory::Info;
         } else {
             p = pattern;
-            lineCategory.logName = p;
+            lineCategory.logName = std::move(p);
             lineCategory.type = LineLoggingQtCategory::All;
         }
     } else {
@@ -347,7 +347,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                         } else {
                             nextCat.loggingTypes.insert(type, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                         }
-                        hashLoadLoggingCategories[cat.logName] = nextCat;
+                        hashLoadLoggingCategories[cat.logName] = std::move(nextCat);
                     } else {
                         nextCat.logName = cat.logName;
                         switch (cat.type) {
@@ -373,7 +373,7 @@ QList<KDebugSettingsUtil::LoadLoggingCategory> KDebugSettingsUtil::readLoggingQt
                             nextCat.loggingTypes.insert(LoadLoggingCategory::All, cat.enabled ? LoadLoggingCategory::Enabled : LoadLoggingCategory::Disabled);
                             break;
                         }
-                        hashLoadLoggingCategories.insert(cat.logName, nextCat);
+                        hashLoadLoggingCategories.insert(cat.logName, std::move(nextCat));
                     }
                 }
             }
