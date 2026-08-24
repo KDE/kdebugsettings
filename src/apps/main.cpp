@@ -48,7 +48,7 @@ int main(int argc, char **argv)
                          i18n("(c) 2015-%1 kdebugsettings authors", u"2026"_s));
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), u"montel@kde.org"_s);
     KStyleManager::initStyle();
-    QApplication::setWindowIcon(QIcon::fromTheme(u"debug-run"_s));
+    QApplication::setWindowIcon(QIcon::fromTheme(u"kdebugsettings"_s));
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
 

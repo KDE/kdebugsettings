@@ -6,6 +6,7 @@ add_subdirectory(apps)
 add_subdirectory(data)
 add_subdirectory(widgets)
 add_subdirectory(kcm)
+add_subdirectory(icons)
 
 # Selenium GUI tests
 if(SeleniumWebDriverATSPI_FOUND)

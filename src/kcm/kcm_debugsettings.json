@@ -20,7 +20,7 @@
         "Description[uk]": "Налаштовування параметрів категорій діагностики",
         "Description[zh_CN]": "配置调试类别设置",
         "Description[zh_TW]": "調整除錯分類設定",
-        "Icon": "debug-run",
+        "Icon": "kdebugsettings",
         "Name": "Debug Settings",
         "Name[ar]": "إعدادات التنقّيح",
         "Name[ca@valencia]": "Configureu la depuració",
