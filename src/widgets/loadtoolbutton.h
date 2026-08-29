@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <QStringList>
 #include <QToolButton>
 
 #include "libkdebugsettings_private_export.h"

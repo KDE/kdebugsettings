@@ -8,7 +8,7 @@
 
 #include "libkdebugsettingscore_private_export.h"
 #include <QList>
-#include <QObject>
+#include <QMetaType>
 #include <QString>
 struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT RenameCategory {
 public:

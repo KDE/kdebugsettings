@@ -9,6 +9,7 @@
 
 #include "kdebugsettingsutil.h"
 #include <QDebug>
+#include <QFile>
 #include <QTest>
 
 QTEST_GUILESS_MAIN(KDebugSettingUtilTest)

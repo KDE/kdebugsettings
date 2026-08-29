@@ -17,6 +17,7 @@
 #include <KMessageBox>
 
 #include <QAction>
+#include <QIcon>
 #include <QMenu>
 #include <QPointer>
 

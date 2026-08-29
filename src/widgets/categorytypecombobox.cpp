@@ -10,7 +10,6 @@
 #include "loggingmanager.h"
 #include "model/categorytypemodel.h"
 #include "model/categorytypeproxymodel.h"
-#include <KLocalizedString>
 
 using namespace Qt::Literals::StringLiterals;
 CategoryTypeComboBox::CategoryTypeComboBox(bool customType, QWidget *parent)

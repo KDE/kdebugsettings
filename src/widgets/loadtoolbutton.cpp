@@ -9,6 +9,8 @@
 
 #include "loadgroupmenu.h"
 #include <KLocalizedString>
+#include <QAction>
+#include <QMenu>
 
 using namespace Qt::Literals::StringLiterals;
 LoadToolButton::LoadToolButton(QWidget *parent)

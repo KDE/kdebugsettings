@@ -8,6 +8,7 @@
 #include "config-kdebugsettings.h"
 
 #include <QApplication>
+#include <QIcon>
 #include <QTimer>
 
 #include "jobs/changedebugmodejob.h"
@@ -15,7 +16,6 @@
 #include "kdebugsettingsdialog.h"
 #include <KAboutData>
 #include <KCrash>
-#include <config-kdebugsettings.h>
 #if WITH_DBUS
 #include <KDBusService>
 #include <KWindowSystem>
@@ -26,6 +26,7 @@
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
+#include <chrono>
 #include <iostream>
 
 #include <KIconTheme>

@@ -10,6 +10,7 @@
 #include "jobs/loadcategoriesjob.h"
 #include "jobs/saverulesjob.h"
 
+#include <QDir>
 #include <QProcess>
 #include <QTest>
 

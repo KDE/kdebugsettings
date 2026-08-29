@@ -10,6 +10,7 @@
 #include "libkdebugsettingscore_private_export.h"
 #include <QDebug>
 #include <QList>
+#include <QMetaType>
 #include <QString>
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT KdeLoggingCategory {

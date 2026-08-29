@@ -9,6 +9,7 @@
 #include "libkdebugsettingscore_export.h"
 #include <QDebug>
 #include <QList>
+#include <QMetaType>
 #include <QString>
 #include <utility>
 

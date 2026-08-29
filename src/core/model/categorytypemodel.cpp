@@ -6,7 +6,6 @@
 
 #include "categorytypemodel.h"
 #include "kdebugsettingsutil.h"
-#include <KLocalizedString>
 
 CategoryTypeModel::CategoryTypeModel(QObject *parent)
     : QAbstractListModel{parent}

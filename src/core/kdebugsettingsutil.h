@@ -11,8 +11,10 @@
 #include "libkdebugsettingscore_export.h"
 #include "loggingcategory.h"
 #include "renamecategory.h"
-#include <QDebug>
+#include <QMap>
+#include <QMetaType>
 #include <QString>
+#include <QStringList>
 
 namespace KDebugSettingsUtil
 {

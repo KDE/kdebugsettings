@@ -13,7 +13,9 @@
 #include <KMessageBox>
 
 #include <QDir>
+#include <QFile>
 #include <QFileDialog>
+#include <QIcon>
 #include <QInputDialog>
 #include <QListWidget>
 #include <QMenu>

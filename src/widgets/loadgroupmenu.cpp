@@ -11,6 +11,7 @@
 
 #include <KLocalizedString>
 
+#include <QAction>
 #include <QDir>
 #include <QStandardPaths>
 

@@ -9,6 +9,7 @@
 
 #include "libkdebugsettings_private_export.h"
 #include <QMenu>
+#include <QStringList>
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT LoadGroupMenu : public QMenu
 {
     Q_OBJECT
