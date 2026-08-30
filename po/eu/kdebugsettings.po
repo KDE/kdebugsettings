@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:48+0000\n"
+"POT-Creation-Date: 2026-08-30 00:50+0000\n"
 "PO-Revision-Date: 2024-08-06 01:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Konfiguratu arazteko ezarpenak"
 
-#: src/apps/main.cpp:48
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings-en egileak"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantentzailea"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Ezinezkoa da arazte modua aldatzea"
@@ -82,32 +82,32 @@ msgstr ""
 "Zehaztu arazte modua aldatu nahi duzun egunkariratze kategoriaren izena "
 "(kontsolan)"
 
-#: src/core/kdebugsettingsutil.cpp:411
+#: src/core/kdebugsettingsutil.cpp:414
 #, kde-format
 msgid "Full Debug"
 msgstr "Arazte osoa"
 
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:417
 #, kde-format
 msgid "Info"
 msgstr "Info"
 
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:420
 #, kde-format
 msgid "Warning"
 msgstr "Abisua"
 
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:423
 #, kde-format
 msgid "Critical"
 msgstr "Kritikoa"
 
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:426
 #, kde-format
 msgid "Off"
 msgstr "Desgaituta"
 
-#: src/core/kdebugsettingsutil.cpp:426 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Definitu gabe"
@@ -318,27 +318,27 @@ msgctxt "@option:check"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: src/widgets/customdebuglistview.cpp:47
+#: src/widgets/customdebuglistview.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Gehitu araua..."
 
-#: src/widgets/customdebuglistview.cpp:49
+#: src/widgets/customdebuglistview.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Editatu araua"
 
-#: src/widgets/customdebuglistview.cpp:55
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:56
+#: src/widgets/customdebuglistview.cpp:94
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Kendu araua"
 msgstr[1] "Kendu arauak"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:89
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -390,64 +390,64 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Kudeatu taldea"
 
-#: src/widgets/groupmanagementwidget.cpp:49
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:51
 #: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Export Group"
 msgstr "Esportatu taldea"
 
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Group exported to %1"
 msgstr "Taldea hona esportatu da, %1"
 
-#: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Ezinezkoa da '%2' taldea '%1'(e)ra esportatzea"
 
-#: src/widgets/groupmanagementwidget.cpp:67
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:69
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Berrizendatu taldea"
 
-#: src/widgets/groupmanagementwidget.cpp:67
+#: src/widgets/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "New Name:"
 msgstr "Izen berria:"
 
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgid "Impossible to rename group as '%1'."
 msgstr "Ezinezkoa da taldea '%1' gisa berrizendatzea."
 
-#: src/widgets/groupmanagementwidget.cpp:88
+#: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Berrizendatu taldea..."
 
-#: src/widgets/groupmanagementwidget.cpp:92
+#: src/widgets/groupmanagementwidget.cpp:94
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Esportatu taldea..."
 
-#: src/widgets/groupmanagementwidget.cpp:97
+#: src/widgets/groupmanagementwidget.cpp:99
 #, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Kendu taldeak"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Ezin da «%1» kendu"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
@@ -566,23 +566,23 @@ msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Zamatu arazteko ezarpenen fitxategiak"
 
-#: src/widgets/loadgroupmenu.cpp:21
+#: src/widgets/loadgroupmenu.cpp:22
 #, kde-format
 msgid "Load Group"
 msgstr "Zamatu taldea"
 
-#: src/widgets/loadgroupmenu.cpp:71
+#: src/widgets/loadgroupmenu.cpp:72
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Kudeatu taldea"
 
-#: src/widgets/loadtoolbutton.cpp:19
+#: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load…"
 msgstr "Zamatu…"
 
-#: src/widgets/loadtoolbutton.cpp:23
+#: src/widgets/loadtoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Load From File…"

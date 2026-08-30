@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:48+0000\n"
+"POT-Creation-Date: 2026-08-30 00:50+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,33 +17,33 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/kdebugsettings/kdebugsettings.pot\n"
 "X-Crowdin-File-ID: 45029\n"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "Configure debug settings"
 msgstr "配置调试设置"
 
-#: src/apps/main.cpp:48
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings authors"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "维护者"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "无法更改调试模式"
@@ -75,32 +75,32 @@ msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr "指定你想更改调试模式的日志分类名称 (在命令行终端内)"
 
-#: src/core/kdebugsettingsutil.cpp:411
+#: src/core/kdebugsettingsutil.cpp:414
 #, kde-format
 msgid "Full Debug"
 msgstr "完全调试"
 
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:417
 #, kde-format
 msgid "Info"
 msgstr "信息"
 
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:420
 #, kde-format
 msgid "Warning"
 msgstr "警告"
 
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:423
 #, kde-format
 msgid "Critical"
 msgstr "关键"
 
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:426
 #, kde-format
 msgid "Off"
 msgstr "关闭"
 
-#: src/core/kdebugsettingsutil.cpp:426 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "未定义"
@@ -287,26 +287,26 @@ msgctxt "@option:check"
 msgid "Enable"
 msgstr "启用"
 
-#: src/widgets/customdebuglistview.cpp:47
+#: src/widgets/customdebuglistview.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "新建规则…"
 
-#: src/widgets/customdebuglistview.cpp:49
+#: src/widgets/customdebuglistview.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "编辑规则"
 
-#: src/widgets/customdebuglistview.cpp:55
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:56
+#: src/widgets/customdebuglistview.cpp:94
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "移除规则"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:89
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -357,64 +357,64 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "管理分组"
 
-#: src/widgets/groupmanagementwidget.cpp:49
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:51
 #: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Export Group"
 msgstr "导出分组"
 
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Group exported to %1"
 msgstr "分组已导出到 %1"
 
-#: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "无法导出分组“%2”到“%1”"
 
-#: src/widgets/groupmanagementwidget.cpp:67
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:69
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "重命名分组"
 
-#: src/widgets/groupmanagementwidget.cpp:67
+#: src/widgets/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "New Name:"
 msgstr "新分组名称："
 
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgid "Impossible to rename group as '%1'."
 msgstr "无法将分组重命名为“%1”。"
 
-#: src/widgets/groupmanagementwidget.cpp:88
+#: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "重命名分组…"
 
-#: src/widgets/groupmanagementwidget.cpp:92
+#: src/widgets/groupmanagementwidget.cpp:94
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "导出分组…"
 
-#: src/widgets/groupmanagementwidget.cpp:97
+#: src/widgets/groupmanagementwidget.cpp:99
 #, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "移除分组"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "无法移除分组“%1”"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
@@ -533,23 +533,23 @@ msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "加载调试设置文件"
 
-#: src/widgets/loadgroupmenu.cpp:21
+#: src/widgets/loadgroupmenu.cpp:22
 #, kde-format
 msgid "Load Group"
 msgstr "加载分组"
 
-#: src/widgets/loadgroupmenu.cpp:71
+#: src/widgets/loadgroupmenu.cpp:72
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "管理分组"
 
-#: src/widgets/loadtoolbutton.cpp:19
+#: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load…"
 msgstr "加载…"
 
-#: src/widgets/loadtoolbutton.cpp:23
+#: src/widgets/loadtoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Load From File…"

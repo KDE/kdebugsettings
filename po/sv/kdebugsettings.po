@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:48+0000\n"
+"POT-Creation-Date: 2026-08-30 00:50+0000\n"
 "PO-Revision-Date: 2026-07-24 09:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Anpassa felsökningsinställningar"
 
-#: src/apps/main.cpp:48
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015-%1 Upphovsmännen till kdebugsettings"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Underhåll"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Omöjligt att ändra felsökningsläge"
@@ -78,32 +78,32 @@ msgid ""
 msgstr ""
 "Ange loggningskategorinamn som felsökningsläge ska ändras för (i terminal)"
 
-#: src/core/kdebugsettingsutil.cpp:411
+#: src/core/kdebugsettingsutil.cpp:414
 #, kde-format
 msgid "Full Debug"
 msgstr "Fullständig felsökning"
 
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:417
 #, kde-format
 msgid "Info"
 msgstr "Information"
 
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:420
 #, kde-format
 msgid "Warning"
 msgstr "Varning"
 
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:423
 #, kde-format
 msgid "Critical"
 msgstr "Kritiska fel"
 
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:426
 #, kde-format
 msgid "Off"
 msgstr "Av"
 
-#: src/core/kdebugsettingsutil.cpp:426 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Odefinierad"
@@ -290,27 +290,27 @@ msgctxt "@option:check"
 msgid "Enable"
 msgstr "Aktivera"
 
-#: src/widgets/customdebuglistview.cpp:47
+#: src/widgets/customdebuglistview.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Lägg till regel…"
 
-#: src/widgets/customdebuglistview.cpp:49
+#: src/widgets/customdebuglistview.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Redigera regel"
 
-#: src/widgets/customdebuglistview.cpp:55
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:56
+#: src/widgets/customdebuglistview.cpp:94
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Ta bort regel"
 msgstr[1] "Ta bort regler"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:89
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -362,64 +362,64 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Hantera grupp"
 
-#: src/widgets/groupmanagementwidget.cpp:49
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:51
 #: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Export Group"
 msgstr "Exportera grupp"
 
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Group exported to %1"
 msgstr "Grupp exporterad till %1"
 
-#: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Omöjligt att exportera grupp '%2' till '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:67
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:69
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Byt namn på grupp"
 
-#: src/widgets/groupmanagementwidget.cpp:67
+#: src/widgets/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "New Name:"
 msgstr "Nytt namn:"
 
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgid "Impossible to rename group as '%1'."
 msgstr "Omöjligt att byta namn på grupp till '%1'."
 
-#: src/widgets/groupmanagementwidget.cpp:88
+#: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Byt namn på grupp…"
 
-#: src/widgets/groupmanagementwidget.cpp:92
+#: src/widgets/groupmanagementwidget.cpp:94
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Exportera grupp…"
 
-#: src/widgets/groupmanagementwidget.cpp:97
+#: src/widgets/groupmanagementwidget.cpp:99
 #, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Ta bort grupper"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Omöjligt att ta bort '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
@@ -538,23 +538,23 @@ msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Läs in inställningsfiler för felsökning"
 
-#: src/widgets/loadgroupmenu.cpp:21
+#: src/widgets/loadgroupmenu.cpp:22
 #, kde-format
 msgid "Load Group"
 msgstr "Läs in grupp"
 
-#: src/widgets/loadgroupmenu.cpp:71
+#: src/widgets/loadgroupmenu.cpp:72
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Hantera grupp"
 
-#: src/widgets/loadtoolbutton.cpp:19
+#: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load…"
 msgstr "Läs in…"
 
-#: src/widgets/loadtoolbutton.cpp:23
+#: src/widgets/loadtoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Load From File…"

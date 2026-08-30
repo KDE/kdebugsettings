@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:48+0000\n"
+"POT-Creation-Date: 2026-08-30 00:50+0000\n"
 "PO-Revision-Date: 2026-07-24 06:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.9\n"
 
-#: src/apps/main.cpp:44
+#: src/apps/main.cpp:45
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugsSettings"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Nastavi možnosti za razhroščevanje"
 
-#: src/apps/main.cpp:48
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 avtorji kdebugsettings"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Vzdrževalec"
 
-#: src/apps/main.cpp:72 src/apps/main.cpp:83 src/apps/main.cpp:95
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Ni mogoče spremeniti načina za odkrivanje napak"
@@ -82,32 +82,32 @@ msgstr ""
 "Določite ime kategorije beleženja, ki ga želite spremeniti v načinu za "
 "odkrivanje napak (v konzoli)"
 
-#: src/core/kdebugsettingsutil.cpp:411
+#: src/core/kdebugsettingsutil.cpp:414
 #, kde-format
 msgid "Full Debug"
 msgstr "Polno odkrivanje napak"
 
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:417
 #, kde-format
 msgid "Info"
 msgstr "Podrobnosti"
 
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:420
 #, kde-format
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:423
 #, kde-format
 msgid "Critical"
 msgstr "Kritično"
 
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:426
 #, kde-format
 msgid "Off"
 msgstr "Izključeno"
 
-#: src/core/kdebugsettingsutil.cpp:426 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
 msgstr "Nedefinirano"
@@ -294,20 +294,20 @@ msgctxt "@option:check"
 msgid "Enable"
 msgstr "Omogoči"
 
-#: src/widgets/customdebuglistview.cpp:47
+#: src/widgets/customdebuglistview.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
 msgstr "Dodaj pravilo…"
 
-#: src/widgets/customdebuglistview.cpp:49
+#: src/widgets/customdebuglistview.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
 msgstr "Uredi pravilo"
 
-#: src/widgets/customdebuglistview.cpp:55
-#: src/widgets/customdebuglistview.cpp:93
+#: src/widgets/customdebuglistview.cpp:56
+#: src/widgets/customdebuglistview.cpp:94
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
@@ -316,7 +316,7 @@ msgstr[1] "Odstrani pravili"
 msgstr[2] "Odstrani pravila"
 msgstr[3] "Odstrani pravila"
 
-#: src/widgets/customdebuglistview.cpp:88
+#: src/widgets/customdebuglistview.cpp:89
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these %1 rules?"
@@ -370,64 +370,64 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Upravljaj grupo"
 
-#: src/widgets/groupmanagementwidget.cpp:49
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:51
 #: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Export Group"
 msgstr "Izvozi grupo"
 
-#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Group exported to %1"
 msgstr "Grupa izvožena v %1"
 
-#: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Ni mogoče izvoziti grupe '%2' v '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:67
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:69
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Preimenuj grupo"
 
-#: src/widgets/groupmanagementwidget.cpp:67
+#: src/widgets/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "New Name:"
 msgstr "Novo ime:"
 
-#: src/widgets/groupmanagementwidget.cpp:72
+#: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgid "Impossible to rename group as '%1'."
 msgstr "Ni mogoče preimenovati grupe kot '%1'."
 
-#: src/widgets/groupmanagementwidget.cpp:88
+#: src/widgets/groupmanagementwidget.cpp:90
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Preimenuj grupo…"
 
-#: src/widgets/groupmanagementwidget.cpp:92
+#: src/widgets/groupmanagementwidget.cpp:94
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Izvozi grupo…"
 
-#: src/widgets/groupmanagementwidget.cpp:97
+#: src/widgets/groupmanagementwidget.cpp:99
 #, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Odstrani grupe"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Ni mogoče odstraniti '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:102
+#: src/widgets/groupmanagementwidget.cpp:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
@@ -546,23 +546,23 @@ msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Naloži datoteke z nastavitvami razhroščevanja"
 
-#: src/widgets/loadgroupmenu.cpp:21
+#: src/widgets/loadgroupmenu.cpp:22
 #, kde-format
 msgid "Load Group"
 msgstr "Naloži grupo"
 
-#: src/widgets/loadgroupmenu.cpp:71
+#: src/widgets/loadgroupmenu.cpp:72
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
 msgstr "Upravljaj grupo"
 
-#: src/widgets/loadtoolbutton.cpp:19
+#: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load…"
 msgstr "Naloži…"
 
-#: src/widgets/loadtoolbutton.cpp:23
+#: src/widgets/loadtoolbutton.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Load From File…"
