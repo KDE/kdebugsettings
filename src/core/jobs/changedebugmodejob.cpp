@@ -88,6 +88,7 @@ bool ChangeDebugModeJob::start() const
     job.setListCustom(customCategories);
     if (!job.start()) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Impossible to save in file " << job.fileName();
+        return false;
     }
     return true;
 }
