@@ -177,7 +177,7 @@ bool KDEApplicationLoggingCategoryModel::addCategory(const LoggingCategory &cate
 {
     bool found = false;
     if (category.isValid()) {
-        auto it = std::find_if(mLoggingCategories.cbegin(), mLoggingCategories.cend(), [category](const LoggingCategory &cat) {
+        auto it = std::find_if(mLoggingCategories.cbegin(), mLoggingCategories.cend(), [&category](const LoggingCategory &cat) {
             return cat == category;
         });
         if (it == mLoggingCategories.cend()) {

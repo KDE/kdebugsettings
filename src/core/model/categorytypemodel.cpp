@@ -40,7 +40,7 @@ QVariant CategoryTypeModel::data(const QModelIndex &index, int role) const
     if (index.row() < 0 || index.row() >= mCategoryInfoList.count()) {
         return {};
     }
-    const CategoryInfo statusInfo = mCategoryInfoList.at(index.row());
+    const CategoryInfo &statusInfo = mCategoryInfoList.at(index.row());
     switch (role) {
     case Qt::DisplayRole:
     case CategoryTypeNameRole:
