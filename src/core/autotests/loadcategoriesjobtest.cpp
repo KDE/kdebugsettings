@@ -152,6 +152,26 @@ void LoadCategoriesJobTest::shouldReadRules_data()
     customTmp.enabled = false;
     customCategories.append(customTmp);
     QTest::newRow("testwithoutcategorieswarning") << u"testwithoutcategorieswarning.ini"_s << QString() << false << customCategories << qtKdeCategories;
+
+    qtKdeCategories.clear();
+    customCategories.clear();
+    customTmp.categoryName = u"*"_s;
+    customTmp.loggingType = LoggingCategory::All;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+    QTest::newRow("star") << u"star.ini"_s << QString() << true << customCategories << qtKdeCategories;
+
+    qtKdeCategories.clear();
+    customCategories.clear();
+    customTmp.categoryName = u"*"_s;
+    customTmp.loggingType = LoggingCategory::All;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+    customTmp.categoryName = u"toto"_s;
+    customTmp.loggingType = LoggingCategory::Debug;
+    customTmp.enabled = false;
+    customCategories.append(customTmp);
+    QTest::newRow("star1") << u"star1.ini"_s << QString() << true << customCategories << qtKdeCategories;
 }
 
 void LoadCategoriesJobTest::shouldReadRules()

@@ -80,6 +80,12 @@ void LoadCategoriesJob::start()
         qtCategories.append(std::move(cat));
     }
 
+    for (const KDebugSettingsUtil::LoadLoggingCategory &cat : std::as_const(qtCategories)) {
+        if (cat.logName == "*"_L1) {
+            mFoundOverrideRule = true;
+        }
+    }
+
     for (int i = 0; i < number; ++i) {
         KdeLoggingCategory kdeCat = mCategories.at(i);
 
@@ -103,9 +109,6 @@ void LoadCategoriesJob::start()
                     qtCategories.removeAll(cat);
                     break;
                 }
-            }
-            if (cat.logName == "*"_L1) {
-                mFoundOverrideRule = true;
             }
         }
         if (!foundInConfigFile) {
