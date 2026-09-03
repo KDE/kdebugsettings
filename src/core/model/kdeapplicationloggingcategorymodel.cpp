@@ -8,6 +8,8 @@
 #include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsutil.h"
 
+#include <QMultiHash>
+
 KDEApplicationLoggingCategoryModel::KDEApplicationLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
@@ -157,20 +159,6 @@ void KDEApplicationLoggingCategoryModel::clear()
         mLoggingCategories.clear();
         endResetModel();
     }
-}
-
-void KDEApplicationLoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
-{
-    beginResetModel();
-    for (int j = 0; j < categories.count(); ++j) {
-        for (int i = 0; i < mLoggingCategories.count(); ++i) {
-            if (mLoggingCategories.at(i) == categories.at(j)) {
-                mLoggingCategories.removeAt(i);
-                break;
-            }
-        }
-    }
-    endResetModel();
 }
 
 LoggingCategory::List KDEApplicationLoggingCategoryModel::loggingCategories() const

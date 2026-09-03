@@ -48,8 +48,6 @@ public:
 
     void insertCategories(const LoggingCategory::List &categories);
 
-    void removeCategory(const LoggingCategory::List &categories);
-
     [[nodiscard]] LoggingCategory::List loggingCategories() const;
 
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
