@@ -50,8 +50,6 @@ public:
 
     void removeCategory(const LoggingCategory::List &categories);
 
-    [[nodiscard]] bool addCategory(const LoggingCategory &category);
-
     [[nodiscard]] LoggingCategory::List loggingCategories() const;
 
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;

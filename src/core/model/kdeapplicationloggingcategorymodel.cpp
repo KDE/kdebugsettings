@@ -173,24 +173,6 @@ void KDEApplicationLoggingCategoryModel::removeCategory(const LoggingCategory::L
     endResetModel();
 }
 
-bool KDEApplicationLoggingCategoryModel::addCategory(const LoggingCategory &category)
-{
-    bool found = false;
-    if (category.isValid()) {
-        auto it = std::find_if(mLoggingCategories.cbegin(), mLoggingCategories.cend(), [&category](const LoggingCategory &cat) {
-            return cat == category;
-        });
-        if (it == mLoggingCategories.cend()) {
-            beginInsertRows(QModelIndex(), mLoggingCategories.count(), mLoggingCategories.count());
-            mLoggingCategories.append(category);
-            endInsertRows();
-        } else {
-            found = true;
-        }
-    }
-    return found;
-}
-
 LoggingCategory::List KDEApplicationLoggingCategoryModel::loggingCategories() const
 {
     return mLoggingCategories;
