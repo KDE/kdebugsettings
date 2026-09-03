@@ -73,7 +73,8 @@ bool SaveRulesJob::start() const
     for (const QString &str : std::as_const(listExcludeRules)) {
         out << str;
     }
-    return true;
+    out.flush();
+    return out.status() == QTextStream::Ok;
 }
 
 QString SaveRulesJob::fileName() const
