@@ -87,9 +87,9 @@ void LoadCategoriesJob::start()
         for (const KDebugSettingsUtil::LoadLoggingCategory &cat : std::as_const(qtCategories)) {
             if (cat.logName == kdeCat.categoryName) {
                 LoggingCategory tmp;
-                LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
+                const LoggingCategory::LoggingType newType = canDisplayType(cat.loggingTypes);
                 if (newType != LoggingCategory::Undefined) {
-                    tmp.loggingType = canDisplayType(cat.loggingTypes);
+                    tmp.loggingType = newType;
                     if (tmp.loggingType == LoggingCategory::Off) {
                         tmp.enabled = false;
                     }
