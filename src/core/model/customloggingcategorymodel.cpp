@@ -7,6 +7,8 @@
 #include "customloggingcategorymodel.h"
 #include "kdebugsettingscore_debug.h"
 
+#include <QMultiHash>
+
 CustomLoggingCategoryModel::CustomLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
@@ -134,16 +136,52 @@ void CustomLoggingCategoryModel::removeCategory(int row)
 
 void CustomLoggingCategoryModel::removeCategory(const LoggingCategory::List &categories)
 {
-    beginResetModel();
-    for (int j = 0; j < categories.count(); ++j) {
-        for (int i = 0; i < mLoggingCategories.count(); ++i) {
-            if (mLoggingCategories.at(i) == categories.at(j)) {
-                mLoggingCategories.removeAt(i);
+    if (categories.isEmpty() || mLoggingCategories.isEmpty()) {
+        return;
+    }
+    // Index the rows by category name: without it each entry of "categories"
+    // rescans the whole list, and each removeAt() shifts the tail again.
+    QMultiHash<QString, int> rowsByName;
+    rowsByName.reserve(mLoggingCategories.count());
+    for (int i = 0, total = mLoggingCategories.count(); i < total; ++i) {
+        rowsByName.insert(mLoggingCategories.at(i).categoryName, i);
+    }
+
+    // Collect the rows to drop first, so that nothing is signaled when none of
+    // the categories is present, and so that the removal can be reported as
+    // rowsRemoved() instead of a full reset which would lose the selection.
+    QList<bool> rowsToRemove(mLoggingCategories.count(), false);
+    bool foundOne = false;
+    for (const LoggingCategory &category : categories) {
+        const auto candidates = rowsByName.equal_range(category.categoryName);
+        for (auto it = candidates.first; it != candidates.second; ++it) {
+            const int row = it.value();
+            if (!rowsToRemove.at(row) && mLoggingCategories.at(row) == category) {
+                rowsToRemove[row] = true;
+                foundOne = true;
                 break;
             }
         }
     }
-    endResetModel();
+    if (!foundOne) {
+        return;
+    }
+
+    // Remove by descending contiguous ranges so the rows already reported keep
+    // their index while the next range is computed.
+    for (int end = rowsToRemove.count() - 1; end >= 0; --end) {
+        if (!rowsToRemove.at(end)) {
+            continue;
+        }
+        int start = end;
+        while (start > 0 && rowsToRemove.at(start - 1)) {
+            --start;
+        }
+        beginRemoveRows(QModelIndex(), start, end);
+        mLoggingCategories.remove(start, end - start + 1);
+        endRemoveRows();
+        end = start;
+    }
 }
 
 void CustomLoggingCategoryModel::addCategory(const QString &categoryName, bool enabled, LoggingCategory::LoggingType type)
