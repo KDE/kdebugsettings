@@ -34,23 +34,16 @@ void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
         font.setItalic(true);
         p.setFont(font);
 
-        if (!mTextColor.isValid()) {
-            slotGeneralPaletteChanged();
-        }
-        p.setPen(mTextColor);
+        // Don't cache the color: on a theme change the viewport palette is updated after this widget
+        // gets its own QEvent::PaletteChange, so a cached value would lag one theme behind.
+        QColor color = viewport()->palette().text().color();
+        color.setAlpha(128);
+        p.setPen(color);
 
         p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."));
     } else {
         QTextEdit::paintEvent(event);
     }
-}
-
-void EnvironmentPlainTextEdit::slotGeneralPaletteChanged()
-{
-    const QPalette palette = viewport()->palette();
-    QColor color = palette.text().color();
-    color.setAlpha(128);
-    mTextColor = color;
 }
 
 #include "moc_environmentplaintextedit.cpp"

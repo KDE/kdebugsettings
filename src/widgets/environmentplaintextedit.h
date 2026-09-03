@@ -21,9 +21,4 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
     void contextMenuEvent(QContextMenuEvent *event) override;
-
-private:
-    LIBKDEBUGSETTINGS_NO_EXPORT void slotGeneralPaletteChanged();
-
-    QColor mTextColor;
 };
