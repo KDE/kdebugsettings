@@ -18,7 +18,7 @@ Kirigami.Dialog {
     property int editRowIndex: -1
 
     footer: QQC2.DialogButtonBox {
-        standardButtons: saveButton | QQC2.DialogButtonBox.Cancel
+        standardButtons: QQC2.DialogButtonBox.Cancel
         onAccepted: {
             dialog.accept();
         }
