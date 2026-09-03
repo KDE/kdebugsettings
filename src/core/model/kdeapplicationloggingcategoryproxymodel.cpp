@@ -76,7 +76,7 @@ LoggingCategory::List KDEApplicationLoggingCategoryProxyModel::rules(bool forceS
     lst.reserve(rows);
     for (int i = 0; i < rows; ++i) {
         auto cat = model->index(i, KDEApplicationLoggingCategoryModel::CategoryRole).data().value<LoggingCategory>();
-        if (forceSavingAllRules || (cat.loggingType != cat.defaultSeverityType)) {
+        if (forceSavingAllRules || !cat.hasDefaultSeverity()) {
             cat.enabled = false;
             if (cat.isValid()) {
                 lst.append(std::move(cat));

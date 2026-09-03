@@ -24,6 +24,11 @@ bool LoggingCategory::isValid() const
     return !categoryName.isEmpty() && (loggingType != Undefined);
 }
 
+bool LoggingCategory::hasDefaultSeverity() const
+{
+    return loggingType == defaultSeverityType;
+}
+
 QString LoggingCategory::createCustomRule() const
 {
     QString str;

@@ -20,4 +20,5 @@ private Q_SLOTS:
     void shouldBeEqual();
     void shouldCreateRules();
     void shouldCreateRules_data();
+    void shouldHaveDefaultSeverity();
 };

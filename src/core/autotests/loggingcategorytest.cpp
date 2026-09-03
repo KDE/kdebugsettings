@@ -70,4 +70,22 @@ void LoggingCategoryTest::shouldCreateRules()
     QVERIFY(log.isValid());
 }
 
+void LoggingCategoryTest::shouldHaveDefaultSeverity()
+{
+    LoggingCategory log;
+    log.categoryName = u"foo"_s;
+    log.defaultSeverityType = LoggingCategory::Warning;
+
+    log.loggingType = LoggingCategory::Warning;
+    QVERIFY(log.hasDefaultSeverity());
+
+    // A category explicitly turned off does not have its default severity any
+    // more, even if it was off by default in a previous configuration.
+    log.loggingType = LoggingCategory::Off;
+    QVERIFY(!log.hasDefaultSeverity());
+
+    log.loggingType = LoggingCategory::All;
+    QVERIFY(!log.hasDefaultSeverity());
+}
+
 #include "moc_loggingcategorytest.cpp"

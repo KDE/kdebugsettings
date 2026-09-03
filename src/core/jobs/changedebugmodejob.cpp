@@ -39,39 +39,52 @@ bool ChangeDebugModeJob::start() const
     KDebugSettingsLoadingCategories loading;
     loading.readQtLoggingFile();
     const LoggingCategory::LoggingType type = convertDebugModeToLoggingType(mDebugMode);
+    // The category names are matched exactly: a substring match would make
+    // "--debug-mode Full foo" change foobar too.
+    bool foundCategory = mWithoutArguments;
     LoggingCategory::List customCategories = loading.customCategories();
     for (int i = 0, total = customCategories.count(); i < total; ++i) {
         LoggingCategory cat = customCategories[i];
         if (mWithoutArguments) {
             cat.loggingType = type;
             customCategories[i] = std::move(cat);
-        } else {
-            for (const QString &categoryName : std::as_const(mLoggingCategoriesName)) {
-                if (cat.categoryName.contains(categoryName)) {
-                    cat.loggingType = type;
-                    customCategories[i] = cat;
-                }
-            }
+        } else if (mLoggingCategoriesName.contains(cat.categoryName)) {
+            cat.loggingType = type;
+            customCategories[i] = std::move(cat);
+            foundCategory = true;
         }
     }
     LoggingCategory::List qtKdeCategories = loading.qtKdeCategories();
-    for (int i = 0; i < qtKdeCategories.count(); ++i) {
+    for (int i = 0, total = qtKdeCategories.count(); i < total; ++i) {
         LoggingCategory cat = qtKdeCategories[i];
         if (mWithoutArguments) {
             cat.loggingType = type;
             qtKdeCategories[i] = std::move(cat);
-        } else {
-            for (const QString &categoryName : std::as_const(mLoggingCategoriesName)) {
-                if (cat.categoryName.contains(categoryName)) {
-                    cat.loggingType = type;
-                    qtKdeCategories[i] = cat;
-                }
-            }
+        } else if (mLoggingCategoriesName.contains(cat.categoryName)) {
+            cat.loggingType = type;
+            qtKdeCategories[i] = std::move(cat);
+            foundCategory = true;
         }
     }
+    if (!foundCategory) {
+        qCWarning(KDEBUGSETTINGSCORE_LOG) << "No logging category found for" << mLoggingCategoriesName;
+        return false;
+    }
+
+    // Only the categories which differ from their default severity are saved,
+    // as the GUI does: otherwise changing a single category on the command line
+    // would freeze the defaults of all the known categories in qtlogging.ini.
+    LoggingCategory::List kdeRules;
+    kdeRules.reserve(qtKdeCategories.count());
+    for (const LoggingCategory &cat : std::as_const(qtKdeCategories)) {
+        if (!cat.hasDefaultSeverity() && cat.isValid()) {
+            kdeRules.append(cat);
+        }
+    }
+
     SaveRulesJob job;
     job.setFileName(KDebugSettingsUtil::qtFileName());
-    job.setListKde(qtKdeCategories);
+    job.setListKde(kdeRules);
     job.setListCustom(customCategories);
     if (!job.start()) {
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Impossible to save in file " << job.fileName();
