@@ -27,21 +27,22 @@ bool LoggingCategory::isValid() const
 QString LoggingCategory::createCustomRule() const
 {
     QString str;
+    const QString enableState = enabled ? u"=true\n"_s : u"=false\n"_s;
     switch (loggingType) {
     case All:
-        str = categoryName + (enabled ? u"=true\n"_s : u"=false\n"_s);
+        str = categoryName + enableState;
         break;
     case Info:
-        str = categoryName + u".info=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
+        str = categoryName + u".info"_s + enableState;
         break;
     case Warning:
-        str = categoryName + u".warning=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
+        str = categoryName + u".warning"_s + enableState;
         break;
     case Debug:
-        str = categoryName + u".debug=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
+        str = categoryName + u".debug"_s + enableState;
         break;
     case Critical:
-        str = categoryName + u".critical=%1\n"_s.arg(enabled ? u"true"_s : u"false"_s);
+        str = categoryName + u".critical"_s + enableState;
         break;
     case Undefined:
     case Off:
@@ -63,37 +64,37 @@ QString LoggingCategory::createRule() const
     case Undefined:
         break;
     case All:
-        str = categoryName + "=true\n"_L1;
+        str = categoryName + u"=true\n"_s;
         break;
     case Info:
-        str = categoryName + ".info=true\n"_L1;
-        str += categoryName + ".warning=true\n"_L1;
-        str += categoryName + ".critical=true\n"_L1;
-        str += categoryName + ".debug=false\n"_L1;
+        str = categoryName + u".info=true\n"_s;
+        str += categoryName + u".warning=true\n"_s;
+        str += categoryName + u".critical=true\n"_s;
+        str += categoryName + u".debug=false\n"_s;
         break;
     case Warning:
-        str = categoryName + ".info=false\n"_L1;
-        str += categoryName + ".debug=false\n"_L1;
-        str += categoryName + ".warning=true\n"_L1;
-        str += categoryName + ".critical=true\n"_L1;
+        str = categoryName + u".info=false\n"_s;
+        str += categoryName + u".debug=false\n"_s;
+        str += categoryName + u".warning=true\n"_s;
+        str += categoryName + u".critical=true\n"_s;
         break;
     case Debug:
-        str = categoryName + ".info=false\n"_L1;
-        str += categoryName + ".debug=true\n"_L1;
-        str += categoryName + ".warning=true\n"_L1;
-        str += categoryName + ".critical=true\n"_L1;
+        str = categoryName + u".info=false\n"_s;
+        str += categoryName + u".debug=true\n"_s;
+        str += categoryName + u".warning=true\n"_s;
+        str += categoryName + u".critical=true\n"_s;
         break;
     case Critical:
-        str = categoryName + ".info=false\n"_L1;
-        str += categoryName + ".debug=false\n"_L1;
-        str += categoryName + ".warning=false\n"_L1;
-        str += categoryName + ".critical=true\n"_L1;
+        str = categoryName + u".info=false\n"_s;
+        str += categoryName + u".debug=false\n"_s;
+        str += categoryName + u".warning=false\n"_s;
+        str += categoryName + u".critical=true\n"_s;
         break;
     case Off:
-        str = categoryName + ".info=false\n"_L1;
-        str += categoryName + ".debug=false\n"_L1;
-        str += categoryName + ".warning=false\n"_L1;
-        str += categoryName + ".critical=false\n"_L1;
+        str = categoryName + u".info=false\n"_s;
+        str += categoryName + u".debug=false\n"_s;
+        str += categoryName + u".warning=false\n"_s;
+        str += categoryName + u".critical=false\n"_s;
         break;
     }
     return str;
