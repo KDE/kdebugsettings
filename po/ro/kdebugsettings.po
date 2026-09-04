@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:50+0000\n"
+"POT-Creation-Date: 2026-09-04 00:48+0000\n"
 "PO-Revision-Date: 2020-09-27 13:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -107,52 +107,52 @@ msgstr "Critic"
 msgid "Off"
 msgstr "Oprit"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
 #, kde-format
 msgid "Undefined"
 msgstr "Nedefinit"
 
-#: src/core/loggingcategory.cpp:115
+#: src/core/loggingcategory.cpp:121
 #, kde-format
 msgid "Category name: %1"
 msgstr "Denumire categorie: %1"
 
-#: src/core/loggingcategory.cpp:117
+#: src/core/loggingcategory.cpp:123
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identificator: %1"
 
-#: src/core/loggingcategory.cpp:119
+#: src/core/loggingcategory.cpp:125
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Severitate implicită: %1"
 
-#: src/core/loggingcategory.cpp:128
+#: src/core/loggingcategory.cpp:134
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Toate mesajele de depanare"
 
-#: src/core/loggingcategory.cpp:131
+#: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Info Messages"
 msgstr "Mesaje informative"
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:140
 #, kde-format
 msgid "Warning Messages"
 msgstr "Mesaje de avertizare"
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "Debug Messages"
 msgstr "Mesaje de depanare"
 
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Critical Messages"
 msgstr "Mesaje critice"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:149
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Fără mesaje de depanare"
@@ -255,7 +255,7 @@ msgid "Rules Settings with Environment Variable"
 msgstr "Configurări reguli cu variabilă de mediu"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
-#: src/widgets/environmentplaintextedit.cpp:42
+#: src/widgets/environmentplaintextedit.cpp:43
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
@@ -597,7 +597,7 @@ msgstr "Încarcă fișiere cu reguli de depanare"
 msgid "Load Group"
 msgstr ""
 
-#: src/widgets/loadgroupmenu.cpp:72
+#: src/widgets/loadgroupmenu.cpp:67
 #, fuzzy, kde-format
 #| msgid "Save As..."
 msgctxt "@action"

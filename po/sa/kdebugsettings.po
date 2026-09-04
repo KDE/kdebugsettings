@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:50+0000\n"
+"POT-Creation-Date: 2026-09-04 00:48+0000\n"
 "PO-Revision-Date: 2024-12-20 21:51+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -105,52 +105,52 @@ msgstr "गंभीरः"
 msgid "Off"
 msgstr "दूरे"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
 #, kde-format
 msgid "Undefined"
 msgstr "अनिर्दिष्टम्"
 
-#: src/core/loggingcategory.cpp:115
+#: src/core/loggingcategory.cpp:121
 #, kde-format
 msgid "Category name: %1"
 msgstr "श्रेणीनाम: %1"
 
-#: src/core/loggingcategory.cpp:117
+#: src/core/loggingcategory.cpp:123
 #, kde-format
 msgid "Identifier: %1"
 msgstr "परिचयकः %1"
 
-#: src/core/loggingcategory.cpp:119
+#: src/core/loggingcategory.cpp:125
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "पूर्वनिर्धारितगम्भीरता: %1"
 
-#: src/core/loggingcategory.cpp:128
+#: src/core/loggingcategory.cpp:134
 #, kde-format
 msgid "All Debug Messages"
 msgstr "सर्वे त्रुटिनिवारणसन्देशाः"
 
-#: src/core/loggingcategory.cpp:131
+#: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Info Messages"
 msgstr "इन्फो मेसेज"
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:140
 #, kde-format
 msgid "Warning Messages"
 msgstr "चेतावनी सन्देशाः"
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "Debug Messages"
 msgstr "सन्देशान् त्रुटिनिवारणं कुर्वन्तु"
 
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Critical Messages"
 msgstr "आलोचनात्मक सन्देश"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:149
 #, kde-format
 msgid "No Debug Messages"
 msgstr "न त्रुटिनिवारणसन्देशाः"
@@ -255,7 +255,7 @@ msgid "Rules Settings with Environment Variable"
 msgstr "पर्यावरणचरसहितं नियमसेटिंग्स्"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
-#: src/widgets/environmentplaintextedit.cpp:42
+#: src/widgets/environmentplaintextedit.cpp:43
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
@@ -567,7 +567,7 @@ msgstr "त्रुटिनिवारणसेटिंग्स् सञ�
 msgid "Load Group"
 msgstr "लोड समूह"
 
-#: src/widgets/loadgroupmenu.cpp:72
+#: src/widgets/loadgroupmenu.cpp:67
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"

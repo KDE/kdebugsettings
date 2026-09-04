@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:50+0000\n"
+"POT-Creation-Date: 2026-09-04 00:48+0000\n"
 "PO-Revision-Date: 2026-07-28 08:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -103,52 +103,52 @@ msgstr "משמעותי"
 msgid "Off"
 msgstr "כבוי"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
 #, kde-format
 msgid "Undefined"
 msgstr "לא מוגדר"
 
-#: src/core/loggingcategory.cpp:115
+#: src/core/loggingcategory.cpp:121
 #, kde-format
 msgid "Category name: %1"
 msgstr "שם קטגוריה: %1"
 
-#: src/core/loggingcategory.cpp:117
+#: src/core/loggingcategory.cpp:123
 #, kde-format
 msgid "Identifier: %1"
 msgstr "מזהה: %1"
 
-#: src/core/loggingcategory.cpp:119
+#: src/core/loggingcategory.cpp:125
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "דרגת חומרה כברירת מחדל: %1"
 
-#: src/core/loggingcategory.cpp:128
+#: src/core/loggingcategory.cpp:134
 #, kde-format
 msgid "All Debug Messages"
 msgstr "כל הודעות ניפוי השגיאות"
 
-#: src/core/loggingcategory.cpp:131
+#: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Info Messages"
 msgstr "הודעות פרטים"
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:140
 #, kde-format
 msgid "Warning Messages"
 msgstr "הודעות אזהרה"
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "Debug Messages"
 msgstr "הודעות ניפוי שגיאות"
 
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Critical Messages"
 msgstr "הודעות משמעותיות"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:149
 #, kde-format
 msgid "No Debug Messages"
 msgstr "ללא הודעות ניפוי שגיאות"
@@ -233,7 +233,7 @@ msgid "Rules Settings with Environment Variable"
 msgstr "הגדרות כללים עם משתנה סביבה"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
-#: src/widgets/environmentplaintextedit.cpp:42
+#: src/widgets/environmentplaintextedit.cpp:43
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
@@ -547,7 +547,7 @@ msgstr "טעינת קובצי הגדרות ניפוי שגיאות"
 msgid "Load Group"
 msgstr "טעינת קבוצה"
 
-#: src/widgets/loadgroupmenu.cpp:72
+#: src/widgets/loadgroupmenu.cpp:67
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"

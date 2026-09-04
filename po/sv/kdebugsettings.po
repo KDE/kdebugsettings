@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:50+0000\n"
+"POT-Creation-Date: 2026-09-04 00:48+0000\n"
 "PO-Revision-Date: 2026-07-24 09:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -103,52 +103,52 @@ msgstr "Kritiska fel"
 msgid "Off"
 msgstr "Av"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:146
+#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
 #, kde-format
 msgid "Undefined"
 msgstr "Odefinierad"
 
-#: src/core/loggingcategory.cpp:115
+#: src/core/loggingcategory.cpp:121
 #, kde-format
 msgid "Category name: %1"
 msgstr "Kategorinamn: %1"
 
-#: src/core/loggingcategory.cpp:117
+#: src/core/loggingcategory.cpp:123
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identifierare: %1"
 
-#: src/core/loggingcategory.cpp:119
+#: src/core/loggingcategory.cpp:125
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Standardsvårighetsgrad: %1"
 
-#: src/core/loggingcategory.cpp:128
+#: src/core/loggingcategory.cpp:134
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Alla felsökningsmeddelanden"
 
-#: src/core/loggingcategory.cpp:131
+#: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Info Messages"
 msgstr "Informationsmeddelanden"
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:140
 #, kde-format
 msgid "Warning Messages"
 msgstr "Varningsmeddelanden"
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "Debug Messages"
 msgstr "Felsökningsmeddelanden"
 
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Critical Messages"
 msgstr "Kritiska meddelanden"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:149
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Inga felsökningsmeddelanden"
@@ -233,7 +233,7 @@ msgid "Rules Settings with Environment Variable"
 msgstr "Regelinställningar med miljövariabel"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
-#: src/widgets/environmentplaintextedit.cpp:42
+#: src/widgets/environmentplaintextedit.cpp:43
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
@@ -543,7 +543,7 @@ msgstr "Läs in inställningsfiler för felsökning"
 msgid "Load Group"
 msgstr "Läs in grupp"
 
-#: src/widgets/loadgroupmenu.cpp:72
+#: src/widgets/loadgroupmenu.cpp:67
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
