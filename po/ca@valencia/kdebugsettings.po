@@ -4,7 +4,7 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2015-2020, 2023-2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2018-2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
@@ -576,30 +576,3 @@ msgstr "Anomena i guarda com a fitxer…"
 msgctxt "@action"
 msgid "Save As Group…"
 msgstr "Anomena i guarda com a grup…"
-
-#~ msgid "(c) 2023-%1 kdebugsettings authors"
-#~ msgstr "(c) 2023-%1, Els autors de kdebugsettings"
-
-#~ msgctxt "@item:inmenu"
-#~ msgid "Help"
-#~ msgstr "Ajuda"
-
-#~ msgctxt "@action opens about app page"
-#~ msgid "About"
-#~ msgstr "Quant a"
-
-#~ msgctxt "@action"
-#~ msgid "Open Handbook"
-#~ msgstr "Obri el manual"
-
-#~ msgctxt "@menu-action"
-#~ msgid "Quit"
-#~ msgstr "Ix"
-
-#~ msgctxt "@menu-action"
-#~ msgid "Save"
-#~ msgstr "Guarda"
-
-#~ msgctxt "@title"
-#~ msgid "Welcome to kdebugsettings"
-#~ msgstr "Us donem la benvinguda a «kdebugsettings»"
