@@ -88,15 +88,20 @@ int main(int argc, char **argv)
     }
     const QString changeModeValue =
         parser.value(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DebugMode));
-    if (!changeModeValue.isEmpty() && !parser.positionalArguments().isEmpty()) {
-        ChangeDebugModeJob job;
-        job.setDebugMode(changeModeValue);
-        job.setLoggingCategoriesName(parser.positionalArguments());
-        if (!job.start()) {
-            std::cerr << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+    if (!changeModeValue.isEmpty()) {
+        if (!parser.positionalArguments().isEmpty()) {
+            ChangeDebugModeJob job;
+            job.setDebugMode(changeModeValue);
+            job.setLoggingCategoriesName(parser.positionalArguments());
+            if (!job.start()) {
+                std::cerr << i18n("Impossible to change debug mode").toLocal8Bit().data() << std::endl;
+                return 1;
+            }
+            return 0;
+        } else {
+            std::cerr << i18n("--debug-mode requires at least one logging category name.").toLocal8Bit().data() << std::endl;
             return 1;
         }
-        return 0;
     } else {
 #if WITH_DBUS
         KDBusService service(KDBusService::Unique);
