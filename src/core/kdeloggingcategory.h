@@ -8,10 +8,10 @@
 #pragma once
 
 #include "libkdebugsettingscore_private_export.h"
-#include <QDebug>
 #include <QList>
 #include <QMetaType>
 #include <QString>
+class QDebug;
 
 struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT KdeLoggingCategory {
     KdeLoggingCategory();

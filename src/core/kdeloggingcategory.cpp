@@ -6,6 +6,7 @@
 */
 
 #include "kdeloggingcategory.h"
+#include <QDebug>
 
 KdeLoggingCategory::KdeLoggingCategory() = default;
 

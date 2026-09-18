@@ -11,10 +11,8 @@
 #include <KLocalizedString>
 #include <QDir>
 #include <QFile>
-#include <QMap>
 #include <QRegularExpression>
 #include <QStandardPaths>
-#include <QStringList>
 #include <QTextStream>
 
 using namespace Qt::Literals::StringLiterals;

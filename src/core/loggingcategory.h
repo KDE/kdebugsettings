@@ -7,12 +7,11 @@
 #pragma once
 
 #include "libkdebugsettingscore_export.h"
-#include <QDebug>
 #include <QList>
 #include <QMetaType>
 #include <QString>
 #include <utility>
-
+class QDebug;
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     enum LoggingType : uint8_t {
         All = 0,

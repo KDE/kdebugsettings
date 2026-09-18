@@ -9,6 +9,7 @@
 
 #include "kdebugsettingsutil.h"
 #include <KLocalizedString>
+#include <QDebug>
 
 using namespace Qt::Literals::StringLiterals;
 LoggingCategory::LoggingCategory() = default;
