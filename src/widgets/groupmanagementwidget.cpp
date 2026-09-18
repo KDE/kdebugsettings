@@ -85,7 +85,7 @@ void GroupManagementWidget::slotCustomContextMenu()
     const auto items = mListWidget->selectedItems();
     if (!items.isEmpty()) {
         QMenu menu(this);
-        if (mListWidget->selectedItems().count() == 1) {
+        if (items.count() == 1) {
             const auto item = items.at(0);
             menu.addAction(QIcon::fromTheme(u"edit"_s), i18nc("@action", "Rename Group…"), this, [this, item]() {
                 renameGroup(item);
@@ -97,15 +97,20 @@ void GroupManagementWidget::slotCustomContextMenu()
             menu.addSeparator();
         }
         menu.addAction(QIcon::fromTheme(u"edit-delete"_s), i18nc("@action", "Remove Groups"), this, [this, items]() {
+            bool groupsRemoved = false;
             for (auto item : items) {
                 const QString fullPath = item->data(FullPathRole).toString();
                 QFile f(fullPath);
                 if (!f.remove()) {
                     KMessageBox::error(this, i18n("Impossible to remove \'%1\'", fullPath), i18nc("@title:window", "Remove Group"));
+                    continue;
                 }
                 delete item;
+                groupsRemoved = true;
             }
-            Q_EMIT groupsChanged();
+            if (groupsRemoved) {
+                Q_EMIT groupsChanged();
+            }
         });
         menu.exec(QCursor::pos());
     }
