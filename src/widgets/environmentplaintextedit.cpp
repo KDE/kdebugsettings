@@ -40,7 +40,7 @@ void EnvironmentPlainTextEdit::paintEvent(QPaintEvent *event)
         color.setAlpha(128);
         p.setPen(color);
 
-        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."));
+        p.drawText(viewport()->rect(), Qt::AlignCenter, i18n("No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."));
     } else {
         QTextEdit::paintEvent(event);
     }
