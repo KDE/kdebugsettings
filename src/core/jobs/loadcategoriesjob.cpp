@@ -87,7 +87,7 @@ void LoadCategoriesJob::start()
     }
 
     for (int i = 0; i < number; ++i) {
-        KdeLoggingCategory kdeCat = mCategories.at(i);
+        const KdeLoggingCategory &kdeCat = mCategories.at(i);
 
         bool foundInConfigFile = false;
         for (const KDebugSettingsUtil::LoadLoggingCategory &cat : std::as_const(qtCategories)) {

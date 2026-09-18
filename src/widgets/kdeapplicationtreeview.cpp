@@ -52,7 +52,8 @@ void KDEApplicationTreeView::changeCategoryType(LoggingCategory::LoggingType typ
     const auto selected = selectedIndexes();
     LoggingCategory::List lst;
     if (selected.isEmpty()) {
-        for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+        const int total = mKdeApplicationLoggingCategoryProxyModel->rowCount();
+        for (int i = 0; i < total; ++i) {
             const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
                 mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
             auto cat = index.data().value<LoggingCategory>();
@@ -99,8 +100,9 @@ void KDEApplicationTreeView::insertCategories(const LoggingCategory::List &list)
 void KDEApplicationTreeView::restoreToDefault()
 {
     LoggingCategory::List lst;
-    lst.reserve(mKdeApplicationLoggingCategoryProxyModel->rowCount());
-    for (int i = 0; i < mKdeApplicationLoggingCategoryProxyModel->rowCount(); ++i) {
+    const int total = mKdeApplicationLoggingCategoryProxyModel->rowCount();
+    lst.reserve(total);
+    for (int i = 0; i < total; ++i) {
         const QModelIndex index = mKdeApplicationLoggingCategoryProxyModel->mapToSource(
             mKdeApplicationLoggingCategoryProxyModel->index(i, KDEApplicationLoggingCategoryModel::CategoryRole));
         auto cat = index.data().value<LoggingCategory>();

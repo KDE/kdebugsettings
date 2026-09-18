@@ -81,7 +81,7 @@ bool CustomDebugSettingsPage::eventFilter(QObject *obj, QEvent *event)
 
 void CustomDebugSettingsPage::updateButtons()
 {
-    mEditRule->setEnabled(mCustomDebugListView->selectionModel()->selection().indexes().count() == 1);
+    mEditRule->setEnabled(mCustomDebugListView->selectionModel()->selectedRows().count() == 1);
     mRemoveRule->setEnabled(mCustomDebugListView->selectionModel()->hasSelection());
 }
 

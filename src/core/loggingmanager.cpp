@@ -81,10 +81,8 @@ bool LoggingManager::foundOverrideRule() const
 
 void LoggingManager::updateLoggingCategories()
 {
-    const LoggingCategory::List customCategories = mLoggings.customCategories();
-    const LoggingCategory::List qtKdeCategories = mLoggings.qtKdeCategories();
-    mCustomCategoryModel->setLoggingCategories(customCategories);
-    mQtKdeCategoryModel->setLoggingCategories(qtKdeCategories);
+    mCustomCategoryModel->setLoggingCategories(mLoggings.customCategories());
+    mQtKdeCategoryModel->setLoggingCategories(mLoggings.qtKdeCategories());
 }
 
 bool LoggingManager::saveInQtLogging() const
