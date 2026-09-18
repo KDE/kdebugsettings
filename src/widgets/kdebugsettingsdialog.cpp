@@ -123,7 +123,7 @@ void KDebugSettingsDialog::readConfig()
 
 void KDebugSettingsDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(QLatin1StringView(KDebugSettingsDialogGroupName)));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(KDebugSettingsDialogGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
