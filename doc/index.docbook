@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kdebugsettings "<application>KDebugSettings</application>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+]>
+
+<book id="kdebugsettings" lang="&language;">
+
+<bookinfo>
+<title>The &kdebugsettings; Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Laurent</firstname>
+<surname>Montel</surname>
+<affiliation><address><email>montel@kde.org</email></address></affiliation>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2015</year>
+<year>2026</year>
+<holder>Laurent Montel</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2026-09-19</date>
+<releaseinfo>&kdebugsettings; 26.11</releaseinfo>
+
+<abstract>
+<para>&kdebugsettings; configures which debug messages &Qt; and &kde; applications print, without recompiling them.</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KDebugSettings</keyword>
+<keyword>debug</keyword>
+<keyword>logging</keyword>
+<keyword>categories</keyword>
+<keyword>qtlogging.ini</keyword>
+<keyword>QT_LOGGING_RULES</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>&Qt; applications group their diagnostic output into <emphasis>logging categories</emphasis>: named channels such as <literal>org.kde.pim.kmail</literal> or <literal>kf.kio.core</literal>, each of which can be turned on or off independently and for each severity (debug, info, warning, critical). By default most categories are quiet, so that applications do not flood the journal in normal use.</para>
+
+<para>&kdebugsettings; is a graphical front end for those rules. It lists all the categories installed on the system, lets you choose how verbose each one should be, and writes the result to the configuration file &Qt; reads at application startup:</para>
+
+<para><filename>$<envar>XDG_CONFIG_HOME</envar>/QtProject/qtlogging.ini</filename> (usually <filename class="directory">~/.config/QtProject/qtlogging.ini</filename>)</para>
+
+<para>Rules take effect the next time an application starts; already running applications are not affected.</para>
+
+<note><para>&kdebugsettings; does not decide <emphasis>where</emphasis> the messages go, only which ones are produced. The output still ends up wherever the platform sends it, typically the systemd journal or the terminal the application was started from.</para></note>
+
+</chapter>
+
+<chapter id="using">
+<title>Using &kdebugsettings;</title>
+
+<para>The main window is a dialog with three tabs and a row of buttons shared by all of them.</para>
+
+<sect1 id="kde-application-tab">
+<title>The <guilabel>KDE Application</guilabel> Tab</title>
+
+<para>This tab lists every logging category declared by the applications and libraries installed on your system. Each row shows the description of the category and a drop down box with its current severity level. Hovering over a row displays the category name, its identifier and its default severity.</para>
+
+<para>Use the <guilabel>Search…</guilabel> field at the top to narrow the list; the filter matches the description, the category name and the identifier, so typing <userinput>kmail</userinput>, <userinput>org.kde.pim</userinput> or <userinput>KMAIL_LOG</userinput> all work.</para>
+
+<para>To change a single category, pick a level in its drop down box. To change several at once, select the rows first &mdash; the change is then applied to the whole selection. The three buttons at the bottom act on the selected rows, or on every row currently shown by the filter when nothing is selected:</para>
+
+<variablelist>
+<varlistentry>
+<term><guibutton>Enable All Debug</guibutton></term>
+<listitem><para>Sets the categories to <guilabel>Full Debug</guilabel>, &ie; every message of every severity is printed.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Turn Off Debug</guibutton></term>
+<listitem><para>Sets the categories back to <guilabel>Info</guilabel>: informational, warning and critical messages are kept, debug messages are dropped.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Turn Off All Messages</guibutton></term>
+<listitem><para>Sets the categories to <guilabel>Off</guilabel>, silencing them completely.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>The <guibutton>Restore Defaults</guibutton> button of the dialog resets every category of this tab to the default severity declared by the application that owns it (see <xref linkend="categories-file"/>).</para>
+
+<sect2 id="severity-levels">
+<title>Severity Levels</title>
+
+<para>A category is not a simple on/off switch: choosing a level enables that severity and everything more serious than it. The levels offered, from the most to the least verbose, are:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row><entry>Level</entry><entry>Messages that are printed</entry></row>
+</thead>
+<tbody>
+<row><entry><guilabel>Full Debug</guilabel></entry><entry>debug, info, warning and critical</entry></row>
+<row><entry><guilabel>Info</guilabel></entry><entry>info, warning and critical</entry></row>
+<row><entry><guilabel>Warning</guilabel></entry><entry>warning and critical</entry></row>
+<row><entry><guilabel>Critical</guilabel></entry><entry>critical only</entry></row>
+<row><entry><guilabel>Off</guilabel></entry><entry>nothing</entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<para>Each level is written out as an explicit rule for all four severities, so that a category always has a well defined state regardless of what the system wide defaults are. Selecting <guilabel>Warning</guilabel> for <literal>org.kde.example</literal>, for instance, produces:</para>
+
+<programlisting>org.kde.example.info=false
+org.kde.example.debug=false
+org.kde.example.warning=true
+org.kde.example.critical=true</programlisting>
+
+</sect2>
+</sect1>
+
+<sect1 id="custom-rules-tab">
+<title>The <guilabel>Custom Rules</guilabel> Tab</title>
+
+<para>Not every category is declared in an installed <filename>.categories</filename> file: third party applications, or code you are currently working on, may use categories &kdebugsettings; knows nothing about. This tab lets you write rules for them by hand.</para>
+
+<para>Use <guibutton>Add…</guibutton> to create a rule, <guibutton>Edit…</guibutton> to change the selected one and <guibutton>Remove…</guibutton> to delete the selected ones. A rule consists of a category name, a type and an <guilabel>Enable</guilabel> check box, and is displayed in the &Qt; syntax, &eg; <literal>org.kde.example.debug=true</literal>.</para>
+
+<para>The category name may contain the wildcard <literal>*</literal>, at the beginning of the name, at the end, or both. <literal>org.kde.pim.*</literal> therefore matches every &PIM; category at once.</para>
+
+<warning>
+<para>A rule whose category is just <literal>*</literal> with no type, &ie; <literal>*=true</literal> or <literal>*=false</literal>, matches everything and overrides all the other rules. &kdebugsettings; warns you at the top of the dialog when such a rule is found and it is best to remove it. If you really want a catch-all rule, write it as <literal>*.*=true</literal> or <literal>*.*=false</literal> instead, which is ordered so that the more specific rules still win.</para>
+</warning>
+
+</sect1>
+
+<sect1 id="environment-tab">
+<title>The <guilabel>Rules Settings With Environment Variable</guilabel> Tab</title>
+
+<para>&Qt; also reads logging rules from the <envar>QT_LOGGING_RULES</envar> environment variable, and those rules take precedence over the ones stored in <filename>qtlogging.ini</filename>. If the variable is set in the environment &kdebugsettings; was started from, this tab shows its content, so that you can tell why a category behaves differently from what the first two tabs suggest.</para>
+
+<para>The rules are read-only here: to change them, change the environment variable itself.</para>
+
+</sect1>
+
+<sect1 id="saving">
+<title>Saving, Loading and Groups</title>
+
+<para><guibutton>OK</guibutton> and <guibutton>Apply</guibutton> write the rules of the first two tabs to <filename>~/.config/QtProject/qtlogging.ini</filename>. Only the categories that differ from their default severity are written, which keeps the file short and lets applications change their own defaults later.</para>
+
+<para>The remaining buttons manage rule sets you want to keep side by side, for instance one per bug you are chasing:</para>
+
+<variablelist>
+<varlistentry>
+<term><guibutton>Save As…</guibutton></term>
+<listitem>
+<para><guimenuitem>Save As File</guimenuitem> exports the current rules to a <filename class="extension">.kdebugsettingsrules</filename> file anywhere on disk. <guimenuitem>Save As Group</guimenuitem> asks for a name and stores the rules as a group in <filename class="directory">~/.local/share/kdebugsettings/groups/</filename>.</para>
+<para>Unlike <guibutton>Apply</guibutton>, both write out <emphasis>every</emphasis> category, not only the modified ones, so that reloading the file restores exactly the state you saved.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Load</guibutton></term>
+<listitem><para><guimenuitem>Load From File</guimenuitem> reads back a <filename class="extension">.kdebugsettingsrules</filename> file, <guimenuitem>Load Group</guimenuitem> offers the saved groups in a submenu, and <guimenuitem>Manage Group</guimenuitem> opens a dialog where groups can be renamed, removed and exported. Loading only fills the dialog; use <guibutton>OK</guibutton> or <guibutton>Apply</guibutton> to actually activate the rules.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Insert…</guibutton></term>
+<listitem><para>Reads an additional <filename class="extension">.categories</filename> file and adds the categories it declares to the <guilabel>KDE Application</guilabel> tab. This is useful for an application that is not installed system wide, typically one you are building yourself.</para></listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="categories-file">
+<title>Declaring Categories: the <filename class="extension">.categories</filename> File</title>
+
+<para>The list shown in the <guilabel>KDE Application</guilabel> tab is not hardcoded. It is read from the <filename class="extension">.categories</filename> files installed by applications, in:</para>
+
+<itemizedlist>
+<listitem><para><filename class="directory">${KDE_INSTALL_LOGGINGCATEGORIESDIR}</filename>, &ie; <filename class="directory">/usr/share/qlogging-categories6/</filename>, where <filename>kde.categories</filename> is the shared file listing the categories of the &kde; applications;</para></listitem>
+<listitem><para>the <acronym>XDG</acronym> configuration directories, for example <filename class="directory">~/.config/</filename>;</para></listitem>
+<listitem><para><filename class="directory">$<envar>XDG_CONFIG_HOME</envar>/qdebug.categories/</filename>, for applications outside &kde;.</para></listitem>
+</itemizedlist>
+
+<para>The format is one category per line. Lines starting with <literal>#</literal> are comments:</para>
+
+<programlisting>&lt;category name&gt; &lt;description&gt; [DEFAULT_SEVERITY [&lt;severity&gt;]] [IDENTIFIER [&lt;identifier&gt;]]</programlisting>
+
+<para>The name and the description are mandatory, the rest is optional. <literal>&lt;severity&gt;</literal> is one of <literal>DEBUG</literal>, <literal>INFO</literal>, <literal>WARNING</literal> or <literal>CRITICAL</literal> and gives the level the category falls back to, the one <guibutton>Restore Defaults</guibutton> returns to; when it is absent, <literal>INFO</literal> is assumed. <literal>&lt;identifier&gt;</literal> is the name of the <classname>QLoggingCategory</classname> object in the source code, which makes the category searchable by the name developers actually type. For example:</para>
+
+<programlisting>org.kde.example.core Example core library DEFAULT_SEVERITY [WARNING] IDENTIFIER [EXAMPLE_CORE_LOG]</programlisting>
+
+<para>If you build your application with the extra-cmake-modules, you do not need to write this file by hand: declare the category with <function>ecm_qt_declare_logging_category()</function> and install it with <function>ecm_qt_install_logging_categories()</function>, and the file is generated for you.</para>
+
+<sect1 id="renamecategories">
+<title>Renamed Categories</title>
+
+<para>When an application renames one of its categories, the rules users already have in their <filename>qtlogging.ini</filename> still refer to the old name. A <filename class="extension">.renamecategories</filename> file, installed next to the <filename class="extension">.categories</filename> file, tells &kdebugsettings; how to migrate them. Each line maps an old name to a new one:</para>
+
+<programlisting># old module name&lt;space&gt;new module name
+org.kde.old.name org.kde.new.name</programlisting>
+
+</sect1>
+</chapter>
+
+<chapter id="commandline">
+<title>Command Line Options</title>
+
+<para>Besides the usual &kde; options, &kdebugsettings; accepts the following, which change the rules without opening the dialog:</para>
+
+<variablelist>
+<varlistentry>
+<term><option>--enable-full-debug</option></term>
+<listitem><para>Sets every known category to <guilabel>Full Debug</guilabel> and exits.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--disable-full-debug</option></term>
+<listitem><para>Sets every known category to <guilabel>Off</guilabel> and exits.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--debug-mode <replaceable>Full|Info|Warning|Critical|Off</replaceable> <replaceable>category…</replaceable></option></term>
+<listitem>
+<para>Sets the given level on the categories named as arguments and exits. At least one category name is required:</para>
+<screen><prompt>%</prompt> <userinput><command>kdebugsettings</command> <option>--debug-mode</option> <parameter>Full</parameter> <parameter>org.kde.pim.kmail</parameter> <parameter>org.kde.pim.messagelist</parameter></userinput></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--test-mode</option></term>
+<listitem><para>Enables the <classname>QStandardPaths</classname> test mode, so that the settings of the unit tests are used instead of yours. Intended for testing &kdebugsettings; itself.</para></listitem>
+</varlistentry>
+</variablelist>
+
+</chapter>
+
+<chapter id="systemsettings">
+<title>The &systemsettings; Module</title>
+
+<para>&kdebugsettings; also installs a &systemsettings; module, found under <menuchoice><guimenu>System Administration</guimenu><guimenuitem>Debug Settings</guimenuitem></menuchoice>. It offers the same three tabs as the standalone application and writes the same <filename>qtlogging.ini</filename> file.</para>
+
+</chapter>
+
+<chapter id="credits">
+<title>Credits and License</title>
+
+<para>&kdebugsettings;</para>
+
+<para>Program copyright 2015-2026 Laurent Montel <email>montel@kde.org</email></para>
+
+<para>Documentation copyright 2026 Laurent Montel <email>montel@kde.org</email></para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underGPL;
+&underFDL;
+
+</chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

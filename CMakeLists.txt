@@ -110,6 +110,16 @@ find_package(
         KCMUtils
 )
 
+find_package(KF6DocTools ${KF_MIN_VERSION})
+set_package_properties(
+    KF6DocTools
+    PROPERTIES
+        DESCRIPTION
+            "Tools to generate documentation"
+        TYPE
+            OPTIONAL
+)
+
 # shall we use DBus?
 # enabled per default on Linux & BSD systems
 set(USE_DBUS_DEFAULT OFF)
@@ -235,6 +245,10 @@ if(GIT_SOURCE_TARBALL)
     endif()
 endif()
 ki18n_install(po)
+if(KF6DocTools_FOUND)
+    add_subdirectory(doc)
+    kdoctools_install(po)
+endif()
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 file(

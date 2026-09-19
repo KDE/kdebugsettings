@@ -37,6 +37,18 @@ SPDX-License-Identifier = "LGPL-2.0-or-later"
 
 
 [[annotations]]
+path = ["doc/index.docbook"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2015-2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "GFDL-1.2-or-later"
+
+[[annotations]]
+path = ["README.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
 path = ["src/kcm/kcm_debugsettings.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 Laurent Montel <montel@kde.org>"
