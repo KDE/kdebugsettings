@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:48+0000\n"
+"POT-Creation-Date: 2026-09-19 00:48+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -47,9 +47,14 @@ msgstr "Лорен Монтел"
 msgid "Maintainer"
 msgstr "Одржавалац"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
 #, kde-format
 msgid "Impossible to change debug mode"
+msgstr ""
+
+#: src/apps/main.cpp:102
+#, kde-format
+msgid "--debug-mode requires at least one logging category name."
 msgstr ""
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
@@ -80,87 +85,87 @@ msgid ""
 msgstr ""
 
 # >> @item:inlistbox
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:412
 #, fuzzy, kde-format
 #| msgid "Debug"
 msgid "Full Debug"
 msgstr "исправљање"
 
 # >> @item:inlistbox
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:415
 #, kde-format
 msgid "Info"
 msgstr "информативно"
 
 # >> @item:inlistbox
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:418
 #, kde-format
 msgid "Warning"
 msgstr "упозорење"
 
 # >> @item:inlistbox
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:421
 #, kde-format
 msgid "Critical"
 msgstr "критично"
 
 # >> @item:inlistbox
-#: src/core/kdebugsettingsutil.cpp:426
+#: src/core/kdebugsettingsutil.cpp:424
 #, kde-format
 msgid "Off"
 msgstr "искључено"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
 #, kde-format
 msgid "Undefined"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:121
+#: src/core/loggingcategory.cpp:122
 #, fuzzy, kde-format
 #| msgid "Category:"
 msgid "Category name: %1"
 msgstr "Категорија:"
 
-#: src/core/loggingcategory.cpp:123
+#: src/core/loggingcategory.cpp:124
 #, kde-format
 msgid "Identifier: %1"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:125
+#: src/core/loggingcategory.cpp:126
 #, kde-format
 msgid "Default Severity: %1"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "All Debug Messages"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Info Messages"
 msgstr ""
 
 # >> @item:inlistbox
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:141
 #, fuzzy, kde-format
 #| msgid "Warning"
 msgid "Warning Messages"
 msgstr "упозорење"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Debug Messages"
 msgstr ""
 
 # >> @item:inlistbox
-#: src/core/loggingcategory.cpp:146
+#: src/core/loggingcategory.cpp:147
 #, fuzzy, kde-format
 #| msgid "Critical"
 msgid "Critical Messages"
 msgstr "критично"
 
-#: src/core/loggingcategory.cpp:149
+#: src/core/loggingcategory.cpp:150
 #, kde-format
 msgid "No Debug Messages"
 msgstr ""
@@ -477,12 +482,12 @@ msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Уклони..."
 
-#: src/widgets/groupmanagementwidget.cpp:104
+#: src/widgets/groupmanagementwidget.cpp:105
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr ""
 
-#: src/widgets/groupmanagementwidget.cpp:104
+#: src/widgets/groupmanagementwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Remove..."
 msgctxt "@title:window"

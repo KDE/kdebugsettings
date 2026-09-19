@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:48+0000\n"
+"POT-Creation-Date: 2026-09-19 00:48+0000\n"
 "PO-Revision-Date: 2020-05-04 11:03+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -45,10 +45,15 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Hooldaja"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Silumisrežiimi ei saa muuta"
+
+#: src/apps/main.cpp:102
+#, kde-format
+msgid "--debug-mode requires at least one logging category name."
+msgstr ""
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -81,77 +86,77 @@ msgstr ""
 "Logimiskategooria määramine, milliseks soovid muuta silumisrežiimi "
 "(konsoolis)"
 
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:412
 #, kde-format
 msgid "Full Debug"
 msgstr "Täielik silumisteave"
 
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:415
 #, kde-format
 msgid "Info"
 msgstr "Teave"
 
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:418
 #, kde-format
 msgid "Warning"
 msgstr "Hoiatus"
 
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:421
 #, kde-format
 msgid "Critical"
 msgstr "Kriitiline"
 
-#: src/core/kdebugsettingsutil.cpp:426
+#: src/core/kdebugsettingsutil.cpp:424
 #, kde-format
 msgid "Off"
 msgstr "Väljas"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
 #, kde-format
 msgid "Undefined"
 msgstr "Määramata"
 
-#: src/core/loggingcategory.cpp:121
+#: src/core/loggingcategory.cpp:122
 #, kde-format
 msgid "Category name: %1"
 msgstr "Kategooria nimi: %1"
 
-#: src/core/loggingcategory.cpp:123
+#: src/core/loggingcategory.cpp:124
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identifikaator: %1"
 
-#: src/core/loggingcategory.cpp:125
+#: src/core/loggingcategory.cpp:126
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Vaikimisi raskusaste: %1"
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Kõik silumisteated"
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Info Messages"
 msgstr "Infoteated"
 
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Warning Messages"
 msgstr "Hoiatusteated"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Debug Messages"
 msgstr "Silumisteated"
 
-#: src/core/loggingcategory.cpp:146
+#: src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Critical Messages"
 msgstr "Kriitilised teated"
 
-#: src/core/loggingcategory.cpp:149
+#: src/core/loggingcategory.cpp:150
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Silumisteated puuduvad"
@@ -457,13 +462,13 @@ msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Salvesta kui..."
 
-#: src/widgets/groupmanagementwidget.cpp:104
+#: src/widgets/groupmanagementwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Impossible to change debug mode"
 msgid "Impossible to remove '%1'"
 msgstr "Silumisrežiimi ei saa muuta"
 
-#: src/widgets/groupmanagementwidget.cpp:104
+#: src/widgets/groupmanagementwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Save As..."
 msgctxt "@title:window"

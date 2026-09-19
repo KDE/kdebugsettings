@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:48+0000\n"
+"POT-Creation-Date: 2026-09-19 00:48+0000\n"
 "PO-Revision-Date: 2023-05-31 10:59+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -42,10 +42,15 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Manutenção"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:96
+#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Não é possível modificar o modo de depuração"
+
+#: src/apps/main.cpp:102
+#, kde-format
+msgid "--debug-mode requires at least one logging category name."
+msgstr ""
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -78,77 +83,77 @@ msgstr ""
 "Indique o nome da categoria de registo onde deseja mudar o modo de depuração "
 "(na consola)"
 
-#: src/core/kdebugsettingsutil.cpp:414
+#: src/core/kdebugsettingsutil.cpp:412
 #, kde-format
 msgid "Full Debug"
 msgstr "Depuração Completa"
 
-#: src/core/kdebugsettingsutil.cpp:417
+#: src/core/kdebugsettingsutil.cpp:415
 #, kde-format
 msgid "Info"
 msgstr "Informação"
 
-#: src/core/kdebugsettingsutil.cpp:420
+#: src/core/kdebugsettingsutil.cpp:418
 #, kde-format
 msgid "Warning"
 msgstr "Aviso"
 
-#: src/core/kdebugsettingsutil.cpp:423
+#: src/core/kdebugsettingsutil.cpp:421
 #, kde-format
 msgid "Critical"
 msgstr "Crítico"
 
-#: src/core/kdebugsettingsutil.cpp:426
+#: src/core/kdebugsettingsutil.cpp:424
 #, kde-format
 msgid "Off"
 msgstr "Desligado"
 
-#: src/core/kdebugsettingsutil.cpp:429 src/core/loggingcategory.cpp:152
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
 #, kde-format
 msgid "Undefined"
 msgstr "Indefinido"
 
-#: src/core/loggingcategory.cpp:121
+#: src/core/loggingcategory.cpp:122
 #, kde-format
 msgid "Category name: %1"
 msgstr "Nome da categoria: %1"
 
-#: src/core/loggingcategory.cpp:123
+#: src/core/loggingcategory.cpp:124
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identificador: %1"
 
-#: src/core/loggingcategory.cpp:125
+#: src/core/loggingcategory.cpp:126
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Criticidade Predefinida: %1"
 
-#: src/core/loggingcategory.cpp:134
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Todas as Mensagens de Depuração"
 
-#: src/core/loggingcategory.cpp:137
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Info Messages"
 msgstr "Mensagens de Informação"
 
-#: src/core/loggingcategory.cpp:140
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Warning Messages"
 msgstr "Mensagens de Aviso"
 
-#: src/core/loggingcategory.cpp:143
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Debug Messages"
 msgstr "Mensagens de Depuração"
 
-#: src/core/loggingcategory.cpp:146
+#: src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Critical Messages"
 msgstr "Mensagens Críticas"
 
-#: src/core/loggingcategory.cpp:149
+#: src/core/loggingcategory.cpp:150
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Sem Mensagens de Depuração"
@@ -449,12 +454,12 @@ msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Remover os Grupos"
 
-#: src/widgets/groupmanagementwidget.cpp:104
+#: src/widgets/groupmanagementwidget.cpp:105
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Não é possível remover o '%1'"
 
-#: src/widgets/groupmanagementwidget.cpp:104
+#: src/widgets/groupmanagementwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Remove Group"
 msgctxt "@title:window"
