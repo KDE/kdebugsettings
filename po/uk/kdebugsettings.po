@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:48+0000\n"
-"PO-Revision-Date: 2026-07-24 08:40+0300\n"
+"PO-Revision-Date: 2026-09-19 14:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -55,6 +55,7 @@ msgstr "Неможливо змінити режим діагностики"
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
 msgstr ""
+"Для --debug-mode слід вказати принаймні одну назву категорії журналювання."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
