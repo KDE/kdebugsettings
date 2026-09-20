@@ -14,6 +14,7 @@
 #include <QCheckBox>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QRegularExpressionValidator>
 #include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;
@@ -30,6 +31,8 @@ ConfigureCustomSettingWidget::ConfigureCustomSettingWidget(QWidget *parent)
     mCategoryLineEdit->setTrapReturnKey(true);
     mCategoryLineEdit->setClearButtonEnabled(true);
     mCategoryLineEdit->setObjectName("category_lineedit"_L1);
+    static const QRegularExpression reg(u"[\\w.*_-]+"_s);
+    mCategoryLineEdit->setValidator(new QRegularExpressionValidator(reg, mCategoryLineEdit));
     connect(mCategoryLineEdit, &KLineEdit::textChanged, this, &ConfigureCustomSettingWidget::slotTextChanged);
     auto categoryLayout = new QHBoxLayout;
     vbox->addLayout(categoryLayout);
