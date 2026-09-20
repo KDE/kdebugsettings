@@ -7,7 +7,7 @@
 
 #include "saverulesjob.h"
 
-#include <QFile>
+#include <QSaveFile>
 #include <QTextStream>
 
 using namespace Qt::Literals::StringLiterals;
@@ -30,7 +30,7 @@ void SaveRulesJob::setFileName(const QString &fileName)
 
 bool SaveRulesJob::start() const
 {
-    QFile qtlogging(mFileName);
+    QSaveFile qtlogging(mFileName);
     if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
         return false;
     }
@@ -74,7 +74,11 @@ bool SaveRulesJob::start() const
         out << str;
     }
     out.flush();
-    return out.status() == QTextStream::Ok;
+    if (out.status() != QTextStream::Ok) {
+        qtlogging.cancelWriting();
+        return false;
+    }
+    return qtlogging.commit();
 }
 
 QString SaveRulesJob::fileName() const
