@@ -144,6 +144,8 @@ void KDebugSettingsDialog::updateLoggingCategories()
 
     if (foundOverrideRule) {
         mCategoryWarning->animatedShow();
+    } else {
+        mCategoryWarning->animatedHide();
     }
     LoggingManager::self().updateLoggingCategories();
     mCategoriesList = LoggingManager::self().categoriesList();
