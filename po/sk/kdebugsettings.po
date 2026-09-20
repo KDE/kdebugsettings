@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:48+0000\n"
+"POT-Creation-Date: 2026-09-20 12:57+0000\n"
 "PO-Revision-Date: 2022-04-09 19:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -213,14 +213,14 @@ msgid "Save"
 msgstr "Uložiť"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
-#: src/widgets/configurecustomsettingwidget.cpp:28
+#: src/widgets/configurecustomsettingwidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategória:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:51
-#: src/widgets/configurecustomsettingwidget.cpp:39
+#: src/widgets/configurecustomsettingwidget.cpp:42
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
@@ -292,7 +292,7 @@ msgctxt "@title:window"
 msgid "Edit custom rule"
 msgstr "Upraviť vlastné pravidlo"
 
-#: src/widgets/configurecustomsettingwidget.cpp:23
+#: src/widgets/configurecustomsettingwidget.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable"
@@ -479,44 +479,44 @@ msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Vložiť..."
 
-#: src/widgets/kdebugsettingsdialog.cpp:155
+#: src/widgets/kdebugsettingsdialog.cpp:157
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' nie je možné otvoriť. Prosím, skontrolujte ho."
 
-#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:182
 #, kde-format
 msgid "Insert Categories"
 msgstr "Vložiť kategórie"
 
-#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:182
 #, kde-format
 msgid "Categories Files"
 msgstr "Súbory kategórií"
 
-#: src/widgets/kdebugsettingsdialog.cpp:194
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Kategórie zo súboru '%1' boli vložené."
 
-#: src/widgets/kdebugsettingsdialog.cpp:194
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Vložiť kategórie"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Názov skupiny"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Name:"
 msgstr "Názov:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:207
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -525,24 +525,24 @@ msgstr ""
 "'%1' sa už používa ako názov skupiny.\n"
 "Prosím vložte nový názov."
 
-#: src/widgets/kdebugsettingsdialog.cpp:216
+#: src/widgets/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Nemožno uložiť ako prázdny názov. Použite nový názov."
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:225
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Uložiť ako"
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
-#: src/widgets/kdebugsettingsdialog.cpp:232
+#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Súbor KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:232
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"

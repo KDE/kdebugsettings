@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:48+0000\n"
+"POT-Creation-Date: 2026-09-20 12:57+0000\n"
 "PO-Revision-Date: 2024-12-10 12:36+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -234,14 +234,14 @@ msgid "Save"
 msgstr "Сохранение в файл"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
-#: src/widgets/configurecustomsettingwidget.cpp:28
+#: src/widgets/configurecustomsettingwidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Категория:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:51
-#: src/widgets/configurecustomsettingwidget.cpp:39
+#: src/widgets/configurecustomsettingwidget.cpp:42
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
@@ -320,7 +320,7 @@ msgctxt "@title:window"
 msgid "Edit custom rule"
 msgstr "Изменение правила"
 
-#: src/widgets/configurecustomsettingwidget.cpp:23
+#: src/widgets/configurecustomsettingwidget.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable"
@@ -511,46 +511,46 @@ msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Вставить…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:155
+#: src/widgets/kdebugsettingsdialog.cpp:157
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "Не удалось открыть файл «%1»."
 
 # BUGME: please add @title:window --aspotashev
-#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:182
 #, kde-format
 msgid "Insert Categories"
 msgstr "Вставка категорий"
 
 # BUGME: please add @title:window --aspotashev
-#: src/widgets/kdebugsettingsdialog.cpp:180
+#: src/widgets/kdebugsettingsdialog.cpp:182
 #, kde-format
 msgid "Categories Files"
 msgstr "Файлы категорий"
 
-#: src/widgets/kdebugsettingsdialog.cpp:194
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Категории из файла «%1» вставлены."
 
-#: src/widgets/kdebugsettingsdialog.cpp:194
+#: src/widgets/kdebugsettingsdialog.cpp:196
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Вставка категорий"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Название группы"
 
-#: src/widgets/kdebugsettingsdialog.cpp:202
+#: src/widgets/kdebugsettingsdialog.cpp:204
 #, kde-format
 msgid "Name:"
 msgstr "Название:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:207
+#: src/widgets/kdebugsettingsdialog.cpp:209
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -559,24 +559,24 @@ msgstr ""
 "<b>«%1»</b> уже используется в качестве названия группы.\n"
 "Выберите другое название."
 
-#: src/widgets/kdebugsettingsdialog.cpp:216
+#: src/widgets/kdebugsettingsdialog.cpp:218
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Название не может быть пустым. Используйте новое название."
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
+#: src/widgets/kdebugsettingsdialog.cpp:225
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Сохранение в файл"
 
-#: src/widgets/kdebugsettingsdialog.cpp:223
-#: src/widgets/kdebugsettingsdialog.cpp:232
+#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Файл приложения KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:232
+#: src/widgets/kdebugsettingsdialog.cpp:234
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
