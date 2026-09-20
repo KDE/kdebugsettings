@@ -178,7 +178,7 @@ KdeLoggingCategory::List KDebugSettingsUtil::readLoggingCategoriesForInserting(c
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
         QTextStream ts(&file);
-        ts.setEncoding(QStringConverter::Encoding::Latin1);
+        ts.setEncoding(QStringConverter::Encoding::Utf8);
         while (!ts.atEnd()) {
             const QString data = ts.readLine().simplified();
             KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
