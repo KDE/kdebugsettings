@@ -17,6 +17,7 @@ PreviewGeneratedFileWidget::PreviewGeneratedFileWidget(QWidget *parent)
 
     mTextEdit->setObjectName("mTextEdit"_L1);
     mainLayout->addWidget(mTextEdit);
+    mTextEdit->setReadOnly(true);
 }
 
 PreviewGeneratedFileWidget::~PreviewGeneratedFileWidget() = default;

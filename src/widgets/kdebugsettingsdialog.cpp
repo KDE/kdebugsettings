@@ -16,6 +16,7 @@
 #include "kdebugsettingsutil.h"
 #include "loadtoolbutton.h"
 #include "loggingmanager.h"
+#include "previewgeneratedfiledialog.h"
 #include "savetoolbutton.h"
 
 #include <KConfigGroup>
@@ -118,7 +119,9 @@ KDebugSettingsDialog::~KDebugSettingsDialog()
 
 void KDebugSettingsDialog::slotPreview()
 {
-    // TODO
+    PreviewGeneratedFileDialog previewGeneratedFileDialog(this);
+    // TODO previewGeneratedFileDialog.setPlainText(...);
+    previewGeneratedFileDialog.exec();
 }
 
 void KDebugSettingsDialog::readConfig()
