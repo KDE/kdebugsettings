@@ -197,6 +197,7 @@
         <ul>
           <li>Add a Preview button showing the qtlogging.ini file that will be generated, before saving it.</li>
           <li>Add a --list command line option showing the list of known logging categories.</li>
+          <li>Add a warning when qtlogging.ini is modified outside the application, with an action for reloading it.</li>
         </ul>
       </description>
     </release>
