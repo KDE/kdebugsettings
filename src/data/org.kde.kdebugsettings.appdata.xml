@@ -191,6 +191,15 @@
     <binary>kdebugsettings</binary>
   </provides>
   <releases>
+    <release version="26.12.0" date="2026-12-10" type="development">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Add a Preview button showing the qtlogging.ini file that will be generated, before saving it.</li>
+          <li>Add a --list command line option showing the list of known logging categories.</li>
+        </ul>
+      </description>
+    </release>
     <release version="26.08.1" date="2026-09-10"/>
     <release version="26.08.0" date="2026-08-20"/>
     <release version="26.04.3" date="2026-07-02"/>
