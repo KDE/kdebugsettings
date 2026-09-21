@@ -21,6 +21,7 @@ void KDebugSettingsCommandLineParserTest::shouldVerifyOptionParserFromEnumValues
     QCOMPARE(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::EnableFullDebug), u"enable-full-debug"_s);
     QCOMPARE(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DisableFullDebug), u"disable-full-debug"_s);
     QCOMPARE(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::DebugMode), u"debug-mode"_s);
+    QCOMPARE(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::List), u"list"_s);
 }
 
 #include "moc_kdebugsettingscommandlineparsertest.cpp"

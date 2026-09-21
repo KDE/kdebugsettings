@@ -22,6 +22,10 @@ void KDebugSettingsCommandLineParser::initializeCommandLine(QCommandLineParser *
                                             i18n("Enable QStandardPaths test mode, i.e. read/write settings used by unittests"));
     parser->addOption(testModeOption);
 
+    const QCommandLineOption listOption(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::List),
+                                        i18n("Show categories list."));
+    parser->addOption(listOption);
+
     const QCommandLineOption switchFullDebugOption(
         KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::EnableFullDebug),
         i18n("Activate full debug for all modules."));
@@ -56,6 +60,8 @@ QString KDebugSettingsCommandLineParser::optionParserFromEnum(OptionParser e)
         return u"debug-mode"_s;
     case OptionParser::SelfTest:
         return u"self-test"_s;
+    case OptionParser::List:
+        return u"list"_s;
     }
     return {};
 }

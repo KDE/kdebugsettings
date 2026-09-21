@@ -16,6 +16,7 @@ public:
         DisableFullDebug,
         DebugMode,
         SelfTest,
+        List,
     };
     explicit KDebugSettingsCommandLineParser(QCommandLineParser *parser);
     ~KDebugSettingsCommandLineParser();

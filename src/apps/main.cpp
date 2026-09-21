@@ -14,6 +14,7 @@
 #include "jobs/changedebugmodejob.h"
 #include "kdebugsettingscommandlineparser.h"
 #include "kdebugsettingsdialog.h"
+#include "loggingmanager.h"
 #include <KAboutData>
 #include <KCrash>
 #if WITH_DBUS
@@ -65,6 +66,18 @@ int main(int argc, char **argv)
         QStandardPaths::setTestModeEnabled(true);
     }
 
+    if (parser.isSet(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::List))) {
+        KdeLoggingCategory::List list = LoggingManager::self().categoriesList();
+        std::sort(list.begin(), list.end(), [](const KdeLoggingCategory &lhs, const KdeLoggingCategory &rhs) {
+            return lhs.categoryName < rhs.categoryName;
+        });
+
+        std::cout << qPrintable(i18n("List of categories:")) << '\n';
+        for (const auto &cat : list) {
+            std::cout << "   " << cat.categoryName.toLocal8Bit().data() << '\n';
+        }
+        return 0;
+    }
     if (parser.isSet(KDebugSettingsCommandLineParser::optionParserFromEnum(KDebugSettingsCommandLineParser::OptionParser::EnableFullDebug))) {
         ChangeDebugModeJob job;
         job.setDebugMode(u"Full"_s);
