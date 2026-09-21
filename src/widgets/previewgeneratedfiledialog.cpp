@@ -42,6 +42,11 @@ PreviewGeneratedFileDialog::~PreviewGeneratedFileDialog()
     writeConfig();
 }
 
+void PreviewGeneratedFileDialog::setPlainText(const QString &str)
+{
+    mPreviewGeneratedFileWidget->setPlainText(str);
+}
+
 void PreviewGeneratedFileDialog::readConfig()
 {
     create(); // ensure a window is created

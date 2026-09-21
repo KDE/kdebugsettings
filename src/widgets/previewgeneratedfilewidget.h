@@ -8,10 +8,16 @@
 #include <QWidget>
 
 #include "libkdebugsettings_private_export.h"
+class QPlainTextEdit;
 class LIBKDEBUGSETTINGS_EXPORT_TEST_EXPORT PreviewGeneratedFileWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit PreviewGeneratedFileWidget(QWidget *parent = nullptr);
     ~PreviewGeneratedFileWidget() override;
+
+    void setPlainText(const QString &str);
+
+private:
+    QPlainTextEdit *const mTextEdit;
 };

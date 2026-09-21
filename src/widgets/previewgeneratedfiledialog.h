@@ -16,6 +16,8 @@ public:
     explicit PreviewGeneratedFileDialog(QWidget *parent = nullptr);
     ~PreviewGeneratedFileDialog() override;
 
+    void setPlainText(const QString &str);
+
 private:
     LIBKDEBUGSETTINGS_NO_EXPORT void readConfig();
     LIBKDEBUGSETTINGS_NO_EXPORT void writeConfig();
