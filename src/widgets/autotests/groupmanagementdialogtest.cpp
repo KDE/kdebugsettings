@@ -23,7 +23,7 @@ GroupManagementDialogTest::GroupManagementDialogTest(QObject *parent)
 
 void GroupManagementDialogTest::shouldHaveDefaultValues()
 {
-    GroupManagementDialog w;
+    const GroupManagementDialog w;
     QVERIFY(!w.windowTitle().isEmpty());
     auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
