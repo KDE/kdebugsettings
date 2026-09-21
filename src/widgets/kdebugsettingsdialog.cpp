@@ -18,6 +18,7 @@
 #include "loggingmanager.h"
 #include "previewgeneratedfiledialog.h"
 #include "savetoolbutton.h"
+#include <QTemporaryFile>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -119,9 +120,21 @@ KDebugSettingsDialog::~KDebugSettingsDialog()
 
 void KDebugSettingsDialog::slotPreview()
 {
-    PreviewGeneratedFileDialog previewGeneratedFileDialog(this);
-    // TODO previewGeneratedFileDialog.setPlainText(...);
-    previewGeneratedFileDialog.exec();
+    if (QTemporaryFile tmp(u"kdebugsettings_preview_XXXXXX.txt"_s); tmp.open()) {
+        const QString tmpFileName = tmp.fileName();
+        if (saveRules(tmpFileName)) {
+            tmp.flush();
+            QFile plain(tmpFileName);
+            if (!plain.open(QIODevice::ReadOnly)) {
+                qCWarning(KDEBUGSETTINGS_LOG) << "Unable to open file: " << tmpFileName;
+                return;
+            }
+            const auto plainData = plain.readAll();
+            PreviewGeneratedFileDialog previewGeneratedFileDialog(this);
+            previewGeneratedFileDialog.setPlainText(QString::fromUtf8(plainData));
+            previewGeneratedFileDialog.exec();
+        }
+    }
 }
 
 void KDebugSettingsDialog::readConfig()
