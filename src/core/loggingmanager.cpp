@@ -9,6 +9,7 @@
 #include "jobs/saverulesjob.h"
 #include "kdebugsettingsutil.h"
 #include <KDirWatch>
+#include <QFile>
 
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
@@ -39,9 +40,10 @@ LoggingManager::LoggingManager(QObject *parent)
 
     const QString qtFileName = KDebugSettingsUtil::qtFileName();
     mDirWatch->addFile(qtFileName);
-    connect(mDirWatch, &KDirWatch::dirty, this, &LoggingManager::qtFileNameChanged);
-    connect(mDirWatch, &KDirWatch::created, this, &LoggingManager::qtFileNameChanged);
-    connect(mDirWatch, &KDirWatch::deleted, this, &LoggingManager::qtFileNameChanged);
+    connect(mDirWatch, &KDirWatch::dirty, this, &LoggingManager::slotQtLoggingFileChanged);
+    connect(mDirWatch, &KDirWatch::created, this, &LoggingManager::slotQtLoggingFileChanged);
+    connect(mDirWatch, &KDirWatch::deleted, this, &LoggingManager::slotQtLoggingFileChanged);
+    mLastKnownQtLoggingContent = readQtLoggingFileContent();
 }
 
 CustomLoggingCategoryProxyModel *LoggingManager::customLoggingCategoryProxyModel() const
@@ -108,17 +110,37 @@ QString LoggingManager::generateRules() const
 
 bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules) const
 {
-    mDirWatch->stopScan();
     SaveRulesJob job;
     job.setFileName(path);
     job.setListCustom(customCategoryModel()->loggingCategories());
     job.setListKde(kdeApplicationLoggingCategoryProxyModel()->rules(forceSavingAllRules));
     if (!job.start()) {
-        mDirWatch->startScan();
         return false;
     }
-    mDirWatch->startScan();
+    if (path == KDebugSettingsUtil::qtFileName()) {
+        // We need to refresh if it's qtFileName not when we saveAs...
+        mLastKnownQtLoggingContent = readQtLoggingFileContent();
+    }
     return true;
+}
+
+QString LoggingManager::readQtLoggingFileContent() const
+{
+    QFile f(KDebugSettingsUtil::qtFileName());
+    if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        return {};
+    }
+    return QString::fromUtf8(f.readAll());
+}
+
+void LoggingManager::slotQtLoggingFileChanged()
+{
+    const QString content = readQtLoggingFileContent();
+    if (content == mLastKnownQtLoggingContent) {
+        return;
+    }
+    mLastKnownQtLoggingContent = content;
+    Q_EMIT qtFileNameChanged();
 }
 
 void LoggingManager::readCategoriesFiles(const QString &path)

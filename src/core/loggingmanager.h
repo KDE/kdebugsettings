@@ -62,6 +62,9 @@ Q_SIGNALS:
 
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
+    LIBKDEBUGSETTINGSCORE_NO_EXPORT void slotQtLoggingFileChanged();
+    [[nodiscard]] LIBKDEBUGSETTINGSCORE_NO_EXPORT QString readQtLoggingFileContent() const;
+    mutable QString mLastKnownQtLoggingContent;
     CustomLoggingCategoryModel *const mCustomCategoryModel;
     CustomLoggingCategoryProxyModel *const mCustomLoggingCategoryProxyModel;
     KDEApplicationLoggingCategoryModel *const mQtKdeCategoryModel;

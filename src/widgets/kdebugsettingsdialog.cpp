@@ -117,7 +117,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     connect(&LoggingManager::self(), &LoggingManager::qtFileNameChanged, this, [this]() {
         mQtLoggingFileChangedWarning->animatedShow();
     });
-    connect(mQtLoggingFileChangedWarning, &QtLoggingFileChangedWarning::reload, this, &KDebugSettingsDialog::updateLoggingCategories);
+    connect(mQtLoggingFileChangedWarning, &QtLoggingFileChangedWarning::reload, this, [this]() {
+        LoggingManager::self().readQtLoggingFile();
+        updateLoggingCategories();
+        mQtLoggingFileChangedWarning->animatedHide();
+    });
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()
