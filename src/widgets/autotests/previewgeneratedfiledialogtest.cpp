@@ -32,3 +32,4 @@ void PreviewGeneratedFileDialogTest::shouldHaveDefaultValues()
     auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
 }
+#include "moc_previewgeneratedfiledialogtest.cpp"

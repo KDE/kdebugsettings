@@ -26,3 +26,4 @@ void PreviewGeneratedFileWidgetTest::shouldHaveDefaultValues()
     auto mTextEdit = w.findChild<QPlainTextEdit *>(u"mTextEdit"_s);
     QVERIFY(mTextEdit);
 }
+#include "moc_previewgeneratedfilewidgettest.cpp"
