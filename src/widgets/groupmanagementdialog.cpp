@@ -20,7 +20,7 @@
 
 namespace
 {
-static const char myGroupManagementDialogGroupName[] = "GroupManagementDialog";
+const char myGroupManagementDialogGroupName[] = "GroupManagementDialog";
 }
 
 using namespace Qt::Literals::StringLiterals;

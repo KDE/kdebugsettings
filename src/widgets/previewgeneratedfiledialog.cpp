@@ -17,7 +17,7 @@
 
 namespace
 {
-static const char myGroupPreviewDialogName[] = "PreviewDialog";
+const char myGroupPreviewDialogName[] = "PreviewDialog";
 }
 
 using namespace Qt::Literals::StringLiterals;
