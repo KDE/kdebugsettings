@@ -43,6 +43,7 @@ private:
     LIBKDEBUGSETTINGS_NO_EXPORT void slotLoadGroup(const QString &fullPath);
     LIBKDEBUGSETTINGS_NO_EXPORT void slotSaveAsGroup();
     LIBKDEBUGSETTINGS_NO_EXPORT void slotManageGroup();
+    LIBKDEBUGSETTINGS_NO_EXPORT void slotPreview();
     KdeLoggingCategory::List mCategoriesList;
     QTabWidget *const mTabWidget;
     KDEApplicationDebugSettingPage *const mKdeApplicationSettingsPage;

@@ -53,6 +53,9 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     auto categoryWarning = dlg.findChild<CategoryWarning *>(u"categorywarning"_s);
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());
+
+    auto previewButton = buttonBox->findChild<QPushButton *>(u"previewButton"_s);
+    QVERIFY(previewButton);
 }
 
 #include "moc_kdebugsettingsdialogtest.cpp"

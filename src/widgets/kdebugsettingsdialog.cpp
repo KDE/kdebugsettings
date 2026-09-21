@@ -72,6 +72,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
                                           this);
     buttonBox->setObjectName("buttonbox"_L1);
 
+    auto previewButton = new QPushButton(i18nc("@action:button", "Preview…"), this);
+    previewButton->setObjectName("previewButton"_L1);
+    buttonBox->addButton(previewButton, QDialogButtonBox::ActionRole);
+    connect(previewButton, &QPushButton::clicked, this, &KDebugSettingsDialog::slotPreview);
+
     auto saveAs = new SaveToolButton(this);
     saveAs->setText(i18n("Save As…"));
     saveAs->setObjectName("saveas_button"_L1);
@@ -109,6 +114,11 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
 KDebugSettingsDialog::~KDebugSettingsDialog()
 {
     saveConfig();
+}
+
+void KDebugSettingsDialog::slotPreview()
+{
+    // TODO
 }
 
 void KDebugSettingsDialog::readConfig()
