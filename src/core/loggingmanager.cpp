@@ -90,6 +90,14 @@ bool LoggingManager::saveInQtLogging() const
     return saveRules(KDebugSettingsUtil::qtFileName());
 }
 
+QString LoggingManager::generateRules() const
+{
+    SaveRulesJob job;
+    job.setListCustom(customCategoryModel()->loggingCategories());
+    job.setListKde(kdeApplicationLoggingCategoryProxyModel()->rules(false));
+    return job.generateRules();
+}
+
 bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules) const
 {
     SaveRulesJob job;

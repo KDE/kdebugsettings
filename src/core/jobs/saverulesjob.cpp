@@ -28,14 +28,11 @@ void SaveRulesJob::setFileName(const QString &fileName)
     mFileName = fileName;
 }
 
-bool SaveRulesJob::start() const
+QString SaveRulesJob::generateRules() const
 {
-    QSaveFile qtlogging(mFileName);
-    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
-        return false;
-    }
+    QString result;
     // Save Rules
-    QTextStream out(&qtlogging);
+    QTextStream out(&result);
     out << "[Rules]\n"_L1;
 
     // Universal custom rules (with a category of "*" and no specific
@@ -73,6 +70,20 @@ bool SaveRulesJob::start() const
     for (const QString &str : std::as_const(listExcludeRules)) {
         out << str;
     }
+    out.flush();
+    return result;
+}
+
+bool SaveRulesJob::start() const
+{
+    QSaveFile qtlogging(mFileName);
+    if (!qtlogging.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        return false;
+    }
+    const QString result = generateRules();
+    // Save Rules
+    QTextStream out(&qtlogging);
+    out << result;
     out.flush();
     if (out.status() != QTextStream::Ok) {
         qtlogging.cancelWriting();

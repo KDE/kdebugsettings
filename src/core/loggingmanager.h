@@ -53,6 +53,8 @@ public:
 
     [[nodiscard]] CustomLoggingCategoryProxyModel *customLoggingCategoryProxyModel() const;
 
+    [[nodiscard]] QString generateRules() const;
+
 Q_SIGNALS:
     void customLoggingChanged();
 

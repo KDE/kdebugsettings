@@ -15,6 +15,8 @@ public:
     SaveRulesJob();
     ~SaveRulesJob() = default;
 
+    [[nodiscard]] QString generateRules() const;
+
     void setListKde(const LoggingCategory::List &listKde);
     void setListCustom(const LoggingCategory::List &listCustom);
 
