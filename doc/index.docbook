@@ -27,7 +27,7 @@
 <!-- Translators: put here the copyright notice of the translation -->
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2026-09-19</date>
+<date>2026-09-21</date>
 <releaseinfo>&kdebugsettings; 26.11</releaseinfo>
 
 <abstract>
@@ -151,6 +151,8 @@ org.kde.example.critical=true</programlisting>
 
 <para><guibutton>OK</guibutton> and <guibutton>Apply</guibutton> write the rules of the first two tabs to <filename>~/.config/QtProject/qtlogging.ini</filename>. Only the categories that differ from their default severity are written, which keeps the file short and lets applications change their own defaults later.</para>
 
+<para><guibutton>Preview…</guibutton> opens a read only window showing the <filename>qtlogging.ini</filename> that <guibutton>OK</guibutton> and <guibutton>Apply</guibutton> would write, without writing anything. Since it applies the same rule as they do, it is also the quickest way to see which categories were left out because they still sit at their default severity.</para>
+
 <para>The remaining buttons manage rule sets you want to keep side by side, for instance one per bug you are chasing:</para>
 
 <variablelist>
@@ -209,9 +211,16 @@ org.kde.old.name org.kde.new.name</programlisting>
 <chapter id="commandline">
 <title>Command Line Options</title>
 
-<para>Besides the usual &kde; options, &kdebugsettings; accepts the following, which change the rules without opening the dialog:</para>
+<para>Besides the usual &kde; options, &kdebugsettings; accepts the following, which list or change the rules without opening the dialog:</para>
 
 <variablelist>
+<varlistentry>
+<term><option>--list</option></term>
+<listitem>
+<para>Prints the name of every known logging category on the standard output and exits, without changing anything. The categories are the ones read from the <filename class="extension">.categories</filename> files (see <xref linkend="categories-file"/>), &ie; the same ones listed in the <guilabel>KDE Application</guilabel> tab:</para>
+<screen><prompt>%</prompt> <userinput><command>kdebugsettings</command> <option>--list</option> | <command>grep</command> <parameter>kmail</parameter></userinput></screen>
+</listitem>
+</varlistentry>
 <varlistentry>
 <term><option>--enable-full-debug</option></term>
 <listitem><para>Sets every known category to <guilabel>Full Debug</guilabel> and exits.</para></listitem>
