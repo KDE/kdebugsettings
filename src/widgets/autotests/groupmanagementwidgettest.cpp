@@ -21,7 +21,7 @@ GroupManagementWidgetTest::GroupManagementWidgetTest(QObject *parent)
 
 void GroupManagementWidgetTest::shouldHaveDefaultValues()
 {
-    GroupManagementWidget w;
+    const GroupManagementWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
