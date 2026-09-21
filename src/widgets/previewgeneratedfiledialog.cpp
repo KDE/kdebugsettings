@@ -57,3 +57,5 @@ void PreviewGeneratedFileDialog::writeConfig()
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myGroupPreviewDialogName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
+
+#include "moc_previewgeneratedfiledialog.cpp"

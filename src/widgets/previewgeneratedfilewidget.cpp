@@ -11,3 +11,4 @@ PreviewGeneratedFileWidget::PreviewGeneratedFileWidget(QWidget *parent)
 }
 
 PreviewGeneratedFileWidget::~PreviewGeneratedFileWidget() = default;
+#include "moc_previewgeneratedfilewidget.cpp"

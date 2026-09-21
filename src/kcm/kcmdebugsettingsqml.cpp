@@ -42,3 +42,5 @@ void KCMDebugSettingsQml::save()
 }
 
 #include "kcmdebugsettingsqml.moc"
+
+#include "moc_kcmdebugsettingsqml.cpp"
