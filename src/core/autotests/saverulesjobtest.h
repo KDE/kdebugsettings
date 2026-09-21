@@ -19,4 +19,5 @@ private Q_SLOTS:
     void shouldSaveLoadRules_data();
     void shouldSaveLoadRules();
     void shouldSaveKdeRulesAsExplicitSeverities();
+    void shouldWriteGeneratedRulesToFile();
 };

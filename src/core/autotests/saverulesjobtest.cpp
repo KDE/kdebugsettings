@@ -11,39 +11,31 @@
 #include "jobs/saverulesjob.h"
 
 #include <QDir>
-#include <QProcess>
+#include <QFile>
 #include <QTest>
 
 QTEST_GUILESS_MAIN(SaveRulesJobTest)
 
 using namespace Qt::Literals::StringLiterals;
-static void compareFile(const QString &name)
+// QIODevice::Text is used everywhere a file is read back so that the comparison stays
+// insensitive to the end of line convention: SaveRulesJob writes the file in text mode,
+// so it contains CRLF on Windows while generateRules() always returns LF.
+static QString readTextFile(const QString &fileName)
+{
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "Unable to open" << fileName << file.errorString();
+        return {};
+    }
+    return QString::fromUtf8(file.readAll());
+}
+
+static void compareWithReference(const QString &name, const QString &generated)
 {
     const QString refFile = QLatin1StringView(KDEBUGSETTINGS_DATA_DIR) + u'/' + name + u".ref"_s;
-    const QString generatedFile = QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + name + u"-generated.ref"_s;
-    QProcess proc;
-
-#ifdef _WIN32
-    QStringList args = QStringList() << u"Compare-Object"_s << QString(u"(Get-Content %1)"_s).arg(refFile) << QString(u"(Get-Content %1)"_s).arg(generatedFile);
-
-    proc.start(u"powershell"_s, args);
-    QVERIFY(proc.waitForFinished());
-
-    auto pStdOut = proc.readAllStandardOutput();
-    if (pStdOut.size()) {
-        qDebug() << "Files are different, diff output message:\n" << pStdOut.toStdString().c_str();
-    }
-
-    QCOMPARE(pStdOut.size(), 0);
-#else
-    // compare to reference file
-    const QStringList args = QStringList() << u"-u"_s << refFile << generatedFile;
-
-    proc.setProcessChannelMode(QProcess::ForwardedChannels);
-    proc.start(u"diff"_s, args);
-    QVERIFY(proc.waitForFinished());
-    QCOMPARE(proc.exitCode(), 0);
-#endif
+    const QString reference = readTextFile(refFile);
+    QVERIFY2(!reference.isEmpty(), qPrintable(u"Unable to read reference file %1"_s.arg(refFile)));
+    QCOMPARE(generated, reference);
 }
 
 SaveRulesJobTest::SaveRulesJobTest(QObject *parent)
@@ -59,6 +51,8 @@ void SaveRulesJobTest::shouldSaveLoadRules_data()
     QTest::newRow("oneelementinfo.ini") << u"oneelementinfo"_s;
     QTest::newRow("oneelementonelineoff.ini") << u"oneelementonelineoff"_s;
     QTest::newRow("oneelementonelinecritical.ini") << u"oneelementonelinecritical"_s;
+    QTest::newRow("star.ini") << u"star"_s;
+    QTest::newRow("star1.ini") << u"star1"_s;
 }
 
 void SaveRulesJobTest::shouldSaveLoadRules()
@@ -68,18 +62,10 @@ void SaveRulesJobTest::shouldSaveLoadRules()
     job.setFileName(QStringLiteral(KDEBUGSETTINGS_DATA_DIR) + u'/' + filename + u".ini"_s);
     job.start();
 
-    const LoggingCategory::List customCategories = job.customCategories();
-
-    const LoggingCategory::List qtKdeCategories = job.qtKdeCategories();
-
     SaveRulesJob saveJob;
-    QDir().mkpath(QStringLiteral(KDEBUGSETTINGS_BINARY_DATA_DIR));
-    saveJob.setFileName(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + filename + u"-generated.ref"_s);
-    qDebug() << " save " << saveJob.fileName();
-    saveJob.setListCustom(customCategories);
-    saveJob.setListKde(qtKdeCategories);
-    QVERIFY(saveJob.start());
-    compareFile(filename);
+    saveJob.setListCustom(job.customCategories());
+    saveJob.setListKde(job.qtKdeCategories());
+    compareWithReference(filename, saveJob.generateRules());
 }
 
 void SaveRulesJobTest::shouldSaveKdeRulesAsExplicitSeverities()
@@ -101,13 +87,30 @@ void SaveRulesJobTest::shouldSaveKdeRulesAsExplicitSeverities()
         kdeCategories.append(category);
     }
 
-    const QString filename = u"kderules"_s;
     SaveRulesJob saveJob;
-    QDir().mkpath(QStringLiteral(KDEBUGSETTINGS_BINARY_DATA_DIR));
-    saveJob.setFileName(QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + filename + u"-generated.ref"_s);
     saveJob.setListKde(kdeCategories);
+    compareWithReference(u"kderules"_s, saveJob.generateRules());
+}
+
+void SaveRulesJobTest::shouldWriteGeneratedRulesToFile()
+{
+    // generateRules() is covered by the tests above: verify here that start() stores
+    // exactly that content on disk.
+    const QString filename = u"oneelementwarning"_s;
+    LoadCategoriesJob job;
+    job.setFileName(QStringLiteral(KDEBUGSETTINGS_DATA_DIR) + u'/' + filename + u".ini"_s);
+    job.start();
+
+    SaveRulesJob saveJob;
+    saveJob.setListCustom(job.customCategories());
+    saveJob.setListKde(job.qtKdeCategories());
+
+    QVERIFY(QDir().mkpath(QStringLiteral(KDEBUGSETTINGS_BINARY_DATA_DIR)));
+    const QString generatedFile = QLatin1StringView(KDEBUGSETTINGS_BINARY_DATA_DIR) + u'/' + filename + u"-generated.ref"_s;
+    saveJob.setFileName(generatedFile);
     QVERIFY(saveJob.start());
-    compareFile(filename);
+
+    QCOMPARE(readTextFile(generatedFile), saveJob.generateRules());
 }
 
 #include "moc_saverulesjobtest.cpp"
