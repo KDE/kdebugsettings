@@ -9,6 +9,8 @@ add_library(
     previewgeneratedfiledialog.cpp
     previewgeneratedfilewidget.h
     previewgeneratedfilewidget.cpp
+    qtloggingfilechangedwarning.h
+    qtloggingfilechangedwarning.cpp
 )
 
 ecm_qt_declare_logging_category(libkdebugsettings HEADER kdebugsettings_debug.h IDENTIFIER KDEBUGSETTINGS_LOG CATEGORY_NAME log_kdebugsettings DESCRIPTION "kdebugsettings" EXPORT KDEBUGSETTINGS)

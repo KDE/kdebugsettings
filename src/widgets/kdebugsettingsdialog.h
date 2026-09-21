@@ -16,7 +16,7 @@ class CustomDebugSettingsPage;
 class EnvironmentSettingsRulesPage;
 class CategoryWarning;
 class LoadToolButton;
-
+class QtLoggingFileChangedWarning;
 class LIBKDEBUGSETTINGS_EXPORT KDebugSettingsDialog : public QDialog
 {
     Q_OBJECT
@@ -51,4 +51,5 @@ private:
     EnvironmentSettingsRulesPage *const mEnvironmentSettingsRulesPage;
     CategoryWarning *const mCategoryWarning;
     LoadToolButton *const mLoadToolButton;
+    QtLoggingFileChangedWarning *const mQtLoggingFileChangedWarning;
 };

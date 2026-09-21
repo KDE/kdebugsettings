@@ -17,6 +17,7 @@
 #include "loadtoolbutton.h"
 #include "loggingmanager.h"
 #include "previewgeneratedfiledialog.h"
+#include "qtloggingfilechangedwarning.h"
 #include "savetoolbutton.h"
 
 #include <KConfigGroup>
@@ -51,11 +52,14 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     , mEnvironmentSettingsRulesPage(new EnvironmentSettingsRulesPage(this))
     , mCategoryWarning(new CategoryWarning(this))
     , mLoadToolButton(new LoadToolButton(this))
+    , mQtLoggingFileChangedWarning(new QtLoggingFileChangedWarning(this))
 {
     auto mainLayout = new QVBoxLayout(this);
 
     mCategoryWarning->setObjectName("categorywarning"_L1);
     mainLayout->addWidget(mCategoryWarning);
+    mQtLoggingFileChangedWarning->setObjectName("mQtLoggingFileChangedWarning"_L1);
+    mainLayout->addWidget(mQtLoggingFileChangedWarning);
 
     mTabWidget->setObjectName("tabwidget"_L1);
     mainLayout->addWidget(mTabWidget);
@@ -110,6 +114,9 @@ KDebugSettingsDialog::KDebugSettingsDialog(QWidget *parent)
     readConfig();
     updateLoggingCategories();
     mKdeApplicationSettingsPage->forceFocus();
+    connect(&LoggingManager::self(), &LoggingManager::qtFileNameChanged, this, [this]() {
+        mQtLoggingFileChangedWarning->animatedShow();
+    });
 }
 
 KDebugSettingsDialog::~KDebugSettingsDialog()

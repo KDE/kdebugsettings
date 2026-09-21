@@ -13,6 +13,7 @@
 #include "model/kdeapplicationloggingcategorymodel.h"
 #include "model/kdeapplicationloggingcategoryproxymodel.h"
 #include <QObject>
+class KDirWatch;
 class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
 {
     Q_OBJECT
@@ -57,6 +58,7 @@ public:
 
 Q_SIGNALS:
     void customLoggingChanged();
+    void qtFileNameChanged();
 
 private:
     LIBKDEBUGSETTINGSCORE_NO_EXPORT explicit LoggingManager(QObject *parent = nullptr);
@@ -66,4 +68,5 @@ private:
     CategoryTypeModel *const mCategoryTypeModel;
     KDEApplicationLoggingCategoryProxyModel *const mKdeApplicationLoggingCategoryProxyModel;
     KDebugSettingsLoadingCategories mLoggings;
+    KDirWatch *const mDirWatch;
 };

@@ -8,6 +8,7 @@
 #include "loggingmanager.h"
 #include "jobs/saverulesjob.h"
 #include "kdebugsettingsutil.h"
+#include <KDirWatch>
 
 LoggingManager::LoggingManager(QObject *parent)
     : QObject{parent}
@@ -16,6 +17,7 @@ LoggingManager::LoggingManager(QObject *parent)
     , mQtKdeCategoryModel(new KDEApplicationLoggingCategoryModel(this))
     , mCategoryTypeModel(new CategoryTypeModel(this))
     , mKdeApplicationLoggingCategoryProxyModel(new KDEApplicationLoggingCategoryProxyModel(this))
+    , mDirWatch(new KDirWatch(this))
 {
     mKdeApplicationLoggingCategoryProxyModel->setSourceModel(mQtKdeCategoryModel);
     mCustomLoggingCategoryProxyModel->setSourceModel(mCustomCategoryModel);
@@ -34,6 +36,12 @@ LoggingManager::LoggingManager(QObject *parent)
                     Q_EMIT customLoggingChanged();
                 }
             });
+
+    const QString qtFileName = KDebugSettingsUtil::qtFileName();
+    mDirWatch->addFile(qtFileName);
+    connect(mDirWatch, &KDirWatch::dirty, this, &LoggingManager::qtFileNameChanged);
+    connect(mDirWatch, &KDirWatch::created, this, &LoggingManager::qtFileNameChanged);
+    connect(mDirWatch, &KDirWatch::deleted, this, &LoggingManager::qtFileNameChanged);
 }
 
 CustomLoggingCategoryProxyModel *LoggingManager::customLoggingCategoryProxyModel() const
@@ -100,13 +108,16 @@ QString LoggingManager::generateRules() const
 
 bool LoggingManager::saveRules(const QString &path, bool forceSavingAllRules) const
 {
+    mDirWatch->stopScan();
     SaveRulesJob job;
     job.setFileName(path);
     job.setListCustom(customCategoryModel()->loggingCategories());
     job.setListKde(kdeApplicationLoggingCategoryProxyModel()->rules(forceSavingAllRules));
     if (!job.start()) {
+        mDirWatch->startScan();
         return false;
     }
+    mDirWatch->startScan();
     return true;
 }
 

@@ -10,6 +10,7 @@
 #include "categorywarning.h"
 #include "kdebugsettingsdialog.h"
 #include "loadtoolbutton.h"
+#include "qtloggingfilechangedwarning.h"
 #include "savetoolbutton.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -45,14 +46,21 @@ void KDebugSettingsDialogTest::shouldHaveDefaultValue()
     }
     auto saveAs = buttonBox->findChild<SaveToolButton *>(u"saveas_button"_s);
     QVERIFY(saveAs);
+
     auto load = buttonBox->findChild<LoadToolButton *>(u"load_button"_s);
     QVERIFY(load);
     QVERIFY(load->menu());
+
     auto insertCategories = buttonBox->findChild<QPushButton *>(u"insert_button"_s);
     QVERIFY(insertCategories);
+
     auto categoryWarning = dlg.findChild<CategoryWarning *>(u"categorywarning"_s);
     QVERIFY(categoryWarning);
     QVERIFY(!categoryWarning->isVisible());
+
+    auto mQtLoggingFileChangedWarning = dlg.findChild<QtLoggingFileChangedWarning *>(u"mQtLoggingFileChangedWarning"_s);
+    QVERIFY(mQtLoggingFileChangedWarning);
+    QVERIFY(!mQtLoggingFileChangedWarning->isVisible());
 
     auto previewButton = buttonBox->findChild<QPushButton *>(u"previewButton"_s);
     QVERIFY(previewButton);

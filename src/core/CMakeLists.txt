@@ -54,8 +54,11 @@ endif()
 generate_export_header(libkdebugsettingscore BASE_NAME libkdebugsettingscore)
 target_link_libraries(
     libkdebugsettingscore
-    Qt::Core
-    KF6::I18n
+    PUBLIC
+        Qt::Core
+        KF6::I18n
+    PRIVATE
+        KF6::CoreAddons
 )
 
 set_target_properties(
