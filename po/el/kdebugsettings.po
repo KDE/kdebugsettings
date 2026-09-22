@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:57+0000\n"
+"POT-Creation-Date: 2026-09-22 00:48+0000\n"
 "PO-Revision-Date: 2023-01-06 17:46+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -18,38 +18,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/apps/main.cpp:45
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KdebugSettings"
 
-#: src/apps/main.cpp:47
+#: src/apps/main.cpp:48
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Διαμόρφωση ρυθμίσεων αποσφαλμάτωσης"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 οι συγγραφείς του kdebugsettings"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgid "Maintainer"
 msgstr "Συντηρητής"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
+#: src/apps/main.cpp:75
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgid "List of categories:"
+msgstr "Εισαγωγή Κατηγοριών"
+
+#: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Αδυναμία αλλαγής της λειτουργίας αποσφαλμάτωσης"
 
-#: src/apps/main.cpp:102
+#: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
 msgstr ""
@@ -62,22 +68,28 @@ msgstr ""
 "Ενεργοποίηση δοκιμαστικής λειτουργίας QStandardPaths, δηλ. ρυθμίσεις "
 "ανάγνωσης/εγγραφής σε unittests"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27
+#: src/core/kdebugsettingscommandlineparser.cpp:26
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgid "Show categories list."
+msgstr "Εισαγωγή Κατηγοριών"
+
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Να ενεργοποιηθεί η πλήρης αποσφαλμάτωση για όλα τα αρθρώματα."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31
+#: src/core/kdebugsettingscommandlineparser.cpp:35
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Να απενεργοποιηθεί η πλήρης αποσφαλμάτωση για όλα τα αρθρώματα."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36
+#: src/core/kdebugsettingscommandlineparser.cpp:40
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Αλλαγή λειτουργίας αποσφαλμάτωσης από την κονσόλα (στην κονσόλα)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39
+#: src/core/kdebugsettingscommandlineparser.cpp:43
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -481,70 +493,76 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Απενεργοποίηση όλων των μηνυμάτων"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:70
 #, kde-format
 msgid "KDE Application"
 msgstr "Εφαρμογή του KDE"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:71
 #, kde-format
 msgid "Custom Rules"
 msgstr "Προσαρμοσμένο κανόνες"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:72
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Ρυθμίσεις κανόνων με Μεταβλητή Περιβάλλοντος"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:80
+#, kde-format
+msgctxt "@action:button"
+msgid "Preview…"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "Αποθήκευση ως…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Εισαγωγή…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:157
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1' δεν μπορεί να ανοιχτεί.Παρακαλώ επαληθεύστε το."
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Insert Categories"
 msgstr "Εισαγωγή Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Categories Files"
 msgstr "Αρχεία Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "Οι κατηγορίες από το αρχείο '%1' εισήχθησαν."
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Εισαγωγή Κατηγοριών"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Όνομα ομάδας"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Name:"
 msgstr "Όνομα:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "'%1' is already used as a group name.\n"
@@ -556,24 +574,24 @@ msgstr ""
 "Το '%1' χρησιμοποιείται ήδη ως όνομα ομάδας.\n"
 "Αποθηκεύστε με άλλο όνομα."
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:244
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Αδυναμία αποθήκευσης με κενό όνομα. Χρησιμοποιήστε ένα νέο."
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:251
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Αποθήκευση ως"
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:251
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "Αρχείο KDebugSettings (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -600,6 +618,22 @@ msgstr ""
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "Φόρτωση από αρχείο…"
+
+#: src/widgets/previewgeneratedfiledialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Preview Generated File"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:16
+#, kde-format
+msgid "qtlogging.ini was changed. Do you want to reload it?"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:19
+#, kde-format
+msgid "Reload"
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:57+0000\n"
-"PO-Revision-Date: 2026-07-28 08:43+0300\n"
+"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"PO-Revision-Date: 2026-09-21 23:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,43 +16,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
-#: src/apps/main.cpp:45
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:47
+#: src/apps/main.cpp:48
 #, kde-format
 msgid "Configure debug settings"
 msgstr "הגדרת תצורת ניפוי שגיאות"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015‏-%1 יוצרי kdebugsettings"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgid "Maintainer"
 msgstr "מתחזק"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
+#: src/apps/main.cpp:75
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgid "List of categories:"
+msgstr "הוספת קטגוריות"
+
+#: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "אי אפשר לשנות את מצב ניפוי השגיאות"
 
-#: src/apps/main.cpp:102
+#: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "‏‎--debug-mode דורש לפחות שם אחד של קטגוריית תיעוד"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -62,22 +68,29 @@ msgstr ""
 "הפעלת מצב בדיקה של QStandardPaths, כלומר: הגדרות קריאה/כתיבה שמשמשות את "
 "בדיקות היחידה"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27
+#: src/core/kdebugsettingscommandlineparser.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Show Custom Categories"
+msgid "Show categories list."
+msgstr "הצגת קטגוריות מותאמות אישית"
+
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "הפעלת ניפוי שגיאות מלא לכל המודולים."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31
+#: src/core/kdebugsettingscommandlineparser.cpp:35
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "השבתת ניפוי שגיאות מלא לכל המודולים."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36
+#: src/core/kdebugsettingscommandlineparser.cpp:40
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "שינוי מצב ניפוי שגיאות כמסוף (במסוף)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39
+#: src/core/kdebugsettingscommandlineparser.cpp:43
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -452,70 +465,76 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "כיבוי כל ההודעות"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:70
 #, kde-format
 msgid "KDE Application"
 msgstr "יישום KDE"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:71
 #, kde-format
 msgid "Custom Rules"
 msgstr "כללים מותאמים אישית"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:72
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "הגדרות כללים עם משתנה סביבה"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:80
+#, kde-format
+msgctxt "@action:button"
+msgid "Preview…"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "שמירה בשם…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "הוספה…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:157
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "אי אפשר לפתוח את ‚%1’. נא לוודא שהוא תקין."
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Insert Categories"
 msgstr "הוספת קטגוריות"
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Categories Files"
 msgstr "קובצי קטגוריות"
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "נוספו קטגוריות מהקובץ ‚%1’."
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "הוספת קטגוריות"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "שם הקבוצה"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Name:"
 msgstr "שם:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -524,24 +543,24 @@ msgstr ""
 "<b>‚%1’</b> כבר מכהן כשם של קבוצה.\n"
 "נא לשמור בשם אחר."
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:244
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "אי אפשר לשמור כשם ריק. נא להשתמש בשם חדש."
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:251
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "שמירה בשם"
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:251
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "קובץ KDebugSettings‏ (‎*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -568,6 +587,22 @@ msgstr "טעינה…"
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "טעינה מקובץ…"
+
+#: src/widgets/previewgeneratedfiledialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Preview Generated File"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:16
+#, kde-format
+msgid "qtlogging.ini was changed. Do you want to reload it?"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:19
+#, kde-format
+msgid "Reload"
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format

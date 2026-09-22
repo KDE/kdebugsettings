@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:57+0000\n"
+"POT-Creation-Date: 2026-09-22 00:48+0000\n"
 "PO-Revision-Date: 2026-09-19 20:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,38 +17,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: src/apps/main.cpp:45
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "KDebugSettings"
 msgstr "K Hata Ayıklama Ayarları"
 
-#: src/apps/main.cpp:47
+#: src/apps/main.cpp:48
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Hata ayıklama ayarlarını yapılandır"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015–%1 K Hata Ayıklama Ayarları yazarları"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgid "Maintainer"
 msgstr "Bakımcı"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
+#: src/apps/main.cpp:75
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgid "List of categories:"
+msgstr "Kategoriler Ekle"
+
+#: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Hata ayıklama kipi değiştirilemiyor"
 
-#: src/apps/main.cpp:102
+#: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
 msgstr "--debug-mode, en az bir günlükleme kategorisi adı gerektirir."
@@ -61,22 +67,29 @@ msgstr ""
 "QStandardPaths sınama kipini etkinleştir; örneğin birim sınamaları "
 "tarafından kullanılan okuma/yazma ayarları"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27
+#: src/core/kdebugsettingscommandlineparser.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Show Custom Categories"
+msgid "Show categories list."
+msgstr "Özel Kategorileri Göster"
+
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "Tüm modüller için tam hata ayıklamayı etkinleştir."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31
+#: src/core/kdebugsettingscommandlineparser.cpp:35
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "Tüm modüller için tam hata ayıklamayı devre dışı bırak."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36
+#: src/core/kdebugsettingscommandlineparser.cpp:40
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "Hata ayıklama kipini konsol olarak değiştir (konsolda)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39
+#: src/core/kdebugsettingscommandlineparser.cpp:43
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -449,70 +462,76 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "Tüm İletileri Kapat"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:70
 #, kde-format
 msgid "KDE Application"
 msgstr "KDE Uygulamaları"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:71
 #, kde-format
 msgid "Custom Rules"
 msgstr "Özel Kurallar"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:72
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "Çevre Değişkeni İle Kural Ayarları"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:80
+#, kde-format
+msgctxt "@action:button"
+msgid "Preview…"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "Farklı Kaydet…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "Gir…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:157
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "“%1” açılamıyor. Lütfen doğrulayın."
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Insert Categories"
 msgstr "Kategoriler Ekle"
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Categories Files"
 msgstr "Kategoriler Dosyaları"
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "“%1” dosyasından kategoriler eklendi."
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Kategoriler Ekle"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "Grup Adı"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Name:"
 msgstr "Ad:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -521,24 +540,24 @@ msgstr ""
 "<b>“%1”</b>, grup adı olarak hâlihazırda kullanılıyor.\n"
 "Lütfen başka bir adla kaydedin."
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:244
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "Boş adla kaydedilemiyor. Lütfen yeni bir tane girin."
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:251
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Farklı Kaydet"
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:251
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "K Hata Ayıklama Ayarları Dosyası (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -565,6 +584,22 @@ msgstr "Yükle…"
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "Dosyadan Yükle…"
+
+#: src/widgets/previewgeneratedfiledialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Preview Generated File"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:16
+#, kde-format
+msgid "qtlogging.ini was changed. Do you want to reload it?"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:19
+#, kde-format
+msgid "Reload"
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format

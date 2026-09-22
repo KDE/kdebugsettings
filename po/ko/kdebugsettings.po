@@ -1,57 +1,63 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2015-2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:57+0000\n"
-"PO-Revision-Date: 2024-08-20 23:34+0200\n"
-"Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"PO-Revision-Date: 2026-09-21 23:05+0200\n"
+"Last-Translator: Shinjo Park <peremen@gmail.com>\n"
+"Language-Team: Korean\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.08.1\n"
 
-#: src/apps/main.cpp:45
+#: src/apps/main.cpp:46
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:47
+#: src/apps/main.cpp:48
 #, kde-format
 msgid "Configure debug settings"
 msgstr "디버그 설정"
 
-#: src/apps/main.cpp:49
+#: src/apps/main.cpp:50
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "(c) 2015-%1 kdebugsettings authors"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: src/apps/main.cpp:73 src/apps/main.cpp:84 src/apps/main.cpp:97
+#: src/apps/main.cpp:75
+#, fuzzy, kde-format
+#| msgid "Insert Categories"
+msgid "List of categories:"
+msgstr "분류 삽입"
+
+#: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "디버그 모드를 변경할 수 없음"
 
-#: src/apps/main.cpp:102
+#: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "--debug-mode 인자에는 최소 하나의 로그 분류 이름을 지정해야 합니다."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -60,22 +66,29 @@ msgid ""
 msgstr ""
 "QStandardPaths 테스트 모드 활성화, 유닛 테스트에서 사용하는 읽기/쓰기 설정"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:27
+#: src/core/kdebugsettingscommandlineparser.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Show Custom Categories"
+msgid "Show categories list."
+msgstr "사용자 정의 분류 표시"
+
+#: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Activate full debug for all modules."
 msgstr "모든 모듈에 전체 디버그를 활성화합니다."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:31
+#: src/core/kdebugsettingscommandlineparser.cpp:35
 #, kde-format
 msgid "Disable full debug for all modules."
 msgstr "모든 모듈에 전체 디버그를 비활성화합니다."
 
-#: src/core/kdebugsettingscommandlineparser.cpp:36
+#: src/core/kdebugsettingscommandlineparser.cpp:40
 #, kde-format
 msgid "Change debug mode as console (in console)"
 msgstr "콘솔로 디버그 모드 전환(콘솔에서)"
 
-#: src/core/kdebugsettingscommandlineparser.cpp:39
+#: src/core/kdebugsettingscommandlineparser.cpp:43
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
@@ -157,74 +170,57 @@ msgid "No Debug Messages"
 msgstr "디버그 메시지 없음"
 
 #: src/kcm/ui/CustomRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "사용자 정의 규칙"
 
 #: src/kcm/ui/CustomRulesPage.qml:70
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Add Rule…"
+#, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
 msgstr "규칙 추가…"
 
 #: src/kcm/ui/CustomRulesPage.qml:82
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Edit Rule"
+#, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
-msgstr "규칙 편집"
+msgstr "규칙 편집…"
 
 #: src/kcm/ui/CustomRulesPage.qml:93
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
 msgstr "규칙 삭제"
 
 #: src/kcm/ui/CustomRulesPage.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
 msgstr "규칙 삭제"
 
 #: src/kcm/ui/CustomRulesPage.qml:102
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this rule?"
-#| msgid_plural "Do you want to remove these %1 rules?"
+#, kde-format
 msgid "Are you sure you want to remove rule ?"
-msgstr "이 규칙 %1개를 삭제하시겠습니까?"
+msgstr "규칙을 삭제하시겠습니까?"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "사용자 정의 규칙 편집"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
-msgstr "사용자 정의 규칙 편집"
+msgstr "사용자 정의 규칙 만들기"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Save As"
+#, kde-format
 msgctxt "@label:button"
 msgid "Save"
-msgstr "다른 이름으로 저장"
+msgstr "저장"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:29
@@ -241,16 +237,13 @@ msgid "Type:"
 msgstr "종류:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
-msgstr "활성화"
+msgstr "활성화됨"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
-#, fuzzy, kde-format
-#| msgid "Rules Settings With Environment Variable"
+#, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
 msgstr "환경 변수를 통한 규칙 설정"
@@ -263,32 +256,28 @@ msgid ""
 msgstr "\"QT_LOGGING_RULES\" 환경 변수에 규칙이 정의되지 않았습니다."
 
 #: src/kcm/ui/KDEApplicationRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
-msgstr "KDE 앱"
+msgstr "KDE 앱 규칙"
 
 #: src/kcm/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
-msgstr "KDE 앱"
+msgstr "KDE 앱 분류 표시"
 
 #: src/kcm/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
-msgstr "분류 삽입"
+msgstr "사용자 정의 분류 표시"
 
 #: src/kcm/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
-msgstr "분류 삽입"
+msgstr "환경 분류 표시"
 
 #: src/widgets/categorywarning.cpp:16
 #, kde-format
@@ -468,70 +457,76 @@ msgctxt "@action:button"
 msgid "Turn Off All Messages"
 msgstr "모든 메시지 끄기"
 
-#: src/widgets/kdebugsettingsdialog.cpp:65
+#: src/widgets/kdebugsettingsdialog.cpp:70
 #, kde-format
 msgid "KDE Application"
 msgstr "KDE 앱"
 
-#: src/widgets/kdebugsettingsdialog.cpp:66
+#: src/widgets/kdebugsettingsdialog.cpp:71
 #, kde-format
 msgid "Custom Rules"
 msgstr "사용자 정의 규칙"
 
-#: src/widgets/kdebugsettingsdialog.cpp:67
+#: src/widgets/kdebugsettingsdialog.cpp:72
 #, kde-format
 msgid "Rules Settings With Environment Variable"
 msgstr "환경 변수를 통한 규칙 설정"
 
-#: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:80
+#, kde-format
+msgctxt "@action:button"
+msgid "Preview…"
+msgstr ""
+
+#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
 msgid "Save As…"
 msgstr "다른 이름으로 저장…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:89
+#: src/widgets/kdebugsettingsdialog.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
 msgstr "삽입…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:157
+#: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
 msgstr "'%1'을(를) 열 수 없습니다. 확인하십시오."
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Insert Categories"
 msgstr "분류 삽입"
 
-#: src/widgets/kdebugsettingsdialog.cpp:182
+#: src/widgets/kdebugsettingsdialog.cpp:208
 #, kde-format
 msgid "Categories Files"
 msgstr "분류 파일"
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Categories from file '%1' inserted."
 msgstr "'%1' 파일의 분류를 삽입했습니다."
 
-#: src/widgets/kdebugsettingsdialog.cpp:196
+#: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "분류 삽입"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
 msgstr "그룹 이름"
 
-#: src/widgets/kdebugsettingsdialog.cpp:204
+#: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Name:"
 msgstr "이름:"
 
-#: src/widgets/kdebugsettingsdialog.cpp:209
+#: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
@@ -540,24 +535,24 @@ msgstr ""
 "이름이 <b>'%1'</b>인 그룹이 이미 있습니다.\n"
 "다른 이름으로 저장하십시오."
 
-#: src/widgets/kdebugsettingsdialog.cpp:218
+#: src/widgets/kdebugsettingsdialog.cpp:244
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
 msgstr "빈 이름으로 저장할 수 없습니다. 다른 이름을 지정하십시오."
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
+#: src/widgets/kdebugsettingsdialog.cpp:251
 #, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
-#: src/widgets/kdebugsettingsdialog.cpp:225
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:251
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
 msgstr "KDebugSettings 파일 (*.kdebugsettingsrules)"
 
-#: src/widgets/kdebugsettingsdialog.cpp:234
+#: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
@@ -584,6 +579,22 @@ msgstr "불러오기…"
 msgctxt "@action"
 msgid "Load From File…"
 msgstr "파일에서 불러오기…"
+
+#: src/widgets/previewgeneratedfiledialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Preview Generated File"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:16
+#, kde-format
+msgid "qtlogging.ini was changed. Do you want to reload it?"
+msgstr ""
+
+#: src/widgets/qtloggingfilechangedwarning.cpp:19
+#, kde-format
+msgid "Reload"
+msgstr ""
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
