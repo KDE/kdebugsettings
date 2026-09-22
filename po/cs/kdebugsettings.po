@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-09-19 11:53+0200\n"
+"PO-Revision-Date: 2026-09-22 12:43+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -46,10 +46,9 @@ msgid "Maintainer"
 msgstr "Správce"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Vložit kategorie"
+msgstr "Seznam kategorií:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -71,11 +70,9 @@ msgstr ""
 "používané v jednotkových testech"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Zobrazit vlastní kategorie:"
+msgstr "Zobrazit seznam kategorií."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -487,7 +484,7 @@ msgstr "Nastavení pravidel pomocí proměnných prostředí"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Náhled…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -595,17 +592,17 @@ msgstr "Načíst ze souboru…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Náhled vygenerovaného souboru"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "Soubor qtlogging.ini byl změněn. Chcete jej znovu načíst?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Obnovit"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format

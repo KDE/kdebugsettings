@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-09-19 14:20+0300\n"
+"PO-Revision-Date: 2026-09-22 16:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -47,10 +47,9 @@ msgid "Maintainer"
 msgstr "Супровідник"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Вставити категорії"
+msgstr "Список категорій:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -72,11 +71,9 @@ msgstr ""
 "запису, які використовуються у перевірках модулів"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Показати нетипові категорії"
+msgstr "Показати список категорій."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -489,7 +486,7 @@ msgstr "Параметри правил зі змінною середовища
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Перегляд…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -597,17 +594,17 @@ msgstr "Завантажити з файла…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Перегляд створеного файла"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini змінено. Хочете його перезавантажити?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Перезавантажити"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format

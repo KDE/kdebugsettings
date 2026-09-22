@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-09-19 11:41+0200\n"
+"PO-Revision-Date: 2026-09-22 11:16+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -44,10 +44,9 @@ msgid "Maintainer"
 msgstr "Onderhouder"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Categorieën invoegen"
+msgstr "Lijst met categorieën:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -68,11 +67,9 @@ msgstr ""
 "schrijven gebruikt door unittesten"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Aangepaste categorieën tonen"
+msgstr "Lijst met categorieën tonen."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -482,7 +479,7 @@ msgstr "Instellen van regels met omgevingsvariabele"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Voorbeeld…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -590,17 +587,17 @@ msgstr "Uit bestand laden…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Gegenereerd bestand bekijken"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini is gewijzigd. Wilt u het opnieuw laden?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Herladen"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format

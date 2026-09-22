@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-09-19 11:36+0100\n"
+"PO-Revision-Date: 2026-09-22 12:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -46,10 +46,9 @@ msgid "Maintainer"
 msgstr "Responsable"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Insertar categorías"
+msgstr "Lista de categorías:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -70,11 +69,9 @@ msgstr ""
 "lectura/escritura usadas por la pruebas unitarias)"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Mostrar categorías personalizadas"
+msgstr "Mostrar la lista de categorías."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -484,7 +481,7 @@ msgstr "Preferencias de las reglas con variables de entorno"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Vista previa…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -592,17 +589,17 @@ msgstr "Cargar de archivo…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Vista previa del archivo generado"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini ha cambiado. ¿Desea volver a cargarlo?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Volver a cargar"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
