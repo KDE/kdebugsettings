@@ -25,6 +25,9 @@ void KDEApplicationLoggingCategoryProxyModelTest::shouldHaveDefaultValues()
     QVERIFY(proxy.filterText().isEmpty());
     QVERIFY(proxy.rules(true).isEmpty());
     QVERIFY(proxy.rules(false).isEmpty());
+    QVERIFY(proxy.isSortLocaleAware());
+    QCOMPARE(proxy.sortCaseSensitivity(), Qt::CaseInsensitive);
+    QCOMPARE(proxy.filterCaseSensitivity(), Qt::CaseInsensitive);
 }
 
 void KDEApplicationLoggingCategoryProxyModelTest::shouldReturnAllRulesWhenFiltering()

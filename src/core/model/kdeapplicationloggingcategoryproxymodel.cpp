@@ -10,6 +10,10 @@
 KDEApplicationLoggingCategoryProxyModel::KDEApplicationLoggingCategoryProxyModel(QObject *parent)
     : QSortFilterProxyModel{parent}
 {
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+    setSortCaseSensitivity(Qt::CaseInsensitive);
+    setSortLocaleAware(true);
+    sort(0);
 }
 
 KDEApplicationLoggingCategoryProxyModel::~KDEApplicationLoggingCategoryProxyModel() = default;
