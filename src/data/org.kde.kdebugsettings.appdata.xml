@@ -81,7 +81,7 @@
   <summary xml:lang="nn">Vel kva feilsøkingsmeldingar som skal visast</summary>
   <summary xml:lang="pl">Ustaw wyświetlane wiadomości diagnostyczne</summary>
   <summary xml:lang="pt">Definir quais as mensagens de depuração que são apresentadas</summary>
-  <summary xml:lang="pt-BR">Definir quais mensagens de depuração são mostradas</summary>
+  <summary xml:lang="pt-BR">Definiu-se quais mensagens de depuração são mostradas</summary>
   <summary xml:lang="ro">Stabilește ce mesaje de depanare sunt arătate</summary>
   <summary xml:lang="ru">Настройка отображаемых сообщений отладки</summary>
   <summary xml:lang="sa">के दोषनिवारणसन्देशाः दर्शिताः इति सेट् कुर्वन्तु</summary>
@@ -194,10 +194,46 @@
     <release version="26.12.0" date="2026-12-10" type="development">
       <description>
         <p>New features:</p>
+        <p xml:lang="ca">Característiques noves:</p>
+        <p xml:lang="cs">Nové funkce:</p>
+        <p xml:lang="es">Nuevas funciones:</p>
+        <p xml:lang="ka">ახალი ფუნქციები:</p>
+        <p xml:lang="nl">Nieuwe mogelijkheden:</p>
+        <p xml:lang="pt-BR">Novas funcionalidades:</p>
+        <p xml:lang="sl">Nove zmožnosti:</p>
+        <p xml:lang="tr">Yeni özellikler:</p>
+        <p xml:lang="uk">Нові можливості:</p>
         <ul>
           <li>Add a Preview button showing the qtlogging.ini file that will be generated, before saving it.</li>
+          <li xml:lang="ca">Afegeix un botó de vista prèvia que mostra el fitxer «qtlogging.ini» que es generarà, abans de desar-lo.</li>
+          <li xml:lang="cs">Přidáno tlačítko Náhled, které před uložením zobrazí soubor qtlogging.ini, který bude vygenerován.</li>
+          <li xml:lang="es">Se ha añadido un botón de vista previa para mostrar el archivo qtlogging.ini que se generará antes de guardarlo.</li>
+          <li xml:lang="ka">დაემატა გადახედვის ღილაკი, რომელიც გაჩვენებთ ფაილს qtlogging.ini, რომელიც დაგენერირდება, მის შენახვამდე.</li>
+          <li xml:lang="nl">Voeg een voorbeeldknop toe die het te genereren bestand qtlogging.ini toont, voordat het wordt opgeslagen.</li>
+          <li xml:lang="pt-BR">Adicionou-se um botão de prévia que mostra o arquivo qtlogging.ini que será gerado antes de salvá-lo.</li>
+          <li xml:lang="sl">Doda gumb za predogled datoteke qtlogging.ini; ki se bo ustvarila pred shranjevanjem.</li>
+          <li xml:lang="tr">Kaydetme öncesi, üretilen qtlogging.ini dosyasını gösteren bir Önizleme düğmesi eklendi.</li>
+          <li xml:lang="uk">Додано кнопку попереднього перегляду, натискання якої призведе до показу файла qtlogging.ini, який буде створено, перш ніж його буде збережено.</li>
           <li>Add a --list command line option showing the list of known logging categories.</li>
+          <li xml:lang="ca">Afegeix l'opció --list de la línia d'ordres que mostra la llista de categories de registre conegudes.</li>
+          <li xml:lang="cs">Přidána volba příkazového řádku --list, která zobrazí seznam známých kategorií protokolování.</li>
+          <li xml:lang="es">Se ha añadido la opción --list a orden de la consola para mostrar la lista de las categorías de registro conocidas.</li>
+          <li xml:lang="ka">დაემატა ბრძანების სტრიქონის პარამეტრი --list, რომელიც ჟურნალში ჩაწერის ცნობილი კატეგორიების ჩამონათვალს გაჩვენებთ.</li>
+          <li xml:lang="nl">Voeg een --list-opdrachtregeloptie toe die de lijst met bekende logboekregistratiecategorieën weergeeft.</li>
+          <li xml:lang="pt-BR">Adicionou-se uma opção de linha de comando --list que exibe a lista de categorias de registro conhecidas.</li>
+          <li xml:lang="sl">Dodaj možnost ukazne vrstice --list, ki prikaže seznam znanih kategorij beleženja.</li>
+          <li xml:lang="tr">Bilinen günlükleme kategorilerini gösteren bir --list komut satırı seçeneği eklendi.</li>
+          <li xml:lang="uk">Додано параметр командного рядка --list, за допомогою якого можна переглянути список відомих програмі категорій журналювання.</li>
           <li>Add a warning when qtlogging.ini is modified outside the application, with an action for reloading it.</li>
+          <li xml:lang="ca">Afegeix un avís quan «qtlogging.ini» es modifica fora de l'aplicació, amb una acció per a tornar a carregar-lo.</li>
+          <li xml:lang="cs">Přidáno varování v případě, že dojde ke změně souboru qtlogging.ini mimo aplikaci, spolu s možností jeho opětovného načtení.</li>
+          <li xml:lang="es">Se ha añadido una advertencia cuando se modifica qtlogging.ini desde fuera de la aplicación, con una acción para volver a cargarlo.</li>
+          <li xml:lang="ka">დაემატა გაფრთხილება, რომ qtlogging.ini შეიცვლება აპლიკაციის გარეთ, გქონდეთ საშუალება, ის თავიდან ჩატვირთოთ.</li>
+          <li xml:lang="nl">Voeg een waarschuwing toe wanneer qtlogging.ini buiten de toepassing om wordt gewijzigd, inclusief een actie om het bestand opnieuw te laden.</li>
+          <li xml:lang="pt-BR">Adicionou-se um aviso quando o qtlogging.ini for modificado fora do aplicativo, com uma ação para recarregá-lo.</li>
+          <li xml:lang="sl">Doda opozorilo, ko se datoteka qtlogging.ini spremeni zunaj aplikacije, ter možnost njenega ponovnega nalaganja.</li>
+          <li xml:lang="tr">qtlogging.ini dosyası uygulamanın dışında güncellenmişse bir uyarı gösteriliyor; ayrıca dosyayı yeniden yükleme seçeneği de var.</li>
+          <li xml:lang="uk">Додано попередження про внесення змін до qtlogging.ini сторонньою програмою із кнопкою для перезавантаження файла.</li>
         </ul>
       </description>
     </release>
