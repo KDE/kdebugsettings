@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-08-10 15:22+0400\n"
+"PO-Revision-Date: 2026-09-23 18:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -46,10 +46,9 @@ msgid "Maintainer"
 msgstr "الصائن"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "أدرج فئات"
+msgstr "قائمة التصنيفات:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -59,7 +58,7 @@ msgstr "من المستحيل تغيير وضع التنقيح"
 #: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "يتطلب --debug-mode اسم تصنيف تسجيل واحدًا على الأقل."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -70,11 +69,9 @@ msgstr ""
 "اختبارات الوحدات"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "اعرض الفئات المخصصة"
+msgstr "اعرض قائمة التصنيفات."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -489,7 +486,7 @@ msgstr "إعدادات القواعد مع متغير البيئة"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "عاين..."
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -597,17 +594,17 @@ msgstr "حمّل من ملفّ…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "معاينة الملف المولّد"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "غُيّر qtlogging.ini. أتريد إعادة تحميله؟"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "أعد التحميل"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
