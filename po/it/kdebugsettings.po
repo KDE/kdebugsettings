@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-07-24 13:44+0200\n"
+"PO-Revision-Date: 2026-09-22 11:21+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: src/apps/main.cpp:46
 #, kde-format
@@ -45,10 +45,9 @@ msgid "Maintainer"
 msgstr "Responsabile"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Inserisci categorie"
+msgstr "Elenco delle categorie:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -58,7 +57,7 @@ msgstr "Impossibile cambiare la modalità di debug"
 #: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "--debug-mode richiede almeno un nome di categoria di log."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -69,11 +68,9 @@ msgstr ""
 "scrittura utilizzate da unittests"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Mostra categorie personalizzate"
+msgstr "Mostra l'elenco delle categorie."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -484,7 +481,7 @@ msgstr "Impostazioni regole con variabile d'ambiente"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Anteprima…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -592,17 +589,17 @@ msgstr "Carica da file…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Anteprima del file generato"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "Il file qtlogging.ini è stato modificato. Vuoi ricaricarlo?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Ricarica"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
