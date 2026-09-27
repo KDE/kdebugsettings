@@ -201,8 +201,10 @@
         <p xml:lang="es">Nuevas funciones:</p>
         <p xml:lang="fr">Nouvelles fonctionnalités :</p>
         <p xml:lang="ia">Nove Characteristicas:</p>
+        <p xml:lang="it">Nuove funzionalità:</p>
         <p xml:lang="ka">ახალი ფუნქციები:</p>
         <p xml:lang="nl">Nieuwe mogelijkheden:</p>
+        <p xml:lang="nn">Nye funksjonar:</p>
         <p xml:lang="pt-BR">Novas funcionalidades:</p>
         <p xml:lang="ru">Новые возможности:</p>
         <p xml:lang="sl">Nove zmožnosti:</p>
@@ -217,6 +219,7 @@
           <li xml:lang="es">Se ha añadido un botón de vista previa para mostrar el archivo qtlogging.ini que se generará antes de guardarlo.</li>
           <li xml:lang="fr">Ajout d'un bouton « Aperçu » affichant le fichier « qtlogging.ini » qui sera généré, avant son enregistrement.</li>
           <li xml:lang="ia">Adde un button de previsualisation que monstra le file qtlogging.ini  que essera generate, ante de salveguardar lo.</li>
+          <li xml:lang="it">Aggiunta di un pulsante Anteprima per mostrare il file qtlogging.ini file che verrà generato prima di salvarlo.</li>
           <li xml:lang="ka">დაემატა გადახედვის ღილაკი, რომელიც გაჩვენებთ ფაილს qtlogging.ini, რომელიც დაგენერირდება, მის შენახვამდე.</li>
           <li xml:lang="nl">Voeg een voorbeeldknop toe die het te genereren bestand qtlogging.ini toont, voordat het wordt opgeslagen.</li>
           <li xml:lang="pt-BR">Adicionou-se um botão de prévia que mostra o arquivo qtlogging.ini que será gerado antes de salvá-lo.</li>
@@ -232,6 +235,7 @@
           <li xml:lang="es">Se ha añadido la opción --list a orden de la consola para mostrar la lista de las categorías de registro conocidas.</li>
           <li xml:lang="fr">Ajout d'une option de ligne de commandes « --list » affichant la liste des catégories de journalisation connues.</li>
           <li xml:lang="ia">Adde un option de linea de commando --list que monstra le  lista de categorias de registration cognoscite.</li>
+          <li xml:lang="it">Aggiunta di un'opzione a riga di comando che mostra l'elenco delle categorie di registrazione note.</li>
           <li xml:lang="ka">დაემატა ბრძანების სტრიქონის პარამეტრი --list, რომელიც ჟურნალში ჩაწერის ცნობილი კატეგორიების ჩამონათვალს გაჩვენებთ.</li>
           <li xml:lang="nl">Voeg een --list-opdrachtregeloptie toe die de lijst met bekende logboekregistratiecategorieën weergeeft.</li>
           <li xml:lang="pt-BR">Adicionou-se uma opção de linha de comando --list que exibe a lista de categorias de registro conhecidas.</li>
@@ -247,6 +251,7 @@
           <li xml:lang="es">Se ha añadido una advertencia cuando se modifica qtlogging.ini desde fuera de la aplicación, con una acción para volver a cargarlo.</li>
           <li xml:lang="fr">Ajout d'un avertissement lorsque le fichier « qtlogging.ini » est modifié en dehors de l'application, avec une action pour son rechargement.</li>
           <li xml:lang="ia">Adde un advertimento quando qtlogging.ini es modificate foras  del application, con un action pro recargar lo.</li>
+          <li xml:lang="it">Aggiunta di un avviso quando il file qtlogging.ini viene modificato al di fuori dell'applicazione, con un'azione per ricaricarlo.</li>
           <li xml:lang="ka">დაემატა გაფრთხილება, რომ qtlogging.ini შეიცვლება აპლიკაციის გარეთ, გქონდეთ საშუალება, ის თავიდან ჩატვირთოთ.</li>
           <li xml:lang="nl">Voeg een waarschuwing toe wanneer qtlogging.ini buiten de toepassing om wordt gewijzigd, inclusief een actie om het bestand opnieuw te laden.</li>
           <li xml:lang="pt-BR">Adicionou-se um aviso quando o qtlogging.ini for modificado fora do aplicativo, com uma ação para recarregá-lo.</li>
