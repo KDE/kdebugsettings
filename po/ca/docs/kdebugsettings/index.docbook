@@ -1,0 +1,679 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kdebugsettings "<application
+>KDebugSettings</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kdebugsettings" lang="&language;">
+
+<bookinfo>
+<title
+>El manual del &kdebugsettings;</title>
+
+<authorgroup>
+<author
+><firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> <affiliation
+><address
+><email
+>montel@kde.org</email
+></address
+></affiliation>
+</author>
+&traductor.JosepMa.Ferrer; 
+</authorgroup>
+
+<copyright>
+<year
+>2015</year>
+<year
+>2026</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>21 de setembre de 2026</date>
+<releaseinfo
+>&kdebugsettings; 26.11</releaseinfo>
+
+<abstract>
+<para
+>El &kdebugsettings; configura els missatges de depuració de les &Qt; i les aplicacions &kde; imprimeixen, sense recompilar-les.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KDebugSettings</keyword>
+<keyword
+>depuració</keyword>
+<keyword
+>registre</keyword>
+<keyword
+>categories</keyword>
+<keyword
+>qtlogging.ini</keyword>
+<keyword
+>QT_LOGGING_RULES</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<para
+>Les aplicacions de les &Qt; agrupen la seva sortida de diagnòstic en <emphasis
+>categories de registre</emphasis
+>: canals anomenats com <literal
+>org.kde.pim.kmail</literal
+> o <literal
+>kf.kio.core</literal
+>, cadascun dels quals es pot activar o desactivar independentment i per a cada severitat (depuració, informació, avís, crític). De manera predeterminada, la majoria de les categories són silencioses, de manera que les aplicacions no inunden el diari en un ús normal.</para>
+
+<para
+>El &kdebugsettings; és un frontal gràfic per a aquestes regles. Llista totes les categories instal·lades al sistema, us permet triar com de detallada hauria de ser cadascuna i escriu el resultat al fitxer de configuració que les &Qt; llegeixen a l'inici de l'aplicació:</para>
+
+<para
+><filename
+>$<envar
+>XDG_CONFIG_HOME</envar
+>/QtProject/qtlogging.ini</filename
+> (normalment <filename class="directory"
+>~/.config/QtProject/qtlogging.ini</filename
+>)</para>
+
+<para
+>Les regles entraran en vigor la pròxima vegada que s'iniciï una aplicació; les aplicacions que ja estan en execució no es veuran afectades.</para>
+
+<note
+><para
+>El &kdebugsettings; no decideix <emphasis
+>on</emphasis
+> van els missatges, només quins es produeixen. La sortida encara acaba allà on la plataforma els envia, normalment al diari del «systemd» o al terminal que ha iniciat l'aplicació.</para
+></note>
+
+</chapter>
+
+<chapter id="using">
+<title
+>Ús del &kdebugsettings;</title>
+
+<para
+>La finestra principal és un diàleg amb tres pestanyes i una fila de botons compartits per totes elles.</para>
+
+<sect1 id="kde-application-tab">
+<title
+>La pestanya <guilabel
+>Aplicació de KDE</guilabel
+></title>
+
+<para
+>Aquesta pestanya llista totes les categories de registre declarades per les aplicacions i les biblioteques instal·lades al sistema. Cada fila mostra la descripció de la categoria i una llista desplegable amb el seu nivell de severitat actual. En passar per sobre d'una fila es mostra el nom de la categoria, el seu identificador i la seva severitat predeterminada.</para>
+
+<para
+>Utilitzeu el camp <guilabel
+>Cerca…</guilabel
+> a la part superior per acotar la llista; el filtre cerca la descripció, el nom de la categoria i l'identificador, de manera que escriure <userinput
+>kmail</userinput
+>, <userinput
+>org.kde.pim</userinput
+> o <userinput
+>KMAIL_LOG</userinput
+> funciona de la mateixa manera.</para>
+
+<para
+>Per a canviar una categoria individual, trieu un nivell de la seva llista desplegable. Per a canviar diverses alhora, seleccioneu primer les files: el canvi s'aplicarà a tota la selecció. Els tres botons de la part inferior actuen sobre les files seleccionades o sobre cada fila mostrada actualment pel filtre quan no se selecciona res:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guibutton
+>Activació de tota la depuració</guibutton
+></term>
+<listitem
+><para
+>Estableix les categories a <guilabel
+>Depuració completa</guilabel
+>, &ead;, s'imprimeix tot missatge de tota severitat.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Desactiva la depuració</guibutton
+></term>
+<listitem
+><para
+>Estableix les categories de nou a <guilabel
+>Info</guilabel
+>: es mantenen els missatges informatius, d'avís i crítics, es descarten els missatges de depuració.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Desactiva tots els missatges</guibutton
+></term>
+<listitem
+><para
+>Estableix les categories a <guilabel
+>Inactiu</guilabel
+>, silenciant-les completament.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>El botó <guibutton
+>Restaura els valors predeterminats</guibutton
+> del diàleg restableix cada categoria d'aquesta pestanya a la severitat predeterminada declarada per l'aplicació que la posseeix (vegeu <xref linkend="categories-file"/>).</para>
+
+<sect2 id="severity-levels">
+<title
+>Nivells de severitat</title>
+
+<para
+>Una categoria no és un simple interruptor d'activació/desactivació: triar un nivell permet aquesta severitat i tot més greu que aquesta. Els nivells que s'ofereixen, des de més fins a menys detallats, són:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row
+><entry
+>Nivell</entry
+><entry
+>Missatges que s'imprimeixen</entry
+></row>
+</thead>
+<tbody>
+<row
+><entry
+><guilabel
+>Depuració completa</guilabel
+></entry
+><entry
+>depuració, informació, avís i crític</entry
+></row>
+<row
+><entry
+><guilabel
+>Informació</guilabel
+></entry
+><entry
+>informació, avís i crític</entry
+></row>
+<row
+><entry
+><guilabel
+>Avís</guilabel
+></entry
+><entry
+>avís i crític</entry
+></row>
+<row
+><entry
+><guilabel
+>Crític</guilabel
+></entry
+><entry
+>només crític</entry
+></row>
+<row
+><entry
+><guilabel
+>Inactiu</guilabel
+></entry
+><entry
+>res</entry
+></row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<para
+>Cada nivell s'escriu com una regla explícita per a les quatre severitats, de manera que una categoria sempre té un estat ben definit independentment dels valors predeterminats del sistema. Seleccionant <guilabel
+>Avís</guilabel
+> per a <literal
+>org.kde.exemple</literal
+>, per exemple, produeix:</para>
+
+<programlisting
+>org.kde.example.info=false
+org.kde.example.debug=false
+org.kde.example.warning=true
+org.kde.example.critical=true</programlisting>
+
+</sect2>
+</sect1>
+
+<sect1 id="custom-rules-tab">
+<title
+>La pestanya <guilabel
+>Regles personalitzades</guilabel
+></title>
+
+<para
+>No totes les categories es declaren en un fitxer <filename
+>.categories</filename
+> instal·lat: les aplicacions de tercers, o el codi en què esteu treballant actualment, poden utilitzar categories de les quals el &kdebugsettings; no en sap res. Aquesta pestanya us permet escriure regles a mà per a aquests.</para>
+
+<para
+>Utilitzeu <guibutton
+>Afegeix…</guibutton
+> per crear una regla, <guibutton
+>Edita…</guibutton
+> per canviar la seleccionada i <guibutton
+>Elimina…</guibutton
+> per suprimir les seleccionades. Una regla consisteix en un nom de categoria, un tipus i una casella de selecció <guilabel
+>Activa</guilabel
+> i es mostra a la sintaxi de les &Qt;, &pex;, <literal
+>org.kde.example.debug=true</literal
+>.</para>
+
+<para
+>El nom de la categoria pot contenir el comodí <literal
+>*</literal
+>, al començament del nom, al final, o tots dos. Per tant, <literal
+>org.kde.pim.*</literal
+> coincideix amb totes les categories &PIM; alhora.</para>
+
+<warning>
+<para
+>Una regla la categoria de la qual és només <literal
+>*</literal
+> sense tipus, &ead; <literal
+>*=true</literal
+> o <literal
+>*=false</literal
+>, coincideix amb tot i anul·la totes les altres regles. El &kdebugsettings; us adverteix a la part superior del diàleg quan es troba una regla d'aquest tipus i és millor eliminar-la. Si realment voleu una regla de captura completa, escriviu-la com a <literal
+>*.*=true</literal
+> o <literal
+>*.*=false</literal
+>, que s'ordena perquè les regles més específiques encara guanyin.</para>
+</warning>
+
+</sect1>
+
+<sect1 id="environment-tab">
+<title
+>La pestanya <guilabel
+>Paràmetres de regles amb variables d'entorn</guilabel
+></title>
+
+<para
+>Les &Qt; també llegeixen les regles de registre de la variable d'entorn <envar
+>QT_LOGGING_RULES</envar
+>, i aquestes regles tenen prioritat sobre les emmagatzemades a <filename
+>qtlogging.ini</filename
+>. Si la variable està definida a l'entorn des del qual s'ha iniciat el &kdebugsettings;, aquesta pestanya mostrarà el seu contingut, de manera que podreu dir per què una categoria es comporta de manera diferent del que suggereixen les dues primeres pestanyes.</para>
+
+<para
+>Aquí les regles són només de lectura: per canviar-les, canvieu la variable d'entorn en si mateixa.</para>
+
+</sect1>
+
+<sect1 id="saving">
+<title
+>Desar, carregar i grups</title>
+
+<para
+><guibutton
+>D'acord</guibutton
+> i <guibutton
+>Aplica</guibutton
+> escriuen les regles de les dues primeres pestanyes a <filename
+>~/.config/QtProject/qtlogging.ini</filename
+>. Només s'escriuen les categories que difereixen de la seva severitat predeterminada, que manté el fitxer curt i permet a les aplicacions canviar els seus propis valors predeterminats més tard.</para>
+
+<para
+><guibutton
+>Vista prèvia…</guibutton
+> obre una finestra de només lectura que mostra el <filename
+>qtlogging.ini</filename
+> que <guibutton
+>D'acord</guibutton
+> i <guibutton
+>Aplica</guibutton
+> escriurien, sense escriure res. Atès que aplica la mateixa regla que ells, també és la manera més ràpida de veure quines categories han quedar fora perquè encara estan a la seva severitat predeterminada.</para>
+
+<para
+>Els botons restants gestionen conjunts de regles que voleu mantenir un al costat de l'altre, per exemple una per un error que esteu perseguint:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guibutton
+>Desa com a…</guibutton
+></term>
+<listitem>
+<para
+><guimenuitem
+>Desa com a fitxer</guimenuitem
+> exporta les regles actuals a un fitxer <filename class="extension"
+>.kdebugsettingsrules</filename
+> en qualsevol lloc del disc. <guimenuitem
+>Desa com a grup</guimenuitem
+> demana un nom i emmagatzema les regles com a grup a <filename class="directory"
+>~/.local/share/kdebugsettings/groups/</filename
+>.</para>
+<para
+>A diferència d'<guibutton
+>Aplica</guibutton
+>, totes dues escriuen <emphasis
+>cada</emphasis
+> categoria, no només les modificades, de manera que la recàrrega del fitxer restaura exactament l'estat que heu desat.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Carrega</guibutton
+></term>
+<listitem
+><para
+><guimenuitem
+>Carrega des d'un fitxer</guimenuitem
+> rellegeix un fitxer <filename class="extension"
+>.kdebugsettingsrules</filename
+>, <guimenuitem
+>Carrega un grup</guimenuitem
+> ofereix els grups desats en un submenú, i <guimenuitem
+>Gestiona el grup</guimenuitem
+> obre un diàleg on els grups es poden canviar el nom, eliminar i exportar. La càrrega només omple el diàleg; useu <guibutton
+>D'acord</guibutton
+> o <guibutton
+>Aplica</guibutton
+> per activar realment les regles.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Insereix…</guibutton
+></term>
+<listitem
+><para
+>Llegeix un fitxer <filename class="extension"
+>.categories</filename
+> addicional i afegeix les categories que declara a la pestanya <guilabel
+>Aplicació de KDE</guilabel
+>. Això és útil per a una aplicació que no està instal·lada a tot el sistema, normalment una que esteu construint vós mateix/a.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="categories-file">
+<title
+>Declaració de les categories: el fitxer <filename class="extension"
+>.categories</filename
+></title>
+
+<para
+>La llista que es mostra a la pestanya <guilabel
+>Aplicació de KDE</guilabel
+> no està codificada. Es llegeix dels fitxers <filename class="extension"
+>.categories</filename
+> instal·lats per les aplicacions, a:</para>
+
+<itemizedlist>
+<listitem
+><para
+><filename class="directory"
+>${KDE_INSTALL_LOGGINGCATEGORIESDIR}</filename
+>, &ead; <filename class="directory"
+>/usr/share/qlogging-categories6/</filename
+>, a on <filename
+>kde.categories</filename
+> és el fitxer compartit que llista les categories de les aplicacions &kde;;</para
+></listitem>
+<listitem
+><para
+>els directoris de configuració de <acronym
+>XDG</acronym
+>, per exemple <filename class="directory"
+>~/.config/</filename
+>;</para
+></listitem>
+<listitem
+><para
+><filename class="directory"
+>$<envar
+>XDG_CONFIG_HOME</envar
+>/qdebug.categories/</filename
+>, per a les aplicacions fora de &kde;.</para
+></listitem>
+</itemizedlist>
+
+<para
+>El format és una categoria per línia. Les línies que comencen per <literal
+>#</literal
+> són comentaris:</para>
+
+<programlisting
+>&lt;nom de categoria&gt; &lt;descripció&gt; [DEFAULT_SEVERITY [&lt;severitat&gt;]] [IDENTIFIER [&lt;identificador&gt;]]</programlisting>
+
+<para
+>El nom i la descripció són obligatoris, la resta és opcional. <literal
+>&lt;severitat&gt;</literal
+> és un d'entre <literal
+>DEBUG</literal
+>, <literal
+>INFO</literal
+>, <literal
+>WARNING</literal
+> o <literal
+>CRITICAL</literal
+> i dona el nivell de reserva de la categoria, a la qual retorna <guibutton
+>Restaura els valors predeterminats</guibutton
+>; quan està absent, s'assumeix <literal
+>INFO</literal
+>. <literal
+>&lt;identificador&gt;</literal
+> és el nom de l'objecte <classname
+>QLoggingCategory</classname
+> en el codi font, el qual fa que la categoria pugui ser cercada pel nom que realment escriguin els desenvolupadors. Per exemple:</para>
+
+<programlisting
+>org.kde.example.core Exemple de biblioteca central DEFAULT_SEVERITY [WARNING] IDENTIFIER [EXAMPLE_CORE_LOG]</programlisting>
+
+<para
+>Si construïu l'aplicació amb «extra-cmake-modules», no cal que escriviu aquest fitxer a mà: declareu la categoria amb <function
+>ecm_qt_declare_logging_category()</function
+> i instal·leu-la amb <function
+>ecm_qt_install_logging_categories()</function
+>, i es generarà el fitxer.</para>
+
+<sect1 id="renamecategories">
+<title
+>Categories canviades de nom</title>
+
+<para
+>Quan una aplicació canvia el nom d'una de les seves categories, les regles que els usuaris ja tenen en el seu <filename
+>qtlogging.ini</filename
+> encara fan referència al nom antic. Un fitxer <filename class="extension"
+>.renamecategories</filename
+>, instal·lat al costat del fitxer <filename class="extension"
+>.categories</filename
+>, indica al &kdebugsettings; com migrar-les. Cada línia assigna un nom antic a un de nou:</para>
+
+<programlisting
+># nom antic de mòdul&lt;espai&gt;nom nou de mòdul
+org.kde.antic.nom org.kde.nou.nom</programlisting>
+
+</sect1>
+</chapter>
+
+<chapter id="commandline">
+<title
+>Opcions de la línia d'ordres</title>
+
+<para
+>A més de les opcions habituals de &kde;, el &kdebugsettings; accepta les següents, les quals llistaran o canviaran les regles sense obrir el diàleg:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>--list</option
+></term>
+<listitem>
+<para
+>Imprimeix el nom de cada categoria de registre coneguda a la sortida estàndard i surt, sense canviar res. Les categories són les que es llegeixen dels fitxers <filename class="extension"
+>.categories</filename
+> (vegeu <xref linkend="categories-file"/>), &ead;, les mateixes que apareixen a la pestanya <guilabel
+>Aplicació de KDE</guilabel
+>:</para>
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>kdebugsettings</command
+> <option
+>--list</option
+> | <command
+>grep</command
+> <parameter
+>kmail</parameter
+></userinput
+></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--enable-full-debug</option
+></term>
+<listitem
+><para
+>Estableix totes les categories conegudes a <guilabel
+>Depuració completa</guilabel
+> i surt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--disable-full-debug</option
+></term>
+<listitem
+><para
+>Estableix totes les categories conegudes a <guilabel
+>Inactiu</guilabel
+> i surt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--debug-mode <replaceable
+>Full|Info|Warning|Critical|Off</replaceable
+> <replaceable
+>categoria…</replaceable
+></option
+></term>
+<listitem>
+<para
+>Estableix el nivell indicat a les categories anomenades com a arguments i surt. Es requereix com a mínim un nom de categoria:</para>
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>kdebugsettings</command
+> <option
+>--debug-mode</option
+> <parameter
+>Full</parameter
+> <parameter
+>org.kde.pim.kmail</parameter
+> <parameter
+>org.kde.pim.messagelist</parameter
+></userinput
+></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--test-mode</option
+></term>
+<listitem
+><para
+>Habilita el mode de prova <classname
+>QStandardPaths</classname
+>, de manera que s'utilitzin els paràmetres de les proves unitàries en lloc dels vostres. Destinat a provar el mateix &kdebugsettings;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</chapter>
+
+<chapter id="systemsettings">
+<title
+>El mòdul de l'&systemsettings;</title>
+
+<para
+>El &kdebugsettings; també instal·la un mòdul de l'&systemsettings;, que es troba a <menuchoice
+><guimenu
+>Administració del sistema</guimenu
+><guimenuitem
+>Configuració de la depuració</guimenuitem
+></menuchoice
+>. Ofereix les mateixes tres pestanyes que l'aplicació autònoma i escriu el mateix fitxer <filename
+>qtlogging.ini</filename
+>.</para>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Crèdits i llicència</title>
+
+<para
+>&kdebugsettings;</para>
+
+<para
+>Copyright del programa 2015-2026 Laurent Montel <email
+>montel@kde.org</email
+></para>
+
+<para
+>Copyright de la documentació 2026 Laurent Montel <email
+>montel@kde.org</email
+></para>
+
+<para
+>Traductor de la documentació: &credits.JosepMa.Ferrer;</para
+> &underGPL; &underFDL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
