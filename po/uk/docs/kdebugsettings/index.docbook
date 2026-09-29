@@ -1,0 +1,695 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kdebugsettings "<application
+>KDebugSettings</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kdebugsettings" lang="&language;">
+
+<bookinfo>
+<title
+>Підручник з &kdebugsettings;</title>
+
+<authorgroup>
+<author
+><firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> <affiliation
+><address
+><email
+>montel@kde.org</email
+></address
+></affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2015</year>
+<year
+>2026</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>21 вересня 2026 року</date>
+<releaseinfo
+>&kdebugsettings; 26.11</releaseinfo>
+
+<abstract>
+<para
+>&kdebugsettings; налаштовує діагностичні повідомлення, які виводитимуть програми &Qt; і &kde;, без потреби у їхньому повторному збиранні.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KDebugSettings</keyword>
+<keyword
+>діагностика</keyword>
+<keyword
+>журналювання</keyword>
+<keyword
+>категорії</keyword>
+<keyword
+>qtlogging.ini</keyword>
+<keyword
+>QT_LOGGING_RULES</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+
+<para
+>Для програм &Qt; діагностичні повідомлення згруповано за <emphasis
+>категоріями журналювання</emphasis
+> — іменованими каналами, такими як <literal
+>org.kde.pim.kmail</literal
+> або <literal
+>kf.kio.core</literal
+>. Кожну з таких категорій можна вмикати чи вимикати незалежно, зокрема і для окремих рівнів критичності (діагностика, інформація, попередження, критична помилка). Зазвичай більшість категорій не генерують повідомлень, щоб не перевантажувати журнал під час звичайної роботи програми.</para>
+
+<para
+>&kdebugsettings; — це графічний інтерфейс для керування цими правилами. Програма показує список усіх категорій, встановлених у системі, надає змогу вибрати рівень деталізації для кожної з них і записує результат до файла налаштувань, який &Qt; зчитує під час запуску програми:</para>
+
+<para
+><filename
+>$<envar
+>XDG_CONFIG_HOME</envar
+>/QtProject/qtlogging.ini</filename
+> (зазвичай <filename class="directory"
+>~/.config/QtProject/qtlogging.ini</filename
+>)</para>
+
+<para
+>Правила набувають чинності під час наступного запуску програми; на вже запущені програми вони не впливають.</para>
+
+<note
+><para
+>&kdebugsettings; не визначає, <emphasis
+>куди</emphasis
+> спрямовуються повідомлення, а лише те, які саме повідомлення буде створено. Виведені дані зрештою потрапляють туди, куди їх спрямовує платформа — зазвичай до журналу systemd або до термінала, з якого було запущено програму.</para
+></note>
+
+</chapter>
+
+<chapter id="using">
+<title
+>Користування &kdebugsettings;</title>
+
+<para
+>Головне вікно — це діалогове вікно з трьома вкладками та рядом кнопок, спільних для всіх вкладок.</para>
+
+<sect1 id="kde-application-tab">
+<title
+>Вкладка <guilabel
+>Програма KDE</guilabel
+></title>
+
+<para
+>На цій вкладці буде наведено всі категорії журналювання, оголошені програмами та бібліотеками, встановленими у вашій системі. У кожному рядку буде показано опис категорії та спадний список із поточним рівнем критичності. При наведенні вказівника миші на рядок з'являються назва категорії, її ідентифікатор і типовий рівень критичності.</para>
+
+<para
+>Скористайтеся полем <guilabel
+>Пошук…</guilabel
+> у верхній частині, щоб звузити список; фільтр шукає відповідності в описі, назві категорії та ідентифікаторі, тому можна вводити <userinput
+>kmail</userinput
+>, <userinput
+>org.kde.pim</userinput
+> або <userinput
+>KMAIL_LOG</userinput
+> — усі ці варіанти спрацюють.</para>
+
+<para
+>Щоб змінити одну категорію, виберіть рівень у відповідному спадному списку. Щоб змінити кілька категорій одночасно, спочатку позначте відповідні рядки — тоді зміни буде застосовано до всієї виділеної області. Три кнопки внизу діють на позначені рядки або на всі рядки, які буде показано згідно з поточним фільтром (якщо нічого не позначено).</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guibutton
+>Увімкнути усю діагностику</guibutton
+></term>
+<listitem
+><para
+>Встановлює для категорій <guilabel
+>Повну діагностику</guilabel
+>, тобто буде показано усі повідомлення будь-якого рівня критичності.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Вимкнути діагностику</guibutton
+></term>
+<listitem
+><para
+>Повертає для категорій режим <guilabel
+>Інформація</guilabel
+>: зберігатимуться інформаційні повідомлення, попередження та критичні повідомлення, діагностичні повідомлення буде відкинуто.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Вимкнути усі повідомлення</guibutton
+></term>
+<listitem
+><para
+>Встановлює для усіх категорій режим <guilabel
+>Вимкнено</guilabel
+> з повним припиненням виведення повідомлень.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Кнопка <guibutton
+>Відновити типові значення</guibutton
+> у цьому діалоговому вікні скидає налаштування для кожної категорії на цій вкладці до рівня критичності, визначеного програмою, якій належить ця категорія (див. <xref linkend="categories-file"/>).</para>
+
+<sect2 id="severity-levels">
+<title
+>Рівні важливості</title>
+
+<para
+>Категорія — це не простий перемикач «увімкнено/вимкнено»: вибір певного рівня активує його та всі рівні вищого ступеня критичності. Запропоновані рівні (від найбільш до найменш деталізованого):</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row
+><entry
+>Рівень</entry
+><entry
+>Повідомлення, які буде виведено</entry
+></row>
+</thead>
+<tbody>
+<row
+><entry
+><guilabel
+>Повна діагностика</guilabel
+></entry
+><entry
+>діагностика, інформація, попередження і критичні</entry
+></row>
+<row
+><entry
+><guilabel
+>Інформація</guilabel
+></entry
+><entry
+>інформація, попередження і критичні</entry
+></row>
+<row
+><entry
+><guilabel
+>Попередження</guilabel
+></entry
+><entry
+>попередження і критичні</entry
+></row>
+<row
+><entry
+><guilabel
+>Критичні</guilabel
+></entry
+><entry
+>лише критичні</entry
+></row>
+<row
+><entry
+><guilabel
+>Вимкнено</guilabel
+></entry
+><entry
+>нічого</entry
+></row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<para
+>Кожен рівень описано як чітке правило для всіх чотирьох ступенів критичності, завдяки чому категорія завжди має чітко визначений стан, незалежно від типових загальносистемних параметрів. Наприклад, вибір варіанта <guilabel
+>Попередження</guilabel
+> для <literal
+>org.kde.example</literal
+> призводить до такого результату:</para>
+
+<programlisting
+>org.kde.example.info=false
+org.kde.example.debug=false
+org.kde.example.warning=true
+org.kde.example.critical=true</programlisting>
+
+</sect2>
+</sect1>
+
+<sect1 id="custom-rules-tab">
+<title
+>Вкладка <guilabel
+>Нетипові правила</guilabel
+></title>
+
+<para
+>Не всі категорії визначено у встановленому файлі <filename
+>.categories</filename
+>: сторонні програми або код, над яким ви зараз працюєте, можуть використовувати категорії, про які &kdebugsettings; нічого не знає. Ця вкладка надає змогу створювати правила для них вручну.</para>
+
+<para
+>Скористайтеся кнопкою <guibutton
+>Додати…</guibutton
+>, щоб створити правило, кнопкою <guibutton
+>Редагувати…</guibutton
+> — щоб змінити вибране правило, і кнопкою <guibutton
+>Вилучити…</guibutton
+> — щоб вилучити вибрані правила. Правило складається з назви категорії, типу та пункту <guilabel
+>Увімкнути</guilabel
+>, його буде показано із використанням синтаксису &Qt;, наприклад <literal
+>org.kde.example.debug=true</literal
+>.</para>
+
+<para
+>Назва категорії може містити символ-замінник <literal
+>*</literal
+> — на початку, в кінці або в обох позиціях. Отже, <literal
+>org.kde.pim.*</literal
+> відповідає всім категоріям &PIM; одночасно.</para>
+
+<warning>
+<para
+>Правило, категорія якого — просто <literal
+>*</literal
+> (без зазначення типу, тобто <literal
+>*=true</literal
+> або <literal
+>*=false</literal
+>), відповідає будь-якому випадку і має пріоритет над усіма іншими правилами. &kdebugsettings; попереджає про наявність такого правила у верхній частині вікна; його краще вилучити. Якщо вам справді потрібне універсальне правило, що охоплює всі випадки, запишіть його як <literal
+>*.*=true</literal
+> або <literal
+>*.*=false</literal
+> — такий запис забезпечує належний порядок пріоритетів, завдяки якому більш конкретні правила все одно матимуть перевагу.</para>
+</warning>
+
+</sect1>
+
+<sect1 id="environment-tab">
+<title
+>Вкладка <guilabel
+>Параметри правил зі змінної середовища</guilabel
+></title>
+
+<para
+>&Qt; також зчитує правила ведення журналу зі змінної середовища <envar
+>QT_LOGGING_RULES</envar
+>; ці правила мають пріоритет над правилами, що зберігаються у файлі <filename
+>qtlogging.ini</filename
+>. Якщо цю змінну встановлено у середовищі, з якого було запущено &kdebugsettings;, на цій вкладці буде показано її вміст — це надає змогу зрозуміти, чому певна категорія поводиться інакше, ніж можна було б очікувати на основі інформації з перших двох вкладок.</para>
+
+<para
+>Тут правила призначено лише для читання: щоб змінити їх, змініть саму змінну середовища.</para>
+
+</sect1>
+
+<sect1 id="saving">
+<title
+>Збереження, завантаження і групи</title>
+
+<para
+>Кнопки <guibutton
+>Гаразд</guibutton
+> та <guibutton
+>Застосувати</guibutton
+> записують правила з перших двох вкладок до файла <filename
+>~/.config/QtProject/qtlogging.ini</filename
+>. Записуються лише ті категорії, рівень критичності яких відрізняється від типового; це надає змогу зберегти файл компактним і дає змогу програмам згодом змінювати власні типові налаштування.</para>
+
+<para
+>Кнопка <guibutton
+>Перегляд…</guibutton
+> відкриває вікно у режимі лише читання, де показано вміст файла <filename
+>qtlogging.ini</filename
+>, який було б записано після натискання кнопок <guibutton
+>Гаразд</guibutton
+> або <guibutton
+>Застосувати</guibutton
+> (без фактичного запису даних). Оскільки тут застосовуються ті самі правила, це також найшвидший спосіб побачити, які категорії було пропущено, оскільки для них збережено типовий рівень критичності.</para>
+
+<para
+>Решта кнопок керують наборами правил, які ви хочете тримати поруч — наприклад, по одному на кожну помилку, яку ви відстежуєте:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guibutton
+>Зберегти як…</guibutton
+></term>
+<listitem>
+<para
+><guimenuitem
+>Зберегти як файл</guimenuitem
+> експортує поточні правила до файла з суфіксом назви <filename class="extension"
+>.kdebugsettingsrules</filename
+> у будь-якому місці на диску. <guimenuitem
+>Зберегти як групу</guimenuitem
+> запитує назву та зберігає правила як групу у каталозі <filename class="directory"
+>~/.local/share/kdebugsettings/groups/</filename
+>.</para>
+<para
+>На відміну від кнопки <guibutton
+>Застосувати</guibutton
+>, обидва варіанти записують <emphasis
+>усі</emphasis
+> категорії, а не лише змінені, завдяки чому повторне завантаження файла відновлює саме той стан, який було збережено.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Завантажити</guibutton
+></term>
+<listitem
+><para
+><guimenuitem
+>Завантажити з файла</guimenuitem
+> зчитує файл із суфіксом назви <filename class="extension"
+>.kdebugsettingsrules</filename
+>, <guimenuitem
+>Завантажити групу</guimenuitem
+> пропонує список збережених груп у підменю, а <guimenuitem
+>Керування групою</guimenuitem
+> відкриває діалогове вікно, у якому можна перейменовувати, вилучати та експортувати групи. Завантаження лише заповнює діалогове вікно; щоб фактично активувати правила, скористайтеся кнопкою <guibutton
+>Гаразд</guibutton
+> або <guibutton
+>Застосувати</guibutton
+>.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Вставити…</guibutton
+></term>
+<listitem
+><para
+>Зчитує додатковий файл <filename class="extension"
+>.categories</filename
+> і додає визначені у ньому категорії на вкладку <guilabel
+>Програма KDE</guilabel
+>. Це корисно для програм, які не встановлено в системі (наприклад, тих, які ви збираєте власноруч).</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="categories-file">
+<title
+>Оголошення категорій: файл <filename class="extension"
+>.categories</filename
+></title>
+
+<para
+>Список, який буде показано на вкладці <guilabel
+>Програма KDE</guilabel
+>, не є жорстко запрограмованим. Програма зчитує його з файлів <filename class="extension"
+>.categories</filename
+>, встановлених програмами, з таких місць:</para>
+
+<itemizedlist>
+<listitem
+><para
+><filename class="directory"
+>${KDE_INSTALL_LOGGINGCATEGORIESDIR}</filename
+>, тобто <filename class="directory"
+>/usr/share/qlogging-categories6/</filename
+>, де <filename
+>kde.categories</filename
+> є спільним файлом зі списком категорій програм &kde;;</para
+></listitem>
+<listitem
+><para
+>каталоги налаштувань <acronym
+>XDG</acronym
+>, наприклад <filename class="directory"
+>~/.config/</filename
+>;</para
+></listitem>
+<listitem
+><para
+><filename class="directory"
+>$<envar
+>XDG_CONFIG_HOME</envar
+>/qdebug.categories/</filename
+> для програм поза &kde;.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Формат передбачає одну категорію на рядок. Рядки, які починаються з <literal
+>#</literal
+> є коментарями:</para>
+
+<programlisting
+>&lt;назва категорії&gt; &lt;опис&gt; [DEFAULT_SEVERITY [&lt;критичність&gt;]] [IDENTIFIER [&lt;ідентифікатор&gt;]]</programlisting>
+
+<para
+>Назва та опис є обов'язковими, решта — необов'язковими. <literal
+>&lt;критичність&gt;</literal
+> — це одне зі значень <literal
+>DEBUG</literal
+>, <literal
+>INFO</literal
+>, <literal
+>WARNING</literal
+> або <literal
+>CRITICAL</literal
+>; воно визначає рівень, до якого повертається категорія (зокрема, після натискання кнопки <guibutton
+>Відновити типові значення</guibutton
+>). Якщо цей параметр не вказано, типово буде використано <literal
+>INFO</literal
+>. <literal
+>&lt;ідентифікатор&gt;</literal
+> — це назва об'єкта <classname
+>QLoggingCategory</classname
+> у початковому коді, завдяки якій категорію можна знайти за назвою, яку безпосередньо використовують розробники. Приклад:</para>
+
+<programlisting
+>org.kde.example.core Example core library DEFAULT_SEVERITY [WARNING] IDENTIFIER [EXAMPLE_CORE_LOG]</programlisting>
+
+<para
+>Якщо вами зібрано вашу програму з extra-cmake-modules, вам не потрібно записувати цей файл вручну: оголосіть категорію за допомогою <function
+>ecm_qt_declare_logging_category()</function
+> і встановіть її за допомогою <function
+>ecm_qt_install_logging_categories()</function
+>, а файл буде створено за вас.</para>
+
+<sect1 id="renamecategories">
+<title
+>Перейменовані категорії</title>
+
+<para
+>Коли програма змінює назву однієї зі своїх категорій, правила, які користувачі вже мають у файлі <filename
+>qtlogging.ini</filename
+>, все ще посилаються на стару назву. Файл <filename class="extension"
+>.renamecategories</filename
+>, розміщений поруч із файлом <filename class="extension"
+>.categories</filename
+>, вказує &kdebugsettings;, як виконати їх перенесення. Кожен рядок встановлює відповідність між старою та новою назвою:</para>
+
+<programlisting
+># стара назва модуля&lt;пробіл&gt;нова назва модуля
+org.kde.стара.назва org.kde.нова.назва</programlisting>
+
+</sect1>
+</chapter>
+
+<chapter id="commandline">
+<title
+>Параметри командного рядка</title>
+
+<para
+>Окрім звичайних параметрів &kde;, у &kdebugsettings; передбачено підтримку таких параметрів, які надають змогу переглядати і змінювати правила без відкриття діалогового вікна:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>--list</option
+></term>
+<listitem>
+<para
+>Виводить назву кожної відомої категорії журналювання до стандартного виведення і завершує роботу програми, не вносячи жодних змін. Це категорії, зчитані з файлів <filename class="extension"
+>.categories</filename
+> (див. <xref linkend="categories-file"/>), тобто ті самі, які перелічено на вкладці <guilabel
+>Програма KDE</guilabel
+>:</para>
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>kdebugsettings</command
+> <option
+>--list</option
+> | <command
+>grep</command
+> <parameter
+>kmail</parameter
+></userinput
+></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--enable-full-debug</option
+></term>
+<listitem
+><para
+>Встановлює для усіх категорій режим <guilabel
+>Повна діагностика</guilabel
+> і завершує роботу.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--disable-full-debug</option
+></term>
+<listitem
+><para
+>Встановлює для усіх відомих категорій режим <guilabel
+>Вимкнено</guilabel
+> і завершує роботу програми.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--debug-mode <replaceable
+>Full|Info|Warning|Critical|Off</replaceable
+> <replaceable
+>категорія…</replaceable
+></option
+></term>
+<listitem>
+<para
+>Встановлює вказаний рівень для категорій, назви яких передано як аргументи, і завершує роботу програми. Необхідно вказати принаймні одну назву категорії:</para>
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>kdebugsettings</command
+> <option
+>--debug-mode</option
+> <parameter
+>Full</parameter
+> <parameter
+>org.kde.pim.kmail</parameter
+> <parameter
+>org.kde.pim.messagelist</parameter
+></userinput
+></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--test-mode</option
+></term>
+<listitem
+><para
+>Активує тестовий режим <classname
+>QStandardPaths</classname
+>, завдяки чому замість ваших налаштувань використовуються налаштування тестів модулів. Призначено для тестування самої програми &kdebugsettings;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</chapter>
+
+<chapter id="systemsettings">
+<title
+>Модуль «Системних параметрів»</title>
+
+<para
+>&kdebugsettings; також встановлює модуль для «Системних параметрів», доступний за шляхом <menuchoice
+><guimenu
+>Адміністрування системи</guimenu
+><guimenuitem
+>Налаштування діагностики</guimenuitem
+></menuchoice
+>. Він містить ті самі три вкладки, що й окрема програма, і записує той самий файл <filename
+>qtlogging.ini</filename
+>.</para>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Подяки і ліцензування</title>
+
+<para
+>&kdebugsettings;</para>
+
+<para
+>Авторські права на програму належать Laurent Montel <email
+>montel@kde.org</email
+>, 2015-2026</para>
+
+<para
+>Авторські права на документацію належать Laurent Montel <email
+>montel@kde.org</email
+>, 2026</para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underGPL; &underFDL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
