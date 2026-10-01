@@ -134,7 +134,7 @@
     <p xml:lang="tr">K Hata Ayıklama Ayarları, hangi QLoggingCategory’nin görüntüleneceğini düzenler. QLoggingCategory, uygulamalar için konsolda iletiler yazdırır ve hangi uygulamaların Qt uygulamalarında hata ayıklamaya yardımcı olmak için bilgi, uyarı veya kritik hatalar için iletiler görüntüleyeceğini tanımlayabilirsiniz.</p>
     <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
     <p xml:lang="zh-CN">KDebugSettings 用于编辑显示的 QLoggingCategory 项。QLoggingCategory 在命令行终端中输出应用程序消息，你可以指定哪些应用程序显示信息、警告、关键错误等消息，以便对 Qt 应用程序进行调试。</p>
-    <p xml:lang="zh-TW">KDebugSettings 編輯哪些 QLoggingCategory 紀錄分類要被顯示。QLoggingCategory 為應用程式在主控台顯示訊息，而您可以定義應用程式是否顯示資訊、警告或嚴重錯誤，來幫助除錯 Qt 應用程式。</p>
+    <p xml:lang="zh-TW">KDebugSettings 編輯哪些 QLoggingCategory 紀錄類別要被顯示。QLoggingCategory 為應用程式在主控台顯示訊息，而您可以定義應用程式是否顯示資訊、警告或嚴重錯誤，來幫助除錯 Qt 應用程式。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
   <url type="help">https://doc.qt.io/qt-6/qloggingcategory.html</url>
