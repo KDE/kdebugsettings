@@ -134,7 +134,7 @@
     <p xml:lang="tr">K Hata Ayıklama Ayarları, hangi QLoggingCategory’nin görüntüleneceğini düzenler. QLoggingCategory, uygulamalar için konsolda iletiler yazdırır ve hangi uygulamaların Qt uygulamalarında hata ayıklamaya yardımcı olmak için bilgi, uyarı veya kritik hatalar için iletiler görüntüleyeceğini tanımlayabilirsiniz.</p>
     <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
     <p xml:lang="zh-CN">KDebugSettings 用于编辑显示的 QLoggingCategory 项。QLoggingCategory 在命令行终端中输出应用程序消息，你可以指定哪些应用程序显示信息、警告、关键错误等消息，以便对 Qt 应用程序进行调试。</p>
-    <p xml:lang="zh-TW">KDebugSettings 編輯哪些 QLoggingCategory 紀錄分類要被顯示。QLoggingCategory 為應用程式在主控台顯示訊息，而您可以定義應用程式是否顯示資訊、警告或嚴重錯誤，來幫助除錯 Qt 應用程式。</p>
+    <p xml:lang="zh-TW">KDebugSettings 編輯哪些 QLoggingCategory 紀錄類別要被顯示。QLoggingCategory 為應用程式在主控台顯示訊息，而您可以定義應用程式是否顯示資訊、警告或嚴重錯誤，來幫助除錯 Qt 應用程式。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
   <url type="help">https://doc.qt.io/qt-6/qloggingcategory.html</url>
@@ -213,6 +213,7 @@
         <p xml:lang="sv">Nya funktioner:</p>
         <p xml:lang="tr">Yeni özellikler:</p>
         <p xml:lang="uk">Нові можливості:</p>
+        <p xml:lang="zh-TW">新功能：</p>
         <ul>
           <li>Add a Preview button showing the qtlogging.ini file that will be generated, before saving it.</li>
           <li xml:lang="ar">أضيف زر معاينة يعرض ملف qtlogging.ini الذي سيُولَّد قبل حفظه.</li>
@@ -234,6 +235,7 @@
           <li xml:lang="sv">Lägg till en förhandsgranskningsknapp som visar filen qtlogging.ini som ska genereras, innan den sparas.</li>
           <li xml:lang="tr">Kaydetme öncesi, üretilen qtlogging.ini dosyasını gösteren bir Önizleme düğmesi eklendi.</li>
           <li xml:lang="uk">Додано кнопку попереднього перегляду, натискання якої призведе до показу файла qtlogging.ini, який буде створено, перш ніж його буде збережено.</li>
+          <li xml:lang="zh-TW">新增預覽按鈕來在儲存前顯示將會產生的 qtlogging.ini 檔案。</li>
           <li>Add a --list command line option showing the list of known logging categories.</li>
           <li xml:lang="ar">أضيف خيار سطر الأوامر ‎--list‎ الذي يعرض قائمة فئات التسجيل المعروفة.</li>
           <li xml:lang="ca">Afegeix l'opció --list de la línia d'ordres que mostra la llista de categories de registre conegudes.</li>
@@ -254,6 +256,7 @@
           <li xml:lang="sv">Lägg till kommandoradsväljaren --list som visar en lista över kända loggningskategorier.</li>
           <li xml:lang="tr">Bilinen günlükleme kategorilerini gösteren bir --list komut satırı seçeneği eklendi.</li>
           <li xml:lang="uk">Додано параметр командного рядка --list, за допомогою якого можна переглянути список відомих програмі категорій журналювання.</li>
+          <li xml:lang="zh-TW">新增 --list 指令列選項來列出已知紀錄類別的清單。</li>
           <li>Add a warning when qtlogging.ini is modified outside the application, with an action for reloading it.</li>
           <li xml:lang="ar">أضيف تحذيرًا عند تعديل qtlogging.ini خارج التطبيق، مع إجراء لإعادة تحميله.</li>
           <li xml:lang="ca">Afegeix un avís quan «qtlogging.ini» es modifica fora de l'aplicació, amb una acció per a tornar a carregar-lo.</li>
@@ -274,6 +277,7 @@
           <li xml:lang="sv">Lägg till en varning när qtlogging.ini ändras utanför programmet, samt ett alternativ för att uppdatera filen.</li>
           <li xml:lang="tr">qtlogging.ini dosyası uygulamanın dışında güncellenmişse bir uyarı gösteriliyor; ayrıca dosyayı yeniden yükleme seçeneği de var.</li>
           <li xml:lang="uk">Додано попередження про внесення змін до qtlogging.ini сторонньою програмою із кнопкою для перезавантаження файла.</li>
+          <li xml:lang="zh-TW">當 qtlogging.ini 在應用程式外被修改時顯示警告，並提供重新載入該檔案的動作。</li>
         </ul>
       </description>
     </release>
