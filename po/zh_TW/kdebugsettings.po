@@ -4,13 +4,13 @@
 # Franklin, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2024, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-21 00:48+0000\n"
-"PO-Revision-Date: 2024-08-03 14:37+0900\n"
+"PO-Revision-Date: 2026-10-01 01:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:60
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "變更除錯模式成終端機（在終端機偵錯）"
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
-msgstr "指定（在終端機）要變更除錯模式的記錄分類名稱"
+msgstr "指定（在終端機）要變更除錯模式的紀錄類別名稱"
 
 #: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "未定義"
 #: src/core/loggingcategory.cpp:115
 #, kde-format
 msgid "Category name: %1"
-msgstr "分類名稱：%1"
+msgstr "類別名稱：%1"
 
 #: src/core/loggingcategory.cpp:117
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "啟用"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
-msgstr "分類："
+msgstr "類別："
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
 #, kde-format
@@ -398,7 +398,7 @@ msgstr "類別檔案"
 #: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr "已插入來自檔案 '%1' 的分類。"
+msgstr "已插入來自檔案 '%1' 的類別。"
 
 #: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
