@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2026-09-21 23:11+0900\n"
+"PO-Revision-Date: 2026-10-01 01:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -47,10 +47,9 @@ msgid "Maintainer"
 msgstr "維護者"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "插入類別"
+msgstr "類別清單："
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -69,11 +68,9 @@ msgid ""
 msgstr "開啟 QStandardPaths 測試模式，即讀取 / 寫入用於 unittests 的設定"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "顯示自訂類別"
+msgstr "顯示類別清單。"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -94,7 +91,7 @@ msgstr "變更除錯模式成終端機（在終端機偵錯）"
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
-msgstr "指定（在終端機）要變更除錯模式的記錄分類名稱"
+msgstr "指定（在終端機）要變更除錯模式的紀錄類別名稱"
 
 #: src/core/kdebugsettingsutil.cpp:412
 #, kde-format
@@ -129,7 +126,7 @@ msgstr "未定義"
 #: src/core/loggingcategory.cpp:122
 #, kde-format
 msgid "Category name: %1"
-msgstr "分類名稱：%1"
+msgstr "類別名稱：%1"
 
 #: src/core/loggingcategory.cpp:124
 #, kde-format
@@ -229,7 +226,7 @@ msgstr "儲存"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
-msgstr "分類："
+msgstr "類別："
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:42
@@ -476,7 +473,7 @@ msgstr "用環境變數設定的規則"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "預覽…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -507,7 +504,7 @@ msgstr "類別檔案"
 #: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr "已插入來自檔案 '%1' 的分類。"
+msgstr "已插入來自檔案 '%1' 的類別。"
 
 #: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
@@ -584,17 +581,17 @@ msgstr "從檔案載入…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "預覽產生檔案"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini 已被修改。您要重新載入它嗎？"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "重新載入"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
