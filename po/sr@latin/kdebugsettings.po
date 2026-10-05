@@ -1,12 +1,13 @@
 # Translation of kdebugsettings.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-21 00:48+0000\n"
-"PO-Revision-Date: 2017-12-31 22:42+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -19,8 +20,7 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: src/apps/main.cpp:44 src/quickapps/main.cpp:60
-#, fuzzy, kde-format
-#| msgid "kdebugssettings"
+#, kde-format
 msgid "KDebugSettings"
 msgstr "K‑ispravljačke-postavke"
 
@@ -30,14 +30,12 @@ msgid "Configure debug settings"
 msgstr "Podesite ispravljačke postavke"
 
 #: src/apps/main.cpp:48
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2017 kdebugsettings authors"
+#, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "© 2015–2017, autori K‑ispravljačkih-postavki"
+msgstr "© 2015–%1, autori K‑ispravljačkih-postavki"
 
 #: src/apps/main.cpp:49 src/quickapps/main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Loren Montel"
@@ -52,41 +50,44 @@ msgstr "Održavalac"
 #: src/quickapps/main.cpp:115
 #, kde-format
 msgid "Impossible to change debug mode"
-msgstr ""
+msgstr "Ne mogu da promenim režim ispravljanja"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22 src/quickapps/main.cpp:71
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
+"Uključi probni režim QStandardPaths, tj. čitanje i pisanje postavki koje "
+"koriste jedinični testovi"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:27 src/quickapps/main.cpp:74
 #, kde-format
 msgid "Activate full debug for all modules."
-msgstr ""
+msgstr "Aktiviraj puno ispravljanje za sve module."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31 src/quickapps/main.cpp:76
 #, kde-format
 msgid "Disable full debug for all modules."
-msgstr ""
+msgstr "Isključi puno ispravljanje za sve module."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:36 src/quickapps/main.cpp:79
 #, kde-format
 msgid "Change debug mode as console (in console)"
-msgstr ""
+msgstr "Promeni režim ispravljanja (u konzoli)"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:39 src/quickapps/main.cpp:81
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
+"Ime kategorije beleženja kojoj želite da promenite režim ispravljanja (u "
+"konzoli)"
 
 # >> @item:inlistbox
 #: src/core/kdebugsettingsutil.cpp:413
-#, fuzzy, kde-format
-#| msgid "Debug"
+#, kde-format
 msgid "Full Debug"
-msgstr "ispravljanje"
+msgstr "puno ispravljanje"
 
 # >> @item:inlistbox
 #: src/core/kdebugsettingsutil.cpp:416
@@ -115,139 +116,123 @@ msgstr "isključeno"
 #: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:146
 #, kde-format
 msgid "Undefined"
-msgstr ""
+msgstr "nedefinisano"
 
 #: src/core/loggingcategory.cpp:115
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgid "Category name: %1"
-msgstr "Kategorija:"
+msgstr "Ime kategorije: %1"
 
 #: src/core/loggingcategory.cpp:117
 #, kde-format
 msgid "Identifier: %1"
-msgstr ""
+msgstr "Identifikator: %1"
 
 #: src/core/loggingcategory.cpp:119
 #, kde-format
 msgid "Default Severity: %1"
-msgstr ""
+msgstr "Podrazumevana ozbiljnost: %1"
 
 #: src/core/loggingcategory.cpp:128
 #, kde-format
 msgid "All Debug Messages"
-msgstr ""
+msgstr "sve ispravljačke poruke"
 
 #: src/core/loggingcategory.cpp:131
 #, kde-format
 msgid "Info Messages"
-msgstr ""
+msgstr "informativne poruke"
 
 # >> @item:inlistbox
 #: src/core/loggingcategory.cpp:134
-#, fuzzy, kde-format
-#| msgid "Warning"
+#, kde-format
 msgid "Warning Messages"
-msgstr "upozorenje"
+msgstr "poruke upozorenja"
 
 #: src/core/loggingcategory.cpp:137
 #, kde-format
 msgid "Debug Messages"
-msgstr ""
+msgstr "ispravljačke poruke"
 
 # >> @item:inlistbox
 #: src/core/loggingcategory.cpp:140
-#, fuzzy, kde-format
-#| msgid "Critical"
+#, kde-format
 msgid "Critical Messages"
-msgstr "kritično"
+msgstr "kritične poruke"
 
 #: src/core/loggingcategory.cpp:143
 #, kde-format
 msgid "No Debug Messages"
-msgstr ""
+msgstr "bez ispravljačkih poruka"
 
 #: src/quickapps/main.cpp:64
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2017 kdebugsettings authors"
+#, kde-format
 msgid "(c) %1 kdebugsettings authors"
-msgstr "© 2015–2017, autori K‑ispravljačkih-postavki"
+msgstr "© %1, autori K‑ispravljačkih-postavki"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Imate pravilo poput „*=true“ ili „*=false“, što će potisnuti sva specifična "
-"pravila. Bolje ga uklonite."
+"Prisutno je posebno pravilo „*=true“ ili „*=false“, koje može da potisne "
+"specifičnija pravila. Bolje je da ga uklonite."
 
 # >> @title:window
 #: src/widgets/configurecustomsettingdialog.cpp:23
-#, fuzzy, kde-format
-#| msgid "Add custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add custom rule"
 msgstr "Dodavanje posebnog pravila"
 
 # >> @title:window
 #: src/widgets/configurecustomsettingdialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit custom rule"
 msgstr "Uređivanje posebnog pravila"
 
 #: src/widgets/configurecustomsettingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Uključi"
 
 #: src/widgets/configurecustomsettingwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Kategorija:"
 
 #: src/widgets/configurecustomsettingwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Tip:"
 
-# >> @title:window
 #: src/widgets/customdebuglistview.cpp:47
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
-msgstr "Uređivanje posebnog pravila"
+msgstr "Dodaj pravilo…"
 
 # >> @title:window
 #: src/widgets/customdebuglistview.cpp:49
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
-msgstr "Uređivanje posebnog pravila"
+msgstr "Uredi pravilo"
 
 #: src/widgets/customdebuglistview.cpp:55
 #: src/widgets/customdebuglistview.cpp:93
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Ukloni..."
-msgstr[1] "Ukloni..."
-msgstr[2] "Ukloni..."
-msgstr[3] "Ukloni..."
+msgstr[0] "Ukloni pravila"
+msgstr[1] "Ukloni pravila"
+msgstr[2] "Ukloni pravila"
+msgstr[3] "Ukloni pravilo"
 
 #: src/widgets/customdebuglistview.cpp:88
 #, kde-format
@@ -262,28 +247,26 @@ msgstr[3] "Želite li da uklonite ovo pravilo?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr ""
+msgstr "Uredi…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
-msgstr "Ukloni..."
+msgstr "Ukloni…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Traži..."
+msgstr "Traži…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Dodaj…"
 
 #: src/widgets/environmentplaintextedit.cpp:42
 #, kde-format
@@ -310,94 +293,88 @@ msgstr "Trenutna pravila:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
-msgstr ""
+msgstr "Upravljanje grupama"
 
 #: src/widgets/groupmanagementwidget.cpp:49
 #: src/widgets/groupmanagementwidget.cpp:52
 #: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Export Group"
-msgstr ""
+msgstr "Izvoz grupe"
 
 #: src/widgets/groupmanagementwidget.cpp:52
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Grupa je izvezena u %1"
 
 #: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr ""
+msgstr "Ne mogu da izvezem grupu „%2“ u „%1“"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #: src/widgets/groupmanagementwidget.cpp:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
-msgstr ""
+msgstr "Preimenovanje grupe"
 
 #: src/widgets/groupmanagementwidget.cpp:67
 #, kde-format
 msgid "New Name:"
-msgstr ""
+msgstr "Novo ime:"
 
 #: src/widgets/groupmanagementwidget.cpp:72
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr ""
+msgstr "Ne mogu da preimenujem grupu u „%1“."
 
 #: src/widgets/groupmanagementwidget.cpp:88
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Sačuvaj kao..."
+msgstr "Preimenuj grupu…"
 
 #: src/widgets/groupmanagementwidget.cpp:92
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
-msgstr ""
+msgstr "Izvezi grupu…"
 
 #: src/widgets/groupmanagementwidget.cpp:97
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
-msgstr "Ukloni..."
+msgstr "Ukloni grupe"
 
 #: src/widgets/groupmanagementwidget.cpp:102
 #, kde-format
 msgid "Impossible to remove '%1'"
-msgstr ""
+msgstr "Ne mogu da uklonim „%1“"
 
 #: src/widgets/groupmanagementwidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
-msgstr "Ukloni..."
+msgstr "Uklanjanje grupe"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Uključi svo ispravljanje"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Isključi ispravljanje"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
-msgstr "Isključi ispravljanje"
+msgstr "Isključi sve poruke"
 
 # @title:tab
 #: src/widgets/kdebugsettingsdialog.cpp:65
@@ -420,17 +397,15 @@ msgstr "Pravila zadata promenljivom okruženja"
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:76 src/widgets/savetoolbutton.cpp:17
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Upisivanje kao"
+msgstr "Sačuvaj kao…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:89
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
-msgstr "Umetni..."
+msgstr "Umetni…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:158
 #, kde-format
@@ -452,12 +427,11 @@ msgstr "fajlovi kategorija"
 #: src/widgets/kdebugsettingsdialog.cpp:197
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr ""
+msgstr "Kategorije iz fajla „%1“ su umetnute."
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:197
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Umetanje kategorija"
@@ -466,12 +440,12 @@ msgstr "Umetanje kategorija"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
-msgstr ""
+msgstr "Ime grupe"
 
 #: src/widgets/kdebugsettingsdialog.cpp:205
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Ime:"
 
 #: src/widgets/kdebugsettingsdialog.cpp:210
 #, kde-format
@@ -479,16 +453,17 @@ msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
+"<b>„%1“</b> se već koristi kao ime grupe.\n"
+"Sačuvajte pod drugim imenom."
 
 #: src/widgets/kdebugsettingsdialog.cpp:219
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr ""
+msgstr "Ne mogu da sačuvam pod praznim imenom. Zadajte novo."
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:226
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Upisivanje kao"
@@ -497,12 +472,11 @@ msgstr "Upisivanje kao"
 #: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
-msgstr ""
+msgstr "Fajl K‑ispravljačkih-postavki (*.kdebugsettingsrules)"
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:235
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Učitavanje fajlova postavki ispravljanja"
@@ -510,52 +484,35 @@ msgstr "Učitavanje fajlova postavki ispravljanja"
 #: src/widgets/loadgroupmenu.cpp:21
 #, kde-format
 msgid "Load Group"
-msgstr ""
+msgstr "Učitaj grupu"
 
 #: src/widgets/loadgroupmenu.cpp:70
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
-msgstr ""
+msgstr "Upravljaj grupama"
 
 #: src/widgets/loadtoolbutton.cpp:19
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "Učitaj…"
 
 #: src/widgets/loadtoolbutton.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
-msgstr "Sačuvaj kao..."
+msgstr "Učitaj iz fajla…"
 
+# >> @title:window
 #: src/widgets/savetoolbutton.cpp:22
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
-msgstr "Sačuvaj kao..."
+msgstr "Sačuvaj kao fajl…"
 
+# >> @title:window
 #: src/widgets/savetoolbutton.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
-msgstr "Sačuvaj kao..."
-
-#~ msgid "Edit..."
-#~ msgstr "Uredi..."
-
-#~ msgid "Add..."
-#~ msgstr "Dodaj..."
-
-#~ msgid "Save As..."
-#~ msgstr "Sačuvaj kao..."
-
-#~ msgid "Load..."
-#~ msgstr "Učitaj..."
-
-# >> @title:column
-#~ msgid "Rules:"
-#~ msgstr "Pravila:"
+msgstr "Sačuvaj kao grupu…"
