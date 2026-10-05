@@ -194,7 +194,7 @@
 <para
 >Кнопка <guibutton
 >Восстановить значения по умолчанию</guibutton
-> в диалоге возвращает для каждой категории этой вкладки уровень важности по умолчанию, объявленный приложением, которому она принадлежит (см. <xref linkend="categories-file"/>).</para>
+> в диалоге возвращает для каждой категории этой вкладки уровень важности по умолчанию, объявленный приложением, которому она принадлежит (смотрите <xref linkend="categories-file"/>).</para>
 
 <sect2 id="severity-levels">
 <title
@@ -236,7 +236,7 @@
 >Предупреждающие сообщения</guilabel
 ></entry
 ><entry
->Предупреждения и критические сообщения</entry
+>предупреждения и критические сообщения</entry
 ></row>
 <row
 ><entry
@@ -244,7 +244,7 @@
 >Критические сообщения</guilabel
 ></entry
 ><entry
->Только критические сообщения</entry
+>только критические сообщения</entry
 ></row>
 <row
 ><entry
@@ -252,7 +252,7 @@
 >Отключено</guilabel
 ></entry
 ><entry
->Ничего</entry
+>ничего</entry
 ></row>
 </tbody>
 </tgroup>
@@ -551,7 +551,7 @@ org.kde.old.name org.kde.new.name</programlisting>
 <para
 >Выводит в стандартный вывод имя каждой известной категории журналирования и завершает работу, ничего не изменяя. Категории — это те, что прочитаны из файлов <filename class="extension"
 >.categories</filename
-> (см. <xref linkend="categories-file"/>), то есть те же, что перечислены на вкладке <guilabel
+> (смотрите <xref linkend="categories-file"/>), то есть те же, что перечислены на вкладке <guilabel
 >Приложения KDE</guilabel
 >:</para>
 <screen
@@ -665,17 +665,17 @@ org.kde.old.name org.kde.new.name</programlisting>
 >&kdebugsettings;</para>
 
 <para
->Авторские права на программу 2015–2026 Laurent Montel <email
+>Авторские права на программу: &copy; Laurent Montel <email
 >montel@kde.org</email
-></para>
+>, 2015–2026</para>
 
 <para
->Авторские права на документацию 2026 Laurent Montel <email
+>Авторские права на документацию: &copy; Laurent Montel <email
 >montel@kde.org</email
-></para>
+>, 2026</para>
 
 <para
->Перевод на русский — Александр Яворский<email
+>Перевод на русский — Александр Яворский <email
 >kekcuha@gmail.com</email
 ></para
 > &underGPL; &underFDL; </chapter>

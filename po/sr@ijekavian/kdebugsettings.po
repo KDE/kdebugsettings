@@ -1,12 +1,13 @@
 # Translation of kdebugsettings.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:48+0000\n"
-"PO-Revision-Date: 2017-12-31 22:42+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -19,8 +20,7 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: src/apps/main.cpp:46
-#, fuzzy, kde-format
-#| msgid "kdebugssettings"
+#, kde-format
 msgid "KDebugSettings"
 msgstr "К‑исправљачке-поставке"
 
@@ -30,14 +30,12 @@ msgid "Configure debug settings"
 msgstr "Подесите исправљачке поставке"
 
 #: src/apps/main.cpp:50
-#, fuzzy, kde-format
-#| msgid "(c) 2015-2017 kdebugsettings authors"
+#, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
-msgstr "© 2015–2017, аутори К‑исправљачких-поставки"
+msgstr "© 2015–%1, аутори К‑исправљачких-поставки"
 
 #: src/apps/main.cpp:51
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Лорен Монтел"
@@ -49,61 +47,62 @@ msgstr "Одржавалац"
 
 # >> @title:window
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Уметање категорија"
+msgstr "Списак категорија:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
 msgid "Impossible to change debug mode"
-msgstr ""
+msgstr "Не могу да промијеним режим исправљања"
 
 #: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "--debug-mode захтијева бар једно име категорије биљежења."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
 msgid ""
 "Enable QStandardPaths test mode, i.e. read/write settings used by unittests"
 msgstr ""
+"Укључи пробни режим QStandardPaths, тј. читање и писање поставки које "
+"користе јединични тестови"
 
-# >> @title:window
+# >> @item
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Уметање категорија"
+msgstr "Прикажи списак категорија."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
 msgid "Activate full debug for all modules."
-msgstr ""
+msgstr "Активирај пуно исправљање за све модуле."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:35
 #, kde-format
 msgid "Disable full debug for all modules."
-msgstr ""
+msgstr "Искључи пуно исправљање за све модуле."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:40
 #, kde-format
 msgid "Change debug mode as console (in console)"
-msgstr ""
+msgstr "Промијени режим исправљања (у конзоли)"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:43
 #, kde-format
 msgid ""
 "Specify logging category name that you want to change debug mode (in console)"
 msgstr ""
+"Име категорије биљежења којој желите да промијените режим исправљања (у "
+"конзоли)"
 
 # >> @item:inlistbox
 #: src/core/kdebugsettingsutil.cpp:412
-#, fuzzy, kde-format
-#| msgid "Debug"
+#, kde-format
 msgid "Full Debug"
-msgstr "исправљање"
+msgstr "пуно исправљање"
 
 # >> @item:inlistbox
 #: src/core/kdebugsettingsutil.cpp:415
@@ -132,259 +131,227 @@ msgstr "искључено"
 #: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
 #, kde-format
 msgid "Undefined"
-msgstr ""
+msgstr "недефинисано"
 
 #: src/core/loggingcategory.cpp:122
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgid "Category name: %1"
-msgstr "Категорија:"
+msgstr "Име категорије: %1"
 
 #: src/core/loggingcategory.cpp:124
 #, kde-format
 msgid "Identifier: %1"
-msgstr ""
+msgstr "Идентификатор: %1"
 
 #: src/core/loggingcategory.cpp:126
 #, kde-format
 msgid "Default Severity: %1"
-msgstr ""
+msgstr "Подразумијевана озбиљност: %1"
 
 #: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "All Debug Messages"
-msgstr ""
+msgstr "све исправљачке поруке"
 
 #: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Info Messages"
-msgstr ""
+msgstr "информативне поруке"
 
 # >> @item:inlistbox
 #: src/core/loggingcategory.cpp:141
-#, fuzzy, kde-format
-#| msgid "Warning"
+#, kde-format
 msgid "Warning Messages"
-msgstr "упозорење"
+msgstr "поруке упозорења"
 
 #: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "Debug Messages"
-msgstr ""
+msgstr "исправљачке поруке"
 
 # >> @item:inlistbox
 #: src/core/loggingcategory.cpp:147
-#, fuzzy, kde-format
-#| msgid "Critical"
+#, kde-format
 msgid "Critical Messages"
-msgstr "критично"
+msgstr "критичне поруке"
 
 #: src/core/loggingcategory.cpp:150
 #, kde-format
 msgid "No Debug Messages"
-msgstr ""
+msgstr "без исправљачких порука"
 
 # @title:tab
 #: src/kcm/ui/CustomRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "Custom Rules"
+#, kde-format
 msgctxt "@title"
 msgid "Custom Rules"
 msgstr "Посебна правила"
 
-# >> @title:window
 #: src/kcm/ui/CustomRulesPage.qml:70
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action add custom rule"
 msgid "Add Rule…"
-msgstr "Уређивање посебног правила"
+msgstr "Додај правило…"
 
-# >> @title:window
 #: src/kcm/ui/CustomRulesPage.qml:82
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action edit custom rule"
 msgid "Edit Rule…"
-msgstr "Уређивање посебног правила"
+msgstr "Уреди правило…"
 
 #: src/kcm/ui/CustomRulesPage.qml:93
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action remove custom rule"
 msgid "Remove Rule"
-msgstr "Уклони..."
+msgstr "Уклони правило"
 
 #: src/kcm/ui/CustomRulesPage.qml:101
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Rule"
-msgstr "Уклони..."
+msgstr "Уклањање правила"
 
 #: src/kcm/ui/CustomRulesPage.qml:102
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this rule?"
-#| msgid_plural "Do you want to remove these %1 rules?"
+#, kde-format
 msgid "Are you sure you want to remove rule ?"
-msgstr "Желите ли да уклоните ово %1 правило?"
+msgstr "Желите ли заиста да уклоните правило?"
 
 # >> @title:window
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Custom Rule"
 msgstr "Уређивање посебног правила"
 
-# >> @title:window
+# @title:tab
 #: src/kcm/ui/EditCustomRuleDialog.qml:11
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Custom Rule"
-msgstr "Уређивање посебног правила"
+msgstr "Стварање посебног правила"
 
 # >> @title:window
 #: src/kcm/ui/EditCustomRuleDialog.qml:29
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@label:button"
 msgid "Save"
-msgstr "Уписивање као"
+msgstr "Сачувај"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:42
 #: src/widgets/configurecustomsettingwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Category:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Category:"
 msgstr "Категорија:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:51
 #: src/widgets/configurecustomsettingwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Тип:"
 
 #: src/kcm/ui/EditCustomRuleDialog.qml:62
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enabled"
-msgstr "Укључи"
+msgstr "Укључено"
 
 # @title:tab
 # rewrite-msgid: /Settings/Set/
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:12
-#, fuzzy, kde-format
-#| msgid "Rules Settings With Environment Variable"
+#, kde-format
 msgctxt "@title"
 msgid "Rules Settings with Environment Variable"
-msgstr "Правила задата променљивом окружења"
+msgstr "Правила задата промјенљивом окружења"
 
 #: src/kcm/ui/EnvironmentVariableRulesPage.qml:21
 #: src/widgets/environmentplaintextedit.cpp:43
 #, kde-format
 msgid ""
 "No rules have been defined in the environment variable \"QT_LOGGING_RULES\"."
-msgstr "Ниједно правило није дефинисано променљивом окружења QT_LOGGING_RULES."
+msgstr ""
+"Ниједно правило није дефинисано промјенљивом окружења QT_LOGGING_RULES."
 
 # @title:tab
 #: src/kcm/ui/KDEApplicationRulesPage.qml:14
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@title"
 msgid "KDE Application Rules"
-msgstr "КДЕ програм"
+msgstr "Правила КДЕ програма"
 
 # @title:tab
 #: src/kcm/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid "KDE Application"
+#, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
-msgstr "КДЕ програм"
+msgstr "Прикажи категорије КДЕ програма"
 
 # >> @title:window
 #: src/kcm/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
-msgstr "Уметање категорија"
+msgstr "Прикажи посебне категорије"
 
 # >> @title:window
 #: src/kcm/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
-msgstr "Уметање категорија"
+msgstr "Прикажи категорије из окружења"
 
 #: src/widgets/categorywarning.cpp:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have a rule as '*=true' or '*=false' which will override all your "
-#| "specific rule. Better to remove it."
+#, kde-format
 msgid ""
 "A custom rule '*=true' or '*=false' is present, which may override more "
 "specific rules. It is better to remove it."
 msgstr ""
-"Имате правило попут „*=true“ или „*=false“, што ће потиснути сва специфична "
-"правила. Боље га уклоните."
+"Присутно је посебно правило „*=true“ или „*=false“, које може да потисне "
+"специфичнија правила. Боље је да га уклоните."
 
 # >> @title:window
 #: src/widgets/configurecustomsettingdialog.cpp:23
-#, fuzzy, kde-format
-#| msgid "Add custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add custom rule"
 msgstr "Додавање посебног правила"
 
 # >> @title:window
 #: src/widgets/configurecustomsettingdialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit custom rule"
 msgstr "Уређивање посебног правила"
 
 #: src/widgets/configurecustomsettingwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Укључи"
 
-# >> @title:window
 #: src/widgets/customdebuglistview.cpp:48
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action"
 msgid "Add Rule…"
-msgstr "Уређивање посебног правила"
+msgstr "Додај правило…"
 
 # >> @title:window
 #: src/widgets/customdebuglistview.cpp:50
-#, fuzzy, kde-format
-#| msgid "Edit custom rule"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Rule"
-msgstr "Уређивање посебног правила"
+msgstr "Уреди правило"
 
 #: src/widgets/customdebuglistview.cpp:56
 #: src/widgets/customdebuglistview.cpp:94
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Уклони..."
-msgstr[1] "Уклони..."
-msgstr[2] "Уклони..."
-msgstr[3] "Уклони..."
+msgstr[0] "Уклони правила"
+msgstr[1] "Уклони правила"
+msgstr[2] "Уклони правила"
+msgstr[3] "Уклони правило"
 
 #: src/widgets/customdebuglistview.cpp:89
 #, kde-format
@@ -399,28 +366,26 @@ msgstr[3] "Желите ли да уклоните ово правило?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
-msgstr ""
+msgstr "Уреди…"
 
 #: src/widgets/customdebugsettingspage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
-msgstr "Уклони..."
+msgstr "Уклони…"
 
 #: src/widgets/customdebugsettingspage.cpp:40
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:33
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Тражи..."
+msgstr "Тражи…"
 
 #: src/widgets/customdebugsettingspage.cpp:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
-msgstr ""
+msgstr "Додај…"
 
 #: src/widgets/environmentsettingsrulespage.cpp:31
 #, kde-format
@@ -429,7 +394,7 @@ msgid ""
 "QT_LOGGING_RULES variable directly."
 msgstr ""
 "Ова правила не могу да се уређују овим програмом. Морате да их задате "
-"директно променљивом QT_LOGGING_RULES."
+"директно промјенљивом QT_LOGGING_RULES."
 
 #: src/widgets/environmentsettingsrulespage.cpp:33
 #, kde-format
@@ -440,94 +405,88 @@ msgstr "Тренутна правила:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Group"
-msgstr ""
+msgstr "Управљање групама"
 
 #: src/widgets/groupmanagementwidget.cpp:51
 #: src/widgets/groupmanagementwidget.cpp:54
 #: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Export Group"
-msgstr ""
+msgstr "Извоз групе"
 
 #: src/widgets/groupmanagementwidget.cpp:54
 #, kde-format
 msgid "Group exported to %1"
-msgstr ""
+msgstr "Група је извезена у %1"
 
 #: src/widgets/groupmanagementwidget.cpp:56
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
-msgstr ""
+msgstr "Не могу да извезем групу „%2“ у „%1“"
 
 #: src/widgets/groupmanagementwidget.cpp:69
 #: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
-msgstr ""
+msgstr "Преименовање групе"
 
 #: src/widgets/groupmanagementwidget.cpp:69
 #, kde-format
 msgid "New Name:"
-msgstr ""
+msgstr "Ново име:"
 
 #: src/widgets/groupmanagementwidget.cpp:74
 #, kde-format
 msgid "Impossible to rename group as '%1'."
-msgstr ""
+msgstr "Не могу да преименујем групу у „%1“."
 
 #: src/widgets/groupmanagementwidget.cpp:90
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Сачувај као..."
+msgstr "Преименуј групу…"
 
 #: src/widgets/groupmanagementwidget.cpp:94
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
-msgstr ""
+msgstr "Извези групу…"
 
 #: src/widgets/groupmanagementwidget.cpp:99
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
-msgstr "Уклони..."
+msgstr "Уклони групе"
 
 #: src/widgets/groupmanagementwidget.cpp:105
 #, kde-format
 msgid "Impossible to remove '%1'"
-msgstr ""
+msgstr "Не могу да уклоним „%1“"
 
 #: src/widgets/groupmanagementwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Remove..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
-msgstr "Уклони..."
+msgstr "Уклањање групе"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable All Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Укључи сво исправљање"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Искључи исправљање"
 
 #: src/widgets/kdeapplicationdebugsettingpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Turn Off Debug"
+#, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
-msgstr "Искључи исправљање"
+msgstr "Искључи све поруке"
 
 # @title:tab
 #: src/widgets/kdebugsettingsdialog.cpp:70
@@ -546,32 +505,30 @@ msgstr "Посебна правила"
 #: src/widgets/kdebugsettingsdialog.cpp:72
 #, kde-format
 msgid "Rules Settings With Environment Variable"
-msgstr "Правила задата променљивом окружења"
+msgstr "Правила задата промјенљивом окружења"
 
 #: src/widgets/kdebugsettingsdialog.cpp:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Преглед…"
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgid "Save As…"
-msgstr "Уписивање као"
+msgstr "Сачувај као…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "Insert..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Insert…"
-msgstr "Уметни..."
+msgstr "Уметни…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:183
 #, kde-format
 msgid "'%1' cannot be opened. Please verify it."
-msgstr "„%1“ не може да се отвори. Проверите то."
+msgstr "„%1“ не може да се отвори. Провјерите то."
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:208
@@ -588,12 +545,11 @@ msgstr "фајлови категорија"
 #: src/widgets/kdebugsettingsdialog.cpp:222
 #, kde-format
 msgid "Categories from file '%1' inserted."
-msgstr ""
+msgstr "Категорије из фајла „%1“ су уметнуте."
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:222
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Categories"
 msgstr "Уметање категорија"
@@ -602,12 +558,12 @@ msgstr "Уметање категорија"
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Name"
-msgstr ""
+msgstr "Име групе"
 
 #: src/widgets/kdebugsettingsdialog.cpp:230
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Име:"
 
 #: src/widgets/kdebugsettingsdialog.cpp:235
 #, kde-format
@@ -615,16 +571,17 @@ msgid ""
 "<b>'%1'</b> is already used as a group name.\n"
 "Please save as another name."
 msgstr ""
+"<b>„%1“</b> се већ користи као име групе.\n"
+"Сачувајте под другим именом."
 
 #: src/widgets/kdebugsettingsdialog.cpp:244
 #, kde-format
 msgid "Can not save as empty name. Please use a new one."
-msgstr ""
+msgstr "Не могу да сачувам под празним именом. Задајте ново."
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:251
-#, fuzzy, kde-format
-#| msgid "Save As"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save As"
 msgstr "Уписивање као"
@@ -633,12 +590,11 @@ msgstr "Уписивање као"
 #: src/widgets/kdebugsettingsdialog.cpp:260
 #, kde-format
 msgid "KDebugSettings File (*.kdebugsettingsrules)"
-msgstr ""
+msgstr "Фајл К‑исправљачких-поставки (*.kdebugsettingsrules)"
 
 # >> @title:window
 #: src/widgets/kdebugsettingsdialog.cpp:260
-#, fuzzy, kde-format
-#| msgid "Load Debug Settings Files"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Debug Settings Files"
 msgstr "Учитавање фајлова поставки исправљања"
@@ -646,107 +602,51 @@ msgstr "Учитавање фајлова поставки исправљања"
 #: src/widgets/loadgroupmenu.cpp:22
 #, kde-format
 msgid "Load Group"
-msgstr ""
+msgstr "Учитај групу"
 
 #: src/widgets/loadgroupmenu.cpp:67
 #, kde-format
 msgctxt "@action"
 msgid "Manage Group"
-msgstr ""
+msgstr "Управљај групама"
 
 #: src/widgets/loadtoolbutton.cpp:21
 #, kde-format
 msgid "Load…"
-msgstr ""
+msgstr "Учитај…"
 
 #: src/widgets/loadtoolbutton.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Load From File…"
-msgstr "Сачувај као..."
+msgstr "Учитај из фајла…"
 
 #: src/widgets/previewgeneratedfiledialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Преглед створеног фајла"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "Фајл qtlogging.ini је измијењен. Желите ли да га поново учитате?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Учитај поново"
 
+# >> @title:window
 #: src/widgets/savetoolbutton.cpp:22
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As File…"
-msgstr "Сачувај као..."
+msgstr "Сачувај као фајл…"
 
+# >> @title:window
 #: src/widgets/savetoolbutton.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
-msgstr "Сачувај као..."
-
-#, fuzzy
-#~| msgid "(c) 2015-2017 kdebugsettings authors"
-#~ msgid "(c) 2023-%1 kdebugsettings authors"
-#~ msgstr "© 2015–2017, аутори К‑исправљачких-поставки"
-
-# >> @title:window
-#, fuzzy
-#~| msgid "Save As"
-#~ msgctxt "@menu-action"
-#~ msgid "Save"
-#~ msgstr "Уписивање као"
-
-#, fuzzy
-#~| msgid "Configure debug settings"
-#~ msgctxt "@title"
-#~ msgid "Welcome to kdebugsettings"
-#~ msgstr "Подесите исправљачке поставке"
-
-#, fuzzy
-#~| msgid "Category:"
-#~ msgid "Category:"
-#~ msgstr "Категорија:"
-
-#, fuzzy
-#~| msgid "Type:"
-#~ msgid "Type:"
-#~ msgstr "Тип:"
-
-# >> @title:window
-#, fuzzy
-#~| msgid "Edit custom rule"
-#~ msgid "Edit Custom Dialog"
-#~ msgstr "Уређивање посебног правила"
-
-#, fuzzy
-#~| msgid "(c) 2015-2017 kdebugsettings authors"
-#~ msgid "(c) %1 kdebugsettings authors"
-#~ msgstr "© 2015–2017, аутори К‑исправљачких-поставки"
-
-#~ msgid "Edit..."
-#~ msgstr "Уреди..."
-
-#~ msgid "Add..."
-#~ msgstr "Додај..."
-
-#~ msgid "Save As..."
-#~ msgstr "Сачувај као..."
-
-#~ msgid "Load..."
-#~ msgstr "Учитај..."
-
-# >> @title:column
-#~ msgid "Rules:"
-#~ msgstr "Правила:"
+msgstr "Сачувај као групу…"
