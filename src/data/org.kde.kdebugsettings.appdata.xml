@@ -46,6 +46,10 @@
   <name xml:lang="sa">KDebugSettings इति</name>
   <name xml:lang="sk">KDebugSettings</name>
   <name xml:lang="sl">KDebugSettings</name>
+  <name xml:lang="sr">К‑исправљачке-поставке</name>
+  <name xml:lang="sr-Latn">K‑ispravljačke-postavke</name>
+  <name xml:lang="sr-ijekavian">К‑исправљачке-поставке</name>
+  <name xml:lang="sr-ijekavianlatin">K‑ispravljačke-postavke</name>
   <name xml:lang="sv">KDebugSettings</name>
   <name xml:lang="tr">K Hata Ayıklama Ayarları</name>
   <name xml:lang="ug">K سازلاش تەڭشىكى</name>
@@ -87,6 +91,10 @@
   <summary xml:lang="sa">के दोषनिवारणसन्देशाः दर्शिताः इति सेट् कुर्वन्तु</summary>
   <summary xml:lang="sk">Nastaviť, ktoré ladiace správy sa zobrazujú</summary>
   <summary xml:lang="sl">Nastavite, katera sporočila za odkrivanje napak so prikazana</summary>
+  <summary xml:lang="sr">Избор исправљачких порука које се приказују</summary>
+  <summary xml:lang="sr-Latn">Izbor ispravljačkih poruka koje se prikazuju</summary>
+  <summary xml:lang="sr-ijekavian">Избор исправљачких порука које се приказују</summary>
+  <summary xml:lang="sr-ijekavianlatin">Izbor ispravljačkih poruka koje se prikazuju</summary>
   <summary xml:lang="sv">Ställ in vilka felsökningsmeddelanden som visas</summary>
   <summary xml:lang="tr">Hangi hata ayıklama iletilerinin gösterileceğini ayarlayın</summary>
   <summary xml:lang="uk">Визначення того, які з діагностичних повідомлень буде показано</summary>
@@ -130,6 +138,10 @@
     <p xml:lang="sa">KDebugSettings सम्पादयति यत् कोऽपि QLoggingCategory प्रदर्शितः अस्ति । QLoggingCategory अनुप्रयोगानाम् कृते कन्सोल् मध्ये सन्देशान् मुद्रयति तथा च भवान् परिभाषितुं शक्नोति यत् के अनुप्रयोगाः Qt अनुप्रयोगानाम् त्रुटिनिवारणे सहायतार्थं सूचना, चेतावनी अथवा महत्त्वपूर्णदोषाणां कृते सन्देशान् प्रदर्शयन्ति।</p>
     <p xml:lang="sk">KDebugSettings upravuje, ktoré QLoggingCategory sú zobrazené. QLoggingCategory tlačí správy na konzole pre aplikácie a môžete definovať, ktoré aplikácie zobrazujú správy pre informácie, varovania alebo kritické chyby, aby pomohli ladiť aplikácie Qt.</p>
     <p xml:lang="sl">KDebugSettings ureja, katere kategorije QLoggingCategory so prikazane. QLoggingCategory tiska sporočila na konzolo za aplikacije in določite lahko, katere aplikacije prikazujejo sporočila za informacije, opozorila ali kritične napake, tako da pomagajo odpravljati napake aplikacij Qt.</p>
+    <p xml:lang="sr">К‑исправљачке-поставке одређују које се категорије QLoggingCategory приказују. QLoggingCategory исписује поруке програма у конзоли, а ви можете одредити који програми приказују информативне поруке, упозорења или критичне грешке, као помоћ при исправљању КуТ програма.</p>
+    <p xml:lang="sr-Latn">K‑ispravljačke-postavke određuju koje se kategorije QLoggingCategory prikazuju. QLoggingCategory ispisuje poruke programa u konzoli, a vi možete odrediti koji programi prikazuju informativne poruke, upozorenja ili kritične greške, kao pomoć pri ispravljanju Qt programa.</p>
+    <p xml:lang="sr-ijekavian">К‑исправљачке-поставке одређују које се категорије QLoggingCategory приказују. QLoggingCategory исписује поруке програма у конзоли, а ви можете одредити који програми приказују информативне поруке, упозорења или критичне грешке, као помоћ при исправљању КуТ програма.</p>
+    <p xml:lang="sr-ijekavianlatin">K‑ispravljačke-postavke određuju koje se kategorije QLoggingCategory prikazuju. QLoggingCategory ispisuje poruke programa u konzoli, a vi možete odrediti koji programi prikazuju informativne poruke, upozorenja ili kritične greške, kao pomoć pri ispravljanju Qt programa.</p>
     <p xml:lang="sv">KDebugSettings redigerar vilka kategorier i QLoggingCategory som visas. QLoggingCategory skriver ut meddelanden på terminalen åt program, och du kan definiera vilka program som visar meddelanden såsom information, varningar eller kritiska fel för att hjälpa till att felsöka Qt-program.</p>
     <p xml:lang="tr">K Hata Ayıklama Ayarları, hangi QLoggingCategory’nin görüntüleneceğini düzenler. QLoggingCategory, uygulamalar için konsolda iletiler yazdırır ve hangi uygulamaların Qt uygulamalarında hata ayıklamaya yardımcı olmak için bilgi, uyarı veya kritik hatalar için iletiler görüntüleyeceğini tanımlayabilirsiniz.</p>
     <p xml:lang="uk">За допомогою програми «Параметри KDebug» можна визначити, які дані з QLoggingCategory буде показано. QLoggingCategory виводить повідомлення до консолі для програм, а ви можете визначити, для яких програм слід показувати повідомлення з відомостями, попередженнями або критичними помилками. Ці повідомлення допоможуть вам діагностувати причини проблем із програмами на основі Qt.</p>
@@ -178,6 +190,10 @@
       <caption xml:lang="sa">KDebugSettings इत्यस्य मुख्यविण्डो ।</caption>
       <caption xml:lang="sk">Hlavné okno KDebugSettings.</caption>
       <caption xml:lang="sl">Glavno okno KDebugSettings.</caption>
+      <caption xml:lang="sr">Главни прозор К‑исправљачких-поставки.</caption>
+      <caption xml:lang="sr-Latn">Glavni prozor K‑ispravljačkih-postavki.</caption>
+      <caption xml:lang="sr-ijekavian">Главни прозор К‑исправљачких-поставки.</caption>
+      <caption xml:lang="sr-ijekavianlatin">Glavni prozor K‑ispravljačkih-postavki.</caption>
       <caption xml:lang="sv">KDebugSettings huvudfönster</caption>
       <caption xml:lang="tr">K Hata Ayıklama Ayarları ana penceresi.</caption>
       <caption xml:lang="uk">Головне вікно KDebugSettings.</caption>
@@ -210,6 +226,10 @@
         <p xml:lang="pt-BR">Novas funcionalidades:</p>
         <p xml:lang="ru">Новые возможности:</p>
         <p xml:lang="sl">Nove zmožnosti:</p>
+        <p xml:lang="sr">Нове могућности:</p>
+        <p xml:lang="sr-Latn">Nove mogućnosti:</p>
+        <p xml:lang="sr-ijekavian">Нове могућности:</p>
+        <p xml:lang="sr-ijekavianlatin">Nove mogućnosti:</p>
         <p xml:lang="sv">Nya funktioner:</p>
         <p xml:lang="tr">Yeni özellikler:</p>
         <p xml:lang="uk">Нові можливості:</p>
@@ -232,6 +252,10 @@
           <li xml:lang="pt-BR">Adicionou-se um botão de prévia que mostra o arquivo qtlogging.ini que será gerado antes de salvá-lo.</li>
           <li xml:lang="ru">Добавлена кнопка «Просмотр», показывающая создаваемый файл qtlogging.ini до его сохранения;</li>
           <li xml:lang="sl">Doda gumb za predogled datoteke qtlogging.ini; ki se bo ustvarila pred shranjevanjem.</li>
+          <li xml:lang="sr">Додато је дугме „Преглед“ које приказује фајл qtlogging.ini какав ће бити створен, пре него што се сачува.</li>
+          <li xml:lang="sr-Latn">Dodato je dugme „Pregled“ koje prikazuje fajl qtlogging.ini kakav će biti stvoren, pre nego što se sačuva.</li>
+          <li xml:lang="sr-ijekavian">Додато је дугме „Преглед“ које приказује фајл qtlogging.ini какав ће бити створен, прије него што се сачува.</li>
+          <li xml:lang="sr-ijekavianlatin">Dodato je dugme „Pregled“ koje prikazuje fajl qtlogging.ini kakav će biti stvoren, prije nego što se sačuva.</li>
           <li xml:lang="sv">Lägg till en förhandsgranskningsknapp som visar filen qtlogging.ini som ska genereras, innan den sparas.</li>
           <li xml:lang="tr">Kaydetme öncesi, üretilen qtlogging.ini dosyasını gösteren bir Önizleme düğmesi eklendi.</li>
           <li xml:lang="uk">Додано кнопку попереднього перегляду, натискання якої призведе до показу файла qtlogging.ini, який буде створено, перш ніж його буде збережено.</li>
@@ -253,6 +277,10 @@
           <li xml:lang="pt-BR">Adicionou-se uma opção de linha de comando --list que exibe a lista de categorias de registro conhecidas.</li>
           <li xml:lang="ru">Добавлен параметр командной строки --list, показывающий список известных категорий журнала;</li>
           <li xml:lang="sl">Dodaj možnost ukazne vrstice --list, ki prikaže seznam znanih kategorij beleženja.</li>
+          <li xml:lang="sr">Додата је опција командне линије --list која приказује списак познатих категорија бележења.</li>
+          <li xml:lang="sr-Latn">Dodata je opcija komandne linije --list koja prikazuje spisak poznatih kategorija beleženja.</li>
+          <li xml:lang="sr-ijekavian">Додата је опција командне линије --list која приказује списак познатих категорија биљежења.</li>
+          <li xml:lang="sr-ijekavianlatin">Dodata je opcija komandne linije --list koja prikazuje spisak poznatih kategorija bilježenja.</li>
           <li xml:lang="sv">Lägg till kommandoradsväljaren --list som visar en lista över kända loggningskategorier.</li>
           <li xml:lang="tr">Bilinen günlükleme kategorilerini gösteren bir --list komut satırı seçeneği eklendi.</li>
           <li xml:lang="uk">Додано параметр командного рядка --list, за допомогою якого можна переглянути список відомих програмі категорій журналювання.</li>
@@ -274,6 +302,10 @@
           <li xml:lang="pt-BR">Adicionou-se um aviso quando o qtlogging.ini for modificado fora do aplicativo, com uma ação para recarregá-lo.</li>
           <li xml:lang="ru">Добавлено предупреждение об изменении файла qtlogging.ini вне приложения с возможностью перезагрузить его.</li>
           <li xml:lang="sl">Doda opozorilo, ko se datoteka qtlogging.ini spremeni zunaj aplikacije, ter možnost njenega ponovnega nalaganja.</li>
+          <li xml:lang="sr">Додато је упозорење када се qtlogging.ini измени ван програма, уз радњу за поновно учитавање.</li>
+          <li xml:lang="sr-Latn">Dodato je upozorenje kada se qtlogging.ini izmeni van programa, uz radnju za ponovno učitavanje.</li>
+          <li xml:lang="sr-ijekavian">Додато је упозорење када се qtlogging.ini измијени ван програма, уз радњу за поновно учитавање.</li>
+          <li xml:lang="sr-ijekavianlatin">Dodato je upozorenje kada se qtlogging.ini izmijeni van programa, uz radnju za ponovno učitavanje.</li>
           <li xml:lang="sv">Lägg till en varning när qtlogging.ini ändras utanför programmet, samt ett alternativ för att uppdatera filen.</li>
           <li xml:lang="tr">qtlogging.ini dosyası uygulamanın dışında güncellenmişse bir uyarı gösteriliyor; ayrıca dosyayı yeniden yükleme seçeneği de var.</li>
           <li xml:lang="uk">Додано попередження про внесення змін до qtlogging.ini сторонньою програмою із кнопкою для перезавантаження файла.</li>
