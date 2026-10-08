@@ -214,6 +214,7 @@
         <p xml:lang="ca">Característiques noves:</p>
         <p xml:lang="ca-valencia">Característiques noves:</p>
         <p xml:lang="cs">Nové funkce:</p>
+        <p xml:lang="de">Neue Funktionen:</p>
         <p xml:lang="es">Nuevas funciones:</p>
         <p xml:lang="fr">Nouvelles fonctionnalités :</p>
         <p xml:lang="he">יכולות חדשות:</p>
@@ -240,6 +241,7 @@
           <li xml:lang="ca">Afegeix un botó de vista prèvia que mostra el fitxer «qtlogging.ini» que es generarà, abans de desar-lo.</li>
           <li xml:lang="ca-valencia">Afig un botó de vista prèvia que mostra el fitxer «qtlogging.ini» que es generarà, abans de guardar-lo.</li>
           <li xml:lang="cs">Přidáno tlačítko Náhled, které před uložením zobrazí soubor qtlogging.ini, který bude vygenerován.</li>
+          <li xml:lang="de">Einen „Vorschau“-Knopf hinzugefügt, über den die zu erstellende Datei „qtlogging.ini“ vor dem Speichern angezeigt werden kann.</li>
           <li xml:lang="es">Se ha añadido un botón de vista previa para mostrar el archivo qtlogging.ini que se generará antes de guardarlo.</li>
           <li xml:lang="fr">Ajout d'un bouton « Aperçu » affichant le fichier « qtlogging.ini » qui sera généré, avant son enregistrement.</li>
           <li xml:lang="he">נוסף כפתור תצוגה מקדימה שמציג את קובץ qtlogging.ini שייווצר לפני שמירתו.</li>
@@ -265,6 +267,7 @@
           <li xml:lang="ca">Afegeix l'opció --list de la línia d'ordres que mostra la llista de categories de registre conegudes.</li>
           <li xml:lang="ca-valencia">Afig l'opció --list de la línia d'ordres que mostra la llista de categories de registre conegudes.</li>
           <li xml:lang="cs">Přidána volba příkazového řádku --list, která zobrazí seznam známých kategorií protokolování.</li>
+          <li xml:lang="de">Die Befehlszeilenoption „--list“ hinzugefügt, mit deren Hilfe eine Liste der bekannten Protokollierungskategorien angezeigt werden kann.</li>
           <li xml:lang="es">Se ha añadido la opción --list a orden de la consola para mostrar la lista de las categorías de registro conocidas.</li>
           <li xml:lang="fr">Ajout d'une option de ligne de commandes « --list » affichant la liste des catégories de journalisation connues.</li>
           <li xml:lang="he">נוספה אפשרות ‎--list לשורת הפקודות שמציגה את רשימת קטגוריות התיעוד הידועות.</li>
@@ -290,6 +293,7 @@
           <li xml:lang="ca">Afegeix un avís quan «qtlogging.ini» es modifica fora de l'aplicació, amb una acció per a tornar a carregar-lo.</li>
           <li xml:lang="ca-valencia">Afig un avís quan «qtlogging.ini» es modifica fora de l'aplicació, amb una acció per a tornar a carregar-lo.</li>
           <li xml:lang="cs">Přidáno varování v případě, že dojde ke změně souboru qtlogging.ini mimo aplikaci, spolu s možností jeho opětovného načtení.</li>
+          <li xml:lang="de">Eine Warnung für den Fall hinzugefügt, dass die Datei „qtlogging.ini“ außerhalb der Anwendung geändert wird, zusammen mit einer Option zum erneuten Laden der Datei.</li>
           <li xml:lang="es">Se ha añadido una advertencia cuando se modifica qtlogging.ini desde fuera de la aplicación, con una acción para volver a cargarlo.</li>
           <li xml:lang="fr">Ajout d'un avertissement lorsque le fichier « qtlogging.ini » est modifié en dehors de l'application, avec une action pour son rechargement.</li>
           <li xml:lang="he">נוספה אזהרה כש־qtlogging.ini נערך מחוץ ליישום, עם פעולה לטעון אותו מחדש.</li>
