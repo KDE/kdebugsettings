@@ -1,0 +1,677 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kdebugsettings "<application
+>KDebugSettings</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="kdebugsettings" lang="&language;">
+
+<bookinfo>
+<title
+>Het handboek van &kdebugsettings;</title>
+
+<authorgroup>
+<author
+><firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> <affiliation
+><address
+><email
+>montel@kde.org</email
+></address
+></affiliation>
+</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<copyright>
+<year
+>2015</year>
+<year
+>2026</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2026-09-21</date>
+<releaseinfo
+>&kdebugsettings; 26.11</releaseinfo>
+
+<abstract>
+<para
+>&kdebugsettings; configureert welke foutopsporingsberichten &Qt; en &kde; applicaties afdrukken, zonder ze opnieuw te compileren.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KDebugSettings</keyword>
+<keyword
+>debuggen</keyword>
+<keyword
+>loggen</keyword>
+<keyword
+>categorieën</keyword>
+<keyword
+>qtlogging.ini</keyword>
+<keyword
+>QT_LOGGING_RULES</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&Qt;-toepassingen groeperen hun diagnostische uitvoer in <emphasis
+>logboekcategorieën</emphasis
+>:benoemde kanalen zoals <literal
+>org.kde.pim.kmail</literal
+> of <literal
+>kf.kio.core</literal
+>, die elk afzonderlijk kunnen worden in-of uitgeschakeld voor elke ernstgraad (debug, info, waarschuwing, kritiek). Standaard zijn de meeste categorieën stil, zodat toepassingen het logboek bij normaal gebruik niet overspoelen.</para>
+
+<para
+>&kdebugsettings; is een grafische interface voor die regels. Het geeft een overzicht van alle categorieën die op het systeem zijn geïnstalleerd, laat u kiezen hoe gedetailleerd elke categorie moet zijn, en schrijft het resultaat naar het configuratiebestand dat &Qt; leest bij het opstarten van de toepassing:</para>
+
+<para
+><filename
+>$<envar
+>XDG_CONFIG_HOME</envar
+>/QtProject/qtlogging.ini</filename
+> (usually <filename class="directory"
+>~/.config/QtProject/qtlogging.ini</filename
+>)</para>
+
+<para
+>De regels worden van kracht zodra een toepassing de volgende keer wordt gestart; toepassingen die al actief zijn, worden hierdoor niet beïnvloed.</para>
+
+<note
+><para
+>&kdebugsettings; bepaalt niet <emphasis
+>waar</emphasis
+> de berichten terechtkomen, maar alleen welke berichten worden gegenereerd. De uitvoer komt nog steeds terecht waar het platform deze naartoe stuurt, meestal het systemd-journaal of de terminal van waaruit de toepassing is gestart.</para
+></note>
+
+</chapter>
+
+<chapter id="using">
+<title
+>&kdebugsettings; gebruiken</title>
+
+<para
+>Het hoofdvenster is een dialoogvenster met drie tabbladen en een rij knoppen die in alle tabbladen aanwezig is.</para>
+
+<sect1 id="kde-application-tab">
+<title
+>Het tabblad <guilabel
+>KDE-toepassing</guilabel
+></title>
+
+<para
+>Op dit tabblad worden alle logboekcategorieën weergegeven die zijn gedefinieerd door de toepassingen en bibliotheken die op uw systeem zijn geïnstalleerd. Elke rij bevat de beschrijving van de categorie en een vervolgkeuzelijst met het huidige ernstniveau. Als u de muisaanwijzer boven een rij plaatst, worden de naam van de categorie, de identificatiecode en het standaardernstniveau weergegeven.</para>
+
+<para
+>Gebruik het veld <guilabel
+>Zoeken…</guilabel
+> bovenaan om de lijst te verfijnen; het filter zoekt op de beschrijving, de categorienaam en de identificatiecode, dus het invoeren van <userinput
+>kmail</userinput
+>, <userinput
+>org.kde.pim</userinput
+> of <userinput
+>KMAIL_LOG</userinput
+> werkt allemaal.</para>
+
+<para
+>Om één categorie te wijzigen, kiest u een niveau in het bijbehorende keuzemenu. Om meerdere categorieën tegelijk te wijzigen, selecteert u eerst de rijen &mdash;de wijziging wordt dan toegepast op de gehele selectie. De drie knoppen onderaan zijn van toepassing op de geselecteerde rijen, of op elke rij die momenteel door het filter wordt weergegeven wanneer er niets is geselecteerd:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guibutton
+>Alle debugging inschakelen</guibutton
+></term>
+<listitem
+><para
+>Stelt de categorieën in op <guilabel
+>Full Debug</guilabel
+>, d.w.z. elk bericht van elke ernstgraad wordt weergegeven.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Debugging uitschakelen</guibutton
+></term>
+<listitem
+><para
+>Stelt de categorieën weer in op <guilabel
+>Info</guilabel
+>: informatie-, waarschuwings- en kritieke berichten blijven behouden, terwijl foutopsporingsberichten worden verwijderd.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Alle berichten uitschakelen</guibutton
+></term>
+<listitem
+><para
+>Stelt de categorieën in op <guilabel
+>Uit</guilabel
+>, waardoor ze volledig word en gedempt.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>De knop <guibutton
+>Standaardinstellingen herstellen</guibutton
+> in het dialoogvenster zet elke categorie op dit tabblad terug naar de standaardernst die is gedefinieerd door de toepassing die eigenaar is van deze categorie (zie <xref linkend="categories-file"/>).</para>
+
+<sect2 id="severity-levels">
+<title
+>Ernstniveaus</title>
+
+<para
+>Een categorie is geen simpele aan/uit-schakelaar: als u een niveau kiest, worden zowel dat niveau als alle niveaus die ernstiger zijn dan dat niveau ingeschakeld. De beschikbare niveaus, van het meest gedetailleerde tot het minst gedetailleerde, zijn:</para>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row
+><entry
+>Niveau</entry
+><entry
+>Berichten die worden afgedrukt</entry
+></row>
+</thead>
+<tbody>
+<row
+><entry
+><guilabel
+>Volledig debuggen</guilabel
+></entry
+><entry
+>Volledig debuggen, info, waarschuwing en kritiek</entry
+></row>
+<row
+><entry
+><guilabel
+>Informatie</guilabel
+></entry
+><entry
+>info, waarschuwing en kritiek</entry
+></row>
+<row
+><entry
+><guilabel
+>Waarschuwing</guilabel
+></entry
+><entry
+>waarschuwing en kritiek</entry
+></row>
+<row
+><entry
+><guilabel
+>Kritiek</guilabel
+></entry
+><entry
+>alleen kritiek</entry
+></row>
+<row
+><entry
+><guilabel
+>Uit</guilabel
+></entry
+><entry
+>niets</entry
+></row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<para
+>Elk niveau wordt voor alle vier de ernstniveaus als een expliciete regel vastgelegd, zodat een categorie altijd een duidelijk omschreven status heeft, ongeacht wat de systeemwijde standaardinstellingen zijn. Als u bijvoorbeeld <guilabel
+>Waarschuwing</guilabel
+> selecteert voor <literal
+>org.kde.example</literal
+>, krijgt u het volgende resultaat:</para>
+
+<programlisting
+>org.kde.example.info=false
+org.kde.example.debug=false
+org.kde.example.warning=true
+org.kde.example.critical=true</programlisting>
+
+</sect2>
+</sect1>
+
+<sect1 id="custom-rules-tab">
+<title
+>Het tabblad <guilabel
+>Eigen regels</guilabel
+></title>
+
+<para
+>Niet elke categorie wordt vermeld in een geïnstalleerd <filename
+>.categories</filename
+>-bestand: toepassingen van derden of code waaraan u momenteel werkt, kunnen categorieën gebruiken waarover &kdebugsettings; niets weet. Op dit tabblad kunt u handmatig regels voor deze categorieën opstellen.</para>
+
+<para
+>Gebruik <guibutton
+>Toevoegen…</guibutton
+> om een regel aan te maken, <guibutton
+>Bewerken…</guibutton
+> om de geselecteerde regel te wijzigen en <guibutton
+>Verwijderen…</guibutton
+> om de geselecteerde regels te verwijderen. Een regel bestaat uit een categorienaam, een type en een <guilabel
+>Inschakelen</guilabel
+>-selectievakje, en wordt weergegeven in de &Qt;-syntaxis, &eg; <literal
+>org.kde.example.debug=true</literal
+>.</para>
+
+<para
+>De categorienaam mag het jokertekensymbool <literal
+>*</literal
+> bevatten, aan het begin van de naam, aan het einde of op beide plaatsen. <literal
+>org.kde.pim.*</literal
+> komt daarom in één keer overeen met elke &PIM;-categorie.</para>
+
+<warning>
+<para
+>Een regel waarvan de categorie alleen <literal
+>*</literal
+> is, zonder type, d.w.z. <literal
+>*=true</literal
+> of <literal
+>*=false</literal
+>, komt overal mee overeen en heeft voorrang op alle andere regels. &kdebugsettings; geeft bovenaan het dialoogvenster een waarschuwing weer wanneer zo’n regel wordt aangetroffen, en u kunt deze het beste verwijderen. Als u echt een allesomvattende regel wilt, schrijf deze dan in plaats daarvan als <literal
+>*.*=true</literal
+> of <literal
+>*.*=false</literal
+>, waarbij de volgorde zo is dat de meer specifieke regels nog steeds voorrang hebben.</para>
+</warning>
+
+</sect1>
+
+<sect1 id="environment-tab">
+<title
+>Het tabblad <guilabel
+>Instellen van regels met omgevingsvariabele</guilabel
+></title>
+
+<para
+>&Qt; leest ook logregels uit de omgevingsvariabele <envar
+>QT_LOGGING_RULES</envar
+> en die regels hebben voorrang op de regels die zijn opgeslagen in <filename
+>qtlogging.ini</filename
+>. Als de variabele is ingesteld in de omgeving waaruit &kdebugsettings; is gestart, toont dit tabblad de inhoud ervan, zodat u kunt zien waarom een categorie zich anders gedraagt dan wat de eerste twee tabbladen suggereren.</para>
+
+<para
+>De regels zijn hier alleen-lezen: als u ze wilt wijzigen, moet u de omgevingsvariabele zelf aanpassen.</para>
+
+</sect1>
+
+<sect1 id="saving">
+<title
+>Opslaan, laden en groepen</title>
+
+<para
+><guibutton
+>OK</guibutton
+> en <guibutton
+>Toepassen</guibutton
+> schrijven de regels van de eerste twee tabbladen naar <filename
+>~/.config/QtProject/qtlogging.ini</filename
+>. Alleen de categorieën waarvan de ernst afwijkt van de standaardinstelling worden opgeslagen, waardoor het bestand compact blijft en toepassingen later hun eigenstandaardinstellingen kunnen aanpassen.</para>
+
+<para
+><guibutton
+>Voorbeeld…</guibutton
+> opent een venster (alleen-lezen) waarin het bestand <filename
+>qtlogging.ini</filename
+> wordt weergegeven dat door <guibutton
+>OK</guibutton
+> en <guibutton
+>Toepassen</guibutton
+> zou worden aangepast, zonder dat er daadwerkelijk iets wordt opgeslagen. Aangezien het dezelfde regel toepast als deze knoppen, is het ook de snelste manier om te zien welke categorieën zijn weggelaten omdat ze nog steeds op hun standaardernst staan.</para>
+
+<para
+>Met de overige knoppen kunt u regelsets beheren die u naast elkaar wilt houden, bijvoorbeeld één per bug die u aan het onderzoeken bent:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guibutton
+>Opslaan als…</guibutton
+></term>
+<listitem>
+<para
+><guimenuitem
+>Opslaan als bestand</guimenuitem
+> exporteert de huidige regels naar een <filename class="extension"
+>.kdebugsettingsrules</filename
+>-bestand op een willekeurige locatie op de schijf. <guimenuitem
+>Opslaan als groep</guimenuitem
+> vraagt om een naam en slaat de regels als een groep op in <filename class="directory"
+>~/.local/share/kdebugsettings/groups/</filename
+>.</para>
+<para
+>In tegenstelling tot <guibutton
+>Toepassen</guibutton
+> schrijven beide <emphasis
+>alle</emphasis
+> categorieën weg, niet alleen de gewijzigde, zodat het opnieuw laden van het bestand precies de toestand herstelt die u hebt opgeslagen.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Laden</guibutton
+></term>
+<listitem
+><para
+><guimenuitem
+>Laden vanuit bestand</guimenuitem
+> laadt een bestand <filename class="extension"
+>.kdebugsettingsrules</filename
+> in, <guimenuitem
+>Groep laden</guimenuitem
+> toont de opgeslagen groepen in een submenu en <guimenuitem
+>Groep beheren</guimenuitem
+> opent een dialoogvenster waarin groepen kunnen worden hernoemd, verwijderd en geëxporteerd. Het laden vult alleen het dialoogvenster; gebruik <guibutton
+>OK</guibutton
+> of <guibutton
+>Toepassen</guibutton
+> om de regels daadwerkelijk te activeren.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guibutton
+>Invoegen…</guibutton
+></term>
+<listitem
+><para
+>Leest een extra <filename class="extension"
+>.categories</filename
+>bestand en voegt de daarin opgegeven categorieën toe aan het tabblad <guilabel
+>KDE-toepassing</guilabel
+>. Dit is handig voor een toepassing die niet systeembreed is geïnstalleerd, meestal een toepassing die u zelf bouwt.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+<chapter id="categories-file">
+<title
+>Categorieën definiëren: het bestand <filename class="extension"
+>.categories</filename
+></title>
+
+<para
+>De lijst die wordt weergegeven op het tabblad <guilabel
+>KDE-toepassing</guilabel
+> is niet vastgelegd. Deze wordt gelezen uit de bestanden <filename class="extension"
+>.categories</filename
+> die door toepassingen zijn geïnstalleerd, in:</para>
+
+<itemizedlist>
+<listitem
+><para
+><filename class="directory"
+>${KDE_INSTALL_LOGGINGCATEGORIESDIR}</filename
+>, &ie; <filename class="directory"
+>/usr/share/qlogging-categories6/</filename
+>, waarbij <filename
+>kde.categories</filename
+> het gedeelde bestand is waarin de categorieën van de &kde;-toepassingen worden vermeld;</para
+></listitem>
+<listitem
+><para
+>de <acronym
+>XDG</acronym
+>-configuratiemappen, bijvoorbeeld <filename class="directory"
+>~/.config/</filename
+>;</para
+></listitem>
+<listitem
+><para
+><filename class="directory"
+>$<envar
+>XDG_CONFIG_HOME</envar
+>/qdebug.categories/</filename
+>, voor toepassingen buiten &kde;.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Het formaat is één categorie per regel. Regels die beginnen met <literal
+>#</literal
+> zijn opmerkingen:</para>
+
+<programlisting
+>&lt;categorienaam&gt; &lt;beschrijving&gt; [DEFAULT_SEVERITY [&lt;ernstniveau&gt;]] [IDENTIFIER [&lt;identificatiecode&gt;]]</programlisting>
+
+<para
+>De naam en de beschrijving zijn verplicht, de rest is optioneel. <literal
+>&lt;ernstgraad&gt;</literal
+> is een van de volgende: <literal
+>DEBUG</literal
+>, <literal
+>INFO</literal
+>, <literal
+>WARNING</literal
+> of <literal
+>CRITICAL</literal
+> en geeft het niveau aan waarnaar de categorie terugvalt, het niveau waar <guibutton
+>Standaardinstellingen herstellen</guibutton
+> naar terugkeert; wanneer dit ontbreekt, wordt <literal
+>INFO</literal
+> aangenomen. <literal
+>&lt;identificatiecode&gt;</literal
+> is de naam van het <classname
+>QLoggingCategory</classname
+>-object in de broncode, waardoor de categorie doorzoekbaar is op basis van de naam die ontwikkelaars daadwerkelijk typen. Bijvoorbeeld:</para>
+
+<programlisting
+>org.kde.example.core Voorbeeld kernbibliotheek DEFAULT_SEVERITY [WAARSCHUWING] IDENTIFICATIECODE [EXAMPLE_CORE_LOG]</programlisting>
+
+<para
+>Als u uw toepassing bouwt met de extra-cmake-modules, hoeft u dit bestand niet handmatig te schrijven: declareer de categorie met <function
+>ecm_qt_declare_logging_category()</function
+> en installeer deze met <function
+>ecm_qt_install_logging_categories()</function
+>, waarna het bestand automatisch voor u wordt gegenereerd.</para>
+
+<sect1 id="renamecategories">
+<title
+>Hernoemde categorieën</title>
+
+<para
+>Wanneer een toepassing de naam van een van haar categorieën wijzigt, verwijzen de regels die gebruikers alin hun <filename
+>qtlogging.ini</filename
+> hebben staan nog steeds naar de oude naam. Een <filename class="extension"
+>.renamecategories</filename
+>-bestand, dat naast het <filename class="extension"
+>.categories</filename
+>-bestand wordt geïnstalleerd, vertelt &kdebugsettings; hoe deze moeten worden gemigreerd. Elke regel koppelt een oude naam aan een nieuwe:</para>
+
+<programlisting
+># oude modulenaam&lt;spatie&gt;nieuwe modulenaam
+org.kde.oude.naam org.kde.nieuwe.naam</programlisting>
+
+</sect1>
+</chapter>
+
+<chapter id="commandline">
+<title
+>Opdrachtregel-opties</title>
+
+<para
+>Naast de gebruikelijke &kde;-opties ondersteunt &kdebugsettings; de volgende opties, waarmee de regels kunnen worden weergegeven of gewijzigd zonder het dialoogvenster te openen:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>--list</option
+></term>
+<listitem>
+<para
+>Geeft de naam van elke bekende logcategorie weer op de standaarduitvoer en sluit af, zonder iets te wijzigen. De categorieën zijn afkomstig uit de <filename class="extension"
+>.categories</filename
+>-bestanden (zie <xref linkend="categories-file"/>), d.w.z. dezelfde categorieën die worden weergegeven op het tabblad <guilabel
+>KDE-toepassing</guilabel
+>:</para>
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>kdebugsettings</command
+> <option
+>--list</option
+> | <command
+>grep</command
+> <parameter
+>kmail</parameter
+></userinput
+></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--enable-full-debug</option
+></term>
+<listitem
+><para
+>Stelt alle bekende categorieën in op <guilabel
+>Full Debug</guilabel
+> en sluit af.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--disable-full-debug</option
+></term>
+<listitem
+><para
+>Stelt alle bekende categorieën in op <guilabel
+>Uit</guilabel
+> en sluit af.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--debug-mode <replaceable
+>Volledig|Info|Waarschuwing|Kritiek|Uit</replaceable
+> <replaceable
+>categorie…</replaceable
+></option
+></term>
+<listitem>
+<para
+>Stelt het opgegeven niveau in voor de categorieën die als argumenten zijn opgegeven en sluit het programma af. Er moet ten minste één categorienaam worden opgegeven:</para>
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>kdebugsettings</command
+> <option
+>--debug-mode</option
+> <parameter
+>Full</parameter
+> <parameter
+>org.kde.pim.kmail</parameter
+> <parameter
+>org.kde.pim.messagelist</parameter
+></userinput
+></screen>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--test-mode</option
+></term>
+<listitem
+><para
+>Schakelt de testmodus <classname
+>QStandardPaths</classname
+> in, zodat de instellingen van de unit-tests worden gebruikt in plaats van die van u. Bedoeld voor het testen van &kdebugsettings; zelf.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</chapter>
+
+<chapter id="systemsettings">
+<title
+>De module &systemsettings;</title>
+
+<para
+>&kdebugsettings; installeert ook een &systemsettings;-module, die te vinden is onder <menuchoice
+><guimenu
+>Systeembeheer</guimenu
+><guimenuitem
+>Foutopsporingsinstellingen</guimenuitem
+></menuchoice
+>. Deze module biedt dezelfde drie tabbladen als de zelfstandige toepassing en schrijft hetzelfde bestand <filename
+>qtlogging.ini</filename
+>.</para>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&kdebugsettings;</para>
+
+<para
+>Programma copyright 2015 Laurent Montel <email
+>montel@kde.org</email
+></para>
+
+<para
+>Documentatie copyright 2026 Laurent Montel <email
+>montel@kde.org</email
+></para>
+
+&meld.fouten;&vertaling.freek; &underGPL; &underFDL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
