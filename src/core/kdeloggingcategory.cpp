@@ -10,17 +10,6 @@
 
 KdeLoggingCategory::KdeLoggingCategory() = default;
 
-bool KdeLoggingCategory::operator==(const KdeLoggingCategory &other) const
-{
-    return (description == other.description) && (categoryName == other.categoryName) && (defaultSeverity == other.defaultSeverity)
-        && (identifierName == other.identifierName);
-}
-
-bool KdeLoggingCategory::operator!=(const KdeLoggingCategory &other) const
-{
-    return !operator==(other);
-}
-
 bool KdeLoggingCategory::isValid() const
 {
     return !categoryName.isEmpty();

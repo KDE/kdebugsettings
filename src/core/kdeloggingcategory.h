@@ -16,8 +16,7 @@ class QDebug;
 struct LIBKDEBUGSETTINGSCORE_EXPORT_TEST_EXPORT KdeLoggingCategory {
     KdeLoggingCategory();
     using List = QList<KdeLoggingCategory>;
-    [[nodiscard]] bool operator==(const KdeLoggingCategory &other) const;
-    [[nodiscard]] bool operator!=(const KdeLoggingCategory &other) const;
+    [[nodiscard]] bool operator==(const KdeLoggingCategory &other) const = default;
     [[nodiscard]] bool isValid() const;
 
     QString description;

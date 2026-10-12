@@ -34,7 +34,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {
     }
 
     using List = QList<LoggingCategory>;
-    [[nodiscard]] bool operator==(const LoggingCategory &other) const;
+    [[nodiscard]] bool operator==(const LoggingCategory &other) const = default;
     [[nodiscard]] bool isValid() const;
     [[nodiscard]] bool hasDefaultSeverity() const;
 

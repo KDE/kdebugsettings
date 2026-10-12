@@ -35,10 +35,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LineLoggingQtCategory {
         return !logName.isEmpty();
     }
 
-    [[nodiscard]] bool operator==(const LineLoggingQtCategory &other) const
-    {
-        return (enabled == other.enabled) && (type == other.type) && (logName == other.logName);
-    }
+    [[nodiscard]] bool operator==(const LineLoggingQtCategory &other) const = default;
 
     bool enabled = true;
     LoggingType type = Unknown;
@@ -76,11 +73,7 @@ struct LIBKDEBUGSETTINGSCORE_EXPORT LoadLoggingCategory {
         return !logName.isEmpty();
     }
 
-    [[nodiscard]] bool operator==(const LoadLoggingCategory &other) const
-    {
-        // qDebug() << " logname " << logName << " other.logName :" << other.logName;
-        return (logName == other.logName) && (loggingTypes == other.loggingTypes);
-    }
+    [[nodiscard]] bool operator==(const LoadLoggingCategory &other) const = default;
 
     QString logName;
     QMap<LoadLoggingCategory::LogType, LoadLoggingCategory::Status> loggingTypes;

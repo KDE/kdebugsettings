@@ -7,11 +7,6 @@
 
 #include "renamecategory.h"
 
-bool RenameCategory::operator==(const RenameCategory &other) const
-{
-    return (originalName == other.originalName) && (newName == other.newName);
-}
-
 bool RenameCategory::isValid() const
 {
     return !originalName.isEmpty() && !newName.isEmpty();
