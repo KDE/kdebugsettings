@@ -85,7 +85,7 @@
 >, cadascun dels quals es pot activar o desactivar independentment i per a cada severitat (depuració, informació, avís, crític). De manera predeterminada, la majoria de les categories són silencioses, de manera que les aplicacions no inunden el diari en un ús normal.</para>
 
 <para
->El &kdebugsettings; és un frontal gràfic per a aquestes regles. Llista totes les categories instal·lades al sistema, us permet triar com de detallada hauria de ser cadascuna i escriu el resultat al fitxer de configuració que les &Qt; llegeixen a l'inici de l'aplicació:</para>
+>El &kdebugsettings; és un frontal gràfic per a aquestes regles. Llista totes les categories instal·lades al sistema, us permet triar com hauria de ser de detallada cadascuna i escriu el resultat al fitxer de configuració que les &Qt; llegeixen a l'inici de l'aplicació:</para>
 
 <para
 ><filename
@@ -348,7 +348,7 @@ org.kde.example.critical=true</programlisting>
 >D'acord</guibutton
 > i <guibutton
 >Aplica</guibutton
-> escriurien, sense escriure res. Atès que aplica la mateixa regla que ells, també és la manera més ràpida de veure quines categories han quedar fora perquè encara estan a la seva severitat predeterminada.</para>
+> escriurien, sense escriure res. Atès que aplica la mateixa regla que ells, també és la manera més ràpida de veure quines categories han quedat fora perquè encara estan a la seva severitat predeterminada.</para>
 
 <para
 >Els botons restants gestionen conjunts de regles que voleu mantenir un al costat de l'altre, per exemple una per un error que esteu perseguint:</para>
@@ -494,7 +494,7 @@ org.kde.example.critical=true</programlisting>
 >org.kde.example.core Exemple de biblioteca central DEFAULT_SEVERITY [WARNING] IDENTIFIER [EXAMPLE_CORE_LOG]</programlisting>
 
 <para
->Si construïu l'aplicació amb «extra-cmake-modules», no cal que escriviu aquest fitxer a mà: declareu la categoria amb <function
+>Si construïu l'aplicació amb «extra-cmake-modules», no cal que escrigueu aquest fitxer a mà: declareu la categoria amb <function
 >ecm_qt_declare_logging_category()</function
 > i instal·leu-la amb <function
 >ecm_qt_install_logging_categories()</function
