@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"POT-Creation-Date: 2026-10-13 00:49+0000\n"
 "PO-Revision-Date: 2026-10-04 23:13+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -128,54 +128,54 @@ msgstr "критично"
 msgid "Off"
 msgstr "искључено"
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr "недефинисано"
 
-#: src/core/loggingcategory.cpp:122
+#: src/core/loggingcategory.cpp:116
 #, kde-format
 msgid "Category name: %1"
 msgstr "Име категорије: %1"
 
-#: src/core/loggingcategory.cpp:124
+#: src/core/loggingcategory.cpp:118
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Идентификатор: %1"
 
-#: src/core/loggingcategory.cpp:126
+#: src/core/loggingcategory.cpp:120
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Подразумијевана озбиљност: %1"
 
-#: src/core/loggingcategory.cpp:135
+#: src/core/loggingcategory.cpp:129
 #, kde-format
 msgid "All Debug Messages"
 msgstr "све исправљачке поруке"
 
-#: src/core/loggingcategory.cpp:138
+#: src/core/loggingcategory.cpp:132
 #, kde-format
 msgid "Info Messages"
 msgstr "информативне поруке"
 
 # >> @item:inlistbox
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "Warning Messages"
 msgstr "поруке упозорења"
 
-#: src/core/loggingcategory.cpp:144
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Debug Messages"
 msgstr "исправљачке поруке"
 
 # >> @item:inlistbox
-#: src/core/loggingcategory.cpp:147
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Critical Messages"
 msgstr "критичне поруке"
 
-#: src/core/loggingcategory.cpp:150
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "No Debug Messages"
 msgstr "без исправљачких порука"

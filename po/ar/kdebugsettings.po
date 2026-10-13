@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"POT-Creation-Date: 2026-10-13 00:49+0000\n"
 "PO-Revision-Date: 2026-09-23 18:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -119,52 +119,52 @@ msgstr "الحرج"
 msgid "Off"
 msgstr "مغلق"
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr "غير معرّف"
 
-#: src/core/loggingcategory.cpp:122
+#: src/core/loggingcategory.cpp:116
 #, kde-format
 msgid "Category name: %1"
 msgstr "اسم الصنف: %1"
 
-#: src/core/loggingcategory.cpp:124
+#: src/core/loggingcategory.cpp:118
 #, kde-format
 msgid "Identifier: %1"
 msgstr "المعرف: %1"
 
-#: src/core/loggingcategory.cpp:126
+#: src/core/loggingcategory.cpp:120
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "الخطورة المبدئية: %1"
 
-#: src/core/loggingcategory.cpp:135
+#: src/core/loggingcategory.cpp:129
 #, kde-format
 msgid "All Debug Messages"
 msgstr "جميع رسائل التنقيح"
 
-#: src/core/loggingcategory.cpp:138
+#: src/core/loggingcategory.cpp:132
 #, kde-format
 msgid "Info Messages"
 msgstr "رسائل المعلومات"
 
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "Warning Messages"
 msgstr "رسائل التّحذير"
 
-#: src/core/loggingcategory.cpp:144
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Debug Messages"
 msgstr "رسائل التنقيح"
 
-#: src/core/loggingcategory.cpp:147
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Critical Messages"
 msgstr "رسائل الحرج"
 
-#: src/core/loggingcategory.cpp:150
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "No Debug Messages"
 msgstr "لا رسائل تنقيح"

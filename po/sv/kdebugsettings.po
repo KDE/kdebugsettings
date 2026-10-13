@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"POT-Creation-Date: 2026-10-13 00:49+0000\n"
 "PO-Revision-Date: 2026-09-27 14:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -118,52 +118,52 @@ msgstr "Kritiska fel"
 msgid "Off"
 msgstr "Av"
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr "Odefinierad"
 
-#: src/core/loggingcategory.cpp:122
+#: src/core/loggingcategory.cpp:116
 #, kde-format
 msgid "Category name: %1"
 msgstr "Kategorinamn: %1"
 
-#: src/core/loggingcategory.cpp:124
+#: src/core/loggingcategory.cpp:118
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identifierare: %1"
 
-#: src/core/loggingcategory.cpp:126
+#: src/core/loggingcategory.cpp:120
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Standardsvårighetsgrad: %1"
 
-#: src/core/loggingcategory.cpp:135
+#: src/core/loggingcategory.cpp:129
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Alla felsökningsmeddelanden"
 
-#: src/core/loggingcategory.cpp:138
+#: src/core/loggingcategory.cpp:132
 #, kde-format
 msgid "Info Messages"
 msgstr "Informationsmeddelanden"
 
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "Warning Messages"
 msgstr "Varningsmeddelanden"
 
-#: src/core/loggingcategory.cpp:144
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Debug Messages"
 msgstr "Felsökningsmeddelanden"
 
-#: src/core/loggingcategory.cpp:147
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Critical Messages"
 msgstr "Kritiska meddelanden"
 
-#: src/core/loggingcategory.cpp:150
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Inga felsökningsmeddelanden"

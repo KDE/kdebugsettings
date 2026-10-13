@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"POT-Creation-Date: 2026-10-13 00:49+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -115,52 +115,52 @@ msgstr ""
 msgid "Off"
 msgstr ""
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:122
+#: src/core/loggingcategory.cpp:116
 #, kde-format
 msgid "Category name: %1"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:124
+#: src/core/loggingcategory.cpp:118
 #, kde-format
 msgid "Identifier: %1"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:126
+#: src/core/loggingcategory.cpp:120
 #, kde-format
 msgid "Default Severity: %1"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:135
+#: src/core/loggingcategory.cpp:129
 #, kde-format
 msgid "All Debug Messages"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:138
+#: src/core/loggingcategory.cpp:132
 #, kde-format
 msgid "Info Messages"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "Warning Messages"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:144
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Debug Messages"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:147
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Critical Messages"
 msgstr ""
 
-#: src/core/loggingcategory.cpp:150
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "No Debug Messages"
 msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:48+0000\n"
+"POT-Creation-Date: 2026-10-13 00:49+0000\n"
 "PO-Revision-Date: 2026-09-22 02:13-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -123,52 +123,52 @@ msgstr "Crítico"
 msgid "Off"
 msgstr "Desligado"
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:153
+#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr "Indefinido"
 
-#: src/core/loggingcategory.cpp:122
+#: src/core/loggingcategory.cpp:116
 #, kde-format
 msgid "Category name: %1"
 msgstr "Nome da categoria: %1"
 
-#: src/core/loggingcategory.cpp:124
+#: src/core/loggingcategory.cpp:118
 #, kde-format
 msgid "Identifier: %1"
 msgstr "Identificador: %1"
 
-#: src/core/loggingcategory.cpp:126
+#: src/core/loggingcategory.cpp:120
 #, kde-format
 msgid "Default Severity: %1"
 msgstr "Gravidade padrão: %1"
 
-#: src/core/loggingcategory.cpp:135
+#: src/core/loggingcategory.cpp:129
 #, kde-format
 msgid "All Debug Messages"
 msgstr "Todas as mensagens de depuração"
 
-#: src/core/loggingcategory.cpp:138
+#: src/core/loggingcategory.cpp:132
 #, kde-format
 msgid "Info Messages"
 msgstr "Mensagens de informação"
 
-#: src/core/loggingcategory.cpp:141
+#: src/core/loggingcategory.cpp:135
 #, kde-format
 msgid "Warning Messages"
 msgstr "Mensagens de aviso"
 
-#: src/core/loggingcategory.cpp:144
+#: src/core/loggingcategory.cpp:138
 #, kde-format
 msgid "Debug Messages"
 msgstr "Mensagens de depuração"
 
-#: src/core/loggingcategory.cpp:147
+#: src/core/loggingcategory.cpp:141
 #, kde-format
 msgid "Critical Messages"
 msgstr "Mensagens críticas"
 
-#: src/core/loggingcategory.cpp:150
+#: src/core/loggingcategory.cpp:144
 #, kde-format
 msgid "No Debug Messages"
 msgstr "Sem mensagens de depuração"
