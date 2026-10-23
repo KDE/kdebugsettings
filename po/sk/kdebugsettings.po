@@ -44,10 +44,9 @@ msgid "Maintainer"
 msgstr "Správca"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Vložiť kategórie"
+msgstr "Zoznam kategórií:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -57,7 +56,7 @@ msgstr "Nie je možné zmeniť režim ladenia"
 #: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "--debug-mode vyžaduje aspoň jeden názov kategórie záznamov."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -68,11 +67,9 @@ msgstr ""
 "používané unittestami"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Zobraziť vlastné kategórie"
+msgstr "Zobraziť zoznam kategórií."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -485,7 +482,7 @@ msgstr "Nastavenia pravidiel s premennou prostredia"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Náhľad…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -593,17 +590,17 @@ msgstr "Načítať zo súboru..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Náhľad vygenerovaného súboru"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini sa zmenil. Chcete ho znova načítať?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Znova načítať"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
@@ -618,38 +615,28 @@ msgid "Save As Group…"
 msgstr "Uložiť ako skupinu..."
 
 #, fuzzy
-#~| msgid "(c) 2015-%1 kdebugsettings authors"
 #~ msgid "(c) 2023-%1 kdebugsettings authors"
 #~ msgstr "(c) 2015-%1 autori kdebugsettings"
 
 #, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Save As"
 #~ msgctxt "@menu-action"
 #~ msgid "Save"
 #~ msgstr "Uložiť ako"
 
 #, fuzzy
-#~| msgid "Configure debug settings"
 #~ msgctxt "@title"
 #~ msgid "Welcome to kdebugsettings"
 #~ msgstr "Nastaviť nastavenie ladenia"
 
 #, fuzzy
-#~| msgctxt "@label:textbox"
-#~| msgid "Category:"
 #~ msgid "Category:"
 #~ msgstr "Kategória:"
 
 #, fuzzy
-#~| msgctxt "@label:textbox"
-#~| msgid "Type:"
 #~ msgid "Type:"
 #~ msgstr "Typ:"
 
 #, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Edit custom rule"
 #~ msgid "Edit Custom Dialog"
 #~ msgstr "Upraviť vlastné pravidlo"
 
