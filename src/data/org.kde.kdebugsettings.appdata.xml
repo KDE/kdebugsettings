@@ -6,7 +6,7 @@
 <component type="desktop-application">
   <id>org.kde.kdebugsettings</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LGPL-2.1-or-later</project_license>
+  <project_license>LGPL-2.0-or-later</project_license>
   <developer id="org.kde">
     <name translate="no">KDE</name>
   </developer>
@@ -149,10 +149,11 @@
     <p xml:lang="zh-TW">KDebugSettings 編輯哪些 QLoggingCategory 紀錄類別要被顯示。QLoggingCategory 為應用程式在主控台顯示訊息，而您可以定義應用程式是否顯示資訊、警告或嚴重錯誤，來幫助除錯 Qt 應用程式。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kdebugsettings</url>
-  <url type="help">https://doc.qt.io/qt-6/qloggingcategory.html</url>
+  <url type="help">https://docs.kde.org/?application=kdebugsettings</url>
   <url type="donation">https://www.kde.org/community/donations/?app=kdebugsettings&amp;source=appdata</url>
   <url type="homepage">https://apps.kde.org/kdebugsettings/</url>
   <url type="vcs-browser">https://invent.kde.org/utilities/kdebugsettings</url>
+  <url type="contribute">https://community.kde.org/Get_Involved</url>
   <launchable type="desktop-id">org.kde.kdebugsettings.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <screenshots>
