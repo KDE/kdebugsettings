@@ -227,6 +227,7 @@
         <p xml:lang="nn">Nye funksjonar:</p>
         <p xml:lang="pt-BR">Novas funcionalidades:</p>
         <p xml:lang="ru">Новые возможности:</p>
+        <p xml:lang="sk">Nové funkcie:</p>
         <p xml:lang="sl">Nove zmožnosti:</p>
         <p xml:lang="sr">Нове могућности:</p>
         <p xml:lang="sr-Latn">Nove mogućnosti:</p>
@@ -254,6 +255,7 @@
           <li xml:lang="nn">Lagt til «Førehandsvising»-knapp som før lagring viser «qtlogging.ini»-fila som vert generert.</li>
           <li xml:lang="pt-BR">Adicionou-se um botão de prévia que mostra o arquivo qtlogging.ini que será gerado antes de salvá-lo.</li>
           <li xml:lang="ru">Добавлена кнопка «Просмотр», показывающая создаваемый файл qtlogging.ini до его сохранения;</li>
+          <li xml:lang="sk">Pridané tlačidlo Náhľad, ktoré pred uložením zobrazí súbor qtlogging.ini, ktorý sa vygeneruje.</li>
           <li xml:lang="sl">Doda gumb za predogled datoteke qtlogging.ini; ki se bo ustvarila pred shranjevanjem.</li>
           <li xml:lang="sr">Додато је дугме „Преглед“ које приказује фајл qtlogging.ini какав ће бити створен, пре него што се сачува.</li>
           <li xml:lang="sr-Latn">Dodato je dugme „Pregled“ koje prikazuje fajl qtlogging.ini kakav će biti stvoren, pre nego što se sačuva.</li>
@@ -280,6 +282,7 @@
           <li xml:lang="nn">Lagt til kommandolinjevalet «--list», som viser ei liste over kjende loggkategoriar.</li>
           <li xml:lang="pt-BR">Adicionou-se uma opção de linha de comando --list que exibe a lista de categorias de registro conhecidas.</li>
           <li xml:lang="ru">Добавлен параметр командной строки --list, показывающий список известных категорий журнала;</li>
+          <li xml:lang="sk">Pridaná voľba príkazového riadka --list, ktorá zobrazí zoznam známych kategórií záznamov.</li>
           <li xml:lang="sl">Dodaj možnost ukazne vrstice --list, ki prikaže seznam znanih kategorij beleženja.</li>
           <li xml:lang="sr">Додата је опција командне линије --list која приказује списак познатих категорија бележења.</li>
           <li xml:lang="sr-Latn">Dodata je opcija komandne linije --list koja prikazuje spisak poznatih kategorija beleženja.</li>
@@ -306,6 +309,7 @@
           <li xml:lang="nn">Lagt til åtvaring når «qtlogging.ini» vert endra utanfor programmet, med moglegheit for å lasta fila inn på nytt.</li>
           <li xml:lang="pt-BR">Adicionou-se um aviso quando o qtlogging.ini for modificado fora do aplicativo, com uma ação para recarregá-lo.</li>
           <li xml:lang="ru">Добавлено предупреждение об изменении файла qtlogging.ini вне приложения с возможностью перезагрузить его.</li>
+          <li xml:lang="sk">Pridané upozornenie, keď sa qtlogging.ini zmení mimo aplikácie, s akciou na jeho opätovné načítanie.</li>
           <li xml:lang="sl">Doda opozorilo, ko se datoteka qtlogging.ini spremeni zunaj aplikacije, ter možnost njenega ponovnega nalaganja.</li>
           <li xml:lang="sr">Додато је упозорење када се qtlogging.ini измени ван програма, уз радњу за поновно учитавање.</li>
           <li xml:lang="sr-Latn">Dodato je upozorenje kada se qtlogging.ini izmeni van programa, uz radnju za ponovno učitavanje.</li>
