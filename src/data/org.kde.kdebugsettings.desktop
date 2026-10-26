@@ -150,5 +150,6 @@ Keywords[tr]=günlük;günlükleme;kategori;kategoriler;jurnal;günlükleme düz
 Keywords[uk]=log;logging;category;categories;journal;logging levels;debug;журнал;журналювання;категорія;категорії;рівні журналювання;діагностика;
 Icon=kdebugsettings
 Categories=Qt;KDE;Development;
+X-DocPath=kdebugsettings/index.html
 SingleMainWindow=true
 Version=1.5

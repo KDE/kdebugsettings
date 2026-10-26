@@ -58,6 +58,7 @@
         "Name[zh_CN]": "调试设置",
         "Name[zh_TW]": "除錯設定"
     },
+    "X-DocPath": "kdebugsettings/index.html",
     "X-KDE-Keywords": "debug,categories",
     "X-KDE-Keywords[ar]": "تنقيح,فئات",
     "X-KDE-Keywords[ca@valencia]": "depuració,categories",
