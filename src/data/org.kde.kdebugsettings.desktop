@@ -141,6 +141,7 @@ Keywords[ca@valencia]=registre;gravació;categoria;categories;diari;nivells de r
 Keywords[cs]=protokol;protokolování;kategorie;kategorie;deník;úrovně protokolování;ladění;
 Keywords[es]=registrar;registro;categoría;categorías;diario;niveles de registro;depuración;
 Keywords[fr]=se connecter ; connexion ; catégories ; journal ; niveaux de journalisation ; débogage ;
+Keywords[ia]=log;logging;category;categories;journal;logging levels;debug;
 Keywords[it]=registro;registrazione;categoria;categorie;journal;livelli di registrazione;debug;
 Keywords[ka]=log;logging;category;categories;journal;logging levels;debug;ჟურნალი;გამართვა;კატეგორიები;
 Keywords[nl]=log;loggen;categorie;categorieën;journaal;logniveaus;debug;
