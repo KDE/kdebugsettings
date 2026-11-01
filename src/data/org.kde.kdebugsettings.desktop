@@ -136,6 +136,7 @@ Comment[uk]=Налаштовування діагностичних повідо
 Comment[zh_CN]=配置 Qt 应用程序的调试输出
 Comment[zh_TW]=配置來自 Qt 應用程式的偵錯輸出
 Keywords=log;logging;category;categories;journal;logging levels;debug;
+Keywords[ar]=log;logging;category;categories;journal;logging levels;debug،سجل؛ تسجيل؛ فئة؛ فئات؛ مجلة؛ مستويات التسجيل؛ تصحيح الأخطاء;
 Keywords[ca]=registre;enregistrament;categoria;categories;diari;nivells de registre;depuració;
 Keywords[ca@valencia]=registre;gravació;categoria;categories;diari;nivells de registre;depuració;
 Keywords[cs]=protokol;protokolování;kategorie;kategorie;deník;úrovně protokolování;ladění;
