@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-13 00:49+0000\n"
-"PO-Revision-Date: 2026-08-31 18:48+0300\n"
+"PO-Revision-Date: 2026-10-06 09:43+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -46,10 +46,9 @@ msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "Lisää luokkia"
+msgstr "Luokkaluettelo:"
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -59,7 +58,7 @@ msgstr "Mahdotonta vaihtaa virheenpaikannustilaa"
 #: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "--debug-mode vaatii vähintään yhden lokiluokan nimen."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -70,10 +69,9 @@ msgstr ""
 "kirjoitusasetukset"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "Lisää luokkia"
+msgstr "Näytä luokkaluettelo."
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -483,7 +481,7 @@ msgstr "Ympäristömuuttujassa määritetyt säännöt"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "Esikatsele…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -591,17 +589,17 @@ msgstr "Lataa tiedostosta…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "Esikatsele luotua tiedostoa"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini on muuttunut. Haluatko ladata sen uudelleen?"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Lataa uudelleen"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
