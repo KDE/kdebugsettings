@@ -55,7 +55,7 @@ RenameCategory::List KDebugSettingsUtil::readRenameCategories(const QString &fil
     } else {
         QString data;
         QTextStream ts(&file);
-        ts.setEncoding(QStringConverter::Encoding::Latin1);
+        ts.setEncoding(QStringConverter::Encoding::Utf8);
         while (!ts.atEnd()) {
             data = ts.readLine().simplified();
             RenameCategory category = parseRenameCategory(data, filename);
@@ -212,7 +212,7 @@ void KDebugSettingsUtil::readLoggingCategories(const QString &filename, KdeLoggi
         qCWarning(KDEBUGSETTINGSCORE_LOG) << "Couldn't open" << filename;
     } else {
         QTextStream ts(&file);
-        ts.setEncoding(QStringConverter::Encoding::Latin1);
+        ts.setEncoding(QStringConverter::Encoding::Utf8);
         while (!ts.atEnd()) {
             const QString data = ts.readLine().simplified();
             KdeLoggingCategory category = parseLineKdeLoggingCategory(data, filename);
