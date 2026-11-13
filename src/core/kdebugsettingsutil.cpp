@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QRegularExpression>
 #include <QStandardPaths>
 #include <QTextStream>

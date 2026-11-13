@@ -10,7 +10,6 @@
 #include "kdeapplicationtreeview.h"
 #include "loggingmanager.h"
 #include <KLocalizedString>
-#include <QEvent>
 #include <QKeyEvent>
 #include <QLineEdit>
 #include <QPushButton>

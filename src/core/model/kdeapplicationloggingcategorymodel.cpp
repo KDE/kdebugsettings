@@ -8,8 +8,6 @@
 #include "kdebugsettingscore_debug.h"
 #include "kdebugsettingsutil.h"
 
-#include <QMultiHash>
-
 KDEApplicationLoggingCategoryModel::KDEApplicationLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {

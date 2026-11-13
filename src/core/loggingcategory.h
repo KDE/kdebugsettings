@@ -10,6 +10,7 @@
 #include <QList>
 #include <QMetaType>
 #include <QString>
+#include <cstdint>
 #include <utility>
 class QDebug;
 struct LIBKDEBUGSETTINGSCORE_EXPORT LoggingCategory {

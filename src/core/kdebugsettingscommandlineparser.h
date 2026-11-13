@@ -6,6 +6,7 @@
 #pragma once
 #include "libkdebugsettingscore_export.h"
 #include <QString>
+#include <cstdint>
 class QCommandLineParser;
 class LIBKDEBUGSETTINGSCORE_EXPORT KDebugSettingsCommandLineParser
 {

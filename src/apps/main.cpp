@@ -27,6 +27,7 @@
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
+#include <algorithm>
 #include <chrono>
 #include <iostream>
 

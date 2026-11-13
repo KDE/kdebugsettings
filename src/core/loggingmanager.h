@@ -7,16 +7,21 @@
 #pragma once
 #include "kdebugsettingsloadingcategories.h"
 #include "libkdebugsettingscore_export.h"
-#include "model/categorytypemodel.h"
-#include "model/customloggingcategorymodel.h"
-#include "model/customloggingcategoryproxymodel.h"
-#include "model/kdeapplicationloggingcategorymodel.h"
-#include "model/kdeapplicationloggingcategoryproxymodel.h"
 #include <QObject>
 class KDirWatch;
+class CategoryTypeModel;
+class CustomLoggingCategoryModel;
+class CustomLoggingCategoryProxyModel;
+class KDEApplicationLoggingCategoryModel;
+class KDEApplicationLoggingCategoryProxyModel;
 class LIBKDEBUGSETTINGSCORE_EXPORT LoggingManager : public QObject
 {
     Q_OBJECT
+    Q_MOC_INCLUDE("model/categorytypemodel.h")
+    Q_MOC_INCLUDE("model/customloggingcategorymodel.h")
+    Q_MOC_INCLUDE("model/customloggingcategoryproxymodel.h")
+    Q_MOC_INCLUDE("model/kdeapplicationloggingcategorymodel.h")
+    Q_MOC_INCLUDE("model/kdeapplicationloggingcategoryproxymodel.h")
     Q_PROPERTY(CustomLoggingCategoryModel *customCategoryModel READ customCategoryModel CONSTANT)
     Q_PROPERTY(CustomLoggingCategoryProxyModel *customLoggingCategoryProxyModel READ customLoggingCategoryProxyModel CONSTANT)
     Q_PROPERTY(KDEApplicationLoggingCategoryModel *qtKdeCategoryModel READ qtKdeCategoryModel CONSTANT)

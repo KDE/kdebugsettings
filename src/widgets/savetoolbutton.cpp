@@ -10,7 +10,6 @@
 #include <QAction>
 #include <QMenu>
 
-using namespace Qt::Literals::StringLiterals;
 SaveToolButton::SaveToolButton(QWidget *parent)
     : QToolButton(parent)
 {

@@ -9,6 +9,7 @@
 
 #include "customdebuglistview.h"
 #include "loggingmanager.h"
+#include "model/customloggingcategorymodel.h"
 
 #include <KLocalizedString>
 #include <QHBoxLayout>

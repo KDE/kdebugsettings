@@ -8,6 +8,11 @@
 #include "loggingmanager.h"
 #include "jobs/saverulesjob.h"
 #include "kdebugsettingsutil.h"
+#include "model/categorytypemodel.h"
+#include "model/customloggingcategorymodel.h"
+#include "model/customloggingcategoryproxymodel.h"
+#include "model/kdeapplicationloggingcategorymodel.h"
+#include "model/kdeapplicationloggingcategoryproxymodel.h"
 #include <KDirWatch>
 #include <QFile>
 

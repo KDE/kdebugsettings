@@ -9,6 +9,8 @@
 
 #include <QMultiHash>
 
+#include <algorithm>
+
 CustomLoggingCategoryModel::CustomLoggingCategoryModel(QObject *parent)
     : QAbstractListModel{parent}
 {
