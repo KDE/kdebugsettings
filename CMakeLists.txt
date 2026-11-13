@@ -139,7 +139,7 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN="kdebugsettings")
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.13.0
-    KF 6.30.0
+    KF 6.32.0
 )
 add_compile_definitions(QT_ENABLE_STRICT_MODE_UP_TO=0x060B00)
 if(OPTION_SELENIUMWEBDRIVER_SUPPORT)
