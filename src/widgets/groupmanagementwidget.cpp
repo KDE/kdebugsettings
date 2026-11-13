@@ -88,7 +88,7 @@ void GroupManagementWidget::slotCustomContextMenu()
         QMenu menu(this);
         if (items.count() == 1) {
             const auto item = items.at(0);
-            menu.addAction(QIcon::fromTheme(u"edit"_s), i18nc("@action", "Rename Group…"), this, [this, item]() {
+            menu.addAction(QIcon::fromTheme(u"edit-rename"_s), i18nc("@action", "Rename Group…"), this, [this, item]() {
                 renameGroup(item);
             });
             menu.addSeparator();
