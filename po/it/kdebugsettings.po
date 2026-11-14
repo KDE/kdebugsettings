@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebugsettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:49+0000\n"
+"POT-Creation-Date: 2026-11-13 22:37+0000\n"
 "PO-Revision-Date: 2026-09-22 11:21+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:48
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Configura le impostazioni di debug"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© 2015-%1 Gli autori di kdebugsettings"
 
-#: src/apps/main.cpp:51
+#: src/apps/main.cpp:52
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:51
+#: src/apps/main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabile"
 
-#: src/apps/main.cpp:75
+#: src/apps/main.cpp:76
 #, kde-format
 msgid "List of categories:"
 msgstr "Elenco delle categorie:"
 
-#: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
+#: src/apps/main.cpp:87 src/apps/main.cpp:98 src/apps/main.cpp:111
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Impossibile cambiare la modalità di debug"
 
-#: src/apps/main.cpp:115
+#: src/apps/main.cpp:116
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
 msgstr "--debug-mode richiede almeno un nome di categoria di log."
@@ -95,32 +95,32 @@ msgstr ""
 "Specifica il nome della categoria di registrazione dei log per la quale "
 "desideri cambiare la modalità di debug (in console)"
 
-#: src/core/kdebugsettingsutil.cpp:412
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Full Debug"
 msgstr "Debug completo"
 
-#: src/core/kdebugsettingsutil.cpp:415
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Info"
 msgstr "Info"
 
-#: src/core/kdebugsettingsutil.cpp:418
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Warning"
 msgstr "Avviso"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "Critical"
 msgstr "Critico"
 
-#: src/core/kdebugsettingsutil.cpp:424
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Off"
 msgstr "Spento"
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
+#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr "Non definito"
@@ -264,19 +264,19 @@ msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "Regole delle applicazioni di KDE"
 
-#: src/kcm/ui/main.qml:19
+#: src/kcm/ui/main.qml:18
 #, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "Mostra categorie delle applicazioni di KDE"
 
-#: src/kcm/ui/main.qml:26
+#: src/kcm/ui/main.qml:25
 #, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "Mostra categorie personalizzate"
 
-#: src/kcm/ui/main.qml:33
+#: src/kcm/ui/main.qml:32
 #, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
@@ -336,26 +336,26 @@ msgid_plural "Do you want to remove these %1 rules?"
 msgstr[0] "Vuoi rimuovere questa regola?"
 msgstr[1] "Vuoi rimuovere queste %1 regole?"
 
-#: src/widgets/customdebugsettingspage.cpp:23
+#: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Modifica…"
 
-#: src/widgets/customdebugsettingspage.cpp:24
+#: src/widgets/customdebugsettingspage.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Rimuovi…"
 
-#: src/widgets/customdebugsettingspage.cpp:40
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:33
+#: src/widgets/customdebugsettingspage.cpp:41
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:32
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Cerca…"
 
-#: src/widgets/customdebugsettingspage.cpp:48
+#: src/widgets/customdebugsettingspage.cpp:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
@@ -381,82 +381,82 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Gestisci gruppo"
 
-#: src/widgets/groupmanagementwidget.cpp:51
-#: src/widgets/groupmanagementwidget.cpp:54
-#: src/widgets/groupmanagementwidget.cpp:56
+#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:55
+#: src/widgets/groupmanagementwidget.cpp:57
 #, kde-format
 msgid "Export Group"
 msgstr "Esporta gruppo"
 
-#: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:55
 #, kde-format
 msgid "Group exported to %1"
 msgstr "Gruppo esportato in %1"
 
-#: src/widgets/groupmanagementwidget.cpp:56
+#: src/widgets/groupmanagementwidget.cpp:57
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Impossible esportare il gruppo «%2» in «%1»"
 
-#: src/widgets/groupmanagementwidget.cpp:69
-#: src/widgets/groupmanagementwidget.cpp:74
+#: src/widgets/groupmanagementwidget.cpp:70
+#: src/widgets/groupmanagementwidget.cpp:75
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Rinomina gruppo"
 
-#: src/widgets/groupmanagementwidget.cpp:69
+#: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "New Name:"
 msgstr "Nuovo nome:"
 
-#: src/widgets/groupmanagementwidget.cpp:74
+#: src/widgets/groupmanagementwidget.cpp:75
 #, kde-format
 msgid "Impossible to rename group as '%1'."
 msgstr "Impossible rinominare il gruppo come «%1»."
 
-#: src/widgets/groupmanagementwidget.cpp:90
+#: src/widgets/groupmanagementwidget.cpp:91
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Rinomina gruppo…"
 
-#: src/widgets/groupmanagementwidget.cpp:94
+#: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Esporta gruppo…"
 
-#: src/widgets/groupmanagementwidget.cpp:99
+#: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Rimuovi gruppi"
 
-#: src/widgets/groupmanagementwidget.cpp:105
+#: src/widgets/groupmanagementwidget.cpp:106
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Impossibile rimuovere «%1»"
 
-#: src/widgets/groupmanagementwidget.cpp:105
+#: src/widgets/groupmanagementwidget.cpp:106
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Rimuovi gruppo"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Abilita debug completo"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:24
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Disabilita il debug"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:25
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
@@ -483,7 +483,7 @@ msgctxt "@action:button"
 msgid "Preview…"
 msgstr "Anteprima…"
 
-#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:16
 #, kde-format
 msgid "Save As…"
 msgstr "Salva come…"
@@ -601,13 +601,13 @@ msgstr "Il file qtlogging.ini è stato modificato. Vuoi ricaricarlo?"
 msgid "Reload"
 msgstr "Ricarica"
 
-#: src/widgets/savetoolbutton.cpp:22
+#: src/widgets/savetoolbutton.cpp:21
 #, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "Salva come file…"
 
-#: src/widgets/savetoolbutton.cpp:25
+#: src/widgets/savetoolbutton.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Save As Group…"

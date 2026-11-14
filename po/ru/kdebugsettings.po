@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:49+0000\n"
+"POT-Creation-Date: 2026-11-13 22:37+0000\n"
 "PO-Revision-Date: 2026-09-23 09:22+0200\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -21,44 +21,44 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/apps/main.cpp:46
+#: src/apps/main.cpp:47
 #, kde-format
 msgid "KDebugSettings"
 msgstr "KDebugSettings"
 
-#: src/apps/main.cpp:48
+#: src/apps/main.cpp:49
 #, kde-format
 msgid "Configure debug settings"
 msgstr "Настройка отладки"
 
-#: src/apps/main.cpp:50
+#: src/apps/main.cpp:51
 #, kde-format
 msgid "(c) 2015-%1 kdebugsettings authors"
 msgstr "© Авторы kdebugsettings, 2015–%1"
 
-#: src/apps/main.cpp:51
+#: src/apps/main.cpp:52
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: src/apps/main.cpp:51
+#: src/apps/main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Сопровождающий"
 
 # BUGME: please add @title:window --aspotashev
-#: src/apps/main.cpp:75
+#: src/apps/main.cpp:76
 #, kde-format
 msgid "List of categories:"
 msgstr "Список категорий:"
 
-#: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
+#: src/apps/main.cpp:87 src/apps/main.cpp:98 src/apps/main.cpp:111
 #, kde-format
 msgid "Impossible to change debug mode"
 msgstr "Невозможно изменить режим отладки"
 
-#: src/apps/main.cpp:115
+#: src/apps/main.cpp:116
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
 msgstr ""
@@ -102,32 +102,32 @@ msgstr ""
 "Укажите название категории ведения журнала, для которой будет изменён режим "
 "отладки из консоли."
 
-#: src/core/kdebugsettingsutil.cpp:412
+#: src/core/kdebugsettingsutil.cpp:413
 #, kde-format
 msgid "Full Debug"
 msgstr "Полная отладочная информация"
 
-#: src/core/kdebugsettingsutil.cpp:415
+#: src/core/kdebugsettingsutil.cpp:416
 #, kde-format
 msgid "Info"
 msgstr "Информационные сообщения"
 
-#: src/core/kdebugsettingsutil.cpp:418
+#: src/core/kdebugsettingsutil.cpp:419
 #, kde-format
 msgid "Warning"
 msgstr "Предупреждающие сообщения"
 
-#: src/core/kdebugsettingsutil.cpp:421
+#: src/core/kdebugsettingsutil.cpp:422
 #, kde-format
 msgid "Critical"
 msgstr "Критические сообщения"
 
-#: src/core/kdebugsettingsutil.cpp:424
+#: src/core/kdebugsettingsutil.cpp:425
 #, kde-format
 msgid "Off"
 msgstr "Отключено"
 
-#: src/core/kdebugsettingsutil.cpp:427 src/core/loggingcategory.cpp:147
+#: src/core/kdebugsettingsutil.cpp:428 src/core/loggingcategory.cpp:147
 #, kde-format
 msgid "Undefined"
 msgstr "Не определено"
@@ -269,21 +269,21 @@ msgctxt "@title"
 msgid "KDE Application Rules"
 msgstr "Правила приложений KDE"
 
-#: src/kcm/ui/main.qml:19
+#: src/kcm/ui/main.qml:18
 #, kde-format
 msgctxt "@action"
 msgid "Show KDE Application Categories"
 msgstr "Показывать категории приложений KDE"
 
 # BUGME: please add @title:window --aspotashev
-#: src/kcm/ui/main.qml:26
+#: src/kcm/ui/main.qml:25
 #, kde-format
 msgctxt "@action"
 msgid "Show Custom Categories"
 msgstr "Показывать пользовательские категории"
 
 # BUGME: please add @title:window --aspotashev
-#: src/kcm/ui/main.qml:33
+#: src/kcm/ui/main.qml:32
 #, kde-format
 msgctxt "@action"
 msgid "Show Environment Categories"
@@ -347,27 +347,27 @@ msgstr[1] "Удалить %1 данных правила?"
 msgstr[2] "Удалить %1 данных правил?"
 msgstr[3] "Удалить данное правило?"
 
-#: src/widgets/customdebugsettingspage.cpp:23
+#: src/widgets/customdebugsettingspage.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Edit…"
 msgstr "Изменить…"
 
 # BUGME: "Remove" should not have ellipsis. --aspotashev
-#: src/widgets/customdebugsettingspage.cpp:24
+#: src/widgets/customdebugsettingspage.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove…"
 msgstr "Удалить…"
 
-#: src/widgets/customdebugsettingspage.cpp:40
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:33
+#: src/widgets/customdebugsettingspage.cpp:41
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:32
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Поиск…"
 
-#: src/widgets/customdebugsettingspage.cpp:48
+#: src/widgets/customdebugsettingspage.cpp:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
@@ -393,82 +393,82 @@ msgctxt "@title:window"
 msgid "Manage Group"
 msgstr "Управление группой"
 
-#: src/widgets/groupmanagementwidget.cpp:51
-#: src/widgets/groupmanagementwidget.cpp:54
-#: src/widgets/groupmanagementwidget.cpp:56
+#: src/widgets/groupmanagementwidget.cpp:52
+#: src/widgets/groupmanagementwidget.cpp:55
+#: src/widgets/groupmanagementwidget.cpp:57
 #, kde-format
 msgid "Export Group"
 msgstr "Экспорт группы"
 
-#: src/widgets/groupmanagementwidget.cpp:54
+#: src/widgets/groupmanagementwidget.cpp:55
 #, kde-format
 msgid "Group exported to %1"
 msgstr "Группа экспортирована в %1"
 
-#: src/widgets/groupmanagementwidget.cpp:56
+#: src/widgets/groupmanagementwidget.cpp:57
 #, kde-format
 msgid "Impossible to export group '%2' to '%1'"
 msgstr "Невозможно выполнить экспорт группы «%2» в «%1»"
 
-#: src/widgets/groupmanagementwidget.cpp:69
-#: src/widgets/groupmanagementwidget.cpp:74
+#: src/widgets/groupmanagementwidget.cpp:70
+#: src/widgets/groupmanagementwidget.cpp:75
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename Group"
 msgstr "Переименование группы"
 
-#: src/widgets/groupmanagementwidget.cpp:69
+#: src/widgets/groupmanagementwidget.cpp:70
 #, kde-format
 msgid "New Name:"
 msgstr "Новое название:"
 
-#: src/widgets/groupmanagementwidget.cpp:74
+#: src/widgets/groupmanagementwidget.cpp:75
 #, kde-format
 msgid "Impossible to rename group as '%1'."
 msgstr "Невозможно переименовать группу в «%1»."
 
-#: src/widgets/groupmanagementwidget.cpp:90
+#: src/widgets/groupmanagementwidget.cpp:91
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Переименовать группу…"
 
-#: src/widgets/groupmanagementwidget.cpp:94
+#: src/widgets/groupmanagementwidget.cpp:95
 #, kde-format
 msgctxt "@action"
 msgid "Export Group…"
 msgstr "Экспорт группы…"
 
-#: src/widgets/groupmanagementwidget.cpp:99
+#: src/widgets/groupmanagementwidget.cpp:100
 #, kde-format
 msgctxt "@action"
 msgid "Remove Groups"
 msgstr "Удалить группы"
 
-#: src/widgets/groupmanagementwidget.cpp:105
+#: src/widgets/groupmanagementwidget.cpp:106
 #, kde-format
 msgid "Impossible to remove '%1'"
 msgstr "Невозможно удалить «%1»"
 
-#: src/widgets/groupmanagementwidget.cpp:105
+#: src/widgets/groupmanagementwidget.cpp:106
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Group"
 msgstr "Удаление группы"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable All Debug"
 msgstr "Включить всю отладку"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:24
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Turn Off Debug"
 msgstr "Отключить отладку"
 
-#: src/widgets/kdeapplicationdebugsettingpage.cpp:25
+#: src/widgets/kdeapplicationdebugsettingpage.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Turn Off All Messages"
@@ -496,7 +496,7 @@ msgid "Preview…"
 msgstr "Просмотр…"
 
 # BUGME: please add @title:window --aspotashev
-#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
+#: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:16
 #, kde-format
 msgid "Save As…"
 msgstr "Сохранить как…"
@@ -617,13 +617,13 @@ msgstr "Файл qtlogging.ini был изменён. Перезагрузить
 msgid "Reload"
 msgstr "Перезагрузить"
 
-#: src/widgets/savetoolbutton.cpp:22
+#: src/widgets/savetoolbutton.cpp:21
 #, kde-format
 msgctxt "@action"
 msgid "Save As File…"
 msgstr "Сохранить как файл…"
 
-#: src/widgets/savetoolbutton.cpp:25
+#: src/widgets/savetoolbutton.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Save As Group…"
