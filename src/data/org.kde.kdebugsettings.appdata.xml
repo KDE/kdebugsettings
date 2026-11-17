@@ -264,7 +264,7 @@
           <li xml:lang="sr-ijekavian">Додато је дугме „Преглед“ које приказује фајл qtlogging.ini какав ће бити створен, прије него што се сачува.</li>
           <li xml:lang="sr-ijekavianlatin">Dodato je dugme „Pregled“ koje prikazuje fajl qtlogging.ini kakav će biti stvoren, prije nego što se sačuva.</li>
           <li xml:lang="sv">Lägg till en förhandsgranskningsknapp som visar filen qtlogging.ini som ska genereras, innan den sparas.</li>
-          <li xml:lang="tr">Kaydetme öncesi, üretilen qtlogging.ini dosyasını gösteren bir Önizleme düğmesi eklendi.</li>
+          <li xml:lang="tr">Kaydetme öncesi, üretilen qtlogging.ini dosyasını gösteren bir Ön İzleme düğmesi eklendi.</li>
           <li xml:lang="uk">Додано кнопку попереднього перегляду, натискання якої призведе до показу файла qtlogging.ini, який буде створено, перш ніж його буде збережено.</li>
           <li xml:lang="zh-TW">新增預覽按鈕來在儲存前顯示將會產生的 qtlogging.ini 檔案。</li>
           <li>Add a --list command line option showing the list of known logging categories.</li>
