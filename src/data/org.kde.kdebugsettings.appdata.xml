@@ -155,6 +155,16 @@
   <url type="vcs-browser">https://invent.kde.org/utilities/kdebugsettings</url>
   <url type="contribute">https://community.kde.org/Get_Involved</url>
   <launchable type="desktop-id">org.kde.kdebugsettings.desktop</launchable>
+  <keywords>
+    <keyword>log</keyword>
+    <keyword>logging</keyword>
+    <keyword>category</keyword>
+    <keyword>categories</keyword>
+    <keyword>journal</keyword>
+    <keyword>logging levels</keyword>
+    <keyword>debug</keyword>
+    <keyword translate="no">QLoggingCategory</keyword>
+  </keywords>
   <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
