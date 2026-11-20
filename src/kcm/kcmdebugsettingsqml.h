@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <QVariantMap>
+
 #include <KQuickConfigModule>
 
 class KCMDebugSettingsQml : public KQuickConfigModule
