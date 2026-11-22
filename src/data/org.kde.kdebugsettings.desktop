@@ -146,6 +146,7 @@ Keywords[he]=יומן;תיעוד;רישום;לוג;קטגוריה;קטגוריו
 Keywords[ia]=log;logging;category;categories;journal;logging levels;debug;
 Keywords[it]=registro;registrazione;categoria;categorie;journal;livelli di registrazione;debug;
 Keywords[ka]=log;logging;category;categories;journal;logging levels;debug;ჟურნალი;გამართვა;კატეგორიები;
+Keywords[ko]=로그;분류;저널;로그 수준;로그 레벨;디버그;디버깅;
 Keywords[nl]=log;loggen;categorie;categorieën;journaal;logniveaus;debug;
 Keywords[nn]=logg;logging;kategori;kategoriar;journal;loggnivå;debug;feilsøking;
 Keywords[pt_BR]=log;registro;categoria;categorias;diário;níveis de registro;depuração;
