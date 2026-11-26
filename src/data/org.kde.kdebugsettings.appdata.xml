@@ -237,6 +237,7 @@
         <p xml:lang="sv">Nya funktioner:</p>
         <p xml:lang="tr">Yeni özellikler:</p>
         <p xml:lang="uk">Нові можливості:</p>
+        <p xml:lang="zh-CN">新特性：</p>
         <p xml:lang="zh-TW">新功能：</p>
         <ul>
           <li>Add a Preview button showing the qtlogging.ini file that will be generated, before saving it.</li>
@@ -266,6 +267,7 @@
           <li xml:lang="sv">Lägg till en förhandsgranskningsknapp som visar filen qtlogging.ini som ska genereras, innan den sparas.</li>
           <li xml:lang="tr">Kaydetme öncesi, üretilen qtlogging.ini dosyasını gösteren bir Ön İzleme düğmesi eklendi.</li>
           <li xml:lang="uk">Додано кнопку попереднього перегляду, натискання якої призведе до показу файла qtlogging.ini, який буде створено, перш ніж його буде збережено.</li>
+          <li xml:lang="zh-CN">添加一个预览按钮，用于在保存前显示将要生成的 qtlogging.ini 文件。</li>
           <li xml:lang="zh-TW">新增預覽按鈕來在儲存前顯示將會產生的 qtlogging.ini 檔案。</li>
           <li>Add a --list command line option showing the list of known logging categories.</li>
           <li xml:lang="ar">أضيف خيار سطر الأوامر ‎--list‎ الذي يعرض قائمة فئات التسجيل المعروفة.</li>
@@ -294,6 +296,7 @@
           <li xml:lang="sv">Lägg till kommandoradsväljaren --list som visar en lista över kända loggningskategorier.</li>
           <li xml:lang="tr">Bilinen günlükleme kategorilerini gösteren bir --list komut satırı seçeneği eklendi.</li>
           <li xml:lang="uk">Додано параметр командного рядка --list, за допомогою якого можна переглянути список відомих програмі категорій журналювання.</li>
+          <li xml:lang="zh-CN">添加一个 --list 命令行选项，用于显示已知的日志类别列表。</li>
           <li xml:lang="zh-TW">新增 --list 指令列選項來列出已知紀錄類別的清單。</li>
           <li>Add a warning when qtlogging.ini is modified outside the application, with an action for reloading it.</li>
           <li xml:lang="ar">أضيف تحذيرًا عند تعديل qtlogging.ini خارج التطبيق، مع إجراء لإعادة تحميله.</li>
@@ -322,6 +325,7 @@
           <li xml:lang="sv">Lägg till en varning när qtlogging.ini ändras utanför programmet, samt ett alternativ för att uppdatera filen.</li>
           <li xml:lang="tr">qtlogging.ini dosyası uygulamanın dışında güncellenmişse bir uyarı gösteriliyor; ayrıca dosyayı yeniden yükleme seçeneği de var.</li>
           <li xml:lang="uk">Додано попередження про внесення змін до qtlogging.ini сторонньою програмою із кнопкою для перезавантаження файла.</li>
+          <li xml:lang="zh-CN">当 qtlogging.ini 在应用程序外部被修改时，添加警告提示，并提供重新加载该文件的操作。</li>
           <li xml:lang="zh-TW">當 qtlogging.ini 在應用程式外被修改時顯示警告，並提供重新載入該檔案的動作。</li>
         </ul>
       </description>
