@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdebugsettings/kdebugsettings.pot\n"
-"X-Crowdin-File-ID: 45029\n"
+"X-Crowdin-File: /kf6-stable/messages/kdebugsettings/kdebugsettings.pot\n"
+"X-Crowdin-File-ID: 51958\n"
 
 #: src/apps/main.cpp:46
 #, kde-format
@@ -44,10 +44,9 @@ msgid "Maintainer"
 msgstr "维护者"
 
 #: src/apps/main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Insert Categories"
+#, kde-format
 msgid "List of categories:"
-msgstr "插入类别"
+msgstr "类别列表："
 
 #: src/apps/main.cpp:86 src/apps/main.cpp:97 src/apps/main.cpp:110
 #, kde-format
@@ -57,7 +56,7 @@ msgstr "无法更改调试模式"
 #: src/apps/main.cpp:115
 #, kde-format
 msgid "--debug-mode requires at least one logging category name."
-msgstr ""
+msgstr "--debug-mode 需要至少一个日志类别名称。"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:22
 #, kde-format
@@ -66,11 +65,9 @@ msgid ""
 msgstr "启用 QStandardPaths 测试模式，即读写被unitests使用的设置"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Custom Categories"
+#, kde-format
 msgid "Show categories list."
-msgstr "显示自定义类别"
+msgstr "显示类别列表。"
 
 #: src/core/kdebugsettingscommandlineparser.cpp:31
 #, kde-format
@@ -475,7 +472,7 @@ msgstr "环境变量和规则设置"
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview…"
-msgstr ""
+msgstr "预览…"
 
 #: src/widgets/kdebugsettingsdialog.cpp:86 src/widgets/savetoolbutton.cpp:17
 #, kde-format
@@ -583,17 +580,17 @@ msgstr "加载文件…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Generated File"
-msgstr ""
+msgstr "预览生成的文件"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:16
 #, kde-format
 msgid "qtlogging.ini was changed. Do you want to reload it?"
-msgstr ""
+msgstr "qtlogging.ini 已被更改。你想要重新加载它吗？"
 
 #: src/widgets/qtloggingfilechangedwarning.cpp:19
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "重新加载"
 
 #: src/widgets/savetoolbutton.cpp:22
 #, kde-format
